@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://v5.getbootstrap.com/">
-    <img src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
+  <a href="https://getbootstrap.su/">
+    <img src="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
   </a>
 </p>
 
 <h3 align="center">Bootstrap</h3>
 
 <p align="center">
-  Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://v5.getbootstrap.com/docs/5.0/"><strong>Explore Bootstrap docs »</strong></a>
+  <a href="https://getbootstrap.su/docs/5.0/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v5.getbootstrap.com/docs/5.0/"><strong>Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Report bug</a>
@@ -24,39 +24,39 @@
 
 ## Bootstrap 4
 
-Our default branch is for development of our upcoming Bootstrap 5 release. Head to the [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Bootstrap 4.
+Наша ветка по умолчанию предназначена для разработки нашего предстоящего выпуска Bootstrap 5. Направляйтесь к [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) чтобы просмотреть readme, документацию и исходный код для Bootstrap 4.
 
 
-## Table of contents
+## Оглавление
 
-- [Quick start](#quick-start)
-- [Status](#status)
-- [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Thanks](#thanks)
-- [Copyright and license](#copyright-and-license)
-
-
-## Quick start
-
-Several quick start options are available:
-
-- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.0.0-alpha2.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@next`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.0-alpha2`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
-
-Read the [Getting started page](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+- [Быстрый старт](#быстрый-старт)
+- [Статус](#статус)
+- [Что включено](#что-включено)
+- [Ошибки и запросы улучшений](#ошибки-и-запросы-улучшений)
+- [Документация](#документация)
+- [Содействие](#содействие)
+- [Сообщество](#сообщество)
+- [Управление версиями](#управление-версиями)
+- [Создатели](#создатели)
+- [Благодарности](#благодарности)
+- [Авторское право и лицензия](#авторское-право-и-лицензия)
 
 
-## Status
+## Быстрый старт
+
+Доступно несколько вариантов быстрого запуска:
+
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.0-alpha2.zip)
+- Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.0-alpha2`
+- Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+
+Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.0/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
+
+
+## Статус
 
 [![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
 [![Build Status](https://github.com/twbs/bootstrap/workflows/JS%20Tests/badge.svg?branch=main)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amain)
@@ -77,9 +77,9 @@ Read the [Getting started page](https://v5.getbootstrap.com/docs/5.0/getting-sta
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap)](#sponsors)
 
 
-## What's included
+## Что включено
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+В загрузке Вы найдете следующие каталоги и файлы, которые логически группируют общие ресурсы и предоставляют как скомпилированные, так и минифицированные варианты. Вы увидите что-то вроде этого:
 
 ```text
 bootstrap/
@@ -116,65 +116,65 @@ bootstrap/
         └── bootstrap.min.js.map
 ```
 
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
+Предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
 
 
-## Bugs and feature requests
+## Ошибки и запросы улучшений
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
-
-
-## Documentation
-
-Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://v5.getbootstrap.com/>. The docs may also be run locally.
-
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in `site/assets/js/src/search.js` file.
-
-### Running documentation locally
-
-1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
-2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-4. Open `http://localhost:9001/` in your browser, and voilà.
-
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
-
-### Documentation for previous releases
-
-You can find all our previous releases docs on <https://v5.getbootstrap.com/docs/versions/>.
-
-[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
+Есть ошибка или запрос функции? Пожалуйста, сначала прочтите [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) и поищите существующие и закрытые проблемы. Если Ваша проблема еще не решена или идея не создана, [пожалуйста, откройте новый выпуск](https://github.com/twbs/bootstrap/issues/new).
 
 
-## Contributing
+## Документация
 
-Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Документация Bootstrap, включенная в этот репо в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://v5.getbootstrap.com/>. Документы также можно запускать локально.
 
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+Поиск по документации поддерживается [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/src/search.js`.
 
-Editor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
+### Запуск документации локально
 
+1. Выполните `npm install` для установки зависимостей Node.js, включая Hugo (конструктор сайтов).
+2. Выполните `npm run test` (или конкретный сценарий npm) для восстановления распределенных файлов CSS и JavaScript, а также ресурсов нашей документации.
+3. Из корневой директории `/bootstrap`, выполните в командной строке `npm run docs-serve`.
+4. Откройте `http://localhost:9001/` в вашем браузере, и вуаля.
 
-## Community
+Узнайте больше об использовании Hugo, прочитав его [документацию](https://gohugo.io/documentation/).
 
-Get updates on Bootstrap's development and chat with the project maintainers and community members.
+### Документация к предыдущим выпускам
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
-- Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
+Вы можете найти все наши предыдущие выпуски документы на  <https://getbootstrap.su/docs/versions/>.
 
-
-## Versioning
-
-For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
-
-See [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](https://blog.getbootstrap.com/) contain summaries of the most noteworthy changes made in each release.
+[Предыдущие релизы](https://github.com/twbs/bootstrap/releases) и их документация также доступны для скачивания.
 
 
-## Creators
+## Содействие
+
+Прочтите наши [правила участия](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md). Включены инструкции по открытию вопросов, стандарты кодирования и примечания по развитию.
+
+Более того, если Ваш pull request содержит исправления или функции JavaScript, Вы должны включить [соответствующие модульные тесты](https://github.com/twbs/bootstrap/tree/main/js/tests). Весь HTML и CSS должны соответствовать [Руководству по коду](https://github.com/mdo/code-guide), которое поддерживает [Mark Otto](https://github.com/mdo).
+
+Настройки редактора доступны в [конфигурации редактора](https://github.com/twbs/bootstrap/blob/main/.editorconfig) для удобного использования в обычных текстовых редакторах. Узнайте больше и загрузите плагины на <https://editorconfig.org/>.
+
+
+## Сообщество
+
+Получайте новости о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
+
+- Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
+- Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/).
+- Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).
+- Общайтесь с другими Bootstrappers в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
+- Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
+- Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.
+
+
+## Управление версиями
+
+Для прозрачности нашего цикла выпуска и для обеспечения обратной совместимости Bootstrap поддерживается в соответствии с [руководство по Семантическому Управлению версиями](https://semver.org/). Иногда мы ошибаемся, но всегда придерживаемся этих правил.
+
+См. [Раздел Releases нашего проекта GitHub](https://github.com/twbs/bootstrap/releases) для просмотра журналов изменений для каждой версии выпуска Bootstrap. Сообщения с анонсами релизов на [официальном блоге Bootstrap](https://blog.getbootstrap.com/) содержат сводку наиболее значимых изменений, внесенных в каждый выпуск.
+
+
+## Создатели
 
 **Mark Otto**
 
@@ -187,18 +187,18 @@ See [the Releases section of our GitHub project](https://github.com/twbs/bootstr
 - <https://github.com/fat>
 
 
-## Thanks
+## Благодарности
 
 <a href="https://www.browserstack.com/">
   <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
 </a>
 
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+Спасибо [BrowserStack](https://www.browserstack.com/) за предоставление инфраструктуры, которая позволяет нам тестировать в реальных браузерах!
 
 
-## Sponsors
+## Спонсоры
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/bootstrap#sponsor)]
+Поддержите этот проект, став спонсором. Здесь будет отображаться Ваш логотип со ссылкой на Ваш сайт. [[Стать спонсором](https://opencollective.com/bootstrap#sponsor)]
 
 [![OC sponsor 0](https://opencollective.com/bootstrap/sponsor/0/avatar.svg)](https://opencollective.com/bootstrap/sponsor/0/website)
 [![OC sponsor 1](https://opencollective.com/bootstrap/sponsor/1/avatar.svg)](https://opencollective.com/bootstrap/sponsor/1/website)
@@ -212,13 +212,13 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 [![OC sponsor 9](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
 
 
-## Backers
+## Сторонники
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
+Спасибо всем нашим сторонникам! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
 
 [![Backers](https://opencollective.com/bootstrap/backers.svg?width=890)](https://opencollective.com/bootstrap#backers)
 
 
-## Copyright and license
+## Авторское право и лицензия
 
-Code and documentation copyright 2011–2020 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторское право на код и документацию 2011–2020 гг. [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) Код выпущен под [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документы выпущены под [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
