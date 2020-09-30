@@ -1,4 +1,5 @@
-- title: Getting started
+- title: Начало работы
+  url: getting-started
   pages:
     - title: Introduction
     - title: Download
@@ -10,7 +11,8 @@
     - title: Accessibility
     - title: RFS
 
-- title: Customize
+- title: Кастомизация
+  url: customize
   pages:
     - title: Overview
     - title: Sass
@@ -20,7 +22,8 @@
     - title: CSS variables
     - title: Optimize
 
-- title: Layout
+- title: Макет
+  url: layout
   pages:
     - title: Breakpoints
     - title: Containers
@@ -31,7 +34,8 @@
     - title: Utilities
     - title: Z-index
 
-- title: Content
+- title: Контент
+  url: content
   pages:
     - title: Reboot
     - title: Typography
@@ -39,7 +43,8 @@
     - title: Tables
     - title: Figures
 
-- title: Forms
+- title: Формы
+  url: forms
   pages:
     - title: Overview
     - title: Form control
@@ -51,7 +56,8 @@
     - title: Layout
     - title: Validation
 
-- title: Components
+- title: Компоненты
+  url: components
   pages:
     - title: Alerts
     - title: Badge
@@ -75,7 +81,8 @@
     - title: Toasts
     - title: Tooltips
 
-- title: Helpers
+- title: Помощники
+  url: helpers
   pages:
     - title: Clearfix
     - title: Colored links
@@ -85,7 +92,8 @@
     - title: Stretched link
     - title: Text truncation
 
-- title: Utilities
+- title: Утилиты
+  url: utilities
   pages:
     - title: API
     - title: Borders
@@ -103,12 +111,14 @@
     - title: Vertical align
     - title: Visibility
 
-- title: Extend
+- title: Дополнительно
+  url: extend
   pages:
     - title: Approach
     - title: Icons
 
-- title: About
+- title: Инфо
+  url: about
   pages:
     - title: Overview
     - title: Team
