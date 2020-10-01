@@ -203,13 +203,13 @@
 - title: Инфо
   url: about
   pages:
-    - title: Overview
+    - title: Обзор
       url: overview
-    - title: Team
+    - title: Команда
       url: team
-    - title: Brand
+    - title: Бренд
       url: brand
-    - title: License
+    - title: Лицензия
       url: license
     - title: Переводы
       url: translations
