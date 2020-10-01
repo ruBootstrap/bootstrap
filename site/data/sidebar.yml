@@ -2,126 +2,214 @@
   url: getting-started
   pages:
     - title: Introduction
+      url: introduction
     - title: Download
+      url: download
     - title: Contents
+      url: contents
     - title: Browsers & devices
+      url: browsers-devices
     - title: JavaScript
+      url: javascript
     - title: Build tools
+      url: build-tools
     - title: Webpack
+      url: webpack
     - title: Accessibility
+      url: accessibility
     - title: RFS
+      url: rfs
 
 - title: Кастомизация
   url: customize
   pages:
     - title: Overview
+      url: overview
     - title: Sass
+      url: sass
     - title: Options
+      url: options
     - title: Color
+      url: color
     - title: Components
+      url: components
     - title: CSS variables
+      url: css-variables
     - title: Optimize
+      url: optimize
 
 - title: Макет
   url: layout
   pages:
     - title: Breakpoints
+      url: breakpoints
     - title: Containers
+      url: containers
     - title: Grid
+      url: grid
     # - title: Rows
+      # url: rows
     - title: Columns
+      url: columns
     - title: Gutters
+      url: gutters
     - title: Utilities
+      url: utilities
     - title: Z-index
+      url: z-index
 
 - title: Контент
   url: content
   pages:
     - title: Reboot
+      url: reboot
     - title: Typography
+      url: typography
     - title: Images
+      url: images
     - title: Tables
+      url: tables
     - title: Figures
+      url: figures
 
 - title: Формы
   url: forms
   pages:
     - title: Overview
+      url: overview
     - title: Form control
+      url: form-control
     - title: Select
+      url: select
     - title: Checks & radios
+      url: checks-radios
     - title: File
+      url: file
     - title: Range
+      url: range
     - title: Input group
+      url: input-group
     - title: Layout
+      url: layout
     - title: Validation
+      url: validation
 
 - title: Компоненты
   url: components
   pages:
     - title: Alerts
+      url: alerts
     - title: Badge
+      url: badge
     - title: Breadcrumb
+      url: breadcrumb
     - title: Buttons
+      url: buttons
     - title: Button group
+      url: button-group
     - title: Card
+      url: card
     - title: Carousel
+      url: carousel
     - title: Close button
+      url: close-button
     - title: Collapse
+      url: collapse
     - title: Dropdowns
+      url: dropdowns
     - title: List group
+      url: list-group
     - title: Modal
+      url: modal
     - title: Navs
+      url: navs
     - title: Navbar
+      url: navbar
     - title: Pagination
+      url: pagination
     - title: Popovers
+      url: popovers
     - title: Progress
+      url: progress
     - title: Scrollspy
+      url: scrollspy
     - title: Spinners
+      url: spinners
     - title: Toasts
+      url: toasts
     - title: Tooltips
+      url: tooltips
 
 - title: Помощники
   url: helpers
   pages:
     - title: Clearfix
+      url: clearfix
     - title: Colored links
+      url: colored-links
     - title: Ratio
+      url: ratio
     - title: Position
+      url: position
     - title: Visually hidden
+      url: visually-hidden
     - title: Stretched link
+      url: stretched-link
     - title: Text truncation
+      url: text-truncation
 
 - title: Утилиты
   url: utilities
   pages:
     - title: API
+      url: api
     - title: Borders
+      url: borders
     - title: Colors
+      url: colors
     - title: Display
+      url: display
     - title: Flex
+      url: flex
     - title: Float
+      url: float
     - title: Interactions
+      url: interactions
     - title: Overflow
+      url: overflow
     - title: Position
+      url: position
     - title: Shadows
+      url: shadows
     - title: Sizing
+      url: sizing
     - title: Spacing
+      url: spacing
     - title: Text
+      url: text
     - title: Vertical align
+      url: vertical-align
     - title: Visibility
+      url: visibility
 
 - title: Дополнительно
   url: extend
   pages:
     - title: Approach
+      url: approach
     - title: Icons
+      url: icons
 
 - title: Инфо
   url: about
   pages:
     - title: Overview
+      url: overview
     - title: Team
+      url: team
     - title: Brand
+      url: brand
     - title: License
-    - title: Translations
+      url: license
+    - title: Переводы
+      url: translations
