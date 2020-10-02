@@ -48,11 +48,14 @@ params:
   social_logo_path:     /docs/5.0/assets/brand/bootstrap-social-logo.png
 
   current_version:      "5.0.0-alpha2"
+  translate_version:    "5.0.0-alpha2"
   current_ruby_version: "5.0.0.alpha2"
   docs_version:         "5.0"
   rfs_version:          "9.0.3"
   github_org:           "https://github.com/twbs"
+  github_ru_bootstrap:  "https://github.com/ruBootstrap"
   repo:                 "https://github.com/twbs/bootstrap"
+  repo_ru_bootstrap:    "https://github.com/ruBootstrap/bootstrap"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com/"
   opencollective:       "https://opencollective.com/bootstrap"
