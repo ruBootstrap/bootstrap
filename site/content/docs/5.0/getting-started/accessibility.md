@@ -1,59 +1,59 @@
 ---
 layout: docs
-title: Accessibility
-description: A brief overview of Bootstrap's features and limitations for the creation of accessible content.
+title: Доступность
+description: Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.
 group: getting-started
 toc: true
 ---
 
-Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
+Bootstrap предоставляет простую в использовании структуру из готовых стилей, инструментов макета и интерактивных компонентов, позволяя разработчикам создавать веб-сайты и приложения, которые визуально привлекательны, функционально богаты и доступны прямо из коробки.
 
-## Overview and limitations
+## Обзор и ограничения
 
-The overall accessibility of any project built with Bootstrap depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Bootstrap that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG21/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+Общая доступность любого проекта, созданного с помощью Bootstrap, во многом зависит от разметки автора, дополнительных стилей и сценариев, которые они включили. Однако при условии, что они были реализованы правильно, должно быть вполне возможно создавать веб-сайты и приложения с помощью Bootstrap, которые соответствуют [<abbr title="Рекомендации по доступности веб-контента">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG21/) (A/AA/AAA), [Раздел 508](https://www.section508.gov/), а также аналогичные стандарты и требования доступности.
 
-### Structural markup
+### Структурная разметка
 
-Bootstrap's styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+Стиль и макет Bootstrap можно применять к широкому спектру структур разметки. Эта документация направлена на то, чтобы предоставить разработчикам примеры передового опыта, чтобы продемонстрировать использование самого Bootstrap и проиллюстрировать соответствующую семантическую разметку, включая способы решения потенциальных проблем доступности.
 
-### Interactive components
+### Интерактивные компоненты
 
-Bootstrap's interactive components—such as modal dialogs, dropdown menus, and custom tooltips—are designed to work for touch, mouse, and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+Интерактивные компоненты Bootstrap, такие как модальные диалоги, раскрывающиеся меню и настраиваемые всплывающие подсказки, предназначены для работы с сенсорным экраном, мышью и клавиатурой. Благодаря использованию соответствующих [<abbr title="Инициатива веб-доступности">WAI</abbr>-<abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) ролей и атрибутов, эти компоненты также должны быть понятными и управляемыми с использованием вспомогательных технологий (таких как программы чтения с экрана).
 
-Because Bootstrap's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
+Поскольку компоненты Bootstrap специально разработаны как общие, авторам может потребоваться включить дополнительные роли и атрибуты <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>, а также поведение JavaScript, чтобы точнее передать суть и функциональность их компонентов. Обычно это отмечается в документации.
 
-### Color contrast
+### Цветовой контраст
 
-Some combinations of colors that currently make up Bootstrap's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.1 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) and the [WCAG 2.1 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), particularly when used against a light background. Authors are encouraged to test their specific uses of color and, where necessary, manually modify/extend these default colors to ensure adequate color contrast ratios.
+Некоторые комбинации цветов, которые в настоящее время составляют палитру Bootstrap по умолчанию - используемые во всей структуре для таких вещей, как варианты кнопок, варианты уведомлений, индикаторы проверки формы - могут привести к *недостаточному* цветовому контрасту (ниже рекомендуемого [коэффициента контрастности цвета текста WCAG 2.1, равного 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) and the [коэффициент контрастности нетекстовых цветов WCAG 2.1, равного 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast)), особенно при использовании на светлом фоне. Авторам рекомендуется протестировать свое конкретное использование цвета и, при необходимости, вручную изменить/расширить эти цвета по умолчанию, чтобы обеспечить адекватные коэффициенты цветового контраста.
 
-### Visually hidden content
+### Визуально скрытый контент
 
-Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.visually-hidden` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
+Контент, который должен быть визуально скрыт, но оставаться доступным для вспомогательных технологий, таких как программы чтения с экрана, можно стилизовать с помощью класса `.visually-hidden`. Это может быть полезно в ситуациях, когда дополнительная визуальная информация или подсказки (например, значение, обозначенное с помощью цвета) также должны быть переданы невизуальным пользователям.
 
 {{< highlight html >}}
 <p class="text-danger">
-  <span class="visually-hidden">Danger: </span>
-  This action is not reversible
+  <span class="visually-hidden">Опасность: </span>
+  Это действие необратимо
 </p>
 {{< /highlight >}}
 
-For visually hidden interactive controls, such as traditional "skip" links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, compared to the equivalent `.sr-only` and `.sr-only-focusable` classes in past versions, Bootstrap 5's `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
+Для визуально скрытых интерактивных элементов управления, таких как традиционные ссылки «пропустить», используйте класс `.visually-hidden-focusable`. Это гарантирует, что элемент управления станет видимым после фокусировки (для зрячих пользователей клавиатуры). **Будьте осторожны, по сравнению с эквивалентными классами `.sr-only` и `.sr-only-focusable` в прошлых версиях, Bootstrap 5 `.visually-hidden-focusable` является автономным классом и не должен использоваться в комбинация с классом `.visually-hidden`**
 
 {{< highlight html >}}
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+<a class="visually-hidden-focusable" href="#content">Перейти к основному содержанию</a>
 {{< /highlight >}}
 
-### Reduced motion
+### Сниженное движение
 
-Bootstrap includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Bootstrap (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled.
+Bootstrap включает поддержку [медиа-функции `prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). В браузерах/средах, которые позволяют пользователю указывать свои предпочтения для уменьшения движения, большинство эффектов перехода CSS в Bootstrap (например, когда открывается или закрывается модальный диалог или скользящая анимация в каруселях) будут отключены.
 
-## Additional resources
+## Дополнительные ресурсы
 
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
-- [The A11Y Project](https://www.a11yproject.com/)
-- [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
-- [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Color Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
-- ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
+- [Рекомендации по обеспечению доступности веб-контента (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+- [Проект A11Y](https://www.a11yproject.com/)
+- [Документация по доступности MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+- [Проверка доступности Tenon.io](https://tenon.io/)
+- [Анализатор цветового контраста (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [Букмарклет «HTML Codesniffer» для выявления проблем доступности](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
-- [Deque Axe testing tools](https://www.deque.com/axe/)
+- [Инструменты для тестирования Deque Axe](https://www.deque.com/axe/)
