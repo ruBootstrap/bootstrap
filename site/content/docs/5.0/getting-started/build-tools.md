@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Build tools
-description: Learn how to use Bootstrap's included npm scripts to build our documentation, compile source code, run tests, and more.
+title: Инструменты сборки
+description: Узнайте, как использовать включенные в Bootstrap сценарии npm для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.
 group: getting-started
 toc: true
 ---
 
-## Tooling setup
+## Настройка инструмента
 
-Bootstrap uses [npm scripts](https://docs.npmjs.com/misc/scripts) for its build system. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes convenient methods for working with the framework, including compiling code, running tests, and more.
+Bootstrap использует [сценарии npm](https://docs.npmjs.com/misc/scripts) для своей системы сборки. Наш [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.
 
-To use our build system and run our documentation locally, you'll need a copy of Bootstrap's source files and Node. Follow these steps and you should be ready to rock:
+Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:
 
-1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Bootstrap's sources]({{< param "download.source" >}}) or fork [Bootstrap's repository]({{< param repo >}}).
-3. Navigate to the root `/bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
+1. [Загрузите и установите Node.js](https://nodejs.org/en/download/), который мы используем для управления нашими зависимостями.
+2. Либо [загрузите исходные коды Bootstrap]({{< param "download.source" >}}), либо сделайте "форк" [репозитория Bootstrap]({{< param repo >}}).
+3. Перейдите в корневой каталог `/bootstrap` и запустите `npm install`, чтобы установить наши локальные зависимости, перечисленные в [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
 
-When completed, you'll be able to run the various commands provided from the command line.
+По завершении Вы сможете запускать различные команды из командной строки.
 
-## Using npm scripts
+## Использование скриптов npm
 
-Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes numerous tasks for developing the project. Run `npm run` to see all the npm scripts in your terminal. **Primary tasks include:**
+Наш [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) включает множество задач для разработки проекта. Запустите `npm run`, чтобы увидеть все сценарии npm в Вашем терминале. **Основные задачи включают:**
 
 <table class="table">
   <thead>
     <tr>
-      <th>Task</th>
-      <th>Description</th>
+      <th>Задача</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +35,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm start</code>
       </td>
       <td>
-        Compiles CSS and JavaScript, builds the documentation, and starts a local server.
+        Компилирует CSS и JavaScript, создает документацию и запускает локальный сервер.
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm run dist</code>
       </td>
       <td>
-       Creates the <code>dist/</code> directory with compiled files. Requires <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="https://github.com/terser/terser">terser</a>.
+       Создает каталог <code>dist/</code> с скомпилированными файлами. Требуется <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, и <a href="https://github.com/terser/terser">terser</a>.
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm test</code>
       </td>
       <td>
-        Runs tests locally after running <code>npm run dist</code>
+        Выполняет тесты локально после запуска <code>npm run dist</code>
       </td>
     </tr>
     <tr>
@@ -59,30 +59,30 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm run docs-serve</code>
       </td>
       <td>
-        Builds and runs the documentation locally.
+        Создает и запускает документацию локально.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Autoprefixer
+## Автопрефикс
 
-Bootstrap uses [Autoprefixer][autoprefixer] (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
+Bootstrap использует [Autoprefixer][autoprefixer] (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах от поставщиков, подобных тем, что есть в v3.
 
-We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) for details.
+Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) для получения дополнительной информации.
 
-## Local documentation
+## Локальная документация
 
-Running our documentation locally requires the use of Hugo, which gets installed via the [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here's how to get it started:
+Для локального запуска нашей документации требуется использование Hugo, который устанавливается через пакет npm [hugo-bin](https://www.npmjs.com/package/hugo-bin). Hugo - это невероятно быстрый и достаточно расширяемый генератор статических сайтов, который предоставляет нам: базовые включения, файлы на основе Markdown, шаблоны и многое другое. Вот как это начать:
 
-1. Run through the [tooling setup](#tooling-setup) above to install all dependencies.
-2. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-3. Open `http://localhost:9001/` in your browser, and voilà.
+1. Выполните [настройку инструментов](#tooling-setup) выше, чтобы установить все зависимости.
+2. Из корневого каталога `/bootstrap`, запустите `npm run docs-serve` в командной строке.
+3. Откройте `http://localhost:9001/` в вашем браузере и вуаля.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Узнайте больше об использовании Hugo, прочитав его [документацию](https://gohugo.io/documentation/).
 
-## Troubleshooting
+## Исправление проблем
 
-Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
+Если у Вас возникнут проблемы с установкой зависимостей, удалите все предыдущие версии зависимостей (глобальные и локальные). Затем перезапустите `npm install`.
 
 [autoprefixer]: https://github.com/postcss/autoprefixer

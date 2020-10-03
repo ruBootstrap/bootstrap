@@ -11,7 +11,7 @@
       url: browsers-devices
     - title: JavaScript
       url: javascript
-    - title: Build tools
+    - title: Инструменты сборки
       url: build-tools
     - title: Webpack
       url: webpack
