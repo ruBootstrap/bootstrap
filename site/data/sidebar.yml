@@ -20,22 +20,22 @@
     - title: RFS
       url: rfs
 
-- title: Кастомизация
+- title: Настройка
   url: customize
   pages:
-    - title: Overview
+    - title: Обзор
       url: overview
-    - title: Sass
+    - title: Стили
       url: sass
-    - title: Options
+    - title: Параметры
       url: options
-    - title: Color
+    - title: Цвет
       url: color
-    - title: Components
+    - title: Компоненты
       url: components
-    - title: CSS variables
+    - title: CSS переменные
       url: css-variables
-    - title: Optimize
+    - title: Оптимизация
       url: optimize
 
 - title: Макет

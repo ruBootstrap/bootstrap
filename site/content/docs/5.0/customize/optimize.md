@@ -1,61 +1,61 @@
 ---
 layout: docs
-title: Optimize
-description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.
+title: Оптимизация
+description: Делайте свои проекты компактными, гибкими и удобными в обслуживании, чтобы Вы могли обеспечить лучший опыт и сосредоточиться на более важных задачах.
 group: customize
 toc: true
 ---
 
-## Lean Sass imports
+## Полагаться на импорт Sass
 
-When using Sass in your asset pipeline, make sure you optimize Bootstrap by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `bootstrap.scss`.
+При использовании Sass в конвейере ресурсов убедитесь, что Вы оптимизируете Bootstrap, используя только `@import` компоненты, которые Вам нужны. Ваши самые большие оптимизации, вероятно, будут связаны с разделом `Макет & Компоненты` нашего `bootstrap.scss`.
 
 {{< scss-docs name="import-stack" file="scss/bootstrap.scss" >}}
 
 
-If you're not using a component, comment it out or delete it entirely. For example, if you're not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.
+Если Вы не используете компонент, закомментируйте его или удалите полностью. Например, если Вы не используете карусель, удалите этот импорт, чтобы сохранить некоторый размер файла в скомпилированном CSS. Имейте в виду, что между импортом Sass есть некоторые зависимости, которые могут затруднить пропуск файла.
 
-## Lean JavaScript
+## Полагаться на JavaScript
 
-Bootstrap's JavaScript includes every component in our primary dist files (`bootstrap.js` and `bootstrap.min.js`), and even our primary dependency (Popper.js) with our bundle files (`bootstrap.bundle.js` and `bootstrap.bundle.min.js`). While you're customizing via Sass, be sure to remove related JavaScript.
+JavaScript в Bootstrap включает все компоненты в наших основных файлах папки dist (`bootstrap.js` и `bootstrap.min.js`), и даже нашу основную зависимость (Popper.js) с нашими файлами пакетов (`bootstrap.bundle.js` и `bootstrap.bundle.min.js`). Пока Вы настраиваете через Sass, не забудьте удалить связанный JavaScript.
 
-For instance, assuming you're using your own JavaScript bundler like Webpack or Rollup, you'd only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:
+Например, если Вы используете свой собственный сборщик JavaScript, такой как Webpack или Rollup, Вы должны импортировать только тот JavaScript, который планируете использовать. В приведенном ниже примере мы показываем, как просто включить наш модальный JavaScript:
 
 ```js
-// Import just what we need
+// Импортируйте только то, что нам нужно
 
-// If you're importing tooltips or popovers, be sure to include the Popper.js dependency
+// Если Вы импортируете всплывающие подсказки или всплывающие окна, обязательно включите зависимость Popper.js
 // import "../../node_modules/popper.js/dist/popper.min.js";
 
 import "../../node_modules/bootstrap/js/dist/util.js";
 import "../../node_modules/bootstrap/js/dist/modal.js";
 ```
 
-This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips.
+Таким образом, Вы не включаете JavaScript, который не собираетесь использовать для таких компонентов, как кнопки, карусели и всплывающие подсказки.
 
-## Autoprefixer .browserslistrc
+## Автопрефикс .browserslistrc
 
-Bootstrap depends on Autoprefixer to automatically add browser prefixes to certain CSS properties. Prefixes are dictated by our `.browserslistrc` file, found in the root of the Bootstrap repo. Customizing this list of browsers and recompiling the Sass will automatically remove some CSS from your compiled CSS, if there are vendor prefixes unique to that browser or version.
+Bootstrap зависит от Autoprefixer для автоматического добавления префиксов браузера к определенным свойствам CSS. Префиксы продиктованы нашим файлом `.browserslistrc`, который находится в корне репозитория Bootstrap. Настройка этого списка браузеров и перекомпиляция Sass автоматически удалит часть CSS из Вашего скомпилированного CSS, если есть префиксы поставщика, уникальные для этого браузера или версии.
 
-## Unused CSS
+## Неиспользуемый CSS
 
-_Help wanted with this section, please consider opening a PR. Thanks!_
+_Помощь в этом разделе нужна, рассмотрите возможность открытия PR. Спасибо!_
 
-While we don't have a prebuilt example for using [PurgeCSS](https://github.com/FullHuman/purgecss) with Bootstrap, there are some helpful articles and walkthroughs that the community has written. Here are some options:
+Хотя у нас нет готового примера использования [PurgeCSS](https://github.com/FullHuman/purgecss) с Bootstrap, есть несколько полезных статей и пошаговых руководств, написанных сообществом. Вот несколько вариантов:
 
 - <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772>
 - <https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/>
 
-Lastly, this [CSS Tricks article on unused CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) shows how to use PurgeCSS and other similar tools.
+Наконец, в этой [статье CSS Tricks о неиспользуемом CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) показано, как использовать PurgeCSS и другие подобные инструменты.
 
-## Minify and gzip
+## Минификация и сжатие
 
-Whenever possible, be sure to compress all the code you serve to your visitors. If you're using Bootstrap dist files, try to stick to the minified versions (indicated by the `.min.css` and `.min.js` extensions). If you're building Bootstrap from the source with your own build system, be sure to implement your own minifiers for HTML, CSS, and JS.
+По возможности обязательно сжимайте весь код, который Вы показываете своим посетителям. Если Вы используете файлы Bootstrap из папки dist, постарайтесь придерживаться минифицированных версий (обозначенных расширениями `.min.css` и `.min.js`). Если Вы создаете Bootstrap из исходного кода с помощью своей собственной системы сборки, обязательно реализуйте собственные минификаторы для HTML, CSS и JS.
 
-## Nonblocking files
+## Неблокирующие файлы
 
-_Help wanted with this section, please consider opening a PR. Thanks!_
+_Помощь в этом разделе нужна, рассмотрите возможность открытия PR. Спасибо!_
 
-## Always use https
+## Всегда используйте https
 
-_Help wanted with this section, please consider opening a PR. Thanks!_
+_Помощь в этом разделе нужна, рассмотрите возможность открытия PR. Спасибо!_

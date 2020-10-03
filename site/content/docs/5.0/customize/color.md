@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Color
-description: Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+title: Цвет
+description: Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.
 group: customize
 toc: true
 ---
 
-## Theme colors
+## Цвета темы
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
+Мы используем подмножество всех цветов, чтобы создать меньшую цветовую палитру для создания цветовых схем, также доступных в виде переменных Sass и карты Sass в файле `scss/_variables.scss`.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -20,17 +20,17 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-All these colors are available as a Sass map, `$theme-colors`.
+Все эти цвета доступны в виде карты Sass, `$theme-colors`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
+Ознакомьтесь с [нашей документацией по картам и циклам Sass]({{< docsref "/customize/sass#maps-and-loops" >}}), чтобы узнать, как изменить эти цвета.
 
-## All colors
+## Все цвета
 
-All Bootstrap colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
+Все цвета Bootstrap доступны как переменные Sass и карта Sass в файле `scss/_variables.scss`. Чтобы избежать увеличения размеров файлов, мы не создаем классы цвета текста или фона для каждой из этих переменных. Вместо этого мы выбираем подмножество этих цветов для [палитры темы](#theme-colors).
 
-Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
+Обязательно следите за коэффициентом контрастности при настройке цветов. Как показано ниже, мы добавили три коэффициента контрастности к каждому из основных цветов: один для текущих цветов образца, один для белого и один для черного.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -71,31 +71,31 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   </div>
 </div>
 
-### Notes on Sass
+### Примечания к Sass
 
-Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
+Sass не может программно генерировать переменные, поэтому мы вручную создали переменные для каждого оттенка и оттенка сами. Мы указываем значение средней точки (например, `$blue-500`) и используем пользовательские цветовые функции для придания оттенка (осветления) или затенения (затемнения) наших цветов с помощью цветовой функции Sass `mix()`.
 
-Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
+Использование `mix()` - это не то же самое, что `lighten()` и `darken()` - первый смешивает указанный цвет с белым или черным, а последний только регулирует значение яркости каждого цвета. В результате получается гораздо более полный набор цветов, как [показано в этой демонстрации CodePen](https://codepen.io/emdeoh/pen/zYOQOPB).
 
-Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
+Наши функции `tint-color()` и `shade-color()` используют `mix()` вместе с нашей переменной `$theme-color-interval`, которая определяет ступенчатое процентное значение для каждого смешанного цвета, который мы производим. См. полный исходный код в файлах `scss/_functions.scss` и `scss/_variables.scss`.
 
-## Color Sass maps
+## Карты sass цвета
 
-Bootstrap's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
+Исходные файлы Sass Bootstrap включают три карты, которые помогут Вам быстро и легко просмотреть список цветов и их шестнадцатеричные значения.
 
-- `$colors` lists all our available base (`500`) colors
-- `$theme-colors` lists all semantically named theme colors (shown below)
-- `$grays` lists all tints and shades of gray
+- `$colors` список всех наших доступных базовых цветов (`500`)
+- `$theme-colors` список всех цветов темы с семантическими именами (показано ниже)
+- `$grays` список всех оттенков и теней серого
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+В `scss/_variables.scss` Вы найдете цветовые переменные Bootstrap и карту Sass. Вот пример Sass-карты `$colors`:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+Добавляйте, удаляйте или изменяйте значения на карте, чтобы обновить, как они используются во многих других компонентах. К сожалению, в настоящее время не _every_ компонент использует эту карту Sass. В будущих обновлениях мы постараемся улучшить это. А пока планируйте использовать переменные `${color}` и эту карту Sass.
 
-### Example
+### Пример
 
-Here's how you can use these in your Sass:
+Вот как Вы можете использовать их в своем Sass:
 
 {{< highlight scss >}}
 .alpha { color: $purple; }
@@ -105,4 +105,4 @@ Here's how you can use these in your Sass:
 }
 {{< /highlight >}}
 
-[Color utility classes]({{< docsref "/utilities/colors" >}}) are also available for setting `color` and `background-color` using the `500` color values.
+[Цветовые служебные классы]({{< docsref "/utilities/colors" >}}) также доступны для установки `color` и `background-color` с использованием `500` значений цвета.

@@ -1,36 +1,42 @@
 ---
 layout: docs
-title: Customize
-description: Learn how to theme, customize, and extend Bootstrap with Sass, a boatload of global options, an expansive color system, and more.
+title: Настройка
+description: Узнайте, как создавать темы, настраивать и расширять Bootstrap с помощью Sass, множества глобальных опций, обширной цветовой системы и многого другого.
 group: customize
 toc: false
 aliases: "/docs/5.0/customize/"
 sections:
   - title: Sass
-    description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
-  - title: Options
-    description: Customize Bootstrap with built-in variables to easily toggle global CSS preferences.
-  - title: Color
-    description: Learn about and customize the color systems that support the entire toolkit.
-  - title: Components
-    description: Learn how we build nearly all our components responsively and with base and modifier classes.
-  - title: CSS variables
-    description: Use Bootstrap's CSS custom properties for fast and forward-looking design and development.
-  - title: Optimize
-    description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience.
+    slug: "sass"
+    description: Используйте наши исходные файлы Sass, чтобы воспользоваться преимуществами переменных, карт, примесей и функций.
+  - title: Параметры
+    slug: "options"
+    description: Настройте Bootstrap с помощью встроенных переменных, чтобы легко переключать глобальные настройки CSS.
+  - title: Цвет
+    slug: "color"
+    description: Изучите и настройте цветовые системы, поддерживающие весь набор инструментов.
+  - title: Компоненты
+    slug: "components"
+    description: Узнайте, как мы создаем почти все наши компоненты адаптивно, используя базовые классы и классы-модификаторы.
+  - title: Переменные CSS
+    slug: "css-variables"
+    description: Используйте настраиваемые свойства CSS Bootstrap для быстрого и перспективного проектирования и разработки.
+  - title: Оптимизация
+    slug: "optimize"
+    description: Делайте Ваши проекты компактными, отзывчивыми и удобными в обслуживании, чтобы Вы могли обеспечить лучший опыт.
 ---
 
-## Overview
+## Обзор
 
-There are multiple ways to customize Bootstrap. Your best path can depend on your project, the complexity of your build tools, the version of Bootstrap you're using, browser support, and more.
+Есть несколько способов настроить Bootstrap. Ваш лучший путь может зависеть от Вашего проекта, сложности Ваших инструментов сборки, версии Bootstrap, которую Вы используете, поддержки браузера и многого другого.
 
-Our two preferred methods are:
+Два наших предпочтительных метода:
 
-1. Using Bootstrap [via package manager]({{< docsref "/getting-started/download#package-managers" >}}) so you can use and extend our source files.
-2. Using Bootstrap's compiled distribution files or the [BootstrapCDN]({{< docsref "/getting-started/download#bootstrapcdn" >}}) so you can add onto or override Bootstrap's styles.
+1. Использование Bootstrap [через менеджер пакетов]({{< docsref "/getting-started/download#package-managers" >}}), чтобы Вы могли использовать и расширять наши исходные файлы.
+2. Использование скомпилированных файлов дистрибутива Bootstrap или [BootstrapCDN]({{< docsref "/getting-started/download#bootstrapcdn" >}}), чтобы Вы могли добавлять или переопределять стили Bootstrap.
 
-While we cannot go into details here on how to use every package manager, we can give some guidance on [using Bootstrap with your own Sass compiler]({{< docsref "/customize/sass" >}}).
+Хотя мы не можем здесь подробно описывать, как использовать каждый менеджер пакетов, мы можем дать некоторые рекомендации по [использованию Bootstrap с Вашим собственным компилятором Sass]({{< docsref "/customize/sass" >}}).
 
-For those who want to use the distribution files, review the [getting started page]({{< docsref "/getting-started/introduction" >}}) for how to include those files and an example HTML page. From there, consult the docs for the layout, components, and behaviors you'd like to use.
+Для тех, кто хочет использовать файлы распространения, просмотрите [страницу начала работы]({{< docsref "/getting-started/introduction" >}}), чтобы узнать, как включить эти файлы и пример HTML-страницы. Оттуда обратитесь к документации по макету, компонентам и поведению, которые Вы хотите использовать.
 
-As you familiarize yourself with Bootstrap, continue exploring this section for more details on how to utilize our global options, making use of and changing our color system, how we build our components, how to use our growing list of CSS custom properties, and how to optimize your code when building with Bootstrap.
+По мере того, как вы знакомитесь с Bootstrap, продолжайте изучать этот раздел, чтобы получить более подробную информацию о том, как использовать наши глобальные параметры, использование и изменение нашей цветовой системы, как мы создаем наши компоненты, как использовать наш растущий список настраиваемых свойств CSS и как для оптимизации Вашего кода при сборке с помощью Bootstrap.

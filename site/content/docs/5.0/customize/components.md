@@ -1,48 +1,48 @@
 ---
 layout: docs
-title: Components
-description: Learn how and why we build nearly all our components responsively and with base and modifier classes.
+title: Компоненты
+description: Узнайте, как и почему мы создаем почти все наши компоненты адаптивно, используя базовые классы и классы-модификаторы.
 group: customize
 toc: true
 ---
 
-## Base classes
+## Базовые классы
 
-Bootstrap's components are largely built with a base-modifier nomenclature. We group as many shared properties as possible into a base class, like `.btn`, and then group individual styles for each variant into modifier classes, like `.btn-primary` or `.btn-success`.
+Компоненты Bootstrap в основном построены с использованием номенклатуры базовых модификаторов. Мы группируем как можно больше общих свойств в базовый класс, например `.btn`, а затем группируем отдельные стили для каждого варианта в классы-модификаторы, такие как `.btn-primary` или `.btn-success`.
 
-To build our modifier classes, we use Sass's `@each` loops to iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
+Чтобы создать наши классы-модификаторы, мы используем циклы Sass `@each` для итерации по карте Sass. Это особенно полезно для генерации вариантов компонента с помощью нашей `$theme-colors` и создания адаптивных вариантов для каждой точки останова. Когда Вы настраиваете эти карты Sass и перекомпилируете, Вы автоматически увидите свои изменения, отраженные в этих циклах.
 
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to customize these loops and extend Bootstrap's base-modifier approach to your own code.
+Ознакомьтесь с [нашей документацией по картам и циклам Sass]({{< docsref "/customize/sass#maps-and-loops" >}}), чтобы узнать, как настроить эти циклы и расширить подход Bootstrap с базовыми модификаторами к Вашему собственному коду.
 
-## Modifiers
+## Модификаторы
 
-Many of Bootstrap's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., `.btn`) while style variations are confined to modifier classes (e.g., `.btn-danger`). These modifier classes are built from the `$theme-colors` map to make customizing the number and name of our modifier classes.
+Многие компоненты Bootstrap построены с использованием подхода базового модификатора. Это означает, что основная часть стилей содержится в базовом классе (например, `.btn`), в то время как варианты стилей ограничиваются классами-модификаторами (например, `.btn-danger`). Эти классы модификаторов построены из карты `$theme-colors` для настройки количества и имени наших классов модификаторов.
 
-Here are two examples of how we loop over the `$theme-colors` map to generate modifiers to the `.alert` and `.list-group` components.
+Вот два примера того, как мы перебираем карту `$theme-colors` в цикле для генерации модификаторов для компонентов `.alert` и `.list-group`.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
-## Responsive
+## Адаптивность
 
-These Sass loops aren't limited to color maps, either. You can also generate responsive variations of your components. Take for example our responsive alignment of the dropdowns where we mix an `@each` loop for the `$grid-breakpoints` Sass map with a media query include.
+Эти циклы Sass также не ограничиваются цветовыми картами. Вы также можете создавать адаптивные варианты Ваших компонентов. Возьмем, к примеру, наше адаптивное выравнивание выпадающих списков, где мы смешиваем цикл `@each` для карты Sass `$grid-breakpoints` с включением медиа-запроса.
 
 {{< scss-docs name="responsive-breakpoints" file="scss/_dropdown.scss" >}}
 
-Should you modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
+Если вы измените свои `$grid-breakpoints`, Ваши изменения будут применяться ко всем циклам, повторяющимся по этой карте.
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+Для получения дополнительной информации и примеров того, как изменить наши карты и переменные Sass, обратитесь к [разделу Sass документации по Сетке]({{< docsref "/layout/grid#sass" >}}).
 
-## Creating your own
+## Создание собственного
 
-We encourage you to adopt these guidelines when building with Bootstrap to create your own components. We've extended this approach ourselves to the custom components in our documentation and examples. Components like our callouts are built just like our provided components with base and modifier classes.
+Мы рекомендуем Вам следовать этим рекомендациям при сборке с помощью Bootstrap, чтобы создавать свои собственные компоненты. Мы сами распространили этот подход на пользовательские компоненты в нашей документации и примерах. Компоненты, подобные нашим сноскам, создаются так же, как предоставленные нами компоненты с базовыми классами и модификаторами.
 
 <div class="bd-example">
   <div class="bd-callout my-0">
-    <strong>This is a callout.</strong> We built it custom for our docs so our messages to you stand out. It has three variants via modifier classes.
+    <strong>Это сноска.</strong> Мы создали его специально для наших документов, чтобы наши сообщения вам выделялись. Он имеет три варианта через классы модификаторов.
   </div>
 </div>
 
@@ -50,28 +50,28 @@ We encourage you to adopt these guidelines when building with Bootstrap to creat
 <div class="callout">...</div>
 {{< /highlight >}}
 
-In your CSS, you'd have something like the following where the bulk of the styling is done via `.callout`. Then, the unique styles between each variant is controlled via modifier class.
+В Вашем CSS у Вас будет что-то вроде следующего, где основная часть стиля выполняется через `.callout`. Затем уникальные стили между каждым вариантом контролируются с помощью класса модификатора.
 
 ```scss
-// Base class
+// Базовый класс
 .callout {}
 
-// Modifier classes
+// Классы модификаторов
 .callout-info {}
 .callout-warning {}
 .callout-danger {}
 ```
 
-For the callouts, that unique styling is just a `border-left-color`. When you combine that base class with one of those modifier classes, you get your complete component family:
+Для сноски этот уникальный стиль представляет собой просто `border-left-color`. Когда Вы объединяете этот базовый класс с одним из этих классов-модификаторов, Вы получаете полное семейство компонентов:
 
 {{< callout info >}}
-**This is an info callout.** Example text to show it in action.
+**Это информационное сообщение.** Пример текста, чтобы показать это в действии.
 {{< /callout >}}
 
 {{< callout warning >}}
-**This is a warning callout.** Example text to show it in action.
+**Это предупреждение.** Пример текста, чтобы показать это в действии.
 {{< /callout >}}
 
 {{< callout danger >}}
-**This is a danger callout.** Example text to show it in action.
+**Это предупреждение об опасности.** Пример текста, чтобы показать это в действии.
 {{< /callout >}}

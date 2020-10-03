@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: CSS variables
-description: Use Bootstrap's CSS custom properties for fast and forward-looking design and development.
+title: CSS переменные
+description: Используйте настраиваемые свойства CSS Bootstrap для быстрого и перспективного проектирования и разработки.
 group: customize
 toc: true
 ---
 
-Bootstrap includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS, with dozens more on the way for improved customization on a per-component basis. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
+Bootstrap включает около двух десятков [настраиваемых свойств (переменных) CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) в своем скомпилированном CSS, и еще десятки будут добавлены для улучшенной настройки на покомпонентной основе. Они обеспечивают легкий доступ к часто используемым значениям, таким как цвета нашей темы, контрольные точки и стеки основных шрифтов, при работе в инспекторе Вашего браузера, в изолированной программной среде или при общем прототипировании.
 
-**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
+**Все наши настраиваемые свойства имеют префикс `bs-`**, чтобы избежать конфликтов со сторонним CSS.
 
-## Root variables
+## Корневые переменные
 
-Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
+Вот переменные, которые мы включаем (обратите внимание, что требуется `:root`), к которым можно получить доступ везде, где загружен CSS Bootstrap. Они находятся в нашем файле `_root.scss` и включены в наши скомпилированные файлы dist.
 
 {{< highlight css >}}
 {{< root.inline >}}
@@ -28,17 +28,17 @@ Here are the variables we include (note that the `:root` is required) that can b
 {{< /root.inline >}}
 {{< /highlight >}}
 
-## Component variables
+## Компонентные переменные
 
-We're also beginning to make use of custom properties as local variables for various components. This way we can reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
+Мы также начинаем использовать настраиваемые свойства в качестве локальных переменных для различных компонентов. Таким образом мы можем уменьшить наш скомпилированный CSS, гарантировать, что стили не наследуются в таких местах, как вложенные таблицы, и разрешить некоторый базовый рестайлинг и расширение компонентов Bootstrap после компиляции Sass.
 
-Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}).
+Взгляните на нашу документацию по таблицам, чтобы [понять, как мы используем переменные CSS]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}).
 
-We're also using CSS variables across our grids—primarily for gutters—with more component usage coming in the future.
+Мы также используем переменные CSS в наших сетках - в первую очередь для желобов - с более широким использованием компонентов в будущем.
 
-## Examples
+## Примеры
 
-CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+Переменные CSS предлагают такую же гибкость, что и переменные Sass, но без необходимости компиляции перед отправкой в браузер. Например, здесь мы сбрасываем шрифт нашей страницы и стили ссылок с помощью переменных CSS.
 
 {{< highlight css >}}
 body {
