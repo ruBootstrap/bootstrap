@@ -26,13 +26,13 @@ toc: true
 
 Вам потребуются [инструменты сборки]({{< docsref "/getting-started/build-tools#настройка-инструмента" >}}), они включены для разработки Bootstrap и его документации, но они, вероятно, не подходят для Ваших собственных целей.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Скачать исходный код</a>
+<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Начало работы', 'Скачать', 'Скачать исходники');">Скачать исходный код</a>
 
 ## Примеры
 
 Если Вы хотите скачать и изучить наши [примеры]({{< docsref "/examples" >}}), Вы можете скачать уже созданные примеры:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Скачать Примеры</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Начало работы', 'Скачать', 'Скачать примеры');">Скачать Примеры</a>
 
 ## BootstrapCDN
 
