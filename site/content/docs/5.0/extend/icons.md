@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Icons
-description: Guidance and suggestions for using external icon libraries with Bootstrap.
+title: Иконки
+description: Рекомендации и предложения по использованию внешних библиотек иконок с Bootstrap.
 group: extend
 ---
 
-While Bootstrap doesn't include an icon set by default, we do have our own comprehensive icon library called Bootstrap Icons. Feel free to use them or any other icon set in your project. We've included details for Bootstrap Icons and other preferred icon sets below.
+Хотя Bootstrap не включает набор иконок по умолчанию, у нас есть собственная обширная библиотека иконок под названием Bootstrap Icons. Не стесняйтесь использовать их или любой другой набор иконок в своем проекте. Мы включили подробную информацию о значках Bootstrap и других предпочтительных наборах иконок ниже.
 
-While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+Хотя большинство наборов иконок включают файлы нескольких форматов, мы предпочитаем реализации SVG из-за их улучшенной доступности и поддержки векторных изображений.
 
 ## Bootstrap Icons
 
-Bootstrap Icons is a growing library of SVG icons that are designed by [@mdo](https://github.com/mdo) and maintained by [the Bootstrap Team](https://github.com/orgs/twbs/people). The beginnings of this icon set come from Bootstrap's very own components—our forms, carousels, and more. Bootstrap has very few icon needs out of the box, so we didn't need much. However, once we got going, we couldn't stop making more.
+Bootstrap Icons - это растущая библиотека иконок SVG, разработанная [@mdo](https://github.com/mdo) и поддерживаемая [командой Bootstrap](https://github.com/orgs/twbs/people). Истоки этого набора иконок берут начало в собственных компонентах Bootstrap - наших формах, каруселях и многом другом. У Bootstrap очень мало иконок из коробки, поэтому нам не нужно было много. Однако как только мы начали работу, мы не могли перестать производить больше.
 
-Oh, and did we mention they're completely open source? Licensed under MIT, just like Bootstrap, our icon set is available to everyone.
+О, и мы упоминали, что они полностью с открытым исходным кодом? Имея лицензию MIT, как и Bootstrap, наш набор иконок доступен всем.
 
-[Learn more about Bootstrap Icons]({{< param icons >}}), including how to install them and recommended usage.
+[Подробнее о иконках Bootstrap]({{< param icons >}}), в том числе о том, как их установить и рекомендациях использования.
 
-## Alternatives
+## Альтернативы
 
-We've tested and used these icon sets ourselves as preferred alternatives to Bootstrap Icons.
+Мы протестировали и использовали эти наборы иконок в качестве предпочтительной альтернативы значкам Bootstrap.
 
 {{< markdown >}}
 {{< icons.inline >}}
@@ -31,9 +31,9 @@ We've tested and used these icon sets ourselves as preferred alternatives to Boo
 {{< /icons.inline >}}
 {{< /markdown >}}
 
-## More options
+## Больше вариантов
 
-While we haven't tried these out ourselves, they do look promising and provide multiple formats, including SVG.
+Хотя мы сами их не пробовали, они выглядят многообещающими и предоставляют несколько форматов, включая SVG.
 
 {{< markdown >}}
 {{< icons.inline type="more" />}}
