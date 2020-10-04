@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.su/docs/5.0/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v5.getbootstrap.com/docs/5.0/"><strong>Explore Bootstrap docs »</strong></a>
+  <a href="https://getbootstrap.su/docs/5.0/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://v5.getbootstrap.com/docs/5.0/"><strong>[EN] Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Report bug</a>

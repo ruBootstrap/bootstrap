@@ -62,7 +62,7 @@ params:
   blog:                 "https://blog.getbootstrap.com/"
   expo:                 "https://expo.getbootstrap.com/"
   themes:               "https://themes.getbootstrap.com/"
-  icons:                "https://icons.getbootstrap.com/"
+  icons:                "https://icons.getbootstrap.su/"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v5.0.0-alpha2.zip"
