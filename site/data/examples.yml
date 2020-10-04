@@ -1,59 +1,79 @@
-- category: Custom Components
-  description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
+- category: Пользовательские компоненты
+  description: "Совершенно новые компоненты и шаблоны, которые помогут людям быстро приступить к работе с Bootstrap и продемонстрируют лучшие практики для добавления в платформу."
   examples:
-    - name: Album
-      description: "Simple one-page template for photo galleries, portfolios, and more."
-    - name: Pricing
-      description: "Example pricing page built with Cards and featuring a custom header and footer."
-    - name: Checkout
-      description: "Custom checkout form showing our form components and their validation features."
-    - name: Product
-      description: "Lean product-focused marketing page with extensive grid and image work."
-    - name: Cover
-      description: "A one-page template for building simple and beautiful home pages."
-    - name: Carousel
-      description: "Customize the navbar and carousel, then add some new components."
-    - name: Blog
-      description: "Magazine like blog template with header, navigation, featured content."
-    - name: Dashboard
-      description: "Basic admin dashboard shell with fixed sidebar and navbar."
-    - name: Sign-in
-      description: "Custom form layout and design for a simple sign in form."
-    - name: Sticky footer
-      description: "Attach a footer to the bottom of the viewport when page content is short."
-    - name: Sticky footer navbar
-      description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
+    - name: Альбом (Album)
+      slug: album
+      description: "Простой одностраничный шаблон для фотогалереи, портфолио и т.д."
+    - name: Ценообразование (Pricing)
+      slug: pricing
+      description: "Пример страницы с ценами, созданной с помощью карточек, с настраиваемым верхним и нижним колонтитулами."
+    - name: Оформление (Checkout)
+      slug: checkout
+      description: "Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки."
+    - name: Продукт (Product)
+      slug: product
+      description: "Экономичная маркетинговая страница, ориентированная на продукт, с обширной сеткой и изображениями."
+    - name: Обложка (Cover)
+      slug: cover
+      description: "Одностраничный шаблон для создания простых и красивых домашних страниц."
+    - name: Карусель (Carousel)
+      slug: carousel
+      description: "Настройте панель навигации и карусель, а затем добавьте новые компоненты."
+    - name: Блог (Blog)
+      slug: blog
+      description: "Журнал как шаблон блога с заголовком, навигацией, избранным контентом."
+    - name: Панель (Dashboard)
+      slug: dashboard
+      description: "Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью."
+    - name: Форма входа (Sign-in)
+      slug: sign-in
+      description: "Индивидуальный макет и дизайн формы для простой формы входа."
+    - name: Закрепленный футер (Sticky footer)
+      slug: sticky-footer
+      description: "Прикрепленный нижний колонтитул к нижней части области просмотра, когда содержимое страницы мало."
+    - name: Закрепленный футер и панель навигации (Sticky footer navbar)
+      slug: sticky-footer-navbar
+      description: "Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации."
 
-- category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
+- category: Фреймворк
+  description: "Примеры, которые сосредоточены на реализации использования встроенных компонентов, предоставляемых Bootstrap."
   examples:
-    - name: "Starter template"
-      description: "Nothing but the basics: compiled CSS and JavaScript."
-    - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+    - name: Стартовый шаблон (Starter template)
+      slug: starter-template
+      description: "Ничего, кроме простоты: скомпилированный CSS и JavaScript."
+    - name: Сетка (Grid)
+      slug: grid
+      description: "Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д."
 
-- category: Navbars
-  description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
+- category: Панели навигации
+  description: "Взять компонент панели навигации по умолчанию и показать, как его можно перемещать, размещать и расширять."
   examples:
-    - name: Navbars
-      description: "Demonstration of all responsive and container options for the navbar."
-    - name: Navbar static
-      description: "Single navbar example of a static top navbar along with some additional content."
-    - name: Navbar fixed
-      description: "Single navbar example with a fixed top navbar along with some additional content."
-    - name: Navbar bottom
-      description: "Single navbar example with a bottom navbar along with some additional content."
+    - name: Панели навигации (Navbars)
+      slug: navbars
+      description: "Демонстрация всех адаптивных и контейнерных опций для навигационной панели."
+    - name: Статичная панель навигации (Navbar static)
+      slug: navbar-static
+      description: "Пример статической верхней панели навигации с одним дополнительным контентом."
+    - name: Фиксированная панель навигации (Navbar fixed)
+      slug: navbar-fixed
+      description: "Пример единой панели навигации с фиксированной верхней панелью навигации и некоторым дополнительным контентом."
+    - name: Нижняя панель навигации (Navbar bottom)
+      slug: navbar-bottom
+      description: "Пример единой панели навигации с нижней панелью навигации и дополнительным контентом."
 
-- category: Experiments
-  description: "Examples that focus on future-friendly features or techniques."
+- category: Эксперименты
+  description: "Примеры, ориентированные на перспективные функции или методы."
   examples:
-    - name: Floating labels
-      description: "Beautifully simple forms with floating labels over your inputs."
-    - name: Offcanvas
-      description: "Turn your expandable navbar into a sliding offcanvas menu."
+    - name: Плавающие метки (Floating labels)
+      slug: floating-labels
+      description: "Красивые простые формы с плавающими надписями над вводами."
+    - name: Панель навигации вне холста (Offcanvas)
+      slug: offcanvas
+      description: "Превратите расширяемую панель навигации в скользящее меню вне холста."
 
-- category: Integrations
-  description: "Integrations with external libraries."
+- category: Интеграции
+  description: "Интеграции с внешними библиотеками."
   examples:
-    - name: "Masonry"
-      description: "Combine the powers of the Bootstrap grid and the Masonry layout."
+    - name: Каменная кладка (Masonry)
+      slug: masonry
+      description: "Объедините возможности сетки Bootstrap и макета Masonry."
