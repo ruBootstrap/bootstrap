@@ -79,9 +79,6 @@
     <loc>https://getbootstrap.su/docs/5.0/components/dropdowns/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
   </url>
   <url>
@@ -314,6 +311,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/extend/approach/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
