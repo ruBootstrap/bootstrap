@@ -28,9 +28,6 @@
     <loc>https://getbootstrap.su/docs/5.0/components/breadcrumb/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/breakpoints/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/components/button-group/</loc>
   </url>
   <url>
@@ -65,12 +62,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/colors/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/columns/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/containers/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/cover/</loc>
@@ -115,13 +106,7 @@
     <loc>https://getbootstrap.su/docs/5.0/forms/overview/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/grid/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/grid/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/images/</loc>
@@ -253,9 +238,6 @@
     <loc>https://getbootstrap.su/docs/5.0/content/typography/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/layout/utilities/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/api/</loc>
   </url>
   <url>
@@ -295,10 +277,19 @@
     <loc>https://getbootstrap.su/docs/5.0/getting-started/build-tools/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/columns/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/about/team/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/components/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/containers/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/breakpoints/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/about/license/</loc>
@@ -325,13 +316,22 @@
     <loc>https://getbootstrap.su/docs/5.0/extend/approach/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/about/brand/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/grid/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/download/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/contents/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/layout/utilities/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/color/</loc>

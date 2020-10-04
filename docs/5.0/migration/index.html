@@ -240,13 +240,13 @@
       </a>
       <div class="collapse" id="layout-collapse">
         <ul class="list-unstyled font-weight-normal pb-1 small">
-            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
-            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Containers</a></li>
-            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Columns</a></li>
-            <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
-            <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilities</a></li>
-            <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Контрольные точки</a></li>
+            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Контейнеры</a></li>
+            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Сетка</a></li>
+            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Колонки</a></li>
+            <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Промежутки</a></li>
+            <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Утилиты</a></li>
+            <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-индекс</a></li>
         </ul>
       </div>
     </li>
@@ -524,7 +524,7 @@
 <h4 id="карусель">Карусель</h4>
 <ul>
 <li>Заменены значки шеврона для элементов управления каруселью на новые SVG из <a href="https://icons.getbootstrap.su/">Bootstrap Icons</a>.</li>
-<li>Добавлен новый <a href="/docs/5.0/components/carousel/#dark-variant">вариант <code>.carousel-dark</code></a> для темного текста, элементов управления и индикаторов (отлично подходит для более светлого фона).</li>
+<li>Добавлен новый <a href="/docs/5.0/components/carousel/#темный-вариант">вариант <code>.carousel-dark</code></a> для темного текста, элементов управления и индикаторов (отлично подходит для более светлого фона).</li>
 </ul>
 <h4 id="кнопка-закрытия">Кнопка закрытия</h4>
 <ul>
@@ -632,7 +632,7 @@
 <li>Высота строк снижена из нескольких компонентов, чтобы упростить нашу кодовую базу. <code>button-size()</code> и <code>pagination-size()</code> больше не принимают параметры высоты строки. <a href="https://github.com/twbs/bootstrap/pull/29271">См. #29271</a></li>
 <li>Примесь <code>button-variant()</code> теперь принимает 3 дополнительных параметра цвета для каждого состояния кнопки, чтобы переопределить цвет, предоставляемый <code>color-contrast()</code>.По умолчанию эти параметры определяют, какой цвет обеспечивает больший контраст по сравнению с цветом фона состояния кнопки с помощью <code>color-contrast()</code>.</li>
 <li>Примесь <code>button-outline-variant()</code> теперь принимает дополнительный аргумент, <code>$active-color</code>, для установки цвета текста активного состояния кнопки. По умолчанию этот параметр определяет, какой цвет обеспечивает больший контраст по сравнению с активным цветом фона кнопки с помощью <code>color-contrast()</code>.</li>
-<li>Избавьтесь от слияния карт Sass, что упрощает удаление избыточных значений. Имейте в виду, что теперь Вам нужно определить все значения в картах Sass, например <code>$theme-colors</code>. Узнайте, как работать с <a href="/docs/5.0/customize/sass/#maps-and-loops">Sass maps</a>.</li>
+<li>Избавьтесь от слияния карт Sass, что упрощает удаление избыточных значений. Имейте в виду, что теперь Вам нужно определить все значения в картах Sass, например <code>$theme-colors</code>. Узнайте, как работать с <a href="/docs/5.0/customize/sass/#карты-и-циклы">Sass maps</a>.</li>
 <li>Функция <code>color-yiq()</code> и связанные с ней переменные переименованы в <code>color-contrast()</code>, поскольку она больше не связана с цветовым пространством YIQ. <a href="https://github.com/twbs/bootstrap/pull/30168/">См. #30168.</a>
 <ul>
 <li><code>$yiq-contrasted-threshold</code> переименована в <code>$min-contrast-ratio</code>.</li>
@@ -663,16 +663,16 @@
 <p>Изменения любых инструментов компоновки и нашей системы сеток.</p>
 <ul>
 <li>Отказ от компонента <code>.media</code>, так как он может быть построен с помощью служебных классов. <a href="https://github.com/twbs/bootstrap/pull/28265">См. #28265</a>.</li>
-<li>Удалена <code>position: relative</code> из столбцов сетки.</li>
-<li>Горизонтальное заполнение добавляется к прямым дочерним элементам в строке вместо самих столбцов.
+<li>Удалена <code>position: relative</code> из колонок сетки.</li>
+<li>Горизонтальное заполнение добавляется к прямым дочерним элементам в строке вместо самих колонок.
 <ul>
 <li>Это упрощает нашу кодовую базу.</li>
-<li>Классы столбцов теперь можно использовать отдельно. Каждый раз, когда они используются за пределами <code>.row</code>, горизонтальное заполнение добавляться не будет.</li>
+<li>Классы колонок теперь можно использовать отдельно. Каждый раз, когда они используются за пределами <code>.row</code>, горизонтальное заполнение добавляться не будет.</li>
 </ul>
 </li>
-<li>Адаптивные классы желобов можно использовать для управления шириной желоба в горизонтальном, вертикальном или обоих направлениях.</li>
-<li>Ширина желоба теперь установлена в <code>rem</code> и уменьшена с <code>30px</code> до <code>1.5rem</code> (24px).</li>
-<li><code>bootstrap-grid.css</code> теперь применяет к столбцу только <code>box-sizing: border-box</code> вместо сброса глобального размера поля. Таким образом можно использовать сеточную систему, даже если <code>box-sizing: border-box</code> не применяется к каждому элементу.</li>
+<li>Адаптивные классы промежутков можно использовать для управления шириной промежутка в горизонтальном, вертикальном или обоих направлениях.</li>
+<li>Ширина промежутка теперь установлена в <code>rem</code> и уменьшена с <code>30px</code> до <code>1.5rem</code> (24px).</li>
+<li><code>bootstrap-grid.css</code> теперь применяет только к колонке <code>box-sizing: border-box</code> вместо сброса глобального размера поля. Таким образом можно использовать сеточную систему, даже если <code>box-sizing: border-box</code> не применяется к каждому элементу.</li>
 </ul>
 <h3 id="контент-перезагрузка-и-т-д">Контент, перезагрузка и т. д.</h3>
 <p>Изменения в перезагрузке, типографике, таблицах и многом другом.</p>
@@ -755,11 +755,11 @@
 </ul>
 <h4 id="кнопки-1">Кнопки</h4>
 <ul>
-<li>Флажок/переключатель удален из подключаемого модуля кнопки в пользу решения только для CSS, которое задокументировано в <a href="/docs/5.0/forms/checks-radios/#toggle-buttons">проверка формы и радио</a>. Класс <code>.btn-check</code> может быть добавлен к входам, любая метка с <code>.btn</code> и классом модификатора может использоваться для оформления меток. <a href="https://github.com/twbs/bootstrap/pull/30650">См. #30650</a>.</li>
+<li>Флажок/переключатель удален из подключаемого модуля кнопки в пользу решения только для CSS, которое задокументировано в <a href="/docs/5.0/forms/checks-radios/#кнопки-переключения">проверка формы и радио</a>. Класс <code>.btn-check</code> может быть добавлен к входам, любая метка с <code>.btn</code> и классом модификатора может использоваться для оформления меток. <a href="https://github.com/twbs/bootstrap/pull/30650">См. #30650</a>.</li>
 </ul>
 <h4 id="карты">Карты</h4>
 <ul>
-<li>Удалены столбцы карт в пользу Masonry сетки <a href="https://github.com/twbs/bootstrap/pull/28922">См. #28922</a>.</li>
+<li>Удалены колонки карт в пользу Masonry сетки <a href="https://github.com/twbs/bootstrap/pull/28922">См. #28922</a>.</li>
 <li>Удалены колоды карт в пользу сетки, которая добавляет гибкости по сравнению с отзывчивым поведением.</li>
 </ul>
 <h4 id="jumbotron">Jumbotron</h4>
@@ -790,7 +790,7 @@
 <ul>
 <li><code>.text-monospace</code> переименовано в <code>.font-monospace</code></li>
 <li>Уменьшено количество реагирующих утилит заказов на контрольную точку. Утилита высшего порядка с номером теперь <code>.order-5</code> вместо <code>.order-12</code>. <a href="https://github.com/twbs/bootstrap/pull/28874">См. #28874</a>.</li>
-<li>Новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. См. <a href="/docs/5.0/utilities/text/#line-height">here</a>.</li>
+<li>Новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. См. <a href="/docs/5.0/utilities/text/#высота-линии">здесь</a>.</li>
 <li>Добавлен <code>.bg-body</code> для быстрой установки фона <code>&lt;body&gt;</code> для дополнительных элементов.</li>
 <li>Удалено <code>.text-hide</code>, так как это устаревший метод скрытия текста, который больше не следует использовать.</li>
 <li>Разделение служебных программ на служебные классы и помощники по значениям свойств.</li>

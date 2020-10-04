@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="While not a part of Bootstrap&rsquo;s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta name="description" content="Хотя z-индексы не являются частью сетки Bootstrap, они играют важную роль в том, как наши компоненты накладываются друг на друга и взаимодействуют друг с другом.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
 <meta name="generator" content="Hugo 0.75.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Z-index · Bootstrap v5.0</title>
+<title>Z-индекс · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.su/docs/5.0/layout/z-index/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Z-index">
-<meta name="twitter:description" content="While not a part of Bootstrap&rsquo;s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta name="twitter:title" content="Z-индекс">
+<meta name="twitter:description" content="Хотя z-индексы не являются частью сетки Bootstrap, они играют важную роль в том, как наши компоненты накладываются друг на друга и взаимодействуют друг с другом.">
 <meta name="twitter:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.su/docs/5.0/layout/z-index/">
-<meta property="og:title" content="Z-index">
-<meta property="og:description" content="While not a part of Bootstrap&rsquo;s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta property="og:title" content="Z-индекс">
+<meta property="og:description" content="Хотя z-индексы не являются частью сетки Bootstrap, они играют важную роль в том, как наши компоненты накладываются друг на друга и взаимодействуют друг с другом.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -240,13 +240,13 @@
       </a>
       <div class="collapse show" id="layout-collapse">
         <ul class="list-unstyled font-weight-normal pb-1 small">
-            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
-            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Containers</a></li>
-            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Columns</a></li>
-            <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
-            <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilities</a></li>
-            <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded active" aria-current="page">Z-index</a></li>
+            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Контрольные точки</a></li>
+            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Контейнеры</a></li>
+            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Сетка</a></li>
+            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Колонки</a></li>
+            <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Промежутки</a></li>
+            <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Утилиты</a></li>
+            <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded active" aria-current="page">Z-индекс</a></li>
         </ul>
       </div>
     </li>
@@ -400,9 +400,9 @@
         <div class="bd-intro pl-lg-4">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs%5c5.0%5clayout%5cz-index.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
-            <h1 class="bd-title" id="content">Z-index</h1>
+            <h1 class="bd-title" id="content">Z-индекс</h1>
           </div>
-          <p class="bd-lead">While not a part of Bootstrap&rsquo;s grid system, z-indexes play an important part in how our components overlay and interact with one another.</p>
+          <p class="bd-lead">Хотя z-индексы не являются частью сетки Bootstrap, они играют важную роль в том, как наши компоненты накладываются друг на друга и взаимодействуют друг с другом.</p>
         </div>
 
         
@@ -410,9 +410,9 @@
         <div class="bd-content pl-lg-4">
           
 
-          <p>Several Bootstrap components utilize <code>z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that&rsquo;s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
-<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There&rsquo;s no reason we couldn&rsquo;t have used <code>100</code>+ or <code>500</code>+.</p>
-<p>We don&rsquo;t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
+          <p>Некоторые компоненты Bootstrap используют <code>z-index</code>, свойство CSS, которое помогает управлять макетом, предоставляя третью ось для упорядочивания содержимого. Мы используем шкалу z-индекса по умолчанию в Bootstrap, которая была разработана для правильного разделения навигации, всплывающих и всплывающих подсказок, модальных окон и многого другого.</p>
+<p>Эти более высокие значения начинаются с произвольного числа, достаточно большого и достаточно конкретного, чтобы в идеале избежать конфликтов. Нам нужен стандартный набор этих элементов для наших многоуровневых компонентов - всплывающих подсказок, всплывающих окон, панелей навигации, раскрывающихся списков, модальных окон - чтобы мы могли быть достаточно последовательными в поведении. Нет причин, по которым мы не могли использовать <code>100</code>+ или <code>500</code>+.</p>
+<p>Мы не поощряем настройку этих индивидуальных значений; если Вы измените один, Вам, вероятно, придется изменить их все.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$zindex-dropdown</span><span class="o">:</span>                   <span class="mi">1000</span><span class="p">;</span>
 <span class="nv">$zindex-sticky</span><span class="o">:</span>                     <span class="mi">1020</span><span class="p">;</span>
 <span class="nv">$zindex-fixed</span><span class="o">:</span>                      <span class="mi">1030</span><span class="p">;</span>
@@ -420,7 +420,7 @@
 <span class="nv">$zindex-modal</span><span class="o">:</span>                      <span class="mi">1050</span><span class="p">;</span>
 <span class="nv">$zindex-popover</span><span class="o">:</span>                    <span class="mi">1060</span><span class="p">;</span>
 <span class="nv">$zindex-tooltip</span><span class="o">:</span>                    <span class="mi">1070</span><span class="p">;</span></code></pre></div>
-<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code>z-index</code> values of <code>1</code>, <code>2</code>, and <code>3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code>z-index</code> value to show their border over the sibling elements.</p>
+<p>Чтобы обрабатывать перекрывающиеся границы внутри компонентов (например, кнопок и входов в группах ввода), мы используем малые однозначные значения <code>z-index</code>, равные <code>1</code>, <code>2</code> и <code>3</code> для состояний по умолчанию, при наведении курсора и активного состояния. При наведении/фокусе/активном мы выводим конкретный элемент на передний план с более высоким значением <code>z-index</code>, чтобы показать их границу над соседними элементами.</p>
 
         </div>
       </main>
