@@ -1,215 +1,215 @@
 - title: Начало работы
-  url: getting-started
+  slug: getting-started
   pages:
     - title: Вступление
-      url: introduction
+      slug: introduction
     - title: Скачать
-      url: download
+      slug: download
     - title: Содержимое
-      url: contents
+      slug: contents
     - title: Браузеры и устройства
-      url: browsers-devices
+      slug: browsers-devices
     - title: JavaScript
-      url: javascript
+      slug: javascript
     - title: Инструменты сборки
-      url: build-tools
+      slug: build-tools
     - title: Webpack
-      url: webpack
+      slug: webpack
     - title: Доступность
-      url: accessibility
+      slug: accessibility
     - title: RFS
-      url: rfs
+      slug: rfs
 
 - title: Настройка
-  url: customize
+  slug: customize
   pages:
     - title: Обзор
-      url: overview
+      slug: overview
     - title: Стили
-      url: sass
+      slug: sass
     - title: Параметры
-      url: options
+      slug: options
     - title: Цвет
-      url: color
+      slug: color
     - title: Компоненты
-      url: components
+      slug: components
     - title: CSS переменные
-      url: css-variables
+      slug: css-variables
     - title: Оптимизация
-      url: optimize
+      slug: optimize
 
 - title: Макет
-  url: layout
+  slug: layout
   pages:
     - title: Контрольные точки
-      url: breakpoints
+      slug: breakpoints
     - title: Контейнеры
-      url: containers
+      slug: containers
     - title: Сетка
-      url: grid
+      slug: grid
     # - title: Rows
-      # url: rows
+      # slug: rows
     - title: Колонки
-      url: columns
+      slug: columns
     - title: Промежутки
-      url: gutters
+      slug: gutters
     - title: Утилиты
-      url: utilities
+      slug: utilities
     - title: Z-индекс
-      url: z-index
+      slug: z-index
 
 - title: Контент
-  url: content
+  slug: content
   pages:
     - title: Reboot
-      url: reboot
+      slug: reboot
     - title: Typography
-      url: typography
+      slug: typography
     - title: Images
-      url: images
+      slug: images
     - title: Tables
-      url: tables
+      slug: tables
     - title: Figures
-      url: figures
+      slug: figures
 
 - title: Формы
-  url: forms
+  slug: forms
   pages:
     - title: Overview
-      url: overview
+      slug: overview
     - title: Form control
-      url: form-control
+      slug: form-control
     - title: Select
-      url: select
+      slug: select
     - title: Checks & radios
-      url: checks-radios
+      slug: checks-radios
     - title: File
-      url: file
+      slug: file
     - title: Range
-      url: range
+      slug: range
     - title: Input group
-      url: input-group
+      slug: input-group
     - title: Layout
-      url: layout
+      slug: layout
     - title: Validation
-      url: validation
+      slug: validation
 
 - title: Компоненты
-  url: components
+  slug: components
   pages:
     - title: Alerts
-      url: alerts
+      slug: alerts
     - title: Badge
-      url: badge
+      slug: badge
     - title: Breadcrumb
-      url: breadcrumb
+      slug: breadcrumb
     - title: Buttons
-      url: buttons
+      slug: buttons
     - title: Button group
-      url: button-group
+      slug: button-group
     - title: Card
-      url: card
+      slug: card
     - title: Carousel
-      url: carousel
+      slug: carousel
     - title: Close button
-      url: close-button
+      slug: close-button
     - title: Collapse
-      url: collapse
+      slug: collapse
     - title: Dropdowns
-      url: dropdowns
+      slug: dropdowns
     - title: List group
-      url: list-group
+      slug: list-group
     - title: Modal
-      url: modal
+      slug: modal
     - title: Navs
-      url: navs
+      slug: navs
     - title: Navbar
-      url: navbar
+      slug: navbar
     - title: Pagination
-      url: pagination
+      slug: pagination
     - title: Popovers
-      url: popovers
+      slug: popovers
     - title: Progress
-      url: progress
+      slug: progress
     - title: Scrollspy
-      url: scrollspy
+      slug: scrollspy
     - title: Spinners
-      url: spinners
+      slug: spinners
     - title: Toasts
-      url: toasts
+      slug: toasts
     - title: Tooltips
-      url: tooltips
+      slug: tooltips
 
 - title: Помощники
-  url: helpers
+  slug: helpers
   pages:
     - title: Clearfix
-      url: clearfix
+      slug: clearfix
     - title: Colored links
-      url: colored-links
+      slug: colored-links
     - title: Ratio
-      url: ratio
+      slug: ratio
     - title: Position
-      url: position
+      slug: position
     - title: Visually hidden
-      url: visually-hidden
+      slug: visually-hidden
     - title: Stretched link
-      url: stretched-link
+      slug: stretched-link
     - title: Text truncation
-      url: text-truncation
+      slug: text-truncation
 
 - title: Утилиты
-  url: utilities
+  slug: utilities
   pages:
     - title: API
-      url: api
+      slug: api
     - title: Borders
-      url: borders
+      slug: borders
     - title: Colors
-      url: colors
+      slug: colors
     - title: Display
-      url: display
+      slug: display
     - title: Flex
-      url: flex
+      slug: flex
     - title: Float
-      url: float
+      slug: float
     - title: Interactions
-      url: interactions
+      slug: interactions
     - title: Overflow
-      url: overflow
+      slug: overflow
     - title: Position
-      url: position
+      slug: position
     - title: Shadows
-      url: shadows
+      slug: shadows
     - title: Sizing
-      url: sizing
+      slug: sizing
     - title: Spacing
-      url: spacing
+      slug: spacing
     - title: Text
-      url: text
+      slug: text
     - title: Vertical align
-      url: vertical-align
+      slug: vertical-align
     - title: Visibility
-      url: visibility
+      slug: visibility
 
 - title: Дополнительно
-  url: extend
+  slug: extend
   pages:
     - title: Подход
-      url: approach
+      slug: approach
     - title: Иконки
-      url: icons
+      slug: icons
 
 - title: Инфо
-  url: about
+  slug: about
   pages:
     - title: Обзор
-      url: overview
+      slug: overview
     - title: Команда
-      url: team
+      slug: team
     - title: Бренд
-      url: brand
+      slug: brand
     - title: Лицензия
-      url: license
+      slug: license
     - title: Переводы
-      url: translations
+      slug: translations

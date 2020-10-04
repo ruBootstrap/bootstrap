@@ -1,4 +1,4 @@
-<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации">
   {{- $url := split .Permalink "/" -}}
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
@@ -12,19 +12,19 @@
       {{- $link_slug = $link.title | urlize -}}
     {{- end -}}
 
-    {{- $is_active_group := eq $.Page.Params.group $group.url }}
+    {{- $is_active_group := eq $.Page.Params.group $group.slug }}
 
     <li class="mb-1{{ if $is_active_group }} active{{ end }}">
-      <a class="d-inline-flex align-items-center rounded{{ if not $is_active_group }} collapsed{{ end }}" data-toggle="collapse" href="#{{ $group.url }}-collapse" role="button" aria-expanded="{{ $is_active_group }}"{{ if $is_active_group }} aria-current="true"{{ end }}>
+      <a class="d-inline-flex align-items-center rounded{{ if not $is_active_group }} collapsed{{ end }}" data-toggle="collapse" href="#{{ $group.slug }}-collapse" role="button" aria-expanded="{{ $is_active_group }}"{{ if $is_active_group }} aria-current="true"{{ end }}>
         {{ $group.title }}
       </a>
 
       {{- if $group.pages }}
-      <div class="collapse{{ if $is_active_group }} show{{ end }}" id="{{ $group.url }}-collapse">
+      <div class="collapse{{ if $is_active_group }} show{{ end }}" id="{{ $group.slug }}-collapse">
         <ul class="list-unstyled font-weight-normal pb-1 small">
           {{- range $doc := $group.pages -}}
-            {{- $is_active := and $is_active_group (eq $page_slug $doc.url) -}}
-            {{- $href := printf "/docs/%s/%s/%s/" $.Site.Params.docs_version $group.url $doc.url }}
+            {{- $is_active := and $is_active_group (eq $page_slug $doc.slug) -}}
+            {{- $href := printf "/docs/%s/%s/%s/" $.Site.Params.docs_version $group.slug $doc.slug }}
             <li><a href="{{ $href }}" class="d-inline-flex align-items-center rounded{{ if $is_active }} active{{ end }}"{{ if $is_active }} aria-current="page"{{ end }}>{{ $doc.title }}</a></li>
           {{- end }}
         </ul>
