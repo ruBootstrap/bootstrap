@@ -41,21 +41,21 @@
 - title: Макет
   url: layout
   pages:
-    - title: Breakpoints
+    - title: Контрольные точки
       url: breakpoints
-    - title: Containers
+    - title: Контейнеры
       url: containers
-    - title: Grid
+    - title: Сетка
       url: grid
     # - title: Rows
       # url: rows
-    - title: Columns
+    - title: Колонки
       url: columns
-    - title: Gutters
+    - title: Промежутки
       url: gutters
-    - title: Utilities
+    - title: Утилиты
       url: utilities
-    - title: Z-index
+    - title: Z-индекс
       url: z-index
 
 - title: Контент

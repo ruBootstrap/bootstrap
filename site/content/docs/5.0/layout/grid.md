@@ -1,67 +1,67 @@
 ---
 layout: docs
-title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+title: Система сеток
+description: Используйте нашу мощную сетку flexbox, ориентированную на мобильные устройства, для создания макетов всех форм и размеров благодаря системе из двенадцати колонок, шести адаптивным уровням по умолчанию, переменным и миксинам Sass, а также десяткам предопределенных классов.
 group: layout
 toc: true
 ---
 
-## Example
+## Пример
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+Система сеток Bootstrap использует серию контейнеров, строк и колонок для компоновки и выравнивания содержимого. Он построен с помощью [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) и полностью адаптивен. Ниже приведен пример и подробное объяснение того, как объединяется сетка.
 
 {{< callout info >}}
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+**Новичок или незнаком с flexbox?** [Прочтите это руководство по flexbox на CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) для получения справочной информации, терминологии, рекомендаций и фрагментов кода.
 {{< /callout >}}
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      One of three columns
+      Один из трех колонок
     </div>
     <div class="col-sm">
-      One of three columns
+      Один из трех колонок
     </div>
     <div class="col-sm">
-      One of three columns
+      Один из трех колонок
     </div>
   </div>
 </div>
 {{< /example >}}
 
-The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+В приведенном выше примере создаются три колонки одинаковой ширины на всех устройствах и в окнах просмотра с использованием наших предопределенных классов сетки. Эти колонки центрируются на странице с родительским `.container`.
 
-## How it works
+## Как это устроено
 
-Breaking it down, here's how the grid system comes together:
+Вот как объединяется сетка:
 
-- **Our grid supports [six responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **Наша сетка поддерживает [шесть адаптивных контрольных точек]({{< docsref "/layout/breakpoints" >}}).** Контрольные точки основаны на медиа-запросах `min-width`, то есть они влияют на эту контрольную точку и все вышеперечисленные (например, `.col-sm-4` применяется к `sm`, `md`, `lg`, `xl` и `xxl`). Это означает, что Вы можете управлять размером и поведением контейнера и колонки с помощью каждой контрольной точки.
 
-- **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
+- **Контейнеры центрируют и размещают Ваш контент по горизонтали.** Используйте `.container` для адаптивной ширины в пикселях, `.container-fluid` для `width: 100%` во всех окнах просмотра и на всех устройствах или адаптивный контейнер (например, `.container-md`) для комбинации подвижной и пиксельной ширины.
 
-- **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({{< docsref "/layout/gutters" >}}) to change the spacing of your content.
+- **Ряды (rows) являются оболочками для колонок.** Каждая колонка имеет горизонтальный `padding` (называемый промежутком) для управления пространством между ними. Затем этому `padding` противодействуют строки с отрицательными полями, чтобы обеспечить визуальное выравнивание содержимого колонок по левой стороне. Строки также поддерживают классы модификаторов для [единообразного применения размеров колонок](#row-columns) и [классов промежутков]({{< docsref "/layout/gutters" >}}) для изменения интервала Вашего контента.
 
-- **Columns are incredibly flexible.** There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., `col-4` spans four). `width`s are set in percentages so you always have the same relative sizing.
+- **Колонки невероятно гибкие.** В каждой строке доступно 12 шаблонов колонок, что позволяет создавать различные комбинации элементов, охватывающих любое количество колонок. Классы колонок указывают количество колонок шаблона, которые необходимо охватить (например, `col-4` охватывает четыре). `width` задаются в процентах, поэтому Вы всегда имеете одинаковый относительный размер.
 
-- **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
+- **Промежутки также являются адаптивными и настраиваемыми.** [Доступны классы промежутков]({{< docsref "/layout/gutters" >}}) во всех контрольных точках с теми же размерами, что и наши [поля и отступы]({{< docsref "/utilities/spacing" >}}). Измените горизонтальные промежутки на классы `.gx-*`, вертикальные промежутки на `.gy-*`, или все промежутки на классы `.g-*`. `.g-0` также доступен для удаления промежутков.
 
-- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Bootstrap, you can use our [grid's source Sass](#sass) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
+- **Переменные Sass, карты и миксины питают сетку.** Если Вы не хотите использовать предопределенные классы сетки в Bootstrap, Вы можете использовать наш [источник Sass сетки](#sass) чтобы создать свой собственный с большим количеством семантическая разметка. Мы также включаем некоторые настраиваемые свойства CSS для использования этих переменных Sass для еще большей гибкости для Вас.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
+Помните об ограничениях и [ошибках вокруг flexbox](https://github.com/philipwalton/flexbugs), таких как [невозможность использования некоторых элементов HTML в качестве гибких контейнеров](https://github.com/philipwalton/flexbugs#flexbug-9).
 
-## Grid options
+## Параметры сетки
 
-Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follow:
+Система сеток Bootstrap может адаптироваться ко всем шести контрольным точкам по умолчанию и любым настраиваемым Вами контрольным точкам. Шесть уровней сетки по умолчанию следующие:
 
-- Extra small (xs)
-- Small (sm)
-- Medium (md)
-- Large (lg)
-- Extra large (xl)
-- Extra extra large (xxl)
+- Очень маленький - Extra small (xs)
+- Маленький - Small (sm)
+- Средний - Medium (md)
+- Большой - Large (lg)
+- Очень большой - Extra large (xl)
+- Огромный - Extra extra large (xxl)
 
-As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
+Как отмечалось выше, каждая из этих контрольных точек имеет собственный контейнер, уникальный префикс класса и модификаторы. Вот как меняется сетка в этих контрольных точках:
 
 <table class="table mb-4">
   <thead>
@@ -95,8 +95,8 @@ As noted above, each of these breakpoints have their own container, unique class
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Container <code class="font-weight-normal">max-width</code></th>
-      <td>None (auto)</td>
+      <th class="text-nowrap" scope="row">Контейнер <code class="font-weight-normal">max-width</code></th>
+      <td>Ничего (авто)</td>
       <td>540px</td>
       <td>720px</td>
       <td>960px</td>
@@ -104,7 +104,7 @@ As noted above, each of these breakpoints have their own container, unique class
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Class prefix</th>
+      <th class="text-nowrap" scope="row">Префикс класса</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -113,129 +113,129 @@ As noted above, each of these breakpoints have their own container, unique class
       <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
+      <th class="text-nowrap" scope="row"># колонок</th>
       <td colspan="6">12</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">1.5rem (.75rem on left and right)</td>
+      <th class="text-nowrap" scope="row">Ширина промежутка</th>
+      <td colspan="6">1.5rem (.75rem слева и справа)</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Custom gutters</th>
-      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">Индивидуальные промежутки</th>
+      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Да</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="6"><a href="#nesting">Yes</a></td>
+      <th class="text-nowrap" scope="row">Вкладываемые</th>
+      <td colspan="6"><a href="#nesting">Да</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">Порядок колонок</th>
+      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Да</a></td>
     </tr>
   </tbody>
 </table>
 
-## Auto-layout columns
+## колонки с автоматической компоновкой
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+Используйте классы колонок, специфичные для контрольной точки, для удобного определения размера колонки без явного нумерованного класса, например `.col-sm-6`.
 
-### Equal-width
+### Равная ширина
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xxl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+Например, вот два макета сетки, которые применяются к каждому устройству и окну просмотра, от `xs` до `xxl`. Добавьте любое количество классов без единиц измерения для каждой нужной контрольной точки, и каждая колонка будет одинаковой ширины.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 2
+      1 из 2
     </div>
     <div class="col">
-      2 of 2
+      2 из 2
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 из 3
     </div>
     <div class="col">
-      2 of 3
+      2 из 3
     </div>
     <div class="col">
-      3 of 3
+      3 из 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Setting one column width
+### Установка ширины одного колонки
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+Автоматическая компоновка колонок сетки Flexbox также означает, что Вы можете установить ширину одного колонки и автоматически изменять размер колонок-братьев вокруг него. Вы можете использовать предопределенные классы сетки (как показано ниже), миксины сетки или встроенную ширину. Обратите внимание, что размер других колонок будет изменяться независимо от ширины центрального колонки.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 3
+      1 из 3
     </div>
     <div class="col-6">
-      2 of 3 (wider)
+      2 из 3 (шире)
     </div>
     <div class="col">
-      3 of 3
+      3 из 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 из 3
     </div>
     <div class="col-5">
-      2 of 3 (wider)
+      2 из 3 (шире)
     </div>
     <div class="col">
-      3 of 3
+      3 из 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Variable width content
+### Переменная ширина контента
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+Используйте классы `col-{breakpoint}-auto` для определения размера колонок в зависимости от естественной ширины их содержимого.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
-      1 of 3
+      1 из 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Переменная ширина контента
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 из 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 из 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Переменная ширина контента
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 из 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Responsive classes
+## Адаптивные классы
 
-Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+Сетка Bootstrap включает шесть уровней предопределенных классов для создания сложных адаптивных макетов. Настройте размер колонок на очень маленьких, маленьких, средних, больших или очень больших устройствах по своему усмотрению.
 
-### All breakpoints
+### Все контрольные точки
 
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
+Для сеток, одинаковых от самых маленьких до самых крупных, используйте классы `.col` и `.col-*`. Укажите нумерованный класс, если Вам нужна колонка определенного размера; в противном случае не стесняйтесь использовать `.col`.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -252,9 +252,9 @@ For grids that are the same from the smallest of devices to the largest, use the
 </div>
 {{< /example >}}
 
-### Stacked to horizontal
+### Сложение по горизонтали
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
+Используя один набор классов `.col-sm-*`, Вы можете создать базовую систему сеток, которая начинается с накопления и становится горизонтальной в малой контрольной точке (`sm`).
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -270,26 +270,26 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 </div>
 {{< /example >}}
 
-### Mix and match
+### Смешение и сочетание
 
-Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+Не хотите, чтобы Ваши колонки просто складывались в несколько ярусов сетки? При необходимости используйте комбинацию разных классов для каждого уровня. См. пример ниже, чтобы лучше понять, как все это работает.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <!-- Сложите колонки на мобильном устройстве, сделав одну полную, а другую половинную -->
   <div class="row">
     <div class="col-md-8">.col-md-8</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
   </div>
 
-  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <!-- Ширина колонок начинается с 50% на мобильных устройствах и увеличивается до 33,3% на компьютерах. -->
   <div class="row">
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
   </div>
 
-  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <!-- колонки всегда имеют ширину 50% на мобильных и настольных компьютерах. -->
   <div class="row">
     <div class="col-6">.col-6</div>
     <div class="col-6">.col-6</div>
@@ -297,19 +297,19 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 </div>
 {{< /example >}}
 
-### Row columns
+### Ряд колонок
 
-Use the responsive `.row-cols-*` classes to quickly set the number of columns that best render your content and layout. Whereas normal `.col-*` classes apply to the individual columns (e.g., `.col-md-4`), the row columns classes are set on the parent `.row` as a shortcut. With `.row-cols-auto` you can give the columns their natural width.
+Используйте адаптивные классы `.row-cols-*`, чтобы быстро установить количество колонок, которые лучше всего отображают Ваш контент и макет. В то время как обычные классы `.col-*` применяются к отдельным колонким (например, `.col-md-4`), классы колонок строк устанавливаются в родительском `.row` в качестве ярлыка. С помощью `.row-cols-auto` Вы можете придать колонким их естественную ширину.
 
-Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
+Используйте эти классы колонок строк, чтобы быстро создавать базовые макеты сетки или управлять макетами карточек.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-2">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
@@ -317,10 +317,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-3">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
@@ -328,10 +328,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-auto">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
@@ -339,10 +339,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
@@ -350,10 +350,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col-6">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col-6">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
@@ -361,45 +361,45 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
   </div>
 </div>
 {{< /example >}}
 
-You can also use the accompanying Sass mixin, `row-cols()`:
+Вы также можете использовать прилагаемый миксин Sass, `row-cols()`:
 
 {{< highlight scss >}}
 .element {
-  // Three columns to start
+  // Три колонки для начала
   @include row-cols(3);
 
-  // Five columns from medium breakpoint up
+  // Пять колонок от средней контрольной точки вверх
   @include media-breakpoint-up(md) {
     @include row-cols(5);
   }
 }
 {{< /highlight >}}
 
-## Nesting
+## Вложенность
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+Чтобы вложить содержимое в сетку по умолчанию, добавьте новую колонку `.row` и набор колонок `.col-sm-*` в существующую колонку `.col-sm-*`. Вложенные строки должны включать набор колонок, которые в сумме составляют до 12 или меньше (не обязательно использовать все 12 доступных колонок).
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
-      Level 1: .col-sm-3
+      Уровень 1: .col-sm-3
     </div>
     <div class="col-sm-9">
       <div class="row">
         <div class="col-8 col-sm-6">
-          Level 2: .col-8 .col-sm-6
+          Уровень 2: .col-8 .col-sm-6
         </div>
         <div class="col-4 col-sm-6">
-          Level 2: .col-4 .col-sm-6
+          Уровень 2: .col-4 .col-sm-6
         </div>
       </div>
     </div>
@@ -409,11 +409,11 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## Sass
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+При использовании исходных файлов Sass в Bootstrap у Вас есть возможность использовать переменные и миксины Sass для создания настраиваемых, семантических и адаптивных макетов страниц. Наши предопределенные классы сетки используют те же самые переменные и миксины, чтобы предоставить целый набор готовых к использованию классов для быстрых адаптивных макетов.
 
-### Variables
+### Переменные
 
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
+Переменные и карты определяют количество колонок, ширину промежутка и точку медиа-запроса, с которой следует начинать колонки с плавающей запятой. Мы используем их для создания предопределенных классов сетки, описанных выше, а также для пользовательских миксинов, перечисленных ниже.
 
 {{< highlight scss >}}
 $grid-columns:      12;
@@ -424,31 +424,31 @@ $grid-gutter-width: 1.5rem;
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 
-### Mixins
+### Примеси
 
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
+Миксины используются вместе с переменными сетки для генерации семантического CSS для отдельных колонок сетки.
 
 {{< highlight scss >}}
-// Creates a wrapper for a series of columns
+// Создает оболочку для серии колонок
 @include make-row();
 
-// Make the element grid-ready (applying everything but the width)
+// Подготавливает элемент к сетке (применив все, кроме ширины)
 @include make-col-ready();
 @include make-col($size, $columns: $grid-columns);
 
-// Get fancy by offsetting, or changing the sort order
+// Получите удовольствие, смещая или изменяя порядок сортировки
 @include make-col-offset($size, $columns: $grid-columns);
 {{< /highlight >}}
 
-### Example usage
+### Пример использования
 
-You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.
+Вы можете изменить переменные на свои собственные значения или просто использовать миксины со значениями по умолчанию. Вот пример использования настроек по умолчанию для создания макета из двух колонок с промежутком между ними.
 
 {{< highlight scss >}}
 .example-container {
   @include make-container();
-  // Make sure to define this width after the mixin to override
-  // `width: 100%` generated by `make-container()`
+  // Обязательно укажите эту ширину после примеси, чтобы переопределить
+  // `width: 100%`, сгенерированная `make-container()`
   width: 800px;
 }
 
@@ -482,28 +482,28 @@ You can modify the variables to your own custom values, or just use the mixins w
 {{< example >}}
 <div class="example-container">
   <div class="example-row">
-    <div class="example-content-main">Main content</div>
-    <div class="example-content-secondary">Secondary content</div>
+    <div class="example-content-main">Главное содержимое</div>
+    <div class="example-content-secondary">Вторичное содержимое</div>
   </div>
 </div>
 {{< /example >}}
 
-## Customizing the grid
+## Настройка сетки
 
-Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
+Используя наши встроенные сеточные переменные и карты Sass, можно полностью настроить предопределенные классы сеток. Измените количество уровней, размеры медиа-запроса и ширину контейнера, а затем перекомпилируйте.
 
-### Columns and gutters
+### Колонки и промежутки
 
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters.
+Количество колонок сетки можно изменить с помощью переменных Sass. `$grid-columns` используется для генерации ширины (в процентах) каждого отдельного колонки, в то время как `$grid-gutter-width` устанавливает ширину промежутков между колонкими.
 
 {{< highlight scss >}}
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
 {{< /highlight >}}
 
-### Grid tiers
+### Уровни сетки
 
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this:
+Выходя за рамки самих колонок, Вы также можете настроить количество уровней сетки. Если Вам нужно всего четыре уровня сетки, Вы бы обновили `$grid-breakpoints` и `$container-max-widths` примерно так:
 
 {{< highlight scss >}}
 $grid-breakpoints: (
@@ -520,4 +520,4 @@ $container-max-widths: (
 );
 {{< /highlight >}}
 
-When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).
+При внесении любых изменений в переменные или карты Sass Вам необходимо сохранить изменения и перекомпилировать. В результате будет выведен новый набор предопределенных классов сетки для ширины колонок, смещений и порядка. Утилиты адаптивной видимости также будут обновлены для использования настраиваемых контрольных точек. Убедитесь, что Вы установили значения сетки в `px` (не `rem`, `em` или `%`).

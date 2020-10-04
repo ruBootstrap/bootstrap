@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Utilities for layout
-description: For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+title: Утилиты для макета
+description: Для более быстрой и гибкой разработки, удобной для мобильных устройств, Bootstrap включает десятки служебных классов для отображения, скрытия, выравнивания и размещения содержимого.
 group: layout
 toc: true
 ---
 
-## Changing `display`
+## Изменение `display`
 
-Use our [display utilities]({{< docsref "/utilities/display" >}}) for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+Используйте наши [display утилиты]({{< docsref "/utilities/display" >}}) для быстрого переключения общих значений свойства `display`. Смешайте его с нашей сеткой, контентом или компонентами, чтобы показать или скрыть их в определенных окнах просмотра.
 
-## Flexbox options
+## Параметры Flexbox
 
-Bootstrap is built with flexbox, but not every element's `display` has been changed to `display: flex` as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{< docsref "/components/alerts" >}}) are built with flexbox enabled.
+Bootstrap построен с использованием flexbox, но не каждый элемент `display` был изменен на `display: flex` , так как это добавило бы много ненужных переопределений и неожиданно изменило бы ключевые поведения браузера. Большинство [наших компонентов]({{< docsref "/components/alerts" >}}) созданы с включенным flexbox.
 
-Should you need to add `display: flex` to an element, do so with `.d-flex` or one of the responsive variants (e.g., `.d-sm-flex`). You'll need this class or `display` value to allow the use of our extra [flexbox utilities]({{< docsref "/utilities/flex" >}}) for sizing, alignment, spacing, and more.
+Если Вам нужно добавить к элементу `display: flex`, сделайте это с помощью `.d-flex` или одного из адаптивных вариантов (например, `.d-sm-flex`). Вам понадобится этот класс или значение `display`, чтобы разрешить использование наших дополнительных [flexbox утилит]({{< docsref "/utilities/flex" >}}) для определения размеров, выравнивания, интервалов и т.д.
 
-## Margin and padding
+## Поля и отступы
 
-Use the `margin` and `padding` [spacing utilities]({{< docsref "/utilities/spacing" >}}) to control how elements and components are spaced and sized. Bootstrap includes a six-level scale for spacing utilities, based on a `1rem` value default `$spacer` variable. Choose values for all viewports (e.g., `.mr-3` for `margin-right: 1rem`), or pick responsive variants to target specific viewports (e.g., `.mr-md-3` for `margin-right: 1rem` starting at the `md` breakpoint).
+Используйте `margin` и `padding` [утилиты интервалов]({{< docsref "/utilities/spacing" >}}), чтобы управлять расположением и размером элементов и компонентов. Bootstrap включает шестиуровневую шкалу для интервалов между утилитами, основанную на переменной `$spacer` по умолчанию, равной `1rem`. Выберите значения для всех окон просмотра (например, `.mr-3` для `margin-right: 1rem`), или выберите адаптивные варианты для нацеливания на определенные области просмотра (например, `.mr-md-3` для `margin-right: 1rem` начиная с контрольной точки `md`).
 
-## Toggle `visibility`
+## Переключение `visibility`
 
-When toggling `display` isn't needed, you can toggle the `visibility` of an element with our [visibility utilities]({{< docsref "/utilities/visibility" >}}). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+Когда переключение `display` не требуется, Вы можете переключать `visibility` элемента с помощью наших [утилит видимости]({{< docsref "/utilities/visibility" >}}). Невидимые элементы по-прежнему будут влиять на макет страницы, но визуально скрыты от посетителей.

@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Z-index
-description: While not a part of Bootstrap's grid system, z-indexes play an important part in how our components overlay and interact with one another.
+title: Z-индекс
+description: Хотя z-индексы не являются частью сетки Bootstrap, они играют важную роль в том, как наши компоненты накладываются друг на друга и взаимодействуют друг с другом.
 group: layout
 ---
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Некоторые компоненты Bootstrap используют `z-index`, свойство CSS, которое помогает управлять макетом, предоставляя третью ось для упорядочивания содержимого. Мы используем шкалу z-индекса по умолчанию в Bootstrap, которая была разработана для правильного разделения навигации, всплывающих и всплывающих подсказок, модальных окон и многого другого.
 
-These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
+Эти более высокие значения начинаются с произвольного числа, достаточно большого и достаточно конкретного, чтобы в идеале избежать конфликтов. Нам нужен стандартный набор этих элементов для наших многоуровневых компонентов - всплывающих подсказок, всплывающих окон, панелей навигации, раскрывающихся списков, модальных окон - чтобы мы могли быть достаточно последовательными в поведении. Нет причин, по которым мы не могли использовать `100`+ или `500`+.
 
-We don't encourage customization of these individual values; should you change one, you likely need to change them all.
+Мы не поощряем настройку этих индивидуальных значений; если Вы измените один, Вам, вероятно, придется изменить их все.
 
 {{< scss-docs name="zindex-stack" file="scss/_variables.scss" >}}
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+Чтобы обрабатывать перекрывающиеся границы внутри компонентов (например, кнопок и входов в группах ввода), мы используем малые однозначные значения `z-index`, равные `1`, `2` и `3` для состояний по умолчанию, при наведении курсора и активного состояния. При наведении/фокусе/активном мы выводим конкретный элемент на передний план с более высоким значением `z-index`, чтобы показать их границу над соседними элементами.
