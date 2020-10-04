@@ -10,7 +10,7 @@ toc: true
 
 Загрузите готовый к использованию скомпилированный код для **Bootstrap v{{< param current_version >}}**, чтобы легко вставить его в свой проект, который включает:
 
-- Скомпилированные и минимизированные пакеты CSS (см. [Сравнение файлов CSS]({{< docsref "/getting-started/contents#css-files" >}}))
+- Скомпилированные и минимизированные пакеты CSS (см. [Сравнение файлов CSS]({{< docsref "/getting-started/contents#файлы-css" >}}))
 - Скомпилированные и минимизированные плагины JavaScript
 
 Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript, такие как Popper.js.
@@ -24,7 +24,7 @@ toc: true
 - Компилятор Sass (поддерживается Libsass или Ruby Sass) для компиляции Вашего CSS.
 - [Autoprefixer](https://github.com/postcss/autoprefixer) для префикса поставщика CSS
 
-Вам потребуются [инструменты сборки]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), они включены для разработки Bootstrap и его документации, но они, вероятно, не подходят для Ваших собственных целей.
+Вам потребуются [инструменты сборки]({{< docsref "/getting-started/build-tools#настройка-инструмента" >}}), они включены для разработки Bootstrap и его документации, но они, вероятно, не подходят для Ваших собственных целей.
 
 <a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Скачать исходный код</a>
 
