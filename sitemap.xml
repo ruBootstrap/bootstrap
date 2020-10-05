@@ -106,9 +106,6 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/grid/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/content/images/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/input-group/</loc>
   </url>
   <url>
@@ -214,9 +211,6 @@
     <loc>https://getbootstrap.su/docs/5.0/helpers/stretched-link/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/content/tables/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/text/</loc>
   </url>
   <url>
@@ -230,9 +224,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/content/typography/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/api/</loc>
@@ -266,6 +257,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/content/images/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/extend/icons/</loc>
@@ -329,6 +323,12 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/contents/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/content/tables/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/content/typography/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/utilities/</loc>
