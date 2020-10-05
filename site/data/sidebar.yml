@@ -63,11 +63,11 @@
   pages:
     - title: Reboot
       slug: reboot
-    - title: Typography
+    - title: Типография
       slug: typography
-    - title: Images
+    - title: Изображения
       slug: images
-    - title: Tables
+    - title: Таблицы
       slug: tables
     - title: Figures
       slug: figures

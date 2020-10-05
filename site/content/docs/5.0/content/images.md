@@ -1,30 +1,30 @@
 ---
 layout: docs
-title: Images
-description: Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.
+title: Изображения
+description: Документация и примеры для настройки изображений на адаптивное поведение (чтобы они никогда не становились больше, чем их родительские элементы) и добавления к ним легких стилей - все через классы.
 group: content
 toc: true
 ---
 
-## Responsive images
+## Адаптивные изображения
 
-Images in Bootstrap are made responsive with `.img-fluid`. This applies `max-width: 100%;` and `height: auto;` to the image so that it scales with the parent element.
-
-{{< example >}}
-{{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
-{{< /example >}}
-
-## Image thumbnails
-
-In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+Изображения в Bootstrap сделаны адаптивными с помощью `.img-fluid`. Это применяет `max-width: 100%;` и `height: auto;` к изображению так, чтобы оно масштабировалось вместе с родительским элементом.
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
+{{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Адаптивное изображение" >}}
 {{< /example >}}
 
-## Aligning images
+## Эскизы изображений
 
-Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
+В дополнение к нашим [утилитам border-radius]({{< docsref "/utilities/borders" >}}) Вы можете использовать `.img-thumbnail`, чтобы придать изображению округлую границу в 1 пиксель.
+
+{{< example >}}
+{{< placeholder width="200" height="200" class="img-thumbnail" title="Обычное квадратное изображение-заполнитель с белой рамкой вокруг него, что делает его похожим на фотографию, сделанную на старую камеру мгновенного действия." >}}
+{{< /example >}}
+
+## Выравнивание изображений
+
+Выровняйте изображения по [вспомогательным классам с плавающей точкой]({{< docsref "/utilities/float" >}}) или [классам выравнивания текста]({{< docsref "/utilities/text#text-alignment" >}}). Изображения уровня `block` можно центрировать с помощью [утилиты класса поля `.mx-auto`]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
 {{< placeholder width="200" height="200" class="rounded float-left" >}}
@@ -43,9 +43,9 @@ Align images with the [helper float classes]({{< docsref "/utilities/float" >}})
 {{< /example >}}
 
 
-## Picture
+## Картина
 
-If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+Если Вы используете элемент `<picture>` для указания нескольких элементов `<source>` для определенного `<img>`, убедитесь, что Вы добавили классы `.img-*` в `<img>`, а не в тег `<picture>`.
 
 {{< highlight html >}}
 ​<picture>
