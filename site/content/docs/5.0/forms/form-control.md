@@ -1,64 +1,64 @@
 ---
 layout: docs
-title: Form controls
-description: Give textual form controls like `<input>`s and `<textarea>`s an upgrade with custom styles, sizing, focus states, and more.
+title: Управление формой
+description: Обновите элементы управления текстовой формой, такие как `<input>` и `<textarea>`, с помощью настраиваемых стилей, размеров, состояний фокуса и т.д.
 group: forms
 toc: true
 ---
 
-## Example
+## Пример
 
 {{< example >}}
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <label for="exampleFormControlTextarea1" class="form-label">Пример текстового поля</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 {{< /example >}}
 
-## Sizing
+## Размеры
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
-
-{{< example >}}
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-<input class="form-control" type="text" placeholder="Default input" aria-label="deafult input example">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
-{{< /example >}}
-
-## Disabled
-
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
+Установите высоту с помощью таких классов, как `.form-control-lg` и `.form-control-sm`.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
-<input class="form-control" type="text" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label="Пример .form-control-lg">
+<input class="form-control" type="text" placeholder="Поле ввода по умолчанию" aria-label="пример ввода по умолчанию">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label="Пример .form-control-sm">
 {{< /example >}}
 
-## Readonly
+## Отключенный
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+Добавьте к входу логический атрибут `disabled` к полю ввода, чтобы он выглядел серым, и удалил события указателя.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
+<input class="form-control" type="text" placeholder="Отключенное поле ввода" aria-label="Пример отключенного поля входа" disabled>
+<input class="form-control" type="text" placeholder="Отключенное поле ввода только для чтения" aria-label="Пример отключенного поля входа" disabled readonly>
 {{< /example >}}
 
-## Readonly plain text
+## Только для чтения
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+Добавьте логический атрибут `readonly` к полю ввода, чтобы предотвратить изменение значения. Поле ввода только для чтения выглядят светлее (как и отключенные поля ввода), но сохраняют стандартный курсор.
+
+{{< example >}}
+<input class="form-control" type="text" placeholder="Поле ввода только для чтения..." aria-label="пример поля ввода только для чтения" readonly>
+{{< /example >}}
+
+## Обычный текст только для чтения
+
+Если вы хотите, чтобы элементы `<input readonly>` в Вашей форме были стилизованы как простой текст, используйте класс `.form-control-plaintext`, чтобы удалить стиль поля формы по умолчанию и сохранить правильные поля и отступы.
 
 {{< example >}}
   <div class="mb-3 row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <label for="staticEmail" class="col-sm-2 col-form-label">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
     </div>
   </div>
   <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Пароль</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword">
     </div>
@@ -68,40 +68,40 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {{< example >}}
 <form class="row g-3">
   <div class="col-auto">
-    <label for="staticEmail2" class="visually-hidden">Email</label>
+    <label for="staticEmail2" class="visually-hidden">Эл. адрес</label>
     <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
   </div>
   <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <label for="inputPassword2" class="visually-hidden">Пароль</label>
     <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    <button type="submit" class="btn btn-primary mb-3">Подтвердить личность</button>
   </div>
 </form>
 {{< /example >}}
 
-## Color
+## Цвет
 
 {{< example >}}
-<label for="exampleColorInput" class="form-label">Color picker</label>
-<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+<label for="exampleColorInput" class="form-label">Палитра цветов</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Выбери свой цвет">
 {{< /example >}}
 
-## Datalists
+## Списки данных
 
-Datalists allow you to create a group of `<option>`s that can be accessed (and autocompleted) from within an `<input>`. These are similar to `<select>` elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for `<datalist>` elements, their styling is inconsistent at best.
+Списки данных позволяют Вам создать группу `<option>`, к которой можно получить доступ (и автозаполнение) из `<input>`. Они похожи на элементы `<select>`, но имеют больше ограничений и различий в стиле меню. Хотя большинство браузеров и операционных систем включают некоторую поддержку элементов `<datalist>` , их стиль в лучшем случае противоречивый.
 
-Learn more about [support for datalist elements](https://caniuse.com/#feat=datalist).
+Подробнее о [поддержке элементов списка данных](https://caniuse.com/#feat=datalist).
 
 {{< example >}}
-<label for="exampleDataList" class="form-label">Datalist example</label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<label for="exampleDataList" class="form-label">Пример списка данных</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Введите для поиска...">
 <datalist id="datalistOptions">
-  <option value="San Francisco">
-  <option value="New York">
-  <option value="Seattle">
-  <option value="Los Angeles">
-  <option value="Chicago">
+  <option value="Москва">
+  <option value="Санкт-Петербург">
+  <option value="Брянск">
+  <option value="Екатеринбург">
+  <option value="Волгоград">
 </datalist>
 {{< /example >}}

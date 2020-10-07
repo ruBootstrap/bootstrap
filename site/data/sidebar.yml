@@ -75,23 +75,23 @@
 - title: Формы
   slug: forms
   pages:
-    - title: Overview
+    - title: Обзор
       slug: overview
-    - title: Form control
+    - title: Управление формой
       slug: form-control
-    - title: Select
+    - title: Элемент выбора
       slug: select
-    - title: Checks & radios
+    - title: Переключатели и флажки
       slug: checks-radios
-    - title: File
+    - title: Выбор файла
       slug: file
-    - title: Range
+    - title: Диапазон
       slug: range
-    - title: Input group
+    - title: Группа полей ввода
       slug: input-group
-    - title: Layout
+    - title: Макет
       slug: layout
-    - title: Validation
+    - title: Валидация
       slug: validation
 
 - title: Компоненты

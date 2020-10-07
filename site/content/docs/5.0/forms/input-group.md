@@ -1,27 +1,27 @@
 ---
 layout: docs
-title: Input group
-description: Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
+title: Группа полей ввода
+description: Легко расширяйте элементы управления формы, добавляя текст, кнопки или группы кнопок по обе стороны от текстовых полей ввода, настраиваемого выбора и ввода настраиваемых файлов.
 group: forms
 toc: true
 ---
 
-## Basic example
+## Базовый пример
 
-Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
+Поместите одну надстройку или кнопку с обеих сторон от ввода. Вы также можете разместить его по обе стороны от ввода. Не забудьте разместить теги `<label>` вне группы ввода.
 
 {{< example >}}
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
 </div>
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-label="Имя пользователя получателя" aria-describedby="basic-addon2">
   <span class="input-group-text" id="basic-addon2">@example.com</span>
 </div>
 
-<label for="basic-url" class="form-label">Your vanity URL</label>
+<label for="basic-url" class="form-label">Ваш URL-адрес</label>
 <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -34,261 +34,261 @@ Place one add-on or button on either side of an input. You may also place one on
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">With textarea</span>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+  <span class="input-group-text">С текстовым полем</span>
+  <textarea class="form-control" aria-label="С текстовым полем"></textarea>
 </div>
 {{< /example >}}
 
-## Wrapping
+## Обертка
 
-Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custom form field validation within an input group. You may disable this with `.flex-nowrap`.
+Группы ввода по умолчанию переносятся через `flex-wrap: wrap`, чтобы обеспечить валидацию настраиваемого поля формы внутри группы ввода. Вы можете отключить это с помощью `.flex-nowrap`.
 
 {{< example >}}
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+  <input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="addon-wrapping">
 </div>
 {{< /example >}}
 
-## Sizing
+## Размеры
 
-Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+Добавьте классы относительного изменения размера формы в саму `.input-group`, и содержимое внутри автоматически изменит размер - нет необходимости повторять классы размеров элемента управления формы для каждого элемента.
 
-**Sizing on the individual input group elements isn't supported.**
+**Изменение размеров отдельных элементов группы ввода не поддерживается.**
 
 {{< example >}}
 <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Маленький</span>
+  <input type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-sm">
 </div>
 
 <div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <span class="input-group-text" id="inputGroup-sizing-default">По умолчанию</span>
+  <input type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-default">
 </div>
 
 <div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Большой</span>
+  <input type="text" class="form-control" aria-label="Пример размера поля ввода" aria-describedby="inputGroup-sizing-lg">
 </div>
 {{< /example >}}
 
-## Checkboxes and radios
+## Флажки и радио
 
-Place any checkbox or radio option within an input group's addon instead of text.
+Поместите любой флажок или переключатель в надстройку группы ввода вместо текста.
 
 {{< example >}}
 <div class="input-group mb-3">
   <div class="input-group-text">
-    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+    <input class="form-check-input" type="checkbox" value="" aria-label="Флажок для следующего ввода текста">
   </div>
-  <input type="text" class="form-control" aria-label="Text input with checkbox">
+  <input type="text" class="form-control" aria-label="Ввод текста с флажком">
 </div>
 
 <div class="input-group">
   <div class="input-group-text">
-    <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
+    <input class="form-check-input" type="radio" value="" aria-label="Радиокнопка для следующего ввода текста">
   </div>
-  <input type="text" class="form-control" aria-label="Text input with radio button">
+  <input type="text" class="form-control" aria-label="Ввод текста с переключателем">
 </div>
 {{< /example >}}
 
-## Multiple inputs
+## Множественные поля ввода
 
-While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
+Хотя визуально поддерживаются несколько `<input>`, стили проверки доступны только для групп ввода с одним `<input>`.
 
 {{< example >}}
 <div class="input-group">
-  <span class="input-group-text">First and last name</span>
-  <input type="text" aria-label="First name" class="form-control">
-  <input type="text" aria-label="Last name" class="form-control">
+  <span class="input-group-text">Имя и фамилия</span>
+  <input type="text" aria-label="Имя" class="form-control">
+  <input type="text" aria-label="Фамилия" class="form-control">
 </div>
 {{< /example >}}
 
-## Multiple addons
+## Множественные дополнения
 
-Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
+Поддерживаются несколько надстроек, которые можно использовать вместе с версиями флажков и радио.
 
 {{< example >}}
 <div class="input-group mb-3">
-  <span class="input-group-text">$</span>
+  <span class="input-group-text">₽</span>
   <span class="input-group-text">0.00</span>
-  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+  <input type="text" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)">
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-  <span class="input-group-text">$</span>
+  <input type="text" class="form-control" aria-label="Сумма в рублях (с точкой и двумя десятичными знаками)">
+  <span class="input-group-text">₽</span>
   <span class="input-group-text">0.00</span>
 </div>
 {{< /example >}}
 
-## Button addons
+## Кнопки дополнения
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon1">Кнопка</button>
+  <input type="text" class="form-control" placeholder="" aria-label="Пример текста с надстройкой кнопкой" aria-describedby="button-addon1">
 </div>
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+  <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-label="Имя пользователя получателя" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Кнопка</button>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button">Button</button>
-  <button class="btn btn-outline-secondary" type="button">Button</button>
-  <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
+  <input type="text" class="form-control" placeholder="" aria-label="Пример текста с двумя кнопками">
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
-  <button class="btn btn-outline-secondary" type="button">Button</button>
-  <button class="btn btn-outline-secondary" type="button">Button</button>
+  <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-label="Имя пользователя получателя with two button addons">
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
 </div>
 {{< /example >}}
 
-## Buttons with dropdowns
+## Кнопки с выпадающими списками
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действие</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
 </div>
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu dropdown-menu-right">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действие</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
 </div>
 
 <div class="input-group">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action before</a></li>
-    <li><a class="dropdown-item" href="#">Another action before</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действия до</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие до</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
-  <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <input type="text" class="form-control" aria-label="Ввод текста с помощью 2-х раскрывающихся кнопок">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu dropdown-menu-right">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действие</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-## Segmented buttons
+## Сегментированные кнопки
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <button type="button" class="btn btn-outline-secondary">Действия</button>
   <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
+    <span class="visually-hidden">Переключатель выпадающий список</span>
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действия</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
-  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+  <input type="text" class="form-control" aria-label="Ввод текста с помощью кнопки сегментированного раскрывающегося списка">
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-  <button type="button" class="btn btn-outline-secondary">Action</button>
+  <input type="text" class="form-control" aria-label="Ввод текста с помощью кнопки сегментированного раскрывающегося списка">
+  <button type="button" class="btn btn-outline-secondary">Действия</button>
   <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
+    <span class="visually-hidden">Переключатель выпадающий список</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Действия</a></li>
+    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-## Custom forms
+## Пользовательские формы
 
-Input groups include support for custom selects and custom file inputs. Browser default versions of these are not supported.
+Группы ввода включают поддержку пользовательского выбора и пользовательского ввода файлов. Версии браузера по умолчанию для них не поддерживаются.
 
-### Custom select
+### Пользовательский элемент выбора
 
 {{< example >}}
 <div class="input-group mb-3">
-  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  <label class="input-group-text" for="inputGroupSelect01">Параметры</label>
   <select class="form-select" id="inputGroupSelect01">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option selected>Выберите...</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
 </div>
 
 <div class="input-group mb-3">
   <select class="form-select" id="inputGroupSelect02">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option selected>Выберите...</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
-  <label class="input-group-text" for="inputGroupSelect02">Options</label>
+  <label class="input-group-text" for="inputGroupSelect02">Параметры</label>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button">Button</button>
-  <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
+  <select class="form-select" id="inputGroupSelect03" aria-label="Пример элемента выбора с помощью надстройки кнопки">
+    <option selected>Выберите...</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
 </div>
 
 <div class="input-group">
-  <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+  <select class="form-select" id="inputGroupSelect04" aria-label="Пример элемента выбора с помощью надстройки кнопки">
+    <option selected>Выберите...</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
-  <button class="btn btn-outline-secondary" type="button">Button</button>
+  <button class="btn btn-outline-secondary" type="button">Кнопка</button>
 </div>
 {{< /example >}}
 
-### Custom file input
+### Пользовательский выбор файла
 
 {{< example >}}
 <div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+  <span class="input-group-text" id="inputGroupFileAddon01">Загрузка</span>
   <div class="form-file">
     <input type="file" class="form-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
     <label class="form-file-label" for="inputGroupFile01">
-      <span class="form-file-text">Choose file...</span>
-      <span class="form-file-button">Browse</span>
+      <span class="form-file-text">Выбрать файл...</span>
+      <span class="form-file-button">Обзор</span>
     </label>
   </div>
 </div>
@@ -297,20 +297,20 @@ Input groups include support for custom selects and custom file inputs. Browser 
   <div class="form-file">
     <input type="file" class="form-file-input" id="inputGroupFile02">
     <label class="form-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
-      <span class="form-file-text">Choose file...</span>
-      <span class="form-file-button">Browse</span>
+      <span class="form-file-text">Выбрать файл...</span>
+      <span class="form-file-button">Обзор</span>
     </label>
   </div>
-  <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+  <span class="input-group-text" id="inputGroupFileAddon02">Загрузка</span>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Кнопка</button>
   <div class="form-file">
     <input type="file" class="form-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
     <label class="form-file-label" for="inputGroupFile03">
-      <span class="form-file-text">Choose file...</span>
-      <span class="form-file-button">Browse</span>
+      <span class="form-file-text">Выбрать файл...</span>
+      <span class="form-file-button">Обзор</span>
     </label>
   </div>
 </div>
@@ -319,10 +319,10 @@ Input groups include support for custom selects and custom file inputs. Browser 
   <div class="form-file">
     <input type="file" class="form-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
     <label class="form-file-label" for="inputGroupFile04">
-      <span class="form-file-text">Choose file...</span>
-      <span class="form-file-button">Browse</span>
+      <span class="form-file-text">Выбрать файл...</span>
+      <span class="form-file-button">Обзор</span>
     </label>
   </div>
-  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Кнопка</button>
 </div>
 {{< /example >}}

@@ -1,75 +1,77 @@
 ---
 layout: docs
-title: Select
-description: Customize the native `<select>`s with custom CSS that changes the element's initial appearance.
+title: Элемент выбора (select)
+description: Настройте собственные `<select>` с помощью настраиваемого CSS, который изменяет первоначальный вид элемента.
 group: forms
+aliases:
+  - "/docs/5.0/forms/select/"
 toc: true
 ---
 
-## Default
+## По умолчанию
 
-Custom `<select>` menus need only a custom class, `.form-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
+Для пользовательских меню `<select>` нужен только пользовательский класс `.form-select`, чтобы запускать пользовательские стили. Пользовательские стили ограничены начальным внешним видом `<select>` и не могут изменять `<option>` из-за ограничений браузера.
 
 {{< example >}}
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" aria-label="Пример выбора по умолчанию">
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-## Sizing
+## Размер
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+Вы также можете выбрать маленький или большой пользовательский элемент выбора, чтобы соответствовать нашим текстовым полям аналогичного размера.
 
 {{< example >}}
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg пример">
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select form-select-sm" aria-label=".form-select-sm пример">
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-The `multiple` attribute is also supported:
+Также поддерживается атрибут `multiple`:
 
 {{< example >}}
-<select class="form-select" multiple aria-label="multiple select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" multiple aria-label="пример множественного выбора">
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-As is the `size` attribute:
+Как и атрибут `size`:
 
 {{< example >}}
-<select class="form-select" size="3" aria-label="size 3 select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" size="3" aria-label="пример элемента выбора размером равному 3">
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-## Disabled
+## Отключенный
 
-Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
+Добавьте логический атрибут `disabled` для выбора, чтобы придать ему серый вид и удалить события указателя.
 
 {{< example >}}
 <select class="form-select" aria-label="Disabled select example" disabled>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}

@@ -1,73 +1,73 @@
 ---
 layout: docs
-title: File browser
-description: Use our custom file inputs for consistent cross-browser styling, built-in customization, and lightweight JavaScript.
+title: Файловый браузер
+description: Используйте наши пользовательские входные файлы для согласованного кросс-браузерного стиля, встроенной настройки и облегченного JavaScript.
 group: forms
 toc: true
 ---
 
 {{< callout info >}}
-The recommended plugin to animate custom file inputs is [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input); it's what we use here in our docs.
+Рекомендуемый плагин для анимации пользовательского ввода файла [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input); это то, что мы используем в нашей документации.
 {{< /callout >}}
 
-## Default
+## По умолчанию
 
-The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
+Элемент выбора файла является самым сложным из всех и требует дополнительного JavaScript, если Вы хотите подключить их к функциональному *Выбрать файл...* и выбранному тексту имени файла.
 
 {{< example >}}
 <div class="form-file">
   <input type="file" class="form-file-input" id="customFile">
   <label class="form-file-label" for="customFile">
-    <span class="form-file-text">Choose file...</span>
-    <span class="form-file-button">Browse</span>
+    <span class="form-file-text">Выбрать файл...</span>
+    <span class="form-file-button">Обзор</span>
   </label>
 </div>
 {{< /example >}}
 
-Add the `disabled` attribute to the `<input>` and the custom markup will be updated to appear disabled.
+Добавьте атрибут `disabled` к `<input>`, и пользовательская разметка будет обновлена, чтобы отображаться как отключенная.
 
 {{< example >}}
 <div class="form-file">
   <input type="file" class="form-file-input" id="customFileDisabled" disabled>
   <label class="form-file-label" for="customFileDisabled">
-    <span class="form-file-text">Choose file...</span>
-    <span class="form-file-button">Browse</span>
+    <span class="form-file-text">Выбрать файл...</span>
+    <span class="form-file-button">Обзор</span>
   </label>
 </div>
 {{< /example >}}
 
-Longer placeholder text is truncated and an ellipsis is added when there's not enough space.
+Более длинный текст-заполнитель обрезается, а при недостатке места добавляется многоточие.
 
 {{< example >}}
 <div class="form-file">
   <input type="file" class="form-file-input" id="customFileLong">
   <label class="form-file-label" for="customFileLong">
     <span class="form-file-text">Lorem ipsum posuere consectetur est at lobortis nulla vitae elit libero a pharetra augue fusce dapibus tellus ac cursus commodo tortor mauris condimentum nibh ut fermentum massa justo sit amet risus cras mattis consectetur purus sit amet fermentum</span>
-    <span class="form-file-button">Browse</span>
+    <span class="form-file-button">Обзор</span>
   </label>
 </div>
 {{< /example >}}
 
-We hide the default file `<input>` via `opacity` and instead style the `<label>`, and declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
+Мы скрываем файл по умолчанию `<input>` через `opacity` и вместо этого стилизуем `<label>`, и объявляем `width` и `height` в `<input>` для правильного интервала для окружающего содержимого.
 
-## Sizing
+## Размеры
 
-You may also choose from small and large file inputs to match our similarly sized text inputs.
+Вы также можете выбирать между маленькими и большими входными файлами, чтобы соответствовать нашим текстовым входам аналогичного размера.
 
 {{< example >}}
 <div class="form-file form-file-lg mb-3">
   <input type="file" class="form-file-input" id="customFileLg">
   <label class="form-file-label" for="customFileLg">
-    <span class="form-file-text">Choose file...</span>
-    <span class="form-file-button">Browse</span>
+    <span class="form-file-text">Выбрать файл...</span>
+    <span class="form-file-button">Обзор</span>
   </label>
 </div>
 
 <div class="form-file form-file-sm">
   <input type="file" class="form-file-input" id="customFileSm">
   <label class="form-file-label" for="customFileSm">
-    <span class="form-file-text">Choose file...</span>
-    <span class="form-file-button">Browse</span>
+    <span class="form-file-text">Выбрать файл...</span>
+    <span class="form-file-button">Обзор</span>
   </label>
 </div>
 {{< /example >}}
