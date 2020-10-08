@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Buttons
-description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+title: Кнопки
+description: Используйте настраиваемые стили кнопок Bootstrap для действий в формах, диалоговых окнах и т.д. С поддержкой нескольких размеров, состояний и т.д.
 group: components
 toc: true
 ---
 
-## Examples
+## Примеры
 
-Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Bootstrap включает несколько предопределенных стилей кнопок, каждый из которых служит своей семантической цели, с добавлением нескольких дополнительных элементов для большего контроля.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -24,27 +24,27 @@ Bootstrap includes several predefined button styles, each serving its own semant
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Disable text wrapping
+## Отключение переноса текста
 
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+Если Вы не хотите, чтобы текст кнопки переносился, Вы можете добавить к кнопке класс `.text-nowrap`. В Sass Вы можете установить `$btn-white-space: nowrap`, чтобы отключить перенос текста для каждой кнопки.
 
-## Button tags
+## Теги кнопок
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+Классы `.btn` предназначены для использования с элементом `<button>`. Однако Вы также можете использовать эти классы для элементов `<a>` или `<input>` (хотя некоторые браузеры могут применять несколько иной рендеринг).
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+При использовании классов кнопок в элементах `<a>`, которые используются для запуска функциональности на странице (например, сворачивания содержимого), вместо того, чтобы ссылаться на новые страницы или разделы на текущей странице, этим ссылкам следует присвоить кнопку `role="button"`, чтобы должным образом донести свою цель до вспомогательных технологий, таких как программы чтения с экрана.
 
 {{< example >}}
-<a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input">
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
+<a class="btn btn-primary" href="#" role="button">Ссылка</a>
+<button class="btn btn-primary" type="submit">Кнопка</button>
+<input class="btn btn-primary" type="button" value="Поле ввода">
+<input class="btn btn-primary" type="submit" value="Поле Отправить">
+<input class="btn btn-primary" type="reset" value="Поле Сбросить">
 {{< /example >}}
 
-## Outline buttons
+## Кнопки очертания
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+Нужна кнопка, но не богаты цвета фона, которые они приносят? Замените классы модификаторов по умолчанию на классы `.btn-outline-*`, чтобы удалить все фоновые изображения и цвета на любой кнопке.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -54,80 +54,80 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< /buttons.inline >}}
 {{< /example >}}
 
-## Sizes
+## Размеры
 
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
+Хотите кнопки большего или меньшего размера? Добавьте `.btn-lg` или `.btn-sm` для дополнительных размеров.
 
 {{< example >}}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="btn btn-primary btn-lg">Большая кнопка</button>
+<button type="button" class="btn btn-secondary btn-lg">Большая кнопка</button>
 {{< /example >}}
 
 {{< example >}}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="btn btn-primary btn-sm">Маленькая кнопка</button>
+<button type="button" class="btn btn-secondary btn-sm">Маленькая кнопка</button>
 {{< /example >}}
 
-Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
+Создайте блочные кнопки, которые охватывают всю ширину родительского элемента - путем добавления `.btn-block`.
 
 {{< example >}}
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">Кнопка блочного уровня</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Кнопка блочного уровня</button>
 {{< /example >}}
 
-## Disabled state
+## Отключенное состояние
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+Сделайте кнопки неактивными, добавив логический атрибут `disabled` к любому элементу `<button>`. Отключенные кнопки имеют действие `pointer-events: none` предотвращающее срабатывание состояния наведения и активного состояния.
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<button type="button" class="btn btn-lg btn-primary" disabled>Основная кнопка</button>
+<button type="button" class="btn btn-secondary btn-lg" disabled>Кнопка</button>
 {{< /example >}}
 
-Disabled buttons using the `<a>` element behave a bit different:
+Отключенные кнопки, использующие элемент `<a>`, ведут себя немного иначе:
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- `<a>` не поддерживают атрибут `disabled`, поэтому Вы должны добавить класс `.disabled`, чтобы он визуально выглядел отключенным.
+- Включены некоторые удобные для будущего стили для отключения всех `pointer-events` на кнопках привязки.
+- Отключенные кнопки должны включать атрибут `aria-disabled="true"`, чтобы указать состояние элемента для вспомогательных технологий.
 
 {{< example >}}
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Основная ссылка</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Ссылка</a>
 {{< /example >}}
 
 {{< callout warning >}}
-##### Link functionality caveat
+##### Предупреждение о функциональности ссылок
 
-The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+Класс `.disabled` использует `pointer-events: none`, чтобы попытаться отключить функциональность ссылок для `<a>`, но это свойство CSS еще не стандартизировано. Кроме того, даже в браузерах, которые поддерживают `pointer-events: none`, навигация с помощью клавиатуры остается неизменной, а это означает, что зрячие пользователи клавиатуры и пользователи вспомогательных технологий по-прежнему смогут активировать эти ссылки. Чтобы быть в безопасности, в дополнение к `aria-disabled="true"`, также добавьте атрибут `tabindex="-1"` в эти ссылки, чтобы они не получали фокус клавиатуры, и используйте собственный JavaScript, чтобы полностью отключить их функциональность .
 {{< /callout >}}
 
-## Button plugin
+## Плагин кнопки
 
-The button plugin allows you to create simple on/off toggle buttons.
+Плагин кнопок позволяет создавать простые кнопки включения/выключения.
 
 {{< callout info >}}
-Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+Визуально эти кнопки переключения идентичны [кнопкам переключения флажков]({{< docsref "/forms/checks-radios#кнопки-переключения-флажков" >}}). Однако вспомогательные технологии передают их по-другому: переключатели флажков будут объявлены программами чтения с экрана как «отмечено»/«не отмечено» (поскольку, несмотря на их внешний вид, они по сути остаются флажками), тогда как эти переключатели будут объявлены как "кнопка"/"кнопка нажата". Выбор между этими двумя подходами будет зависеть от типа создаваемого Вами переключателя и от того, будет ли этот переключатель иметь смысл для пользователей, когда он объявлен как флажок или как фактическая кнопка.
 {{< /callout >}}
 
-### Toggle states
+### Переключение состояния
 
-Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+Добавьте `data-toggle="button"` для переключения состояния `active`. Если Вы предварительно переключаете кнопку, Вы должны вручную добавить класс `.active` **и** `aria-pressed="true"` чтобы гарантировать, что это будет правильно передано вспомогательным технологиям.
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-toggle="button" autocomplete="off">Toggle button</button>
-<button type="button" class="btn btn-primary active" data-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
-<button type="button" class="btn btn-primary" disabled data-toggle="button" autocomplete="off">Disabled toggle button</button>
+<button type="button" class="btn btn-primary" data-toggle="button" autocomplete="off">Кнопка-переключатель</button>
+<button type="button" class="btn btn-primary active" data-toggle="button" autocomplete="off" aria-pressed="true">Активная кнопка-переключатель</button>
+<button type="button" class="btn btn-primary" disabled data-toggle="button" autocomplete="off">Отключенная кнопка-переключатель</button>
 {{< /example >}}
 
 {{< example >}}
-<a href="#" class="btn btn-primary" role="button" data-toggle="button">Toggle link</a>
-<a href="#" class="btn btn-primary active" role="button" data-toggle="button" aria-pressed="true">Active toggle link</a>
-<a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-toggle="button">Disabled toggle link</a>
+<a href="#" class="btn btn-primary" role="button" data-toggle="button">Ссылка-переключатель</a>
+<a href="#" class="btn btn-primary active" role="button" data-toggle="button" aria-pressed="true">Активная ссылка-переключатель</a>
+<a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-toggle="button">Отключенная ссылка-переключатель</a>
 {{< /example >}}
 
-### Methods
+### Методы
 
-You can create a button instance with the button constructor, for example:
+Вы можете создать экземпляр кнопки с помощью конструктора кнопки, например:
 
 {{< highlight js >}}
 var button = document.getElementById('myButton')
@@ -137,8 +137,8 @@ var bsButton = new bootstrap.Button(button)
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>Метод</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -147,7 +147,7 @@ var bsButton = new bootstrap.Button(button)
         <code>toggle</code>
       </td>
       <td>
-        Toggles push state. Gives the button the appearance that it has been activated.
+        Переключает состояние нажатия. Придает кнопке вид, что она была активирована.
       </td>
     </tr>
     <tr>
@@ -155,13 +155,13 @@ var bsButton = new bootstrap.Button(button)
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's button.
+        Уничтожает элемент кнопку.
       </td>
     </tr>
   </tbody>
 </table>
 
-For example, to toggle all buttons
+Например, чтобы переключить все кнопки
 
 {{< highlight js >}}
 var buttons = document.querySelectorAll('.btn')
