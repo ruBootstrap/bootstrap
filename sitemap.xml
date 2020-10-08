@@ -46,9 +46,6 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/checkout/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/checks-radios/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/clearfix/</loc>
   </url>
   <url>
@@ -82,9 +79,6 @@
     <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/file/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-fixed/</loc>
   </url>
   <url>
@@ -97,25 +91,13 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/floating-labels/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/form-control/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/overview/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/grid/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/input-group/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/interactions/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/javascript/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/layout/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/list-group/</loc>
@@ -163,9 +145,6 @@
     <loc>https://getbootstrap.su/docs/5.0/components/progress/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/range/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/ratio/</loc>
   </url>
   <url>
@@ -179,9 +158,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/scrollspy/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/select/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/shadows/</loc>
@@ -229,9 +205,6 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/api/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/validation/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/versions/</loc>
   </url>
   <url>
@@ -254,6 +227,12 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/introduction/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/input-group/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/range/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/accessibility/</loc>
@@ -286,6 +265,9 @@
     <loc>https://getbootstrap.su/docs/5.0/about/license/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/layout/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/overview/</loc>
   </url>
   <url>
@@ -310,6 +292,9 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/validation/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
   </url>
   <url>
@@ -331,9 +316,24 @@
     <loc>https://getbootstrap.su/docs/5.0/content/typography/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/form-control/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/utilities/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/file/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/checks-radios/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/overview/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/color/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/select/</loc>
   </url>
 </urlset>
