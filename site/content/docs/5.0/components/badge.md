@@ -1,46 +1,46 @@
 ---
 layout: docs
-title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+title: Значки
+description: Документация и примеры для значков, нашего небольшого счетчика и меток компонента.
 group: components
 toc: true
 ---
 
-## Example
+## Пример
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
-
-{{< example >}}
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading <span class="badge bg-secondary">New</span></h6>
-{{< /example >}}
-
-Badges can be used as part of links or buttons to provide a counter.
+Значки масштабируются, чтобы соответствовать размеру непосредственного родительского элемента, используя относительный размер шрифта и единицы измерения `em`. Начиная с версии 5, значки больше не имеют стилей фокуса или наведения для ссылок.
 
 {{< example >}}
-<button type="button" class="btn btn-primary">
-  Notifications <span class="badge bg-secondary">4</span>
-</button>
+<h1>Пример заголовока <span class="badge bg-secondary">Новый</span></h1>
+<h2>Пример заголовока <span class="badge bg-secondary">Новый</span></h2>
+<h3>Пример заголовока <span class="badge bg-secondary">Новый</span></h3>
+<h4>Пример заголовока <span class="badge bg-secondary">Новый</span></h4>
+<h5>Пример заголовока <span class="badge bg-secondary">Новый</span></h5>
+<h6>Пример заголовока <span class="badge bg-secondary">Новый</span></h6>
 {{< /example >}}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
-
-Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
+Значки можно использовать как часть ссылок или кнопок для счетчика.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
-  Profile <span class="badge bg-secondary">9</span>
-  <span class="visually-hidden">unread messages</span>
+  Оповещения <span class="badge bg-secondary">4</span>
 </button>
 {{< /example >}}
 
-## Background colors
+Обратите внимание, что в зависимости от того, как они используются, значки могут сбивать с толку пользователей программ чтения с экрана и аналогичных вспомогательных технологий. Хотя стиль значков дает визуальную подсказку об их назначении, этим пользователям просто будет представлено содержимое значка. В зависимости от конкретной ситуации эти значки могут выглядеть как случайные дополнительные слова или числа в конце предложения, ссылки или кнопки.
 
-Use our background utility classes to quickly change the appearance of a badge. Please note that when using Bootstrap's default `.bg-light`, you'll likely need a text color utility like `.text-dark` for proper styling. This is because background utilities do not set anything but `background-color`.
+Если контекст не ясен (как в примере «Оповещения», где подразумевается, что «4» - это количество оповещений), рассмотрите возможность включения дополнительного контекста с визуально скрытым фрагментом дополнительного текста.
+
+{{< example >}}
+<button type="button" class="btn btn-primary">
+  Профиль <span class="badge bg-secondary">9</span>
+  <span class="visually-hidden">непрочитанные сообщения</span>
+</button>
+{{< /example >}}
+
+## Цвет фона
+
+Используйте наши служебные классы фона, чтобы быстро изменить внешний вид значка. Обратите внимание, что при использовании файла Bootstrap по умолчанию `.bg-light` Вам, вероятно, понадобится утилита для настройки цвета текста, такая как `.text-dark` для правильного оформления. Это потому, что фоновые утилиты не устанавливают ничего, кроме `background-color`.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -53,9 +53,9 @@ Use our background utility classes to quickly change the appearance of a badge. 
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Pill badges
+## Значки таблеток
 
-Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
+Используйте служебный класс `.rounded-pill`, чтобы сделать значки более округлыми с большим `border-radius`.
 
 {{< example >}}
 {{< badge.inline >}}
