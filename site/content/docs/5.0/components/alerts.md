@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+title: Уведомления
+description: Предоставляйте контекстные сообщения обратной связи для типичных действий пользователя с помощью нескольких доступных и гибких предупреждающих сообщений.
 group: components
 aliases:
   - "/components/"
@@ -9,15 +9,15 @@ aliases:
 toc: true
 ---
 
-## Examples
+## Примеры
 
-Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
+Уведомления доступны для текста любой длины, а также с кнопкой закрытия. Для правильного оформления используйте один из восьми **обязательных** контекстных классов (например, `.alert-success`). Для встроенного отклонения используйте [подключаемый модуль JavaScript уведомлений](#отклонение).
 
 {{< example >}}
 {{< alerts.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="alert alert-{{ .name }}" role="alert">
-  A simple {{ .name }} alert—check it out!
+  Простое {{ .name }} уведомление - зацените!
 </div>{{- end -}}
 {{< /alerts.inline >}}
 {{< /example >}}
@@ -26,59 +26,59 @@ Alerts are available for any length of text, as well as an optional close button
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-### Link color
+### Цвет ссылки
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+Используйте служебный класс `.alert-link`, чтобы быстро предоставлять соответствующие цветные ссылки в любом уведомлении.
 
 {{< example >}}
 {{< alerts.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="alert alert-{{ .name }}" role="alert">
-  A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Простое {{ .name }} уведомление с <a href="#" class="alert-link">примером ссылки</a>. Нажмите, если нравится.
 </div>{{ end -}}
 {{< /alerts.inline >}}
 {{< /example >}}
 
-### Additional content
+### Дополнительный контент
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+Уведомления также могут содержать дополнительные элементы HTML, такие как заголовки, абзацы и разделители.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <h4 class="alert-heading">Отлично сработано!</h4>
+  <p>О да, Вы успешно прочитали это важное уведомляющее сообщение. Этот пример текста будет работать немного дольше, чтобы Вы могли увидеть, как интервалы в уведомлении работают с этим типом контента.</p>
   <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <p class="mb-0">Когда Вам нужно, обязательно используйте утилиты полей, чтобы все было в хорошо и аккуратно.</p>
 </div>
 {{< /example >}}
 
-### Dismissing
+### Отклонение
 
-Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
+Используя плагин уведомлений JavaScript, можно отклонить любые встроенные уведомления. Вот как:
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
-- Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
-- On the close button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+- Убедитесь, что Вы загрузили плагин уведомлений или скомпилированный Bootstrap JavaScript.
+- Добавьте [кнопку закрытия]({{< docsref "/components/close-button" >}}) и класс `.alert-dismissible`, который добавляет дополнительный отступ справа от уведомления и позиционирует кнопку закрытия.
+- На кнопку закрытия добавьте атрибут `data-dismiss="alert"`, который активирует функциональность JavaScript. Обязательно используйте с ним элемент `<button>` для правильного поведения на всех устройствах.
+- Чтобы анимировать уведомления при их отклонении, не забудьте добавить классы `.fade` и `.show`.
 
-You can see this in action with a live demo:
+Вы можете увидеть это в действии на живой демонстрации:
 
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <strong>Святой гуакамоле!</strong> Вам следует проверить некоторые из этих полей ниже.
   <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
 {{< callout warning >}}
-When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you're planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
+Когда уведомление закрывается, элемент полностью удаляется из структуры страницы. Если пользователь клавиатуры отклоняет уведомление с помощью кнопки закрытия, его фокус внезапно теряется и, в зависимости от браузера, сбрасывается на начало страницы/документа. По этой причине мы рекомендуем включить дополнительный JavaScript, который прослушивает событие `closed.bs.alert` и программно устанавливает `focus()` в наиболее подходящее место на странице. Если Вы планируете переместить фокус на неинтерактивный элемент, который обычно не получает фокус, обязательно добавьте к элементу `tabindex="-1"`.
 {{< /callout >}}
 
-## JavaScript behavior
+## Поведение JavaScript
 
-### Triggers
+### Триггеры
 
-Enable dismissal of an alert via JavaScript:
+Включите отклонение уведомления через JavaScript:
 
 {{< highlight js >}}
 var alertList = document.querySelectorAll('.alert')
@@ -87,30 +87,30 @@ alertList.forEach(function (alert) {
 })
 {{< /highlight >}}
 
-Or with `data` attributes on a button **within the alert**, as demonstrated above:
+Или с атрибутами `data` на кнопке **в пределах уведомления**, как показано выше:
 
 {{< highlight html >}}
 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
 {{< /highlight >}}
 
-Note that closing an alert will remove it from the DOM.
+Обратите внимание, что закрытие уведомления приведет к его удалению из DOM.
 
-### Methods
+### Методы
 
-You can create an alert instance with the alert constructor, for example:
+Вы можете создать экземпляр оповещения с помощью конструктора оповещений, например:
 
 {{< highlight js >}}
 var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
 {{< /highlight >}}
 
-This makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.)
+Это заставляет предупреждение прослушивать события клика на дочерних элементах, которые имеют атрибут `data-dismiss="alert"`. (Не требуется при использовании автоматической инициализации data-api.)
 
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>Метод</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -119,7 +119,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>close</code>
       </td>
       <td>
-        Closes an alert by removing it from the DOM. If the <code>.fade</code> and <code>.show</code> classes are present on the element, the alert will fade out before it is removed.
+        Закрывает уведомление, удаляя его из модели DOM. Если в элементе присутствуют классы <code>.fade</code> и <code>.show</code>, предупреждение исчезнет, прежде чем оно будет удалено.
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's alert.
+        Уничтожает уведомление элемента
       </td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>bootstrap.Alert.getInstance(alert)</code>
+        Статический метод, который позволяет Вам получить экземпляр предупреждения, связанный с элементом DOM, Вы можете использовать его следующим образом: <code>bootstrap.Alert.getInstance(alert)</code>
       </td>
     </tr>
   </tbody>
@@ -147,28 +147,28 @@ var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 {{< /highlight >}}
 
-### Events
+### События
 
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+Плагин уведомлений Bootstrap предоставляет несколько событий для подключения к функциям уведомлений.
 
 <table class="table">
   <thead>
     <tr>
-      <th>Event</th>
-      <th>Description</th>
+      <th>Событие</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>close.bs.alert</code></td>
       <td>
-        Fires immediately when the <code>close</code> instance method is called.
+        Срабатывает немедленно при вызове метода экземпляра <code>close</code>.
       </td>
     </tr>
     <tr>
       <td><code>closed.bs.alert</code></td>
       <td>
-        Fired when the alert has been closed and CSS transitions have completed.
+        Срабатывает, когда уведомление закрыто и переходы CSS завершены.
       </td>
     </tr>
   </tbody>
@@ -177,8 +177,8 @@ Bootstrap's alert plugin exposes a few events for hooking into alert functionali
 {{< highlight js >}}
 var myAlert = document.getElementById('myAlert')
 myAlert.addEventListener('closed.bs.alert', function () {
-  // do something, for instance, explicitly move focus to the most appropriate element,
-  // so it doesn't get lost/reset to the start of the page
+  // сделать что-нибудь, например, явно переместить фокус на наиболее подходящий элемент,
+  // чтобы он не терялся/не сбрасывался на начало страницы
   // document.getElementById('...').focus()
 })
 {{< /highlight >}}
