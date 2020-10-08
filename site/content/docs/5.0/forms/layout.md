@@ -1,319 +1,319 @@
 ---
 layout: docs
-title: Layout
-description: Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
+title: Макет
+description: Придайте Вашим формам некоторую структуру - от встроенных до горизонтальных и пользовательских реализаций сетки - с помощью наших параметров макета формы.
 group: forms
 toc: true
 ---
 
-## Forms
+## Формы
 
-Every group of form fields should reside in a `<form>` element. Bootstrap provides no default styling for the `<form>` element, but there are some powerful browser features that are provided by default.
+Каждая группа полей формы должна находиться в элементе `<form>`. Bootstrap не предоставляет стили по умолчанию для элемента `<form>`, но есть несколько мощных функций браузера, которые предоставляются по умолчанию.
 
-- New to browser forms? Consider reviewing [the MDN form docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) for an overview and complete list of available attributes.
-- `<button>`s within a `<form>` default to `type="submit"`, so strive to be specific and always include a `type`.
-- You can disable every form element within a form with the `disabled` attribute on the `<form>`.
+- Новичок в формах браузера? Рассмотрите возможность просмотра [документов формы MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) для обзора и полного списка доступных атрибутов.
+- `<button>` внутри `<form>` по умолчанию `type="submit"`, поэтому старайтесь быть конкретным и всегда включайте `type`.
+- Вы можете отключить каждый элемент формы в форме с помощью атрибута `disabled` в `<form>`.
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Поскольку Bootstrap применяет `display: block` и `width: 100%` почти ко всем элементам управления формой, формы по умолчанию будут располагаться вертикально. Дополнительные классы могут использоваться для изменения этого макета для каждой формы.
 
-## Utilities
+## Утилиты
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}}) are the easiest way to add some structure to forms. They provide basic grouping of labels, controls, optional form text, and form validation messaging. We recommend sticking to `margin-bottom` utilities, and using a single direction throughout the form for consistency.
+[Утилиты полей]({{< docsref "/utilities/spacing" >}}) - самый простой способ добавить некоторую структуру в формы. Они обеспечивают базовую группировку меток, элементов управления, необязательный текст формы и сообщения проверки формы. Мы рекомендуем придерживаться служебных программ `margin-bottom` и использовать одно направление во всей форме для единообразия.
 
-Feel free to build your forms however you like, with `<fieldset>`s, `<div>`s, or nearly any other element.
+Не стесняйтесь создавать свои формы, как Вам нравится, с помощью `<fieldset>`, `<div>` или почти любого другого элемента.
 
 {{< example >}}
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  <label for="formGroupExampleInput" class="form-label">Пример метки</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Пример подсказки поля ввода">
 </div>
 <div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+  <label for="formGroupExampleInput2" class="form-label">Другая метка</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Другая подсказка поля ввода">
 </div>
 {{< /example >}}
 
-## Form grid
+## Сетка формы
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. **Requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+Более сложные формы могут быть построены с использованием наших классов сетки. Используйте их для макетов форм, требующих нескольких столбцов, разной ширины и дополнительных параметров выравнивания. **Требует включения переменной Sass `$enable-grid-classes`** (по умолчанию включено).
 
 {{< example >}}
 <div class="row">
   <div class="col">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <input type="text" class="form-control" placeholder="Имя" aria-label="Имя">
   </div>
   <div class="col">
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия">
   </div>
 </div>
 {{< /example >}}
 
-## Gutters
+## Промежутки
 
-By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can have control over the gutter width in as well the inline as block direction. **Also requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+Добавляя [классы модификаторов промежутков]({{< docsref "/layout/gutters" >}}), Вы можете контролировать ширину промежутков как в строчном, так и в блочном направлении. **Также требуется, чтобы переменная Sass `$enable-grid-classes`** (по умолчанию включена).
 
 {{< example >}}
 <div class="row g-3">
   <div class="col">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <input type="text" class="form-control" placeholder="Имя" aria-label="Имя">
   </div>
   <div class="col">
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия">
   </div>
 </div>
 {{< /example >}}
 
-More complex layouts can also be created with the grid system.
+С помощью системы сеток также можно создавать более сложные макеты.
 
 {{< example >}}
 <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
+    <label for="inputEmail4" class="form-label">Эл. адрес</label>
     <input type="email" class="form-control" id="inputEmail4">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
+    <label for="inputPassword4" class="form-label">Пароль</label>
     <input type="password" class="form-control" id="inputPassword4">
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="inputAddress" class="form-label">Адрес</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Проспект Ленина">
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2" class="form-label">Адрес 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Квартира">
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
+    <label for="inputCity" class="form-label">Город</label>
+    <input type="text" class="form-control" id="inputCity" placeholder="Брянск">
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
+    <label for="inputState" class="form-label">Область</label>
     <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
+      <option selected>Выберите...</option>
       <option>...</option>
     </select>
   </div>
   <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
+    <label for="inputZip" class="form-label">Индекс</label>
     <input type="text" class="form-control" id="inputZip">
   </div>
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
-        Check me out
+        Проверить меня
       </label>
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Войти в систему</button>
   </div>
 </form>
 {{< /example >}}
 
-## Horizontal form
+## Горизонтальная форма
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
+Создавайте горизонтальные формы с сеткой, добавляя класс `.row` для формирования групп и используя классы `.col-*-*` для определения ширины Ваших меток и элементов управления. Не забудьте добавить `.col-form-label` к Вашим `<label>` чтобы они были выровнены по центру по вертикали с соответствующими элементами управления формой.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+Иногда Вам может потребоваться использовать утилиты `margin` или `padding` для создания идеального выравнивания, которое Вам нужно. Например, мы удалили `padding-top` на нашей метке сгруппированных радио, чтобы лучше выровнять базовую линию текста.
 
 {{< example >}}
 <form>
   <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Эл. почта</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" id="inputEmail3">
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword3">
     </div>
   </div>
   <fieldset>
     <div class="row mb-3">
-      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Радио</legend>
       <div class="col-sm-10">
         <div class="form-check">
           <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
           <label class="form-check-label" for="gridRadios1">
-            First radio
+            Первое радио
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
           <label class="form-check-label" for="gridRadios2">
-            Second radio
+            Второе радио
           </label>
         </div>
         <div class="form-check disabled">
           <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
           <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
+            Третье отключенное радио
           </label>
         </div>
       </div>
     </div>
   </fieldset>
   <div class="row mb-3">
-    <div class="col-form-label col-sm-2 pt-0">Checkbox</div>
+    <div class="col-form-label col-sm-2 pt-0">Флажок</div>
     <div class="col-sm-10">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
-          Example checkbox
+          Пример флажка
         </label>
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Войти</button>
 </form>
 {{< /example >}}
 
-### Horizontal form label sizing
+### Размер метки горизонтальной формы
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Обязательно используйте `.col-form-label-sm` или `.col-form-label-lg` к Вашим `<label>` или `<legend>`, чтобы правильно следовать размеру `.form-control-lg` и `.form-control-sm`.
 
 {{< example >}}
 <div class="row mb-3">
-  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Эл. адрес</label>
   <div class="col-sm-10">
     <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
   </div>
 </div>
 <div class="row mb-3">
-  <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+  <label for="colFormLabel" class="col-sm-2 col-form-label">Эл. адрес</label>
   <div class="col-sm-10">
     <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
   </div>
 </div>
 <div class="row">
-  <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+  <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Эл. адрес</label>
   <div class="col-sm-10">
     <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
   </div>
 </div>
 {{< /example >}}
 
-## Column sizing
+## Размер колонок
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
+Как показано в предыдущих примерах, наша сеточная система позволяет Вам размещать любое количество `.col` внутри `.row`. Они разделят доступную ширину между собой поровну. Вы также можете выбрать подмножество Ваших столбцов, чтобы они занимали больше или меньше места, в то время как оставшиеся `.col` поровну разделяют остальные, с определенными классами столбцов, такими как `.col-sm-7`.
 
 {{< example >}}
 <div class="row g-3">
   <div class="col-sm-7">
-    <input type="text" class="form-control" placeholder="City" aria-label="City">
+    <input type="text" class="form-control" placeholder="Город" aria-label="Город">
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="State" aria-label="State">
+    <input type="text" class="form-control" placeholder="Область" aria-label="Область">
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+    <input type="text" class="form-control" placeholder="Индекс" aria-label="Индекс">
   </div>
 </div>
 {{< /example >}}
 
-## Auto-sizing
+## Автоматический размер
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+В приведенном ниже примере используется утилита flexbox для вертикального центрирования содержимого и изменение `.col` на `.col-auto`, чтобы Ваши столбцы занимали ровно столько места, сколько необходимо. Другими словами, размер столбца зависит от содержимого.
 
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingInput">Name</label>
-    <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
+    <label class="visually-hidden" for="autoSizingInput">Имя</label>
+    <input type="text" class="form-control" id="autoSizingInput" placeholder="Иван Иванов">
   </div>
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+    <label class="visually-hidden" for="autoSizingInputGroup">Имя пользователя</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Имя пользователя">
     </div>
   </div>
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+    <label class="visually-hidden" for="autoSizingSelect">Предпочтение</label>
     <select class="form-select" id="autoSizingSelect">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Выберите...</option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+      <option value="3">Три</option>
     </select>
   </div>
   <div class="col-auto">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck">
       <label class="form-check-label" for="autoSizingCheck">
-        Remember me
+        Запомнить меня
       </label>
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
   </div>
 </form>
 {{< /example >}}
 
-You can then remix that once again with size-specific column classes.
+Затем Вы можете снова смешать это с классами столбцов, зависящими от размера.
 
 {{< example >}}
 <form class="row gx-3 gy-2 align-items-center">
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+    <label class="visually-hidden" for="specificSizeInputName">Имя</label>
+    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Иван Иванов">
   </div>
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+    <label class="visually-hidden" for="specificSizeInputGroupUsername">Имя пользователя</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Имя пользователя">
     </div>
   </div>
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+    <label class="visually-hidden" for="specificSizeSelect">Предпочтение</label>
     <select class="form-select" id="specificSizeSelect">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Выберите...</option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+      <option value="3">Три</option>
     </select>
   </div>
   <div class="col-auto">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
       <label class="form-check-label" for="autoSizingCheck2">
-        Remember me
+        Запомнить меня
       </label>
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
   </div>
 </form>
 {{< /example >}}
 
-## Inline forms
+## Строчная форма
 
-Use the `.col-auto` class to create horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. The `.align-items-center` aligns the form elements to the middle, making the `.form-checkbox` align properly.
+Используйте класс `.col-auto` для создания горизонтальных макетов. Добавив [классы модификатора промежутков]({{< docsref "/layout/gutters" >}}), мы получим желоба в горизонтальном и вертикальном направлениях. `.align-items-center` выравнивает элементы формы по центру, обеспечивая правильное выравнивание `.form-checkbox`.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Имя пользователя</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Имя пользователя">
     </div>
   </div>
 
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+    <label class="visually-hidden" for="inlineFormSelectPref">Предпочтение</label>
     <select class="form-select" id="inlineFormSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Выберите...</option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+      <option value="3">Три</option>
     </select>
   </div>
 
@@ -321,13 +321,13 @@ Use the `.col-auto` class to create horizontal layouts. By adding [gutter modifi
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="inlineFormCheck">
       <label class="form-check-label" for="inlineFormCheck">
-        Remember me
+        Запомнить меня
       </label>
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
   </div>
 </form>
 {{< /example >}}

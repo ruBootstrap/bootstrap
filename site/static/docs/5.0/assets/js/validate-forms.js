@@ -1,11 +1,11 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
 (function () {
   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
   var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
+  // Зацикливайтесь на них и предотвращайте отправку
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
