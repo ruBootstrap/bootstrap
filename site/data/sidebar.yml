@@ -97,47 +97,47 @@
 - title: Компоненты
   slug: components
   pages:
-    - title: Alerts
+    - title: Уведомления
       slug: alerts
-    - title: Badge
+    - title: Значки
       slug: badge
-    - title: Breadcrumb
+    - title: Хлебные крошки
       slug: breadcrumb
-    - title: Buttons
+    - title: Кнопки
       slug: buttons
-    - title: Button group
+    - title: Группа кнопок
       slug: button-group
-    - title: Card
+    - title: Карта
       slug: card
-    - title: Carousel
+    - title: Карусель
       slug: carousel
-    - title: Close button
+    - title: Кнопка закрытия
       slug: close-button
-    - title: Collapse
+    - title: Сворачиваемое содержимое
       slug: collapse
-    - title: Dropdowns
+    - title: Выпадающие списки
       slug: dropdowns
-    - title: List group
+    - title: Группы списков
       slug: list-group
-    - title: Modal
+    - title: Модальное окно
       slug: modal
-    - title: Navs
+    - title: Навигация
       slug: navs
-    - title: Navbar
+    - title: Панель навигации
       slug: navbar
-    - title: Pagination
+    - title: Пагинация
       slug: pagination
-    - title: Popovers
+    - title: Высплывающие окна
       slug: popovers
-    - title: Progress
+    - title: Прогресс выполнения
       slug: progress
-    - title: Scrollspy
+    - title: Слежение прокрутки
       slug: scrollspy
-    - title: Spinners
+    - title: Состояние загрузки
       slug: spinners
-    - title: Toasts
+    - title: Всплывающие сообщения
       slug: toasts
-    - title: Tooltips
+    - title: Всплывающие подсказки
       slug: tooltips
 
 - title: Помощники
