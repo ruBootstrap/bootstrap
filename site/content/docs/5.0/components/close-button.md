@@ -1,30 +1,30 @@
 ---
 layout: docs
-title: Close button
-description: A generic close button for dismissing content like modals and alerts.
+title: Кнопка закрытия
+description: Общая кнопка закрытия для отклонения содержимого, такого как модальные окна и предупреждения.
 group: components
 toc: true
 ---
 
-## Example
+## Пример
 
-Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `background-image`. **Be sure to include text for screen readers**, as we've done with `aria-label`.
+Предоставьте возможность отклонить или закрыть компонент с помощью `.btn-close`. Стиль по умолчанию ограничен, но легко настраивается. Измените переменные Sass, чтобы заменить стандартное `background-image`. **Не забудьте включить текст для программ чтения с экрана**, как мы сделали с `aria-label`.
 
 {{< example >}}
 <button type="button" class="btn-close" aria-label="Close"></button>
 {{< /example >}}
 
-## Disabled state
+## Отключенное состояние
 
-Disabled close buttons change their `opacity`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
+Отключенные кнопки закрытия меняют свою `opacity`. Мы также применили `pointer-events: none` и `user-select: none` для предотвращения срабатывания состояния зависания и активного состояния.
 
 {{< example >}}
 <button type="button" class="btn-close" disabled aria-label="Close"></button>
 {{< /example >}}
 
-## White variant
+## Белый вариант
 
-Change the default `.btn-close` to be white with the `.btn-close-white` class. This class uses the `filter` property to invert the `background-image`.
+Измените значение по умолчанию `.btn-close` на белый с классом `.btn-close-white`. Этот класс использует свойство `filter` для инвертирования `background-image`.
 
 {{< example class="bg-dark" >}}
 <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
