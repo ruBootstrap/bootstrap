@@ -127,7 +127,7 @@
       slug: navbar
     - title: Пагинация
       slug: pagination
-    - title: Высплывающие окна
+    - title: Всплывающие окна
       slug: popovers
     - title: Прогресс выполнения
       slug: progress

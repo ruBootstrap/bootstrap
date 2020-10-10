@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Выпадающие списки
+title: Сворачиваемое содержимое
 description: Переключайте видимость контента в Вашем проекте с помощью нескольких классов и наших плагинов JavaScript.
 group: components
 toc: true

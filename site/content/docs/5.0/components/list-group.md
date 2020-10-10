@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: List group
-description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+title: Группы списков
+description: Группы списков - это гибкий и мощный компонент для отображения серии контента. Измените и расширьте их для поддержки практически любого содержимого внутри.
 group: components
 toc: true
 ---
 
-## Basic example
+## Простой пример
 
-The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+Самая основная группа списков - это неупорядоченный список с элементами списка и соответствующими классами. Развивайте его, используя следующие параметры или собственный CSS, если необходимо.
 
 {{< example >}}
 <ul class="list-group">
@@ -20,9 +20,9 @@ The most basic list group is an unordered list with list items and the proper cl
 </ul>
 {{< /example >}}
 
-## Active items
+## Активные элементы
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+Добавьте `.active` к `.list-group-item`, чтобы указать текущий активный выбор.
 
 {{< example >}}
 <ul class="list-group">
@@ -34,9 +34,9 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 </ul>
 {{< /example >}}
 
-## Disabled items
+## Отключенные элементы
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+Добавьте `.disabled` к `.list-group-item` , чтобы он _показался_ отключенным. Обратите внимание, что для некоторых элементов с `.disabled` также потребуется специальный JavaScript, чтобы полностью отключить их события щелчка (например, ссылки).
 
 {{< example >}}
 <ul class="list-group">
@@ -48,11 +48,11 @@ Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that 
 </ul>
 {{< /example >}}
 
-## Links and buttons
+## Ссылки и кнопки
 
-Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
+Используйте `<a>` или `<button>`, чтобы создать элементы группы _actionable_ списка с наведением, отключенным и активным состояниями, добавив `.list-group-item-action`. Мы разделяем эти псевдоклассы, чтобы группы списков, состоящие из неинтерактивных элементов (таких как `<li>` или `<div>`) не обеспечивали доступность щелчка или касания.
 
-Be sure to **not use the standard `.btn` classes here**.
+Обязательно **не используйте здесь стандартные классы `.btn`**.
 
 {{< example >}}
 <div class="list-group">
@@ -66,7 +66,7 @@ Be sure to **not use the standard `.btn` classes here**.
 </div>
 {{< /example >}}
 
-With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
+С помощью `<button>` Вы также можете использовать атрибут `disabled` вместо класса `.disabled`. К сожалению, `<a>` не поддерживают атрибут.
 
 {{< example >}}
 <div class="list-group">
@@ -80,9 +80,9 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 </div>
 {{< /example >}}
 
-## Flush
+## Поток
 
-Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+Добавьте `.list-group-flush`, чтобы удалить некоторые границы и закругленные углы для рендеринга элементов группы списков от края до края в родительском контейнере (например, карточки).
 
 {{< example >}}
 <ul class="list-group list-group-flush">
@@ -94,11 +94,11 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 </ul>
 {{< /example >}}
 
-## Horizontal
+## По горизонтали
 
-Add `.list-group-horizontal` to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant `.list-group-horizontal-{sm|md|lg|xl|xxl}` to make a list group horizontal starting at that breakpoint's `min-width`. Currently **horizontal list groups cannot be combined with flush list groups.**
+Добавьте `.list-group-horizontal`, чтобы изменить расположение элементов группы списков с вертикального на горизонтальное во всех контрольных точках. В качестве альтернативы, выберите адаптивный вариант `.list-group-horizontal-{sm|md|lg|xl|xxl}`, чтобы сделать группу списков горизонтальной, начиная с `min-width` контрольной точки. В настоящее время **группы горизонтального списка нельзя комбинировать с группами скрытого списка.**
 
-**ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
+**Совет:** Хотите элементы группы списков одинаковой ширины в горизонтальном положении? Добавьте `.flex-fill` к каждому элементу группы списка.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -112,22 +112,22 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 {{< /list-group.inline >}}
 {{< /example >}}
 
-## Contextual classes
+## Контекстные классы
 
-Use contextual classes to style list items with a stateful background and color.
+Используйте контекстные классы для стилизации элементов списка с фоном и цветом с отслеживанием состояния.
 
 {{< example >}}
 <ul class="list-group">
   <li class="list-group-item">Dapibus ac facilisis in</li>
 {{< list.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
+  <li class="list-group-item list-group-item-{{ .name }}">Простой {{ .name }} элемент группы списка</li>
 {{- end -}}
 {{< /list.inline >}}
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+Контекстные классы также работают с `.list-group-item-action`. Обратите внимание на добавление стилей наведения, которых не было в предыдущем примере. Также поддерживается состояние `.active`; примените его, чтобы указать активный выбор в элементе группы контекстного списка.
 
 {{< example >}}
 <div class="list-group">
@@ -144,9 +144,9 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## With badges
+## Со значками
 
-Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
+Добавьте значки к любому элементу группы списка, чтобы показать количество непрочитанных сообщений, активность и многое другое с помощью некоторых [утилит]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
 <ul class="list-group">
@@ -165,32 +165,32 @@ Add badges to any list group item to show unread counts, activity, and more with
 </ul>
 {{< /example >}}
 
-## Custom content
+## Пользовательский контент
 
-Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+Добавьте практически любой HTML-код, даже для групп связанных списков, подобных приведенной ниже, с помощью [утилит flexbox]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
+      <h5 class="mb-1">Заголовок элемента группы списка</h5>
+      <small>3 дня назад</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small>Donec id elit non mi porta.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+      <h5 class="mb-1">Заголовок элемента группы списка</h5>
+      <small class="text-muted">3 дня назад</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small class="text-muted">Donec id elit non mi porta.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+      <h5 class="mb-1">Заголовок элемента группы списка</h5>
+      <small class="text-muted">3 дня назад</small>
     </div>
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small class="text-muted">Donec id elit non mi porta.</small>
@@ -198,9 +198,9 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 </div>
 {{< /example >}}
 
-## Checkboxes and radios
+## Флажки и радио
 
-Place Bootstrap's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+Поместите флажки и радио Bootstrap в элементы группы списка и настройте их по мере необходимости. Вы можете использовать их без тегов `<label>`, но не забудьте включить атрибут и значение `aria-label` для доступности.
 
 {{< example >}}
 <ul class="list-group">
@@ -227,7 +227,7 @@ Place Bootstrap's checkboxes and radios within list group items and customize as
 </ul>
 {{< /example >}}
 
-And if you want `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+И если Вы хотите, чтобы `<label>` в качестве `.list-group-item` для больших областей попадания, Вы тоже могли это сделать.
 
 {{< example >}}
 <div class="list-group">
@@ -255,18 +255,18 @@ And if you want `<label>`s as the `.list-group-item` for large hit areas, you ca
 {{< /example >}}
 
 
-## JavaScript behavior
+## Поведение JavaScript
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+Используйте плагин вкладок JavaScript - включите его отдельно или через скомпилированный файл `bootstrap.js` - чтобы расширить нашу группу списков для создания вкладок локального контента.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
       </div>
     </div>
     <div class="col-8">
@@ -292,10 +292,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Главная</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Профиль</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Сообщения</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
     </div>
   </div>
   <div class="col-8">
@@ -309,13 +309,13 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 {{< /highlight >}}
 
-### Using data attributes
+### Использование атрибутов данных
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
 
 <div role="tabpanel">
 {{< highlight html >}}
-<!-- List group -->
+<!-- Группа списка -->
 <div class="list-group" id="myList" role="tablist">
   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
   <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
@@ -323,7 +323,7 @@ You can activate a list group navigation without writing any JavaScript by simpl
   <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
 </div>
 
-<!-- Tab panes -->
+<!-- Панели вкладок -->
 <div class="tab-content">
   <div class="tab-pane active" id="home" role="tabpanel">...</div>
   <div class="tab-pane" id="profile" role="tabpanel">...</div>
@@ -333,9 +333,9 @@ You can activate a list group navigation without writing any JavaScript by simpl
 {{< /highlight >}}
 </div>
 
-### Via JavaScript
+### Через JavaScript
 
-Enable tabbable list item via JavaScript (each list item needs to be activated individually):
+Включите элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):
 
 {{< highlight js >}}
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -349,7 +349,7 @@ triggerTabList.forEach(function (triggerEl) {
 })
 {{< /highlight >}}
 
-You can activate individual list item in several ways:
+Вы можете активировать отдельный элемент списка несколькими способами:
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
@@ -359,9 +359,9 @@ var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 {{< /highlight >}}
 
-### Fade effect
+### Эффект затухания
 
-To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+Чтобы панель вкладок постепенно увеличивалась, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
 
 {{< highlight html >}}
 <div class="tab-content">
@@ -372,11 +372,11 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 </div>
 {{< /highlight >}}
 
-### Methods
+### Методы
 
-#### constructor
+#### конструктор
 
-Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-target` либо `href`, нацеленный на узел контейнера в DOM.
 
 {{< highlight html >}}
 <div class="list-group" id="myList" role="tablist">
@@ -403,7 +403,7 @@ Activates a list item element and content container. Tab should have either a `d
 
 #### show
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+Выбирает указанный элемент списка и показывает связанную с ним панель. Любой другой элемент списка, который был ранее выбран, становится невыделенным, а связанная с ним панель скрывается. **Возврат к вызывающему абоненту до того, как панель вкладок будет отображена** (например, до того, как произойдет событие `shown.bs.tab`).
 
 {{< highlight js >}}
   var someListItemEl = document.querySelector('#someListItem')
@@ -414,51 +414,51 @@ Selects the given list item and shows its associated pane. Any other list item t
 
 #### dispose
 
-Destroys an element's tab.
+Уничтожает вкладку элемента.
 
 #### getInstance
 
-*Static* method which allows you to get the tab instance associated with a DOM element
+*Статический* метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.
 
 {{< highlight js >}}
 var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
 {{< /highlight >}}
 
-### Events
+### События
 
-When showing a new tab, the events fire in the following order:
+При отображении новой вкладки события запускаются в следующем порядке:
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.bs.tab` (на текущей активной вкладке)
+2. `show.bs.tab` (на вкладке для показа)
+3. `hidden.bs.tab` (на предыдущей активной вкладке такая же, как для события `hide.bs.tab`)
+4. `shown.bs.tab` (на только что активированной вкладке, такой же, как для события `show.bs.tab`)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+Если ни одна вкладка еще не была активной, события `hide.bs.tab` и `hidden.bs.tab` не запускаются.
 
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Тип события</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>show.bs.tab</code></td>
-      <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>Это событие запускается при отображении вкладки, но до отображения новой вкладки. Используйте <code>event.target</code> и <code>event.relatedTarget</code> для таргетинга на активную вкладку и предыдущую активную вкладку (если есть) соответственно.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tab</code></td>
-      <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>Это событие запускается при отображении вкладки после отображения вкладки. Используйте <code>event.target</code> и <code>event.relatedTarget</code> для таргетинга на активную вкладку и предыдущую активную вкладку (если есть) соответственно.</td>
     </tr>
     <tr>
       <td><code>hide.bs.tab</code></td>
-      <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+      <td>Это событие возникает, когда должна быть показана новая вкладка (и, следовательно, предыдущая активная вкладка должна быть скрыта). Используйте <code>event.target</code> и <code>event.relatedTarget</code> для таргетинга на текущую активную вкладку и новую вкладку, которая скоро станет активной, соответственно.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+      <td>Это событие запускается после отображения новой вкладки (и, таким образом, предыдущая активная вкладка скрыта). Используйте <code>event.target</code> и <code>event.relatedTarget</code> для таргетинга на предыдущую активную вкладку и новую активную вкладку соответственно.</td>
     </tr>
   </tbody>
 </table>
@@ -466,7 +466,7 @@ If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will 
 {{< highlight js >}}
 var tabEl = document.querySelector('a[data-toggle="list"]')
 tabEl.addEventListener('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
+  e.target // недавно активированная вкладка
+  e.relatedTarget // предыдущая активная вкладка
 })
 {{< /highlight >}}
