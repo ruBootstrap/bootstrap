@@ -4,12 +4,6 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/album/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/alerts/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/badge/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/best-practices/</loc>
   </url>
   <url>
@@ -25,21 +19,6 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-bottom/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/breadcrumb/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/button-group/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/buttons/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/card/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/carousel/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/carousel/</loc>
   </url>
   <url>
@@ -47,12 +26,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/clearfix/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/close-button/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/collapse/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/colored-links/</loc>
@@ -71,9 +44,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/display/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/dropdowns/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
@@ -100,34 +70,16 @@
     <loc>https://getbootstrap.su/docs/5.0/getting-started/javascript/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/list-group/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/masonry/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/modal/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/navbar/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbars/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/navs/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/offcanvas/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/overflow/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/pagination/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/popovers/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/position/</loc>
@@ -142,9 +94,6 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/product/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/progress/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/ratio/</loc>
   </url>
   <url>
@@ -157,9 +106,6 @@
     <loc>https://getbootstrap.su/docs/5.0/customize/sass/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/scrollspy/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/shadows/</loc>
   </url>
   <url>
@@ -170,9 +116,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/spacing/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/spinners/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/starter-template/</loc>
@@ -191,12 +134,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/text-truncation/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/toasts/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/tooltips/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
@@ -226,16 +163,37 @@
     <loc>https://getbootstrap.su/docs/5.0/getting-started/browsers-devices/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/popovers/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/tooltips/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/toasts/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/introduction/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/dropdowns/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/button-group/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/input-group/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/list-group/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/range/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/badge/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/images/</loc>
@@ -245,6 +203,18 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/build-tools/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/card/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/carousel/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/close-button/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/buttons/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/columns/</loc>
@@ -268,6 +238,12 @@
     <loc>https://getbootstrap.su/docs/5.0/forms/layout/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/modal/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/navs/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/overview/</loc>
   </url>
   <url>
@@ -275,6 +251,15 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/optimize/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/scrollspy/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/pagination/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/navbar/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/options/</loc>
@@ -295,10 +280,16 @@
     <loc>https://getbootstrap.su/docs/5.0/forms/validation/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/progress/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/about/brand/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/collapse/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/grid/</loc>
@@ -310,10 +301,16 @@
     <loc>https://getbootstrap.su/docs/5.0/getting-started/contents/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/spinners/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/content/tables/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/typography/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/alerts/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/form-control/</loc>
@@ -329,6 +326,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/overview/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/components/breadcrumb/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/color/</loc>
