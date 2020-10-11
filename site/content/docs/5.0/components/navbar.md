@@ -1,106 +1,106 @@
 ---
 layout: docs
-title: Navbar
-description: Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+title: Панель навигации
+description: Документация и примеры для мощного, отзывчивого навигационного заголовка Bootstrap - навигационной панели. Включает поддержку брендинга, навигации и т.д., Включая поддержку нашего плагина свертывания.
 group: components
 toc: true
 ---
 
-## How it works
+## Как это работает
 
-Here's what you need to know before getting started with the navbar:
+Вот что вам нужно знать, прежде чем начать работу с навигационной панелью:
 
-- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` for responsive collapsing and [color scheme](#color-schemes) classes.
-- Navbars and their contents are fluid by default. Change the [container](#containers) to limit their horizontal width in different ways.
-- Use our [spacing]({{< docsref "/utilities/spacing" >}}) and [flex]({{< docsref "/utilities/flex" >}}) utility classes for controlling spacing and alignment within navbars.
-- Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
-- Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
-- Indicate the current item by using `aria-current="page"` for the current page or `aria-current="true"` for the current item in a set.
+- Навигационная панель требует оболочки для `.navbar` с `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` для гибкого сворачивания и классов [цветовая схема](#цветовые-схемы).
+- Навигационная панель и их содержимое по умолчанию плавно. Измените [контейнер](#контейнеры) чтобы ограничить их горизонтальную ширину различными способами.
+- Используйте наши служебные классы [отступов]({{< docsref "/utilities/spacing" >}}) и [flex]({{< docsref "/utilities/flex" >}}) для управления интервалом и выравниванием внутри навигационных панелей.
+- Навигационная панель по умолчанию адаптивна, но вы можете легко изменить их, чтобы это изменить. Адаптивное поведение зависит от нашего плагина JavaScript сворачиваемого содержимого.
+- Обеспечьте доступность с помощью элемента `<nav>` или, если вы используете более общий элемент, такой как `<div>`, добавьте `role="navigation"` на каждую панель навигации, чтобы явно идентифицировать ее как ориентир для пользователей. вспомогательных технологий.
+- Укажите текущий элемент, используя `aria-current="page"` для текущей страницы или `aria-current="true"` для текущего элемента в наборе.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-Read on for an example and list of supported sub-components.
+Читайте пример и список поддерживаемых подкомпонентов.
 
-## Supported content
+## Поддерживаемый контент
 
-Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+Навигационные панели имеют встроенную поддержку нескольких подкомпонентов. При необходимости выберите один из следующих вариантов:
 
-- `.navbar-brand` for your company, product, or project name.
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
-- Flex and spacing utilities for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
-- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- `.navbar-brand` для вашей компании, продукта или названия проекта.
+- `.navbar-nav` для полноразмерной и облегченной навигации (включая поддержку раскрывающихся списков).
+- `.navbar-toggler` для использования с нашим плагином свертывания и другими поведениями [переключение навигации](#отзывчивое-поведение).
+- Утилиты Flex и Spacing для любых элементов управления и действий формы.
+- `.navbar-text` для добавления вертикально центрированных строк текста.
+- `.collapse.navbar-collapse` для группировки и скрытия содержимого навигационной панели по родительской контрольной точке.
 
-Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
+Вот пример всех подкомпонентов, включенных в адаптивную светлую навигационную панель, которая автоматически сворачивается в контрольной точке `lg` (большая).
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Выпадающий список
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-This example uses [color]({{< docsref "/utilities/colors" >}}) (`bg-light`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) utility classes.
+В этом примере используются [цвет]({{< docsref "/utilities/colors" >}}) (`bg-light`) и [отступы]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) служебные классы.
 
-### Brand
+### Бренд
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
+`.navbar-brand` может применяться к большинству элементов, но якорь работает лучше всего, поскольку для некоторых элементов могут потребоваться служебные классы или пользовательские стили.
 
 {{< example >}}
-<!-- As a link -->
+<!-- Как ссылка -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
   </div>
 </nav>
 
-<!-- As a heading -->
+<!-- Как заголовок -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">Navbar</span>
+    <span class="navbar-brand mb-0 h1">Панель навигации</span>
   </div>
 </nav>
 {{< /example >}}
 
-Adding images to the `.navbar-brand` will likely always require custom styles or utilities to properly size. Here are some examples to demonstrate.
+Добавление изображений в `.navbar-brand`, скорее всего, всегда потребует настраиваемых стилей или утилит для правильного размера. Вот несколько примеров для демонстрации.
 
 {{< example >}}
-<!-- Just an image -->
+<!-- Как изображение -->
 <nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -111,7 +111,7 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 {{< /example >}}
 
 {{< example >}}
-<!-- Image and text -->
+<!-- Изображение и текст -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -122,34 +122,34 @@ Adding images to the `.navbar-brand` will likely always require custom styles or
 </nav>
 {{< /example >}}
 
-### Nav
+### Навигация
 
-Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
+Навигационные ссылки на панели навигации основаны на наших параметрах `.nav` с их собственным классом-модификатором и требуют использования [класс переключатель](#переключатель) для правильного адаптивного стиля. **Навигация в навигационных панелях также будет увеличиваться, чтобы занимать как можно больше горизонтального пространства**, чтобы содержимое Вашей навигационной панели было надежно выровнено.
 
-Active states—with `.active`—to indicate the current page can be applied directly to `.nav-link`s or their immediate parent `.nav-item`s.
+Активные состояния с `.active` для обозначения, что текущая страница может быть применена непосредственно к `.nav-link` или их непосредственному родительскому элементу `.nav-item`.
 
-Please note that you should also add the `aria-current` attribute on the `.nav-link` itself.
+Обратите внимание, что Вы также должны добавить атрибут `aria-current` к `.nav-link`.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Рекомендуемые</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Цена</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
     </div>
@@ -157,55 +157,55 @@ Please note that you should also add the `aria-current` attribute on the `.nav-l
 </nav>
 {{< /example >}}
 
-And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
+А поскольку мы используем классы для нашей навигации, Вы можете полностью отказаться от подхода на основе списков, если хотите.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        <a class="nav-link" href="#">Рекомендуемые</a>
+        <a class="nav-link" href="#">Цена</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
       </div>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
+Вы также можете использовать раскрывающиеся списки на панели навигации. Для размещения раскрывающихся меню требуется элемент оболочки, поэтому обязательно используйте отдельные и вложенные элементы для `.nav-item` и `.nav-link`, как показано ниже.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Рекомендуемые</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Цена</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            Выпадающий список ссылкой
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </li>
       </ul>
@@ -214,36 +214,36 @@ You may also utilize dropdowns in your navbar nav. Dropdown menus require a wrap
 </nav>
 {{< /example >}}
 
-### Forms
+### Формы
 
-Place various form controls and components within a navbar:
+Разместите различные элементы управления и компоненты формы на панели навигации:
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <button class="btn btn-outline-success" type="submit">Поиск</button>
     </form>
   </div>
 </nav>
 {{< /example >}}
 
-Immediate children elements in `.navbar` use flex layout and will default to `justify-content: space-between`. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
+Непосредственные дочерние элементы в `.navbar` используют гибкий макет и по умолчанию будут использовать `justify-content: space-between`. При необходимости используйте дополнительные [флекс утилиты]({{< docsref "/utilities/flex" >}}) для настройки этого поведения.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
+    <a class="navbar-brand">Панель навигации</a>
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <button class="btn btn-outline-success" type="submit">Поиск</button>
     </form>
   </div>
 </nav>
 {{< /example >}}
 
-Input groups work, too. If your navbar is an entire form, or mostly form, you can use the `<form>` element as the container and save some HTML. Applies to the option above and below this copy.
+Группы ввода тоже работают. Если Ваша панель навигации представляет собой всю форму или в основном форму, Вы можете использовать элемент `<form>` в качестве контейнера и сохранить некоторый HTML. Применяется к варианту выше и ниже этой копии.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -256,89 +256,89 @@ Input groups work, too. If your navbar is an entire form, or mostly form, you ca
 </nav>
 {{< /example >}}
 
-Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
+В составе этих форм навигационной панели также поддерживаются различные кнопки. Это также отличное напоминание о том, что утилиты вертикального выравнивания можно использовать для выравнивания элементов разного размера.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <form class="container-fluid justify-content-start">
-    <button class="btn btn-outline-success mr-2" type="button">Main button</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+    <button class="btn btn-outline-success mr-2" type="button">Главная кнопка</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Меньшая кнопка</button>
   </form>
 </nav>
 {{< /example >}}
 
-### Text
+### Текст
 
-Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
+Панели навигации могут содержать фрагменты текста с помощью `.navbar-text`. Этот класс регулирует вертикальное выравнивание и горизонтальный интервал для строк текста.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <span class="navbar-text">
-      Navbar text with an inline element
+      Текст на панели навигации со встроенным элементом
     </span>
   </div>
 </nav>
 {{< /example >}}
 
-Mix and match with other components and utilities as needed.
+При необходимости смешивайте и сочетайте с другими компонентами и утилитами.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <a class="navbar-brand" href="#">Панель навигации с текстом</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Рекомендуемые</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Цена</a>
         </li>
       </ul>
       <span class="navbar-text">
-        Navbar text with an inline element
+        Текст на панели навигации со встроенным элементом
       </span>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-## Color schemes
+## Цветовые схемы
 
-Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities.
+Создание тем для панели навигации никогда не было таким простым благодаря комбинации классов тем и утилит `background-color`. Выберите `.navbar-light` для использования со светлыми цветами фона или `.navbar-dark` для темных цветов фона. Затем выполните настройку с помощью утилит `.bg-*`.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Панель навигации</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Рекомендуемые</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Цена</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">О нас</a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Search</button>
+          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Поиск</button>
         </form>
       </div>
     </div>
@@ -346,28 +346,28 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Панель навигации</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Рекомендуемые</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Цена</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">О нас</a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Search</button>
+          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Поиск</button>
         </form>
       </div>
     </div>
@@ -375,28 +375,28 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Панель навигации</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Рекомендуемые</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Цена</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">О нас</a>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Поиск</button>
         </form>
       </div>
     </div>
@@ -405,52 +405,52 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
 {{< highlight html >}}
 <nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
+  <!-- Контент навигационной панели -->
 </nav>
 
 <nav class="navbar navbar-dark bg-primary">
-  <!-- Navbar content -->
+  <!-- Контент навигационной панели -->
 </nav>
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <!-- Navbar content -->
+  <!-- Контент навигационной панели -->
 </nav>
 {{< /highlight >}}
 
-## Containers
+## Контейнеры
 
-Although it's not required, you can wrap a navbar in a `.container` to center it on a page or add one within to only center the contents of a [fixed or static top navbar](#placement). Note that an inner container is still required.
+Хотя это не обязательно, Вы можете обернуть панель навигации в `.container`, чтобы центрировать ее на странице, или добавить ее, чтобы центрировать только содержимое [фиксированной или статической верхней панели навигации](#размещение). Обратите внимание, что по-прежнему требуется внутренний контейнер.
 
 {{< example >}}
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Панель навигации</a>
     </div>
   </nav>
 </div>
 {{< /example >}}
 
-Use any of the responsive containers to change how wide the content in your navbar.
+Используйте любой из адаптивных контейнеров, чтобы изменить ширину содержимого на панели навигации.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-md">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
   </div>
 </nav>
 {{< /example >}}
 
-## Placement
+## Размещение
 
-Use our [position utilities]({{< docsref "/utilities/position" >}}) to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow of the DOM and may require custom CSS (e.g., `padding-top` on the `<body>`) to prevent overlap with other elements.
+Используйте наши [утилиты позиционирования]({{< docsref "/utilities/position" >}}), чтобы разместить панели навигации в нестатических положениях. Выберите фиксированный вверху, закрепленный внизу или закрепленный наверху (прокручивается вместе со страницей, пока не достигнет вершины, а затем остается там). Фиксированные панели навигации используют `position: fixed`, что означает, что они извлекаются из обычного потока DOM и могут потребовать настраиваемого CSS (например, `padding-top` на `<body>`) для предотвращения перекрытия с другими элементами.
 
-Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully supported in every browser](https://caniuse.com/#feat=css-sticky)**.
+Также обратите внимание, что **`.sticky-top` использует `position: sticky`, который [полностью поддерживается не всеми браузерами](https://caniuse.com/#feat=css-sticky)**.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Default</a>
+    <a class="navbar-brand" href="#">По умолчанию</a>
   </div>
 </nav>
 {{< /example >}}
@@ -458,7 +458,7 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< example >}}
 <nav class="navbar fixed-top navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fixed top</a>
+    <a class="navbar-brand" href="#">Фиксированный вверху</a>
   </div>
 </nav>
 {{< /example >}}
@@ -466,7 +466,7 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< example >}}
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fixed bottom</a>
+    <a class="navbar-brand" href="#">Фиксированный внизу</a>
   </div>
 </nav>
 {{< /example >}}
@@ -474,22 +474,22 @@ Also note that **`.sticky-top` uses `position: sticky`, which [isn't fully suppo
 {{< example >}}
 <nav class="navbar sticky-top navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Sticky top</a>
+    <a class="navbar-brand" href="#">Приклеен к верху</a>
   </div>
 </nav>
 {{< /example >}}
 
-## Responsive behaviors
+## Отзывчивое поведение
 
-Navbars can utilize `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` classes to change when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
+Навигационные панели могут использовать классы `.navbar-toggler`, `.navbar-collapse` и `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` для изменения, когда их содержимое сворачивается за кнопкой . В сочетании с другими утилитами вы можете легко выбрать, когда показывать или скрывать определенные элементы.
 
-For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
+Для панелей навигации, которые никогда не сворачиваются, добавьте на панель навигации класс `.navbar-expand`. Для панелей навигации, которые всегда сворачиваются, не добавляйте класс `.navbar-expand`.
 
-### Toggler
+### Переключатель
 
-Navbar togglers are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they'll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
+По умолчанию переключатели навигационной панели выровнены по левому краю, но если они следуют за родственным элементом, таким как `.navbar-brand`, они будут автоматически выровнены по крайнему правому краю. Изменение разметки на противоположное приведет к изменению положения переключателя. Ниже приведены примеры различных стилей переключения.
 
-With no `.navbar-brand` shown in lowest breakpoint:
+Без `.navbar-brand` в самой низкой контрольной точке:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -498,58 +498,58 @@ With no `.navbar-brand` shown in lowest breakpoint:
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
+      <a class="navbar-brand" href="#">Скрытый бренд</a>
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-With a brand name shown on the left and toggler on the right:
+С названием бренда слева и переключателем справа:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-With a toggler on the left and brand name on the right:
+С переключателем слева и названием бренда справа:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -557,37 +557,37 @@ With a toggler on the left and brand name on the right:
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
   </div>
 </nav>
 {{< /example >}}
 
-### External content
+### Внешний контент
 
-Sometimes you want to use the collapse plugin to trigger hidden content elsewhere on the page. Because our plugin works on the `id` and `data-target` matching, that's easily done!
+Иногда Вы хотите использовать плагин свертывания, чтобы активировать скрытый контент в другом месте страницы. Поскольку наш плагин работает с сопоставлением `id` и `data-target`, это легко сделать!
 
 {{< example >}}
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
+    <h5 class="text-white h4">Свернутый контент</h5>
+    <span class="text-muted">Переключаемый через бренд навигационной панели.</span>
   </div>
 </div>
 <nav class="navbar navbar-dark bg-dark">
