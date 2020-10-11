@@ -1,21 +1,21 @@
 ---
 layout: docs
-title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+title: Прогресс
+description: Документация и примеры использования настраиваемых индикаторов выполнения Bootstrap с поддержкой составных полос, анимированных фонов и текстовых меток.
 group: components
 toc: true
 ---
 
-## How it works
+## Как это работает
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+Компоненты Progress состоят из двух HTML-элементов, CSS для установки ширины и нескольких атрибутов. Мы не используем [элемент HTML5 `<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), гарантируя, что Вы можете складывать индикаторы выполнения, анимировать их, и поместите на них текстовые метки.
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- We use the inner `.progress-bar` to indicate the progress so far.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
-- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
+- Мы используем `.progress` как оболочку, чтобы указать максимальное значение индикатора выполнения.
+- Мы используем внутренний `.progress-bar`, чтобы указать прогресс на данный момент.
+- Для `.progress-bar` требуется встроенный стиль, служебный класс или пользовательский CSS для установки их ширины.
+- `.progress-bar` также требует некоторых атрибутов` role` и `aria`, чтобы сделать его доступным.
 
-Put that all together, and you have the following examples.
+Сложите все это вместе, и вы получите следующие примеры.
 
 {{< example >}}
 <div class="progress">
@@ -35,7 +35,7 @@ Put that all together, and you have the following examples.
 </div>
 {{< /example >}}
 
-Bootstrap provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap предоставляет несколько [утилит для установки ширины]({{< docsref "/utilities/sizing" >}}). В зависимости от Ваших потребностей они могут помочь в быстрой настройке хода выполнения.
 
 {{< example >}}
 <div class="progress">
@@ -43,9 +43,9 @@ Bootstrap provides a handful of [utilities for setting width]({{< docsref "/util
 </div>
 {{< /example >}}
 
-## Labels
+## Метки
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+Добавляйте метки к индикаторам выполнения, помещая текст в `.progress-bar`.
 
 {{< example >}}
 <div class="progress">
@@ -53,9 +53,9 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 </div>
 {{< /example >}}
 
-## Height
+## Высота
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+Мы устанавливаем значение `height` только для `.progress`, поэтому, если Вы измените это значение, внутренний `.progress-bar` автоматически изменит размер соответственно.
 
 {{< example >}}
 <div class="progress" style="height: 1px;">
@@ -66,9 +66,9 @@ We only set a `height` value on the `.progress`, so if you change that value the
 </div>
 {{< /example >}}
 
-## Backgrounds
+## Фоны
 
-Use background utility classes to change the appearance of individual progress bars.
+Используйте фоновые служебные классы, чтобы изменить внешний вид отдельных индикаторов выполнения.
 
 {{< example >}}
 <div class="progress">
@@ -85,9 +85,9 @@ Use background utility classes to change the appearance of individual progress b
 </div>
 {{< /example >}}
 
-## Multiple bars
+## Мультибар
 
-Include multiple progress bars in a progress component if you need.
+При необходимости включите несколько индикаторов выполнения в компонент прогресса.
 
 {{< example >}}
 <div class="progress">
@@ -97,9 +97,9 @@ Include multiple progress bars in a progress component if you need.
 </div>
 {{< /example >}}
 
-## Striped
+## Полосатый
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+Добавьте `.progress-bar-striped` к любому `.progress-bar`, чтобы применить полосу через градиент CSS к цвету фона индикатора выполнения.
 
 {{< example >}}
 <div class="progress">
@@ -119,16 +119,16 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 </div>
 {{< /example >}}
 
-## Animated stripes
+## Анимированные полосы
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+Полосатый градиент также можно анимировать. Добавьте `.progress-bar-animated` в `.progress-bar`, чтобы анимировать полосы справа налево с помощью анимации CSS3.
 
 <div class="bd-example">
   <div class="progress">
     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
   </div>
   <button type="button" class="btn btn-secondary mt-3" data-toggle="button" id="btnToggleAnimatedProgress" aria-pressed="false" autocomplete="off">
-    Toggle animation
+    Переключить анимацию
   </button>
 </div>
 

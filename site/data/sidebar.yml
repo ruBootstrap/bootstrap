@@ -129,7 +129,7 @@
       slug: pagination
     - title: Всплывающие окна
       slug: popovers
-    - title: Прогресс выполнения
+    - title: Индикатор выполнения
       slug: progress
     - title: Слежение прокрутки
       slug: scrollspy

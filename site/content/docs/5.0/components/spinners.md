@@ -1,169 +1,169 @@
 ---
 layout: docs
-title: Spinners
-description: Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
+title: Состояние загрузки
+description: Укажите состояние загрузки компонента или страницы с помощью волчков Bootstrap, полностью построенных с использованием HTML, CSS и без JavaScript.
 group: components
 toc: true
 ---
 
-## About
+## Обзор
 
-Bootstrap "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
+Bootstrap «спиннеры» можно использовать для отображения состояния загрузки в Ваших проектах. Они построены только с помощью HTML и CSS, а это значит, что для их создания не нужен JavaScript. Однако Вам понадобится специальный JavaScript, чтобы переключить их видимость. Их внешний вид, расположение и размер можно легко настроить с помощью наших замечательных служебных классов.
 
-For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
+Для удобства здесь каждый загрузчик включает в себя `role="status"` и вложенный `<span class="visually-hidden">Загрузка...</span>`.
 
-## Border spinner
+## Спиннер с границей
 
-Use the border spinners for a lightweight loading indicator.
+Используйте спиннеры с границей для легкого индикатора загрузки.
 
 {{< example >}}
 <div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{< /example >}}
 
-### Colors
+### Цвета
 
-The border spinner uses `currentColor` for its `border-color`, meaning you can customize the color with [text color utilities][color]. You can use any of our text color utilities on the standard spinner.
+Спиннер с границей использует `currentColor` в качестве своего `border-color`, что означает, что Вы можете настроить цвет с помощью [утилит цвета текста][color]. Вы можете использовать любую из наших утилит цвета текста на стандартном спиннере.
 
 {{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-border text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 
 {{< callout info >}}
-**Why not use `border-color` utilities?** Each border spinner specifies a `transparent` border for at least one side, so `.border-{color}` utilities would override that.
+**Почему бы не использовать утилиты `border-color`?** Каждая граница определяет `transparent` границу по крайней мере для одной стороны, поэтому утилиты `.border-{color}` переопределят это.
 {{< /callout >}}
 
-## Growing spinner
+## Увеличивающийся спиннер
 
-If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
+Если Вам не нравится спиннер с границами, переключитесь на увеличивающийся спиннер. Хотя технически он не вращается, он постоянно растет!
 
 {{< example >}}
 <div class="spinner-grow" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{< /example >}}
 
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in blue, along with the supported variants.
+Опять же, этот спиннер построен с помощью `currentColor`, так что Вы можете легко изменить его внешний вид с помощью [утилит цвета текста][color]. Здесь он выделен синим цветом вместе с поддерживаемыми вариантами.
 
 {{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-grow text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 
-## Alignment
+## Выравнивание
 
-Spinners in Bootstrap are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
+Спиннеры в Bootstrap построены с помощью `rem`, `currentColor` и `display: inline-flex`. Это означает, что их можно легко изменить размер, перекрасить и быстро выровнять.
 
-### Margin
+### Поля
 
-Use [margin utilities][margin] like `.m-5` for easy spacing.
+Используйте [утилиты полей][margin], например, `.m-5`, чтобы упростить интервалы.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{< /example >}}
 
-### Placement
+### Размещение
 
-Use [flexbox utilities][flex], [float utilities][float], or [text alignment][text] utilities to place spinners exactly where you need them in any situation.
+Используйте [flexbox утилиты][flex], [float утилиты][float] или утилиты [выравнивание текста][text] для размещения спиннеров именно там, где они вам нужны в любой ситуации.
 
-#### Flex
+#### Флексы
 
 {{< example >}}
 <div class="d-flex justify-content-center">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Загрузка...</span>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <strong>Loading...</strong>
+  <strong>Загрузка...</strong>
   <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
 </div>
 {{< /example >}}
 
-#### Floats
+#### Флоаты
 
 {{< example >}}
 <div class="clearfix">
   <div class="spinner-border float-right" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Загрузка...</span>
   </div>
 </div>
 {{< /example >}}
 
-#### Text align
+#### Выравнивание текста
 
 {{< example >}}
 <div class="text-center">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Загрузка...</span>
   </div>
 </div>
 {{< /example >}}
 
-## Size
+## Размер
 
-Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
+Добавьте `.spinner-border-sm` и `.spinner-grow-sm`, чтобы получить счетчик меньшего размера, который можно быстро использовать в других компонентах.
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 <div class="spinner-grow spinner-grow-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{< /example >}}
 
-Or, use custom CSS or inline styles to change the dimensions as needed.
+Или используйте собственный CSS или встроенные стили, чтобы изменить размеры по мере необходимости.
 
 {{< example >}}
 <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </div>
 {{< /example >}}
 
-## Buttons
+## Кнопки
 
-Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
+Используйте счетчики внутри кнопок, чтобы указать, что действие в настоящее время обрабатывается или выполняется. Вы также можете поменять местами текст из элемента счетчика и использовать текст кнопки по мере необходимости.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  Загрузка...
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Загрузка...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  Загрузка...
 </button>
 {{< /example >}}
 
