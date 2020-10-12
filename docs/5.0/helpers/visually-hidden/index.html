@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta name="description" content="Используйте эти помощники, чтобы визуально скрыть элементы, но сделать их доступными для вспомогательных технологий.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
 <meta name="generator" content="Hugo 0.75.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Visually hidden · Bootstrap v5.0</title>
+<title>Визуальное скрытие · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.su/docs/5.0/helpers/visually-hidden/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Visually hidden">
-<meta name="twitter:description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta name="twitter:title" content="Визуальное скрытие">
+<meta name="twitter:description" content="Используйте эти помощники, чтобы визуально скрыть элементы, но сделать их доступными для вспомогательных технологий.">
 <meta name="twitter:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.su/docs/5.0/helpers/visually-hidden/">
-<meta property="og:title" content="Visually hidden">
-<meta property="og:description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta property="og:title" content="Визуальное скрытие">
+<meta property="og:description" content="Используйте эти помощники, чтобы визуально скрыть элементы, но сделать их доступными для вспомогательных технологий.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -323,12 +323,12 @@
       <div class="collapse show" id="helpers-collapse">
         <ul class="list-unstyled font-weight-normal pb-1 small">
             <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
-            <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Colored links</a></li>
-            <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded">Ratio</a></li>
-            <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
-            <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded active" aria-current="page">Visually hidden</a></li>
-            <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Stretched link</a></li>
-            <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Text truncation</a></li>
+            <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Цветные ссылки</a></li>
+            <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded">Соотношения</a></li>
+            <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded">Положение</a></li>
+            <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded active" aria-current="page">Визуальное скрытие</a></li>
+            <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Растянутая ссылка</a></li>
+            <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Укорачивание текста</a></li>
         </ul>
       </div>
     </li>
@@ -400,9 +400,9 @@
         <div class="bd-intro pl-lg-4">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/helpers/visually-hidden.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
-            <h1 class="bd-title" id="content">Visually hidden</h1>
+            <h1 class="bd-title" id="content">Визуальное скрытие</h1>
           </div>
-          <p class="bd-lead">Use these helpers to visually hide elements but keep them accessible to assistive technologies.</p>
+          <p class="bd-lead">Используйте эти помощники, чтобы визуально скрыть элементы, но сделать их доступными для вспомогательных технологий.</p>
         </div>
 
         
@@ -410,13 +410,13 @@
         <div class="bd-content pl-lg-4">
           
 
-          <p>Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it&rsquo;s focused (e.g. by a keyboard-only user). Can also be used as mixins.</p>
+          <p>Визуально скрыть элемент, оставив при этом доступ к нему вспомогательным технологиям (например, программам чтения с экрана) с помощью <code>.visually-hidden</code>. Используйте <code>.visually-hidden-focusable</code>, чтобы визуально скрыть элемент по умолчанию, но отображать его, когда он сфокусирован (например, пользователем, использующим только клавиатуру). Также может использоваться как миксины.</p>
 <div class="bd-example">
-<h2 class="visually-hidden">Title for screen readers</h2>
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Title for screen readers<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
+<h2 class="visually-hidden">Заголовок для программ чтения с экрана</h2>
+<a class="visually-hidden-focusable" href="#content">Перейти к основному содержанию</a>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Заголовок для программ чтения с экрана<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Перейти к основному содержанию<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Использование в качестве миксина
 </span><span class="c1"></span>
 <span class="nc">.visually-hidden-title</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> visually-hidden</span><span class="p">;</span>

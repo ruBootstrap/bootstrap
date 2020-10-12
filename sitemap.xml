@@ -28,9 +28,6 @@
     <loc>https://getbootstrap.su/docs/5.0/helpers/clearfix/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/colored-links/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/colors/</loc>
   </url>
   <url>
@@ -82,9 +79,6 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/overflow/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/position/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/position/</loc>
   </url>
   <url>
@@ -92,9 +86,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/product/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/ratio/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/reboot/</loc>
@@ -127,13 +118,7 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/sticky-footer/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/stretched-link/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/text/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/text-truncation/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
@@ -151,9 +136,6 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/visibility/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/helpers/visually-hidden/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/webpack/</loc>
   </url>
   <url>
@@ -161,6 +143,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/browsers-devices/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/visually-hidden/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/popovers/</loc>
@@ -274,6 +259,9 @@
     <loc>https://getbootstrap.su/docs/5.0/extend/approach/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/position/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/</loc>
   </url>
   <url>
@@ -284,6 +272,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/gutters/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/stretched-link/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/about/brand/</loc>
@@ -301,6 +292,9 @@
     <loc>https://getbootstrap.su/docs/5.0/getting-started/contents/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/ratio/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/components/spinners/</loc>
   </url>
   <url>
@@ -311,6 +305,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/alerts/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/text-truncation/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/form-control/</loc>
@@ -332,6 +329,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/color/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/helpers/colored-links/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/select/</loc>
