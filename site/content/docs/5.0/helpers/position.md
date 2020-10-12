@@ -1,42 +1,42 @@
 ---
 layout: docs
-title: Position
-description: Use these helpers for quickly configuring the position of an element.
+title: Положение
+description: Используйте эти помощники для быстрой настройки положения элемента.
 group: helpers
 toc: true
 ---
 
-## Fixed top
+## Фиксация вверху
 
-Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Расположите элемент вверху области просмотра от края до края. Убедитесь, что Вы понимаете последствия фиксированной позиции в Вашем проекте; Вам может потребоваться добавить дополнительный CSS.
 
 {{< highlight html >}}
 <div class="fixed-top">...</div>
 {{< /highlight >}}
 
-## Fixed bottom
+## Фиксация внизу
 
-Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Разместите элемент в нижней части окна просмотра от края до края. Убедитесь, что Вы понимаете последствия фиксированной позиции в вашем проекте; Вам может потребоваться добавить дополнительный CSS.
 
 {{< highlight html >}}
 <div class="fixed-bottom">...</div>
 {{< /highlight >}}
 
-## Sticky top
+## Приклеено к верху
 
-Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The `.sticky-top` utility uses CSS's `position: sticky`, which isn't fully supported in all browsers.
+Поместите элемент вверху области просмотра, от края до края, но только после того, как Вы прокрутите его. Утилита `.sticky-top` использует CSS-код `position: sticky`, который не полностью поддерживается во всех браузерах.
 
 {{< highlight html >}}
 <div class="sticky-top">...</div>
 {{< /highlight >}}
 
-## Responsive sticky top
+## Отзывчиво приклеено к верху
 
-Responsive variations also exist for `.sticky-top` utility.
+Адаптивные варианты также существуют для утилиты `.sticky-top`.
 
 {{< highlight html >}}
-<div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
-<div class="sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
-<div class="sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
-<div class="sticky-xl-top">Stick to the top on viewports sized XL (extra-large) or wider</div>
+<div class="sticky-sm-top">Придерживайтесь верхней части окна просмотра размером SM (маленький) или шире</div>
+<div class="sticky-md-top">Придерживайтесь верхней части окна просмотра размером MD (средний) или шире</div>
+<div class="sticky-lg-top">Придерживайтесь верхней части окна просмотра размером LG (большой) или шире</div>
+<div class="sticky-xl-top">Придерживайтесь верхней части окна просмотра размером XL (очень большой) или шире</div>
 {{< /highlight >}}

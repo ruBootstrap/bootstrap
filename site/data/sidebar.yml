@@ -145,17 +145,17 @@
   pages:
     - title: Clearfix
       slug: clearfix
-    - title: Colored links
+    - title: Цветные ссылки
       slug: colored-links
-    - title: Ratio
+    - title: Соотношения
       slug: ratio
-    - title: Position
+    - title: Положение
       slug: position
-    - title: Visually hidden
+    - title: Визуальное скрытие
       slug: visually-hidden
-    - title: Stretched link
+    - title: Растянутая ссылка
       slug: stretched-link
-    - title: Text truncation
+    - title: Укорачивание текста
       slug: text-truncation
 
 - title: Утилиты

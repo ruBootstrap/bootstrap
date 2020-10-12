@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: Visually hidden
-description: Use these helpers to visually hide elements but keep them accessible to assistive technologies.
+title: Визуальное скрытие
+description: Используйте эти помощники, чтобы визуально скрыть элементы, но сделать их доступными для вспомогательных технологий.
 group: helpers
 aliases: "/docs/5.0/helpers/screen-readers/"
 ---
 
-Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with `.visually-hidden`. Use `.visually-hidden-focusable` to visually hide an element by default, but to display it when it's focused (e.g. by a keyboard-only user). Can also be used as mixins.
+Визуально скрыть элемент, оставив при этом доступ к нему вспомогательным технологиям (например, программам чтения с экрана) с помощью `.visually-hidden`. Используйте `.visually-hidden-focusable`, чтобы визуально скрыть элемент по умолчанию, но отображать его, когда он сфокусирован (например, пользователем, использующим только клавиатуру). Также может использоваться как миксины.
 
 {{< example >}}
-<h2 class="visually-hidden">Title for screen readers</h2>
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+<h2 class="visually-hidden">Заголовок для программ чтения с экрана</h2>
+<a class="visually-hidden-focusable" href="#content">Перейти к основному содержанию</a>
 {{< /example >}}
 
 {{< highlight scss >}}
-// Usage as a mixin
+// Использование в качестве миксина
 
 .visually-hidden-title {
   @include visually-hidden;

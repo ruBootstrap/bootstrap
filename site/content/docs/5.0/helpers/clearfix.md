@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+description: Быстрая и легкая очистка плавающего контента в контейнере, добавив утилиту clearfix.
 group: helpers
 aliases: "/docs/5.0/helpers/"
 ---
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+Легко очистить `float`, добавив `.clearfix` **к родительскому элементу**. Также может использоваться как миксин.
 
-Use in HTML:
+Использование в HTML:
 
 {{< highlight html >}}
 <div class="clearfix">...</div>
 {{< /highlight >}}
 
-The mixin source code:
+Исходный код миксина:
 
 {{< scss-docs name="clearfix" file="scss/mixins/_clearfix.scss" >}}
 
-Use the mixin in SCSS:
+Используйте миксин в SCSS:
 
 {{< highlight scss >}}
 .element {
@@ -26,11 +26,11 @@ Use the mixin in SCSS:
 }
 {{< /highlight >}}
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+В следующем примере показано, как можно использовать clearfix. Без clearfix обертывающий div не будет охватывать кнопки, что приведет к нарушению макета.
 
 {{< example >}}
 <div class="bg-info clearfix">
-  <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
-  <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+  <button type="button" class="btn btn-secondary float-left">Кнопка примера перемещена влево</button>
+  <button type="button" class="btn btn-secondary float-right">Кнопка примера перемещена вправо</button>
 </div>
 {{< /example >}}
