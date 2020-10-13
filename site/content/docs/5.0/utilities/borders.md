@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+title: Границы
+description: Используйте утилиты для создания границ, чтобы быстро настроить границу и радиус границы элемента. Отлично подходит для изображений, кнопок или любого другого элемента.
 group: utilities
 toc: true
 ---
 
-## Border
+## Граница
 
-Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
+Используйте служебные программы для создания границ, чтобы добавить или удалить границы элемента. Выбирайте из всех границ или по одной.
 
-### Additive
+### Добавка
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
@@ -20,7 +20,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 <span class="border-left"></span>
 {{< /example >}}
 
-### Subtractive
+### Вычитание
 
 {{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
 <span class="border-0"></span>
@@ -30,9 +30,9 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 <span class="border-left-0"></span>
 {{< /example >}}
 
-## Border color
+## Цвет границы
 
-Change the border color using utilities built on our theme colors.
+Измените цвет границы с помощью утилит, созданных на основе цветов нашей темы.
 
 {{< example class="bd-example-border-utils" >}}
 {{< border.inline >}}
@@ -43,7 +43,7 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-white"></span>
 {{< /example >}}
 
-### Border-width
+### Ширина границы
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -53,9 +53,9 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-5"></span>
 {{< /example >}}
 
-## Border-radius
+## Радиус границы
 
-Add classes to an element to easily round its corners.
+Добавьте классы к элементу, чтобы легко скруглить его углы.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
@@ -69,9 +69,9 @@ Add classes to an element to easily round its corners.
 {{< /example >}}
 
 
-## Sizes
+## Размеры
 
-Use `.rounded-lg` or `.rounded-sm` for larger or smaller border-radius.
+Используйте `.rounded-lg` или `.rounded-sm` для большего или меньшего радиуса границы.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-sm" title="Example small rounded image" >}}

@@ -1,27 +1,27 @@
 ---
 layout: docs
-title: Utility API
-description: The utility API is a Sass based tool to generate utility classes.
+title: Служебный API
+description: Служебный API - это инструмент на основе Sass для создания служебных классов.
 group: utilities
 aliases: "/docs/5.0/utilities/"
 toc: true
 ---
 
-The bootstrap utilities are generated with the utility API which can be used to change or extend Bootstrap's utility classes. If you don't have any idea what Sass maps are, you can consult the [official docs](https://sass-lang.com/documentation/values/maps) to get started.
+Утилиты начальной загрузки создаются с помощью служебного API, который можно использовать для изменения или расширения служебных классов Bootstrap. Если Вы не знаете, что такое карты Sass, Вы можете обратиться к [официальной документации](https://sass-lang.com/documentation/values/maps), чтобы начать работу.
 
-The `$utilities` map contains all utilities and is later merged with your custom `$utilities` map if present. The utility map contains a keyed list of utility groups which accept the following options:
+Карта `$utilities` содержит все утилиты и позже объединяется с Вашей пользовательской картой `$utilities`, если она есть. Карта утилит содержит ключевой список групп утилит, которые принимают следующие параметры:
 
-- `property`: Name of the property, this can be a string or an array of strings (needed for eg. horizontal paddings or margins).
-- `responsive` _(optional)_: Boolean indicating if responsive classes need to be generated. `false` by default.
-- `rfs` _(optional)_: Variable to enable fluid rescaling. Have a look at the [RFS]({{< docsref "/getting-started/rfs" >}}) page to find out how this works. `false` by default.
-- `class` _(optional)_: Variable to change the class name if you don't want it to be the same as the property. In case you don't provide the `class` key and `property` key is an array of strings, the class name will be the first element of the `property` array.
-- `values`: This can be a list of values or a map if you don't want the class name to be the same as the value. If null is used as map key, it isn't rendered.
-- `print` _(optional)_: Boolean indicating if print classes need to be generated. `false` by default.
+- `property`: Имя свойства, это может быть строка или массив строк (требуется, например, для горизонтальных отступов или полей).
+- `responsive` _(необязательный)_: Логическое значение, указывающее, нужно ли создавать адаптивные классы. По умолчанию `false`.
+- `rfs` _(необязательный)_: Переменная для изменения масштаба текучести. Взгляните на страницу [RFS]({{< docsref "/getting-started/rfs" >}}), чтобы узнать, как это работает. По умолчанию `false`.
+- `class` _(необязательный)_: Переменная для изменения имени класса, если Вы не хотите, чтобы оно совпадало со свойством. Если Вы не предоставили ключ `class`, а ключ `property` представляет собой массив строк, имя класса будет первым элементом массива `property`.
+- `values`: Это может быть список значений или карта, если Вы не хотите, чтобы имя класса совпадало со значением. Если в качестве ключа карты используется null, он не отображается.
+- `print` _(необязательный)_: Логическое значение, указывающее, нужно ли создавать классы печати. По умолчанию `false`.
 
 
-## Adding utilities to the utility API
+## Добавление утилит в служебный API
 
-All utility variables are added to the `$utilities` variable. Custom utility groups can added like this:
+Все служебные переменные добавляются в переменную `$utilities`. Пользовательские группы утилит могут быть добавлены следующим образом:
 
 ```scss
 $utilities: (
@@ -38,7 +38,7 @@ $utilities: (
  );
 ```
 
-Output:
+На выходе:
 
 ```css
 .opacity-0 {
@@ -59,9 +59,9 @@ Output:
 ```
 
 
-## Changing the class prefix
+## Изменение префикса класса
 
-With the `class` option, the class prefix can be changed:
+С помощью опции `class` префикс класса может быть изменен:
 
 ```scss
 $utilities: (
@@ -79,7 +79,7 @@ $utilities: (
  );
 ```
 
-Output:
+На выходе:
 
 ```css
 .o-0 {
@@ -99,9 +99,9 @@ Output:
 }
 ```
 
-## Responsive utilities
+## Адаптивные утилиты
 
-With the `responsive` option, responsive utility classes can be generated:
+С помощью опции `responsive` можно сгенерировать отзывчивые служебные классы:
 
 ```scss
 $utilities: (
@@ -119,7 +119,7 @@ $utilities: (
  );
 ```
 
-Output:
+На выходе:
 
 ```css
 .opacity-0 {
@@ -207,10 +207,10 @@ Output:
 }
 ```
 
-## Changing utilities
+## Замена утилит
 
-Overriding excising utilities is possible by using the same key. For example if you want more responsive overflow
-utility classes you can do this:
+Переопределить утилит отрезания можно с помощью того же ключа. Например, если Вы хотите более отзывчивое переполнение
+утилит классов, которые Вы можете сделать:
 
 ```scss
 $utilities: (
@@ -223,9 +223,9 @@ $utilities: (
 ```
 
 
-## Print utilities
+## Утилиты для печати
 
-Enabling the `print` option will **also** generate utility classes for print.
+Включение опции `print` **также** сгенерирует служебные классы для печати.
 
 ```scss
 $utilities: (
@@ -244,7 +244,7 @@ $utilities: (
  );
 ```
 
-Output:
+На выходе:
 
 ```css
 .o-0 {
@@ -282,9 +282,9 @@ Output:
 }
 ```
 
-## Removing utilities
+## Удаление утилит
 
-Utilities can also be removed by changing the group key to `null`:
+Утилиты также можно удалить, изменив ключ группы на `null`:
 
 ```scss
 $utilities: (

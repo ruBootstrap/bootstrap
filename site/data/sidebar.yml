@@ -163,33 +163,33 @@
   pages:
     - title: API
       slug: api
-    - title: Borders
+    - title: Границы
       slug: borders
-    - title: Colors
+    - title: Цвета
       slug: colors
-    - title: Display
+    - title: Отображение
       slug: display
-    - title: Flex
+    - title: Флекс
       slug: flex
-    - title: Float
+    - title: Флоат
       slug: float
-    - title: Interactions
+    - title: Взаимодействия
       slug: interactions
-    - title: Overflow
+    - title: Переполнение
       slug: overflow
-    - title: Position
+    - title: Положение
       slug: position
-    - title: Shadows
+    - title: Тени
       slug: shadows
-    - title: Sizing
+    - title: Размеры
       slug: sizing
-    - title: Spacing
+    - title: Интервал
       slug: spacing
-    - title: Text
+    - title: Текст
       slug: text
-    - title: Vertical align
+    - title: Вертикальное выравнивание
       slug: vertical-align
-    - title: Visibility
+    - title: Видимость
       slug: visibility
 
 - title: Дополнительно
