@@ -1,6 +1,6 @@
 # www.robotstxt.org
 
-{{- $allowCrawling := false -}}
+{{- $allowCrawling := true -}}
 
 {{ if $allowCrawling }}
 # Allow crawling of all content

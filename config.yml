@@ -63,6 +63,7 @@ params:
   expo:                 "https://expo.getbootstrap.com/"
   themes:               "https://themes.getbootstrap.com/"
   icons:                "https://icons.getbootstrap.su/"
+  original_url:         "https://v5.getbootstrap.com"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v5.0.0-alpha2.zip"
