@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Visibility
-description: Control the visibility of elements, without modifying their display, with visibility utilities.
+title: Видимость
+description: Управляйте видимостью элементов, не изменяя их отображение, с помощью утилит видимости.
 group: utilities
 ---
 
-Set the `visibility` of elements with our visibility utilities. These utility classes do not modify the `display` value at all and do not affect layout – `.invisible` elements still take up space in the page.
+Установите `visibility` элементов с помощью наших утилит видимости. Эти служебные классы вообще не изменяют значение `display` и не влияют на макет – `.invisible` элементы по-прежнему занимают место на странице.
 
 {{< callout warning >}}
-Elements with the `.invisible` class will be hidden *both* visually and for assistive technology/screen reader users.
+Элементы с классом `.invisible` будут скрыты *как* визуально, так и для пользователей вспомогательных технологий/программ чтения с экрана.
 {{< /callout >}}
 
-Apply `.visible` or `.invisible` as needed.
+При необходимости используйте `.visible` или `.invisible`.
 
 {{< highlight html >}}
 <div class="visible">...</div>
@@ -19,7 +19,7 @@ Apply `.visible` or `.invisible` as needed.
 {{< /highlight >}}
 
 {{< highlight scss >}}
-// Class
+// Класс
 .visible {
   visibility: visible !important;
 }

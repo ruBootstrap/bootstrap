@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+title: Положение
+description: Используйте эти сокращенные утилиты для быстрой настройки положения элемента.
 group: utilities
 toc: true
 ---
 
-## Position values
+## Значения позиции
 
-Quick positioning classes are available, though they are not responsive.
+Доступны классы быстрого позиционирования, но они не реагируют.
 
 {{< highlight html >}}
 <div class="position-static">...</div>
@@ -18,24 +18,24 @@ Quick positioning classes are available, though they are not responsive.
 <div class="position-sticky">...</div>
 {{< /highlight >}}
 
-## Arrange elements
+## Расстановка элементов
 
-Arrange elements easily with the edge positioning utilities. The format is `{property}-{position}`.
+Легко располагайте элементы с помощью утилит для позиционирования краев. Формат `{property}-{position}`.
 
-Where *property* is one of:
+Где *свойство* - одно из:
 
-- `top` - for the vertical `top` position
-- `left` - for the horizontal `left` position
-- `bottom` - for the vertical `bottom` position
-- `right` - for the horizontal `right` position
+- `top` - для вертикального положения `top`
+- `left` - для горизонтального положения `left`
+- `bottom` - для вертикального положения `bottom`
+- `right` - для горизонтального положения `right`
 
-Where *position* is one of:
+Где *позиция* - одно из:
 
-- `0` - for `0` edge position
-- `50` - for `50%` edge position
-- `100` - for `100%` edge position
+- `0` - для `0` крайнего положения
+- `50` - для `50%` крайнего положения
+- `100` - для `100%` крайнего положения
 
-(You can add more position values by adding entries to the `$position-values` Sass map variable.)
+(Вы можете добавить больше значений позиции, добавив записи в переменную карты Sass `$position-values`)
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -48,11 +48,11 @@ Where *position* is one of:
 </div>
 {{< /example >}}
 
-## Center elements
+## Центральные элементы
 
-In addition, you can also center the elements with the transform utility class `.translate-middle`.
+Кроме того, Вы также можете центрировать элементы с помощью служебного класса преобразования `.translate-middle`.
 
-This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
+Этот класс применяет к элементу преобразования `translateX(-50%)` и `translateY(-50%)`, что в сочетании с утилитами позиционирования краев позволяет Вам полностью центрировать элемент.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -68,25 +68,25 @@ This class applies the transformations `translateX(-50%)` and `translateY(-50%)`
 </div>
 {{< /example >}}
 
-## Examples
+## Примеры
 
-Here are some real life examples of these classes:
+Вот несколько примеров из реальной жизни этих классов:
 
 {{< example class="bd-example-position-examples d-flex justify-content-around" >}}
 <button type="button" class="btn btn-primary position-relative">
-  Mails <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
+  Письма <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">непрочитанные сообщения</span></span>
 </button>
 
 <button type="button" class="btn btn-dark position-relative">
-  Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 left-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#343a40" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+  Метка <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 left-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#343a40" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
 </button>
 
 <button type="button" class="btn btn-primary position-relative">
-  Alerts <span class="position-absolute top-0 left-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
+  Уведомления <span class="position-absolute top-0 left-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">непрочитанные сообщения</span></span>
 </button>
 {{< /example >}}
 
-You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
+Вы можете использовать эти классы с существующими компонентами для создания новых. Помните, что Вы можете расширить его функциональные возможности, добавив записи в переменную `$position-values`.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">

@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Vertical alignment
-description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+title: Вертикальное выравнивание
+description: Легко изменяйте вертикальное выравнивание элементов inline, inline-block, inline-table и table cell.
 group: utilities
 ---
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+Измените выравнивание элементов с помощью утилит [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align). Обратите внимание, что vertical-align влияет только на элементы inline, inline-block, inline-table и table cell elements.
 
-Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
+При необходимости выберите `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` и `.align-text-top`.
 
-To vertically center non-inline content (like `<div>`s and more), use our [flex box utilities]({{< docsref "/utilities/flex#align-items" >}}).
+Чтобы вертикально центрировать невстроенный контент (например `<div>` и другие), используйте наши [утилиты flexbox]({{< docsref "/utilities/flex#align-items" >}}).
 
-With inline elements:
+Со строчными элементами:
 
 {{< example >}}
 <span class="align-baseline">baseline</span>
@@ -22,7 +22,7 @@ With inline elements:
 <span class="align-text-bottom">text-bottom</span>
 {{< /example >}}
 
-With table cells:
+С ячейками таблицы:
 
 {{< example >}}
 <table style="height: 100px;">

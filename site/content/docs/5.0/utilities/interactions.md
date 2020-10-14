@@ -1,31 +1,31 @@
 ---
 layout: docs
-title: Interactions
-description: Utility classes that change how users interact with contents of a website.
+title: Взаимодействия
+description: Классы утилит, которые изменяют способ взаимодействия пользователей с содержимым веб-сайта.
 group: utilities
 toc: false
 ---
 
-## Text selection
+## Выделение текста
 
-Change the way in which the content is selected when the user interacts with it.
+Измените способ выбора содержимого при взаимодействии с ним пользователя.
 
 {{< example >}}
-<p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
-<p class="user-select-auto">This paragraph has default select behavior.</p>
-<p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
+<p class="user-select-all">Этот абзац будет полностью выделен при нажатии пользователем.</p>
+<p class="user-select-auto">Этот абзац имеет поведение выбора по умолчанию.</p>
+<p class="user-select-none">Этот абзац не будет доступен для выбора при нажатии пользователем.</p>
 {{< /example >}}
 
-## Pointer events
+## Указатель событий
 
-Bootstrap provides `.pe-none` and `.pe-auto` classes to prevent or add element interactions.
+Bootstrap предоставляет классы `.pe-none` и `.pe-auto` для предотвращения или добавления взаимодействий элементов.
 
 {{< example >}}
-<p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">This link</a> can not be clicked.</p>
-<p><a href="#" class="pe-auto">This link</a> can be clicked (this is default behaviour).</p>
-<p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">This link</a> can not be clicked because the <code>pointer-events</code> property is inherited from its parent. However, <a href="#" class="pe-auto">this link</a> has a <code>pe-auto</code> class and can be clicked.</p>
+<p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">Эта ссылка</a> не может быть нажата.</p>
+<p><a href="#" class="pe-auto">Эта ссылка</a> может быть нажата (это поведение по умолчанию).</p>
+<p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">Эта ссылка</a> не может быть нажата, потому что свойство <code>pointer-events</code> унаследовано от своего родителя. Однако у <a href="#" class="pe-auto">этой ссылки</a> есть класс <code>pe-auto</code>, и по ней можно перейти.</p>
 {{< /example >}}
 
 {{< callout warning >}}
-The `.pe-none` class (and the `pointer-events` CSS property it sets) only prevents interactions with a pointer (mouse, stylus, touch). Links and controls with `.pe-none` are, by default, still focusable and actionable for keyboard users. To ensure that they are completely neutralized even for keyboard users, you may need to add further attributes such as `tabindex="-1"` (to prevent them from receiving keyboard focus) and `aria-disabled="true"` (to convey the fact they are effectively disabled to assistive technologies), and possibly use JavaScript to completely prevent them from being actionable. For form controls, consider using the `disabled` HTML attribute instead.
+Класс `.pe-none` (и свойство CSS `pointer-events`, которое он устанавливает) предотвращает только взаимодействие с указателем (мышь, стилус, прикосновение). Ссылки и элементы управления с `.pe-none` по умолчанию по-прежнему доступны для фокусировки и действий для пользователей клавиатуры. Чтобы гарантировать, что они полностью нейтрализованы даже для пользователей клавиатуры, Вам может потребоваться добавить дополнительные атрибуты, такие как `tabindex="-1"` (чтобы они не получали фокус клавиатуры) и `aria-disabled="true"` (чтобы передают тот факт, что они фактически отключены для вспомогательных технологий), и, возможно, используют JavaScript, чтобы полностью помешать им действовать. Для элементов управления формой рассмотрите возможность использования HTML-атрибута `disabled`.
 {{< /callout >}}
