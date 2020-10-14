@@ -1,6 +1,6 @@
 ---
 layout: examples
-title: Signin Template
+title: Шаблон формы входа
 extra_css:
   - "signin.css"
 body_class: "text-center"
@@ -10,17 +10,17 @@ include_js: false
 <main class="form-signin">
   <form>
     <img class="mb-4" src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="visually-hidden">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="visually-hidden">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <h1 class="h3 mb-3 font-weight-normal">Пожалуйста, войдите</h1>
+    <label for="inputEmail" class="visually-hidden">Адрес эл. почты</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Адрес электронной почты" required autofocus>
+    <label for="inputPassword" class="visually-hidden">Пароль</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input type="checkbox" value="remember-me"> Запомнить меня
       </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-{{< year >}}</p>
   </form>
 </main>
