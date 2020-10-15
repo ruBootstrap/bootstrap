@@ -74,6 +74,6 @@
 - category: Интеграции
   description: "Интеграции с внешними библиотеками."
   examples:
-    - name: Каменная кладка (Masonry)
+    - name: Masonry
       slug: masonry
       description: "Объедините возможности сетки Bootstrap и макета Masonry."
