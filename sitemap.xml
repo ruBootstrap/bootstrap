@@ -1,43 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/album/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/best-practices/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/blog/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-bottom/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/carousel/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/checkout/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/clearfix/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/cover/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/css-variables/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/dashboard/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-fixed/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/flex/</loc>
@@ -46,28 +22,7 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/float/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/floating-labels/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/grid/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/javascript/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/masonry/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/navbars/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/offcanvas/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/pricing/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/product/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/content/reboot/</loc>
@@ -77,21 +32,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/sass/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/sign-in/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/starter-template/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/sticky-footer-navbar/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/sticky-footer/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/versions/</loc>
@@ -244,6 +184,33 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/position/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/masonry/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/album/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-bottom/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/checkout/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/floating-labels/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/product/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/navbar-fixed/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/pricing/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/</loc>
   </url>
   <url>
@@ -289,6 +256,9 @@
     <loc>https://getbootstrap.su/docs/5.0/components/spinners/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/starter-template/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/content/tables/</loc>
   </url>
   <url>
@@ -332,6 +302,36 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/colored-links/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/blog/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/offcanvas/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/carousel/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/navbars/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/cover/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/dashboard/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/sticky-footer-navbar/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/sticky-footer/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/grid/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/sign-in/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/select/</loc>
