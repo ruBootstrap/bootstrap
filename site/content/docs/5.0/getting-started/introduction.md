@@ -137,6 +137,7 @@ Bootstrap разработан *mobile first (сначала мобильный)
 
 Будьте в курсе развития Bootstrap и обращайтесь к сообществу с помощью этих полезных ресурсов.
 
+- Обсуждайте в чате Telegram [@getbootstrap_ru](https://t.me/getbootstrap_ru).
 - Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/).
 - Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).

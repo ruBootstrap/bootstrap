@@ -54,6 +54,7 @@ params:
   rfs_version:          "9.0.3"
   github_org:           "https://github.com/twbs"
   github_ru_bootstrap:  "https://github.com/ruBootstrap"
+  telegram_ru:          "https://t.me/getbootstrap_ru"
   repo:                 "https://github.com/twbs/bootstrap"
   repo_ru_bootstrap:    "https://github.com/ruBootstrap/bootstrap"
   twitter:              "getbootstrap"
