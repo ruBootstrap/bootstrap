@@ -42,7 +42,7 @@ module:
       target:           static/favicon.ico
 
 params:
-  description:          "Самая популярная библиотека HTML, CSS и JS в мире. Описание компонентов, стилей, форм bootstrap. Система сеток bootstrap и ее контрольные точки. Подключение и использование Bootstrap. Стили для быстрого старта. Перевод официальной документации Bootstrap."
+  description:          "Самая популярная библиотека HTML, CSS и JS в мире. Перевод официальной документации Bootstrap. Bootstrap на русском."
   authors:              "Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap"
   social_image_path:    /docs/5.0/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/5.0/assets/brand/bootstrap-social-logo.png
