@@ -366,9 +366,9 @@ $font-family-sans-serif:
   </fieldset>
 </form>
 
-{{< callout warning >}}
+{{% callout warning %}}
 {{< partial "callout-warning-input-support.md" >}}
-{{< /callout >}}
+{{% /callout %}}
 
 ### Указатели на кнопках
 
@@ -441,10 +441,10 @@ HTML5 добавляет [новый глобальный атрибут с им
 <input type="text" hidden>
 {{< /highlight >}}
 
-{{< callout warning >}}
+{{% callout warning %}}
 ##### Несовместимость jQuery
 
 `[hidden]` несовместим с методами jQuery `$(...).hide()` и `$(...).show()`. Поэтому в настоящее время мы не особо поддерживаем `[hidden]` по сравнению с другими методами управления элементами `display`.
-{{< /callout >}}
+{{% /callout %}}
 
 Чтобы просто переключить видимость элемента, то есть его `display` не изменяется, и элемент все еще может влиять на поток документа, используйте [класс `.invisible`]({{< docsref "/utilities/visibility" >}}) вместо этого.

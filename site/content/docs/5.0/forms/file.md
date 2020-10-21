@@ -6,9 +6,9 @@ group: forms
 toc: true
 ---
 
-{{< callout info >}}
+{{% callout info %}}
 Рекомендуемый плагин для анимации пользовательского ввода файла [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input); это то, что мы используем в нашей документации.
-{{< /callout >}}
+{{% /callout %}}
 
 ## По умолчанию
 

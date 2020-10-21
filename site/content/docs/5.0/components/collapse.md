@@ -10,9 +10,9 @@ toc: true
 
 Плагин JavaScript сворачивания используется для отображения и скрытия содержимого. Кнопки или якоря используются как триггеры, которые сопоставляются с определенными элементами, которые Вы переключаете. Сворачивание элемента приведет к анимации `height` от текущего значения до `0`. Учитывая, как CSS обрабатывает анимацию, Вы не можете использовать `padding` для элемента `.collapse`. Вместо этого используйте класс как независимый элемент оболочки.
 
-{{< callout info >}}
+{{% callout info %}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
-{{< /callout >}}
+{{% /callout %}}
 
 ## Пример
 
@@ -187,9 +187,9 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Методы
 
-{{< callout danger >}}
+{{% callout danger %}}
 {{< partial "callout-danger-async-methods.md" >}}
-{{< /callout >}}
+{{% /callout %}}
 
 Активирует Ваш контент как складной элемент. Принимает необязательные параметры `object`.
 
@@ -224,7 +224,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
     </tr>
     <tr>
       <td><code>dispose</code></td>
-      <td>Уничтожает сворачиваемый элемент.</td>
+      <td>Уничтожает сворачиваемый элемент. (Удаляет сохраненные данные в элементе DOM)</td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>

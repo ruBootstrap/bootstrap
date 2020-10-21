@@ -386,9 +386,9 @@ toc: true
 </div>
 {{< /example >}}
 
-{{< callout info >}}
+{{% callout info %}}
 Обратите внимание, что содержимое не должно быть больше высоты изображения. Если содержимое больше изображения, оно будет отображаться вне изображения.
-{{< /callout >}}
+{{% /callout %}}
 
 ## По горизонтали
 
@@ -422,7 +422,7 @@ toc: true
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="card{{ if (eq .name "info") }} text-body {{ else if not (or (eq .name "light") (eq .name "warning")) }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
+<div class="card{{ if (eq .name "info") }} text-body{{ else if not (or (eq .name "light") (eq .name "warning") (eq .name "info")) }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Шапка</div>
   <div class="card-body">
     <h5 class="card-title">{{ .name | title }} Заголовок карточки</h5>
@@ -433,9 +433,9 @@ toc: true
 {{< /card.inline >}}
 {{< /example >}}
 
-{{< callout info >}}
+{{% callout info %}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{< /callout >}}
+{{% /callout %}}
 
 ### Граница
 

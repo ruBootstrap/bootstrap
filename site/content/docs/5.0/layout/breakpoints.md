@@ -171,9 +171,9 @@ Bootstrap в основном использует следующие диапа
 // Нет медиа-запроса, так как контрольная точка xxl не имеет верхней границы ширины
 {{< /highlight >}}
 
-{{< callout warning >}}
+{{% callout warning %}}
 {{< partial "callout-info-mediaqueries-breakpoints.md" >}}
-{{< /callout >}}
+{{% /callout %}}
 
 ### Одиночная контрольная точка
 

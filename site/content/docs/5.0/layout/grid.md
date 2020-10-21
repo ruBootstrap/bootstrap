@@ -10,9 +10,9 @@ toc: true
 
 Система сеток Bootstrap использует серию контейнеров, строк и колонок для компоновки и выравнивания содержимого. Он построен с помощью [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) и полностью адаптивен. Ниже приведен пример и подробное объяснение того, как объединяется сетка.
 
-{{< callout info >}}
+{{% callout info %}}
 **Новичок или незнаком с flexbox?** [Прочтите это руководство по flexbox на CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) для получения справочной информации, терминологии, рекомендаций и фрагментов кода.
-{{< /callout >}}
+{{% /callout %}}
 
 {{< example class="bd-example-row" >}}
 <div class="container">
