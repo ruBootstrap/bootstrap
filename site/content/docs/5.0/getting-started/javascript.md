@@ -25,11 +25,11 @@ toc: true
 </script>
 {{< /highlight >}}
 
-{{% callout warning %}}
+{{< callout warning >}}
 ## Несовместимые плагины
 
 Из-за ограничений браузера некоторые из наших плагинов, а именно плагины Dropdown, Tooltip и Popover, нельзя использовать в теге `<script>` с типом `module`, потому что они зависят от Popper.js. Для получения дополнительной информации об этой проблеме см [здесь](https://v8.dev/features/modules#specifiers).
-{{% /callout %}}
+{{< /callout >}}
 
 ## Зависимости
 
@@ -45,12 +45,12 @@ Bootstrap 5 разработан для использования без jQuery
 
 Почти все плагины Bootstrap можно включить и настроить только с помощью HTML с атрибутами данных (наш предпочтительный способ использования функциональности JavaScript). Обязательно **используйте только один набор атрибутов данных для одного элемента** (например, Вы не можете запускать всплывающую подсказку и модальное окно с помощью одной кнопки.)
 
-{{% callout warning %}}
+{{< callout warning >}}
 ## Селекторы
 
 В настоящее время для запросов к элементам DOM мы используем собственные методы `querySelector` и `querySelectorAll` из соображений производительности, поэтому Вы должны использовать [допустимые селекторы](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier).
 Если Вы используете специальные селекторы, например: `collapse:Example`, не забудьте их экранировать.
-{{% /callout %}}
+{{< /callout >}}
 
 ## События
 
@@ -68,7 +68,7 @@ myModal.addEventListener('show.bs.modal', function (e) {
 })
 {{< /highlight >}}
 
-{{% callout warning %}}
+{{< callout warning >}}
 ## События jQuery
 
 Bootstrap обнаружит jQuery, если `jQuery` присутствует в объекте `window`, а атрибут `data-no-jquery` не установлен в `<body>`. Если jQuery найден, Bootstrap будет генерировать события благодаря системе событий jQuery. Поэтому, если Вы хотите прослушивать события Bootstrap, вам придется использовать методы jQuery (`.on`, `.one`) вместо `addEventListener`.
@@ -78,7 +78,7 @@ $('#myTab a').on('shown.bs.tab', function () {
   // сделай что-нибудь...
 })
 {{< /highlight >}}
-{{% /callout %}}
+{{< /callout >}}
 
 ## Программный API
 
@@ -151,11 +151,11 @@ bootstrap.Tooltip.VERSION // => "{{< param current_version >}}"
 
 Плагины Bootstrap не особо изящен при отключенном JavaScript. Если в этом случае Вам важен опыт пользователя, используйте [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript), чтобы объяснить ситуацию (и как повторно включить JavaScript) для Ваших пользователей и/или добавить свои собственные резервные варианты.
 
-{{% callout warning %}}
+{{< callout warning >}}
 ##### Сторонние библиотеки
 
 **Bootstrap официально не поддерживает сторонние библиотеки JavaScript** , такие как Prototype или jQuery UI. Несмотря на `.noConflict` и события в пространстве имен, могут возникнуть проблемы совместимости, которые Вам нужно исправить самостоятельно.
-{{% /callout %}}
+{{< /callout >}}
 
 ## Чистильщик
 

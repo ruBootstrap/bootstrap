@@ -16,9 +16,9 @@ toc: true
 - **Обратите внимание, что Вы несете ответственность за размещение всплывающих сообщений.**
 - Всплывающие сообщения  будут автоматически скрываться, если Вы не укажете `autohide: false`.
 
-{{% callout info %}}
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 ## Примеры
 
@@ -290,9 +290,9 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Методы
 
-{{% callout danger %}}
+{{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 #### show
 

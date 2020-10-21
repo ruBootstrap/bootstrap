@@ -26,9 +26,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 })
 {{< /highlight >}}
 
-{{% callout info %}}
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 Продолжайте читать, чтобы увидеть демонстрации и инструкции по использованию.
 
@@ -888,9 +888,9 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 ### Методы
 
-{{% callout danger %}}
+{{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 #### Passing options
 

@@ -6,15 +6,15 @@ group: utilities
 toc: true
 ---
 
-{{% callout info %}}
+{{< callout info >}}
 ##### Работа со спецификой
 
 Иногда контекстные классы не могут быть применены из-за специфики другого селектора. В некоторых случаях достаточным обходным путем является обертывание содержимого Вашего элемента в `<div>` с классом.
-{{% /callout %}}
+{{< /callout >}}
 
-{{% callout info %}}
+{{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 ## Цвет
 

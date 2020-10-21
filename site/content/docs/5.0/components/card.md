@@ -386,9 +386,9 @@ toc: true
 </div>
 {{< /example >}}
 
-{{% callout info %}}
+{{< callout info >}}
 Обратите внимание, что содержимое не должно быть больше высоты изображения. Если содержимое больше изображения, оно будет отображаться вне изображения.
-{{% /callout %}}
+{{< /callout >}}
 
 ## По горизонтали
 
@@ -433,9 +433,9 @@ toc: true
 {{< /card.inline >}}
 {{< /example >}}
 
-{{% callout info %}}
+{{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
-{{% /callout %}}
+{{< /callout >}}
 
 ### Граница
 
