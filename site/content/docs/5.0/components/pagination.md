@@ -62,7 +62,7 @@ toc: true
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2 <span class="visually-hidden">(текущая)</span></a>
+      <a class="page-link" href="#">2</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
@@ -82,10 +82,7 @@ toc: true
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        2
-        <span class="visually-hidden">(текущая)</span>
-      </span>
+      <span class="page-link">2</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
@@ -103,10 +100,7 @@ toc: true
 <nav aria-label="...">
   <ul class="pagination pagination-lg">
     <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        1
-        <span class="visually-hidden">(текущая)</span>
-      </span>
+      <span class="page-link">1</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -118,10 +112,7 @@ toc: true
 <nav aria-label="...">
   <ul class="pagination pagination-sm">
     <li class="page-item active" aria-current="page">
-      <span class="page-link">
-        1
-        <span class="visually-hidden">(текущая)</span>
-      </span>
+      <span class="page-link">1</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
