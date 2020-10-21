@@ -34,9 +34,9 @@ toc: true
 
 <a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Начало работы', 'Скачать', 'Скачать примеры');">Скачать Примеры</a>
 
-## BootstrapCDN
+## CDN via jsDelivr
 
-Пропустите загрузку с помощью [BootstrapCDN](https://www.bootstrapcdn.com/), чтобы доставить кэшированную версию скомпилированных CSS и JS Bootstrap в свой проект.
+Пропустите загрузку с помощью [jsDelivr](https://www.jsdelivr.com/), чтобы доставить кэшированную версию скомпилированных CSS и JS Bootstrap в свой проект.
 
 {{< highlight html >}}
 <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">

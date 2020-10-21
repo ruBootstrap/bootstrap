@@ -12,6 +12,10 @@ Bootstrap «спиннеры» можно использовать для ото
 
 Для удобства здесь каждый загрузчик включает в себя `role="status"` и вложенный `<span class="visually-hidden">Загрузка...</span>`.
 
+{{< callout info >}}
+{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< /callout >}}
+
 ## Спиннер с границей
 
 Используйте спиннеры с границей для легкого индикатора загрузки.

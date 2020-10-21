@@ -111,7 +111,8 @@ sections:
 
 {{< example >}}
 <form>
-  <fieldset disabled aria-label="Disabled fieldset example">
+  <fieldset disabled>
+    <legend>Пример отключенного набора полей</legend>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">Отключенное поле ввода</label>
       <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
