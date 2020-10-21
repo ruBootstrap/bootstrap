@@ -7,6 +7,15 @@ aliases: "/migration/"
 toc: true
 ---
 
+## v5.0.0-alpha3
+
+### Цвета
+
+- Цветовая система, которая работала с `color-level()` и `$theme-color-interval`, была удалена в пользу новой цветовой системы.
+- Все функции `lighten()` и `darken()` в нашей кодовой базе заменены на `tint-color()` и `shade-color()`. Эти функции будут смешивать цвет с белым или черным вместо того, чтобы изменять его яркость на фиксированную величину.
+- `scale-color()` будет либо подкрашивать, либо затенять цвет в зависимости от того, является ли его параметр веса положительным или отрицательным.
+- См. [этот PR](https://github.com/twbs/bootstrap/pull/30622) для получения более подробной информации.
+
 ## v5.0.0-alpha2
 
 ### Sass
@@ -152,7 +161,7 @@ toc: true
 - Переставлены исходные файлы форм в `scss/forms/`. [См. Подробнее в разделе форм.](#forms)
 - Удалены стили печати и переменная `$enable-print-styles`. Однако классы отображения печати остались неизменными. [См. #28339](https://github.com/twbs/bootstrap/pull/28339).
 - Убраны функции `color()`, `theme-color()` и `gray()` в пользу переменных. [См. #29083](https://github.com/twbs/bootstrap/pull/29083)
-- Функция `theme-color-level()` переименована в `color-level()` и теперь принимает любой цвет, который Вы хотите, вместо только цветов `$theme-color`. [См. #29083](https://github.com/twbs/bootstrap/pull/29083)
+- Функция `theme-color-level()` переименована в `color-level()` и теперь принимает любой цвет, который Вы хотите, вместо только цветов `$theme-color`. [См. #29083](https://github.com/twbs/bootstrap/pull/29083) **Будьте осторожны:** `color-level()` позже был удален в `v5.0.0-alpha3`.
 - `$enable-grid-classes` больше не отключает генерацию контейнерных классов [См. #29146](https://github.com/twbs/bootstrap/pull/29146)
 - Для краткости переименованы `$enable-prefers-reduced-motion-media-query` и `$enable-pointer-cursor-for-buttons` в `$enable-reduced-motion` и `$enable-button-pointers`.
 - Высота строк снижена из нескольких компонентов, чтобы упростить нашу кодовую базу. `button-size()` и `pagination-size()` больше не принимают параметры высоты строки. [См. #29271](https://github.com/twbs/bootstrap/pull/29271)

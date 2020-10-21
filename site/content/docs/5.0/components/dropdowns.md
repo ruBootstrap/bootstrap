@@ -247,60 +247,31 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 Выпадающие списки кнопок работают с кнопками любого размера, включая кнопку по умолчанию и разделенную кнопку выпадающего списка.
 
 <div class="bd-example">
-  <div class="btn-toolbar" role="toolbar">
-    <div class="btn-group">
-      <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-        Большая кнопка
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-      </ul>
-    </div><!-- /btn-group -->
-    <div class="btn-group ml-2">
-      <button type="button" class="btn btn-lg btn-secondary">Большая раздельная кнопка</button>
-      <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Переключатель выпадающего списка</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-      </ul>
-    </div><!-- /btn-group -->
-  </div><!-- /btn-toolbar -->
-  <div class="btn-toolbar" role="toolbar">
-    <div class="btn-group">
-      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-        Маленькая кнопка
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-      </ul>
-    </div><!-- /btn-group -->
-    <div class="btn-group ml-2">
-      <button type="button" class="btn btn-sm btn-secondary">Маленькая раздельная кнопка</button>
-      <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Переключатель выпадающего списка</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-      </ul>
-    </div><!-- /btn-group -->
-  </div><!-- /btn-toolbar -->
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+      Большая кнопка
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Действие</a></li>
+      <li><a class="dropdown-item" href="#">Другое действие</a></li>
+      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-lg btn-secondary">Большая разделенная кнопка</button>
+    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Переключатель всплывающей кнопки</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Действие</a></li>
+      <li><a class="dropdown-item" href="#">Другое действие</a></li>
+      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
+    </ul>
+  </div>
 </div>
 
 {{< highlight html >}}
@@ -324,8 +295,37 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     ...
   </ul>
 </div>
+{{< /highlight >}}
 
-<!-- Группы маленьких кнопок (по умолчанию и разделенные) -->
+<div class="bd-example">
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+      Маленькая кнопка
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Действие</a></li>
+      <li><a class="dropdown-item" href="#">Другое действие</a></li>
+      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-sm btn-secondary">Маленькая кнопка разделения</button>
+    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Переключатель выпадающего списка</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Действие</a></li>
+      <li><a class="dropdown-item" href="#">Другое действие</a></li>
+      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
+    </ul>
+  </div>
+</div>
+
+{{< highlight html >}}
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Маленькая кнопка
@@ -345,7 +345,6 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     ...
   </ul>
 </div>
-{{< /highlight >}}
 
 ## Темные выпадающие списки
 
