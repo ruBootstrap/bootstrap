@@ -403,7 +403,7 @@ toc: true
   </nav>
 </div>
 
-{{< highlight html >}}
+```html
 <nav class="navbar navbar-dark bg-dark">
   <!-- Контент навигационной панели -->
 </nav>
@@ -415,7 +415,7 @@ toc: true
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <!-- Контент навигационной панели -->
 </nav>
-{{< /highlight >}}
+```
 
 ## Контейнеры
 

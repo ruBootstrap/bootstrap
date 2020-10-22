@@ -113,14 +113,14 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex justify-content-start">...</div>
 <div class="d-flex justify-content-end">...</div>
 <div class="d-flex justify-content-center">...</div>
 <div class="d-flex justify-content-between">...</div>
 <div class="d-flex justify-content-around">...</div>
 <div class="d-flex justify-content-evenly">...</div>
-{{< /highlight >}}
+```
 
 Адаптивные варианты также существуют для `justify-content`.
 
@@ -169,13 +169,13 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-items-start">...</div>
 <div class="d-flex align-items-end">...</div>
 <div class="d-flex align-items-center">...</div>
 <div class="d-flex align-items-baseline">...</div>
 <div class="d-flex align-items-stretch">...</div>
-{{< /highlight >}}
+```
 
 Адаптивные варианты также существуют для `align-items`.
 
@@ -223,13 +223,13 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="align-self-start">Выровненный Флекс элемент</div>
 <div class="align-self-end">Выровненный Флекс элемент</div>
 <div class="align-self-center">Выровненный Флекс элемент</div>
 <div class="align-self-baseline">Выровненный Флекс элемент</div>
 <div class="align-self-stretch">Выровненный Флекс элемент</div>
-{{< /highlight >}}
+```
 
 Адаптивные варианты также существуют для `align-self`.
 
@@ -355,11 +355,11 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex flex-nowrap">
   ...
 </div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex flex-wrap bd-highlight">
@@ -381,11 +381,11 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex flex-wrap">
   ...
 </div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex flex-wrap-reverse bd-highlight">
@@ -407,11 +407,11 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex flex-wrap-reverse">
   ...
 </div>
-{{< /highlight >}}
+```
 
 
 Адаптивные варианты также существуют для `flex-wrap`.
@@ -488,11 +488,11 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-start flex-wrap">
   ...
 </div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -514,9 +514,9 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-end flex-wrap">...</div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -538,9 +538,9 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-center flex-wrap">...</div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -562,9 +562,9 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-between flex-wrap">...</div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -586,9 +586,9 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-around flex-wrap">...</div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -610,9 +610,9 @@ Flexbox может делать довольно удивительные вещ
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-content-stretch flex-wrap">...</div>
-{{< /highlight >}}
+```
 
 Адаптивные варианты также существуют для `align-content`.
 

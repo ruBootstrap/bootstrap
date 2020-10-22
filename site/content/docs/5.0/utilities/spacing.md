@@ -47,7 +47,7 @@ toc: true
 
 Вот несколько типичных примеров этих классов:
 
-{{< highlight scss >}}
+```scss
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -64,7 +64,7 @@ toc: true
 .p-3 {
   padding: $spacer !important;
 }
-{{< /highlight >}}
+```
 
 ### Горизонтальное центрирование
 
@@ -76,11 +76,11 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="mx-auto" style="width: 200px;">
   Центрированный элемент
 </div>
-{{< /highlight >}}
+```
 
 ### Отрицательное поле
 
@@ -88,8 +88,8 @@ toc: true
 
 Синтаксис почти такой же, как у утилит с положительным значением поля по умолчанию, но с добавлением `n` перед запрошенным размером. Вот пример класса, противоположного `.mt-1`:
 
-{{< highlight scss >}}
+```scss
 .mt-n1 {
   margin-top: -0.25rem !important;
 }
-{{< /highlight >}}
+```

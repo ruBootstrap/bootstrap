@@ -12,7 +12,7 @@ toc: true
 
 <!-- ПРИМЕЧАНИЕ. Эта информация намеренно дублируется в README. Скопируйте все сделанные здесь изменения и в README, но не забудьте добавить папку `dist`. -->
 
-{{< highlight text >}}
+```text
 bootstrap/
 ├── css/
 │   ├── bootstrap-grid.css
@@ -44,7 +44,7 @@ bootstrap/
     ├── bootstrap.js.map
     ├── bootstrap.min.js
     └── bootstrap.min.js.map
-{{< /highlight >}}
+```
 
 Это самая простая форма Bootstrap: предварительно скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минифицированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js`) и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
 
@@ -139,7 +139,7 @@ Bootstrap включает несколько вариантов для вклю
 
 Загрузка исходного кода Bootstrap включает предварительно скомпилированные ресурсы CSS и JavaScript, а также исходный код Sass, JavaScript и документацию. В частности, он включает в себя следующее и многое другое:
 
-{{< highlight text >}}
+```text
 bootstrap/
 ├── dist/
 │   ├── css/
@@ -151,6 +151,6 @@ bootstrap/
 │              └── examples/
 ├── js/
 └── scss/
-{{< /highlight >}}
+```
 
 `scss/` и `js/` являются исходным кодом для наших CSS и JavaScript. Папка `dist/` включает все, что указано в предварительно скомпилированном разделе загрузки выше. В папке `site/docs/` находится исходный код нашей документации и использование Bootstrap в папке `examples/`. Кроме того, любой другой включенный файл обеспечивает поддержку пакетов, информацию о лицензии и разработку.

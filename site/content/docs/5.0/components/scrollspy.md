@@ -63,7 +63,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
   <a class="navbar-brand" href="#">Панель навигации</a>
   <ul class="nav nav-pills">
@@ -96,7 +96,7 @@ toc: true
   <h4 id="three">три</h4>
   <p>...</p>
 </div>
-{{< /highlight >}}
+```
 
 ## Пример с вложенной навигацией
 
@@ -143,7 +143,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <nav id="navbar-example3" class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Панель навигации</a>
   <nav class="nav nav-pills flex-column">
@@ -177,7 +177,7 @@ toc: true
   <h5 id="item-3-2">Элемент 3-2</h5>
   <p>...</p>
 </div>
-{{< /highlight >}}
+```
 
 ## Пример со списком-группой
 
@@ -208,7 +208,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div id="list-example" class="list-group">
   <a class="list-group-item list-group-item-action" href="#list-item-1">Элемент 1</a>
   <a class="list-group-item list-group-item-action" href="#list-item-2">Элемент 2</a>
@@ -225,7 +225,7 @@ toc: true
   <h4 id="list-item-4">Элемент 4</h4>
   <p>...</p>
 </div>
-{{< /highlight >}}
+```
 
 
 ## Использование
@@ -234,13 +234,13 @@ toc: true
 
 Чтобы легко добавить поведение прокрутки к Вашей навигации на верхней панели, добавьте `data-spy="scroll"` к элементу, за которым Вы хотите следить (чаще всего это `<body>`). Затем добавьте атрибут `data-target` с идентификатором или классом родительского элемента любого компонента Bootstrap `.nav`.
 
-{{< highlight css >}}
+```css
 body {
   position: relative;
 }
-{{< /highlight >}}
+```
 
-{{< highlight html >}}
+```html
 <body data-spy="scroll" data-target="#navbar-example">
   ...
   <div id="navbar-example">
@@ -250,17 +250,17 @@ body {
   </div>
   ...
 </body>
-{{< /highlight >}}
+```
 
 ### Через JavaScript
 
 После добавления `position: relative;` в Ваш CSS вызовите scrollspy через JavaScript:
 
-{{< highlight js >}}
+```js
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
   target: '#navbar-example'
 })
-{{< /highlight >}}
+```
 
 {{< callout danger >}}
 #### Требуются разрешаемые цели Идентификатора
@@ -280,13 +280,13 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 
 При использовании отслеживания прокрутки в сочетании с добавлением или удалением элементов из DOM Вам необходимо вызвать метод обновления следующим образом:
 
-{{< highlight js >}}
+```js
 var dataSpyList = [].slice.call(document.querySelectorAll('[data-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
   bootstrap.ScrollSpy.getInstance(dataSpyEl)
     .refresh()
 })
-{{< /highlight >}}
+```
 
 #### dispose
 
@@ -296,10 +296,10 @@ dataSpyList.forEach(function (dataSpyEl) {
 
 *Статический* метод, позволяющий получить экземпляр отслеживание прокрутки, связанный с элементом DOM.
 
-{{< highlight js >}}
+```js
 var scrollSpyContentEl = document.getElementById('content')
 var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
-{{< /highlight >}}
+```
 
 ### Параметры
 
@@ -353,9 +353,9 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var firstScrollSpyEl = document.querySelector('[data-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

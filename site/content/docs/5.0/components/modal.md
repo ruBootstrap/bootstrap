@@ -17,14 +17,14 @@ toc: true
 - Еще раз, из-за `position: fixed` есть некоторые предостережения при использовании модальных окон на мобильных устройствах. [См. нашу документацию по поддержке браузеров]({{< docsref "/getting-started/browsers-devices#модальные-окна-и-выпадающие-списки-на-мобильных-устройствах" >}}) для получения дополнительной информации.
 - Из-за того, как HTML5 определяет свою семантику, [атрибут HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) не действует в Bootstrap. модальные окна. Чтобы добиться того же эффекта, используйте собственный JavaScript:
 
-{{< highlight js >}}
+```js
 var myModal = document.getElementById('myModal')
 var myInput = document.getElementById('myInput')
 
 myModal.addEventListener('shown.bs.modal', function () {
   myInput.focus()
 })
-{{< /highlight >}}
+```
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -58,7 +58,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -76,7 +76,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     </div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Живая демонстрация
 
@@ -106,7 +106,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Кнопка-триггер модального окна -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Запустите демо модального окна
@@ -130,7 +130,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     </div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Статический фон
 
@@ -160,7 +160,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Кнопка-триггер модального окна -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
   Запустить модальное окно со статическим фоном
@@ -184,7 +184,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     </div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 
 ### Прокрутка длинного контента
@@ -275,12 +275,12 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Прокручиваемое модальное окно -->
 <div class="modal-dialog modal-dialog-scrollable">
   ...
 </div>
-{{< /highlight >}}
+```
 
 ### Центрование по вертикали
 
@@ -335,7 +335,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Вертикально центрированное модальное окно -->
 <div class="modal-dialog modal-dialog-centered">
   ...
@@ -345,7 +345,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
   ...
 </div>
-{{< /highlight >}}
+```
 
 ### Всплывающие подсказки и всплывающие окна
 
@@ -379,7 +379,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="modal-body">
   <h5>Всплывающие окна в модальном окне</h5>
   <p>Эта <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="В этом атрибуте задается содержимое тела всплывающего окна.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
@@ -387,7 +387,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   <h5>Всплывающие подсказки в модальном окне</h5>
   <p><a href="#" class="tooltip-test" title="Tooltip">Эта ссылка</a> и <a href="#" class="tooltip-test" title="Tooltip">эта ссылка</a> имеют всплывающие подсказки при наведении курсора.</p>
 </div>
-{{< /highlight >}}
+```
 
 ### Использование сетки
 
@@ -442,7 +442,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </button>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="modal-body">
   <div class="container-fluid">
     <div class="row">
@@ -471,7 +471,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     </div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Изменяющееся модальное содержимое
 
@@ -512,7 +512,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 {{< /example >}}
 
-{{< highlight js >}}
+```js
 var exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', function (event) {
   // Кнопка, запускающая модальное окно
@@ -529,7 +529,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   modalTitle.textContent = 'Новое сообщение для ' + recipient
   modalBodyInput.value = recipient
 })
-{{< /highlight >}}
+```
 
 ### Изменение анимации
 
@@ -541,11 +541,11 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 Для модальных окон, которые просто появляются, а не исчезают при просмотре, удалите класс `.fade` из Вашей модальной разметки.
 
-{{< highlight html >}}
+```html
 <div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
   ...
 </div>
-{{< /highlight >}}
+```
 
 ### Динамические высоты
 
@@ -603,11 +603,11 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalSm">Маленькое модальное окно</button>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="modal-dialog modal-xl">...</div>
 <div class="modal-dialog modal-lg">...</div>
 <div class="modal-dialog modal-sm">...</div>
-{{< /highlight >}}
+```
 
 <div class="modal fade" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -699,12 +699,12 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenXxl">Полноэкранный меньше xxl</button>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Полноэкранное модальное окно -->
 <div class="modal-dialog modal-fullscreen-sm-down">
   ...
 </div>
-{{< /highlight >}}
+```
 
 <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
@@ -833,17 +833,17 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 Активируйте модальное окно без написания JavaScript. Установите `data-toggle =" modal "` на элементе контроллера, таком как кнопка, вместе с `data-target =" # foo "` или `href =" # foo "`, чтобы настроить таргетинг на конкретный модальный элемент для переключения.
 
-{{< highlight html >}}
+```html
 <button type="button" data-toggle="modal" data-target="#myModal">Запустить модальное окно</button>
-{{< /highlight >}}
+```
 
 ### Через JavaScript
 
 Создайте модальное окно с одной строкой JavaScript:
 
-{{< highlight js >}}
+```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
-{{< /highlight >}}
+```
 
 ### Параметры
 
@@ -896,50 +896,60 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 Активирует Ваш контент как модальное окно. Принимает необязательные параметры `object`.
 
-{{< highlight js >}}
+```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
   keyboard: false
 })
-{{< /highlight >}}
+```
 
 #### toggle
 
 Вручную переключает модальное окно. **Возврат к вызывающей стороне до того, как модальное окно было фактически показано или скрыто** (т.е. до того, как произойдет событие `shown.bs.modal` или` hidden.bs.modal`).
 
-{{< highlight js >}}myModal.toggle(){{< /highlight >}}
+```js
+myModal.toggle()
+```
 
 #### show
 
 Открывает модальное окно вручную. **Возврат к вызывающей стороне до фактического отображения модального окна** (т.е. до того, как произойдет событие `shown.bs.modal`).
 
-{{< highlight js >}}myModal.show(){{< /highlight >}}
+```js
+myModal.show()
+```
 
 #### hide
 
 Скрывает модальное окно вручную. **Возврат к вызывающей стороне до того, как модальное окно было фактически скрыто** (т.е. до того, как произойдет событие `hidden.bs.modal`).
 
-{{< highlight js >}}myModal.hide(){{< /highlight >}}
+```js
+myModal.hide()
+```
 
 #### handleUpdate
 
 Вручную скорректируйте положение модального окна, если высота модального окна изменяется, пока он открыт (то есть в случае появления полосы прокрутки).
 
-{{< highlight js >}}myModal.handleUpdate(){{< /highlight >}}
+```js
+myModal.handleUpdate()
+```
 
 #### dispose
 
 Уничтожает элемент модальное окно. (Удаляет сохраненные данные в элементе DOM)
 
-{{< highlight js >}}myModal.dispose(){{< /highlight >}}
+```js
+myModal.dispose()
+```
 
 #### getInstance
 
 *Статический* метод, позволяющий получить модальный экземпляр, связанный с элементом DOM.
 
-{{< highlight js >}}
+```js
 var myModalEl = document.getElementById('myModal')
 var modal = bootstrap.Modal.getInstance(myModalEl) // Возвращает экземпляр Bootstrap modal
-{{< /highlight >}}
+```
 
 ### События
 
@@ -976,9 +986,9 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Возвращает эк�
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myModalEl = document.getElementById('myModal')
 myModalEl.addEventListener('hidden.bs.modal', function (e) {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

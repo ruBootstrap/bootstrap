@@ -59,13 +59,13 @@ toc: true
 
 Эта переменная CSS позволяет легко изменять соотношение сторон между контрольными точками. Следующее - 4x3 для начала, но меняется на настраиваемый 2x1 в средней контрольной точке.
 
-{{< highlight scss >}}
+```scss
 .ratio-4x3 {
   @include media-breakpoint-up(md) {
     --aspect-ratio: 50%; // 2x1
   }
 }
-{{< /highlight >}}
+```
 
 {{< example class="bd-example-ratios bd-example-ratios-breakpoint" >}}
 <div class="ratio ratio-4x3">

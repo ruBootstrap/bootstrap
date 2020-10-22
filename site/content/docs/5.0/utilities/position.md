@@ -10,13 +10,13 @@ toc: true
 
 Доступны классы быстрого позиционирования, но они не реагируют.
 
-{{< highlight html >}}
+```html
 <div class="position-static">...</div>
 <div class="position-relative">...</div>
 <div class="position-absolute">...</div>
 <div class="position-fixed">...</div>
 <div class="position-sticky">...</div>
-{{< /highlight >}}
+```
 
 ## Расстановка элементов
 
@@ -98,4 +98,3 @@ toc: true
   <button type="button" class="position-absolute top-0 left-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
 {{< /example >}}
-

@@ -134,7 +134,7 @@ toc: true
   </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table">
   <thead>
     ...
@@ -153,7 +153,7 @@ toc: true
     </tr>
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <table class="table table-dark">
@@ -187,7 +187,7 @@ toc: true
   </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-dark">
   <thead>
     ...
@@ -206,7 +206,7 @@ toc: true
     </tr>
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 ## Как работают варианты и акцентированные таблицы?
 
@@ -289,7 +289,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-sm table-dark">
   <div class="table-responsive">
     <table class="table align-middle">
@@ -315,7 +315,7 @@ toc: true
     </table>
   </div>
 </table>
-{{< /highlight >}}
+```
 
 ## Вложенность
 
@@ -378,7 +378,7 @@ toc: true
 </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-striped">
   <thead>
     ...
@@ -395,7 +395,7 @@ toc: true
     ...
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 ## Как работает вложение
 
@@ -442,7 +442,7 @@ toc: true
 </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table">
   <thead class="table-light">
     ...
@@ -451,7 +451,7 @@ toc: true
     ...
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
 <table class="table">
@@ -486,7 +486,7 @@ toc: true
 </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table">
   <thead class="table-dark">
     ...
@@ -495,7 +495,7 @@ toc: true
     ...
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 
 ### Нижний колонтитул таблицы
@@ -541,7 +541,7 @@ toc: true
 </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table">
   <thead>
     ...
@@ -553,7 +553,7 @@ toc: true
     ...
   </tfoot>
 </table>
-{{< /highlight >}}
+```
 
 ### Заголовки
 
@@ -566,7 +566,7 @@ toc: true
   </table>
 </div>
 
-{{< highlight html >}}
+```html
 <table class="table table-sm">
   <caption>Список пользователей</caption>
   <thead>
@@ -576,7 +576,7 @@ toc: true
     ...
   </tbody>
 </table>
-{{< /highlight >}}
+```
 
 Вы также можете поместить `<caption>` в верхнюю часть таблицы с помощью `.caption-top`.
 
@@ -687,13 +687,13 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="table-responsive">
   <table class="table">
     ...
   </table>
 </div>
-{{< /highlight >}}
+```
 
 ### Специфическая контрольная точка
 

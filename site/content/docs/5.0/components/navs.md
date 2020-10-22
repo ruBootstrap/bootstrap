@@ -337,7 +337,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
@@ -354,7 +354,7 @@ toc: true
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
-{{< /highlight >}}
+```
 
 Чтобы помочь Вам удовлетворить Ваши потребности, это работает с разметкой на основе `<ul>`, как показано выше, или с любой произвольной разметкой "сверните свою". Обратите внимание, что если Вы используете `<nav>`, Вам не следует добавлять `role="tablist"` непосредственно к нему, так как это переопределит собственную роль элемента как ориентира навигации. Вместо этого переключитесь на альтернативный элемент (в примере ниже простой `<div>`) и оберните его в `<nav>`.
 
@@ -379,7 +379,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Главная</a>
@@ -392,7 +392,7 @@ toc: true
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
 </div>
-{{< /highlight >}}
+```
 
 Плагин вкладок также работает с таблетками.
 
@@ -421,7 +421,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Главная</a>
@@ -438,7 +438,7 @@ toc: true
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
 </div>
-{{< /highlight >}}
+```
 
 И с вертикальными таблетками.
 
@@ -467,7 +467,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="d-flex align-items-start">
   <div class="nav flex-column nav-pills mr-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</a>
@@ -482,13 +482,13 @@ toc: true
     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Использование атрибутов данных
 
 Вы можете активировать навигацию по вкладкам или таблеткам без написания кода JavaScript, просто указав для элемента `data-toggle="tab"` или `data-toggle="pill"`. Используйте эти атрибуты данных в `.nav-tabs` или `.nav-pills`.
 
-{{< highlight html >}}
+```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
@@ -512,13 +512,13 @@ toc: true
   <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
   <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
 </div>
-{{< /highlight >}}
+```
 
 ### Через JavaScript
 
 Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
 
-{{< highlight js >}}
+```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
@@ -528,30 +528,30 @@ triggerTabList.forEach(function (triggerEl) {
     tabTrigger.show()
   })
 })
-{{< /highlight >}}
+```
 
 Вы можете активировать отдельные вкладки несколькими способами:
 
-{{< highlight js >}}
+```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
 bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
 
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
-{{< /highlight >}}
+```
 
 ### Эффект затухания
 
 Чтобы вкладки постепенно появлялись, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
 
-{{< highlight html >}}
+```html
 <div class="tab-content">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
   <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
   <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
 </div>
-{{< /highlight >}}
+```
 
 ### Методы
 
@@ -563,7 +563,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 Активирует элемент вкладки и контейнер содержимого. Вкладка должна иметь либо `data-target`, либо `href`, нацеленный на узел контейнера в DOM.
 
-{{< highlight html >}}
+```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
@@ -592,18 +592,18 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
   firstTab.show()
 </script>
-{{< /highlight >}}
+```
 
 #### show
 
 Выбирает данную вкладку и показывает связанную с ней панель. Любая другая вкладка, которая была выбрана ранее, становится невыделенной, а связанная с ней панель скрывается. **Возврат к вызывающему абоненту до того, как панель вкладок будет отображена** (то есть до того, как произойдет событие `shown.bs.tab`).
 
-{{< highlight js >}}
+```js
   var someTabTriggerEl = document.querySelector('#someTabTrigger')
   var tab = new bootstrap.Tab(someTabTriggerEl)
 
   tab.show()
-{{< /highlight >}}
+```
 
 #### dispose
 
@@ -613,10 +613,10 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 *Статический* метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.
 
-{{< highlight js >}}
+```js
 var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
-{{< /highlight >}}
+```
 
 ### События
 
@@ -656,10 +656,10 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var tabEl = document.querySelector('a[data-toggle="tab"]')
 tabEl.addEventListener('shown.bs.tab', function (e) {
   e.target // недавно активированная вкладка
   e.relatedTarget // предыдущая активная вкладка
 })
-{{< /highlight >}}
+```

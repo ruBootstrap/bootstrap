@@ -22,11 +22,11 @@ group: utilities
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="overflow-auto">...</div>
 <div class="overflow-hidden">...</div>
 <div class="overflow-visible">...</div>
 <div class="overflow-scroll">...</div>
-{{< /highlight >}}
+```
 
 Используя переменные Sass, Вы можете настроить утилиты переполнения, изменив переменную `$overflows` в `_variables.scss`.

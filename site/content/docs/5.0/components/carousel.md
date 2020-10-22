@@ -263,10 +263,10 @@ toc: true
 
 Вызов карусели вручную с помощью:
 
-{{< highlight js >}}
+```js
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel)
-{{< /highlight >}}
+```
 
 ### Параметры
 
@@ -330,13 +330,13 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 Вы можете создать экземпляр карусели с помощью конструктора карусели, например, для инициализации с дополнительными параметрами и начала циклического перебора элементов:
 
-{{< highlight js >}}
+```js
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 2000,
   wrap: false
 })
-{{< /highlight >}}
+```
 
 <table class="table">
   <thead>
@@ -411,13 +411,13 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myCarousel = document.getElementById('myCarousel')
 
 myCarousel.addEventListener('slide.bs.carousel', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```
 
 ### Изменить продолжительность перехода
 

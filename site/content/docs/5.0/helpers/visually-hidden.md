@@ -13,7 +13,7 @@ aliases: "/docs/5.0/helpers/screen-readers/"
 <a class="visually-hidden-focusable" href="#content">Перейти к основному содержанию</a>
 {{< /example >}}
 
-{{< highlight scss >}}
+```scss
 // Использование в качестве миксина
 
 .visually-hidden-title {
@@ -23,4 +23,4 @@ aliases: "/docs/5.0/helpers/screen-readers/"
 .skip-navigation {
   @include visually-hidden-focusable;
 }
-{{< /highlight >}}
+```

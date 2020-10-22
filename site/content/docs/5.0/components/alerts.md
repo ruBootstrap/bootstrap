@@ -80,18 +80,18 @@ toc: true
 
 Включите отклонение уведомления через JavaScript:
 
-{{< highlight js >}}
+```js
 var alertList = document.querySelectorAll('.alert')
 alertList.forEach(function (alert) {
   new bootstrap.Alert(alert)
 })
-{{< /highlight >}}
+```
 
 Или с атрибутами `data` на кнопке **в пределах уведомления**, как показано выше:
 
-{{< highlight html >}}
+``` html
 <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
-{{< /highlight >}}
+```
 
 Обратите внимание, что закрытие уведомления приведет к его удалению из DOM.
 
@@ -99,10 +99,10 @@ alertList.forEach(function (alert) {
 
 Вы можете создать экземпляр оповещения с помощью конструктора оповещений, например:
 
-{{< highlight js >}}
+```js
 var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
-{{< /highlight >}}
+```
 
 Это заставляет предупреждение прослушивать события клика на дочерних элементах, которые имеют атрибут `data-dismiss="alert"`. (Не требуется при использовании автоматической инициализации data-api.)
 
@@ -141,11 +141,11 @@ var bsAlert = new bootstrap.Alert(myAlert)
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var alertNode = document.querySelector('.alert')
 var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
-{{< /highlight >}}
+```
 
 ### События
 
@@ -174,11 +174,11 @@ alert.close()
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myAlert = document.getElementById('myAlert')
 myAlert.addEventListener('closed.bs.alert', function () {
   // сделать что-нибудь, например, явно переместить фокус на наиболее подходящий элемент,
   // чтобы он не терялся/не сбрасывался на начало страницы
   // document.getElementById('...').focus()
 })
-{{< /highlight >}}
+```

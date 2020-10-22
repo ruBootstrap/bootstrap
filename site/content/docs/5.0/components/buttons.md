@@ -129,10 +129,10 @@ Bootstrap включает несколько предопределенных �
 
 Вы можете создать экземпляр кнопки с помощью конструктора кнопки, например:
 
-{{< highlight js >}}
+```js
 var button = document.getElementById('myButton')
 var bsButton = new bootstrap.Button(button)
-{{< /highlight >}}
+```
 
 <table class="table">
   <thead>
@@ -163,10 +163,10 @@ var bsButton = new bootstrap.Button(button)
 
 Например, чтобы переключить все кнопки
 
-{{< highlight js >}}
+```js
 var buttons = document.querySelectorAll('.btn')
 buttons.forEach(function (button) {
   var button = new bootstrap.Button(button)
   button.toggle()
 })
-{{< /highlight >}}
+```

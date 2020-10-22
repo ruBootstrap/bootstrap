@@ -30,12 +30,12 @@ toc: true
 
 Один из способов инициализировать все всплывающие подсказки на странице - это выбрать их по их атрибуту `data-toggle`:
 
-{{< highlight js >}}
+```js
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-{{< /highlight >}}
+```
 
 ## Примеры
 
@@ -58,7 +58,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Подсказка вверху">
   Подсказка вверху
 </button>
@@ -71,15 +71,15 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Подсказка слева">
   Подсказка слева
 </button>
-{{< /highlight >}}
+```
 
 И с добавленным пользовательским HTML:
 
-{{< highlight html >}}
+```html
 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">
   Всплывающая подсказка с HTML
 </button>
-{{< /highlight >}}
+```
 
 С SVG:
 
@@ -98,22 +98,22 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 Запуск всплывающей подсказки через JavaScript:
 
-{{< highlight js >}}
+```js
 var exampleEl = document.getElementById('example')
 var tooltip = new bootstrap.Tooltip(exampleEl, options)
-{{< /highlight >}}
+```
 
 {{< callout warning >}}
 ##### Переполнение `auto` и `scroll`
 
 Положение всплывающей подсказки пытается автоматически измениться, когда родительский контейнер имеет `overflow: auto` или `overflow: scroll`, как наш `.table-responsive`, но по-прежнему сохраняет исходное расположение размещения. Чтобы решить эту проблему, установите для параметра `boundary` значение, отличное от значения по умолчанию, `'scrollParent'`, например, `'window'`:
 
-{{< highlight js >}}
+```js
 var exampleEl = document.getElementById('example')
 var tooltip = new bootstrap.Tooltip(exampleEl, {
   boundary: 'window'
 })
-{{< /highlight >}}
+```
 {{< /callout >}}
 
 ### Разметка
@@ -126,7 +126,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 Вы должны добавлять всплывающие подсказки только к HTML-элементам, которые традиционно ориентированы на клавиатуру и являются интерактивными (например, ссылки или элементы управления формы). Хотя произвольные элементы HTML (такие как `<span>`) можно сделать доступными для фокусировки, добавив атрибут `tabindex="0"`, это добавит потенциально раздражающие и сбивающие с толку позиции табуляции на неинтерактивных элементах для пользователей клавиатуры, и большинство Вспомогательные технологии в настоящее время не объявляют всплывающую подсказку в этой ситуации. Кроме того, не полагайтесь исключительно на `hover` в качестве триггера для Вашей всплывающей подсказки, так как это сделает невозможным запуск ваших всплывающих подсказок для пользователей клавиатуры.
 {{< /callout >}}
 
-{{< highlight html >}}
+```html
 <!-- HTML для записи -->
 <a href="#" data-toggle="tooltip" title="Текст всплывающей подсказки!">Наведите на меня</a>
 
@@ -137,7 +137,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
     Текст всплывающей подсказки!
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Отключенные элементы
 
@@ -314,58 +314,74 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 Показывает всплывающую подсказку элемента. **Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически показана** (то есть до того, как произойдет событие `shown.bs.tooltip`). Это считается "ручным" запуском всплывающей подсказки. Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.
 
-{{< highlight js >}}tooltip.show(){{< /highlight >}}
+```js
+tooltip.show()
+```
 
 #### hide
 
 Скрывает всплывающую подсказку элемента. **Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически скрыта** (т.е. до того, как произойдет событие `hidden.bs.tooltip`). Это считается "ручным" запуском всплывающей подсказки.
 
-{{< highlight js >}}tooltip.hide(){{< /highlight >}}
+```js
+tooltip.hide()
+```
 
 #### toggle
 
 Переключает всплывающую подсказку элемента. **Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически показана или скрыта** (то есть до того, как произойдет событие `shown.bs.tooltip` или` hidden.bs.tooltip`). Это считается "ручным" запуском всплывающей подсказки.
 
-{{< highlight js >}}tooltip.toggle(){{< /highlight >}}
+```js
+tooltip.toggle()
+```
 
 #### dispose
 
 Скрывает и уничтожает всплывающую подсказку элемента (Удаляет сохраненные данные в элементе DOM). Всплывающие подсказки, использующие делегирование (которые создаются с использованием [параметра `selector`](#параметры)), не могут быть уничтожены индивидуально для дочерних элементов триггера.
 
-{{< highlight js >}}tooltip.dispose(){{< /highlight >}}
+```js
+tooltip.dispose()
+```
 
 #### enable
 
 Дает возможность отображения всплывающей подсказки элемента. **Подсказки включены по умолчанию.**
 
-{{< highlight js >}}tooltip.enable(){{< /highlight >}}
+```js
+tooltip.enable()
+```
 
 #### disable
 
 Убирает возможность отображения всплывающей подсказки элемента. Всплывающая подсказка будет отображаться, только если она будет повторно включена.
 
-{{< highlight js >}}tooltip.disable(){{< /highlight >}}
+```js
+tooltip.disable()
+```
 
 #### toggleEnabled
 
 Переключает возможность отображения или скрытия всплывающей подсказки элемента.
 
-{{< highlight js >}}tooltip.toggleEnabled(){{< /highlight >}}
+```js
+tooltip.toggleEnabled()
+```
 
 #### update
 
 Обновляет положение всплывающей подсказки элемента.
 
-{{< highlight js >}}tooltip.update(){{< /highlight >}}
+```js
+tooltip.update()
+```
 
 #### getInstance
 
 *Статический* метод, позволяющий получить экземпляр всплывающей подсказки, связанный с элементом DOM.
 
-{{< highlight js >}}
+```js
 var exampleTriggerEl = document.getElementById('example')
 var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
-{{< /highlight >}}
+```
 
 ### События
 
@@ -400,7 +416,7 @@ var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Boots
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myTooltipEl = document.getElementById('myTooltip')
 var tooltip = new bootstrap.Tooltip(myTooltipEl)
 
@@ -409,4 +425,4 @@ myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
 })
 
 tooltip.hide()
-{{< /highlight >}}
+```

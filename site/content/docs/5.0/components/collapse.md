@@ -149,12 +149,12 @@ toc: true
 
 Включить вручную с помощью:
 
-{{< highlight js >}}
+```js
 var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
 var collapseList = collapseElementList.map(function (collapseEl) {
   return new bootstrap.Collapse(collapseEl)
 })
-{{< /highlight >}}
+```
 
 ### Параметры
 
@@ -195,12 +195,12 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 Вы можете создать экземпляр сворачивания с помощью конструктора, например:
 
-{{< highlight js >}}
+```js
 var myCollapse = document.getElementById('myCollapse')
 var bsCollapse = new bootstrap.Collapse(myCollapse, {
   toggle: false
 })
-{{< /highlight >}}
+```
 
 <table class="table">
   <thead>
@@ -264,9 +264,9 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myCollapsible = document.getElementById('myCollapsible')
 myCollapsible.addEventListener('hidden.bs.collapse', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

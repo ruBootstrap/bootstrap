@@ -288,7 +288,7 @@ toc: true
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
@@ -307,14 +307,14 @@ toc: true
     </div>
   </div>
 </div>
-{{< /highlight >}}
+```
 
 ### Использование атрибутов данных
 
 Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
 
 <div role="tabpanel">
-{{< highlight html >}}
+```html
 <!-- Группа списка -->
 <div class="list-group" id="myList" role="tablist">
   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
@@ -330,14 +330,14 @@ toc: true
   <div class="tab-pane" id="messages" role="tabpanel">...</div>
   <div class="tab-pane" id="settings" role="tabpanel">...</div>
 </div>
-{{< /highlight >}}
+```
 </div>
 
 ### Через JavaScript
 
 Включите элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):
 
-{{< highlight js >}}
+```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
@@ -347,30 +347,30 @@ triggerTabList.forEach(function (triggerEl) {
     tabTrigger.show()
   })
 })
-{{< /highlight >}}
+```
 
 Вы можете активировать отдельный элемент списка несколькими способами:
 
-{{< highlight js >}}
+```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
 bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
 
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
-{{< /highlight >}}
+```
 
 ### Эффект затухания
 
 Чтобы панель вкладок постепенно увеличивалась, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
 
-{{< highlight html >}}
+```html
 <div class="tab-content">
   <div class="tab-pane fade show active" id="home" role="tabpanel">...</div>
   <div class="tab-pane fade" id="profile" role="tabpanel">...</div>
   <div class="tab-pane fade" id="messages" role="tabpanel">...</div>
   <div class="tab-pane fade" id="settings" role="tabpanel">...</div>
 </div>
-{{< /highlight >}}
+```
 
 ### Методы
 
@@ -378,7 +378,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-target` либо `href`, нацеленный на узел контейнера в DOM.
 
-{{< highlight html >}}
+```html
 <div class="list-group" id="myList" role="tablist">
   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
   <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
@@ -399,18 +399,18 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
   firstTab.show()
 </script>
-{{< /highlight >}}
+```
 
 #### show
 
 Выбирает указанный элемент списка и показывает связанную с ним панель. Любой другой элемент списка, который был ранее выбран, становится невыделенным, а связанная с ним панель скрывается. **Возврат к вызывающему абоненту до того, как панель вкладок будет отображена** (например, до того, как произойдет событие `shown.bs.tab`).
 
-{{< highlight js >}}
+```js
   var someListItemEl = document.querySelector('#someListItem')
   var tab = new bootstrap.Tab(someListItemEl)
 
   tab.show()
-{{< /highlight >}}
+```
 
 #### dispose
 
@@ -420,10 +420,10 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 *Статический* метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.
 
-{{< highlight js >}}
+```js
 var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
-{{< /highlight >}}
+```
 
 ### События
 
@@ -463,10 +463,10 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var tabEl = document.querySelector('a[data-toggle="list"]')
 tabEl.addEventListener('shown.bs.tab', function (e) {
   e.target // недавно активированная вкладка
   e.relatedTarget // предыдущая активная вкладка
 })
-{{< /highlight >}}
+```

@@ -13,12 +13,12 @@ group: utilities
 
 При необходимости используйте `.visible` или `.invisible`.
 
-{{< highlight html >}}
+```html
 <div class="visible">...</div>
 <div class="invisible">...</div>
-{{< /highlight >}}
+```
 
-{{< highlight scss >}}
+```scss
 // Класс
 .visible {
   visibility: visible !important;
@@ -26,4 +26,4 @@ group: utilities
 .invisible {
   visibility: hidden !important;
 }
-{{< /highlight >}}
+```

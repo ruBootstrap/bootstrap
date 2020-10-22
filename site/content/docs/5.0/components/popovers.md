@@ -31,22 +31,22 @@ toc: true
 
 Один из способов инициализировать все всплывающие окна на странице - выбрать их по атрибуту `data-toggle`:
 
-{{< highlight js >}}
+```js
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
-{{< /highlight >}}
+```
 
 ## Пример: Использование опции `container`
 
 Если у Вас есть стили родительского элемента, которые мешают отображению всплывающего окна, Вы захотите указать собственный `container`, чтобы HTML всплывающего окна отображался внутри этого элемента.
 
-{{< highlight js >}}
+```js
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
   container: 'body'
 })
-{{< /highlight >}}
+```
 
 ## Пример
 
@@ -75,7 +75,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение вверху
 </button>
@@ -92,7 +92,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение слева
 </button>
-{{< /highlight >}}
+```
 
 ### Отклонить при следующем нажатии
 
@@ -108,11 +108,11 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Отклоняемое всплывающее окно" data-content="А вот и потрясающий контент. Это очень интересно. Правильно?">Отклоняемое всплывающее окно</a>
 {{< /example >}}
 
-{{< highlight js >}}
+```js
 var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
   trigger: 'focus'
 })
-{{< /highlight >}}
+```
 
 ### Отключенные элементы
 
@@ -130,10 +130,10 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 Включить всплывающие окна через JavaScript:
 
-{{< highlight js >}}
+```js
 var exampleEl = document.getElementById('example')
 var popover = new bootstrap.Popover(exampleEl, options)
-{{< /highlight >}}
+```
 
 {{< callout warning >}}
 
@@ -307,58 +307,74 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 Показывает всплывающее окно элемента. **Возврат к вызывающей стороне до того, как всплывающее окно было показано** (то есть до того, как произойдет событие `shown.bs.popover`). Это считается "ручным" запуском всплывающего окна. Всплывающие окна, заголовок и содержимое которых имеют нулевую длину, никогда не отображаются.
 
-{{< highlight js >}}myPopover.show(){{< /highlight >}}
+```js
+myPopover.show()
+```
 
 #### hide
 
 Скрывает всплывающее окно элемента. **Возврат к вызывающей стороне до того, как всплывающее окно было фактически скрыто** (т.е. до того, как произойдет событие `hidden.bs.popover`). Это считается "ручным" запуском всплывающего окна.
 
-{{< highlight js >}}myPopover.hide(){{< /highlight >}}
+```js
+myPopover.hide()
+```
 
 #### toggle
 
 Переключает всплывающее окно элемента (Удаляет сохраненные данные в элементе DOM). **Возврат к вызывающей стороне до того, как всплывающее окно было фактически показано или скрыто** (то есть до того, как произойдет событие `shown.bs.popover` или `hidden.bs.popover`). Это считается "ручным" запуском всплывающего окна.
 
-{{< highlight js >}}myPopover.toggle(){{< /highlight >}}
+```js
+myPopover.toggle()
+```
 
 #### dispose
 
 Скрывает и уничтожает всплывающее окно элемента. Всплывающие окна, использующие делегирование (которые создаются с использованием [параметр `selector`](#options)), не могут быть уничтожены индивидуально для дочерних элементов триггера.
 
-{{< highlight js >}}myPopover.dispose(){{< /highlight >}}
+```js
+myPopover.dispose()
+```
 
 #### enable
 
 Дает возможность отображения всплывающего окна элемента. **По умолчанию всплывающие окна включены.**
 
-{{< highlight js >}}myPopover.enable(){{< /highlight >}}
+```js
+myPopover.enable()
+```
 
 #### disable
 
 Удаляет возможность отображения всплывающего окна элемента. Всплывающее окно будет отображаться, только если оно будет повторно включено.
 
-{{< highlight js >}}myPopover.disable(){{< /highlight >}}
+```js
+myPopover.disable()
+```
 
 #### toggleEnabled
 
 Переключает возможность отображения или скрытия всплывающего окна элемента.
 
-{{< highlight js >}}myPopover.toggleEnabled(){{< /highlight >}}
+```js
+myPopover.toggleEnabled()
+```
 
 #### update
 
 Обновляет позицию всплывающего окна элемента.
 
-{{< highlight js >}}myPopover.update(){{< /highlight >}}
+```js
+myPopover.update()
+```
 
 #### getInstance
 
 *Статический* метод, который позволяет Вам получить экземпляр всплывающего окна, связанный с элементом DOM
 
-{{< highlight js >}}
+```js
 var exampleTriggerEl = document.getElementById('example')
 var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Возвращает экземпляр всплывающего окна Bootstrap
-{{< /highlight >}}
+```
 
 ### События
 
@@ -393,9 +409,9 @@ var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Возвращ�
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myPopoverTrigger = document.getElementById('myPopover')
 myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

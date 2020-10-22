@@ -122,7 +122,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Example single danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -136,7 +136,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 ### Отдельная кнопка
 
@@ -225,7 +225,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Example split danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Действие</button>
@@ -240,7 +240,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 ## Размеры
 
@@ -274,7 +274,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Группы больших кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -295,7 +295,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     ...
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 <div class="bd-example">
   <div class="btn-group">
@@ -325,7 +325,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Маленькая кнопка
@@ -428,7 +428,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Кнопка выпадающего меню по умолчанию -->
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -451,7 +451,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <!-- Ссылки выпадающего меню -->
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 ### Вправо
 
@@ -487,7 +487,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Кнопка выпадающего списка вправо по умолчанию -->
 <div class="btn-group dropright">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -510,7 +510,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <!-- Ссылки выпадающего меню -->
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 ### Влево
 
@@ -548,7 +548,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
 </div>
 
-{{< highlight html >}}
+```html
 <!-- Кнопка выпадающего списка влево по умолчанию -->
 <div class="btn-group dropleft">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -573,7 +573,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     Раздельный выпадающий список влево
   </button>
 </div>
-{{< /highlight >}}
+```
 
 ## Элементы меню
 
@@ -824,7 +824,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 Добавьте `data-toggle="dropdown"` к ссылке или кнопке, чтобы переключить выпадающий список.
 
-{{< highlight html >}}
+```html
 <div class="dropdown">
   <button id="dLabel" type="button" data-toggle="dropdown" aria-expanded="false">
     Триггер выпадающего списка
@@ -833,18 +833,18 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     ...
   </ul>
 </div>
-{{< /highlight >}}
+```
 
 ### Через JavaScript
 
 Вызов выпадающих списков через JavaScript:
 
-{{< highlight js >}}
+```js
 var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
 var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
   return new bootstrap.Dropdown(dropdownToggleEl)
 })
-{{< /highlight >}}
+```
 
 {{< callout info >}}
 ##### `data-toggle="dropdown"` по-прежнему требуется
@@ -1008,9 +1008,9 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myDropdown = document.getElementById('myDropdown')
 myDropdown.addEventListener('show.bs.dropdown', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

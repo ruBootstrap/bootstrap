@@ -216,11 +216,11 @@ toc: true
 
 По мере изменения отображаемого содержимого не забудьте обновить [таймаут `delay`](#параметры), чтобы у людей было достаточно времени, чтобы прочитать тост.
 
-{{< highlight html >}}
+```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
-{{< /highlight >}}
+```
 
 При использовании `autohide: false` Вы должны добавить кнопку закрытия, чтобы пользователи могли закрыть всплывающее сообщение.
 
@@ -244,12 +244,12 @@ toc: true
 
 Инициализировать тосты через JavaScript:
 
-{{< highlight js >}}
+```js
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
 var toastList = toastElList.map(function (toastEl) {
   return new bootstrap.Toast(toastEl, option)
 })
-{{< /highlight >}}
+```
 
 ### Параметры
 
@@ -299,19 +299,25 @@ var toastList = toastElList.map(function (toastEl) {
 Показывает тост элемента. **Возврат к вызывающей стороне до того, как тост был фактически показан** (то есть до того, как произойдет событие `shown.bs.toast`).
 Вы должны вручную вызвать этот метод, вместо этого Ваш тост не будет отображаться.
 
-{{< highlight js >}}toast.show(){{< /highlight >}}
+```js
+toast.show()
+```
 
 #### hide
 
 Скрывает тост элемента. **Возврат к вызывающей стороне до того, как тост был фактически скрыт** (т.е. до того, как произойдет событие `hidden.bs.toast`). Вы должны вызвать этот метод вручную, если Вы сделали для `autohide` значение `false`.
 
-{{< highlight js >}}toast.hide(){{< /highlight >}}
+```js
+toast.hide()
+```
 
 #### dispose
 
 Скрывает тост элемента. Ваш тост останется в DOM, но больше не будет отображаться.
 
-{{< highlight js >}}toast.dispose(){{< /highlight >}}
+```js
+toast.dispose()
+```
 
 ### События
 
@@ -342,9 +348,9 @@ var toastList = toastElList.map(function (toastEl) {
   </tbody>
 </table>
 
-{{< highlight js >}}
+```js
 var myToastEl = document.getElementById('myToast')
 myToastEl.addEventListener('hidden.bs.toast', function () {
   // сделайте что-нибудь...
 })
-{{< /highlight >}}
+```

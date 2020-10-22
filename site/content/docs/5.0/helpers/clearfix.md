@@ -10,9 +10,9 @@ aliases: "/docs/5.0/helpers/"
 
 Использование в HTML:
 
-{{< highlight html >}}
+```html
 <div class="clearfix">...</div>
-{{< /highlight >}}
+```
 
 Исходный код миксина:
 
@@ -20,11 +20,11 @@ aliases: "/docs/5.0/helpers/"
 
 Используйте миксин в SCSS:
 
-{{< highlight scss >}}
+```scss
 .element {
   @include clearfix;
 }
-{{< /highlight >}}
+```
 
 В следующем примере показано, как можно использовать clearfix. Без clearfix обертывающий div не будет охватывать кнопки, что приведет к нарушению макета.
 
