@@ -24,14 +24,31 @@ JavaScript в Bootstrap включает все компоненты в наши
 ```js
 // Импортируйте только то, что нам нужно
 
-// Если Вы импортируете всплывающие подсказки или всплывающие окна, обязательно включите зависимость Popper.js
-// import "../../node_modules/popper.js/dist/popper.min.js";
-
-import "../../node_modules/bootstrap/js/dist/util.js";
-import "../../node_modules/bootstrap/js/dist/modal.js";
+// import 'bootstrap/js/dist/alert';
+// import 'bootstrap/js/dist/button';
+// import 'bootstrap/js/dist/carousel';
+// import 'bootstrap/js/dist/collapse';
+// import 'bootstrap/js/dist/dropdown';
+import 'bootstrap/js/dist/modal';
+// import 'bootstrap/js/dist/popover';
+// import 'bootstrap/js/dist/scrollspy';
+// import 'bootstrap/js/dist/tab';
+// import 'bootstrap/js/dist/toast';
+// import 'bootstrap/js/dist/tooltip';
 ```
 
-Таким образом, Вы не включаете JavaScript, который не собираетесь использовать для таких компонентов, как кнопки, карусели и всплывающие подсказки.
+Таким образом, Вы не включаете JavaScript, который не собираетесь использовать для таких компонентов, как кнопки, карусели и всплывающие подсказки. Если Вы импортируете раскрывающиеся списки, всплывающие подсказки или всплывающие окна, обязательно укажите зависимость Popper.js в Вашем файле `package.json`.
+
+{{< callout info >}}
+### Экспорт по умолчанию
+
+Файлы в `bootstrap/js/dist` используют **экспорт по умолчанию**, поэтому, если Вы хотите использовать один из них, Вам нужно сделать следующее:
+
+```js
+import Modal from 'bootstrap/js/dist/modal'
+const modal = new Modal(document.getElementById('myModal'))
+```
+{{< /callout >}}
 
 ## Автопрефикс .browserslistrc
 
