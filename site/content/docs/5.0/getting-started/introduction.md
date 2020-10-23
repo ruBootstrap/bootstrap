@@ -19,7 +19,7 @@ toc: true
 Скопируйте и вставьте таблицу стилей `<link>` в Ваш `<head>` перед всеми остальными таблицами стилей, чтобы загрузить наш CSS.
 
 ```html
-<link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+<link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 ```
 
 ### Скрипты
@@ -66,7 +66,7 @@ toc: true
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
+    <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 
     <title>Привет мир!</title>
   </head>
