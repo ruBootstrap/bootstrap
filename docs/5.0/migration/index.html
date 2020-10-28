@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
-<link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -284,9 +284,9 @@
             <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded"  title="Управление формой" >Form control</a></li>
             <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded"  title="Элемент выбора" >Select</a></li>
             <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded"  title="Переключатели и флажки" >Checks &amp; radios</a></li>
-            <li><a href="/docs/5.0/forms/file/" class="d-inline-flex align-items-center rounded"  title="Выбор файла" >Range</a></li>
             <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded"  title="Диапазон" >Range</a></li>
             <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded"  title="Группа полей ввода" >Input group</a></li>
+            <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded"  title="Плавающие метки" >Floating labels</a></li>
             <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded"  title="Макет" >Layout</a></li>
             <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded"  title="Валидация" >Validation</a></li>
         </ul>
@@ -311,7 +311,7 @@
             <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded"  title="Выпадающие списки" >Dropdowns</a></li>
             <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded"  title="Группы списков" >List group</a></li>
             <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded"  title="Модальное окно" >Modal</a></li>
-            <li><a href="/docs/5.0/components/navs/" class="d-inline-flex align-items-center rounded"  title="Навигация" >Navs &amp; tabs</a></li>
+            <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded"  title="Навигация И Вкладки" >Navs &amp; tabs</a></li>
             <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded"  title="Панель навигации" >Navbar</a></li>
             <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded"  title="Пагинация" >Pagination</a></li>
             <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded"  title="Всплывающие окна" >Popovers</a></li>
@@ -427,6 +427,8 @@
       <ul>
         <li><a href="#цвета">Цвета</a></li>
         <li><a href="#reboot">Reboot</a></li>
+        <li><a href="#формы">Формы</a></li>
+        <li><a href="#утилиты">Утилиты</a></li>
       </ul>
     </li>
     <li><a href="#v500-alpha2">v5.0.0-alpha2</a>
@@ -436,7 +438,7 @@
         <li><a href="#макет">Макет</a></li>
         <li><a href="#перезагрузка">Перезагрузка</a></li>
         <li><a href="#цвета-1">Цвета</a></li>
-        <li><a href="#формы">Формы</a></li>
+        <li><a href="#формы-1">Формы</a></li>
         <li><a href="#компоненты">Компоненты</a>
           <ul>
             <li><a href="#значки">Значки</a></li>
@@ -453,7 +455,7 @@
           </ul>
         </li>
         <li><a href="#помощники">Помощники</a></li>
-        <li><a href="#утилиты">Утилиты</a></li>
+        <li><a href="#утилиты-1">Утилиты</a></li>
       </ul>
     </li>
     <li><a href="#v500-alpha1">v5.0.0-alpha1</a>
@@ -465,7 +467,7 @@
         <li><a href="#сетка-и-макет">Сетка и макет</a></li>
         <li><a href="#контент-перезагрузка-и-т-д">Контент, перезагрузка и т. д.</a></li>
         <li><a href="#типография">Типография</a></li>
-        <li><a href="#формы-1">Формы</a></li>
+        <li><a href="#формы-2">Формы</a></li>
         <li><a href="#компоненты-1">Компоненты</a>
           <ul>
             <li><a href="#отключенные-состояния">Отключенные состояния</a></li>
@@ -481,7 +483,9 @@
           </ul>
         </li>
         <li><a href="#доступность">Доступность</a></li>
-        <li><a href="#утилиты-1">Утилиты</a></li>
+        <li><a href="#утилиты-2">Утилиты</a></li>
+        <li><a href="#сетка">Сетка</a></li>
+        <li><a href="#разное">Разное</a></li>
         <li><a href="#документация-1">Документация</a></li>
         <li><a href="#инструменты-сборки">Инструменты сборки</a></li>
       </ul>
@@ -507,6 +511,22 @@
 <ul>
 <li>Представьте <code>$enable-smooth-scroll</code>, который применяет <code>scroll-behavior: smooth</code> глобально, за исключением пользователей, запрашивающих уменьшение движения с помощью медиа-запроса <code>prefers-reduced-motion</code>. <a href="https://github.com/twbs/bootstrap/pull/31877">См. #31877</a></li>
 </ul>
+<h3 id="формы">Формы</h3>
+<ul>
+<li>Давний <a href="https://github.com/twbs/bootstrap/issues/25110">Отсутствующий радиус границы во входной группе с ошибкой обратной связи с проверкой</a> наконец исправлен путем добавления дополнительного класса <code>.has-validation</code> во входные группы с проверкой.</li>
+<li>Перемещен пример с плавающими метками в полностью поддерживаемый компонент формы. <a href="/docs/5.0/forms/floating-labels/">Смотрите новую страницу с плавающими метками.</a></li>
+<li>Выбор файлов теперь используют класс <code>.form-control</code> и не требуют JavaScript, дополнительного HTML или дополнительных классов. <a href="https://github.com/twbs/bootstrap/pull/31955">См. #31955</a>.</li>
+</ul>
+<h3 id="утилиты">Утилиты</h3>
+<ul>
+<li><strong>Текстовые утилиты:</strong>
+<ul>
+<li>Добавлены утилиты <code>.fs-*</code> для утилит <code>font-size</code> (с включенным RFS). Они используют тот же масштаб, что и заголовки HTML по умолчанию (1-6, от большого к маленькому), и могут быть изменены с помощью карты Sass.</li>
+<li>Утилиты <code>.font-weight-*</code> переименованы в <code>.fw-*</code> для краткости и единообразия.</li>
+<li>Утилиты <code>.font-style-*</code> переименованы в <code>.fst-*</code> для краткости и единообразия.</li>
+</ul>
+</li>
+</ul>
 <h2 id="v500-alpha2">v5.0.0-alpha2</h2>
 <h3 id="sass">Sass</h3>
 <ul>
@@ -516,6 +536,7 @@
 </ul>
 <h3 id="документация">Документация</h3>
 <ul>
+<li>Страница &ldquo;Navs&rdquo; переименована в &ldquo;Navs &amp; Tabs&rdquo;.</li>
 <li>Вспомогательная страница &ldquo;Screen readers&rdquo; переименована в &ldquo;Visually hidden&rdquo;, а имя файла <code>visually-hidden</code>.</li>
 <li>Страница &ldquo;Checks&rdquo; переименована в &ldquo;Checks &amp; radios&rdquo;, а имя файла на <code>checks-radios</code>.</li>
 <li>Улучшена документация групп кнопок проверки/включения радио.</li>
@@ -539,7 +560,7 @@
 <li>Улучшен цвет <code>$green</code> (и его псевдонима темы <code>$success</code>) для достижения нового минимального цветового контраста (переход от <code>#28a745</code> к <code>#198754</code>).</li>
 <li>Улучшен цвет <code>$cyan</code> (и его псевдонима темы <code>$info</code>) чтобы он стал более ярким (переход от <code>#17a2b8</code> к <code>#0dcaf0</code>).</li>
 </ul>
-<h3 id="формы">Формы</h3>
+<h3 id="формы-1">Формы</h3>
 <ul>
 <li><a href="https://github.com/twbs/bootstrap/pull/31383">#31383</a>: Размер флажков и радио изменен на <code>1em</code> вместо <code>1.25em</code>, чтобы они лучше масштабировались с помощью настраиваемого символа <code>$font-size-base</code> и многое другое.</li>
 </ul>
@@ -616,7 +637,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="утилиты">Утилиты</h3>
+<h3 id="утилиты-1">Утилиты</h3>
 <ul>
 <li><a href="https://github.com/twbs/bootstrap/pull/31280">#31280</a>: Добавлены новые <a href="/docs/5.0/utilities/position/#arrange-elements">утилиты расположения</a> для <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>. Значения для каждого свойства включают <code>0</code>, <code>50%</code> и <code>100%</code>.
 <ul>
@@ -626,6 +647,9 @@
 </li>
 <li><a href="https://github.com/twbs/bootstrap/pull/31484">#31484</a>: Добавлена новая <a href="/docs/5.0/utilities/borders/#border-width">утилита <code>border-width</code></a>.</li>
 <li><a href="https://github.com/twbs/bootstrap/pull/31473">#31473</a>: Утилита <code>.d-none</code> была перемещена в наш CSS, чтобы придать ей больший вес по сравнению с другими утилитами отображения.</li>
+<li><code>.text-monospace</code> переименовано в <code>.font-monospace</code>.</li>
+<li>Удален <code>.text-hide</code>, поскольку это устаревший метод скрытия текста, который больше не следует использовать.</li>
+<li>Новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. Смотреть <a href="/docs/5.0/utilities/text/#высота-линии">здесь</a>.</li>
 </ul>
 <hr>
 <h2 id="v500-alpha1">v5.0.0-alpha1</h2>
@@ -727,7 +751,7 @@
 <li>Добавлены два новых стиля заголовков <code>.display-*</code>, <code>.display-5</code> и <code>.display-6</code>.</li>
 <li>Изменены размеры существующих отображаемых заголовков для более единообразного набора <code>font-size</code>.</li>
 </ul>
-<h3 id="формы-1">Формы</h3>
+<h3 id="формы-2">Формы</h3>
 <ul>
 <li>Переставлена документация формы в отдельный раздел верхнего уровня.
 <ul>
@@ -754,7 +778,7 @@
 <ul>
 <li>Реорганизована разметка <code>.form-file</code> для устранения некоторых визуальных ошибок, при этом разрешен перевод и изменение текста кнопок через HTML вместо CSS.</li>
 <li>Полностью исключены собственные компоненты <code>.form-control-file</code> и <code>.form-control-range</code>.</li>
-<li><code>.custom-file</code> переименован в <code>.form-file</code> (включая переменные).</li>
+<li><code>.custom-file</code> переименован в <code>.form-file</code> (включая переменные). <strong>Будьте осторожны:</strong> <code>.form-file</code> был позже удален в <code>v5.0.0-alpha3</code>, теперь Вы можете использовать <code>.form-control</code>.</li>
 <li>Добавлена поддержка стилей <code>:focus</code> и <code>:disabled</code>.</li>
 </ul>
 </li>
@@ -818,14 +842,14 @@
 <ul>
 <li>В отличие от старого <code>.sr-only-focusable</code>, который работал только в сочетании с <code>.sr-only</code>, <code>.sr-only-focusable</code> можно использовать как отдельный класс без <code>.sr-only</code>. <a href="https://github.com/twbs/bootstrap/pull/28720">См. #28720</a>.</li>
 </ul>
-<h3 id="утилиты-1">Утилиты</h3>
+<h3 id="утилиты-2">Утилиты</h3>
+<h3 id="сетка">Сетка</h3>
 <ul>
-<li><code>.text-monospace</code> переименовано в <code>.font-monospace</code></li>
 <li>Уменьшено количество реагирующих утилит заказов на контрольную точку. Утилита высшего порядка с номером теперь <code>.order-5</code> вместо <code>.order-12</code>. <a href="https://github.com/twbs/bootstrap/pull/28874">См. #28874</a>.</li>
-<li>Новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. См. <a href="/docs/5.0/utilities/text/#высота-линии">здесь</a>.</li>
+</ul>
+<h3 id="разное">Разное</h3>
+<ul>
 <li>Добавлен <code>.bg-body</code> для быстрой установки фона <code>&lt;body&gt;</code> для дополнительных элементов.</li>
-<li>Удалено <code>.text-hide</code>, так как это устаревший метод скрытия текста, который больше не следует использовать.</li>
-<li>Разделение служебных программ на служебные классы и помощники по значениям свойств.</li>
 <li>Утилиты с отрицательной маржей по умолчанию отключены. Вы можете снова включить их, установив <code>$enable-negative-margins: true</code>, но имейте в виду, что это может значительно увеличить размер файла.</li>
 </ul>
 <h3 id="документация-1">Документация</h3>

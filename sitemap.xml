@@ -142,7 +142,7 @@
     <loc>https://getbootstrap.su/docs/5.0/components/modal/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/components/navs/</loc>
+    <loc>https://getbootstrap.su/docs/5.0/components/navs-tabs/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/overview/</loc>
@@ -175,6 +175,9 @@
     <loc>https://getbootstrap.su/docs/5.0/migration/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/forms/floating-labels/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/extend/approach/</loc>
   </url>
   <url>
@@ -197,9 +200,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/checkout/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/floating-labels/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/product/</loc>
@@ -281,9 +281,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/layout/utilities/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/forms/file/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/checks-radios/</loc>

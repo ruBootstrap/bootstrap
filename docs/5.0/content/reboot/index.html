@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
-<link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -284,9 +284,9 @@
             <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded"  title="Управление формой" >Form control</a></li>
             <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded"  title="Элемент выбора" >Select</a></li>
             <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded"  title="Переключатели и флажки" >Checks &amp; radios</a></li>
-            <li><a href="/docs/5.0/forms/file/" class="d-inline-flex align-items-center rounded"  title="Выбор файла" >Range</a></li>
             <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded"  title="Диапазон" >Range</a></li>
             <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded"  title="Группа полей ввода" >Input group</a></li>
+            <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded"  title="Плавающие метки" >Floating labels</a></li>
             <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded"  title="Макет" >Layout</a></li>
             <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded"  title="Валидация" >Validation</a></li>
         </ul>
@@ -311,7 +311,7 @@
             <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded"  title="Выпадающие списки" >Dropdowns</a></li>
             <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded"  title="Группы списков" >List group</a></li>
             <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded"  title="Модальное окно" >Modal</a></li>
-            <li><a href="/docs/5.0/components/navs/" class="d-inline-flex align-items-center rounded"  title="Навигация" >Navs &amp; tabs</a></li>
+            <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded"  title="Навигация И Вкладки" >Navs &amp; tabs</a></li>
             <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded"  title="Панель навигации" >Navbar</a></li>
             <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded"  title="Пагинация" >Pagination</a></li>
             <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded"  title="Всплывающие окна" >Popovers</a></li>
@@ -495,7 +495,8 @@
   <span class="no">sans-serif</span><span class="o">,</span>
   <span class="c1">// Emoji шрифты</span>
   <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="nv">!default</span><span class="p">;</span>
-</code></pre></div><p><code>font-family</code> применяется к <code>&lt;body&gt;</code> и автоматически наследуется глобально через Bootstrap. Чтобы переключить глобально <code>font-family</code>, обновите <code>$font-family-base</code> и перекомпилируйте Bootstrap.</p>
+</code></pre></div><p>Обратите внимание: поскольку стек шрифтов включает шрифты эмодзи, многие распространенные символы Unicode символов/дингбатов будут отображаться как разноцветные пиктограммы. Их внешний вид будет варьироваться в зависимости от стиля, используемого в собственном шрифте emoji браузера/платформы, и на них не будут влиять никакие <code>color</code> стили CSS.</p>
+<p><code>font-family</code> применяется к <code>&lt;body&gt;</code> и автоматически наследуется глобально через Bootstrap. Чтобы переключить глобально <code>font-family</code>, обновите <code>$font-family-base</code> и перекомпилируйте Bootstrap.</p>
 <h2 id="заголовки-и-абзацы">Заголовки и абзацы</h2>
 <p>Все элементы заголовка - например, <code>&lt;h1&gt;</code> и <code>&lt;p&gt;</code> сбрасываются, чтобы удалить их <code>margin-top</code>. В заголовки добавлены <code>margin-bottom: .5rem</code> и параграфы <code>margin-bottom: 1rem</code> для удобного размещения.</p>
 <table class="table">

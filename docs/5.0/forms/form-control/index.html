@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
-<link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -284,9 +284,9 @@
             <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded active" aria-current="page"  title="Управление формой" >Form control</a></li>
             <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded"  title="Элемент выбора" >Select</a></li>
             <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded"  title="Переключатели и флажки" >Checks &amp; radios</a></li>
-            <li><a href="/docs/5.0/forms/file/" class="d-inline-flex align-items-center rounded"  title="Выбор файла" >Range</a></li>
             <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded"  title="Диапазон" >Range</a></li>
             <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded"  title="Группа полей ввода" >Input group</a></li>
+            <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded"  title="Плавающие метки" >Floating labels</a></li>
             <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded"  title="Макет" >Layout</a></li>
             <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded"  title="Валидация" >Validation</a></li>
         </ul>
@@ -311,7 +311,7 @@
             <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded"  title="Выпадающие списки" >Dropdowns</a></li>
             <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded"  title="Группы списков" >List group</a></li>
             <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded"  title="Модальное окно" >Modal</a></li>
-            <li><a href="/docs/5.0/components/navs/" class="d-inline-flex align-items-center rounded"  title="Навигация" >Navs &amp; tabs</a></li>
+            <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded"  title="Навигация И Вкладки" >Navs &amp; tabs</a></li>
             <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded"  title="Панель навигации" >Navbar</a></li>
             <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded"  title="Пагинация" >Pagination</a></li>
             <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded"  title="Всплывающие окна" >Popovers</a></li>
@@ -428,6 +428,7 @@
     <li><a href="#отключенный">Отключенный</a></li>
     <li><a href="#только-для-чтения">Только для чтения</a></li>
     <li><a href="#обычный-текст-только-для-чтения">Обычный текст только для чтения</a></li>
+    <li><a href="#выбор-файла">Выбор файла</a></li>
     <li><a href="#цвет">Цвет</a></li>
     <li><a href="#списки-данных">Списки данных</a></li>
   </ul>
@@ -531,6 +532,48 @@
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary mb-3&#34;</span><span class="p">&gt;</span>Подтвердить личность<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="выбор-файла">Выбор файла</h2>
+<div class="bd-example">
+<div class="mb-3">
+  <label for="formFile" class="form-label">Пример ввода файла по умолчанию</label>
+  <input class="form-control" type="file" id="formFile">
+</div>
+<div class="mb-3">
+  <label for="formFileMultiple" class="form-label">Пример ввода нескольких файлов</label>
+  <input class="form-control" type="file" id="formFileMultiple" multiple>
+</div>
+<div class="mb-3">
+  <label for="formFileDisabled" class="form-label">Пример отключенного ввода файла</label>
+  <input class="form-control" type="file" id="formFileDisabled" disabled>
+</div>
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Пример небольшого ввода файла</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
+<div>
+  <label for="formFileLg" class="form-label">Пример большого ввода файла</label>
+  <input class="form-control form-control-lg" id="formFileLg" type="file">
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;formFile&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label&#34;</span><span class="p">&gt;</span>Пример ввода файла по умолчанию<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;formFile&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;formFileMultiple&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label&#34;</span><span class="p">&gt;</span>Пример ввода нескольких файлов<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;formFileMultiple&#34;</span> <span class="na">multiple</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;formFileDisabled&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label&#34;</span><span class="p">&gt;</span>Пример отключенного ввода файла<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;formFileDisabled&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;formFileSm&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label&#34;</span><span class="p">&gt;</span>Пример небольшого ввода файла<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control form-control-sm&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;formFileSm&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;formFileLg&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-label&#34;</span><span class="p">&gt;</span>Пример большого ввода файла<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control form-control-lg&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;formFileLg&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="цвет">Цвет</h2>
 <div class="bd-example">
 <label for="exampleColorInput" class="form-label">Палитра цветов</label>
