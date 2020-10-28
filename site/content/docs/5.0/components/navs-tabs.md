@@ -1,8 +1,9 @@
 ---
 layout: docs
-title: Навигация
+title: Навигация и вкладки
 description: Документация и примеры использования включенных навигационных компонентов Bootstrap.
 group: components
+aliases: "/docs/5.0/components/navs/"
 toc: true
 ---
 

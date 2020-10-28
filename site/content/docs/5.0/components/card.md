@@ -296,7 +296,7 @@ toc: true
 
 ## Навигация
 
-Добавьте навигацию в заголовок (или блок) карточки с помощью [компонентов навигации]({{< docsref "/components/navs" >}}) Bootstrap.
+Добавьте навигацию в заголовок (или блок) карточки с помощью [компонентов навигации]({{< docsref "/components/navs-tabs" >}}) Bootstrap.
 
 {{< example >}}
 <div class="card text-center">

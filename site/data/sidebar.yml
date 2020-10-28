@@ -171,8 +171,8 @@
       hint: Модальное окно
       slug: modal
     - title: Navs & tabs
-      hint: Навигация
-      slug: navs
+      hint: Навигация И Вкладки
+      slug: navs-tabs
     - title: Navbar
       hint: Панель навигации
       slug: navbar

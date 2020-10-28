@@ -313,25 +313,25 @@ toc: true
 
 Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
 
-<div role="tabpanel">
 ```html
-<!-- Группа списка -->
-<div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
-</div>
+<div role="tabpanel">
+  <!-- Группа списка -->
+  <div class="list-group" id="myList" role="tablist">
+    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+    <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
+    <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
+    <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+  </div>
 
 <!-- Панели вкладок -->
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  <div div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel">...</div>
+    <div class="tab-pane" id="profile" role="tabpanel">...</div>
+    <div class="tab-pane" id="messages" role="tabpanel">...</div>
+    <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  </div>
 </div>
 ```
-</div>
 
 ### Через JavaScript
 

@@ -33,6 +33,12 @@ toc: true
   <span class="input-group-text">.00</span>
 </div>
 
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Имя пользователя">
+  <span class="input-group-text">@</span>
+  <input type="text" class="form-control" placeholder="Сервер">
+</div>
+
 <div class="input-group">
   <span class="input-group-text">С текстовым полем</span>
   <textarea class="form-control" aria-label="С текстовым полем"></textarea>
