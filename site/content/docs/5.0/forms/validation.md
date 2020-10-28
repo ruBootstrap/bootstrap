@@ -241,7 +241,6 @@ extra_js:
 - `<input>` и `<textarea>` с `.form-control` (включая `.form-control` в группе ввода)
 - `<select>` с `.form-select`
 - `.form-check`
-- `.form-file`
 
 {{< example >}}
 <form class="was-validated">
@@ -279,12 +278,8 @@ extra_js:
     <div class="invalid-feedback">Пример обратной связи неверного выбора </div>
   </div>
 
-  <div class="form-file mb-3">
-    <input type="file" class="form-file-input" id="validationFormFile" required>
-    <label class="form-file-label" for="validationFormFile">
-      <span class="form-file-text">Выберите файл...</span>
-      <span class="form-file-button">Обзор</span>
-    </label>
+  <div class="mb-3">
+    <input type="file" class="form-control" aria-label="file example" required>
     <div class="invalid-feedback">Пример обратной связи неверной формы выбора файла</div>
   </div>
 

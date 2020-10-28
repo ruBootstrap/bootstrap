@@ -116,14 +116,14 @@
       hint: Переключатели и флажки
       slug: checks-radios
     - title: Range
-      hint: Выбор файла
-      slug: file
-    - title: Range
       hint: Диапазон
       slug: range
     - title: Input group
       hint: Группа полей ввода
       slug: input-group
+    - title: Floating labels
+      hint: Плавающие метки
+      slug: floating-labels
     - title: Layout
       hint: Макет
       slug: layout
