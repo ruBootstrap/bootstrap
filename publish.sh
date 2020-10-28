@@ -2,13 +2,6 @@ docs="_gh_pages"
 ghPagesBranch="gh-pages"
 site="getbootstrap.su"
 
-!/bin/sh
-if [ "`git status -s`" ]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
-    exit 1;
-fi
-
 echo "Deleting old publication"
 rm -rf $docs
 mkdir $docs
@@ -22,6 +15,7 @@ echo "Removing existing files"
 rm -rf $docs/*
 
 echo "Generating site"
+# npm run docs-build
 hugo
 
 echo "Updating gh-pages branch"
