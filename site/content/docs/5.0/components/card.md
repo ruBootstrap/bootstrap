@@ -422,7 +422,7 @@ toc: true
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="card{{ if (eq .name "info") }} text-body{{ else if not (or (eq .name "light") (eq .name "warning") (eq .name "info")) }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
+<div class="card{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Шапка</div>
   <div class="card-body">
     <h5 class="card-title">{{ .name | title }} Заголовок карточки</h5>
@@ -446,7 +446,7 @@ toc: true
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Шапка</div>
-  <div class="card-body{{ if not (or (eq .name "light") (eq .name "warning") (eq .name "info")) }} text-{{ .name }}{{ end }}">
+  <div class="card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">
     <h5 class="card-title">{{ .name | title }} Заголовок карточки</h5>
     <p class="card-text">Несколько быстрых примеров текста для построения на основе Заголовок карточки и составления основной части содержимого карточки.</p>
   </div>

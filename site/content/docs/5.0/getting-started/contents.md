@@ -65,8 +65,8 @@ Bootstrap включает несколько вариантов для вклю
   <tbody>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap.css</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap.min.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.min.css</code></div>
       </th>
       <td><span class="badge bg-success">Включено</span></td>
       <td><span class="badge bg-success">Включено</span></td>
@@ -75,8 +75,8 @@ Bootstrap включает несколько вариантов для вклю
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap-grid.css</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap-grid.min.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-grid.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-grid.min.css</code></div>
       </th>
       <td><a class="link-secondary" href="{{< docsref "/layout/grid" >}}">Только сеточная система</a></td>
       <td class="text-muted">&mdash;</td>
@@ -85,8 +85,8 @@ Bootstrap включает несколько вариантов для вклю
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap-utilities.css</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap-utilities.min.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-utilities.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-utilities.min.css</code></div>
       </th>
       <td class="text-muted">&mdash;</td>
       <td class="text-muted">&mdash;</td>
@@ -95,8 +95,8 @@ Bootstrap включает несколько вариантов для вклю
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.css</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.min.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-reboot.css</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap-reboot.min.css</code></div>
       </th>
       <td class="text-muted">&mdash;</td>
       <td><a class="link-secondary" href="{{< docsref "/content/reboot" >}}">Только Перезагрузка</a></td>
@@ -120,15 +120,15 @@ Bootstrap включает несколько вариантов для вклю
   <tbody>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.js</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.min.js</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.bundle.js</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.bundle.min.js</code></div>
       </th>
       <td><span class="badge bg-success">Включено</span></td>
     </tr>
     <tr>
       <th scope="row">
-        <div><code class="font-weight-normal text-nowrap">bootstrap.js</code></div>
-        <div><code class="font-weight-normal text-nowrap">bootstrap.min.js</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.js</code></div>
+        <div><code class="fw-normal text-nowrap">bootstrap.min.js</code></div>
       </th>
       <td class="text-muted">&mdash;</td>
     </tr>

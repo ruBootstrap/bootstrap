@@ -43,7 +43,7 @@ toc: true
 <span class="border border-white"></span>
 {{< /example >}}
 
-### Ширина границы
+## Ширина границы
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -58,22 +58,22 @@ toc: true
 Добавьте классы к элементу, чтобы легко скруглить его углы.
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-right" title="Example right rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-left" title="Example left rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" >}}
-{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
-{{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image (overrides rounding applied elsewhere)" >}}
+{{< placeholder width="75" height="75" class="rounded" title="Пример закругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-top" title="Пример закругленного изображения сверху" >}}
+{{< placeholder width="75" height="75" class="rounded-right" title="Пример закругленного изображения справа" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom" title="Пример закругленного изображения снизу" >}}
+{{< placeholder width="75" height="75" class="rounded-left" title="Пример закругленного изображения слева" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Полностью круглое изображение" >}}
+{{< placeholder width="150" height="75" class="rounded-pill" title="Закругленное изображение таблетки" >}}
 {{< /example >}}
 
+### Размеры
 
-## Размеры
-
-Используйте `.rounded-lg` или `.rounded-sm` для большего или меньшего радиуса границы.
+Используйте классы масштабирования для больших или меньших закругленных углов. Размеры варьируются от `0` до `3` и могут быть настроены путем изменения API утилит.
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-sm" title="Example small rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-lg" title="Example large rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-0" title="Пример изображения без закруглений" >}}
+{{< placeholder width="75" height="75" class="rounded-1" title="Пример маленького закругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-2" title="Пример закругленного изображения по умолчанию" >}}
+{{< placeholder width="75" height="75" class="rounded-3" title="Пример большого закругленного изображения" >}}
 {{< /example >}}
