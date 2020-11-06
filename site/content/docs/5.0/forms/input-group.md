@@ -34,9 +34,9 @@ toc: true
 </div>
 
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Имя пользователя">
+  <input type="text" class="form-control" placeholder="Имя пользователя"  aria-label="Имя пользователя">
   <span class="input-group-text">@</span>
-  <input type="text" class="form-control" placeholder="Сервер">
+  <input type="text" class="form-control" placeholder="Сервер" aria-label="Сервер">
 </div>
 
 <div class="input-group">
@@ -289,22 +289,22 @@ toc: true
 
 {{< example >}}
 <div class="input-group mb-3">
-  <span class="input-group-text" id="inputGroupFileAddon01">Загрузка</span>
-  <input type="file" class="form-control" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+  <label class="input-group-text" for="inputGroupFile01">Загрузка</label>
+  <input type="file" class="form-control" id="inputGroupFile01">
 </div>
 
 <div class="input-group mb-3">
-  <input type="file" class="form-control" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
-  <span class="input-group-text" id="inputGroupFileAddon02">Загрузка</span>
+  <input type="file" class="form-control" id="inputGroupFile02">
+  <label class="input-group-text" for="inputGroupFile02">Загрузка</label>
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Кнопка</button>
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03" aria-label="Загрузка">Кнопка</button>
   <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
 </div>
 
 <div class="input-group">
-  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Загрузка">
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Кнопка</button>
 </div>
 {{< /example >}}

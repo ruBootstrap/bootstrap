@@ -10,8 +10,6 @@ toc: true
 
 Оберните пару элементов `<input class="form-control">` и `<label>` в `.form-floating`, чтобы включить плавающие метки с полями текстовой формы Bootstrap. `placeholder` требуется для каждого `<input>`, поскольку наш метод плавающих меток только для CSS использует псевдоэлемент `:placeholder-shown`. Также обратите внимание, что `<input>` должен идти первым, чтобы мы могли использовать селектор-брат (например, `~`).
 
-Этот подход работает в новом Microsoft Edge, построенном на Chromium, и постепенно ухудшается в более старых версиях.
-
 {{< example >}}
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
