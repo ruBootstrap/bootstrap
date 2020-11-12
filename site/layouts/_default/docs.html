@@ -18,7 +18,7 @@
         <div class="bd-intro pl-lg-4">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <div class="btn-group">
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo_ru_bootstrap }}/blob/main-ru/site/content/{{ path.Join .Page.File.Path }}" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo_ru_bootstrap }}/blob/main-ru/site/content/{{ path.Join .Page.File.Path | replaceRE `\\` "/" }}" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
               <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.original_url }}{{ .Permalink | relURL }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
             </div>
             <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>

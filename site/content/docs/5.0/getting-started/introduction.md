@@ -28,7 +28,7 @@ toc: true
 
 #### Связка
 
-Включите все необходимое в одном скрипте с нашим пакетом. Наши `bootstrap.bundle.js` и `bootstrap.bundle.min.js` включают [Popper](https://popper.js.org/). Для получения дополнительной информации о том, что входит в Bootstrap, см. наш раздел [содержимое]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}).
+Включите каждый плагин Bootstrap JavaScript и зависимости в один из двух наших пакетов. Наши `bootstrap.bundle.js` и `bootstrap.bundle.min.js` включают [Popper](https://popper.js.org/). Для получения дополнительной информации о том, что входит в Bootstrap, см. наш раздел [содержимое]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}).
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@ toc: true
 
 #### Раздельно
 
-Если Вы решите использовать отдельное решение для сценариев, сначала должен быть Popper.js, а затем наши плагины JavaScript.
+Если Вы решите использовать отдельное решение для сценариев, сначала должен быть Popper.js (если Вы используете всплывающие подсказки или всплывающие окна), а затем наши плагины JavaScript.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
@@ -51,7 +51,21 @@ toc: true
 
 Интересно, какие компоненты явно требуют нашего JavaScript и Popper.js? Кликните на ссылку "Показать компоненты" ниже. Если Вы совсем не уверены в общей структуре страницы, продолжайте читать, чтобы найти образец шаблона страницы.
 
-{{< partial "getting-started/components-requiring-javascript" >}}
+<details>
+<summary class="text-primary mb-3">Показать компоненты, требующие JavaScript</summary>
+{{< markdown >}}
+- Alerts (Уведомления) для отклонения
+- Buttons (Кнопки) для переключения состояний и функционала флажка/радио
+- Carousel (Карусель) для любого поведения слайдов, элементов управления и индикаторов
+- Collapse (Сворачиваемое) для переключения видимости содержимого
+- Dropdowns (Выпадающие списки) для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Modals (Модальные окна) для отображения, позиционирования и прокрутки
+- Navbar (Панель навигации) для расширения нашего плагина Сворачиваемое для реализации адаптивного поведения
+- Toasts (Тосты) для показа и отклонения
+- Tooltips (Всплывающие подсказки) и popovers (всплывающие окна) для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Scrollspy (Отслеживание прокрутки) для поведения прокрутки и обновлений навигации
+{{< /markdown >}}
+</details>
 
 ## Стартовый шаблон
 

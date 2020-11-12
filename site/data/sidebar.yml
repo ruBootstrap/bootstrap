@@ -134,6 +134,9 @@
 - title: Компоненты
   slug: components
   pages:
+    - title: Accordion
+      hint: Аккордеон
+      slug: accordion
     - title: Alerts
       hint: Уведомления
       slug: alerts

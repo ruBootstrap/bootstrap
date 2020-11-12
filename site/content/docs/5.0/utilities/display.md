@@ -25,6 +25,7 @@ toc: true
 - `inline`
 - `inline-block`
 - `block`
+- `grid`
 - `table`
 - `table-cell`
 - `table-row`
@@ -33,7 +34,7 @@ toc: true
 
 Отображаемые значения можно изменить, изменив переменную `$displays` и перекомпилировав SCSS.
 
-Медиа-запросы влияют на ширину экрана с заданной точкой останова *или больше*. Например, `.d-lg-none` устанавливает `display: none;` на экранах `lg`, `xl` и `xxl`.
+Медиа-запросы влияют на ширину экрана с заданной контрольной точкой *или больше*. Например, `.d-lg-none` устанавливает `display: none;` на экранах `lg`, `xl` и `xxl`.
 
 ## Примеры
 
@@ -135,6 +136,7 @@ toc: true
 - `.d-print-inline`
 - `.d-print-inline-block`
 - `.d-print-block`
+- `.d-print-grid`
 - `.d-print-table`
 - `.d-print-table-row`
 - `.d-print-table-cell`

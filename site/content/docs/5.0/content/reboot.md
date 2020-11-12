@@ -45,6 +45,7 @@ $font-family-sans-serif:
   "Helvetica Neue", Arial,
   // Linux
   "Noto Sans",
+  "Liberation Sans",
   // Резервный вариант без засечек
   sans-serif,
   // Emoji шрифты

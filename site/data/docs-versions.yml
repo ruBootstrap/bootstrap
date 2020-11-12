@@ -11,12 +11,12 @@
 
 - group: v5.x
   baseurl: "https://v5.getbootstrap.com/docs"
-  description: "Текущая мажорная версия. Последнее обновление v5.0.0-alpha2."
+  description: "Текущая мажорная версия. Последнее обновление v5.0.0-alpha3."
   versions:
     - v: "5.0"
 
 - group: v5.x [RU]
   baseurl: "https://getbootstrap.su/docs"
-  description: "Текущий основной выпуск. Последнее обновление v5.0.0-alpha2."
+  description: "Текущий основной выпуск. Последнее обновление v5.0.0-alpha3."
   versions:
     - v: "5.0"

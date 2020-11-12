@@ -16,7 +16,7 @@ Bootstrap поддерживает **последние стабильные в�
 
 ```text
 {{< rf.inline >}}
-{{- readFile ".browserslistrc" | htmlEscape -}}
+{{- readFile ".browserslistrc" | chomp | htmlEscape -}}
 {{< /rf.inline >}}
 ```
 
