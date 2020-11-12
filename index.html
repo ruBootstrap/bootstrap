@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -181,10 +181,10 @@
 
         <div class="d-flex flex-column flex-md-row">
           <a href="/docs/5.0/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Начало работы</a>
-          <a href="/docs/5.0/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 5.0.0-alpha2');">Скачать</a>
+          <a href="/docs/5.0/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 5.0.0-alpha3');">Скачать</a>
         </div>
         <p class="text-muted mb-0">
-          В данный момент <strong>v5.0.0-alpha2</strong>
+          В данный момент <strong>v5.0.0-alpha3</strong>
           <span class="px-1">&middot;</span>
           <a href="/docs/versions/" class="link-secondary">Предыдущие релизы</a>
         </p>
@@ -202,8 +202,8 @@
 </svg>
 
       </div>
-      <h2 class="display-5 font-weight-normal">Установка</h2>
-      <p class="lead font-weight-normal">
+      <h2 class="display-5 fw-normal">Установка</h2>
+      <p class="lead fw-normal">
         Установите исходные файлы Sass и JavaScript Bootstrap через npm, Composer или Meteor.
       </p>
       <p>Установка пакетным менеджером, не включают документацию или наши полные скрипты сборки. Вы также можете <a href="https://github.com/twbs/bootstrap-npm-starter">использовать репозиторий шаблонов npm</a>, чтобы быстро создать проект Bootstrap через npm.</p>
@@ -211,7 +211,7 @@
     </div>
     <div class="col-md-7 pl-md-5">
       <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm install bootstrap</code></pre></div>
-      <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">gem install bootstrap -v 5.0.0.alpha2</code></pre></div>
+      <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">gem install bootstrap -v 5.0.0.alpha3</code></pre></div>
     </div>
   </section>
 
@@ -223,8 +223,8 @@
 </svg>
 
       </div>
-      <h2 class="display-5 font-weight-normal">jsDelivr</h2>
-      <p class="lead font-weight-normal">
+      <h2 class="display-5 fw-normal">jsDelivr</h2>
+      <p class="lead fw-normal">
         Когда Вам нужно только включить скомпилированный CSS или JS Bootstrap, Вы можете использовать <a href="https://www.jsdelivr.com/">jsDelivr</a>.
       </p>
       <p>
@@ -234,9 +234,11 @@
     </div>
     <div class="col-md-7 pl-md-5">
       <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- CSS only --&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</code></pre></div>
       <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- JavaScript Bundle with Popper.js --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
     </div>
   </section>
 
@@ -249,8 +251,8 @@
 </svg>
 
       </div>
-      <h2 class="display-5 font-weight-normal">Иконки Bootstrap</h2>
-      <p class="lead font-weight-normal">
+      <h2 class="display-5 fw-normal">Иконки Bootstrap</h2>
+      <p class="lead fw-normal">
         Впервые в истории Bootstrap есть собственная библиотека значков SVG с открытым исходным кодом, предназначенная для наилучшей работы с нашими компонентами и документацией.
       </p>
       <p>
@@ -261,8 +263,8 @@
     <div class="col-md-7 pl-md-5">
         <img class="img-fluid mt-3 mx-auto" srcset="/docs/5.0/assets/img/bootstrap-icons.png,
                                                     /docs/5.0/assets/img/bootstrap-icons@2x.png 2x"
-                                               src="/docs/5.0/assets/img/bootstrap-icons.png"
-                                               alt="Bootstrap Icons" width="700" height="425" loading="lazy">
+                                            src="/docs/5.0/assets/img/bootstrap-icons.png"
+                                            alt="Bootstrap Icons" width="700" height="425" loading="lazy">
     </div>
   </section>
 
@@ -274,8 +276,8 @@
 </svg>
 
       </div>
-      <h2 class="display-5 font-weight-normal">Официальные темы</h2>
-      <p class="lead font-weight-normal">
+      <h2 class="display-5 fw-normal">Официальные темы</h2>
+      <p class="lead fw-normal">
         Поднимите Bootstrap на новый уровень с премиальными темами из <a href="https://themes.getbootstrap.com/">официальной торговой площадки Bootstrap Themes</a>.
       </p>
       <p>
@@ -286,8 +288,8 @@
     <div class="col-md-7 pl-md-5">
         <img class="img-fluid mt-3 mx-auto" srcset="/docs/5.0/assets/img/bootstrap-themes.png,
                                                     /docs/5.0/assets/img/bootstrap-themes@2x.png 2x"
-                                               src="/docs/5.0/assets/img/bootstrap-themes.png"
-                                               alt="Bootstrap Icons" width="700" height="500" loading="lazy">
+                                            src="/docs/5.0/assets/img/bootstrap-themes.png"
+                                            alt="Bootstrap Icons" width="700" height="500" loading="lazy">
     </div>
   </section>
 </div>
@@ -306,12 +308,12 @@
       <li class="d-inline-block ml-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-alpha2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-alpha2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-alpha3. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-alpha3. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
 
 
 

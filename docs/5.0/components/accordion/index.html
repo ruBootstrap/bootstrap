@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Контрольные точки - это триггеры в Bootstrap, которые определяют, как Ваш макет реагирует на изменения в зависимости от устройства или размеров области просмотра.">
+<meta name="description" content="Создавайте вертикально сворачивающиеся аккордеоны в сочетании с нашим JavaScript плагином Collapse.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
 
-<title>Контрольные точки · Bootstrap v5.0</title>
+<title>Аккордеон · Bootstrap v5.0</title>
 
-<link rel="canonical" href="https://getbootstrap.su/docs/5.0/layout/breakpoints/">
+<link rel="canonical" href="https://getbootstrap.su/docs/5.0/components/accordion/">
 
 
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Контрольные точки">
-<meta name="twitter:description" content="Контрольные точки - это триггеры в Bootstrap, которые определяют, как Ваш макет реагирует на изменения в зависимости от устройства или размеров области просмотра.">
+<meta name="twitter:title" content="Аккордеон">
+<meta name="twitter:description" content="Создавайте вертикально сворачивающиеся аккордеоны в сочетании с нашим JavaScript плагином Collapse.">
 <meta name="twitter:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap.su/docs/5.0/layout/breakpoints/">
-<meta property="og:title" content="Контрольные точки">
-<meta property="og:description" content="Контрольные точки - это триггеры в Bootstrap, которые определяют, как Ваш макет реагирует на изменения в зависимости от устройства или размеров области просмотра.">
+<meta property="og:url" content="https://getbootstrap.su/docs/5.0/components/accordion/">
+<meta property="og:title" content="Аккордеон">
+<meta property="og:description" content="Создавайте вертикально сворачивающиеся аккордеоны в сочетании с нашим JavaScript плагином Collapse.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -242,13 +242,13 @@
       </div>
     </li>
 
-    <li class="mb-1 active">
-      <a class="d-inline-flex align-items-center rounded" data-toggle="collapse" href="#layout-collapse" role="button" aria-expanded="true" aria-current="true">
+    <li class="mb-1">
+      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#layout-collapse" role="button" aria-expanded="false">
         Макет
       </a>
-      <div class="collapse show" id="layout-collapse">
+      <div class="collapse" id="layout-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded active" aria-current="page"  title="Контрольные точки" >Breakpoints</a></li>
+            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded"  title="Контрольные точки" >Breakpoints</a></li>
             <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded"  title="Контейнеры" >Containers</a></li>
             <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded"  title="Сетка" >Grid</a></li>
             <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded"  title="Колонки" >Columns</a></li>
@@ -293,13 +293,13 @@
       </div>
     </li>
 
-    <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#components-collapse" role="button" aria-expanded="false">
+    <li class="mb-1 active">
+      <a class="d-inline-flex align-items-center rounded" data-toggle="collapse" href="#components-collapse" role="button" aria-expanded="true" aria-current="true">
         Компоненты
       </a>
-      <div class="collapse" id="components-collapse">
+      <div class="collapse show" id="components-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded"  title="Аккордеон" >Accordion</a></li>
+            <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded active" aria-current="page"  title="Аккордеон" >Accordion</a></li>
             <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded"  title="Уведомления" >Alerts</a></li>
             <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded"  title="Значки" >Badge</a></li>
             <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded"  title="Хлебные крошки" >Breadcrumb</a></li>
@@ -409,12 +409,12 @@
         <div class="bd-intro pl-lg-4">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <div class="btn-group">
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/layout/breakpoints.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
+              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/components/accordion.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://v5.getbootstrap.com/docs/5.0/components/accordion/" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
             </div>
-            <h1 class="bd-title" id="content">Контрольные точки</h1>
+            <h1 class="bd-title" id="content">Аккордеон</h1>
           </div>
-          <p class="bd-lead">Контрольные точки - это триггеры в Bootstrap, которые определяют, как Ваш макет реагирует на изменения в зависимости от устройства или размеров области просмотра.</p>
+          <p class="bd-lead">Создавайте вертикально сворачивающиеся аккордеоны в сочетании с нашим JavaScript плагином Collapse.</p>
         </div>
 
         
@@ -424,16 +424,13 @@
             <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#основные-концепции">Основные концепции</a></li>
-    <li><a href="#доступные-контрольные-точки">Доступные контрольные точки</a></li>
-    <li><a href="#медиа-запросы">Медиа-запросы</a>
+    <li><a href="#как-это-работает">Как это работает</a></li>
+    <li><a href="#пример">Пример</a>
       <ul>
-        <li><a href="#минимальная-ширина">Минимальная ширина</a></li>
-        <li><a href="#максимальная-ширина">Максимальная ширина</a></li>
-        <li><a href="#одиночная-контрольная-точка">Одиночная контрольная точка</a></li>
-        <li><a href="#между-контрольными-точками">Между контрольными точками</a></li>
+        <li><a href="#поток">Поток</a></li>
       </ul>
     </li>
+    <li><a href="#доступность">Доступность</a></li>
   </ul>
 </nav>
           </div>
@@ -442,176 +439,161 @@
         <div class="bd-content pl-lg-4">
           
 
-          <h2 id="основные-концепции">Основные концепции</h2>
-<ul>
-<li>
-<p><strong>Контрольные точки - это строительные блоки адаптивного дизайна.</strong> Используйте их, чтобы контролировать, когда Ваш макет может быть адаптирован для определенного окна просмотра или размера устройства.</p>
-</li>
-<li>
-<p><strong>Используйте медиа-запросы для построения Вашего CSS по контрольной точке.</strong> Медиа-запросы - это функция CSS, которая позволяет Вам условно применять стили на основе набора параметров браузера и операционной системы. Чаще всего мы используем <code>min-width</code> в наших медиа-запросах.</p>
-</li>
-<li>
-<p><strong>Прежде всего мобильные, цель - адаптивный дизайн.</strong> CSS Bootstrap нацелен на применение минимального количества стилей, чтобы макет работал с минимальной контрольной точкой, а затем на слои стилей, чтобы настроить этот дизайн для более крупных устройств. Это оптимизирует Ваш CSS, сокращает время рендеринга и обеспечивает отличный опыт для Ваших посетителей.</p>
-</li>
-</ul>
-<h2 id="доступные-контрольные-точки">Доступные контрольные точки</h2>
-<p>Bootstrap включает шесть контрольных точек по умолчанию, иногда называемых <em>grid tiers</em>, для быстрого построения. Эти контрольные точки можно настроить, если Вы используете наши исходные файлы Sass.</p>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Контрольная точка</th>
-      <th>Описание</th>
-      <th>Инфикс класса</th>
-      <th>Размеры</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>X-Small</td>
-      <td>Очень маленький</td>
-      <td><em>None</em></td>
-      <td>&lt;576px</td>
-    </tr>
-    <tr>
-      <td>Small</td>
-      <td>Маленький</td>
-      <td><code>sm</code></td>
-      <td>&ge;576px</td>
-    </tr>
-    <tr>
-      <td>Medium</td>
-      <td>Средний</td>
-      <td><code>md</code></td>
-      <td>&ge;768px</td>
-    </tr>
-    <tr>
-      <td>Large</td>
-      <td>Большой</td>
-      <td><code>lg</code></td>
-      <td>&ge;992px</td>
-    </tr>
-    <tr>
-      <td>Extra large</td>
-      <td>Очень большой</td>
-      <td><code>xl</code></td>
-      <td>&ge;1200px</td>
-    </tr>
-    <tr>
-      <td>Extra extra large</td>
-      <td>Огромный</td>
-      <td><code>xxl</code></td>
-      <td>&ge;1400px</td>
-    </tr>
-  </tbody>
-</table>
-<p>Каждая контрольная точка была выбрана для удобного размещения контейнеров, ширина которых кратна 12. Контрольные точки также представляют собой подмножество общих размеров устройств и размеров области просмотра - они специально не нацелены на каждый вариант использования или устройство. Напротив, эти линейки обеспечивают прочную и стабильную основу практически для любого устройства.</p>
-<p>Эти контрольные точки настраиваются через Sass - Вы найдете их на карте Sass в нашей таблице стилей <code>_variables.scss</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
-<span class="p">);</span></code></pre></div>
-<p>Для получения дополнительной информации и примеров того, как изменить наши карты и переменные Sass, обратитесь к <a href="/docs/5.0/layout/grid/#sass">разделу Sass документации Grid</a>.</p>
-<h2 id="медиа-запросы">Медиа-запросы</h2>
-<p>Поскольку Bootstrap в первую очередь разработан для мобильных устройств, мы используем несколько <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">медиа-запросов</a> для создания разумных контрольных точек для наших макетов и интерфейсов. Эти контрольные точки в основном основаны на минимальной ширине области просмотра и позволяют масштабировать элементы по мере изменения области просмотра.</p>
-<h3 id="минимальная-ширина">Минимальная ширина</h3>
-<p>Bootstrap в основном использует следующие диапазоны медиа-запросов - или контрольные точки - в наших исходных файлах Sass для нашей разметки, системы сеток и компонентов.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Исходные миксины
-</span><span class="c1"></span>
-<span class="c1">// Нет необходимости в медиа-запросе для контрольной точки xs, так как это эффективно `@media (min-width: 0) { ... }`
-</span><span class="c1"></span><span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">xxl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Применение
-</span><span class="c1"></span>
-<span class="c1">// Пример: Скрыть начало с `min-width: 0`, а затем показать в контрольной точке `sm`
-</span><span class="c1"></span><span class="nc">.custom-class</span> <span class="p">{</span>
-  <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nc">.custom-class</span> <span class="p">{</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">block</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Эти миксины Sass переводятся в наш скомпилированный CSS с использованием значений, объявленных в наших переменных Sass. Например:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Устройства X-Small (портретные телефоны, менее 576 пикселей)
-</span><span class="c1">// Нет медиа-запроса для `xs`, так как это значение по умолчанию в Bootstrap
-</span><span class="c1"></span>
-<span class="c1">// Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства Medium (планшеты, 768 пикселей и выше)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства Large (настольные компьютеры, 992 пикселей и выше)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства XX-Large (большие настольные компьютеры, 1400 пикселей и выше)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</code></pre></div><h3 id="максимальная-ширина">Максимальная ширина</h3>
-<p>Иногда мы используем медиа-запросы, идущие в другом направлении (заданный размер экрана <em>или меньше</em>):</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Для контрольной точки xs не требуется медиа-запрос, поскольку он фактически `@media (max-width: 0) { ... }`
-</span><span class="c1"></span><span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">xxl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Пример: стиль от средней контрольной точки и ниже
-</span><span class="c1"></span><span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nc">.custom-class</span> <span class="p">{</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">block</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Эти миксины берут объявленные контрольной точки, вычитают из них <code>.02px</code> и используют их как наши значения <code>max-width</code>. Например:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Устройства X-Small (портретные телефоны, менее 576 пикселей)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">575</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">767</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства Medium (планшеты, менее 992 пикселей)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">991</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства Large (настольные компьютеры, менее 1200 пикселей)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">1199</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства X-Large (большие настольные компьютеры, менее 1400 пикселей)
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">1399</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-
-<span class="c1">// Устройства XX-Large (большие настольные компьютеры)
-</span><span class="c1">// Нет медиа-запроса, так как контрольная точка xxl не имеет верхней границы ширины
-</span></code></pre></div><div class="bd-callout bd-callout-warning">
-<strong>Зачем вычитать .02px?</strong> В настоящее время браузеры не поддерживают <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">контекстные запросы диапазона</a>, поэтому мы обходим ограничения <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max">префиксы <code>min-</code> и <code>max-</code></a> и области просмотра с дробной шириной (что может происходить при определенных условиях на высоких -dpi устройства, например), используя значения с более высокой точностью.
+          <h2 id="как-это-работает">Как это работает</h2>
+<p>Аккордеон использует внутри <a href="/docs/5.0/components/collapse/">collapse</a>, чтобы сделать его сворачиваемым. Для рендеринга раскрытого аккордеона добавьте класс <code>.open</code> в <code>.accordion</code>.</p>
+<div class="bd-callout bd-callout-info">
+Эффект анимации этого компонента зависит от медиазапроса <code>prefers-reduced-motion</code>. См. <a href="/docs/5.0/getting-started/accessibility/#%D1%81%D0%BD%D0%B8%D0%B6%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5">раздел с уменьшенным движением в нашей документации по специальным возможностям</a>.
 </div>
 
-<h3 id="одиночная-контрольная-точка">Одиночная контрольная точка</h3>
-<p>Существуют также медиа-запросы и миксины для нацеливания на один сегмент размеров экрана с использованием минимальной и максимальной ширины контрольной точки.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-<span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xxl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</code></pre></div><p>Например, <code>@include media-breakpoint-only(md) { ... }</code> приведет к:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">991</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</code></pre></div><h3 id="между-контрольными-точками">Между контрольными точками</h3>
-<p>Точно так же медиа-запросы могут охватывать несколько значений ширины контрольной точки:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@include</span><span class="nd"> media-breakpoint-between</span><span class="p">(</span><span class="n">md</span><span class="o">,</span> <span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</code></pre></div><p>Что приводит к:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Пример
-</span><span class="c1">// Применятся стили, начиная со средних и заканчивая очень большими.
-</span><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="no">min-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="no">max-width</span><span class="o">:</span> <span class="mi">1199</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</code></pre></div>
+<h2 id="пример">Пример</h2>
+<p>Щелкните аккордеоны ниже, чтобы развернуть / свернуть содержимое аккордеона.</p>
+<div class="bd-example">
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Аккордеонный элемент #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Это тело аккордеона первого элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Аккордеонный элемент #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Аккордеонный элемент #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;accordionExample&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;headingOne&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#collapseOne&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;collapseOne&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #1
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;collapseOne&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse show&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;headingOne&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Это тело аккордеона первого элемента.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.accordion-body<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, хотя переход ограничивает переполнение.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;headingTwo&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button collapsed&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#collapseTwo&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;collapseTwo&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #2
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;collapseTwo&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;headingTwo&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Это тело аккордеона второго элемента.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.accordion-body<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, хотя переход ограничивает переполнение.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;headingThree&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button collapsed&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#collapseThree&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;collapseThree&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #3
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;collapseThree&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;headingThree&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Это тело аккордеона третьего элемента.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.accordion-body<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, хотя переход ограничивает переполнение.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="поток">Поток</h3>
+<p>Добавьте <code>.accordion-flush</code>, чтобы удалить цвет фона <code>background-color</code> по умолчанию, некоторые границы и некоторые закругленные углы для рендеринга аккордеонов от края до края с их родительским контейнером.</p>
+<div class="bd-example bg-light">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Аккордеонный элемент #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-parent="#accordionFlushExample">
+      <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Аккордеонный элемент #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-parent="#accordionFlushExample">
+      <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Аккордеонный элемент #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-parent="#accordionFlushExample">
+      <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion accordion-flush&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;accordionFlushExample&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-headingOne&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button collapsed&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#flush-collapseOne&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;flush-collapseOne&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #1
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-collapseOne&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;flush-headingOne&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionFlushExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-headingTwo&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button collapsed&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#flush-collapseTwo&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;flush-collapseTwo&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #2
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-collapseTwo&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;flush-headingTwo&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionFlushExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-item&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-header&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-headingThree&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-button collapsed&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;collapse&#34;</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#flush-collapseThree&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;flush-collapseThree&#34;</span><span class="p">&gt;</span>
+        Аккордеонный элемент #3
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;flush-collapseThree&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-collapse collapse&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;flush-headingThree&#34;</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">&#34;#accordionFlushExample&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;accordion-body&#34;</span><span class="p">&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="доступность">Доступность</h2>
+<p>Пожалуйста, прочтите <a href="/docs/5.0/components/collapse/#accessibility">раздел специальных возможностей сворачивания</a> для получения дополнительной информации.</p>
+
         </div>
       </main>
     </div>
