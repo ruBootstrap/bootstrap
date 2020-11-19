@@ -9,6 +9,17 @@
     - v: "4.4"
     - v: "4.5"
 
+- group: v4.x [RU]
+  baseurl: "https://v4.getbootstrap.su/docs"
+  description: "Наш предыдущий основной выпуск с его второстепенными выпусками. Последнее обновление v4.5.3."
+  versions:
+    - v: "4.0"
+    - v: "4.1"
+    - v: "4.2"
+    - v: "4.3"
+    - v: "4.4"
+    - v: "4.5"
+
 - group: v5.x
   baseurl: "https://v5.getbootstrap.com/docs"
   description: "Текущая мажорная версия. Последнее обновление v5.0.0-alpha3."
