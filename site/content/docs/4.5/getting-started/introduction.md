@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Introduction
-description: Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.
+title: Вступление
+description: Начните работу с Bootstrap, самой популярной в мире платформой для создания адаптивных сайтов, ориентированных на мобильные устройства, с jsDelivr и начальной страницей шаблона.
 group: getting-started
 aliases:
   - "/docs/4.5/getting-started/"
@@ -10,13 +10,13 @@ aliases:
 toc: true
 ---
 
-## Quick start
+## Быстрый старт
 
-Looking to quickly add Bootstrap to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? [Head to the downloads page]({{< docsref "/getting-started/download" >}}).
+Хотите быстро добавить Bootstrap в свой проект? Используйте jsDelivr, бесплатный CDN с открытым исходным кодом. Используете менеджер пакетов или Вам нужно скачать исходные файлы? [Перейдите на страницу загрузок]({{< docsref "/getting-started/download" >}}).
 
 ### CSS
 
-Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
+Скопируйте и вставьте таблицу стилей `<link>` в Ваш `<head>` перед всеми остальными таблицами стилей, чтобы загрузить наш CSS.
 
 ```html
 <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
@@ -24,22 +24,22 @@ Copy-paste the stylesheet `<link>` into your `<head>` before all other styleshee
 
 ### JS
 
-Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com/), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
+Многие из наших компонентов требуют использования JavaScript для работы. В частности, для них требуютсяire [jQuery](https://jquery.com/), [Popper.js](https://popper.js.org/) и наши собственные плагины JavaScript. Мы используем [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), но также поддерживается полная версия.
 
-Place **one of the following `<script>`s** near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+Поместите **один из следующих тегов `<script>`** в конце ваших страниц, прямо перед закрывающим тегом `</body>`, чтобы включить их. Сначала должен быть jQuery, затем Popper.js, а затем наши плагины JavaScript.
 
-#### Bundle
+#### Связка
 
-Include every Bootstrap JavaScript plugin with one of our two bundles. Both `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/) for our tooltips and popovers, but not [jQuery](https://jquery.com/). Include jQuery first, then a Bootstrap JavaScript bundle. For more information about what's included in Bootstrap, please see our [contents]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) section.
+Включите каждый плагин Bootstrap JavaScript в один из двух наших пакетов. И `bootstrap.bundle.js` и `bootstrap.bundle.min.js` включают [Popper](https://popper.js.org/) для наших всплывающих подсказок и всплывающих окон, но не [jQuery](https://jquery.com/). Сначала включите jQuery, а затем пакет Bootstrap JavaScript. Дополнительную информацию о том, что включено в Bootstrap, можно найти в разделе [содержимое]({{< docsref "/getting-started/contents#предварительно-скомпилированный-бутстрап" >}}).
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-#### Separate
+#### Раздельно
 
-If you decide to go with the separate scripts solution, Popper.js must come first (if you're using tooltips or popovers), and then our JavaScript plugins.
+Если Вы решите использовать отдельное решение для сценариев, сначала должен быть Popper.js (если Вы используете всплывающие подсказки или всплывающие окна), а затем наши плагины JavaScript.
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
@@ -47,28 +47,28 @@ If you decide to go with the separate scripts solution, Popper.js must come firs
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-#### Components
+#### Компоненты
 
-Curious which components explicitly require jQuery, our JavaScript, and Popper.js? Click the show components link below. If you're unsure about the page structure, keep reading for an example page template.
+Интересно, какие компоненты явно требуют jQuery, нашего JavaScript и Popper.js? Щелкните ссылку "Показать компоненты" ниже. Если Вы не уверены в структуре страницы, продолжайте читать, чтобы увидеть пример шаблона страницы.
 
 <details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+<summary class="text-primary mb-3">Показать компоненты, требующие JavaScript</summary>
 {{< markdown >}}
-- Alerts for dismissing
-- Buttons for toggling states and checkbox/radio functionality
-- Carousel for all slide behaviors, controls, and indicators
-- Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
-- Modals for displaying, positioning, and scroll behavior
-- Navbar for extending our Collapse plugin to implement responsive behavior
-- Tooltips and popovers for displaying and positioning (also requires [Popper.js](https://popper.js.org/))
-- Scrollspy for scroll behavior and navigation updates
+- Alerts: Уведомления с отклонениями
+- Buttons: Кнопки для переключения состояний и функции флажка/радио
+- Carousel: Карусель для любого поведения слайдов, элементов управления и индикаторов
+- Collapse: Сворачиваемый контент для переключения видимости контента
+- Dropdowns: Выпадающие списки для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Modals: Модальные окна для отображения, позиционирования и прокрутки
+- Navbar: Панель навигации для расширения нашего плагина Сворачивания контента для реализации адаптивного поведения
+- Tooltips и popovers: Всплывающие подсказки и Всплывающие окна для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Scrollspy: Слежение прокрутки для поведения прокрутки и обновлений навигации
 {{< /markdown >}}
 </details>
 
-## Starter template
+## Стартовый шаблон
 
-Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
+Убедитесь, что Ваши страницы настроены в соответствии с последними стандартами дизайна и разработки. Это означает использование документа HTML5 и включение метатега области просмотра для правильного реагирования. Соберите все это вместе, и Ваши страницы должны выглядеть так:
 
 ```html
 <!doctype html>
@@ -81,18 +81,18 @@ Be sure to have your pages set up with the latest design and development standar
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Привет, мир!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Привет, мир!</h1>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Дополнительный JavaScript; выберите один из двух! -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- Вариант 1: пакет jQuery и Bootstrap (включает Popper) -->
     <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <!-- Вариант 2: jQuery, Popper.js и Bootstrap JS
     <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
@@ -101,15 +101,15 @@ Be sure to have your pages set up with the latest design and development standar
 </html>
 ```
 
-That's all you need for overall page requirements. Visit the [Layout docs]({{< docsref "/layout/overview" >}}) or [our official examples]({{< docsref "/examples" >}}) to start laying out your site's content and components.
+Это все, что Вам нужно для выполнения общих требований к странице. Посетите [Документацию по макету]({{< docsref "/layout/overview" >}}) или [наши официальные примеры]({{< docsref "/examples" >}}), чтобы начать размещение содержимого и компонентов Вашего сайта.
 
-## Important globals
+## Глобально важно
 
-Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+Bootstrap использует несколько важных глобальных стилей и настроек, о которых Вам необходимо знать при его использовании, и все они почти исключительно нацелены на *нормализацию* кроссбраузерных стилей. Давайте погрузимся.
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+Bootstrap требует использования документа типа HTML5. Без него Вы увидите несколько забавных неполных стилей, но его включение не должно вызывать каких-либо серьезных сбоев.
 
 ```html
 <!doctype html>
@@ -118,21 +118,21 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 </html>
 ```
 
-### Responsive meta tag
+### Адаптивный метатег
 
-Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
+Bootstrap разработан как *сначала мобильный*, стратегия, в которой мы сначала оптимизируем код для мобильных устройств, а затем масштабируем компоненты по мере необходимости с помощью медиа-запросов CSS. Чтобы обеспечить правильный рендеринг и сенсорное масштабирование для всех устройств, **добавьте метатег адаптивного окна просмотра** к Вашему `<head>`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 ```
 
-You can see an example of this in action in the [starter template](#starter-template).
+Вы можете увидеть пример этого в действии в [стартовом шаблоне](#стартовый-шаблон).
 
 ### Box-sizing
 
-For more straightforward sizing in CSS, we switch the global `box-sizing` value from `content-box` to `border-box`. This ensures `padding` does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.
+Для более простого изменения размера в CSS мы переключаем глобальное значение `box-sizing` с `content-box` на `border-box`. Это гарантирует, что `padding` не влияет на окончательную вычисленную ширину элемента, но может вызвать проблемы с некоторым сторонним программным обеспечением, таким как Google Maps или Google Custom Search Engine.
 
-On the rare occasion you need to override it, use something like the following:
+В редких случаях Вам нужно отменить его, используйте что-то вроде следующего:
 
 ```css
 .selector-for-some-widget {
@@ -140,23 +140,24 @@ On the rare occasion you need to override it, use something like the following:
 }
 ```
 
-With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
+WiВ приведенном выше фрагменте все вложенные элементы, включая сгенерированный контент с помощью `::before` и `::after`, будут наследовать указанный `box-sizing` для этого `.selector-for-some-widget`.
 
-Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
+Узнайте больше о [блочной модели и размерах на сайте CSS Tricks](https://css-tricks.com/box-sizing/).
 
 ### Reboot
 
-For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+Для улучшения кроссбраузерности рендеринга мы используем [Перезагрузку]({{< docsref "/content/reboot" >}}), чтобы исправить несоответствия между браузерами и устройствами, обеспечивая при этом несколько более самоуверенный сброс общих элементов HTML.
 
-## Community
+## Сообщество
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Будьте в курсе развития Bootstrap и обращайтесь к сообществу с помощью этих полезных ресурсов.
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}).
-- Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
-- Join [the official Slack room]({{< param slack >}}).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.
+- Вступите в группу [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
+- Подпишитесь на [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
+- Прочтите и подпишитесь на [официальный блог Bootstrap](https://blog.getbootstrap.com/).
+- Присоединяйтесь к [официальной Slack-комнате](https://bootstrap-slack.herokuapp.com/).
+- Общайтесь с другими Бутстрапперами в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
+- Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
+- Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной доступности.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.
+Вы также можете подписаться на [@getbootstrap в Твиттере](https://twitter.com/{{< param twitter >}}), чтобы следить за последними сплетнями и потрясающими музыкальными клипами.

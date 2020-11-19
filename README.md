@@ -144,6 +144,7 @@ bootstrap/
 
 Получайте новости о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
 
+- Вступите в группу [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
 - Подпишитесь на [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
 - Прочтите и подпишитесь на [официальный блог Bootstrap](https://blog.getbootstrap.com/).
 - Присоединяйтесь к [официальной Slack-комнате](https://bootstrap-slack.herokuapp.com/).
