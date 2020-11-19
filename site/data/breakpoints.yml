@@ -1,29 +1,29 @@
 - breakpoint: xs
   abbr: ""
-  name: Extra small
+  name: Очень маленький
   min-width: 0px
   container: ""
 
 - breakpoint: sm
   abbr: -sm
-  name: Small
+  name: Маленький
   min-width: 576px
   container: 540px
 
 - breakpoint: md
   abbr: -md
-  name: Medium
+  name: Средний
   min-width: 768px
   container: 720px
 
 - breakpoint: lg
   abbr: -lg
-  name: Large
+  name: Большой
   min-width: 992px
   container: 960px
 
 - breakpoint: xl
   abbr: -xl
-  name: Extra large
+  name: Очень большой
   min-width: 1200px
   container: 1140px

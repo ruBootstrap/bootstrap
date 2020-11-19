@@ -1,6 +1,6 @@
-languageCode:           "en"
+languageCode:           "ru-ru"
 title:                  "Bootstrap"
-baseURL:                "https://getbootstrap.com"
+baseURL:                "https://v4.getbootstrap.su"
 enableInlineShortcodes: true
 
 markup:
@@ -42,16 +42,21 @@ module:
       target:           static/favicon.ico
 
 params:
-  description:          "The most popular HTML, CSS, and JS library in the world."
-  authors:              "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+  description:          "Самая популярная библиотека HTML, CSS и JS в мире."
+  authors:              "Mark Otto, Jacob Thornton и участники Bootstrap"
   social_image_path:    /docs/4.5/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/4.5/assets/brand/bootstrap-social-logo.png
 
   current_version:      "4.5.3"
+  current_version_ru:   "4.5.3"
   current_ruby_version: "4.5.3"
   docs_version:         "4.5"
+  docs_version_ru:      "4.5"
   github_org:           "https://github.com/twbs"
+  github_ru_bootstrap:  "https://github.com/ruBootstrap"
+  telegram_ru:          "https://t.me/getbootstrap_ru"
   repo:                 "https://github.com/twbs/bootstrap"
+  repo_ru_bootstrap:    "https://github.com/ruBootstrap/bootstrap"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com/"
   opencollective:       "https://opencollective.com/bootstrap"
@@ -59,6 +64,7 @@ params:
   expo:                 "https://expo.getbootstrap.com/"
   themes:               "https://themes.getbootstrap.com/"
   icons:                "https://icons.getbootstrap.com/"
+  icons_ru:             "https://icons.getbootstrap.su/"
 
   download:
     source:             "https://github.com/twbs/bootstrap/archive/v4.5.3.zip"

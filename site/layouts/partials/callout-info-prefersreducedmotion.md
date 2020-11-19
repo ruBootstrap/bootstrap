@@ -1,1 +1,1 @@
-The animation effect of this component is dependent on the `prefers-reduced-motion` media query. See the [reduced motion section of our accessibility documentation](/docs/{{ .Site.Params.docs_version }}/getting-started/accessibility/#reduced-motion).
+Эффект анимации этого компонента зависит от медиазапроса `prefers-reduced-motion`. См. [Раздел с уменьшенным движением в нашей документации по специальным возможностям](/docs/{{ .Site.Params.docs_version }}/getting-started/accessibility/#замедленное-движение).

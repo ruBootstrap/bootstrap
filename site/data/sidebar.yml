@@ -1,92 +1,238 @@
-- title: Getting started
+- title: Начало работы
+  slug: getting-started
   pages:
-    - title: Introduction
-    - title: Download
-    - title: Contents
-    - title: Browsers & devices
+    - title: Вступление
+      hint: Начните работу с Bootstrap
+      slug: introduction
+    - title: Скачать
+      hint: Получить Bootstrap
+      slug: download
+    - title: Содержимое
+      hint: Что включено
+      slug: contents
+    - title: Браузеры и устройства
+      hint: Узнайте о браузерах и устройствах
+      slug: browsers-devices
     - title: JavaScript
-    - title: Theming
-    - title: Build tools
+      hint: Оживите Bootstrap
+      slug: javascript
+    - title: Темы
+      hint: Темы
+      slug: theming
+    - title: Инструменты сборки
+      hint: Сценарии npm
+      slug: build-tools
     # - title: Best practices # TODO: Write this content
     - title: Webpack
-    - title: Accessibility
+      hint: Сборщики
+      slug: webpack
+    - title: Доступность
+      hint: Возможности и ограничения
+      slug: accessibility
 
-- title: Layout
+- title: Макет
+  slug: layout
   pages:
-    - title: Overview
+    - title: Обзор
+      hint: Обзор
+      slug: overview
     - title: Grid
-    - title: Utilities for layout
+      hint: Сетка
+      slug: grid
+    - title: Утилиты для макета
+      hint: Утилиты для верстки
+      slug: utilities-for-layout
 
 - title: Content
+  slug: content
   pages:
     - title: Reboot
-    - title: Typography
-    - title: Code
-    - title: Images
-    - title: Tables
+      hint: Перезагрузка
+      slug: reboot
+    - title: Типография
+      hint: Типографика
+      slug: typography
+    - title: Код
+      hint: Код
+      slug: code
+    - title: Изображения
+      hint: Настройка изображений
+      slug: images
+    - title: Таблицы
+      hint: Стили таблиц
+      slug: tables
     - title: Figures
+      hint: Связанные изображения
+      slug: figures
 
-- title: Components
+- title: Компоненты
+  slug: components
   pages:
     - title: Alerts
+      hint: Уведомления
+      slug: alerts
     - title: Badge
+      hint: Значки
+      slug: badge
     - title: Breadcrumb
+      hint: Хлебные крошки
+      slug: breadcrumb
     - title: Buttons
+      hint: Кнопки
+      slug: buttons
     - title: Button group
+      hint: Группа кнопок
+      slug: button-group
     - title: Card
+      hint: Карточки
+      slug: card
     - title: Carousel
+      hint: Карусель
+      slug: carousel
     - title: Collapse
+      hint: Сворачиваемое содержимое
+      slug: collapse
     - title: Dropdowns
+      hint: Выпадающие списки
+      slug: dropdowns
     - title: Forms
+      hint: Формы
+      slug: forms
     - title: Input group
+      hint: Группа ввода
+      slug: input-group
     - title: Jumbotron
+      hint: Jumbotron
+      slug: jumbotron
     - title: List group
+      hint: Группы списков
+      slug: list-group
     - title: Media object
+      hint: Медиа объект
+      slug: media-object
     - title: Modal
+      hint: Модальное окно
+      slug: modal
     - title: Navs
+      hint: Навигация
+      slug: navs
     - title: Navbar
+      hint: Панель навигации
+      slug: navbar
     - title: Pagination
+      hint: Пагинация
+      slug: pagination
     - title: Popovers
+      hint: Всплывающие окна
+      slug: popovers
     - title: Progress
+      hint: Индикатор выполнения
+      slug: progress
     - title: Scrollspy
+      hint: Слежение прокрутки
+      slug: scrollspy
     - title: Spinners
+      hint: Состояние загрузки
+      slug: spinners
     - title: Toasts
+      hint: Всплывающие сообщения
+      slug: toasts
     - title: Tooltips
+      hint: Всплывающие подсказки
+      slug: tooltips
 
-- title: Utilities
+- title: Утилиты
+  slug: utilities
   pages:
     - title: Borders
+      hint: Границы
+      slug: borders
     - title: Clearfix
+      hint: Сброс флоатов
+      slug: clearfix
     - title: Close icon
+      hint: Кнопка закрытия
+      slug: close-icon
     - title: Colors
+      hint: Цвета
+      slug: colors
     - title: Display
+      hint: Отображение
+      slug: display
     - title: Embed
+      hint: Встраивание
+      slug: embed
     - title: Flex
+      hint: Флекс
+      slug: flex
     - title: Float
+      hint: Флоат
+      slug: float
     - title: Image replacement
+      hint: Замена изображения
+      slug: image-replacement
     - title: Interactions
+      hint: Взаимодействия
+      slug: interactions
     - title: Overflow
+      hint: Переполнение
+      slug: overflow
     - title: Position
+      hint: Положение
+      slug: position
     - title: Screen readers
+      hint: Программы чтения с экрана
+      slug: screen-readers
     - title: Shadows
+      hint: Тени
+      slug: shadows
     - title: Sizing
+      hint: Размеры
+      slug: sizing
     - title: Spacing
+      hint: Интервал
+      slug: spacing
     - title: Stretched link
+      hint: Растянутая ссылка
+      slug: stretched-link
     - title: Text
+      hint: Текст
+      slug: text
     - title: Vertical align
+      hint: Вертикальное выравнивание
+      slug: vertical-align
     - title: Visibility
+      hint: Видимость
+      slug: visibility
 
-- title: Extend
+- title: Дополнительно
+  slug: extend
   pages:
-    - title: Approach
-    - title: Icons
+    - title: Подход
+      hint: Подход
+      slug: approach
+    - title: Иконки
+      hint: Иконки
+      slug: icons
 
-- title: Migration
+- title: Миграция
+  slug: migration
 
-- title: About
+- title: Инфо
+  slug: about
   pages:
-    - title: Overview
-    - title: Team
-    - title: Brand
-    - title: License
-    - title: Translations
+    - title: Обзор
+      hint: Обзор
+      slug: overview
+    - title: Команда
+      hint: Команда
+      slug: team
+    - title: Бренд
+      hint: Бренд
+      slug: brand
+    - title: Лицензия
+      hint: Лицензия
+      slug: license
+    - title: Переводы
+      hint: Переводы
+      slug: translations
