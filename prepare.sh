@@ -1,14 +1,4 @@
-mainBranch="v4-dev-ru"
-ghPagesBranch="gh-pages"
+docs="_gh_pages_4"
+url="https://github.com/ruBootstrap/rubootstrap.git"
 
-echo "Start prepare"
-echo "Checkout to $ghPagesBranch"
-git checkout --orphan $ghPagesBranch
-echo "Reset hard"
-git reset --hard
-echo "Initializing $ghPagesBranch branch"
-git commit --allow-empty -m "Initializing $ghPagesBranch branch"
-echo "Git push"
-git push origin $ghPagesBranch
-echo "Checkout to $mainBranch"
-git checkout $mainBranch
+git submodule add -b main $url $docs

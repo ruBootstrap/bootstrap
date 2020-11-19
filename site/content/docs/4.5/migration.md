@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Migrating to v4
+title: Переход на v4
 description: Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.
 group: migration
 aliases: "/migration/"
