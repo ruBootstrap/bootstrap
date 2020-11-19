@@ -1,22 +1,22 @@
 ---
 layout: docs
 title: Переход на v4
-description: Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.
+description: Bootstrap 4 - это серьезная переработка всего проекта. Ниже приведены наиболее заметные изменения, за которыми следуют более конкретные изменения в соответствующих компонентах.
 group: migration
 aliases: "/migration/"
 toc: true
 ---
 
-## Stable changes
+## Стабильные изменения
 
-Moving from Beta 3 to our stable v4.x release, there are no breaking changes, but there are some notable changes.
+При переходе от бета-версии 3 к стабильному выпуску v4.x критических изменений нет, но есть некоторые заметные изменения.
 
-### Printing
-- Fixed broken print utilities. Previously, using a `.d-print-*` class would unexpectedly overrule any other `.d-*` class. Now, they match our other display utilities and only apply to that media (`@media print`).
+### Печать
+- Исправлены неработающие утилиты печати. Ранее использование класса `.d-print-*` неожиданно отменяло любой другой класс `.d-*`. Теперь они соответствуют другим нашим утилитам отображения и применяются только к этому носителю (`@media print`).
 
-- Expanded available print display utilities to match other utilities. Beta 3 and older only had `block`, `inline-block`, `inline`, and `none`. Stable v4 added `flex`, `inline-flex`, `table`, `table-row`, and `table-cell`.
+- Расширены доступные утилиты отображения печати для соответствия другим утилитам. В Beta 3 и старше были только `block`, `inline-block`, `inline` и `none`. В стабильной версии 4 добавлены `flex`, `inline-flex`, `table`, `table-row` и `table-cell`.
 
-- Fixed print preview rendering across browsers with new print styles that specify `@page` `size`.
+- Исправлен рендеринг предварительного просмотра печати в браузерах с новыми стилями печати, в которых указан размер `@page` `size`.
 
 ## Beta 3 changes
 

@@ -1,34 +1,34 @@
 ---
 layout: docs
-title: License FAQs
-description: Commonly asked questions about Bootstrap's open source license.
+title: Часто задаваемые вопросы о лицензиях
+description: Часто задаваемые вопросы о лицензии Bootstrap с открытым исходным кодом.
 group: about
 ---
 
-Bootstrap is released under the MIT license and is copyright {{< year >}} Twitter. Boiled down to smaller chunks, it can be described with the following conditions.
+Bootstrap выпущен под лицензией MIT и принадлежит Twitter {{<year>}}. Сводя к более мелким кускам, это можно описать следующими условиями.
 
-#### It requires you to:
+#### Это требует от Вас:
 
-* Keep the license and copyright notice included in Bootstrap's CSS and JavaScript files when you use them in your works
+* Сохраняйте лицензию и уведомление об авторских правах в файлах CSS и JavaScript Bootstrap, когда вы используете их в своих работах
 
-#### It permits you to:
+#### Это позволяет Вам:
 
-- Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes
-- Use Bootstrap in packages or distributions that you create
-- Modify the source code
-- Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license
+- Бесплатно загружайте и используйте Bootstrap, полностью или частично, в личных, частных, внутренних или коммерческих целях
+- Используйте Bootstrap в создаваемых Вами пакетах или дистрибутивах
+- Изменяйте исходный код
+- Предоставить сублицензию на изменение и распространение Bootstrap третьим лицам, не включенным в лицензию.
 
-#### It forbids you to:
+#### Это запрещает Вам:
 
-- Hold the authors and license owners liable for damages as Bootstrap is provided without warranty
-- Hold the creators or copyright holders of Bootstrap liable
-- Redistribute any piece of Bootstrap without proper attribution
-- Use any marks owned by Twitter in any way that might state or imply that Twitter endorses your distribution
-- Use any marks owned by Twitter in any way that might state or imply that you created the Twitter software in question
+- Возложить ответственность на авторов и владельцев лицензий за ущерб, поскольку Bootstrap предоставляется без гарантии
+- Привлечь к ответственности создателей или правообладателей Bootstrap
+- Распространять любую часть Bootstrap без надлежащей атрибуции
+- Использовать любые знаки, принадлежащие Twitter, любым способом, который может указывать или подразумевать, что Twitter одобряет Ваше распространение
+- Использовать любые знаки, принадлежащие Twitter, любым способом, который может указывать или подразумевать, что Вы создали данное программное обеспечение Twitter
 
-#### It does not require you to:
+#### Это не требует от Вас:
 
-- Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
-- Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)
+- Включать исходный код самого Bootstrap или любых модификаций, которые Вы могли внести в него, в любое перераспределение, которое Вы можете собрать, которое включает его
+- Отправлять изменения, внесенные в Bootstrap, обратно в проект Bootstrap (хотя такая обратная связь приветствуется)
 
-The full Bootstrap license is located [in the project repository]({{< param repo >}}/blob/v{{< param current_version >}}/LICENSE) for more information.
+Полная лицензия Bootstrap находится [в репозитории проекта]({{< param repo >}}/blob/v{{< param current_version >}}/LICENSE) для получения дополнительной информации.

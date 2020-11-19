@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Brand guidelines
-description: Documentation and examples for Bootstrap's logo and brand usage guidelines.
+title: Рекомендации по бренду
+description: Документация и примеры для логотипа Bootstrap и руководства по использованию бренда.
 group: about
 toc: true
 ---
 
-Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's [Brand Assets](https://mailchimp.com/about/brand-assets/).
+Вам нужны ресурсы бренда Bootstrap? Великолепно! У нас есть только несколько рекомендаций, которым мы следуем, и мы, в свою очередь, просим Вас им следовать. Эти рекомендации были вдохновлены MailChimp's [Активы бренда](https://mailchimp.com/about/brand-assets/).
 
-## Mark and logo
+## Марка и логотип
 
-Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Bootstrap**). It should always appear in San Francisco Display Semibold. **Do not use the Twitter bird** in association with Bootstrap.
+Используйте либо знак Bootstrap (заглавная **B**), либо стандартный логотип (просто **Bootstrap**). Он всегда должен отображаться полужирным шрифтом San Francisco Display. **Не используйте птицу Twitter** вместе с Bootstrap.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
@@ -29,9 +29,9 @@ Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Boo
   </div>
 </div>
 
-## Download mark
+## Скачать метку
 
-Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
+Загрузите метку Bootstrap в одном из трех стилей, каждый из которых доступен в виде файла SVG. Щелкните правой кнопкой мыши, Сохранить как.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
@@ -45,28 +45,28 @@ Download the Bootstrap mark in one of three styles, each available as an SVG fil
   </div>
 </div>
 
-## Name
+## Имя
 
-The project and framework should always be referred to as **Bootstrap**. No Twitter before it, no capital _s_, and no abbreviations except for one, a capital **B**.
+Проект и фреймворк всегда должны называться **Bootstrap**. Ни Twitter перед ним, ни заглавной буквы _s_, ни сокращений, кроме одной, заглавной **B**.
 
 <div class="bd-brand-logos">
   <div class="bd-brand-item">
     <span class="h3">Bootstrap</span>
-    <strong class="text-success">Right</strong>
+    <strong class="text-success">Правильно</strong>
   </div>
   <div class="bd-brand-item">
     <span class="h3 text-muted">BootStrap</span>
-    <strong class="text-warning">Wrong</strong>
+    <strong class="text-warning">Неправильно</strong>
   </div>
   <div class="bd-brand-item">
     <span class="h3 text-muted">Twitter Bootstrap</span>
-    <strong class="text-warning">Wrong</strong>
+    <strong class="text-warning">Неправильно</strong>
   </div>
 </div>
 
-## Colors
+## Цвета
 
-Our docs and branding use a handful of primary colors to differentiate what *is* Bootstrap from what *is in* Bootstrap. In other words, if it's purple, it's representative of Bootstrap.
+В нашей документации и фирменном оформлении используется несколько основных цветов, чтобы отличать *такое* Bootstrap от того, что *находится в* Bootstrap. Другими словами, если он фиолетовый, это представитель Bootstrap.
 
 <div class="bd-brand">
   <div class="color-swatches">
