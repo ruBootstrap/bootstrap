@@ -34,7 +34,7 @@
   }
 
   window.docsearch({
-    apiKey: '5990ad008512000bba2cf951ccf0332f',
+    apiKey: '0200257f5c30f9e74217d07bd67d50ba',
     indexName: 'bootstrap',
     inputSelector: '#search-input',
     algoliaOptions: {
@@ -43,7 +43,7 @@
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://v5.getbootstrap.com/'
+        var liveUrl = 'https://getbootstrap.su/'
 
         hit.url = currentUrl.lastIndexOf(liveUrl, 0) === 0 ?
           // On production, return the result as is
@@ -62,6 +62,6 @@
       })
     },
     // Set debug to `true` if you want to inspect the dropdown
-    debug: false
+    debug: true
   })
 })()
