@@ -1,57 +1,57 @@
 ---
 layout: docs
-title: Accessibility
-description: A brief overview of Bootstrap's features and limitations for the creation of accessible content.
+title: Доступность
+description: Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.
 group: getting-started
 toc: true
 ---
 
-Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
+Bootstrap предоставляет простую в использовании структуру из готовых стилей, инструментов макета и интерактивных компонентов, позволяя разработчикам создавать веб-сайты и приложения, которые визуально привлекательны, функционально богаты и доступны прямо из коробки.
 
-## Overview and Limitations
+## Обзор и ограничения
 
-The overall accessibility of any project built with Bootstrap depends in large part on the author's markup, additional styling, and scripting they've included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Bootstrap that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0](https://www.w3.org/TR/WCAG20/) (A/AA/AAA), [Section 508](https://www.section508.gov/) and similar accessibility standards and requirements.
+Общая доступность любого проекта, созданного с помощью Bootstrap, во многом зависит от разметки автора, дополнительных стилей и сценариев, которые они включили. Однако при условии, что они были реализованы правильно, должно быть вполне возможно создавать веб-сайты и приложения с помощью Bootstrap, которые соответствуют [<abbr title="Рекомендации по доступности веб-содержимого">WCAG</abbr> 2.0](https://www.w3.org/TR/WCAG20/) (A/AA/AAA), [Раздел 508](https://www.section508.gov/) и аналогичные стандарты и требования доступности.
 
-### Structural markup
+### Структурная разметка
 
-Bootstrap's styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+Стиль и макет Bootstrap можно применять к широкому спектру структур разметки. Эта документация призвана предоставить разработчикам примеры передового опыта, чтобы продемонстрировать использование самого Bootstrap и проиллюстрировать соответствующую семантическую разметку, включая способы решения потенциальных проблем доступности.
 
-### Interactive components
+### Интерактивные компоненты
 
-Bootstrap's interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+Интерактивные компоненты Bootstrap, такие как модальные диалоговые окна, раскрывающиеся меню и настраиваемые всплывающие подсказки, предназначены для работы с сенсорным экраном, мышью и клавиатурой. Благодаря использованию соответствующих [<abbr title="Инициатива веб-доступности">WAI</abbr>-<abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) ролей и атрибутов, эти компоненты также должны быть понятными и управляемыми с использованием вспомогательных технологий (таких как программы чтения с экрана).
 
-Because Bootstrap's components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
+Поскольку компоненты Bootstrap специально разработаны как достаточно общие, авторам может потребоваться включить дополнительные роли и атрибуты <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>, а также поведение JavaScript, чтобы более точно передать суть и функциональность их компонентов. Обычно это отмечается в документации.
 
-### Color contrast
+### Цветовой контраст
 
-Most colors that currently make up Bootstrap's default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—lead to *insufficient* color contrast (below the recommended [WCAG 2.0 color contrast ratio of 4.5:1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)) when used against a light background. Authors will need to manually modify/extend these default colors to ensure adequate color contrast ratios.
+Большинство цветов, которые в настоящее время составляют палитру Bootstrap по умолчанию - используемые во всей структуре для таких вещей, как варианты кнопок, варианты предупреждений, индикаторы проверки формы - приводят к *недостаточному* цветовому контрасту (ниже рекомендуемого [коэффициента контрастности цвета WCAG 2.0 4.5:1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)) при использовании на светлом фоне. Авторам потребуется вручную изменить/расширить эти цвета по умолчанию, чтобы обеспечить адекватные коэффициенты цветового контраста.
 
-### Visually hidden content
+### Визуально скрытый контент
 
-Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.sr-only` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
+Контент, который должен быть визуально скрыт, но оставаться доступным для вспомогательных технологий, таких как программы чтения с экрана, можно стилизовать с помощью класса `.sr-only`. Это может быть полезно в ситуациях, когда дополнительная визуальная информация или подсказки (например, значение, обозначенное с помощью цвета) также должны быть переданы невизуальным пользователям.
 
 ```html
 <p class="text-danger">
-  <span class="sr-only">Danger: </span>
-  This action is not reversible
+  <span class="sr-only">Опасность: </span>
+  Это действие необратимо
 </p>
 ```
 
-For visually hidden interactive controls, such as traditional "skip" links, `.sr-only` can be combined with the `.sr-only-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users).
+Для визуально скрытых интерактивных элементов управления, таких как традиционные ссылки «пропустить», `.sr-only` можно объединить с классом `.sr-only-focusable`. Это гарантирует, что элемент управления станет видимым после фокусировки (для зрячих пользователей клавиатуры).
 
 ```html
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<a class="sr-only sr-only-focusable" href="#content">Перейти к основному содержанию</a>
 ```
 
-### Reduced motion
+### Замедленное движение
 
-Bootstrap includes support for the [`prefers-reduced-motion` media feature](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Bootstrap (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
+Bootstrap включает поддержку [мультимедийной функции `prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion). В браузерах/средах, которые позволяют пользователю указать свои предпочтения для замедления движения, большинство эффектов перехода CSS в Bootstrap (например, когда открывается или закрывается модальное диалоговое окно или скользящая анимация в каруселях) будут отключены, а значимые анимации ( например, блесны) будут замедляться.
 
-## Additional resources
+## Дополнительные ресурсы
 
-- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
-- [The A11Y Project](https://www.a11yproject.com/)
-- [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
-- [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Colour Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
-- ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
+- [Рекомендации по обеспечению доступности веб-контента (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
+- [Проект A11Y](https://www.a11yproject.com/)
+- [Документация по доступности MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+- [Проверка доступности Tenon.io](https://tenon.io/)
+- [Анализатор цветового контраста (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [Букмарклет "HTML Codesniffer" для выявления проблем доступности](https://github.com/squizlabs/HTML_CodeSniffer)

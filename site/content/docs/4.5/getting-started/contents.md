@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Contents
-description: Discover what's included in Bootstrap, including our precompiled and source code flavors. Remember, Bootstrap's JavaScript plugins require jQuery.
+title: Содержание
+description: Узнайте, что входит в Bootstrap, включая наши варианты предварительно скомпилированного и исходного кода. Помните, плагины Bootstrap для JavaScript требуют jQuery.
 group: getting-started
 toc: true
 ---
 
-## Precompiled Bootstrap
+## Предварительно скомпилированный Bootstrap
 
-Once downloaded, unzip the compressed folder and you'll see something like this:
+После загрузки распакуйте сжатую папку, и Вы увидите что-то вроде этого:
 
-<!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
+<!-- ПРИМЕЧАНИЕ. Эта информация намеренно дублируется в README. Скопируйте любые сделанные здесь изменения и в README, но не забудьте добавить папку `dist`. -->
 
 ```text
 bootstrap/
@@ -38,20 +38,20 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
+Это самая простая форма Bootstrap: предварительно скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/), но не [jQuery](https://jquery.com/).
 
-## CSS files
+## CSS файлы
 
-Bootstrap includes a handful of options for including some or all of our compiled CSS.
+Bootstrap включает несколько вариантов для включения некоторых или всего нашего скомпилированного CSS.
 
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">CSS files</th>
-      <th scope="col">Layout</th>
-      <th scope="col">Content</th>
-      <th scope="col">Components</th>
-      <th scope="col">Utilities</th>
+      <th scope="col">CSS файлы</th>
+      <th scope="col">Макет</th>
+      <th scope="col">Содержимое</th>
+      <th scope="col">Компоненты</th>
+      <th scope="col">Утилиты</th>
     </tr>
   </thead>
   <tbody>
@@ -60,42 +60,42 @@ Bootstrap includes a handful of options for including some or all of our compile
         <div><code class="font-weight-normal text-nowrap">bootstrap.css</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap.min.css</code></div>
       </th>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
-      <td class="text-success">Included</td>
+      <td class="text-success">Включено</td>
+      <td class="text-success">Включено</td>
+      <td class="text-success">Включено</td>
+      <td class="text-success">Включено</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-grid.css</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap-grid.min.css</code></div>
       </th>
-      <td><a class="text-warning" href="{{< docsref "/layout/grid" >}}">Only grid system</a></td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{< docsref "/utilities/flex" >}}">Only flex utilities</a></td>
+      <td><a class="text-warning" href="{{< docsref "/layout/grid" >}}">Только сеточная система</a></td>
+      <td class="bg-light text-muted">Не включено</td>
+      <td class="bg-light text-muted">Не включено</td>
+      <td><a class="text-warning" href="{{< docsref "/utilities/flex" >}}">Только флекс утилиты</a></td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.css</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap-reboot.min.css</code></div>
       </th>
-      <td class="bg-light text-muted">Not included</td>
-      <td><a class="text-warning" href="{{< docsref "/content/reboot" >}}">Only Reboot</a></td>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light text-muted">Не включено</td>
+      <td><a class="text-warning" href="{{< docsref "/content/reboot" >}}">Только Перезагрузка</a></td>
+      <td class="bg-light text-muted">Не включено</td>
+      <td class="bg-light text-muted">Не включено</td>
     </tr>
   </tbody>
 </table>
 
-## JS files
+## JS файлы
 
-Similarly, we have options for including some or all of our compiled JavaScript.
+Точно так же у нас есть варианты для включения части или всего нашего скомпилированного JavaScript.
 
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">JS files</th>
+      <th scope="col">JS файлы</th>
       <th scope="col">Popper</th>
       <th scope="col">jQuery</th>
     </tr>
@@ -106,23 +106,23 @@ Similarly, we have options for including some or all of our compiled JavaScript.
         <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.js</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap.bundle.min.js</code></div>
       </th>
-      <td class="text-success">Included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="text-success">Включено</td>
+      <td class="bg-light text-muted">Не включено</td>
     </tr>
     <tr>
       <th scope="row">
         <div><code class="font-weight-normal text-nowrap">bootstrap.js</code></div>
         <div><code class="font-weight-normal text-nowrap">bootstrap.min.js</code></div>
       </th>
-      <td class="bg-light text-muted">Not included</td>
-      <td class="bg-light text-muted">Not included</td>
+      <td class="bg-light text-muted">Не включено</td>
+      <td class="bg-light text-muted">Не включено</td>
     </tr>
   </tbody>
 </table>
 
-## Bootstrap source code
+## Исходный код Bootstrap
 
-The Bootstrap source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+Загрузка исходного кода Bootstrap включает предварительно скомпилированные ресурсы CSS и JavaScript, а также исходный код Sass, JavaScript и документацию. В частности, он включает в себя следующее и многое другое:
 
 ```text
 bootstrap/
@@ -138,4 +138,4 @@ bootstrap/
 └── scss/
 ```
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.
+`scss/` и `js/` являются исходным кодом для наших CSS и JavaScript. Папка `dist/` включает все, что указано в предварительно скомпилированном разделе загрузки выше. В папке `site/docs/` находится исходный код нашей документации, а также `examples/` примеры использования Bootstrap. Кроме того, любой другой включенный файл обеспечивает поддержку пакетов, информацию о лицензии и разработку.

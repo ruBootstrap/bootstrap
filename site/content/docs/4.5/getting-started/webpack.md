@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: Webpack
-description: Learn how to include Bootstrap in your project using Webpack.
+description: Узнайте, как включить Bootstrap в свой проект с помощью Webpack.
 group: getting-started
 toc: true
 ---
 
-## Installing Bootstrap
+## Установка Bootstrap
 
-[Install bootstrap]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
+[Установка Bootstrap]({{< docsref "/getting-started/download#npm" >}}) как модуль Node.js с использованием npm.
 
-## Importing JavaScript
+## Импорт JavaScript
 
-Import [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}) by adding this line to your app's entry point (usually `index.js` or `app.js`):
+Импортируйте [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}), добавив эту строку в точку входа Вашего приложения (обычно `index.js` или `app.js`):
 
 ```js
 import 'bootstrap';
 ```
 
-Alternatively, you may **import plugins individually** as needed:
+Кроме того, вы можете **импортировать плагины по отдельности** по мере необходимости:
 
 ```js
 import 'bootstrap/js/dist/util';
@@ -26,58 +26,58 @@ import 'bootstrap/js/dist/alert';
 ...
 ```
 
-Bootstrap depends on [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/),
-which are specified in the `peerDependencies` property; this means that you will have to make sure to add both of them
-to your `package.json` using `npm install --save jquery popper.js`.
+Bootstrap зависит от [jQuery](https://jquery.com/) и [Popper](https://popper.js.org/),
+которые указаны в свойстве `peerDependencies`; это означает, что Вам нужно будет обязательно добавить их оба
+в Ваш `package.json`, используя `npm install --save jquery popper.js`.
 
-## Importing Styles
+## Импорт стилей
 
-### Importing Precompiled Sass
+### Импорт предварительно скомпилированного Sass
 
-To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
+Чтобы использовать весь потенциал Bootstrap и настроить его в соответствии с Вашими потребностями, используйте исходные файлы как часть процесса объединения Вашего проекта.
 
-First, create your own `_custom.scss` and use it to override the [built-in custom variables]({{< docsref "/getting-started/theming" >}}). Then, use your main Sass file to import your custom variables, followed by Bootstrap:
+Сначала создайте свой собственный `_custom.scss` и используйте его, чтобы переопределить [встроенные пользовательские переменные]({{< docsref "/getting-started/theming" >}}). Затем используйте Ваш основной файл Sass для импорта Ваших пользовательских переменных, а затем Bootstrap:
 
 ```scss
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 ```
 
-For Bootstrap to compile, make sure you install and use the required loaders: [sass-loader](https://github.com/webpack-contrib/sass-loader), [postcss-loader](https://github.com/webpack-contrib/postcss-loader) with [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). With minimal setup, your webpack config should include this rule or similar:
+Для компиляции Bootstrap убедитесь, что Вы установили и используете необходимые загрузчики: [sass-loader](https://github.com/webpack-contrib/sass-loader), [postcss-loader](https://github.com/webpack-contrib/postcss-loader) с [Autoprefixer](https://github.com/postcss/autoprefixer#webpack). При минимальной настройке конфигурация Вашего веб-пакета должна включать это или подобное правило:
 
 ```js
 ...
 {
   test: /\.(scss)$/,
   use: [{
-    loader: 'style-loader', // inject CSS to page
+    loader: 'style-loader', // вставить CSS на страницу
   }, {
-    loader: 'css-loader', // translates CSS into CommonJS modules
+    loader: 'css-loader', // переводит CSS в модули CommonJS
   }, {
-    loader: 'postcss-loader', // Run postcss actions
+    loader: 'postcss-loader', // Выполнить действия postcss
     options: {
-      plugins: function () { // postcss plugins, can be exported to postcss.config.js
+      plugins: function () { // плагины postcss, можно экспортировать в postcss.config.js
         return [
           require('autoprefixer')
         ];
       }
     }
   }, {
-    loader: 'sass-loader' // compiles Sass to CSS
+    loader: 'sass-loader' // компилирует Sass в CSS
   }]
 },
 ...
 ```
 
-### Importing Compiled CSS
+### Импорт скомпилированного CSS
 
-Alternatively, you may use Bootstrap's ready-to-use CSS by simply adding this line to your project's entry point:
+В качестве альтернативы Вы можете использовать готовый к использованию CSS Bootstrap, просто добавив эту строку в точку входа Вашего проекта:
 
 ```js
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
-In this case you may use your existing rule for `css` without any special modifications to webpack config, except you don't need `sass-loader` just [style-loader](https://github.com/webpack-contrib/style-loader) and [css-loader](https://github.com/webpack-contrib/css-loader).
+В этом случае вы можете использовать существующее правило для `css` без каких-либо специальных изменений в конфигурации webpack, за исключением того, что вам не нужен `sass-loader` только [style-loader](https://github.com/webpack-contrib/style-loader) и [css-loader](https://github.com/webpack-contrib/css-loader).
 
 ```js
 ...

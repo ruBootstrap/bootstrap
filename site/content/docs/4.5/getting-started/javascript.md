@@ -1,153 +1,153 @@
 ---
 layout: docs
 title: JavaScript
-description: Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.
+description: Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript, построенных на jQuery. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.
 group: getting-started
 toc: true
 ---
 
-## Individual or compiled
+## Индивидуальный или скомпилированный
 
-Plugins can be included individually (using Bootstrap's individual `js/dist/*.js`), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
+Плагины могут быть включены индивидуально (с использованием отдельного файла Bootstrap `js/dist/*.js`), или все сразу, используя `bootstrap.js` или минифицированный `bootstrap.min.js` (не включайте оба).
 
-If you use a bundler (Webpack, Rollup...), you can use `/js/dist/*.js` files which are UMD ready.
+Если Вы используете бандлер (Webpack, Rollup...), Вы можете использовать файлы `/js/dist/*.js`, готовые для UMD.
 
-## Dependencies
+## Зависимости
 
-Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that **all plugins depend on jQuery** (this means jQuery must be included **before** the plugin files). [Consult our `package.json`]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) to see which versions of jQuery are supported.
+Некоторые плагины и компоненты CSS зависят от других плагинов. Если Вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации. Также обратите внимание, что **все плагины зависят от jQuery** (это означает, что jQuery должен быть включен **перед** файлами плагинов). [Обратитесь к нашему `package.json`]({{< param repo >}}/blob/v{{< param current_version >}}/package.json), чтобы узнать, какие версии jQuery поддерживаются.
 
-Our dropdowns, popovers and tooltips also depend on [Popper.js](https://popper.js.org/).
+Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от [Popper.js](https://popper.js.org/).
 
-## Data attributes
+## Атрибуты данных
 
-Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Почти все плагины Bootstrap можно включить и настроить только с помощью HTML с атрибутами данных (наш предпочтительный способ использования функциональности JavaScript). Обязательно **используйте только один набор атрибутов данных для одного элемента** (например, Вы не можете запускать всплывающую подсказку и модальное окно с помощью одной кнопки.)
 
-However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with `data-api` like so:
+Однако в некоторых ситуациях может потребоваться отключить эту функцию. Чтобы отключить API атрибутов данных, отмените привязку всех событий к документу, имеющему пространство имен с помощью `data-api`, например:
 
 ```js
 $(document).off('.data-api')
 ```
 
-Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:
+В качестве альтернативы, чтобы настроить таргетинг на конкретный плагин, просто включите имя плагина в качестве пространства имен вместе с пространством имен data-api следующим образом:
 
 ```js
 $(document).off('.alert.data-api')
 ```
 
 {{< callout warning >}}
-## Selectors
+## Селекторы
 
-Currently to query DOM elements we use the native methods `querySelector` and `querySelectorAll` for performance reasons, so you have to use [valid selectors](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier).
-If you use special selectors, for example: `collapse:Example` be sure to escape them.
+В настоящее время для запросов к элементам DOM мы используем собственные методы `querySelector` и `querySelectorAll` из соображений производительности, поэтому Вы должны использовать [допустимые селекторы](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier).
+Если Вы используете специальные селекторы, например: `collapse:Example`, не забудьте их экранировать.
 {{< /callout >}}
 
-## Events
+## События
 
-Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Bootstrap предоставляет настраиваемые события для уникальных действий большинства плагинов. Как правило, они бывают в форме причастия прошедшего времени и инфинитива, где инфинитив (например, `show`) запускается в начале события, а его форма причастия прошедшего времени (например, `shown`) запускается при завершении события действие.
 
-All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
+Все инфинитивные события обеспечивают функциональность [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). Это дает возможность остановить выполнение действия до его запуска. Возврат false от обработчика событий также автоматически вызывает `preventDefault()`.
 
 ```js
 $('#myModal').on('show.bs.modal', function (e) {
   if (!data) {
-    return e.preventDefault() // stops modal from being shown
+    return e.preventDefault() // останавливает отображение модального окна
   }
 })
 ```
 
-## Programmatic API
+## Программный API
 
-We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.
+Мы также считаем, что у Вас должна быть возможность использовать все плагины Bootstrap исключительно через JavaScript API. Все общедоступные API-интерфейсы представляют собой единые, объединяемые в цепочки методы и возвращают коллекцию, на которую были выполнены действия.
 
 ```js
 $('.btn.danger').button('toggle').addClass('fat')
 ```
 
-All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):
+Все методы должны принимать необязательный объект параметров, строку, нацеленную на конкретный метод, или ничего (что запускает плагин с поведением по умолчанию):
 
 ```js
-$('#myModal').modal() // initialized with defaults
-$('#myModal').modal({ keyboard: false }) // initialized with no keyboard
-$('#myModal').modal('show') // initializes and invokes show immediately
+$('#myModal').modal() // инициализирован по умолчанию
+$('#myModal').modal({ keyboard: false }) // инициализирован без клавиатуры
+$('#myModal').modal('show') // немедленно инициализирует и вызывает show
 ```
 
-Each plugin also exposes its raw constructor on a `Constructor` property: `$.fn.popover.Constructor`. If you'd like to get a particular plugin instance, retrieve it directly from an element: `$('[rel="popover"]').data('popover')`.
+Каждый плагин также предоставляет свой необработанный конструктор `Constructor` в свойстве: `$.fn.popover.Constructor`. Если Вы хотите получить конкретный экземпляр плагина, получите его прямо из элемента: `$('[rel="popover"]').data('popover')`.
 
-### Asynchronous functions and transitions
+### Асинхронные функции и переходы
 
-All programmatic API methods are **asynchronous** and return to the caller once the transition is started but **before it ends**.
+Все программные методы API **асинхронны** и возвращаются вызывающей стороне после начала перехода, но **до его завершения**.
 
-In order to execute an action once the transition is complete, you can listen to the corresponding event.
+Чтобы выполнить действие после завершения перехода, Вы можете прослушать соответствующее событие.
 
 ```js
 $('#myCollapse').on('shown.bs.collapse', function (e) {
-  // Action to execute once the collapsible area is expanded
+  // Действие, выполняемое после раскрытия складной области
 })
 ```
 
-In addition a method call on a **transitioning component will be ignored**.
+Кроме того, вызов метода **переходного компонента будет проигнорирован**.
 
 ```js
 $('#myCarousel').on('slid.bs.carousel', function (e) {
-  $('#myCarousel').carousel('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
+  $('#myCarousel').carousel('2') // Перейдет к слайду 2, как только переход к слайду 1 завершится
 })
 
-$('#myCarousel').carousel('1') // Will start sliding to the slide 1 and returns to the caller
-$('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
+$('#myCarousel').carousel('1') // Начнется переход к слайду 1 и вернется к вызывающему
+$('#myCarousel').carousel('2') // !! Будет проигнорировано, так как переход к слайду 1 не завершен !!
 ```
 
-### Default settings
+### Настройки по умолчанию
 
-You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
+Вы можете изменить настройки плагина по умолчанию, изменив его объект `Constructor.Default`:
 
 ```js
-// changes default for the modal plugin's `keyboard` option to false
+// изменяет значение по умолчанию для опции `keyboard` модального плагина на false
 $.fn.modal.Constructor.Default.keyboard = false
 ```
 
-## No conflict
+## Нет конфликта
 
-Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+Иногда необходимо использовать плагины Bootstrap с другими фреймворками пользовательского интерфейса. В этих обстоятельствах иногда могут возникать конфликты пространств имен. Если это произойдет, Вы можете вызвать `.noConflict` в плагине, значение которого Вы хотите вернуть.
 
 ```js
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+var bootstrapButton = $.fn.button.noConflict() // вернуть $.fn.button к ранее присвоенному значению
+$.fn.bootstrapBtn = bootstrapButton // дать $().bootstrapBtn функциональность Bootstrap
 ```
 
-## Version numbers
+## Номера версий
 
-The version of each of Bootstrap's jQuery plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
+Доступ к версии каждого из плагинов Bootstrap jQuery можно получить через свойство VERSION конструктора плагина. Например, для плагина всплывающей подсказки:
 
 ```js
 $.fn.tooltip.Constructor.VERSION // => "{{< param current_version >}}"
 ```
 
-## No special fallbacks when JavaScript is disabled
+## Никаких специальных резервных вариантов при отключенном JavaScript
 
-Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+Плагины Bootstrap не особенно изящно отключаются при отключенном JavaScript. Если в этом случае Вам важен опыт пользователя, используйте [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript), чтобы объяснить ситуацию (и как повторно включить JavaScript) для Ваших пользователей и/или добавить свои собственные резервные варианты.
 
 {{< callout warning >}}
-##### Third-party libraries
+##### Сторонние библиотеки
 
-**Bootstrap does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+**Bootstrap официально не поддерживает сторонние библиотеки JavaScript**, такие как Prototype или jQuery UI. Несмотря на `.noConflict` и события в пространстве имен, могут возникнуть проблемы совместимости, которые Вам нужно исправить самостоятельно.
 {{< /callout >}}
 
 ## Util
 
-All Bootstrap's JavaScript files depend on `util.js` and it has to be included alongside the other JavaScript files. If you're using the compiled (or minified) `bootstrap.js`, there is no need to include this—it's already there.
+Все файлы JavaScript в Bootstrap зависят от `util.js`, и он должен быть включен вместе с другими файлами JavaScript. Если Вы используете скомпилированный (или минифицированный) файл `bootstrap.js`, нет необходимости включать его - он уже есть.
 
-`util.js` includes utility functions and a basic helper for `transitionEnd` events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.
+`util.js` включает служебные функции и базовый помощник для событий `transitionEnd`, а также эмулятор перехода CSS. Он используется другими плагинами для проверки поддержки переходов CSS и для обнаружения зависших переходов.
 
 ## Sanitizer
 
-Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.
+Всплывающие подсказки и всплывающие окна используют наше встроенное средство очистки для очистки параметров, принимающих HTML.
 
-The default `whiteList` value is the following:
+Значение по умолчанию `whiteList` следующее:
 
 ```js
 var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
 var DefaultWhitelist = {
-  // Global attributes allowed on any supplied element below.
+  // Глобальные атрибуты разрешены для любого указанного ниже элемента.
   '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
   a: ['target', 'href', 'title', 'rel'],
   area: [],
@@ -181,24 +181,24 @@ var DefaultWhitelist = {
 }
 ```
 
-If you want to add new values to this default `whiteList` you can do the following:
+Если Вы хотите добавить новые значения в этот белый список `whiteList` по умолчанию, Вы можете сделать следующее:
 
 ```js
 var myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList
 
-// To allow table elements
+// Разрешить элементы таблицы
 myDefaultWhiteList.table = []
 
-// To allow td elements and data-option attributes on td elements
+// Чтобы разрешить элементы td и атрибуты параметров данных в элементах td
 myDefaultWhiteList.td = ['data-option']
 
-// You can push your custom regex to validate your attributes.
-// Be careful about your regular expressions being too lax
+// Вы можете отправить собственное регулярное выражение для проверки своих атрибутов.
+// Будьте осторожны, чтобы Ваши регулярные выражения были слишком слабыми
 var myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultWhiteList['*'].push(myCustomRegex)
 ```
 
-If you want to bypass our sanitizer because you prefer to use a dedicated library, for example [DOMPurify](https://www.npmjs.com/package/dompurify), you should do the following:
+Если Вы хотите обойти наше средство очистки, потому что предпочитаете использовать специальную библиотеку, например [DOMPurify](https://www.npmjs.com/package/dompurify), Вам следует сделать следующее:
 
 ```js
 $('#yourTooltip').tooltip({

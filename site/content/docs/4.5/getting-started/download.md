@@ -1,49 +1,49 @@
 ---
 layout: docs
-title: Download
-description: Download Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.
+title: Скачать
+description: Загрузите Bootstrap, чтобы получить скомпилированные CSS и JavaScript, исходный код или включить его в свои любимые менеджеры пакетов, такие как npm, RubyGems и другие.
 group: getting-started
 toc: true
 ---
 
-## Compiled CSS and JS
+## Скомпилированный CSS и JS
 
-Download ready-to-use compiled code for **Bootstrap v{{< param current_version >}}** to easily drop into your project, which includes:
+Загрузите готовый к использованию скомпилированный код для **Bootstrap v{{< param current_version >}}**, чтобы его можно было легко использовать в вашем проекте, который включает:
 
-- Compiled and minified CSS bundles (see [CSS files comparison]({{< docsref "/getting-started/contents#css-files" >}}))
-- Compiled and minified JavaScript plugins (see [JS files comparison]({{< docsref "/getting-started/contents#js-files" >}}))
+- Скомпилированные и минимизированные пакеты CSS (см. [сравнение файлов CSS]({{< docsref "/getting-started/contents#css-файлы" >}}))
+- Скомпилированные и минимизированные плагины JavaScript (см. [сравнение JS файлов]({{< docsref "/getting-started/contents#js-файлы" >}}))
 
-This doesn't include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js).
+Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript (jQuery и Popper.js).
 
-<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
+<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Скачать</a>
 
-## Source files
+## Исходные файлы
 
-Compile Bootstrap with your own asset pipeline by downloading our source Sass, JavaScript, and documentation files. This option requires some additional tooling:
+Скомпилируйте Bootstrap с Вашим собственным конвейером ресурсов, загрузив наши исходные файлы Sass, JavaScript и документации. Для этого варианта требуются дополнительные инструменты:
 
-- Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
-- [Autoprefixer](https://github.com/postcss/autoprefixer) for CSS vendor prefixing
+- Компилятор Sass (поддерживается Libsass или Ruby Sass) для компиляции Вашего CSS.
+- [Autoprefixer](https://github.com/postcss/autoprefixer) для префикса поставщика CSS
 
-Should you require [build tools]({{< docsref "/getting-started/build-tools#tooling-setup" >}}), they are included for developing Bootstrap and its docs, but they're likely unsuitable for your own purposes.
+Если Вам потребуются [инструменты сборки]({{< docsref "/getting-started/build-tools#настройка-инструментов" >}}), они включены для разработки Bootstrap и его документации, но они, вероятно, не подходят для Ваших собственных целей.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Скачать исходники</a>
 
-## Examples
+## Примеры
 
-If you want to download and examine our [examples]({{< docsref "/examples" >}}), you can grab the already built examples:
+Если Вы хотите загрузить и изучить наши [примеры]({{< docsref "/examples" >}}), Вы можете скачать уже созданные примеры:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Download Examples</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Скачать Примеры</a>
 
 ## jsDelivr
 
-Skip the download with [jsDelivr](https://www.jsdelivr.com/) to deliver cached version of Bootstrap's compiled CSS and JS to your project.
+Пропустите загрузку с помощью [jsDelivr](https://www.jsdelivr.com/), чтобы доставить кэшированную версию скомпилированных CSS и JS Bootstrap в свой проект.
 
 ```html
 <link rel="stylesheet" href="{{< param "cdn.css" >}}" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-If you're using our compiled JavaScript and prefer to include Popper.js separately, add Popper.js before our JS, via a CDN preferably.
+Если Вы используете наш скомпилированный JavaScript и предпочитаете включать Popper.js отдельно, добавьте Popper.js перед нашим JS, желательно через CDN.
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
@@ -51,28 +51,28 @@ If you're using our compiled JavaScript and prefer to include Popper.js separate
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-## Package managers
+## Менеджеры пакетов
 
-Pull in Bootstrap's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler and [Autoprefixer](https://github.com/postcss/autoprefixer)** for a setup that matches our official compiled versions.
+Вставьте **исходные файлы** Bootstrap практически в любой проект с помощью некоторых из самых популярных менеджеров пакетов. Независимо от диспетчера пакетов, для Bootstrap **потребуется компилятор Sass и [Autoprefixer](https://github.com/postcss/autoprefixer)** для настройки, соответствующей нашим официальным скомпилированным версиям.
 
 ### npm
 
-Install Bootstrap in your Node.js powered apps with [the npm package](https://www.npmjs.com/package/bootstrap):
+Установите Bootstrap в приложения, работающие на Node.js с [пакетом npm](https://www.npmjs.com/package/bootstrap):
 
 ```sh
 npm install bootstrap
 ```
 
-`require('bootstrap')` will load all of Bootstrap's jQuery plugins onto the jQuery object. The `bootstrap` module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
+`require('bootstrap')` загрузит все плагины jQuery Bootstrap в объект jQuery. Сам модуль `bootstrap` ничего не экспортирует. Вы можете вручную загрузить плагины jQuery для Bootstrap по отдельности, загрузив файлы `/js/*.js` в каталог верхнего уровня пакета.
 
-Bootstrap's `package.json` contains some additional metadata under the following keys:
+Bootstrap `package.json` содержит некоторые дополнительные метаданные под следующими ключами:
 
-- `sass` - path to Bootstrap's main [Sass](https://sass-lang.com/) source file
-- `style` - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` - путь к основному исходному файлу Bootstrap [Sass](https://sass-lang.com/)
+- `style` - путь к неминифицированному CSS Bootstrap, который был предварительно скомпилирован с использованием настроек по умолчанию (без настройки)
 
 ### yarn
 
-Install Bootstrap in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/bootstrap):
+Установите Bootstrap в приложения, работающие на Node.js с [пакетом yarn](https://yarnpkg.com/en/package/bootstrap):
 
 ```sh
 yarn add bootstrap
@@ -80,23 +80,23 @@ yarn add bootstrap
 
 ### RubyGems
 
-Install Bootstrap in your Ruby apps using [Bundler](https://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](https://bundler.io/gemfile.html):
+Установите Bootstrap в свои приложения Ruby, используя [Bundler](https://bundler.io/) (**рекомендуется**) и [RubyGems](https://rubygems.org/), добавив следующую строку в свой [`Gemfile`](https://bundler.io/gemfile.html):
 
 ```ruby
 gem 'bootstrap', '~> {{< param current_ruby_version >}}'
 ```
 
-Alternatively, if you're not using Bundler, you can install the gem by running this command:
+В качестве альтернативы, если Вы не используете Bundler, Вы можете установить gem, выполнив эту команду:
 
 ```sh
 gem install bootstrap -v {{< param current_ruby_version >}}
 ```
 
-[See the gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details.
+[Смотрите gem README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) для получения дополнительной информации.
 
 ### Composer
 
-You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org/):
+Вы также можете установить и управлять Sass и JavaScript для Bootstrap, используя [Composer](https://getcomposer.org/):
 
 ```sh
 composer require twbs/bootstrap:{{< param current_version >}}
@@ -104,7 +104,7 @@ composer require twbs/bootstrap:{{< param current_version >}}
 
 ### NuGet
 
-If you develop in .NET, you can also install and manage Bootstrap's [CSS](https://www.nuget.org/packages/bootstrap/) or [Sass](https://www.nuget.org/packages/bootstrap.sass/) and JavaScript using [NuGet](https://www.nuget.org/):
+Если Вы разрабатываете в .NET, Вы также можете установить и управлять Bootstrap [CSS](https://www.nuget.org/packages/bootstrap/) или [Sass](https://www.nuget.org/packages/bootstrap.sass/) и JavaScript используя [NuGet](https://www.nuget.org/):
 
 ```powershell
 Install-Package bootstrap

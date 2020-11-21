@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Theming Bootstrap
-description: Customize Bootstrap 4 with our new built-in Sass variables for global style preferences for easy theming and component changes.
+title: Темы Bootstrap
+description: Настройте Bootstrap 4 с помощью наших новых встроенных переменных Sass для глобальных предпочтений стиля для упрощения создания тем и изменения компонентов.
 group: getting-started
 toc: true
 ---
 
-## Introduction
+## Вступление
 
-In Bootstrap 3, theming was largely driven by variable overrides in LESS, custom CSS, and a separate theme stylesheet that we included in our `dist` files. With some effort, one could completely redesign the look of Bootstrap 3 without touching the core files. Bootstrap 4 provides a familiar, but slightly different approach.
+В Bootstrap 3 тематизация во многом определялась переопределением переменных в LESS, пользовательским CSS и отдельной таблицей стилей темы, которую мы включили в наши файлы `dist`. Приложив некоторые усилия, можно полностью изменить внешний вид Bootstrap 3, не затрагивая файлы ядра. Bootstrap 4 предлагает знакомый, но немного другой подход.
 
-Now, theming is accomplished by Sass variables, Sass maps, and custom CSS. There's no more dedicated theme stylesheet; instead, you can enable the built-in theme to add gradients, shadows, and more.
+Теперь создание тем выполняется с помощью переменных Sass, карт Sass и настраиваемого CSS. Больше нет специальной таблицы стилей темы; вместо этого Вы можете включить встроенную тему, чтобы добавлять градиенты, тени и многое другое.
 
 ## Sass
 
-Utilize our source Sass files to take advantage of variables, maps, mixins, and more. In our build we've increased the Sass rounding precision to 6 (by default it's 5) to prevent issues with browser rounding.
+Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, миксины и многое другое. В нашей сборке мы увеличили точность округления Sass до 6 (по умолчанию 5), чтобы предотвратить проблемы с округлением в браузере.
 
-### File structure
+### Файловая структура
 
-Whenever possible, avoid modifying Bootstrap's core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
+По возможности избегайте изменения файлов ядра Bootstrap. Для Sass это означает создание собственной таблицы стилей, которая импортирует Bootstrap, чтобы Вы могли изменять и расширять ее. Предполагая, что Вы используете менеджер пакетов, такой как npm, у Вас будет файловая структура, которая выглядит следующим образом:
 
 ```text
 your-project/
@@ -30,7 +30,7 @@ your-project/
         └── scss
 ```
 
-If you've downloaded our source files and aren't using a package manager, you'll want to manually setup something similar to that structure, keeping Bootstrap's source files separate from your own.
+Если Вы загрузили наши исходные файлы и не используете диспетчер пакетов, Вам нужно вручную настроить что-то похожее на эту структуру, сохраняя исходные файлы Bootstrap отдельно от Ваших собственных.
 
 ```text
 your-project/
@@ -41,27 +41,27 @@ your-project/
     └── scss
 ```
 
-### Importing
+### Импорт
 
-In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
+В свой `custom.scss` Вы импортируете исходные файлы Sass для Bootstrap. У Вас есть два варианта: включить весь Bootstrap или выбрать нужные Вам части. Мы поощряем последнее, но имейте в виду, что между нашими компонентами есть некоторые требования и зависимости. Вам также необходимо будет включить некоторый JavaScript для наших плагинов.
 
 ```scss
 // Custom.scss
-// Option A: Include all of Bootstrap
+// Вариант A. Включите весь Bootstrap
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
 
 ```scss
 // Custom.scss
-// Option B: Include parts of Bootstrap
+// Вариант Б. Включите части Bootstrap
 
-// Required
+// Необходимые
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-// Optional
+// По желанию
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
@@ -69,38 +69,38 @@ In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two
 @import "../node_modules/bootstrap/scss/grid";
 ```
 
-With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Bootstrap under the `// Optional` section as needed. We suggest using the full import stack from our `bootstrap.scss` file as your starting point.
+Имея эту настройку, Вы можете приступить к изменению любых переменных и карт Sass в Вашем `custom.scss`. Вы также можете начать добавлять части Bootstrap в разделе `// Optional` по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла `bootstrap.scss` в качестве отправной точки.
 
-### Variable defaults
+### Значения переменных по умолчанию
 
-Every Sass variable in Bootstrap 4 includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Bootstrap's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Bootstrap.
+Каждая переменная Sass в Bootstrap 4 включает флаг `!default`, позволяющий переопределить значение переменной по умолчанию в Вашем собственном Sass без изменения исходного кода Bootstrap. Скопируйте и вставьте переменные по мере необходимости, измените их значения и удалите флаг `!default`. Если переменная уже была назначена, она не будет повторно назначена значениями по умолчанию в Bootstrap.
 
-You will find the complete list of Bootstrap's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
+Вы найдете полный список переменных Bootstrap в `scss/_variables.scss`. Некоторые переменные имеют значение `null`, эти переменные не выводят свойство, если они не переопределены в Вашей конфигурации.
 
-Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap's Sass files.
+Переопределения переменных в одном файле Sass могут быть до или после переменных по умолчанию. Однако при переопределении файлов Sass необходимо выполнить переопределение до того, как Вы импортируете файлы Sass для Bootstrap.
 
-Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Bootstrap via npm:
+Вот пример, который меняет `background-color` и `color` для `<body>` при импорте и компиляции Bootstrap через npm:
 
 ```scss
-// Your variable overrides
+// Ваша переменная переопределяет
 $body-bg: #000;
 $body-color: #111;
 
-// Bootstrap and its default variables
+// Bootstrap и его переменные по умолчанию
 @import "../node_modules/bootstrap/scss/bootstrap";
 ```
 
-Repeat as necessary for any variable in Bootstrap, including the global options below.
+При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.
 
-### Maps and loops
+### Карты и контуры
 
-Bootstrap 4 includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
+Bootstrap 4 включает в себя несколько карт Sass, пар ключ-значение, которые упрощают создание семейств связанных CSS. Мы используем карты Sass для наших цветов, контрольных точек сетки и многого другого. Как и переменные Sass, все карты Sass включают флаг `!default` и могут быть переопределены и расширены.
 
-Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making _removing_ items from a map slightly more difficult.
+Некоторые из наших Sass-карт по умолчанию объединены в пустые. Это сделано для того, чтобы упростить расширение данной карты Sass, но это происходит за счет того, что _удаление_ элементов с карты становится немного сложнее.
 
-#### Modify map
+#### Изменить карту
 
-To modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
+Чтобы изменить существующий цвет в нашей карте `$theme-colors`, добавьте следующее в свой пользовательский файл Sass:
 
 ```scss
 $theme-colors: (
@@ -109,9 +109,9 @@ $theme-colors: (
 );
 ```
 
-#### Add to map
+#### Добавить в карту
 
-To add a new color to `$theme-colors`, add the new key and value:
+Чтобы добавить новый цвет к `$theme-colors`, добавьте новый ключ и значение:
 
 ```scss
 $theme-colors: (
@@ -119,34 +119,34 @@ $theme-colors: (
 );
 ```
 
-#### Remove from map
+#### Удалить из карты
 
-To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aware you must insert it between our requirements and options:
+Чтобы удалить цвета из `$theme-colors`, или любой другой карты, используйте `map-remove`. Имейте в виду, что Вы должны вставить его между нашими требованиями и опциями:
 
 ```scss
-// Required
+// Необходимые
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
-// Optional
+// По желанию
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 ...
 ```
 
-#### Required keys
+#### Необходимые ключи
 
-Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
+Bootstrap предполагает наличие определенных ключей в картах Sass, которые мы использовали, и расширяем их сами. Когда Вы настраиваете включенные карты, Вы можете столкнуться с ошибками, когда используется конкретный ключ карты Sass.
 
-For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
+Например, мы используем ключи `primary`, `success` и `danger` из `$theme-colors` для ссылок, кнопок и состояний формы. Замена значений этих ключей не должна вызывать проблем, но их удаление может вызвать проблемы с компиляцией Sass. В этих случаях Вам нужно будет изменить код Sass, который использует эти значения.
 
-### Functions
+### Функции
 
-Bootstrap utilizes several Sass functions, but only a subset are applicable to general theming. We've included three functions for getting values from the color maps:
+Bootstrap использует несколько функций Sass, но только часть из них применима к общей тематике. Мы включили три функции для получения значений из цветовых карт:
 
 ```scss
 @function color($key: "blue") {
@@ -162,7 +162,7 @@ Bootstrap utilizes several Sass functions, but only a subset are applicable to g
 }
 ```
 
-These allow you to pick one color from a Sass map much like how you'd use a color variable from v3.
+Это позволяет Вам выбрать один цвет из карты Sass так же, как Вы бы использовали цветовую переменную из v3.
 
 ```scss
 .custom-element {
@@ -171,7 +171,7 @@ These allow you to pick one color from a Sass map much like how you'd use a colo
 }
 ```
 
-We also have another function for getting a particular _level_ of color from the `$theme-colors` map. Negative level values will lighten the color, while higher levels will darken.
+У нас также есть другая функция для получения определенного _уровня_ цвета из карты `$theme-colors`. Отрицательные значения уровня сделают цвет светлее, а более высокие - темнее.
 
 ```scss
 @function theme-color-level($color-name: "primary", $level: 0) {
@@ -183,7 +183,7 @@ We also have another function for getting a particular _level_ of color from the
 }
 ```
 
-In practice, you'd call the function and pass in two parameters: the name of the color from `$theme-colors` (e.g., primary or danger) and a numeric level.
+На практике вы должны вызвать функцию и передать ей два параметра: имя цвета из `$theme-colors` (например, primary или danger) и числовой уровень.
 
 ```scss
 .custom-element {
@@ -191,13 +191,13 @@ In practice, you'd call the function and pass in two parameters: the name of the
 }
 ```
 
-Additional functions could be added in the future or your own custom Sass to create level functions for additional Sass maps, or even a generic one if you wanted to be more verbose.
+В будущем могут быть добавлены дополнительные функции или Ваш собственный пользовательский Sass для создания функций уровней для дополнительных карт Sass, или даже общий, если Вы хотите быть более подробным.
 
-#### Color contrast
+#### Цветовой контраст
 
-An additional function we include in Bootstrap is the color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
+Дополнительная функция, которую мы включили в Bootstrap, - это функция цветового контраста, `color-yiq`. Он использует [цветовое пространство YIQ](https://en.wikipedia.org/wiki/YIQ) для автоматического возврата светлого (`#fff`) или темного (`#111`) контрастного цвета на основе указанного базового цвета. Эта функция особенно полезна для миксинов или циклов, в которых Вы создаете несколько классов.
 
-For example, to generate color swatches from our `$theme-colors` map:
+Например, чтобы сгенерировать образцы цвета из нашей карты `$theme-colors`:
 
 ```scss
 @each $color, $value in $theme-colors {
@@ -207,94 +207,94 @@ For example, to generate color swatches from our `$theme-colors` map:
 }
 ```
 
-It can also be used for one-off contrast needs:
+Его также можно использовать для одноразового использования контрастного вещества:
 
 ```scss
 .custom-element {
-  color: color-yiq(#000); // returns `color: #fff`
+  color: color-yiq(#000); // вернет `color: #fff`
 }
 ```
 
-You can also specify a base color with our color map functions:
+Вы также можете указать базовый цвет с помощью наших функций цветовой карты:
 
 ```scss
 .custom-element {
-  color: color-yiq(theme-color("dark")); // returns `color: #fff`
+  color: color-yiq(theme-color("dark")); // вернет `color: #fff`
 }
 ```
 
-#### Escape SVG
+#### Экранирование SVG
 
-We use the `escape-svg` function to escape the `<`, `>` and `#` characters for SVG background images. These characters need to be escaped to properly render the background images in IE. When using the `escape-svg` function, data URIs must be quoted.
+Мы используем функцию `escape-svg` для экранирования символов `<`, `>` и `#` для фоновых изображений SVG. Эти символы необходимо экранировать, чтобы правильно отображать фоновые изображения в IE. При использовании функции `escape-svg` необходимо указывать URI данных.
 
-#### Add and Subtract functions
+#### Функции сложения и вычитания
 
-We use the `add` and `subtract` functions to wrap the CSS `calc` function. The primary purpose of these functions is to avoid errors when a "unitless" `0` value is passed into a `calc` expression. Expressions like `calc(10px - 0)` will return an error in all browsers, despite being mathematically correct.
+Мы используем функции `add` и `subtract`, чтобы обернуть функцию CSS `calc`. Основная цель этих функций - избежать ошибок, когда безразмерное значение `0` передается в выражение `calc`. Выражения вроде `calc(10px - 0)` вернут ошибку во всех браузерах, несмотря на то, что они математически верны.
 
-Example where the calc is valid:
+Пример, когда расчет действителен:
 
 ```scss
 $border-radius: .25rem;
 $border-width: 1px;
 
 .element {
-  // Output calc(.25rem - 1px) is valid
+  // Вывод calc(.25rem - 1px) действителен
   border-radius: calc($border-radius - $border-width);
 }
 
 .element {
-  // Output the same calc(.25rem - 1px) as above
+  // Вывод тот же calc(.25rem - 1px) как указано выше
   border-radius: subtract($border-radius, $border-width);
 }
 ```
 
-Example where the calc is invalid:
+Пример неверного вычисления:
 
 ```scss
 $border-radius: .25rem;
 $border-width: 0;
 
 .element {
-  // Output calc(.25rem - 0) is invalid
+  // Вывод calc(.25rem - 0) недействителен
   border-radius: calc($border-radius - $border-width);
 }
 
 .element {
-  // Output .25rem
+  // Вывод .25rem
   border-radius: subtract($border-radius, $border-width);
 }
 ```
 
-## Sass options
+## Параметры Sass
 
-Customize Bootstrap 4 with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with `npm run test` as needed.
+Настройте Bootstrap 4 с помощью нашего встроенного файла пользовательских переменных и легко переключайте глобальные настройки CSS с помощью новых переменных Sass `$enable-*`. Замените значение переменной и при необходимости перекомпилируйте с помощью `npm run test`.
 
-You can find and customize these variables for key global options in Bootstrap's `scss/_variables.scss` file.
+Вы можете найти и настроить эти переменные для ключевых глобальных параметров в файле Bootstrap `scss/_variables.scss`.
 
-| Variable                                     | Values                             | Description                                                                            |
-| -------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
-| `$spacer`                                    | `1rem` (default), or any value > 0 | Specifies the default spacer value to programmatically generate our [spacer utilities]({{< docsref "/utilities/spacing" >}}). |
-| `$enable-rounded`                            | `true` (default) or `false`        | Enables predefined `border-radius` styles on various components. |
-| `$enable-shadows`                            | `true` or `false` (default)        | Enables predefined `box-shadow` styles on various components. |
-| `$enable-gradients`                          | `true` or `false` (default)        | Enables predefined gradients via `background-image` styles on various components. |
-| `$enable-transitions`                        | `true` (default) or `false`        | Enables predefined `transition`s on various components. |
-| `$enable-prefers-reduced-motion-media-query` | `true` (default) or `false`        | Enables the [`prefers-reduced-motion` media query]({{< docsref "/getting-started/accessibility#reduced-motion" >}}), which suppresses certain animations/transitions based on the users' browser/operating system preferences. |
-| `$enable-hover-media-query`                  | `true` or `false` (default)        | **Deprecated** |
-| `$enable-grid-classes`                       | `true` (default) or `false`        | Enables the generation of CSS classes for the grid system (e.g., `.container`, `.row`, `.col-md-1`, etc.). |
-| `$enable-caret`                              | `true` (default) or `false`        | Enables pseudo element caret on `.dropdown-toggle`. |
-| `$enable-pointer-cursor-for-buttons`         | `true` (default) or `false`        | Add "hand" cursor to non-disabled button elements. |
-| `$enable-print-styles`                       | `true` (default) or `false`        | Enables styles for optimizing printing. |
-| `$enable-responsive-font-sizes`              | `true` or `false` (default)        | Enables [responsive font sizes]({{< docsref "/content/typography#responsive-font-sizes" >}}). |
-| `$enable-validation-icons`                   | `true` (default) or `false`        | Enables `background-image` icons within textual inputs and some custom forms for validation states. |
-| `$enable-deprecation-messages`               | `true` or `false` (default)        | Set to `true` to show warnings when using any of the deprecated mixins and functions that are planned to be removed in `v5`. |
+| Переменная                                   | Значения                                     | Описание                                                                               |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$spacer`                                    | `1rem` (по умолчанию) или любое значение > 0 | Задает значение разделителя по умолчанию для программного создания наших [утилит-разделителей]({{< docsref "/utilities/spacing" >}}). |
+| `$enable-rounded`                            | `true` (по умолчанию) или `false`            | Включает предопределенные стили `border-radius` для различных компонентов. |
+| `$enable-shadows`                            | `true` или `false` (по умолчанию)            | Включает предопределенные стили `box-shadow` для различных компонентов. |
+| `$enable-gradients`                          | `true` или `false` (по умолчанию)            | Включает предопределенные градиенты с помощью стилей `background-image` для различных компонентов. |
+| `$enable-transitions`                        | `true` (по умолчанию) или `false`            | Включает предопределенные `transition` для различных компонентов. |
+| `$enable-prefers-reduced-motion-media-query` | `true` (по умолчанию) или `false`            | Включает [медиа-запрос `prefers-reduced-motion`]({{< docsref "/getting-started/accessibility#замедленное-движение" >}}), который подавляет определенные анимации/переходы в зависимости от предпочтения браузера/операционной системы пользователя. |
+| `$enable-hover-media-query`                  | `true` или `false` (по умолчанию)            | **Не рекомендуется** |
+| `$enable-grid-classes`                       | `true` (по умолчанию) или `false`            | Позволяет создавать классы CSS для системы сеток (например, `.container`, `.row`, `.col-md-1`, и т.д.). |
+| `$enable-caret`                              | `true` (по умолчанию) или `false`            | Включает каретку псевдоэлемента `.dropdown-toggle`. |
+| `$enable-pointer-cursor-for-buttons`         | `true` (по умолчанию) или `false`            | Добавляет курсор в виде руки к неотключенным кнопочным элементам. |
+| `$enable-print-styles`                       | `true` (по умолчанию) или `false`            | Включает стили для оптимизации печати. |
+| `$enable-responsive-font-sizes`              | `true` или `false` (по умолчанию)            | Включает [размер адаптивного шрифта]({{< docsref "/content/typography#адаптивные-размеры-шрифтов" >}}). |
+| `$enable-validation-icons`                   | `true` (по умолчанию) или `false`            | Включает иконки `background-image` в текстовых полях ввода и некоторых настраиваемых формах для состояний проверки. |
+| `$enable-deprecation-messages`               | `true` или `false` (по умолчанию)            | Установите значение `true` , чтобы показывать предупреждения при использовании любых устаревших миксинов и функций, которые планируется удалить в `v5`. |
 
-## Color
+## Цвет
 
-Many of Bootstrap's various components and utilities are built through a series of colors defined in a Sass map. This map can be looped over in Sass to quickly generate a series of rulesets.
+Многие из различных компонентов и утилит Bootstrap построены с помощью серии цветов, определенных в карте Sass. Эту карту можно перебрать в Sass, чтобы быстро сгенерировать серию наборов правил.
 
-### All colors
+### Все цвета
 
-All colors available in Bootstrap 4, are available as Sass variables and a Sass map in `scss/_variables.scss` file. This will be expanded upon in subsequent minor releases to add additional shades, much like the [grayscale palette](#grays) we already include.
+Все цвета, доступные в Bootstrap 4, доступны как переменные Sass и карта Sass в файле `scss/_variables.scss`. Это будет расширено в последующих второстепенных выпусках для добавления дополнительных оттенков, как и в уже включенной [палитре оттенков серого](#серые).
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -308,25 +308,25 @@ All colors available in Bootstrap 4, are available as Sass variables and a Sass 
   {{< /theme-colors.inline >}}
 </div>
 
-Here's how you can use these in your Sass:
+Вот как Вы можете использовать их в своем Sass:
 
 ```scss
-// With variable
+// С переменной
 .alpha { color: $purple; }
 
-// From the Sass map with our `color()` function
+// Из карты Sass с нашей функцией `color()`
 .beta { color: color("purple"); }
 ```
 
-[Color utility classes]({{< docsref "/utilities/colors" >}}) are also available for setting `color` and `background-color`.
+[Цветовые служебные классы]({{< docsref "/utilities/colors" >}}) также доступны для установки `color` и `background-color`.
 
 {{< callout info >}}
-In the future, we'll aim to provide Sass maps and variables for shades of each color as we've done with the grayscale colors below.
+В будущем мы будем стремиться предоставить карты и переменные Sass для оттенков каждого цвета, как мы это сделали с цветами в градациях серого ниже.
 {{< /callout >}}
 
-### Theme colors
+### Цвета темы
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
+Мы используем подмножество всех цветов, чтобы создать меньшую цветовую палитру для создания цветовых схем, также доступных в виде переменных Sass и карты Sass в файле `scss/_variables.scss` Bootstrap.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -338,9 +338,9 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-### Grays
+### Серые
 
-An expansive set of gray variables and a Sass map in `scss/_variables.scss` for consistent shades of gray across your project. Note that these are "cool grays", which tend towards a subtle blue tone, rather than neutral grays.
+Обширный набор переменных серого и карта Sass в `scss/_variables.scss` для согласованных оттенков серого во всем Вашем проекте. Обратите внимание, что это «холодные оттенки серого», которые имеют тенденцию к мягкому синему тону, а не к нейтральным серым.
 
 <div class="row mb-3">
   <div class="col-md-4">
@@ -352,7 +352,7 @@ An expansive set of gray variables and a Sass map in `scss/_variables.scss` for 
   </div>
 </div>
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+В `scss/_variables.scss` Вы найдете цветовые переменные Bootstrap и карту Sass. Вот пример Sass-карты `$colors`:
 
 ```scss
 $colors: (
@@ -372,35 +372,35 @@ $colors: (
 ) !default;
 ```
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+Добавляйте, удаляйте или изменяйте значения на карте, чтобы обновить их использование во многих других компонентах. К сожалению, в настоящее время не _каждый_ компонент использует эту карту Sass. В будущих обновлениях мы постараемся улучшить это. А пока планируйте использовать переменные `${color}` и эту карту Sass.
 
-## Components
+## Компоненты
 
-Many of Bootstrap's components and utilities are built with `@each` loops that iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
+Многие компоненты и утилиты Bootstrap построены с использованием циклов `@each`, которые повторяются по карте Sass. Это особенно полезно для генерации вариантов компонента с помощью нашей `$theme-colors` и создания адаптивных вариантов для каждой контрольной точки. Когда Вы настраиваете эти карты Sass и перекомпилируете, Вы автоматически увидите свои изменения, отраженные в этих циклах.
 
-### Modifiers
+### Модификаторы
 
-Many of Bootstrap's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., `.btn`) while style variations are confined to modifier classes (e.g., `.btn-danger`). These modifier classes are built from the `$theme-colors` map to make customizing the number and name of our modifier classes.
+Многие компоненты Bootstrap построены с использованием подхода базового модификатора. Это означает, что основная часть стилей содержится в базовом классе (например, `.btn`), в то время как варианты стилей ограничиваются классами-модификаторами (например, `.btn-danger`). Эти классы модификаторов построены из карты `$theme-colors` для настройки количества и имени наших классов модификаторов.
 
-Here are two examples of how we loop over the `$theme-colors` map to generate modifiers to the `.alert` component and all our `.bg-*` background utilities.
+Вот два примера того, как мы перебираем карту `$theme-colors` для генерации модификаторов для компонента `.alert` и всех наших фоновых утилит `.bg-*`.
 
 ```scss
-// Generate alert modifier classes
+// Создание классов модификаторов предупреждений
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
   }
 }
 
-// Generate `.bg-*` color utilities
+// Создание цветных утилит `.bg- *`
 @each $color, $value in $theme-colors {
   @include bg-variant('.bg-#{$color}', $value);
 }
 ```
 
-### Responsive
+### Отзывчивый
 
-These Sass loops aren't limited to color maps, either. You can also generate responsive variations of your components or utilities. Take for example our responsive text alignment utilities where we mix an `@each` loop for the `$grid-breakpoints` Sass map with a media query include.
+Эти циклы Sass также не ограничиваются цветовыми картами. Вы также можете создавать адаптивные варианты Ваших компонентов или утилит. Возьмем, к примеру, наши адаптивные утилиты выравнивания текста, в которых мы смешиваем цикл `@each` для карты Sass `$grid-breakpoints` с включением медиа-запроса.
 
 ```scss
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -414,15 +414,15 @@ These Sass loops aren't limited to color maps, either. You can also generate res
 }
 ```
 
-Should you need to modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
+Если Вам нужно изменить Ваши `$grid-breakpoints`, Ваши изменения будут применяться ко всем циклам, повторяющимся по этой карте.
 
-## CSS variables
+## CSS переменные
 
-Bootstrap 4 includes around two dozen [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's Inspector, a code sandbox, or general prototyping.
+Bootstrap 4 включает около двух десятков [настраиваемых свойств (переменных) CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) в своем скомпилированном CSS. Они обеспечивают легкий доступ к часто используемым значениям, таким как цвета нашей темы, контрольные точки и стеки основных шрифтов, при работе в инспекторе Вашего браузера, в изолированной программной среде или при общем прототипировании.
 
-### Available variables
+### Доступные переменные
 
-Here are the variables we include (note that the `:root` is required). They're located in our `_root.scss` file.
+Вот переменные, которые мы включаем (обратите внимание, что требуется `:root`). Они находятся в нашем файле `_root.scss`.
 
 ```css
 {{< root.inline >}}
@@ -438,9 +438,9 @@ Here are the variables we include (note that the `:root` is required). They're l
 {{< /root.inline >}}
 ```
 
-### Examples
+### Примеры
 
-CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+Переменные CSS предлагают такую же гибкость, что и переменные Sass, но без необходимости компиляции перед отправкой в браузер. Например, здесь мы сбрасываем шрифт нашей страницы и стили ссылок с помощью переменных CSS.
 
 ```css
 body {
@@ -451,11 +451,11 @@ a {
 }
 ```
 
-### Breakpoint variables
+### Переменные контрольной точки
 
-While we originally included breakpoints in our CSS variables (e.g., `--breakpoint-md`), **these are not supported in media queries**, but they can still be used _within_ rulesets in media queries. These breakpoint variables remain in the compiled CSS for backward compatibility given they can be utilized by JavaScript. [Learn more in the spec](https://www.w3.org/TR/css-variables-1/#using-variables).
+Хотя изначально мы включили контрольные точки в наши переменные CSS (например, `--breakpoint-md`), **они не поддерживаются в медиа-запросах**, но их все же можно использовать _внутри_ наборов правил в медиа-запросах. Эти переменные контрольные точки остаются в скомпилированном CSS для обратной совместимости, поскольку они могут использоваться JavaScript. [Подробнее читайте в спецификации](https://www.w3.org/TR/css-variables-1/#using-variables).
 
-Here's an example of **what's not supported:**
+Вот пример **того, что не поддерживается:**
 
 ```css
 @media (min-width: var(--breakpoint-sm)) {
@@ -463,7 +463,7 @@ Here's an example of **what's not supported:**
 }
 ```
 
-And here's an example of **what is supported:**
+А вот пример **того, что поддерживается:**
 
 ```css
 @media (min-width: 768px) {
