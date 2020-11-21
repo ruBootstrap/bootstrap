@@ -1,48 +1,48 @@
 ---
 layout: docs
-title: Overview
-description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
+title: Обзор
+description: Компоненты и опции для компоновки Вашего проекта Bootstrap, включая контейнеры-оболочки, мощную систему сеток, гибкий медиа-объект и адаптивные служебные классы.
 group: layout
 aliases: "/docs/4.5/layout/"
 toc: true
 ---
 
-## Containers
+## Контейнеры
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Контейнеры являются самым основным элементом макета в Bootstrap и **необходимы при использовании нашей сеточной системы по умолчанию**. Контейнеры используются для содержания, заполнения и (иногда) центрирования содержимого внутри них. Хотя контейнеры *могут* быть вложенными, для большинства макетов вложенный контейнер не требуется.
 
-Bootstrap comes with three different containers:
+Bootstrap поставляется с тремя разными контейнерами:
 
-- `.container`, which sets a `max-width` at each responsive breakpoint
-- `.container-fluid`, which is `width: 100%` at all breakpoints
-- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- `.container`, который устанавливает максимальную ширину `max-width` в каждой ответной контрольной точке
+- `.container-fluid`, который равен ширине `width: 100%` во всех контрольных точках
+- `.container-{breakpoint}`, который равен ширине `width: 100%` до указанной контрольной точки
 
-The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
+В приведенной ниже таблице показано, как максимальная ширина `max-width` каждого контейнера сравнивается с исходными `.container` и `.container-fluid` для каждой контрольной точки.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+Посмотрите на них в действии и сравните их в нашем [примере сетки]({{< docsref "/examples/grid#контейнеры" >}}).
 
 <table class="table text-left">
   <thead>
     <tr>
       <th></th>
       <th>
-        Extra small<br>
+        Очень маленький<br>
         <span class="font-weight-normal">&lt;576px</span>
       </th>
       <th>
-        Small<br>
+        Маленький<br>
         <span class="font-weight-normal">&ge;576px</span>
       </th>
       <th>
-        Medium<br>
+        Средний<br>
         <span class="font-weight-normal">&ge;768px</span>
       </th>
       <th>
-        Large<br>
+        Большой<br>
         <span class="font-weight-normal">&ge;992px</span>
       </th>
       <th>
-        Extra large<br>
+        Очень большой<br>
         <span class="font-weight-normal">&ge;1200px</span>
       </th>
     </tr>
@@ -99,19 +99,19 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
   </tbody>
 </table>
 
-### All-in-one
+### Все в одном
 
-Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
+Наш класс по умолчанию `.container` является адаптивным контейнером фиксированной ширины, что означает, что его максимальная ширина `max-width` изменяется в каждой контрольной точке.
 
 ```html
 <div class="container">
-  <!-- Content here -->
+  <!-- Контент здесь -->
 </div>
 ```
 
-### Fluid
+### На всю ширину
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+Используйте `.container-fluid` для контейнера полной ширины, охватывающего всю ширину области просмотра.
 
 ```html
 <div class="container-fluid">
@@ -119,50 +119,50 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 </div>
 ```
 
-### Responsive
+### Отзывчивый
 
-Responsive containers are new in Bootstrap v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, and `xl`.
+Адаптивные контейнеры - это новинка Bootstrap v4.4. Они позволяют Вам указать класс шириной 100% до достижения указанной контрольной точки, после чего мы применяем `max-width` для каждой из более высоких контрольных точек. Например, `.container-sm` имеет 100% ширину для начала до тех пор, пока не будет достигнута контрольная точка `sm`, где он будет масштабироваться с помощью `md`, `lg` и `xl`.
 
 ```html
-<div class="container-sm">100% wide until small breakpoint</div>
-<div class="container-md">100% wide until medium breakpoint</div>
-<div class="container-lg">100% wide until large breakpoint</div>
-<div class="container-xl">100% wide until extra large breakpoint</div>
+<div class="container-sm">100% шириной до маленькой контрольной точки</div>
+<div class="container-md">100% шириной до средней контрольной точки</div>
+<div class="container-lg">100% шириной до большой контрольной точки</div>
+<div class="container-xl">100% шириной до очень большой контрольной точки</div>
 ```
 
-## Responsive breakpoints
+## Отзывчивые контрольные точки
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+Поскольку Bootstrap в первую очередь разработан для мобильных устройств, мы используем несколько [медиа-запросов](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) для создания разумных контрольных точек для наших макетов и интерфейсов. Эти контрольные точки в основном основаны на минимальной ширине области просмотра и позволяют масштабировать элементы по мере изменения области просмотра.
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+Bootstrap в основном использует следующие диапазоны медиа-запросов - или контрольные точки - в наших исходных файлах Sass для нашей разметки, системы сеток и компонентов.
 
 ```scss
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+// Очень маленькие устройства (портретные телефоны, менее 576 пикселей)
+// Нет медиа-запроса для `xs`, так как это значение по умолчанию в Bootstrap
 
-// Small devices (landscape phones, 576px and up)
+// Небольшие устройства (телефоны с горизонтальной ориентацией, 576 пикселей и выше)
 @media (min-width: 576px) { ... }
 
-// Medium devices (tablets, 768px and up)
+// Средние устройства (планшеты, 768 пикселей и выше)
 @media (min-width: 768px) { ... }
 
-// Large devices (desktops, 992px and up)
+// Большие устройства (настольные компьютеры, 992 пикселей и выше)
 @media (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+// Очень большие устройства (большие рабочие столы, 1200 пикселей и выше)
 @media (min-width: 1200px) { ... }
 ```
 
-Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
+Поскольку мы пишем наш исходный CSS на Sass, все наши медиа-запросы доступны через миксины Sass:
 
 ```scss
-// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+// Для контрольной точки xs не требуется медиа-запрос, поскольку он фактически `@media (min-width: 0) { ... }`
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
 
-// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+// Пример: Скрыть начало с `min-width: 0`, а затем показать в контрольной точке`sm`
 .custom-class {
   display: none;
 }
@@ -173,39 +173,39 @@ Since we write our source CSS in Sass, all our media queries are available via S
 }
 ```
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+Иногда мы используем медиа-запросы, идущие в другом направлении (заданный размер экрана *или меньше*):
 
 ```scss
-// Extra small devices (portrait phones, less than 576px)
+// Очень маленькие устройства (портретные телефоны, менее 576 пикселей)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, less than 768px)
+// Небольшие устройства (телефоны с горизонтальной ориентацией, менее 768 пикселей)
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
+// Средние устройства (планшеты, менее 992 пикселей)
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
+// Большие устройства (настольные компьютеры, менее 1200 пикселей)
 @media (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+// Очень большие устройства (большие рабочие столы)
+// Нет медиа-запроса, так как очень большая контрольная точка не имеет верхней границы ширины
 ```
 
 {{< callout info >}}
 {{< partial "callout-info-mediaqueries-breakpoints.md" >}}
 {{< /callout >}}
 
-Once again, these media queries are also available via Sass mixins:
+Еще раз, эти медиа-запросы также доступны через миксины Sass:
 
 ```scss
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
-// No media query necessary for xl breakpoint as it has no upper bound on its width
+// Для контрольной точки xl не требуется медиа-запрос, так как он не имеет верхней границы ширины
 
-// Example: Style from medium breakpoint and down
+// Пример: стиль от средней контрольной точки и ниже
 @include media-breakpoint-down(md) {
   .custom-class {
     display: block;
@@ -213,26 +213,26 @@ Once again, these media queries are also available via Sass mixins:
 }
 ```
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+Существуют также медиа-запросы и миксины для нацеливания на один сегмент размеров экрана с использованием минимальной и максимальной ширины контрольной точки.
 
 ```scss
-// Extra small devices (portrait phones, less than 576px)
+// Очень маленькие устройства (портретные телефоны, менее 576 пикселей)
 @media (max-width: 575.98px) { ... }
 
-// Small devices (landscape phones, 576px and up)
+// Небольшие устройства (телефоны с горизонтальной ориентацией, 576 пикселей и выше)
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, 768px and up)
+// Средние устройства (планшеты, 768 пикселей и выше)
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 
-// Large devices (desktops, 992px and up)
+// Большие устройства (настольные компьютеры, 992 пикселей и выше)
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
+// Очень большие устройства (большие рабочие столы, 1200 пикселей и выше)
 @media (min-width: 1200px) { ... }
 ```
 
-These media queries are also available via Sass mixins:
+Эти медиа-запросы также доступны через миксины Sass:
 
 ```scss
 @include media-breakpoint-only(xs) { ... }
@@ -242,15 +242,15 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 ```
 
-Similarly, media queries may span multiple breakpoint widths:
+Точно так же медиа-запросы могут охватывать несколько значений ширины контрольной точки:
 
 ```scss
-// Example
-// Apply styles starting from medium devices and up to extra large devices
+// Пример
+// Применяйте стили, начиная со средних и заканчивая очень большими.
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 ```
 
-The Sass mixin for targeting the same screen size range would be:
+Миксин Sass для таргетинга на тот же диапазон размеров экрана:
 
 ```scss
 @include media-breakpoint-between(md, xl) { ... }
@@ -258,11 +258,11 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+Некоторые компоненты Bootstrap используют `z-index`, свойство CSS, которое помогает управлять макетом, предоставляя третью ось для упорядочивания содержимого. Мы используем шкалу z-индекса по умолчанию в Bootstrap, которая была разработана для правильного разделения навигации, всплывающих и всплывающих подсказок, модальных окон и многого другого.
 
-These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
+Эти более высокие значения начинаются с произвольного числа, достаточно большого и достаточно конкретного, чтобы в идеале избежать конфликтов. Нам нужен стандартный набор этих элементов для наших многоуровневых компонентов - всплывающие подсказки, всплывающие окна, панели навигации, раскрывающиеся списки, модальные окна - чтобы мы могли быть достаточно последовательными в поведении. Нет причин, по которым мы не могли использовать `100`+ или `500`+.
 
-We don't encourage customization of these individual values; should you change one, you likely need to change them all.
+Мы не поощряем настройку этих индивидуальных значений; если Вы измените один, Вам, вероятно, придется изменить их все.
 
 ```scss
 $zindex-dropdown:          1000 !default;
@@ -274,4 +274,4 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 ```
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+Чтобы обрабатывать перекрывающиеся границы внутри компонентов (например, кнопок и входов в группах ввода), мы используем малые однозначные значения `z-index`, равные `1`, `2` и `3` для состояний по умолчанию, при наведении курсора и активного состояния. При наведении/фокусе/активном мы выводим конкретный элемент на передний план с более высоким значением `z-index`, чтобы показать его границу над соседними элементами.
