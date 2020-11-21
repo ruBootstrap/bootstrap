@@ -60,7 +60,7 @@
 
     // Insert copy to clipboard button before .highlight
     $('div.highlight').each(function () {
-      var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
+      var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Скопировать в буфер обмена">Копировать</button></div>'
       $(this).before(btnHtml)
       $('.btn-clipboard')
         .tooltip()
@@ -80,10 +80,10 @@
 
     clipboard.on('success', function (e) {
       $(e.trigger)
-        .attr('title', 'Copied!')
+        .attr('title', 'Скопировано!')
         .tooltip('_fixTitle')
         .tooltip('show')
-        .attr('title', 'Copy to clipboard')
+        .attr('title', 'Скопировать в буфер обмена')
         .tooltip('_fixTitle')
 
       e.clearSelection()
@@ -97,7 +97,7 @@
         .attr('title', fallbackMsg)
         .tooltip('_fixTitle')
         .tooltip('show')
-        .attr('title', 'Copy to clipboard')
+        .attr('title', 'Скопировать в буфер обмена')
         .tooltip('_fixTitle')
     })
 
