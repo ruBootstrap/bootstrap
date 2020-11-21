@@ -43,7 +43,7 @@
       hint: Утилиты для верстки
       slug: utilities-for-layout
 
-- title: Content
+- title: Контент
   slug: content
   pages:
     - title: Reboot

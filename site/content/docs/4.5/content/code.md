@@ -1,50 +1,50 @@
 ---
 layout: docs
-title: Code
-description: Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.
+title: Код
+description: Документация и примеры для отображения встроенных и многострочных блоков кода с помощью Bootstrap.
 group: content
 toc: true
 ---
 
-## Inline code
+## Строковый код
 
-Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
+Оберните встроенные фрагменты кода в `<code>`. Обязательно избегайте угловых скобок HTML.
 
 {{< example >}}
-For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+Например, <code>&lt;section&gt;</code> должен быть заключен в оболочку как встроенный.
 {{< /example >}}
 
-## Code blocks
+## Блоки кода
 
-Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. You may optionally add the `.pre-scrollable` class, which will set a max-height of 340px and provide a y-axis scrollbar.
+Используйте `<pre>` для нескольких строк кода. Еще раз, не забудьте снять угловые скобки в коде для правильного рендеринга. Вы можете при желании добавить класс `.pre-scrollable`, который установит максимальную высоту 340 пикселей и предоставит полосу прокрутки по оси Y.
 
 {{< example >}}
-<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+<pre><code>&lt;p&gt;Образец текста здесь...&lt;/p&gt;
+&lt;p&gt;И еще одна строка образца текста здесь...&lt;/p&gt;
 </code></pre>
 {{< /example >}}
 
-## Variables
+## Переменные
 
-For indicating variables use the `<var>` tag.
+Для обозначения переменных используйте тег `<var>`.
 
 {{< example >}}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {{< /example >}}
 
-## User input
+## Пользовательский ввод
 
-Use the `<kbd>` to indicate input that is typically entered via keyboard.
+Используйте `<kbd>` для обозначения ввода, который обычно вводится с клавиатуры.
 
 {{< example >}}
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+Чтобы переключить каталоги, введите <kbd>cd</kbd>, а затем имя каталога.<br>
+Чтобы изменить настройки, нажмите <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
 
-## Sample output
+## Пример вывода
 
-For indicating sample output from a program use the `<samp>` tag.
+Для указания образца вывода из программы используйте тег `<samp>`.
 
 {{< example >}}
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
+<samp>Этот текст следует рассматривать как образец вывода компьютерной программы..</samp>
 {{< /example >}}

@@ -1,36 +1,36 @@
 ---
 layout: docs
-title: Images
-description: Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.
+title: Изображения
+description: Документация и примеры для настройки изображений на адаптивное поведение (чтобы они никогда не становились больше, чем их родительские элементы) и добавления к ним легких стилей - все через классы.
 group: content
 toc: true
 ---
 
-## Responsive images
+## Адаптивные изображения
 
-Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
+Образы в Bootstrap становятся адаптивными с помощью `.img-fluid`. `max-width: 100%;` и `height: auto;` применяются к изображению так, чтобы оно масштабировалось вместе с родительским элементом.
 
 {{< example >}}
-{{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
+{{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Адаптивное изображение" >}}
 {{< /example >}}
 
 {{< callout warning >}}
-##### SVG images and Internet Explorer
+##### Изображения SVG и Internet Explorer
 
-In Internet Explorer 10 and 11, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100%;` or `.w-100` where necessary. This fix improperly sizes other image formats, so Bootstrap doesn't apply it automatically.
+В Internet Explorer 10 и 11 изображения SVG с расширением `.img-fluid` имеют непропорционально большой размер. Чтобы исправить это, добавьте при необходимости `width: 100%;` или `.w-100`. Это исправление неправильно изменяет размер других форматов изображений, поэтому Bootstrap не применяет его автоматически.
 {{< /callout >}}
 
-## Image thumbnails
+## Эскизы изображений
 
-In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+В дополнение к нашим [утилитам закругления границ]({{< docsref "/utilities/borders" >}}), вы можете использовать `.img-thumbnail`, чтобы придать изображению округлую границу в 1 пиксель.
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
+{{< placeholder width="200" height="200" class="img-thumbnail" title="Обычное квадратное изображение-заполнитель с белой рамкой вокруг него, что делает его похожим на фотографию, сделанную на старую камеру мгновенного действия." >}}
 {{< /example >}}
 
-## Aligning images
+## Выравнивание изображений
 
-Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
+Выровняйте изображения по [вспомогательным классам с плавающей точкой]({{< docsref "/utilities/float" >}}) или [классам выравнивания текста]({{< docsref "/utilities/text#text-alignment" >}}). Изображения уровня `block` можно центрировать с помощью [служебного класса поля `.mx-auto`]({{< docsref "/utilities/spacing#горизонтальное-центрирование" >}}).
 
 {{< example >}}
 {{< placeholder width="200" height="200" class="rounded float-left" >}}
@@ -48,9 +48,9 @@ Align images with the [helper float classes]({{< docsref "/utilities/float" >}})
 {{< /example >}}
 
 
-## Picture
+## Картина
 
-If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+Если Вы используете элемент `<picture>` для указания нескольких элементов `<source>` для определенного `<img>`, убедитесь, что Вы добавили классы `.img-*` в `<img>`, а не в тег `<picture>`.
 
 ```html
 ​<picture>

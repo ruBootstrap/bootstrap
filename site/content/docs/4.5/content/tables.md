@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+title: Таблицы
+description: Документация и примеры для выбора стиля таблиц (учитывая их преобладающее использование в плагинах JavaScript) с помощью Bootstrap.
 group: content
 toc: true
 ---
 
-## Examples
+## Примеры
 
-Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+Из-за широкого использования таблиц в сторонних виджетах, таких как календари и средства выбора даты, мы разработали наши таблицы для **подписки**. Просто добавьте базовый класс `.table` к любому `<table>`, затем расширьте его с помощью пользовательских стилей или наших различных включенных классов модификаторов.
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+Используя самую простую разметку таблиц, вот как таблицы на основе `.table` выглядят в Bootstrap. **Все стили таблиц наследуются в Bootstrap 4**, что означает, что любые вложенные таблицы будут иметь тот же стиль, что и родительские.
 
 {{< example >}}
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -45,16 +45,16 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 </table>
 {{< /example >}}
 
-You can also invert the colors—with light text on dark backgrounds—with `.table-dark`.
+Вы также можете инвертировать цвета - светлый текст на темном фоне - с помощью `.table-dark`.
 
 {{< example >}}
 <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -80,18 +80,18 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 </table>
 {{< /example >}}
 
-## Table head options
+## Варианты заголовка таблицы
 
-Similar to tables and dark tables, use the modifier classes `.thead-light` or `.thead-dark` to make `<thead>`s appear light or dark gray.
+Подобно таблицам и темным таблицам, используйте классы-модификаторы `.thead-light` или `.thead-dark`, чтобы `<thead>` казались светлыми или темно-серыми.
 
 {{< example >}}
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -120,9 +120,9 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
   <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -148,18 +148,18 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
 </table>
 {{< /example >}}
 
-## Striped rows
+## Полосатые строки
 
-Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+Используйте `.table-striped`, чтобы добавить полосатую зебру к любой строке таблицы внутри `<tbody>`.
 
 {{< example >}}
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -190,9 +190,9 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -218,18 +218,18 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 </table>
 {{< /example >}}
 
-## Bordered table
+## Таблица с границами
 
-Add `.table-bordered` for borders on all sides of the table and cells.
+Добавьте `.table-bordered` для границ со всех сторон таблицы и ячеек.
 
 {{< example >}}
 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -247,7 +247,7 @@ Add `.table-bordered` for borders on all sides of the table and cells.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -259,9 +259,9 @@ Add `.table-bordered` for borders on all sides of the table and cells.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -279,25 +279,25 @@ Add `.table-bordered` for borders on all sides of the table and cells.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
 {{< /example >}}
 
-## Borderless table
+## Таблица без границ
 
-Add `.table-borderless` for a table without borders.
+Добавьте `.table-borderless` для таблицы без границ.
 
 {{< example >}}
 <table class="table table-borderless">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -315,23 +315,23 @@ Add `.table-borderless` for a table without borders.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
 {{< /example >}}
 
-`.table-borderless` can also be used on dark tables.
+`.table-borderless` также может использоваться на темных таблицах.
 
 {{< example >}}
 <table class="table table-borderless table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -349,25 +349,25 @@ Add `.table-borderless` for a table without borders.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
 {{< /example >}}
 
-## Hoverable rows
+## Строки с наведением
 
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+Добавьте `.table-hover`, чтобы включить состояние наведения на строки таблицы внутри `<tbody>`.
 
 {{< example >}}
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -385,7 +385,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -397,9 +397,9 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -417,25 +417,25 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
 {{< /example >}}
 
-## Small table
+## Маленькая таблица
 
-Add `.table-sm` to make tables more compact by cutting cell padding in half.
+Добавьте `.table-sm`, чтобы сделать таблицы более компактными, сократив заполнение ячеек пополам.
 
 {{< example >}}
 <table class="table table-sm">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -453,7 +453,7 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -465,9 +465,9 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -485,43 +485,43 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colspan="2">Ларри Птица</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
 {{< /example >}}
 
-## Contextual classes
+## Контекстные классы
 
-Use contextual classes to color table rows or individual cells.
+Используйте контекстные классы для раскрашивания строк таблицы или отдельных ячеек.
 
 <div class="bd-example">
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Class</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Класс</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
       </tr>
     </thead>
     <tbody>
       <tr class="table-active">
-        <th scope="row">Active</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <th scope="row">Активный</th>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
-        <th scope="row">Default</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <th scope="row">По умолчанию</th>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       {{< table.inline >}}
       {{- range (index $.Site.Data "theme-colors") }}
         <tr class="table-{{ .name }}">
           <th scope="row">{{ .name | title }}</th>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
         </tr>
       {{- end -}}
       {{< /table.inline >}}
@@ -530,14 +530,14 @@ Use contextual classes to color table rows or individual cells.
 </div>
 
 {{< highlight html >}}
-<!-- On rows -->
+<!-- По строкам -->
 <tr class="table-active">...</tr>{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <tr class="table-{{ .name }}">...</tr>
 {{- end -}}
 {{< /table.inline >}}
 
-<!-- On cells (`td` or `th`) -->
+<!-- По ячейкам (`td` или `th`) -->
 <tr>
   <td class="table-active">...</td>{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -547,76 +547,76 @@ Use contextual classes to color table rows or individual cells.
 </tr>
 {{< /highlight >}}
 
-Regular table background variants are not available with the dark table, however, you may use [text or background utilities]({{< docsref "/utilities/colors" >}}) to achieve similar styles.
+Обычные варианты фона таблицы недоступны для темной таблицы, однако Вы можете использовать [текстовые или фоновые утилиты]({{< docsref "/utilities/colors" >}}) для достижения аналогичных стилей.
 
 <div class="bd-example">
   <table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-primary">
         <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr class="bg-success">
         <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">4</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr class="bg-info">
         <th scope="row">5</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">6</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr class="bg-warning">
         <th scope="row">7</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">8</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr class="bg-danger">
         <th scope="row">9</th>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 ```html
-<!-- On rows -->
+<!-- По строкам -->
 <tr class="bg-primary">...</tr>
 <tr class="bg-success">...</tr>
 <tr class="bg-warning">...</tr>
 <tr class="bg-danger">...</tr>
 <tr class="bg-info">...</tr>
 
-<!-- On cells (`td` or `th`) -->
+<!-- По ячейкам (`td` или `th`) -->
 <tr>
   <td class="bg-primary">...</td>
   <td class="bg-success">...</td>
@@ -630,25 +630,25 @@ Regular table background variants are not available with the dark table, however
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-Create responsive tables by wrapping any `.table` with `.table-responsive{-sm|-md|-lg|-xl}`, making the table scroll horizontally at each `max-width` breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.
+Создайте адаптивные таблицы, заключив любой `.table` в `.table-responsive{-sm|-md|-lg|-xl}`, заставляя таблицу прокручиваться по горизонтали при каждой контрольной точке `max-width` до (но не включая) 576px, 768px, 992px и 1120px соответственно.
 
 {{< callout info >}}
 {{< partial "callout-info-mediaqueries-breakpoints.md" >}}
 {{< /callout >}}
 
-## Captions
+## Заголовки
 
-A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+`<caption>` действует как заголовок таблицы. Это помогает пользователям программ чтения с экрана найти таблицу, понять, о чем она, и решить, хотят ли они ее прочитать.
 
 {{< example >}}
 <table class="table">
-  <caption>List of users</caption>
+  <caption>Список пользователей</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Первый</th>
+      <th scope="col">Последний</th>
+      <th scope="col">Обращение</th>
     </tr>
   </thead>
   <tbody>
@@ -674,19 +674,19 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 </table>
 {{< /example >}}
 
-## Responsive tables
+## Адаптивные таблицы
 
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl}`.
+Адаптивные таблицы позволяют с легкостью прокручивать таблицы по горизонтали. Сделайте любую таблицу адаптивной во всех окнах просмотра, заключив в `.table` с `.table-responsive`. Или выберите максимальную контрольную точку, до которой будет реагировать таблица, используя `.table-responsive{-sm|-md|-lg|-xl}`.
 
 {{< callout warning >}}
-##### Vertical clipping/truncation
+##### Вертикальная обрезка/усечение
 
-Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+В адаптивных таблицах используется `overflow-y: hidden`, который обрезает любое содержимое, выходящее за пределы нижнего или верхнего края таблицы. В частности, это может вырезать раскрывающиеся меню и другие сторонние виджеты.
 {{< /callout >}}
 
-### Always responsive
+### Всегда адаптивный
 
-Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+Через каждую контрольную точку используйте `.table-responsive` для горизонтальной прокрутки таблиц.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -694,53 +694,53 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
-          <th scope="col">Heading</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
+          <th scope="col">Заголовок</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
+          <td>Ячейка</td>
         </tr>
       </tbody>
     </table>
@@ -755,11 +755,11 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 ```
 
-### Breakpoint specific
+### Специфическая контрольная точка
 
-Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+Используйте `.table-responsive{-sm|-md|-lg|-xl}` по мере необходимости для создания адаптивных таблиц до определенной контрольной точки. С этой контрольной точки и выше таблица будет вести себя нормально и не будет прокручиваться по горизонтали.
 
-**These tables may appear broken until their responsive styles apply at specific viewport widths.**
+**Эти таблицы могут отображаться неработающими до тех пор, пока их адаптивные стили не будут применяться при определенной ширине области просмотра.**
 
 {{< tables.inline >}}
 {{ range $.Site.Data.breakpoints }}
@@ -770,49 +770,49 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Заголовок</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
-        <td>Cell</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
+        <td>Ячейка</td>
       </tr>
     </tbody>
   </table>

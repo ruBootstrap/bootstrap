@@ -1,70 +1,70 @@
 ---
 layout: docs
-title: Reboot
-description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+title: Перезагрузка
+description: Перезагрузка, набор изменений CSS для конкретных элементов в одном файле, запускает Bootstrap, чтобы обеспечить элегантную, последовательную и простую основу для развития.
 group: content
 aliases: "/docs/4.5/content/"
 toc: true
 ---
 
-## Approach
+## Подход
 
-Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
+Reboot основывается на Normalize, предоставляя многие элементы HTML с несколько самоуверенными стилями, используя только селекторы элементов. Дополнительная стилизация выполняется только с классами. Например, мы перезагружаем некоторые стили `<table>` для упрощения базовой линии, а позже предоставляем `.table`, `.table-bordered` и другие.
 
-Here are our guidelines and reasons for choosing what to override in Reboot:
+Вот наши рекомендации и причины выбора того, что следует переопределить в Reboot:
 
-- Update some browser default values to use `rem`s instead of `em`s for scalable component spacing.
-- Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
-- For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
-- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
+- Обновите некоторые значения браузера по умолчанию, чтобы использовать `rem` вместо `em` для масштабируемого расстояния между компонентами.
+- Избегайте `margin-top`. Вертикальные поля могут исчезнуть, что приведет к неожиданным результатам. Что еще более важно, одно направление `margin` - это более простая ментальная модель.
+- Для упрощения масштабирования по размеру устройства в элементах блока следует использовать `rem` вместо `margin`.
+- Сведите к минимуму объявления свойств, связанных со шрифтом `font`, используя по возможности наследование `inherit`.
 
-## Page defaults
+## Параметры страницы по умолчанию
 
-The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
+Элементы `<html>` и `<body>` обновлены, чтобы обеспечить лучшие значения по умолчанию для всей страницы. Более конкретно:
 
-- The `box-sizing` is globally set on every element—including `*::before` and `*::after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
-- No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
-- The `<body>` also sets a global `font-family`, `line-height`, and `text-align`. This is inherited later by some form elements to prevent font inconsistencies.
-- For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
+- The `box-sizing` устанавливается глобально для каждого элемента, включая `*::before` и `*::after` для `border-box`. Это гарантирует, что заявленная ширина элемента никогда не будет превышена из-за заполнения или границы.
+- Базовый размер шрифта `font-size` не объявлен в `<html>`, но предполагается `16px` (по умолчанию в браузере). `font-size: 1rem` применяется к элементу `<body>` для быстрого масштабирования типов с помощью медиа-запросов, при этом соблюдая предпочтения пользователя и обеспечивая более доступный подход.
+- `<body>` также устанавливает глобально `font-family`, `line-height` и `text-align`. Позже это наследуется некоторыми элементами формы, чтобы предотвратить несоответствие шрифтов.
+- Для безопасности `<body>` имеет объявленный цвет фона `background-color`, по умолчанию - `#fff`.
 
-## Native font stack
+## Стек собственных шрифтов
 
-The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced with a "native font stack" for optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+Веб-шрифты по умолчанию (Helvetica Neue, Helvetica и Arial) были удалены в Bootstrap 4 и заменены «стеком собственных шрифтов» для оптимального рендеринга текста на всех устройствах и ОС. Узнайте больше о [стеках собственных шрифтов в этой статье *Smashing Magazine*](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ```scss
 $font-family-sans-serif:
-  // Safari for macOS and iOS (San Francisco)
+  // Safari для macOS и iOS (Сан-Франциско)
   -apple-system,
-  // Chrome < 56 for macOS (San Francisco)
+  // Chrome <56 для macOS (Сан-Франциско)
   BlinkMacSystemFont,
   // Windows
   "Segoe UI",
   // Android
   Roboto,
-  // Basic web fallback
+  // Базовый резервный веб-сайт
   "Helvetica Neue", Arial,
   // Linux
   "Noto Sans",
   "Liberation Sans",
-  // Sans serif fallback
+  // Резервный вариант без засечек
   sans-serif,
-  // Emoji fonts
+  // Emoji шрифты
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-Note that because the font stack includes emoji fonts, many common symbol/dingbat unicode characters will be rendered as multi-colored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
+Обратите внимание, что, поскольку стек шрифтов включает шрифты эмодзи, многие распространенные символы Unicode символов/дингбатов будут отображаться как разноцветные пиктограммы. Их внешний вид будет отличаться в зависимости от стиля, используемого в собственном шрифте emoji браузера/платформы, и на них не повлияют никакие стили CSS `color`.
 
-This `font-family` is applied to the `<body>` and automatically inherited globally throughout Bootstrap. To switch the global `font-family`, update `$font-family-base` and recompile Bootstrap.
+Это семейство шрифтов `font-family` применяется к `<body>` и автоматически наследуется во всем Bootstrap. Чтобы переключить глобальное семейство шрифтов `font-family`, обновите `$font-family-base` и перекомпилируйте Bootstrap.
 
-## Headings and paragraphs
+## Заголовки и абзацы
 
-All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
+Все элементы заголовка - например, `<h1>` и `<p>` сбрасываются, чтобы удалить их `margin-top`. В заголовки добавлены `margin-bottom: .5rem` и параграфы `margin-bottom: 1rem` для удобного размещения.
 
 <table>
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Example</th>
+      <th>Заголовок</th>
+      <th>Пример</th>
     </tr>
   </thead>
   <tbody>
@@ -72,44 +72,44 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="h1">h1. Заголовок Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="h2">h2. Заголовок Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="h3">h3. Заголовок Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="h4">h4. Заголовок Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="h5">h5. Заголовок Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="h6">h6. Заголовок Bootstrap</span></td>
     </tr>
   </tbody>
 </table>
 
-## Lists
+## Списки
 
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`.
+Во всех списках `<ul>`, `<ol>` и `<dl>` удалены их `margin-top` и `margin-bottom: 1rem`. Вложенные списки не имеют `margin-bottom`.
 
 <div class="bd-example">
 {{< markdown >}}
@@ -137,12 +137,12 @@ All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `
 {{< /markdown >}}
 </div>
 
-For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
+Для упрощения стиля, четкой иерархии и лучшего интервала в списках описаний обновлены поля `margin`. `<dd>` сбрасывает `margin-left` в `0` и добавляет `margin-bottom: .5rem`. `<dt>` выделены **жирным шрифтом**.
 
 <div class="bd-example">
   <dl>
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Списки описаний</dt>
+    <dd>Список описаний идеально подходит для определения терминов.</dd>
     <dt>Euismod</dt>
     <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
     <dd>Donec id elit non mi porta gravida at eget metus.</dd>
@@ -151,9 +151,9 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
   </dl>
 </div>
 
-## Preformatted text
+## Предварительно отформатированный текст
 
-The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
+Элемент `<pre>` сбрасывается, чтобы удалить его `margin-top` и использовать единицы `rem` для его `margin-bottom`.
 
 <div class="bd-example">
 <pre>
@@ -163,146 +163,146 @@ The `<pre>` element is reset to remove its `margin-top` and use `rem` units for 
 </pre>
 </div>
 
-## Tables
+## Таблицы
 
-Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{< docsref "/content/tables" >}}).
+Таблицы немного скорректированы для стиля `<caption>`, сворачивания границ и обеспечения единообразия `text-align` повсюду. Дополнительные изменения границ, отступов и прочего связаны с [классом `.table`]({{< docsref "/content/tables" >}}).
 
 <div class="bd-example">
   <table>
     <caption>
-      This is an example table, and this is its caption to describe the contents.
+      Это пример таблицы, и это ее заголовок для описания содержимого.
     </caption>
     <thead>
       <tr>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th>Заголовок таблицы</th>
+        <th>Заголовок таблицы</th>
+        <th>Заголовок таблицы</th>
+        <th>Заголовок таблицы</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
       </tr>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
       </tr>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
+        <td>Ячейка таблицы</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## Forms
+## Формы
 
-Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
+Для упрощения базовых стилей были перезагружены различные элементы формы. Вот некоторые из наиболее заметных изменений:
 
-- `<fieldset>`s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
-- `<legend>`s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
-- `<label>`s are set to `display: inline-block` to allow `margin` to be applied.
-- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but Reboot removes their `margin` and sets `line-height: inherit`, too.
-- `<textarea>`s are modified to only be resizable vertically as horizontal resizing often "breaks" page layout.
-- `<button>`s and `<input>` button elements have `cursor: pointer` when `:not(:disabled)`.
+- `<fieldset>` не имеют границ, отступов или полей, поэтому их можно легко использовать в качестве оберток для отдельных входов или групп входов.
+- `<legend>`, как и наборы полей, также были переработаны, чтобы отображаться как своего рода заголовки.
+- Для тегов `<label>` установлено значение `display: inline-block` чтобы можно было применить `margin`.
+- `<input>`, `<select>`, `<textarea>` и `<button>` в основном обрабатываются Normalize, но Reboot удаляет их `margin` и устанавливает `line-height: inherit` тоже.
+- `<textarea>` изменены так, чтобы их размер можно было изменять только по вертикали, поскольку изменение размера по горизонтали часто "ломает" макет страницы.
+- Элементы кнопок `<button>` и `<input>` имеют `cursor: pointer` когда `:not(:disabled)`.
 
-These changes, and more, are demonstrated below.
+Эти и другие изменения показаны ниже.
 
 <form class="bd-example">
   <fieldset>
-    <legend>Example legend</legend>
+    <legend>Пример легенды</legend>
     <p>
-      <label for="input">Example input</label>
-      <input type="text" id="input" placeholder="Example input">
+      <label for="input">Пример ввода</label>
+      <input type="text" id="input" placeholder="Пример ввода">
     </p>
     <p>
-      <label for="select">Example select</label>
+      <label for="select">Пример выбрать</label>
       <select id="select">
-        <option value="">Choose...</option>
+        <option value="">Выбрать...</option>
         <optgroup label="Option group 1">
-          <option value="">Option 1</option>
-          <option value="">Option 2</option>
-          <option value="">Option 3</option>
+          <option value="">Опция 1</option>
+          <option value="">Опция 2</option>
+          <option value="">Опция 3</option>
         </optgroup>
         <optgroup label="Option group 2">
-          <option value="">Option 4</option>
-          <option value="">Option 5</option>
-          <option value="">Option 6</option>
+          <option value="">Опция 4</option>
+          <option value="">Опция 5</option>
+          <option value="">Опция 6</option>
         </optgroup>
       </select>
     </p>
     <p>
       <label>
         <input type="checkbox" value="">
-        Check this checkbox
+        Установите этот флажок
       </label>
     </p>
     <p>
       <label>
         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Option one is this and that
+        Вариант первый то и это
       </label>
       <label>
         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+        Второй вариант - это что-то еще, очень длинное, чтобы продемонстрировать упаковку этих причудливых элементов управления формой.
       </label>
       <label>
         <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-        Option three is disabled
+        Вариант третий отключен
       </label>
     </p>
     <p>
-      <label for="textarea">Example textarea</label>
+      <label for="textarea">Пример текстового поля</label>
       <textarea id="textarea" rows="3"></textarea>
     </p>
     <p>
-      <label for="date">Example date</label>
+      <label for="date">Пример даты</label>
       <input type="date" id="date">
     </p>
     <p>
-      <label for="time">Example time</label>
+      <label for="time">Пример времени</label>
       <input type="time" id="time">
     </p>
     <p>
-      <label for="output">Example output</label>
+      <label for="output">Пример вывода</label>
       <output name="result" id="output">100</output>
     </p>
     <p>
-      <button type="submit">Button submit</button>
-      <input type="submit" value="Input submit button">
-      <input type="reset" value="Input reset button">
-      <input type="button" value="Input button">
+      <button type="submit">Кнопка отправки</button>
+      <input type="submit" value="Кнопка отправки">
+      <input type="reset" value="Кнопка сброса">
+      <input type="button" value="Кнопка ввода">
     </p>
     <p>
-      <button type="submit" disabled>Button submit</button>
-      <input type="submit" value="Input submit button" disabled>
-      <input type="reset" value="Input reset button" disabled>
-      <input type="button" value="Input button" disabled>
+      <button type="submit" disabled>Кнопка отправки</button>
+      <input type="submit" value="Кнопка отправки" disabled>
+      <input type="reset" value="Кнопка сброса" disabled>
+      <input type="button" value="Кнопка ввода" disabled>
     </p>
   </fieldset>
 </form>
 
-### Pointers on buttons
+### Указатели на кнопках
 
-Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
+Перезагрузка включает усовершенствование для `role="button"`, чтобы изменить курсор по умолчанию на `pointer`. Добавьте этот атрибут к элементам, чтобы указать, что элементы интерактивны. Эта роль не обязательна для элементов `<button>`, которые имеют собственное изменение `cursor`.
 
 {{< example >}}
-<span role="button" tabindex="0">Non-button element button</span>
+<span role="button" tabindex="0">Кнопка элемента без кнопки</span>
 {{< /example >}}
 
-## Misc elements
+## Разные элементы
 
-### Address
+### Адрес
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
+Элемент `<address>` обновлен для сброса стиля шрифта `font-style` браузера по умолчанию с курсивного `italic` на нормальный `normal`. `line-height` теперь унаследован, и был добавлен `margin-bottom: 1rem`. `<address>` предназначены для представления контактной информации ближайшего предка (или всего объема работы). Сохраните форматирование, заканчивая строки символом `<br>`.
 
 <div class="bd-example">
   <address>
@@ -313,14 +313,14 @@ The `<address>` element is updated to reset the browser default `font-style` fro
   </address>
 
   <address>
-    <strong>Full Name</strong><br>
+    <strong>ФИО</strong><br>
     <a href="mailto:first.last@example.com">first.last@example.com</a>
   </address>
 </div>
 
-### Blockquote
+### Цитата
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
+По умолчанию `margin` для цитат составляет `1em 40px`, поэтому мы сбрасываем ее на `0 0 1rem` для большей согласованности с другими элементами.
 
 <div class="bd-example">
   <blockquote class="blockquote">
@@ -329,42 +329,42 @@ The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem
   </blockquote>
 </div>
 
-### Inline elements
+### Строковые элементы
 
-The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
+Элемент `<abbr>` получает базовый стиль, чтобы выделить его среди текста абзаца.
 
 <div class="bd-example">
   Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
 </div>
 
-### Summary
+### Резюме
 
-The default `cursor` on summary is `text`, so we reset that to `pointer` to convey that the element can be interacted with by clicking on it.
+По умолчанию `cursor` в сводке является `text`, поэтому мы сбрасываем его на `pointer`, чтобы указать, что с элементом можно взаимодействовать, щелкнув по нему.
 
 <div class="bd-example">
   <details>
-    <summary>Some details</summary>
-    <p>More info about the details.</p>
+    <summary>Некоторые детали</summary>
+    <p>Подробнее о деталях.</p>
   </details>
 
   <details open>
-    <summary>Even more details</summary>
-    <p>Here are even more details about the details.</p>
+    <summary>Еще больше деталей</summary>
+    <p>Вот еще более подробная информация о деталях.</p>
   </details>
 </div>
 
-## HTML5 `[hidden]` attribute
+## Атрибут HTML5 `[hidden]`
 
-HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io/), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden. While `[hidden]` isn't natively supported by IE10, the explicit declaration in our CSS gets around that problem.
+HTML5 добавляет [новый глобальный атрибут с именем `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), который имеет стиль `display: none` по умолчанию. Заимствуя идею из [PureCSS](https://purecss.io/), мы улучшаем это значение по умолчанию, сделав `[hidden] { display: none !important; }`, чтобы предотвратить случайное переопределение его `display`. Хотя IE10 изначально не поддерживает `[hidden]`, явное объявление в нашем CSS решает эту проблему.
 
 ```html
 <input type="text" hidden>
 ```
 
 {{< callout warning >}}
-##### jQuery incompatibility
+##### Несовместимость jQuery
 
-`[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods. Therefore, we don't currently especially endorse `[hidden]` over other techniques for managing the `display` of elements.
+`[hidden]` несовместим с методами jQuery `$(...).hide()` и `$(...).show()`. Поэтому в настоящее время мы не особо поддерживаем `[hidden]` по сравнению с другими методами управления `display` элементов.
 {{< /callout >}}
 
-To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{< docsref "/utilities/visibility" >}}) instead.
+Чтобы просто переключить видимость элемента, то есть его `display` не изменяется, и элемент все еще может влиять на поток документа, используйте [класс `.invisible`]({{< docsref "/utilities/visibility" >}}) вместо этого.
