@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Icons
-description: Guidance and suggestions for using external icon libraries with Bootstrap.
+title: Иконки
+description: Рекомендации и предложения по использованию внешних библиотек иконок с Bootstrap.
 group: extend
 ---
 
-## Bootstrap Icons
+## Иконки Bootstrap
 
-While you won't find a built-in icon library in Bootstrap, our separate [Bootstrap Icons]({{< param icons >}}) projects is a growing set of open source SVGs you can use. While they're designed first and foremost to work with our components and documentation, you can use them in any project.
+Хотя Вы не найдете встроенной библиотеки иконок в Bootstrap, наши отдельные проекты [Иконки Bootstrap]({{< param icons_ru >}}) представляют собой постоянно растущий набор SVG с открытым исходным кодом, который Вы можете использовать. Хотя они предназначены в первую очередь для работы с нашими компонентами и документацией, Вы можете использовать их в любом проекте.
 
-<a href="{{< param icons >}}" class="btn btn-bd-primary">Get Bootstrap Icons</a>
+<a href="{{< param icons_ru >}}" class="btn btn-bd-primary">Получить иконки Bootstrap</a>
 
 <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{< param docs_version >}}/assets/img/bootstrap-icons.png,
                                             /docs/{{< param docs_version >}}/assets/img/bootstrap-icons@2x.png 2x"
@@ -17,21 +17,21 @@ While you won't find a built-in icon library in Bootstrap, our separate [Bootstr
                                             alt="Bootstrap Icons" width="966" height="600" loading="lazy">
 
 
-## Additional icon sets
+## Дополнительные наборы иконок
 
-In addition to Bootstrap Icons, we have a handful of alternative icon libraries for you to choose from. While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+В дополнение к иконкам Bootstrap у нас есть несколько альтернативных библиотек иконок, из которых Вы можете выбрать. Хотя большинство наборов значков включают файлы нескольких форматов, мы предпочитаем реализации SVG из-за их улучшенной доступности и поддержки векторных изображений.
 
-### Preferred
+### Предпочтительный
 
-We've tested and used these icon sets ourselves.
+Мы сами протестировали и использовали эти наборы иконок.
 
 - [Font Awesome](https://fontawesome.com/)
 - [Feather](https://feathericons.com/)
 - [Octicons](https://octicons.github.com/)
 
-### More
+### Еще
 
-While we haven't tried these out, they do look promising and provide multiple formats—including SVG.
+Хотя мы не пробовали их, они выглядят многообещающими и предоставляют несколько форматов, включая SVG.
 
 - [Bytesize](https://github.com/danklammer/bytesize-icons)
 - [Google Material icons](https://material.io/resources/icons/)
