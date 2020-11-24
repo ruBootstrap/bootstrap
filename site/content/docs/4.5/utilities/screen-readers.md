@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Screen readers
-description: Use screen reader utilities to hide elements on all devices except screen readers.
+title: Программы чтения с экрана
+description: Используйте служебные программы чтения с экрана, чтобы скрыть элементы на всех устройствах, кроме программ чтения с экрана.
 group: utilities
 ---
 
-Hide an element to all devices **except screen readers** with `.sr-only`. Combine `.sr-only` with `.sr-only-focusable` to show the element again when it's focused (e.g. by a keyboard-only user). Can also be used as mixins.
+Скрыть элемент для всех устройств **кроме программ чтения с экрана** с помощью `.sr-only`. Объедините `.sr-only` с `.sr-only-focusable`, чтобы снова показать элемент, когда он сфокусирован (например, пользователем, использующим только клавиатуру). Также может использоваться как миксины.
 
 {{< example >}}
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<a class="sr-only sr-only-focusable" href="#content">Перейти к основному содержанию</a>
 {{< /example >}}
 
 ```scss
-// Usage as a mixin
+// Использование в качестве миксина
 .skip-navigation {
   @include sr-only;
   @include sr-only-focusable;

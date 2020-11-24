@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: Colors
-description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+title: Цвета
+description: Передайте смысл через цвет с помощью нескольких вспомогательных классов цвета. Также включает поддержку стилизации ссылок с помощью состояний наведения.
 group: utilities
 toc: true
 ---
 
 {{< callout info >}}
-#### Dealing with specificity
+#### Работа со спецификой
 
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+Иногда контекстные классы не могут быть применены из-за специфики другого селектора. В некоторых случаях достаточным обходным путем является обертывание содержимого Вашего элемента в `<div>` с классом.
 {{< /callout >}}
 
 {{< callout warning >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Color
+## Цвет
 
 {{< example >}}
 {{< colors.inline >}}
@@ -31,21 +31,21 @@ Sometimes contextual classes cannot be applied due to the specificity of another
 <p class="text-white-50 bg-dark">.text-white-50</p>
 {{< /example >}}
 
-Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no additional link styling beyond underline.**
+Классы контекстного текста также хорошо работают с привязками с предоставленными состояниями наведения и фокуса. **Обратите внимание, что классы `.text-white` и `.text-muted` не имеют дополнительных стилей ссылок, кроме подчеркивания.**
 
 {{< example >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<p><a href="#" class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">{{ .name | title }} link</a></p>
+<p><a href="#" class="text-{{ .name }}{{ if eq .name "light" }} bg-dark{{ end }}">{{ .name | title }} ссылка</a></p>
 {{- end -}}
 {{< /colors.inline >}}
-<p><a href="#" class="text-muted">Muted link</a></p>
-<p><a href="#" class="text-white bg-dark">White link</a></p>
+<p><a href="#" class="text-muted">Приглушенная ссылка</a></p>
+<p><a href="#" class="text-white bg-dark">Белая ссылка</a></p>
 {{< /example >}}
 
-## Background color
+## Цвет фона
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
+Подобно классам цвета контекстного текста, легко установить фон элемента для любого контекстного класса. Компоненты привязки будут темнеть при наведении курсора, как и классы текста. Фоновые утилиты **не устанавливают `цвет`**, поэтому в некоторых случаях Вы захотите использовать утилиты `.text-*`.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -57,9 +57,9 @@ Similar to the contextual text color classes, easily set the background of an el
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
 {{< /example >}}
 
-## Background gradient
+## Градиент фона
 
-When `$enable-gradients` is set to `true` (default is `false`), you can use `.bg-gradient-` utility classes. [Learn about our Sass options]({{< docsref "/getting-started/theming#sass-options" >}}) to enable these classes and more.
+Когда для параметра `$enable-gradients` установлено значение `true` (по умолчанию `false`), вы можете использовать классы утилит `.bg-gradient-`. [Узнайте о наших параметрах Sass]({{< docsref "/getting-started/theming#параметры-sass" >}}), чтобы включить эти и другие классы.
 
 {{< markdown >}}
 {{< colors.inline >}}

@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Shadows
-description: Add or remove shadows to elements with box-shadow utilities.
+title: Тени
+description: Добавляйте или удаляйте тени к элементам с помощью утилит box-shadow.
 group: utilities
 ---
 
-## Examples
+## Примеры
 
-While shadows on components are disabled by default in Bootstrap and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+Хотя тени на компонентах по умолчанию отключены в Bootstrap и могут быть включены с помощью `$enable-shadows`, Вы также можете быстро добавить или удалить тень с помощью наших служебных классов `box-shadow`. Включает поддержку `.shadow-none` и трех размеров по умолчанию (с соответствующими переменными для сопоставления).
 
 {{< example >}}
-<div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div>
+<div class="shadow-none p-3 mb-5 bg-light rounded">Нет тени</div>
+<div class="shadow-sm p-3 mb-5 bg-white rounded">Маленькая тень</div>
+<div class="shadow p-3 mb-5 bg-white rounded">Обычная тень</div>
+<div class="shadow-lg p-3 mb-5 bg-white rounded">Большая тень</div>
 {{< /example >}}

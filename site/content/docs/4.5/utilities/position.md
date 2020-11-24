@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+title: Позиционирование
+description: Используйте эти сокращенные утилиты для быстрой настройки положения элемента.
 group: utilities
 toc: true
 ---
 
-## Common values
+## Общие ценности
 
-Quick positioning classes are available, though they are not responsive.
+Доступны классы быстрого позиционирования, но они не реагируют.
 
 ```html
 <div class="position-static">...</div>
@@ -18,27 +18,27 @@ Quick positioning classes are available, though they are not responsive.
 <div class="position-sticky">...</div>
 ```
 
-## Fixed top
+## Зафиксировано вверху
 
-Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Расположите элемент вверху области просмотра от края до края. Убедитесь, что Вы понимаете последствия фиксированной позиции в Вашем проекте; Вам может потребоваться добавить дополнительный CSS.
 
 ```html
 <div class="fixed-top">...</div>
 ```
 
-## Fixed bottom
+## Зафиксировано внизу
 
-Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Разместите элемент внизу окна просмотра, от края до края. Убедитесь, что Вы понимаете последствия фиксированной позиции в Вашем проекте; Вам может потребоваться добавить дополнительный CSS.
 
 ```html
 <div class="fixed-bottom">...</div>
 ```
 
-## Sticky top
+## Прикреплено вверху
 
-Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The `.sticky-top` utility uses CSS's `position: sticky`, which isn't fully supported in all browsers.
+Поместите элемент вверху области просмотра, от края до края, но только после того, как Вы пройдете мимо него. Утилита `.sticky-top` использует CSS-код `position: sticky`, который не полностью поддерживается во всех браузерах.
 
-**IE11 and IE10 will render `position: sticky` as `position: relative`.** As such, we wrap the styles in a `@supports` query, limiting the stickiness to only browsers that can render it properly.
+**IE11 и IE10 будут отображать `position: sticky` как `position: relative`.** Таким образом, мы заключаем стили в запрос `@supports`, ограничивая закрепление только теми браузерами, которые могут его правильно отображать.
 
 ```html
 <div class="sticky-top">...</div>

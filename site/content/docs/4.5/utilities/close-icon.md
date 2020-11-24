@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Close icon
-description: Use a generic close icon for dismissing content like modals and alerts.
+title: Иконка закрытия
+description: Используйте общий значок закрытия, чтобы закрыть контент, например модальные окна и предупреждения.
 group: utilities
 ---
 
-**Be sure to include text for screen readers**, as we've done with `aria-label`.
+**Не забудьте включить текст для программ чтения с экрана**, как мы это сделали с `aria-label`.
 
 {{< example >}}
-<button type="button" class="close" aria-label="Close">
+<button type="button" class="close" aria-label="Закрыть">
   <span aria-hidden="true">&times;</span>
 </button>
 {{< /example >}}

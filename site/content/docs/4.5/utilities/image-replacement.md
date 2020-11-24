@@ -1,30 +1,30 @@
 ---
 layout: docs
-title: Image replacement
-description: Swap text for background images with the image replacement class.
+title: Замена изображения
+description: Поменяйте местами текст на фоновые изображения с классом замены изображения.
 group: utilities
 ---
 
 {{< callout warning >}}
-##### Warning
+##### Предупреждение
 
-The `text-hide()` class and mixin has been deprecated as of v4.1. It will be removed entirely in v5.
+Класс и миксин `text-hide()` устарели с версии 4.1. Он будет полностью удален в v5.
 {{< /callout >}}
 
-Utilize the `.text-hide` class or mixin to help replace an element's text content with a background image.
+Используйте класс или миксин `.text-hide`, чтобы заменить текстовое содержимое элемента фоновым изображением.
 
 ```html
-<h1 class="text-hide">Custom heading</h1>
+<h1 class="text-hide">Пользовательский заголовок</h1>
 ```
 
 ```scss
-// Usage as a mixin
+// Использование в качестве миксина
 .heading {
   @include text-hide;
 }
 ```
 
-Use the `.text-hide` class to maintain the accessibility and SEO benefits of heading tags, but want to utilize a `background-image` instead of text.
+Используйте класс `.text-hide` для обеспечения доступности и SEO-преимуществ тегов заголовков, но Вы хотите использовать `background-image` вместо текста.
 
 <div class="bd-example">
   <h1 class="text-hide" style="background-image: url('/docs/{{< param docs_version >}}/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>

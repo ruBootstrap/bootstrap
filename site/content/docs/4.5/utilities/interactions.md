@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Interactions
-description: Utility classes that change how users interact with the contents of a website.
+title: Взаимодействия
+description: Служебные классы, которые изменяют способ взаимодействия пользователей с содержимым веб-сайта.
 group: utilities
 ---
 
-## Text selection
+## Выделение текста
 
-Change how the content is selected when the user interacts with it. Note that Internet Explorer and Legacy Edge have no support for the `all` value for `user-select`, and as such, **`.user-select-all` is not supported by either browser.**
+Измените способ выбора содержимого при взаимодействии с ним пользователя. Обратите внимание, что Internet Explorer и Legacy Edge не поддерживают значение `all` для `user-select`, и поэтому, **`.user-select-all` не поддерживается ни одним браузером.**
 
 {{< example >}}
-<p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
-<p class="user-select-auto">This paragraph has the default select behavior.</p>
-<p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
+<p class="user-select-all">Этот абзац будет полностью выделен при нажатии пользователем.</p>
+<p class="user-select-auto">Этот абзац имеет поведение выбора по умолчанию.</p>
+<p class="user-select-none">Этот абзац не будет доступен для выбора при нажатии пользователем.</p>
 {{< /example >}}
 
-Customize the available classes by changing the `$user-selects` Sass list in `_variables.scss`.
+Настройте доступные классы, изменив список Sass `$user-selects` в `_variables.scss`.

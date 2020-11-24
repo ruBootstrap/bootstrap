@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: Flex
-description: Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+description: Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.
 group: utilities
 toc: true
 ---
 
-## Enable flex behaviors
+## Включить гибкое поведение
 
-Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
+Примените утилиты `display` для создания контейнера flexbox и преобразования **прямых дочерних элементов** в элементы flex. Гибкие контейнеры и элементы можно дополнительно модифицировать с помощью дополнительных свойств гибкости.
 
 {{< example >}}
-<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+<div class="d-flex p-2 bd-highlight">Я контейнер Flexbox!</div>
 {{< /example >}}
 
 {{< example >}}
-<div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
+<div class="d-inline-flex p-2 bd-highlight">Я встроенный контейнер Flexbox!</div>
 {{< /example >}}
 
-Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
+Адаптивные варианты также существуют для `.d-flex` и `.d-inline-flex`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -31,39 +31,39 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
 ## Direction
 
-Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is `row`. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
+Задайте направление гибких элементов в гибком контейнере с помощью утилит направления. В большинстве случаев Вы можете опустить здесь горизонтальный класс, поскольку браузер по умолчанию `row`. Однако Вы можете столкнуться с ситуациями, когда Вам нужно явно установить это значение (например, адаптивные макеты).
 
-Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
+Используйте `.flex-row`, чтобы установить горизонтальное направление (по умолчанию браузер), или `.flex-row-reverse`, чтобы начать горизонтальное направление с противоположной стороны.
 
 {{< example >}}
 <div class="d-flex flex-row bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 <div class="d-flex flex-row-reverse bd-highlight">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 {{< /example >}}
 
-Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
+Используйте `.flex-column`, чтобы задать вертикальное направление, или `.flex-column-reverse`, чтобы начать вертикальное направление с противоположной стороны.
 
 {{< example >}}
 <div class="d-flex flex-column bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 <div class="d-flex flex-column-reverse bd-highlight">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-direction`.
+Адаптивные вариации также существуют для `flex-direction`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -78,33 +78,33 @@ Responsive variations also exist for `flex-direction`.
 
 ## Justify content
 
-Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, or `around`.
+Используйте утилиты `justify-content` в контейнерах flexbox для изменения выравнивания гибких элементов по главной оси (ось x для начала, ось y, если `flex-direction: column`). Выберите из: `start` (по умолчанию в браузере), `end`, `center`, `between` или `around`.
 
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-end bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-center bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-between bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-around bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -116,7 +116,7 @@ Use `justify-content` utilities on flexbox containers to change the alignment of
 <div class="d-flex justify-content-around">...</div>
 ```
 
-Responsive variations also exist for `justify-content`.
+Адаптивные варианты также существуют для `justify-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -132,33 +132,33 @@ Responsive variations also exist for `justify-content`.
 
 ## Align items
 
-Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+Используйте утилиты `align-items` в контейнерах flexbox, чтобы изменить выравнивание гибких элементов по поперечной оси (ось Y для начала, ось X, если `flex-direction: column`). Выберите из: `start`, `end`, `center`, `baseline` или `stretch` (по умолчанию в браузере).
 
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -170,7 +170,7 @@ Use `align-items` utilities on flexbox containers to change the alignment of fle
 <div class="d-flex align-items-stretch">...</div>
 ```
 
-Responsive variations also exist for `align-items`.
+Адаптивные варианты также существуют для `align-items`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -186,45 +186,45 @@ Responsive variations also exist for `align-items`.
 
 ## Align self
 
-Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
+Используйте утилиты `align-self` для элементов flexbox, чтобы индивидуально изменить их выравнивание по поперечной оси (ось Y для начала, ось X, если `flex-direction: column`). Выберите один из тех же параметров, что и `align-items`: `start`, `end`, `center`, `baseline` или `stretch` (по умолчанию в браузере).
 
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-start p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-start p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-end p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-end p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-center p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-center p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-baseline p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-baseline p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-stretch p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-stretch p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
 ```html
-<div class="align-self-start">Aligned flex item</div>
-<div class="align-self-end">Aligned flex item</div>
-<div class="align-self-center">Aligned flex item</div>
-<div class="align-self-baseline">Aligned flex item</div>
-<div class="align-self-stretch">Aligned flex item</div>
+<div class="align-self-start">Выровненный flex элемент</div>
+<div class="align-self-end">Выровненный flex элемент</div>
+<div class="align-self-center">Выровненный flex элемент</div>
+<div class="align-self-baseline">Выровненный flex элемент</div>
+<div class="align-self-stretch">Выровненный flex элемент</div>
 ```
 
-Responsive variations also exist for `align-self`.
+Адаптивные варианты также существуют для `align-self`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -240,17 +240,17 @@ Responsive variations also exist for `align-self`.
 
 ## Fill
 
-Use the `.flex-fill` class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.
+Используйте класс `.flex-fill` для серии родственных элементов, чтобы заставить их ширину равную их содержимому (или равную ширину, если их содержимое не превышает их границы), занимая все доступное горизонтальное пространство.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
-  <div class="p-2 flex-fill bd-highlight">Flex item with a lot of content</div>
-  <div class="p-2 flex-fill bd-highlight">Flex item</div>
-  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент с большим количеством контента</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-fill`.
+Адаптивные варианты также существуют для `flex-fill`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -260,28 +260,28 @@ Responsive variations also exist for `flex-fill`.
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## Grow and shrink
+## Grow и shrink
 
-Use `.flex-grow-*` utilities to toggle a flex item's ability to grow to fill available space. In the example below, the `.flex-grow-1` elements uses all available space it can, while allowing the remaining two flex items their necessary space.
-
-{{< example >}}
-<div class="d-flex bd-highlight">
-  <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Third flex item</div>
-</div>
-{{< /example >}}
-
-Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if necessary. In the example below, the second flex item with `.flex-shrink-1` is forced to wrap its contents to a new line, "shrinking" to allow more space for the previous flex item with `.w-100`.
+Используйте утилиты `.flex-grow-*` для переключения способности гибкого элемента увеличиваться, чтобы заполнить доступное пространство. В приведенном ниже примере элементы `.flex-grow-1` используют все доступное пространство, в то время как оставшимся двум гибким элементам предоставляется необходимое пространство.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
-  <div class="p-2 w-100 bd-highlight">Flex item</div>
-  <div class="p-2 flex-shrink-1 bd-highlight">Flex item</div>
+  <div class="p-2 flex-grow-1 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Третий flex элемент</div>
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-grow` and `flex-shrink`.
+Используйте утилиты `.flex-shrink-*` для переключения возможности гибкого элемента сжиматься при необходимости. В приведенном ниже примере второй гибкий элемент с `.flex-shrink-1` принудительно переносит свое содержимое в новую строку, «сжимаясь», чтобы освободить больше места для предыдущего гибкого элемента с `.w-100`.
+
+{{< example >}}
+<div class="d-flex bd-highlight">
+  <div class="p-2 w-100 bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-shrink-1 bd-highlight">Flex элемент</div>
+</div>
+{{< /example >}}
+
+Адаптивные варианты также существуют для `flex-grow` и `flex-shrink`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -292,61 +292,61 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## Auto margins
+## Автоматические поля
 
-Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (`.mr-auto`), and pushing two items to the left (`.ml-auto`).
+Flexbox может делать несколько замечательных вещей, когда Вы смешиваете выравнивание гибкости с автоматическими полями. Ниже показаны три примера управления гибкими элементами через автоматические поля: по умолчанию (без автоматического поля), перемещение двух элементов вправо (`.mr-auto`) и перемещение двух элементов влево (`.ml-auto`).
 
-**Unfortunately, IE10 and IE11 do not properly support auto margins on flex items whose parent has a non-default `justify-content` value.** [See this StackOverflow answer](https://stackoverflow.com/a/37535548) for more details.
+**К сожалению, IE10 и IE11 не поддерживают должным образом автоматические поля для гибких элементов, родительский элемент которых имеет значение `justify-content` не по умолчанию.** [Смотрите этот ответ на StackOverflow](https://stackoverflow.com/a/37535548) для получения большей информации.
 
 {{< example >}}
 <div class="d-flex bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex bd-highlight mb-3">
-  <div class="mr-auto p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="mr-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="ml-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="ml-auto p-2 bd-highlight">Flex элемент</div>
 </div>
 {{< /example >}}
 
-### With align-items
+### С align-items
 
-Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
+Вертикально переместите один гибкий элемент в верхнюю или нижнюю часть контейнера, смешав `align-items`, `flex-direction: column` и `margin-top: auto` или `margin-bottom: auto`.
 
 {{< example >}}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
-  <div class="mb-auto p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="mb-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="mt-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="mt-auto p-2 bd-highlight">Flex элемент</div>
 </div>
 {{< /example >}}
 
 ## Wrap
 
-Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
+Измените способ переноса гибких элементов в гибкий контейнер. Выберите полное отсутствие переноса (по умолчанию в браузере) с помощью `.flex-nowrap`, обертывание с помощью `.flex-wrap` или обратное обертывание с помощью `.flex-wrap-reverse`.
 
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -358,21 +358,21 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 
 <div class="bd-example">
   <div class="d-flex flex-wrap bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -384,21 +384,21 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 
 <div class="bd-example">
   <div class="d-flex flex-wrap-reverse bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -409,7 +409,7 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 ```
 
 
-Responsive variations also exist for `flex-wrap`.
+Адаптивные варианты также существуют для `flex-wrap`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -423,17 +423,17 @@ Responsive variations also exist for `flex-wrap`.
 
 ## Order
 
-Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value (e.g., `5`), add custom CSS for any additional values needed.
+Измените _визуальный_ порядок определенных гибких элементов с помощью нескольких утилит `order`. Мы предоставляем только варианты для того, чтобы сделать элемент первым или последним, а также выполнить сброс для использования порядка DOM. Поскольку `order` принимает любое целочисленное значение (например, `5`), добавьте собственный CSS для любых дополнительных значений.
 
 {{< example >}}
 <div class="d-flex flex-nowrap bd-highlight">
-  <div class="order-3 p-2 bd-highlight">First flex item</div>
-  <div class="order-2 p-2 bd-highlight">Second flex item</div>
-  <div class="order-1 p-2 bd-highlight">Third flex item</div>
+  <div class="order-3 p-2 bd-highlight">Первый flex элемент</div>
+  <div class="order-2 p-2 bd-highlight">Второй flex элемент</div>
+  <div class="order-1 p-2 bd-highlight">Третий flex элемент</div>
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `order`.
+Адаптивные варианты также существуют для `order`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -448,27 +448,27 @@ Responsive variations also exist for `order`.
 
 ## Align content
 
-Use `align-content` utilities on flexbox containers to align flex items *together* on the cross axis. Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `stretch`. To demonstrate these utilities, we've enforced `flex-wrap: wrap` and increased the number of flex items.
+Используйте утилиты `align-content` в контейнерах flexbox для выравнивания гибких элементов *вместе* по поперечной оси. Выберите `start` (по умолчанию в браузере), `end`, `center`, `between`, `around` или `stretch`. Чтобы продемонстрировать эти утилиты, мы ввели в действие `flex-wrap: wrap` и увеличили количество гибких элементов.
 
-**Heads up!** This property has no effect on single rows of flex items.
+**Внимание!** Это свойство не влияет на отдельные строки гибких элементов.
 
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -480,21 +480,21 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 
 <div class="bd-example">
   <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -504,21 +504,21 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 
 <div class="bd-example">
   <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -528,21 +528,21 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 
 <div class="bd-example">
   <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -552,21 +552,21 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 
 <div class="bd-example">
   <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -576,21 +576,21 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 
 <div class="bd-example">
   <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 
@@ -598,7 +598,7 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 ```
 
-Responsive variations also exist for `align-content`.
+Адаптивные варианты также существуют для `align-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}

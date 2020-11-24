@@ -1,51 +1,51 @@
 ---
 layout: docs
-title: Spacing
-description: Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element's appearance.
+title: Интервал
+description: Bootstrap включает в себя широкий набор сокращенных вспомогательных классов полей и отступов для изменения внешнего вида элемента.
 group: utilities
 toc: true
 ---
 
-## How it works
+## Как это работает
 
-Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
+Присвойте удобные для восприятия значения `margin` или `padding` элементу или подмножеству его сторон с помощью сокращенных классов. Включает поддержку отдельных свойств, всех свойств, а также свойств по вертикали и горизонтали. Классы строятся из карты Sass по умолчанию в диапазоне от `.25rem` до `3rem`.
 
-## Notation
+## Обозначение
 
-Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Утилиты интервалов, которые применяются ко всем контрольным точкам, от `xs` до `xl`, не имеют сокращенного названия контрольной точки. Это связано с тем, что эти классы применяются начиная с `min-width: 0` и выше и поэтому не связаны медиа-запросами. Остальные контрольные точки, однако, содержат аббревиатуру контрольной точки.
 
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+Классы именуются в формате `{property}{sides}-{size}` для `xs` и `{property}{sides}-{breakpoint}-{size}` для `sm`, `md`, `lg` и `xl`.
 
-Where *property* is one of:
+Где *свойство* - одно из:
 
-* `m` - for classes that set `margin`
-* `p` - for classes that set `padding`
+* `m` - для классов, которые устанавливают `margin`
+* `p` - для классов, которые устанавливают `padding`
 
-Where *sides* is one of:
+Где *стороны* - одно из:
 
-* `t` - for classes that set `margin-top` or `padding-top`
-* `b` - for classes that set `margin-bottom` or `padding-bottom`
-* `l` - for classes that set `margin-left` or `padding-left`
-* `r` - for classes that set `margin-right` or `padding-right`
-* `x` - for classes that set both `*-left` and `*-right`
-* `y` - for classes that set both `*-top` and `*-bottom`
-* blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+* `t` - для классов, которые устанавливают `margin-top` или `padding-top`
+* `b` - для классов, которые устанавливают `margin-bottom` или `padding-bottom`
+* `l` - для классов, которые устанавливают `margin-left` или `padding-left`
+* `r` - для классов, которые устанавливают `margin-right` или `padding-right`
+* `x` - для классов, которые устанавливают оба `*-left` и `*-right`
+* `y` - для классов, которые устанавливают оба `*-top` и `*-bottom`
+* пустой - для классов, которые устанавливают `margin` или `padding` со всех 4 сторон элемента
 
-Where *size* is one of:
+Где *размер* - одно из:
 
-* `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
-* `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-* `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
-* `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
-* `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-* `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
-* `auto` - for classes that set the `margin` to auto
+* `0` - для классов, исключающих `margin` или `padding` установив его на `0`
+* `1` - (по умолчанию) для классов, которые устанавливают `margin` или `padding` к `$spacer * .25`
+* `2` - (по умолчанию) для классов, которые устанавливают `margin` или `padding` к `$spacer * .5`
+* `3` - (по умолчанию) для классов, которые устанавливают `margin` или `padding` к `$spacer`
+* `4` - (по умолчанию) для классов, которые устанавливают `margin` или `padding` к `$spacer * 1.5`
+* `5` - (по умолчанию) для классов, которые устанавливают `margin` или `padding` к `$spacer * 3`
+* `auto` - для классов, устанавливающих `margin` на авто
 
-(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
+(Вы можете добавить больше размеров, добавив записи в переменную карты Sass `$spacers`.)
 
-## Examples
+## Примеры
 
-Here are some representative examples of these classes:
+Вот несколько типичных примеров этих классов:
 
 ```scss
 .mt-0 {
@@ -66,27 +66,27 @@ Here are some representative examples of these classes:
 }
 ```
 
-### Horizontal centering
+### Горизонтальное центрирование
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+Кроме того, Bootstrap также включает класс `.mx-auto` для горизонтального центрирования содержимого уровня блока с фиксированной шириной, то есть содержимого, имеющего набор `display: block` и `width`, путем установки горизонтальных полей на `auto`.
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
-    Centered element
+    Центрированный элемент
   </div>
 </div>
 
 ```html
 <div class="mx-auto" style="width: 200px;">
-  Centered element
+  Центрированный элемент
 </div>
 ```
 
-### Negative margin
+### Отрицательные поля
 
-In CSS, `margin` properties can utilize negative values (`padding` cannot). As of 4.2, we've added negative margin utilities for every non-zero integer size listed above (e.g., `1`, `2`, `3`, `4`, `5`). These utilities are ideal for customizing grid column gutters across breakpoints.
+В CSS свойства `margin` могут использовать отрицательные значения (`padding` не могут). Начиная с версии 4.2, мы добавили утилиты с отрицательными полями для каждого ненулевого целого размера, указанного выше (например, `1`, `2`, `3`, `4`, `5`). Эти утилиты идеально подходят для настройки полей столбцов сетки в контрольных точках.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here's an example class that's the opposite of `.mt-1`:
+Синтаксис почти такой же, как и у утилит с положительными отступами по умолчанию, но с добавлением `n` перед запрошенным размером. Вот пример класса, противоположного `.mt-1`:
 
 ```scss
 .mt-n1 {
@@ -94,11 +94,11 @@ The syntax is nearly the same as the default, positive margin utilities, but wit
 }
 ```
 
-Here's an example of customizing the Bootstrap grid at the medium (`md`) breakpoint and above. We've increased the `.col` padding with `.px-md-5` and then counteracted that with `.mx-md-n5` on the parent `.row`.
+Вот пример настройки сетки Bootstrap в средней контрольной точке (`md`) и выше. Мы увеличили отступы `.col` с помощью `.px-md-5`, а затем нейтрализовали это с помощью `.mx-md-n5` в родительском `.row`.
 
 {{< example >}}
 <div class="row mx-md-n5">
-  <div class="col px-md-5"><div class="p-3 border bg-light">Custom column padding</div></div>
-  <div class="col px-md-5"><div class="p-3 border bg-light">Custom column padding</div></div>
+  <div class="col px-md-5"><div class="p-3 border bg-light">Пользовательские отступы столбцов</div></div>
+  <div class="col px-md-5"><div class="p-3 border bg-light">Пользовательские отступы столбцов</div></div>
 </div>
 {{< /example >}}

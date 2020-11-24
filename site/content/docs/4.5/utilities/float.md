@@ -1,28 +1,28 @@
 ---
 layout: docs
 title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+description: Переключайте числа с плавающей запятой на любом элементе и в любой точке останова с помощью наших гибких утилит с плавающей запятой.
 group: utilities
 toc: true
 ---
 
-## Overview
+## Обзор
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
+Эти служебные классы перемещают элемент влево или вправо или отключают плавающее положение в зависимости от текущего размера области просмотра с помощью [свойства CSS `float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` включен, чтобы избежать проблем со специфичностью. Они используют те же точки останова области просмотра, что и наша сеточная система. Имейте в виду, что плавающие утилиты не влияют на гибкие элементы.
 
-## Classes
+## Классы
 
-Toggle a float with a class:
+Переключить плавающий элемент с классом:
 
 {{< example >}}
-<div class="float-left">Float left on all viewport sizes</div><br>
-<div class="float-right">Float right on all viewport sizes</div><br>
-<div class="float-none">Don't float on all viewport sizes</div>
+<div class="float-left">Плавающий слева на всех размерах области просмотра</div><br>
+<div class="float-right">Плавающий справа при всех размерах области просмотра</div><br>
+<div class="float-none">Не плавающий при всех размерах области просмотра</div>
 {{< /example >}}
 
-## Mixins
+## Миксины
 
-Or by Sass mixin:
+Или с помощью миксина Sass:
 
 ```scss
 .element {
@@ -36,18 +36,18 @@ Or by Sass mixin:
 }
 ```
 
-## Responsive
+## Адаптивный
 
-Responsive variations also exist for each `float` value.
+Адаптивные варианты также существуют для каждого значения `float`.
 
 {{< example >}}
-<div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br>
-<div class="float-md-left">Float left on viewports sized MD (medium) or wider</div><br>
-<div class="float-lg-left">Float left on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-left">Float left on viewports sized XL (extra-large) or wider</div><br>
+<div class="float-sm-left">Плавающие влево на размере окна просмотра SM (маленький) или шире</div><br>
+<div class="float-md-left">Плавающие влево на размере окна просмотра MD (средний) или шире</div><br>
+<div class="float-lg-left">Плавающие влево на размере окна просмотра LG (большой) или шире</div><br>
+<div class="float-xl-left">Плавающие влево на размере окна просмотра XL (очень большой) или шире</div><br>
 {{< /example >}}
 
-Here are all the support classes;
+Вот все классы поддержки;
 
 {{< markdown >}}
 {{< float.inline >}}
