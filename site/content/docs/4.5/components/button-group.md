@@ -1,37 +1,37 @@
 ---
 layout: docs
-title: Button group
-description: Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
+title: Группа кнопок
+description: Сгруппируйте серию кнопок вместе в одну строку с группой кнопок и усилите их с помощью JavaScript.
 group: components
 toc: true
 ---
 
-## Basic example
+## Базовый пример
 
-Wrap a series of buttons with `.btn` in `.btn-group`. Add on optional JavaScript radio and checkbox style behavior with [our buttons plugin]({{< docsref "/components/buttons#button-plugin" >}}).
+Оберните серию кнопок с помощью `.btn` в `.btn-group`. Добавьте необязательное поведение переключателя JavaScript и стиля флажка с помощью [нашего плагина кнопок]({{< docsref "/components/buttons#плагин-кнопки" >}}).
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+  <button type="button" class="btn btn-secondary">Лево</button>
+  <button type="button" class="btn btn-secondary">Середина</button>
+  <button type="button" class="btn btn-secondary">Право</button>
 </div>
 {{< /example >}}
 
 {{< callout warning >}}
-##### Ensure correct `role` and provide a label
+##### Убедитесь, что `role` правильная, и укажите метку
 
-In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+Для того, чтобы вспомогательные технологии (например, программы чтения с экрана) передавали, что последовательность кнопок сгруппирована, необходимо предоставить соответствующий атрибут `role`. Для групп кнопок это будет `role="group"`, в то время как панели инструментов должны иметь `role="toolbar"`.
 
-In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+Кроме того, группам и панелям инструментов следует давать явные метки, поскольку в противном случае большинство вспомогательных технологий не будут их объявлять, несмотря на наличие правильного атрибута роли. В приведенных здесь примерах мы используем `aria-label`, но также можно использовать альтернативы, такие как `aria-labelledby`.
 {{< /callout >}}
 
-## Button toolbar
+## Панель инструментов кнопки
 
-Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+Объединяйте наборы групп кнопок в панели инструментов кнопок для получения более сложных компонентов. При необходимости используйте служебные классы для разнесения групп, кнопок и т.д.
 
 {{< example >}}
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar" role="toolbar" aria-label="Панель инструментов с группами кнопок">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -49,10 +49,10 @@ Combine sets of button groups into button toolbars for more complex components. 
 </div>
 {{< /example >}}
 
-Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
+Не стесняйтесь смешивать группы ввода с группами кнопок на панелях инструментов. Как и в примере выше, Вам, вероятно, понадобятся некоторые утилиты для правильного размещения вещей.
 
 {{< example >}}
-<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar mb-3" role="toolbar" aria-label="Панель инструментов с группами кнопок">
   <div class="btn-group mr-2" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -63,11 +63,11 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
     <div class="input-group-prepend">
       <div class="input-group-text" id="btnGroupAddon">@</div>
     </div>
-    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+    <input type="text" class="form-control" placeholder="Пример группы ввода" aria-label="Пример группы ввода" aria-describedby="btnGroupAddon">
   </div>
 </div>
 
-<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Панель инструментов с группами кнопок">
   <div class="btn-group" role="group" aria-label="First group">
     <button type="button" class="btn btn-secondary">1</button>
     <button type="button" class="btn btn-secondary">2</button>
@@ -78,32 +78,32 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
     <div class="input-group-prepend">
       <div class="input-group-text" id="btnGroupAddon2">@</div>
     </div>
-    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+    <input type="text" class="form-control" placeholder="Пример группы ввода" aria-label="Пример группы ввода" aria-describedby="btnGroupAddon2">
   </div>
 </div>
 {{< /example >}}
 
-## Sizing
+## Размеры
 
-Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
+Вместо того, чтобы применять классы изменения размера кнопок к каждой кнопке в группе, просто добавьте `.btn-group- *` к каждой `.btn-group`, включая каждую при вложении нескольких групп.
 
 <div class="bd-example">
-  <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-    <button type="button" class="btn btn-secondary">Left</button>
-    <button type="button" class="btn btn-secondary">Middle</button>
-    <button type="button" class="btn btn-secondary">Right</button>
+  <div class="btn-group btn-group-lg" role="group" aria-label="Группа больших кнопок">
+    <button type="button" class="btn btn-secondary">Лево</button>
+    <button type="button" class="btn btn-secondary">Середина</button>
+    <button type="button" class="btn btn-secondary">Право</button>
   </div>
   <br>
-  <div class="btn-group" role="group" aria-label="Default button group">
-    <button type="button" class="btn btn-secondary">Left</button>
-    <button type="button" class="btn btn-secondary">Middle</button>
-    <button type="button" class="btn btn-secondary">Right</button>
+  <div class="btn-group" role="group" aria-label="Группа кнопок по умолчанию">
+    <button type="button" class="btn btn-secondary">Лево</button>
+    <button type="button" class="btn btn-secondary">Середина</button>
+    <button type="button" class="btn btn-secondary">Право</button>
   </div>
   <br>
-  <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-    <button type="button" class="btn btn-secondary">Left</button>
-    <button type="button" class="btn btn-secondary">Middle</button>
-    <button type="button" class="btn btn-secondary">Right</button>
+  <div class="btn-group btn-group-sm" role="group" aria-label="Маленькая группа кнопок">
+    <button type="button" class="btn btn-secondary">Лево</button>
+    <button type="button" class="btn btn-secondary">Середина</button>
+    <button type="button" class="btn btn-secondary">Право</button>
   </div>
 </div>
 
@@ -113,83 +113,83 @@ Instead of applying button sizing classes to every button in a group, just add `
 <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
 ```
 
-## Nesting
+## Вложенность
 
-Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
+Поместите `.btn-group` в другую `.btn-group`, если Вы хотите, чтобы выпадающие меню были смешаны с рядом кнопок.
 
 {{< example >}}
-<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+<div class="btn-group" role="group" aria-label="Группа кнопок с вложенным раскрывающимся списком">
   <button type="button" class="btn btn-secondary">1</button>
   <button type="button" class="btn btn-secondary">2</button>
 
   <div class="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
+      Выпадающий список
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <a class="dropdown-item" href="#">Dropdown link</a>
-      <a class="dropdown-item" href="#">Dropdown link</a>
+      <a class="dropdown-item" href="#">Выпадающая ссылка</a>
+      <a class="dropdown-item" href="#">Выпадающая ссылка</a>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Vertical variation
+## Вертикальный вариант
 
-Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
+Сделайте так, чтобы набор кнопок выглядел вертикально сложенными, а не горизонтально. **Раскрывающиеся меню с разделенными кнопками здесь не поддерживаются.**
 
 <div class="bd-example">
-  <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
+  <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
   </div>
 </div>
 
 
 <div class="bd-example">
-  <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
+  <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
       <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
+        Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
-    <button type="button" class="btn btn-secondary">Button</button>
-    <button type="button" class="btn btn-secondary">Button</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
+    <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
       <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
+        Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
     <div class="btn-group" role="group">
       <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
+        Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
     <div class="btn-group" role="group">
       <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
+        Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
+        <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
   </div>

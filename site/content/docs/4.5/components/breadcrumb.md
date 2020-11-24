@@ -1,57 +1,57 @@
 ---
 layout: docs
-title: Breadcrumb
-description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+title: Хлебные крошки
+description: Укажите местоположение текущей страницы в навигационной иерархии, которая автоматически добавляет разделители через CSS.
 group: components
 ---
 
-## Example
+## Пример
 
 {{< example >}}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <li class="breadcrumb-item active" aria-current="page">Главная</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Библиотека</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-item"><a href="#">Библиотека</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Данные</li>
   </ol>
 </nav>
 {{< /example >}}
 
-## Changing the separator
+## Замена разделителя
 
-Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by changing `$breadcrumb-divider`. The [quote](https://sass-lang.com/documentation/modules/string#quote) function is needed to generate the quotes around a string, so if you want `>` as separator, you can use this:
+Разделители автоматически добавляются в CSS через [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) и [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). Их можно изменить, изменив `$breadcrumb-divider`. Функция [quote](https://sass-lang.com/documentation/modules/string#quote) необходима для создания кавычек вокруг строки, поэтому, если Вы хотите `>` в качестве разделителя, Вы можете использовать это:
 
 ```scss
 $breadcrumb-divider: quote(">");
 ```
 
-It's also possible to use a **base64 embedded SVG icon**:
+Также можно использовать **встроенную иконку SVG base64**:
 
 ```scss
 $breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
 ```
 
-The separator can be removed by setting `$breadcrumb-divider` to `none`:
+Разделитель можно удалить, установив для `$breadcrumb-divider` значение `none`:
 
 ```scss
 $breadcrumb-divider: none;
 ```
 
-## Accessibility
+## Доступность
 
-Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
+Поскольку хлебные крошки обеспечивают навигацию, рекомендуется добавить значимую метку, такую как `aria-label="breadcrumb"`, для описания типа навигации, предоставляемой в элементе `<nav>`, а также применить `aria-current="page"` к последнему элементу набора, чтобы указать, что он представляет текущую страницу.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+Для получения дополнительной информации смотрите [Практика разработки WAI-ARIA для шаблона навигации](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).

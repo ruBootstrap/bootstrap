@@ -1,52 +1,52 @@
 ---
 layout: docs
-title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+title: Формы
+description: Примеры и рекомендации по использованию стилей управления формами, параметров макета и настраиваемых компонентов для создания самых разнообразных форм.
 group: components
 toc: true
 ---
 
-## Overview
+## Обзор
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{< docsref "/content/reboot#forms" >}}) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Элементы управления формой Bootstrap расширяются на [наши стили перезагрузки форм]({{< docsref "/content/reboot#forms" >}}) с помощью классов. Используйте эти классы, чтобы выбрать их настраиваемые отображения для более согласованного отображения в браузерах и на устройствах.
 
-Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+Обязательно используйте соответствующий атрибут `type` для всех входных данных (например, `email` для адреса электронной почты или `number` для числовой информации), чтобы воспользоваться преимуществами новых элементов управления вводом, таких как проверка электронной почты, выбор номера и т.д.
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
+Вот быстрый пример, демонстрирующий стили формы Bootstrap. Продолжайте читать, чтобы узнать о необходимых классах, макете формы и многом другом.
 
 {{< example >}}
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1">Адрес электронной почты</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим Вашу электронную почту.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
+    <label for="exampleInputPassword1">Пароль</label>
     <input type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">Проверить меня</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Отправить</button>
 </form>
 {{< /example >}}
 
-## Form controls
+## Форма управления
 
-Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
+Текстовые элементы управления формой, такие как `<input>`, `<select>` и `<textarea>` стилизованы с помощью класса `.form-control`. Включены стили для общего вида, состояния фокуса, размера и т.д.
 
-Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s.
+Обязательно изучите наши [пользовательские формы](#настраиваемые-формы), чтобы узнать больше о стилях `<select>`s.
 
 {{< example >}}
 <form>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
+    <label for="exampleFormControlInput1">Адрес электронной почты</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
+    <label for="exampleFormControlSelect1">Пример меню выбора</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
@@ -56,7 +56,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <label for="exampleFormControlSelect2">Пример множественного выбора</label>
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>1</option>
       <option>2</option>
@@ -66,67 +66,67 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <label for="exampleFormControlTextarea1">Пример текстового поля</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </form>
 {{< /example >}}
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
+Для файлового ввода замените `.form-control` на `.form-control-file`.
 
 {{< example >}}
 <form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
+    <label for="exampleFormControlFile1">Пример ввода файла</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
 </form>
 {{< /example >}}
 
-### Sizing
+### Размеры
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Установите высоту с помощью таких классов, как `.form-control-lg` и `.form-control-sm`.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control" type="text" placeholder="Ввод по умолчанию">
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
 {{< /example >}}
 
 {{< example >}}
 <select class="form-control form-control-lg">
-  <option>Large select</option>
+  <option>Большое меню выбора</option>
 </select>
 <select class="form-control">
-  <option>Default select</option>
+  <option>Меню выбора по умолчанию</option>
 </select>
 <select class="form-control form-control-sm">
-  <option>Small select</option>
+  <option>Маленькое меню выбора</option>
 </select>
 {{< /example >}}
 
-### Readonly
+### Только чтение
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+Добавьте логический атрибут `readonly` к полю ввода, чтобы предотвратить изменение входного значения. Поля ввода, доступные только для чтения, выглядят светлее (как и отключенные входы), но сохраняют стандартный курсор.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Readonly input here..." readonly>
+<input class="form-control" type="text" placeholder="Здесь поле ввода только для чтения..." readonly>
 {{< /example >}}
 
-### Readonly plain text
+### Только для чтения обычный текст
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+Если Вы хотите, чтобы элементы `<input readonly>` в Вашей форме были стилизованы как простой текст, используйте класс `.form-control-plaintext`, чтобы удалить стиль поля формы по умолчанию и сохранить правильные поля и отступы.
 
 {{< example >}}
 <form>
   <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <label for="staticEmail" class="col-sm-2 col-form-label">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Пароль</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword">
     </div>
@@ -137,53 +137,53 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {{< example >}}
 <form class="form-inline">
   <div class="form-group mb-2">
-    <label for="staticEmail2" class="sr-only">Email</label>
+    <label for="staticEmail2" class="sr-only">Эл. адрес</label>
     <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
   </div>
   <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">Password</label>
+    <label for="inputPassword2" class="sr-only">Пароль</label>
     <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+  <button type="submit" class="btn btn-primary mb-2">Подтвердить личность</button>
 </form>
 {{< /example >}}
 
-## Range Inputs
+## Ввод диапазона
 
-Set horizontally scrollable range inputs using `.form-control-range`.
+Установите горизонтально прокручиваемый диапазон входов с помощью `.form-control-range`.
 
 {{< example >}}
 <form>
   <div class="form-group">
-    <label for="formControlRange">Example Range input</label>
+    <label for="formControlRange">Пример ввода диапазона</label>
     <input type="range" class="form-control-range" id="formControlRange">
   </div>
 </form>
 {{< /example >}}
 
-## Checkboxes and radios
+## Флажки и радио
 
-Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+Флажки и радио по умолчанию улучшены с помощью `.form-check`, **единственного класса для обоих типов ввода, который улучшает макет и поведение их HTML-элементов**. Флажки предназначены для выбора одного или нескольких вариантов в списке, а радио - для выбора одного варианта из многих.
 
-Disabled checkboxes and radios are supported. The `disabled` attribute will apply a lighter color to help indicate the input's state.
+Поддерживаются отключенные флажки и радио. Атрибут `disabled` применит более светлый цвет для обозначения состояния ввода.
 
-Checkboxes and radio buttons support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`.
+Флажки и переключатели поддерживают проверку формы на основе HTML и предоставляют краткие, доступные метки. Таким образом, наши `<input>` b `<label>` являются родственными элементами в отличие от `<input>` внутри `<label>`. Это немного более подробно, так как Вы должны указать атрибуты `id` и `for` чтобы связать `<input>` и `<label>`.
 
-### Default (stacked)
+### По умолчанию (сложены)
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+По умолчанию любое количество флажков и радио, которые являются ближайшими родственниками, будут располагаться вертикально и соответствующим образом разделены с помощью `.form-check`.
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
+    Флажок по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
   <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
+    Отключенный флажок
   </label>
 </div>
 {{< /example >}}
@@ -192,26 +192,26 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    Default radio
+    Радио по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
-    Second default radio
+    Второе радио по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
   <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
+    Отключенное радио
   </label>
 </div>
 {{< /example >}}
 
-### Inline
+### Строковые
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+Сгруппируйте флажки или радио в одном горизонтальном ряду, добавив `.form-check-inline` к любому `.form-check`.
 
 {{< example >}}
 <div class="form-check form-check-inline">
@@ -224,7 +224,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineCheckbox3">3 (отключен)</label>
 </div>
 {{< /example >}}
 
@@ -239,13 +239,13 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineRadio3">3 (отключен)</label>
 </div>
 {{< /example >}}
 
-### Without labels
+### Без меток
 
-Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`).
+Добавьте `.position-static` ко входам в `.form-check`, которые не имеют текста метки. Не забудьте по-прежнему предоставить доступное имя для вспомогательных технологий (например, с помощью `aria-label`).
 
 {{< example >}}
 <div class="form-check">
@@ -256,97 +256,97 @@ Add `.position-static` to inputs within `.form-check` that don't have any label 
 </div>
 {{< /example >}}
 
-## Layout
+## Макет
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Поскольку Bootstrap применяет `display: block` и `width: 100%` почти ко всем элементам управления формой, формы по умолчанию будут располагаться вертикально. Дополнительные классы могут использоваться для изменения этого макета для каждой формы.
 
-### Form groups
+### Группы форм
 
-The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+Класс `.form-group` то самый простой способ добавить некоторую структуру к формам. Он предоставляет гибкий класс, который поощряет правильную группировку меток, элементов управления, необязательного текста справки и сообщений проверки формы. По умолчанию он применяет только `margin-bПетровm`, но при необходимости подбирает дополнительные стили в `.form-inline`. Используйте его с `<fieldset>`, `<div>` или почти любым другим элементом.
 
 {{< example >}}
 <form>
   <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+    <label for="formGroupExampleInput">Пример метки</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Пример заполнителя ввода">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+    <label for="formGroupExampleInput2">Другая метка</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Другой заполнитель ввода">
   </div>
 </form>
 {{< /example >}}
 
-### Form grid
+### Сетка формы
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+Более сложные формы могут быть построены с использованием наших классов сетки. Используйте их для макетов форм, требующих нескольких столбцов, разной ширины и дополнительных параметров выравнивания.
 
 {{< example >}}
 <form>
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Имя">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Фамилия">
     </div>
   </div>
 </form>
 {{< /example >}}
 
-#### Form row
+#### Строка формы
 
-You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+Вы также можете заменить `.row` на `.form-row`, разновидность нашей стандартной строки сетки, которая переопределяет отступы столбцов по умолчанию для более плотных и компактных макетов.
 
 {{< example >}}
 <form>
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Имя">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Фамилия">
     </div>
   </div>
 </form>
 {{< /example >}}
 
-More complex layouts can also be created with the grid system.
+С помощью системы сеток также можно создавать более сложные макеты.
 
 {{< example >}}
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
+      <label for="inputEmail4">Эл. адрес</label>
       <input type="email" class="form-control" id="inputEmail4">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
+      <label for="inputPassword4">Пароль</label>
       <input type="password" class="form-control" id="inputPassword4">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="inputAddress">Адрес</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="проспект, улица">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2">Адрес 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Квартира, студия или этаж">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="inputГород">Город</label>
+      <input type="text" class="form-control" id="inputГород">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
+      <label for="inputState">Область</label>
       <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
+        <option selected>Выбрать...</option>
         <option>...</option>
       </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
+      <label for="inputZip">Индекс</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
@@ -354,53 +354,53 @@ More complex layouts can also be created with the grid system.
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
-        Check me out
+        Проверить меня
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Войти в систему</button>
 </form>
 {{< /example >}}
 
-#### Horizontal form
+#### Горизонтальная форма
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
+Создавайте горизонтальные формы с сеткой, добавляя класс `.row` для формирования групп и используя классы `.col-*-*` для определения ширины Ваших меток и элементов управления. Не забудьте добавить `.col-form-label` к Вашим `<label>`, чтобы они были выровнены по центру по вертикали с соответствующими элементами управления формой.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+Иногда Вам может потребоваться использовать утилиты `margin` или `padding` для создания идеального выравнивания, которое Вам нужно. Например, мы удалили `padding-top` на нашей метке сгруппированных радио, чтобы лучше выровнять базовую линию текста.
 
 {{< example >}}
 <form>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" id="inputEmail3">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword3">
     </div>
   </div>
   <fieldset class="form-group row">
-    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Radios</legend>
+    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Радио</legend>
     <div class="col-sm-10">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
         <label class="form-check-label" for="gridRadios1">
-          First radio
+          Первое радио
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
         <label class="form-check-label" for="gridRadios2">
-          Second radio
+          Второе радио
         </label>
       </div>
       <div class="form-check disabled">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
         <label class="form-check-label" for="gridRadios3">
-          Third disabled radio
+          Третье отключенное радио
         </label>
       </div>
     </div>
@@ -410,39 +410,39 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
-          Example checkbox
+          Пример чекбокса
         </label>
       </div>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-primary">Войти</button>
     </div>
   </div>
 </form>
 {{< /example >}}
 
-##### Horizontal form label sizing
+##### Размер меток горизонтальной формы
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Обязательно используйте `.col-form-label-sm` или `.col-form-label-lg` к Вашим `<label>` или `<legend>`, чтобы правильно следовать размеру `.form-control-lg` и `.form-control-sm`.
 
 {{< example >}}
 <form>
   <div class="form-group row">
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Эл. адрес</label>
     <div class="col-sm-10">
       <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
     </div>
@@ -450,137 +450,137 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 </form>
 {{< /example >}}
 
-#### Column sizing
+#### Размер колонки
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`.
+Как показано в предыдущих примерах, наша сеточная система позволяет Вам размещать любое количество `.col` в `.row` или `.form-row`. Они разделят доступную ширину между собой поровну. Вы также можете выбрать подмножество Ваших столбцов, чтобы они занимали больше или меньше места, в то время как оставшиеся `.col` поровну разделяют остальные с определенными классами столбцов, такими как `.col-7`.
 
 {{< example >}}
 <form>
   <div class="form-row">
     <div class="col-7">
-      <input type="text" class="form-control" placeholder="City">
+      <input type="text" class="form-control" placeholder="Город">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="State">
+      <input type="text" class="form-control" placeholder="Область">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
+      <input type="text" class="form-control" placeholder="Индекс">
     </div>
   </div>
 </form>
 {{< /example >}}
 
-#### Auto-sizing
+#### Автоматический размер
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+В приведенном ниже примере используется утилита flexbox для вертикального центрирования содержимого и изменение `.col` на `.col-auto`, чтобы Ваши столбцы занимали ровно столько места, сколько необходимо. Другими словами, размер столбца зависит от содержимого.
 
 {{< example >}}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInput">Name</label>
-      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInput">Имя</label>
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Иванова Анна">
     </div>
     <div class="col-auto">
-      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <label class="sr-only" for="inlineFormInputGroup">Имя пользователя</label>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Имя пользователя">
       </div>
     </div>
     <div class="col-auto">
       <div class="form-check mb-2">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck">
         <label class="form-check-label" for="autoSizingCheck">
-          Remember me
+          Запомните меня
         </label>
       </div>
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" class="btn btn-primary mb-2">Отправить</button>
     </div>
   </div>
 </form>
 {{< /example >}}
 
-You can then remix that once again with size-specific column classes.
+Затем Вы можете снова смешать это с классами столбцов, зависящими от размера.
 
 {{< example >}}
 <form>
   <div class="form-row align-items-center">
     <div class="col-sm-3 my-1">
-      <label class="sr-only" for="inlineFormInputName">Name</label>
-      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+      <label class="sr-only" for="inlineFormInputName">Имя</label>
+      <input type="text" class="form-control" id="inlineFormInputName" placeholder="Иванова Анна">
     </div>
     <div class="col-sm-3 my-1">
-      <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+      <label class="sr-only" for="inlineFormInputGroupUsername">Имя пользователя</label>
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">@</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Имя пользователя">
       </div>
     </div>
     <div class="col-auto my-1">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
         <label class="form-check-label" for="autoSizingCheck2">
-          Remember me
+          Запомните меня
         </label>
       </div>
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
   </div>
 </form>
 {{< /example >}}
 
-And of course [custom form controls](#custom-forms) are supported.
+И, конечно же, поддерживаются [элементы управления настраиваемой формы](#настраиваемые-формы).
 
 {{< example >}}
 <form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Предпочтение</label>
       <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option selected>Выбрать...</option>
+        <option value="1">Один</option>
+        <option value="2">Два</option>
+        <option value="3">три</option>
       </select>
     </div>
     <div class="col-auto my-1">
       <div class="custom-control custom-checkbox mr-sm-2">
         <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+        <label class="custom-control-label" for="customControlAutosizing">Помните мои предпочтения</label>
       </div>
     </div>
     <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
   </div>
 </form>
 {{< /example >}}
 
-### Inline forms
+### Строковые формы
 
-Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
+Используйте класс `.form-inline` для отображения серии меток, элементов управления формы и кнопок в одной горизонтальной строке. Элементы управления формами внутри встроенных форм немного отличаются от состояний по умолчанию.
 
-- Controls are `display: flex`, collapsing any HTML white space and allowing you to provide alignment control with [spacing]({{< docsref "/utilities/spacing" >}}) and [flexbox]({{< docsref "/utilities/flex" >}}) utilities.
-- Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
-- Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
+- Элементы управления - это `display: flex`, сворачивающее любое пустое пространство HTML и позволяющее вам обеспечить контроль выравнивания с помощью утилит [интервалов]({{< docsref "/utilities/spacing" >}}) и [flexbox]({{< docsref "/utilities/flex" >}}).
+- Элементы управления и группы ввода получают ширину `width: auto`, чтобы переопределить ширину по умолчанию Bootstrap `width: 100%`.
+- Элементы управления **отображаются встроенными только в области просмотра, ширина которых составляет не менее 576px**, чтобы учесть узкие области просмотра на мобильных устройствах.
 
-You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{< docsref "/utilities/spacing" >}}) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
+Возможно, Вам придется вручную задать ширину и выравнивание отдельных элементов управления формой с помощью [утилит интервалов]({{< docsref "/utilities/spacing" >}}) (как показано ниже). Наконец, не забудьте всегда включать `<label>` в каждый элемент управления формой, даже если Вам нужно скрыть его от посетителей, не читающих с экрана, с помощью `.sr-only`.
 
 {{< example >}}
 <form class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <label class="sr-only" for="inlineFormInputName2">Имя</label>
   <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
 
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Имя пользователя</label>
   <div class="input-group mb-2 mr-sm-2">
     <div class="input-group-prepend">
       <div class="input-group-text">@</div>
@@ -591,195 +591,195 @@ You may need to manually address the width and alignment of individual form cont
   <div class="form-check mb-2 mr-sm-2">
     <input class="form-check-input" type="checkbox" id="inlineFormCheck">
     <label class="form-check-label" for="inlineFormCheck">
-      Remember me
+      Запомните меня
     </label>
   </div>
 
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <button type="submit" class="btn btn-primary mb-2">Отправить</button>
 </form>
 {{< /example >}}
 
-Custom form controls and selects are also supported.
+Также поддерживаются настраиваемые элементы управления и выбор формы.
 
 {{< example >}}
 <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Предпочтения</label>
   <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option selected>Выбрать...</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
 
   <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input type="checkbox" class="custom-control-input" id="customControlInline">
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+    <label class="custom-control-label" for="customControlInline">Запомнить мои предпочтения</label>
   </div>
 
-  <button type="submit" class="btn btn-primary my-1">Submit</button>
+  <button type="submit" class="btn btn-primary my-1">Отправить</button>
 </form>
 {{< /example >}}
 
 {{< callout warning >}}
-##### Alternatives to hidden labels
-Assistive technologies such as screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the `.sr-only` class. There are further alternative methods of providing a label for assistive technologies, such as the `aria-label`, `aria-labelledby` or `title` attribute. If none of these are present, assistive technologies may resort to using the `placeholder` attribute, if present, but note that use of `placeholder` as a replacement for other labelling methods is not advised.
+##### Альтернативы скрытым ярлыкам
+Вспомогательные технологии, такие как программы чтения с экрана, будут иметь проблемы с вашими формами, если Вы не добавите метку для каждого ввода. Для этих встроенных форм Вы можете скрыть метки с помощью класса `.sr-only`. Существуют и другие альтернативные методы предоставления метки для вспомогательных технологий, такие как атрибут `aria-label`, `aria-labelledby` или `title`. Если ни один из них не присутствует, вспомогательные технологии могут прибегать к использованию атрибута `placeholder`, если он присутствует, но учтите, что использование `placeholder` в качестве замены для других методов маркировки не рекомендуется.
 {{< /callout >}}
 
-## Help text
+## Текст помощи
 
-Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`.
+Текст справки на уровне блока в формах может быть создан с помощью `.form-text` (ранее известный как `.help-block` в версии v3). Встроенный текст справки может быть гибко реализован с использованием любого встроенного элемента HTML и служебных классов, таких как `.text-muted`.
 
 {{< callout warning >}}
-##### Associating help text with form controls
+##### Связывание текста помощи с элементами управления формой
 
-Help text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this help text when the user focuses or enters the control.
+Текст справки должен быть явно связан с элементом управления формы, к которому он относится, с помощью атрибута `aria-describedby`. Это гарантирует, что вспомогательные технологии, такие как программы чтения с экрана, будут озвучивать этот текст справки, когда пользователь фокусируется или входит в элемент управления.
 {{< /callout >}}
 
-Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.
+Текст справки под полями можно оформить с помощью `.form-text`. Этот класс включает в себя `display: block` и добавляет верхнее поле для удобного разделения полей ввода выше.
 
 {{< example >}}
-<label for="inputPassword5">Password</label>
+<label for="inputPassword5">Пароль</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <small id="passwordHelpBlock" class="form-text text-muted">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  Ваш пароль должен состоять из 8–20 символов, содержать буквы и цифры и не должен содержать пробелов, специальных символов или эмодзи.
 </small>
 {{< /example >}}
 
-Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
+Встроенный текст может использовать любой типичный встроенный элемент HTML (будь то `<small>`, `<span>` или что-то еще) с не более чем служебным классом.
 
 {{< example >}}
 <form class="form-inline">
   <div class="form-group">
-    <label for="inputPassword6">Password</label>
+    <label for="inputPassword6">Пароль</label>
     <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
     <small id="passwordHelpInline" class="text-muted">
-      Must be 8-20 characters long.
+      Должен быть 8-20 символов.
     </small>
   </div>
 </form>
 {{< /example >}}
 
-## Disabled forms
+## Отключенные формы
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+Добавьте логический атрибут `disabled` для ввода, чтобы предотвратить взаимодействие с пользователем и сделать его более светлым.
 
 ```html
-<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Здесь отключен ввод..." disabled>
 ```
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
+Добавьте атрибут `disabled` r `<fieldset>`, чтобы отключить все элементы управления внутри.
 
 {{< example >}}
 <form>
   <fieldset disabled>
-    <legend>Disabled fieldset example</legend>
+    <legend>Пример отключенного набора полей</legend>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <label for="disabledTextInput">Отключенное поле ввода</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Отключенное поле ввода">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect">Отключенное меню выбора</label>
       <select id="disabledSelect" class="form-control">
-        <option>Disabled select</option>
+        <option>Отключенное меню выбора</option>
       </select>
     </div>
     <div class="form-group">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
         <label class="form-check-label" for="disabledFieldsetCheck">
-          Can't check this
+          Не могу это проверить
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
   </fieldset>
 </form>
 {{< /example >}}
 
 {{< callout warning >}}
-##### Caveat with anchors
+##### Предупреждение с якорями
 
-Browsers treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them.
+Браузеры обрабатывают все элементы управления собственными формами (элементы `<input>`, `<select>` и `<button>`) внутри `<fieldset disabled>` как отключенными, предотвращая взаимодействие с ними как с клавиатуры, так и с помощью мыши.
 
-However, if your form also includes custom button-like elements such as `<a ... class="btn btn-*">`, these will only be given a style of `pointer-events: none`. As noted in the section about [disabled state for buttons]({{< docsref "/components/buttons#disabled-state" >}}) (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Internet Explorer 10. The anchor-based controls will also still be focusable and operable using the keyboard. You must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
+Однако, если Ваша форма также включает в себя пользовательские элементы, похожие на кнопки, такие как `<a ... class="btn btn-*">`, им будет присвоен только стиль `pointer-events: none`. Как отмечено в разделе о [отключенном состоянии для кнопок]({{< docsref "/components/buttons#disabled-state" >}}) (и особенно в подразделе для элементов привязки), это свойство CSS еще не стандартизированы и не полностью поддерживаются в Internet Explorer 10. Элементы управления на основе привязки также будут доступны для фокусировки и работать с ними с клавиатуры. Вы должны вручную изменить эти элементы управления, добавив `tabindex="-1"`, чтобы они не получали фокус, и `aria-disabled="disabled"`, чтобы сигнализировать о своем состоянии вспомогательным технологиям.
 {{< /callout >}}
 
 {{< callout danger >}}
-#### Cross-browser compatibility
+#### Кроссбраузерная совместимость
 
-While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
+Хотя Bootstrap будет применять эти стили во всех браузерах, Internet Explorer 11 и ниже не полностью поддерживает атрибут `disabled` в `<fieldset>`. Используйте собственный JavaScript, чтобы отключить набор полей в этих браузерах.
 {{< /callout >}}
 
-## Validation
+## Проверка
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+Предоставьте пользователям ценные и полезные отзывы с помощью проверки формы HTML5 - [доступно во всех поддерживаемых нами браузерах](https://caniuse.com/form-validation). Выберите из обратной связи проверки браузера по умолчанию или реализуйте собственные сообщения с помощью наших встроенных классов и стартового JavaScript.
 
 {{< callout warning >}}
-We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we'd recommend either using the server-side option or the default browser validation method.
+Нам известно, что в настоящее время пользовательские стили проверки и всплывающие подсказки на стороне клиента недоступны, поскольку они не доступны для вспомогательных технологий. Пока мы работаем над решением, мы рекомендуем либо использовать вариант на стороне сервера, либо метод проверки браузера по умолчанию.
 {{< /callout >}}
 
-### How it works
+### Как это работает
 
-Here's how form validation works with Bootstrap:
+Вот как проверка формы работает с Bootstrap:
 
-- HTML form validation is applied via CSS's two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-- Bootstrap scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-- To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server side validation](#server-side). They do not require a `.was-validated` parent class.
-- Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- Проверка формы HTML применяется через два псевдокласса CSS, `:invalid` и `:valid`. Он применяется к элементам `<input>`, `<select>` и `<textarea>`.
+- Bootstrap применяет стили `:invalid` и `:valid` к родительскому классу `.was-validated`, обычно применяемому к `<form>`. В противном случае любое обязательное поле без значения будет отображаться как недопустимое при загрузке страницы. Таким образом, Вы можете выбрать, когда их активировать (обычно после попытки отправки формы).
+- Чтобы сбросить внешний вид формы (например, в случае отправки динамической формы с использованием AJAX), удалите класс `.was-validated` из `<form>` снова после отправки.
+- В качестве запасного варианта могут использоваться классы `.is-invalid` и `.is-valid` вместо псевдоклассов для [проверки на стороне сервера [проверки на стороне сервера](#на-стороне-сервера). Им не нужен родительский класс `.was-validated`.
+- Из-за ограничений в том, как работает CSS, мы не можем (в настоящее время) применять стили к `<label>`, который стоит перед элементом управления формой в DOM, без помощи пользовательского JavaScript.
+- Все современные браузеры поддерживают [API проверки ограничений](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), серию методов JavaScript для проверки формы управления.
+- В сообщениях обратной связи могут использоваться [настройки браузера по умолчанию](#настройки-браузера-по-умолчанию) (разные для каждого браузера и не стилизованные с помощью CSS) или наши пользовательские стили обратной связи с дополнительным HTML и CSS.
+- Вы можете предоставлять настраиваемые сообщения о действительности с помощью `setCustomValidity` в JavaScript.
 
-With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+Имея это в виду, рассмотрим следующие демонстрации наших пользовательских стилей проверки формы, дополнительных классов на стороне сервера и настроек браузера по умолчанию.
 
-### Custom styles
+### Пользовательские стили
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+Для пользовательских сообщений проверки формы Bootstrap Вам необходимо добавить логический атрибут `novalidate` к Вашему тегу `<form>`. Это отключает всплывающие подсказки обратной связи браузера по умолчанию, но по-прежнему обеспечивает доступ к API проверки формы в JavaScript. Попробуйте заполнить форму ниже; наш JavaScript перехватит кнопку отправки и передаст Вам отзыв. При попытке отправить Вы увидите стили `:invalid` и `:valid`, примененные к элементам управления Вашей формы.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
+В пользовательских стилях обратной связи применяются пользовательские цвета, границы, стили фокуса и фоновые значки, чтобы лучше передавать отзывы. Фоновые иконки для `<select>` доступны только с `.custom-select`, но не с `.form-control`.
 
 {{< example >}}
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+      <label for="validationCustom01">Имя</label>
+      <input type="text" class="form-control" id="validationCustom01" value="Иван" required>
       <div class="valid-feedback">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
     <div class="col-md-6 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+      <label for="validationCustom02">Фамилия</label>
+      <input type="text" class="form-control" id="validationCustom02" value="Петров" required>
       <div class="valid-feedback">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom03">City</label>
+      <label for="validationCustom03">Город</label>
       <input type="text" class="form-control" id="validationCustom03" required>
       <div class="invalid-feedback">
-        Please provide a valid city.
+        Укажите действующий город.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
+      <label for="validationCustom04">Область</label>
       <select class="custom-select" id="validationCustom04" required>
-        <option selected disabled value="">Choose...</option>
+        <option selected disabled value="">Выбрать...</option>
         <option>...</option>
       </select>
       <div class="invalid-feedback">
-        Please select a valid state.
+        Пожалуйста, выберите допустимую область.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationCustom05">Zip</label>
+      <label for="validationCustom05">Индекс</label>
       <input type="text" class="form-control" id="validationCustom05" required>
       <div class="invalid-feedback">
-        Please provide a valid zip.
+        Пожалуйста, предоставьте действующий почтовый индекс.
       </div>
     </div>
   </div>
@@ -787,24 +787,24 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
+        Согласитесь с условиями
       </label>
       <div class="invalid-feedback">
-        You must agree before submitting.
+        Вы должны согласиться перед отправкой.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Отправить форму</button>
 </form>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
+    // Зацикливайтесь на них и предотвращайте подчинение
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
@@ -819,38 +819,38 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 </script>
 {{< /example >}}
 
-### Browser defaults
+### Настройки браузера по умолчанию
 
-Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
+Не заинтересованы в пользовательских сообщениях обратной связи для проверки или написании JavaScript для изменения поведения формы? Все хорошо, Вы можете использовать настройки браузера по умолчанию. Попробуйте заполнить форму ниже. В зависимости от Вашего браузера и ОС Вы увидите немного другой стиль обратной связи.
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+Хотя эти стили обратной связи нельзя стилизовать с помощью CSS, Вы все равно можете настроить текст отзыва с помощью JavaScript.
 
 {{< example >}}
 <form>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationDefault01">First name</label>
-      <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+      <label for="validationDefault01">Имя</label>
+      <input type="text" class="form-control" id="validationDefault01" value="Иван" required>
     </div>
     <div class="col-md-6 mb-3">
-      <label for="validationDefault02">Last name</label>
-      <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+      <label for="validationDefault02">Фамилия</label>
+      <input type="text" class="form-control" id="validationDefault02" value="Петров" required>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationDefault03">City</label>
+      <label for="validationDefault03">Город</label>
       <input type="text" class="form-control" id="validationDefault03" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault04">State</label>
+      <label for="validationDefault04">Область</label>
       <select class="custom-select" id="validationDefault04" required>
-        <option selected disabled value="">Choose...</option>
+        <option selected disabled value="">Выбрать...</option>
         <option>...</option>
       </select>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationDefault05">Zip</label>
+      <label for="validationDefault05">Индекс</label>
       <input type="text" class="form-control" id="validationDefault05" required>
     </div>
   </div>
@@ -858,61 +858,61 @@ While these feedback styles cannot be styled with CSS, you can still customize t
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
       <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
+        Согласитесь с условиями
       </label>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Отправить форму</button>
 </form>
 {{< /example >}}
 
-### Server side
+### На стороне сервера
 
-We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+Мы рекомендуем использовать проверку на стороне клиента, но если Вам требуется проверка на стороне сервера, Вы можете указать недопустимые и допустимые поля формы с помощью `.is-invalid` и `.is-valid`. Обратите внимание, что эти классы также поддерживают `.invalid-feedback`.
 
-For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby`. This attribute allows more than one `id` to be referenced, in case the field already points to additional form text.
+Для недопустимых полей убедитесь, что недопустимый отзыв/сообщение об ошибке связано с соответствующим полем формы с помощью `aria-describedby`. Этот атрибут позволяет ссылаться на более чем один `id`, если поле уже указывает на дополнительный текст формы.
 
 {{< example >}}
 <form>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer01">First name</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+      <label for="validationServer01">Имя</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" value="Иван" required>
       <div class="valid-feedback">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
     <div class="col-md-6 mb-3">
-      <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+      <label for="validationServer02">Фамилия</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" value="Петров" required>
       <div class="valid-feedback">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer03">City</label>
+      <label for="validationServer03">Город</label>
       <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
       <div id="validationServer03Feedback" class="invalid-feedback">
-        Please provide a valid city.
+        Укажите действующий город.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer04">State</label>
+      <label for="validationServer04">Область</label>
       <select class="custom-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-        <option selected disabled value="">Choose...</option>
+        <option selected disabled value="">Выбрать...</option>
         <option>...</option>
       </select>
       <div id="validationServer04Feedback" class="invalid-feedback">
-        Please select a valid state.
+        Пожалуйста, выберите допустимую область.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer05">Zip</label>
+      <label for="validationServer05">Индекс</label>
       <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
       <div id="validationServer05Feedback" class="invalid-feedback">
-        Please provide a valid zip.
+        Пожалуйста, предоставьте действующий почтовый индекс.
       </div>
     </div>
   </div>
@@ -920,67 +920,67 @@ For invalid fields, ensure that the invalid feedback/error message is associated
     <div class="form-check">
       <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
       <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
+        Согласитесь с условиями
       </label>
       <div  id="invalidCheck3Feedback" class="invalid-feedback">
-        You must agree before submitting.
+        Вы должны согласиться перед отправкой.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Отправить форму</button>
 </form>
 {{< /example >}}
 
-### Supported elements
+### Поддерживаемые элементы
 
-Validation styles are available for the following form controls and components:
+Стили проверки доступны для следующих элементов управления и компонентов формы:
 
-- `<input>`s and `<textarea>`s with `.form-control`
-- `<select>`s with `.form-control` or `.custom-select`
-- `.form-check`s
-- `.custom-checkbox`s and `.custom-radio`s
+- `<input>` и `<textarea>` с `.form-control`
+- `<select>` с `.form-control` или `.custom-select`
+- `.form-check`
+- `.custom-checkbox` и `.custom-radio`
 - `.custom-file`
 
 {{< example >}}
 <form class="was-validated">
   <div class="mb-3">
-    <label for="validationTextarea">Textarea</label>
-    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+    <label for="validationTextarea">Текстовая область</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Пример обязательного текстового поля" required></textarea>
     <div class="invalid-feedback">
-      Please enter a message in the textarea.
+      Пожалуйста, введите сообщение в текстовое поле.
     </div>
   </div>
 
   <div class="custom-control custom-checkbox mb-3">
     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-    <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
-    <div class="invalid-feedback">Example invalid feedback text</div>
+    <label class="custom-control-label" for="customControlValidation1">Установите этот настраиваемый флажок</label>
+    <div class="invalid-feedback">Пример неверного текста отзыва</div>
   </div>
 
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+    <label class="custom-control-label" for="customControlValidation2">Переключить это настраиваемое радио</label>
   </div>
   <div class="custom-control custom-radio mb-3">
     <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-    <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
-    <div class="invalid-feedback">More example invalid feedback text</div>
+    <label class="custom-control-label" for="customControlValidation3">Или переключите это другое настраиваемое радио</label>
+    <div class="invalid-feedback">Еще пример недопустимого текста отзыва</div>
   </div>
 
   <div class="mb-3">
     <select class="custom-select" required>
-      <option value="">Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="">Выбрать...</option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+      <option value="3">Три</option>
     </select>
-    <div class="invalid-feedback">Example invalid custom select feedback</div>
+    <div class="invalid-feedback">Пример неверного отзыва о пользовательском выборе</div>
   </div>
 
   <div class="custom-file mb-3">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
+    <label class="custom-file-label" for="validatedCustomFile">Выбрать файл...</label>
+    <div class="invalid-feedback">Пример неверного отзыва о пользовательском файле</div>
   </div>
 
   <div class="mb-3">
@@ -991,103 +991,103 @@ Validation styles are available for the following form controls and components:
       <input type="text" class="form-control is-invalid" aria-describedby="validatedInputGroupPrepend" required>
     </div>
     <div class="invalid-feedback">
-      Example invalid input group feedback
+      Пример неверной обратной связи группы ввода
     </div>
   </div>
 
   <div class="mb-3">
     <div class="input-group is-invalid">
       <div class="input-group-prepend">
-        <label class="input-group-text" for="validatedInputGroupSelect">Options</label>
+        <label class="input-group-text" for="validatedInputGroupSelect">Параметры</label>
       </div>
       <select class="custom-select" id="validatedInputGroupSelect" required>
-        <option value="">Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="">Выбрать...</option>
+        <option value="1">Один</option>
+        <option value="2">Два</option>
+        <option value="3">Три</option>
       </select>
     </div>
     <div class="invalid-feedback">
-      Example invalid input group feedback
+      Пример неверной обратной связи группы ввода
     </div>
   </div>
 
   <div class="input-group is-invalid">
     <div class="custom-file">
       <input type="file" class="custom-file-input" id="validatedInputGroupCustomFile" required>
-      <label class="custom-file-label" for="validatedInputGroupCustomFile">Choose file...</label>
+      <label class="custom-file-label" for="validatedInputGroupCustomFile">Выбрать файл...</label>
     </div>
     <div class="input-group-append">
-       <button class="btn btn-outline-secondary" type="button">Button</button>
+       <button class="btn btn-outline-secondary" type="button">Кнопка</button>
     </div>
   </div>
   <div class="invalid-feedback">
-    Example invalid input group feedback
+    Пример неверной обратной связи группы ввода
   </div>
 </form>
 {{< /example >}}
 
-### Tooltips
+### Всплывающие подсказки
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+Если Ваш макет формы позволяет это, Вы можете заменить классы `.{valid|invalid}-feedback` на классы `.{valid|invalid}-tooltip`, чтобы отображать отзывы о проверке в стилизованной всплывающей подсказке. Убедитесь, что у Вас есть родительский элемент с `position: relative` для позиционирования всплывающей подсказки. В приведенном ниже примере у наших классов столбцов это уже есть, но Вашему проекту может потребоваться альтернативная настройка.
 
 {{< example >}}
 <form class="needs-validation" novalidate>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip01">First name</label>
-      <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+      <label for="validationTooltip01">Имя</label>
+      <input type="text" class="form-control" id="validationTooltip01" value="Иван" required>
       <div class="valid-tooltip">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip02">Last name</label>
-      <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+      <label for="validationTooltip02">Фамилия</label>
+      <input type="text" class="form-control" id="validationTooltip02" value="Петров" required>
       <div class="valid-tooltip">
-        Looks good!
+        Выглядит хорошо!
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
+      <label for="validationTooltip03">Город</label>
       <input type="text" class="form-control" id="validationTooltip03" required>
       <div class="invalid-tooltip">
-        Please provide a valid city.
+        Укажите действующий город.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
+      <label for="validationTooltip04">Область</label>
       <select class="custom-select" id="validationTooltip04" required>
-        <option selected disabled value="">Choose...</option>
+        <option selected disabled value="">Выбрать...</option>
         <option>...</option>
       </select>
       <div class="invalid-tooltip">
-        Please select a valid state.
+        Пожалуйста, выберите допустимую область.
       </div>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
+      <label for="validationTooltip05">Индекс</label>
       <input type="text" class="form-control" id="validationTooltip05" required>
       <div class="invalid-tooltip">
-        Please provide a valid zip.
+        Пожалуйста, предоставьте действующий почтовый индекс.
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+  <button class="btn btn-primary" type="submit">Отправить форму</button>
 </form>
 {{< /example >}}
 
-### Customizing
+### Кастомизация
 
-Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is looped over to generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color and icon. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.
+Состояния проверки можно настроить через Sass с помощью карты `$form-validation-states`. Эта карта Sass, расположенная в нашем файле `_variables.scss`, зацикливается для генерации состояний валидации по умолчанию `valid`/`invalid`. Включена вложенная карта для настройки цвета и значка каждого состояния. Хотя браузеры не поддерживают никакие другие состояния, те, кто использует собственные стили, могут легко добавить более сложную обратную связь с формой.
 
-Please note that we do not recommend customizing these values without also modifying the `form-validation-state` mixin.
+Обратите внимание, что мы не рекомендуем настраивать эти значения без изменения миксина `form-validation-state`.
 
 ```scss
-// Sass map from `_variables.scss`
-// Override this and recompile your Sass to generate different states
+// Карта Sass из `_variables.scss`
+// Переопределите это и перекомпилируйте свой Sass для генерации разных состояний
 $form-validation-states: map-merge(
   (
     "valid": (
@@ -1102,17 +1102,17 @@ $form-validation-states: map-merge(
   $form-validation-states
 );
 
-// Loop from `_forms.scss`
-// Any modifications to the above Sass map will be reflected in your compiled
-// CSS via this loop.
+// Цикл из `_forms.scss`
+// Любые изменения в приведенной выше карте Sass будут отражены в вашей скомпилированной
+// CSS через этот цикл.
 @each $state, $data in $form-validation-states {
   @include form-validation-state($state, map-get($data, color), map-get($data, icon));
 }
 ```
 
-### Input group validation
+### Проверка группы ввода
 
-To detect what elements need rounded corners inside an input group with validation, an input group requires an additional `.has-validation` class.
+Чтобы определить, какие элементы нуждаются в скругленных углах внутри группы ввода с проверкой, группе ввода требуется дополнительный класс `.has-validation`.
 
 ```html
 <div class="input-group has-validation">
@@ -1121,7 +1121,7 @@ To detect what elements need rounded corners inside an input group with validati
   </div>
   <input type="text" class="form-control" required>
   <div class="invalid-feedback">
-    Please choose a username.
+    Пожалуйста, выберите имя пользователя.
   </div>
 </div>
 ```
@@ -1133,228 +1133,229 @@ To detect what elements need rounded corners inside an input group with validati
     </div>
     <input type="text" class="form-control is-invalid" required>
     <div class="invalid-feedback">
-      Please choose a username.
+      Пожалуйста, выберите имя пользователя.
     </div>
   </div>
 </div>
 
-## Custom forms
+## Пользовательские формы
 
-For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control.
+Для еще большей настройки и согласованности между браузерами используйте наши полностью настраиваемые элементы формы, чтобы заменить настройки браузера по умолчанию. Они созданы на основе семантической и доступной разметки, поэтому являются надежной заменой любого элемента управления формы по умолчанию.
 
-### Checkboxes and radios
+### Флажки и радио
 
-Each checkbox and radio `<input>` and `<label>` pairing is wrapped in a `<div>` to create our custom control. Structurally, this is the same approach as our default `.form-check`.
+Каждая пара флажка и переключателя `<input>` и `<label>` обернута в `<div>` для создания нашего настраиваемого элемента управления. По структуре это тот же подход, что и наш стандартный файл `.form-check`.
 
-We use the sibling selector (`~`) for all our `<input>` states—like `:checked`—to properly style our custom form indicator. When combined with the `.custom-control-label` class, we can also style the text for each item based on the `<input>`'s state.
+Мы используем родственный селектор (`~`) для всех наших состояний `<input>`, например, `:checked` - чтобы правильно стилизовать наш индикатор настраиваемой формы. В сочетании с классом `.custom-control-label` мы также можем стилизовать текст для каждого элемента на основе состояния `<input>`.
 
-We hide the default `<input>` with `opacity` and use the `.custom-control-label` to build a new custom form indicator in its place with `::before` and `::after`. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
+Мы скрываем значение по умолчанию `<input>` с помощью `opacity` и используем `.custom-control-label` для создания на его месте нового индикатора настраиваемой формы с помощью `::before` и `::after`. К сожалению, мы не можем создать собственный, используя только `<input>`, потому что CSS-содержимое `content` не работает с этим элементом.
 
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://github.com/iconic/open-iconic). This provides us the best control for styling and positioning across browsers and devices.
+В отмеченных состояниях мы используем **встроенные SVG иконки в base64** из [Open Iconic](https://github.com/iconic/open-iconic). Это дает нам лучший контроль над стилем и позиционированием в браузерах и на разных устройствах.
 
-#### Checkboxes
+#### Флажки
 
 {{< example >}}
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+  <label class="custom-control-label" for="customCheck1">Установите этот настраиваемый флажок</label>
 </div>
 {{< /example >}}
 
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+Пользовательские флажки также могут использовать псевдокласс `:indeterminate` при ручной установке с помощью JavaScript (нет доступного атрибута HTML для его указания).
 
 <div class="bd-example bd-example-indeterminate">
   <div class="custom-control custom-checkbox">
     <input type="checkbox" class="custom-control-input" id="customCheck2">
-    <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+    <label class="custom-control-label" for="customCheck2">Установите этот настраиваемый флажок</label>
   </div>
 </div>
 
-If you're using jQuery, something like this should suffice:
+Если вы используете jQuery, этого должно быть достаточно:
 
 ```js
 $('.your-checkbox').prop('indeterminate', true)
 ```
 
-#### Radios
+#### Радио
 
 {{< example >}}
 <div class="custom-control custom-radio">
   <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadio1">Переключить это настраиваемое радио</label>
 </div>
 <div class="custom-control custom-radio">
   <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+  <label class="custom-control-label" for="customRadio2">Или переключите это другое настраиваемое радио</label>
 </div>
 {{< /example >}}
 
-#### Inline
+#### Строковые
 
 {{< example >}}
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadioInline1">Переключить это настраиваемое радио</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
-  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+  <label class="custom-control-label" for="customRadioInline2">Или переключите это другое настраиваемое радио</label>
 </div>
 {{< /example >}}
 
-#### Disabled
+#### Отключенные
 
-Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
+Пользовательские флажки и радио также можно отключить. Добавьте логический атрибут `disabled` к `<input>`, и пользовательский индикатор и описание метки будут автоматически стилизованы.
 
 {{< example >}}
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled>
-  <label class="custom-control-label" for="customCheckDisabled1">Check this custom checkbox</label>
+  <label class="custom-control-label" for="customCheckDisabled1">Установите этот настраиваемый флажок</label>
 </div>
 
 <div class="custom-control custom-radio">
   <input type="radio" name="radioDisabled" id="customRadioDisabled2" class="custom-control-input" disabled>
-  <label class="custom-control-label" for="customRadioDisabled2">Toggle this custom radio</label>
+  <label class="custom-control-label" for="customRadioDisabled2">Переключить это настраиваемое радио</label>
 </div>
 {{< /example >}}
 
-### Switches
+### Переключатели
 
-A switch has the markup of a custom checkbox but uses the `.custom-switch` class to render a toggle switch. Switches also support the `disabled` attribute.
+Переключатель имеет разметку настраиваемого флажка, но использует класс `.custom-switch` для визуализации переключателя. Коммутаторы также поддерживают атрибут `disabled`.
 
 {{< example >}}
 <div class="custom-control custom-switch">
   <input type="checkbox" class="custom-control-input" id="customSwitch1">
-  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+  <label class="custom-control-label" for="customSwitch1">Переключить этот элемент переключателя</label>
 </div>
 <div class="custom-control custom-switch">
   <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
-  <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+  <label class="custom-control-label" for="customSwitch2">Отключенный переключающий элемент</label>
 </div>
 {{< /example >}}
 
-### Select menu
+### Меню выбора
 
-Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
+Для пользовательских меню `<select>` нужен только пользовательский класс `.custom-select` для запуска пользовательских стилей. Пользовательские стили ограничены начальным внешним видом `<select>` и не могут изменять `<option>` из-за ограничений браузера.
 
 {{< example >}}
 <select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+Вы также можете выбрать один из маленьких или больших пользовательских элементов, чтобы они соответствовали нашим текстовым полям аналогичного размера.
 
 {{< example >}}
 <select class="custom-select custom-select-lg mb-3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 
 <select class="custom-select custom-select-sm">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-The `multiple` attribute is also supported:
+Также поддерживается атрибут `multiple`:
 
 {{< example >}}
 <select class="custom-select" multiple>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-As is the `size` attribute:
+Как и атрибут `size`:
 
 {{< example >}}
 <select class="custom-select" size="3">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Откройте это меню выбора</option>
+  <option value="1">Один</option>
+  <option value="2">Два</option>
+  <option value="3">Три</option>
 </select>
 {{< /example >}}
 
-### Range
+### Диапазон
 
-Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+Создайте пользовательские элементы управления `<input type="range">` с помощью `.custom-range`. Дорожка (фон) и ползунок (значение) имеют одинаковый стиль во всех браузерах. Поскольку только IE и Firefox поддерживают «заполнение» своей дорожки слева или справа от большого пальца как средство визуальной индикации прогресса, в настоящее время мы не поддерживаем это.
 
 {{< example >}}
-<label for="customRange1">Example range</label>
+<label for="customRange1">Пример диапазона</label>
 <input type="range" class="custom-range" id="customRange1">
 {{< /example >}}
 
-Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
+Входные данные диапазона имеют неявные значения для `min` и `max` — `0` и `100` соответственно. Вы можете указать новые значения для тех, кто использует атрибуты `min` и `max`.
 
 {{< example >}}
-<label for="customRange2">Example range</label>
+<label for="customRange2">Пример диапазона</label>
 <input type="range" class="custom-range" min="0" max="5" id="customRange2">
 {{< /example >}}
 
-By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
+По умолчанию входные данные диапазона «привязываются» к целочисленным значениям. Чтобы изменить это, Вы можете указать значение шага `step`. В приведенном ниже примере мы удваиваем количество шагов, используя `step="0.5"`.
 
 {{< example >}}
-<label for="customRange3">Example range</label>
+<label for="customRange3">Пример диапазона</label>
 <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
-### File browser
+### Файловый браузер
 
 {{< callout info >}}
-The recommended plugin to animate custom file input: [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input), that's what we are using currently here in our docs.
+Рекомендуемый плагин для анимации пользовательского ввода файла: [bs-custom-file-input](https://www.npmjs.com/package/bs-custom-file-input), это то, что мы сейчас используем в наших документах.
 {{< /callout >}}
 
-The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
+Файловый ввод является самым сложным из всех и требует дополнительного JavaScript, если вы хотите подключить их к функциональному *Выбрать файл...* и выбранному тексту имени файла.
 
 {{< example >}}
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Choose file</label>
+  <label class="custom-file-label" for="customFile">Выбрать файл</label>
 </div>
 {{< /example >}}
 
-We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
+Мы скрываем файл по умолчанию `<input>` через `opacity` и вместо этого стилизуем `<label>`. Кнопка создается и позиционируется с помощью `::after`. Наконец, мы объявляем ширину `width` и высоту `height` в `<input>` для правильного размещения окружающего контента.
 
-#### Translating or customizing the strings with SCSS
+#### Перевод или настройка строк с помощью SCSS
 
-The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
+Псевдо-класс [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) используется для перевода текста "Обзор" в другой языков. Замените или добавьте записи в переменную Sass `$custom-file-text` с помощью соответствующего [языкового тега](https://en.wikipedia.org/wiki/IETF_language_tag) и локализованных строк. Точно так же можно настроить английские строки. Например, вот как можно добавить русский перевод (код русского языка `ru`):
 
 ```scss
 $custom-file-text: (
   en: "Browse",
-  es: "Elegir"
+  es: "Elegir",
+  ru: "Обзор"
 );
 ```
 
-Here's `lang(es)` in action on the custom file input for a Spanish translation:
+Вот `lang(ru)` в действии над пользовательским вводом файла для русского перевода:
 
 {{< example >}}
 <div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+  <input type="file" class="custom-file-input" id="customFileLang" lang="ru">
+  <label class="custom-file-label" for="customFileLang">Выберите файл</label>
 </div>
 {{< /example >}}
 
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+Вам нужно будет правильно установить язык Вашего документа (или его поддерева), чтобы отображался правильный текст. Это можно сделать с помощью [атрибута `lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) в элементе `<html>` или [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) среди других методов.
 
-#### Translating or customizing the strings with HTML
+#### Перевод или настройка строк с помощью HTML
 
-Bootstrap also provides a way to translate the "Browse" text in HTML with the `data-browse` attribute which can be added to the custom input label (example in Dutch):
+Bootstrap также предоставляет способ перевести текст «Обзор» в HTML с помощью атрибута `data-browse`, который можно добавить к настраиваемой метке ввода (пример на русском языке):
 
 {{< example >}}
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFileLangHTML">
-  <label class="custom-file-label" for="customFileLangHTML" data-browse="Bestand kiezen">Voeg je document toe</label>
+  <label class="custom-file-label" for="customFileLangHTML" data-browse="Выбрать файл">Добавьте свой документ</label>
 </div>
 {{< /example >}}

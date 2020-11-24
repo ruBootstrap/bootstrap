@@ -1,38 +1,38 @@
 ---
 layout: docs
-title: Pagination
-description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
+title: Пагинация
+description: Документация и примеры для отображения разбивки на страницы, чтобы указать, что на нескольких страницах существует серия связанного контента.
 group: components
 toc: true
 ---
 
-## Overview
+## Обзор
 
-We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
+Мы используем большой блок связанных ссылок для нашей нумерации страниц, что делает ссылки труднодоступными и легко масштабируемыми, обеспечивая при этом большие области попадания. Разбивка на страницы построена с помощью элементов списка HTML, поэтому программы чтения с экрана могут объявлять количество доступных ссылок. Используйте оборачивающий элемент `<nav>`, чтобы идентифицировать его как раздел навигации для программ чтения с экрана и других вспомогательных технологий.
 
-In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`.
+Кроме того, поскольку страницы, вероятно, имеют более одного такого раздела навигации, рекомендуется предоставить описательный `aria-label` для `<nav>`, чтобы отразить его назначение. Например, если компонент разбивки на страницы используется для навигации между набором результатов поиска, подходящей меткой может быть `aria-label="Страницы результатов поиска"`.
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    <li class="page-item"><a class="page-link" href="#">Следующая</a></li>
   </ul>
 </nav>
 {{< /example >}}
 
-## Working with icons
+## Работа с иконками
 
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes.
+Хотите использовать значок или символ вместо текста для некоторых ссылок на страницы? Убедитесь, что Вы обеспечили надлежащую поддержку программы чтения с экрана с атрибутами `aria`.
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
+      <a class="page-link" href="#" aria-label="Предыдущая">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
@@ -40,7 +40,7 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
+      <a class="page-link" href="#" aria-label="Следующая">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
@@ -48,17 +48,17 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 </nav>
 {{< /example >}}
 
-## Disabled and active states
+## Отключенное и активное состояния
 
-Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
+Ссылки пагинации настраиваются для разных обстоятельств. Используйте `.disabled` для ссылок, которые кажутся неактивными, и `.active` для обозначения текущей страницы.
 
-While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
+В то время как класс `.disabled` использует `pointer-events: none` для _попытки_, чтобы отключить функциональность ссылок тега `<a>`, это свойство CSS еще не стандартизировано и не учитывает навигацию с клавиатуры. Таким образом, Вы всегда должны добавлять `tabindex="-1"` для отключенных ссылок и использовать собственный JavaScript для полного отключения их функций.
 
 {{< example >}}
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -66,19 +66,19 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Следующая</a>
     </li>
   </ul>
 </nav>
 {{< /example >}}
 
-You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
+Вы можете по желанию заменить активные или отключенные привязки на `<span>` или опустить привязку в случае стрелок предыдущая/следующая, чтобы удалить функциональность клика и предотвратить фокусировку клавиатуры при сохранении заданных стилей.
 
 {{< example >}}
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <span class="page-link">Previous</span>
+      <span class="page-link">Предыдущая</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -86,15 +86,15 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Следующая</a>
     </li>
   </ul>
 </nav>
 {{< /example >}}
 
-## Sizing
+## Размеры
 
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
+Хотите больше или меньше нумерации страниц? Добавьте `.pagination-lg` или `.pagination-sm` для дополнительных размеров.
 
 {{< example >}}
 <nav aria-label="...">
@@ -120,37 +120,37 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 </nav>
 {{< /example >}}
 
-## Alignment
+## Выравнивание
 
-Change the alignment of pagination components with [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+Измените выравнивание компонентов разбивки на страницы с помощью [утилит flexbox]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Следующая</a>
     </li>
   </ul>
 </nav>
 {{< /example >}}
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Следующая</a>
     </li>
   </ul>
 </nav>

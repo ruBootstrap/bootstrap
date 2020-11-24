@@ -1,46 +1,46 @@
 ---
 layout: docs
-title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+title: Значки
+description: Документация и примеры значков, нашего небольшого количества и компонента маркировки.
 group: components
 toc: true
 ---
 
-## Example
+## Пример
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
-
-{{< example >}}
-<h1>Example heading <span class="badge badge-secondary">New</span></h1>
-<h2>Example heading <span class="badge badge-secondary">New</span></h2>
-<h3>Example heading <span class="badge badge-secondary">New</span></h3>
-<h4>Example heading <span class="badge badge-secondary">New</span></h4>
-<h5>Example heading <span class="badge badge-secondary">New</span></h5>
-<h6>Example heading <span class="badge badge-secondary">New</span></h6>
-{{< /example >}}
-
-Badges can be used as part of links or buttons to provide a counter.
+Значки масштабируются, чтобы соответствовать размеру непосредственного родительского элемента, используя относительный размер шрифта и единицы измерения `em`.
 
 {{< example >}}
-<button type="button" class="btn btn-primary">
-  Notifications <span class="badge badge-light">4</span>
-</button>
+<h1>Пример заголовка <span class="badge badge-secondary">Новый</span></h1>
+<h2>Пример заголовка <span class="badge badge-secondary">Новый</span></h2>
+<h3>Пример заголовка <span class="badge badge-secondary">Новый</span></h3>
+<h4>Пример заголовка <span class="badge badge-secondary">Новый</span></h4>
+<h5>Пример заголовка <span class="badge badge-secondary">Новый</span></h5>
+<h6>Пример заголовка <span class="badge badge-secondary">Новый</span></h6>
 {{< /example >}}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
-
-Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
+Значки можно использовать как часть ссылок или кнопок для счетчика.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
-  Profile <span class="badge badge-light">9</span>
-  <span class="sr-only">unread messages</span>
+  Уведомления <span class="badge badge-light">4</span>
 </button>
 {{< /example >}}
 
-## Contextual variations
+Обратите внимание, что в зависимости от того, как они используются, значки могут сбивать с толку пользователей программ чтения с экрана и аналогичных вспомогательных технологий. Хотя стиль значков дает визуальную подсказку об их назначении, этим пользователям просто будет представлено содержимое значка. В зависимости от конкретной ситуации эти значки могут выглядеть как случайные дополнительные слова или числа в конце предложения, ссылки или кнопки.
 
-Add any of the below mentioned modifier classes to change the appearance of a badge.
+Если контекст не ясен (как в примере «Уведомления», где подразумевается, что «4» - это количество уведомлений), рассмотрите возможность включения дополнительного контекста с визуально скрытым фрагментом дополнительного текста.
+
+{{< example >}}
+<button type="button" class="btn btn-primary">
+  Профиль <span class="badge badge-light">9</span>
+  <span class="sr-only">непрочитанные сообщения</span>
+</button>
+{{< /example >}}
+
+## Контекстные вариации
+
+Добавьте любой из указанных ниже классов модификаторов, чтобы изменить внешний вид значка.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -53,9 +53,9 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Pill badges
+## Значки таблетки
 
-Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
+Используйте класс-модификатор `.badge-pill` , чтобы сделать значки более округлыми (с большим радиусом границы `border-radius` и дополнительным горизонтальным заполнением `padding`). Полезно, если Вы пропустите значки из v3.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -64,9 +64,9 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
 {{< /badge.inline >}}
 {{< /example >}}
 
-## Links
+## Ссылки
 
-Using the contextual `.badge-*` classes on an `<a>` element quickly provide _actionable_ badges with hover and focus states.
+Использование контекстных классов `.badge-*` в элементе `<a>` быстро предоставляет значки _действенные_ с состояниями наведения и фокуса.
 
 {{< example >}}
 {{< badge.inline >}}

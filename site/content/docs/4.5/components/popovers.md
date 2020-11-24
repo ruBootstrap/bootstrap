@@ -1,36 +1,36 @@
 ---
 layout: docs
-title: Popovers
-description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+title: Всплывающие окна
+description: Документация и примеры добавления всплывающих окон Bootstrap, подобных тем, которые есть в iOS, к любому элементу на Вашем сайте.
 group: components
 toc: true
 ---
 
-## Overview
+## Обзор
 
-Things to know when using the popover plugin:
+Что нужно знать при использовании плагина popover:
 
-- Popovers rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for popovers to work!
-- Popovers require the [tooltip plugin]({{< docsref "/components/tooltips" >}}) as a dependency.
-- If you're building our JavaScript from source, it [requires `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
-- Popovers are opt-in for performance reasons, so **you must initialize them yourself**.
-- Zero-length `title` and `content` values will never show a popover.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering popovers on hidden elements will not work.
-- Popovers for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use `.text-nowrap` on your `<a>`s to avoid this behavior.
-- Popovers must be hidden before their corresponding elements have been removed from the DOM.
-- Popovers can be triggered thanks to an element inside a shadow DOM.
+- Всплывающие окна полагаются на стороннюю библиотеку [Popper.js](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед `bootstrap.js` или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js, чтобы всплывающие окна работали!
+- Для всплывающих окон требуется [плагин всплывающей подсказки]({{< docsref "/components/tooltips" >}}) в качестве зависимости.
+- Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
+- Всплывающие окна включены по соображениям производительности, поэтому **вы должны инициализировать их самостоятельно**.
+- Значения `title` и `content` нулевой длины никогда не будут показывать всплывающее окно.
+- Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
+- Запуск всплывающих окон для скрытых элементов не будет работать.
+- Всплывающие окна для элементов `.disabled` или `disabled` должны запускаться в элементе оболочки.
+- При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте `.text-nowrap` на Ваших `<a>`, чтобы избежать такого поведения.
+- Всплывающие окна должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.
+- Всплывающие окна могут запускаться благодаря элементу внутри теневого DOM.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-Keep reading to see how popovers work with some examples.
+Продолжайте читать, чтобы увидеть, как работают всплывающие окна, на некоторых примерах.
 
-## Example: Enable popovers everywhere
+## Пример: включить всплывающие окна везде
 
-One way to initialize all popovers on a page would be to select them by their `data-toggle` attribute:
+Один из способов инициализировать все всплывающие окна на странице - выбрать их по атрибуту `data-toggle`:
 
 ```js
 $(function () {
@@ -38,9 +38,9 @@ $(function () {
 })
 ```
 
-## Example: Using the `container` option
+## Пример: использование варианта `container`
 
-When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead.
+Если у Вас есть стили родительского элемента, которые мешают отображению всплывающего окна, Вам нужно указать собственный `container`, чтобы HTML всплывающего окна отображался внутри этого элемента.
 
 ```js
 $(function () {
@@ -50,63 +50,63 @@ $(function () {
 })
 ```
 
-## Example
+## Пример
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Заголовок всплывающего окна" data-content="А вот и потрясающий контент. Это очень интересно. Верно?">Нажмите, чтобы переключить всплывающее окно</button>
 {{< /example >}}
 
-### Four directions
+### Четыре направления
 
-Four options are available: top, right, bottom, and left aligned.
+Доступны четыре варианта: по верхнему, правому, нижнему и левому краям.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on top
+      Всплывающее окно вверху
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on right
+      Всплывающее окно справа
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on bottom
+      Всплывающее окно внизу
     </button>
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Popover on left
+      Всплывающее окно слева
     </button>
   </div>
 </div>
 
 ```html
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on top
+  Всплывающее окно вверху
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on right
+  Всплывающее окно справа
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on bottom
+  Всплывающее окно внизу
 </button>
 
 <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on left
+  Всплывающее окно слева
 </button>
 ```
 
-### Dismiss on next click
+### Отклонить при следующем нажатии
 
-Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
+Используйте триггер `focus`, чтобы закрыть всплывающие окна при следующем щелчке пользователем элемента, отличного от элемента переключения.
 
 {{< callout danger >}}
-#### Specific markup required for dismiss-on-next-click
+#### Специальная разметка, необходимая для закрытия при следующем щелчке
 
-For proper cross-browser and cross-platform behavior, you must use the `<a>` tag, _not_ the `<button>` tag, and you also must include a [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
+Для правильного кроссбраузерного и кросс-платформенного поведения вы должны использовать тег `<a>`, _не_ тег `<button>`, а также вы должны включить атрибут [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 {{< /callout >}}
 
 {{< example >}}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Отклоняемое всплывающее окно" data-content="А вот и потрясающий контент. Это очень интересно. Верно?">Отклоняемое всплывающее окно</a>
 {{< /example >}}
 
 ```js
@@ -115,32 +115,32 @@ $('.popover-dismiss').popover({
 })
 ```
 
-### Disabled elements
+### Отключенные элементы
 
-Elements with the `disabled` attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper `<div>` or `<span>` and override the `pointer-events` on the disabled element.
+Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути вы захотите вызвать всплывающее окно из оболочки `<div>` или `<span>` и переопределить `pointer-events` на отключенном элементе.
 
-For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
+Для отключенных триггеров всплывающего окна Вы также можете предпочесть `data-trigger="hover"`, чтобы всплывающее окно отображалось как немедленная визуальная обратная связь для Ваших пользователей, поскольку они могут не ожидать _нажатия_ на отключенный элемент.
 
 {{< example >}}
-<span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+<span class="d-inline-block" data-toggle="popover" data-content="Отключенное всплывающее окно">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
 </span>
 {{< /example >}}
 
-## Usage
+## Применение
 
-Enable popovers via JavaScript:
+Включить всплывающие окна через JavaScript:
 
 ```js
 $('#example').popover(options)
 ```
 
 {{< callout warning >}}
-##### GPU acceleration
+##### GPU ускорение
 
-Popovers sometimes appear blurry on Windows 10 devices due to GPU acceleration and a modified system DPI. The workaround for this in v4 is to disable GPU acceleration as needed on your popovers.
+Всплывающие окна иногда выглядят размытыми на устройствах с Windows 10 из-за ускорения графического процессора и измененного системного DPI. Чтобы решить эту проблему в версии 4, необходимо отключить ускорение графического процессора в Ваших всплывающих окнах.
 
-Suggested fix:
+Предлагаемое исправление:
 
 ```js
 Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRatio < 1.5 && /Win/.test(navigator.platform))
@@ -148,30 +148,30 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
 {{< /callout >}}
 
 {{< callout warning >}}
-### Making popovers work for keyboard and assistive technology users
+### Как заставить всплывающие окна работать для пользователей клавиатуры и вспомогательных технологий
 
-To allow keyboard users to activate your popovers, you should only add them to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as `<span>`s) can be made focusable by adding the `tabindex="0"` attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce the popover's content in this situation. Additionally, do not rely solely on `hover` as the trigger for your popovers, as this will make them impossible to trigger for keyboard users.
+Чтобы позволить пользователям клавиатуры активировать Ваши всплывающие окна, Вы должны добавлять их только к элементам HTML, которые традиционно ориентированы на клавиатуру и являются интерактивными (например, ссылки или элементы управления формами). Хотя произвольные элементы HTML (такие как `<span>`) можно сделать доступными для фокусировки, добавив атрибут `tabindex="0"`, это добавит потенциально раздражающие и сбивающие с толку позиции табуляции на неинтерактивных элементах для пользователей клавиатуры, и большинство Вспомогательные технологии в настоящее время не объявляют содержимое всплывающего окна в этой ситуации. Кроме того, не полагайтесь исключительно на `hover` как на триггер для ваших всплывающих окон, так как это сделает их невозможным для пользователей клавиатуры.
 
-While you can insert rich, structured HTML in popovers with the `html` option, we strongly recommend that you avoid adding an excessive amount of content. The way popovers currently work is that, once displayed, their content is tied to the trigger element with the `aria-describedby` attribute. As a result, the entirety of the popover's content will be announced to assistive technology users as one long, uninterrupted stream.
+Хотя Вы можете вставлять богатый структурированный HTML-код в всплывающие окна с опцией `html`, мы настоятельно рекомендуем Вам избегать добавления чрезмерного количества контента. В настоящее время всплывающие окна работают так, что после отображения их содержимое привязывается к элементу триггера с атрибутом `aria-describeby`. В результате весь контент всплывающего окна будет объявлен пользователям вспомогательных технологий как один длинный непрерывный поток.
 
-Additionally, while it is possible to also include interactive controls (such as form elements or links) in your popover (by adding these elements to the `whiteList` or allowed attributes and tags), be aware that currently the popover does not manage keyboard focus order. When a keyboard user opens a popover, focus remains on the triggering element, and as the popover usually does not immediately follow the trigger in the document's structure, there is no guarantee that moving forward/pressing <kbd>TAB</kbd> will move a keyboard user into the popover itself. In short, simply adding interactive controls to a popover is likely to make these controls unreachable/unusable for keyboard users and users of assistive technologies, or at the very least make for an illogical overall focus order. In these cases, consider using a modal dialog instead.
+Кроме того, хотя можно также включить интерактивные элементы управления (такие как элементы формы или ссылки) в Ваше всплывающее окно (путем добавления этих элементов в белый список `whiteList` или разрешенные атрибуты и теги), имейте в виду, что в настоящее время всплывающее окно не управляет фокусом порядка клавиатуры. Когда пользователь клавиатуры открывает всплывающее окно, фокус остается на инициирующем элементе, и поскольку всплывающее окно обычно не следует сразу за триггером в структуре документа, нет гарантии, что перемещение вперед/нажатие <kbd>TAB</kbd> приведет к перемещению пользователя клавиатуры в само всплывающее окно. Короче говоря, простое добавление интерактивных элементов управления к всплывающему окну может сделать эти элементы управления недоступными/непригодными для использования пользователями клавиатуры и пользователей вспомогательных технологий или, по крайней мере, сделать общий порядок фокусировки нелогичным. В этих случаях рассмотрите возможность использования модального диалога.
 {{< /callout >}}
 
-### Options
+### Параметры
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-animation=""`.
 
 {{< callout warning >}}
-Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` options cannot be supplied using data attributes.
+Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `whiteList` не могут быть предоставлены с использованием атрибутов данных.
 {{< /callout >}}
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Название</th>
+      <th style="width: 100px;">тип</th>
+      <th style="width: 50px;">По умолчанию</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -179,14 +179,14 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>animation</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Apply a CSS fade transition to the popover</td>
+      <td>Применить переход CSS fade к всплывающему окну</td>
     </tr>
     <tr>
       <td>container</td>
       <td>string | element | false</td>
       <td>false</td>
       <td>
-        <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+        <p>Добавляет всплывающее окно к определенному элементу. Пример: <code>container: 'body'</code>. Этот параметр особенно полезен тем, что позволяет размещать всплывающее окно в потоке документа рядом с элементом запуска, что предотвращает перемещение всплывающего окна в сторону от элемента запуска во время изменения размера окна.</p>
       </td>
     </tr>
     <tr>
@@ -194,8 +194,8 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default content value if <code>data-content</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>Значение содержимого по умолчанию, если атрибут <code>data-content</code> отсутствует.</p>
+        <p>Если задана функция, она будет вызываться со ссылкой <code>this</code>, установленной на элемент, к которому прикреплено всплывающее окно.</p>
       </td>
     </tr>
     <tr>
@@ -203,42 +203,42 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>number | object</td>
       <td>0</td>
       <td>
-        <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
-        <p>If a number is supplied, delay is applied to both hide/show</p>
-        <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>Задержка показа и скрытия всплывающего окна (мс) - не относится к ручному типу триггера.</p>
+        <p>Если указан номер, задержка применяется как к скрытию, так и к отображению.</p>
+        <p>Структура объекта: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
       <td>html</td>
       <td>boolean</td>
       <td>false</td>
-      <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+      <td>Вставьте HTML в всплывающее окно. Если false, метод jQuery <code>text</code> будет использоваться для вставки содержимого в DOM. Используйте текст, если Вас беспокоят XSS-атаки.</td>
     </tr>
     <tr>
       <td>placement</td>
       <td>string | function</td>
       <td>'right'</td>
       <td>
-        <p>How to position the popover - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the popover.</p>
-        <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+        <p>Как разместить всплывающее окно - auto | top | bottom | left | right. <br> Когда указано <code>auto</code>, всплывающее окно будет динамически переориентировано.</p>
+        <p>Когда функция используется для определения размещения, она вызывается с помощью узла DOM всплывающего окна в качестве первого аргумента и узла DOM элемента запуска в качестве второго. Контекст <code>this</code> установлен на экземпляр popover.</p>
       </td>
     </tr>
     <tr>
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="{{< param repo >}}/issues/4215">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb">an informative example</a>.</td>
+      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. См. <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
       <td>string</td>
       <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
-        <p>Base HTML to use when creating the popover.</p>
-        <p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
-        <p>The popover's <code>content</code> will be injected into the <code>.popover-body</code>.</p>
-        <p><code>.arrow</code> will become the popover's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+        <p>Базовый HTML-код для использования при создании всплывающего окна.</p>
+        <p><code>title</code> заголовок всплывающего окна будет вставлен в <code>.popover-header</code>.</p>
+        <p><code>content</code> содержимое всплывающего окна будет вставлено в <code>.popover-body</code>.</p>
+        <p><code>.arrow</code> станет стрелкой всплывающего окна.</p>
+        <p>Самый внешний элемент оболочки должен иметь класс <code>.popover</code>.</p>
       </td>
     </tr>
     <tr>
@@ -246,69 +246,68 @@ Note that for security reasons the `sanitize`, `sanitizeFn` and `whiteList` opti
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default title value if <code>title</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+        <p>Значение заголовка по умолчанию, если атрибут <code>title</code> отсутствует.</p>
+        <p>Если задана функция, она будет вызываться со ссылкой <code>this</code>установленной на элемент, к которому прикреплено всплывающее окно.</p>
       </td>
     </tr>
     <tr>
       <td>trigger</td>
       <td>string</td>
       <td>'click'</td>
-      <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. <code>manual</code> cannot be combined with any other trigger.</td>
+      <td>Как запускается всплывающее окно - click | hover | focus | manual. Вы можете передать несколько триггеров; разделите их пробелом. <code>manual</code> нельзя комбинировать с другими триггерами.</td>
     </tr>
     <tr>
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Offset of the popover relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">offset docs</a>.</td>
+      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию смещения</a> Popper.js.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Allow to specify which position Popper will use on fallback. For more information refer to
-      Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">behavior docs</a></td>
+      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации preventOverflow</a> Popper.js.</td>
     </tr>
     <tr>
       <td>sanitize</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized.</td>
+      <td>Включите или отключите дезинфекцию. Если активирован параметр <code>'template'</code>, <code>'content'</code> и <code>'title'</code> будут очищены.</td>
     </tr>
     <tr>
       <td>whiteList</td>
       <td>object</td>
-      <td><a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">Default value</a></td>
-      <td>Object which contains allowed attributes and tags</td>
+      <td><a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">Значение по умолчанию</a></td>
+      <td>Объект, содержащий разрешенные атрибуты и теги</td>
     </tr>
     <tr>
       <td>sanitizeFn</td>
       <td>null | function</td>
       <td>null</td>
-      <td>Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.</td>
+      <td>Здесь Вы можете предоставить свою собственную функцию очистки. Это может быть полезно, если Вы предпочитаете использовать специальную библиотеку для выполнения очистки.</td>
     </tr>
     <tr>
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper.js's configuration</a></td>
+      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
     </tr>
   </tbody>
 </table>
 
 {{< callout info >}}
-#### Data attributes for individual popovers
+#### Атрибуты данных для отдельных всплывающих окон
 
-Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.
+В качестве альтернативы параметры для отдельных всплывающих окон можно указать с помощью атрибутов данных, как описано выше.
 {{< /callout >}}
 
-### Methods
+### Методы
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -316,11 +315,11 @@ Options for individual popovers can alternatively be specified through the use o
 
 #### `$().popover(options)`
 
-Initializes popovers for an element collection.
+Инициализирует всплывающие окна для коллекции элементов.
 
 #### `.popover('show')`
 
-Reveals an element's popover. **Returns to the caller before the popover has actually been shown** (i.e. before the `shown.bs.popover` event occurs). This is considered a "manual" triggering of the popover. Popovers whose title and content are both zero-length are never displayed.
+Показывает всплывающее окно элемента. **Возврат к вызывающей стороне до того, как всплывающее окно было показано** (то есть до того, как произойдет событие `shown.bs.popover`). Это считается "ручным" запуском всплывающего окна. Всплывающие окна, заголовок и содержимое которых имеют нулевую длину, никогда не отображаются.
 
 ```js
 $('#element').popover('show')
@@ -328,7 +327,7 @@ $('#element').popover('show')
 
 #### `.popover('hide')`
 
-Hides an element's popover. **Returns to the caller before the popover has actually been hidden** (i.e. before the `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+Скрывает всплывающее окно элемента. **Возврат к вызывающей стороне до того, как всплывающее окно было фактически скрыто** (т.е. до того, как произойдет событие `hidden.bs.popover`). Это считается "ручным" запуском всплывающего окна.
 
 ```js
 $('#element').popover('hide')
@@ -336,7 +335,7 @@ $('#element').popover('hide')
 
 #### `.popover('toggle')`
 
-Toggles an element's popover. **Returns to the caller before the popover has actually been shown or hidden** (i.e. before the `shown.bs.popover` or `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+Переключает всплывающее окно элемента. **Возврат к вызывающей стороне до того, как всплывающее окно было фактически показано или скрыто** (то есть до того, как произойдет событие `shown.bs.popover` или `hidden.bs.popover`). Это считается "ручным" запуском всплывающего окна.
 
 ```js
 $('#element').popover('toggle')
@@ -344,7 +343,7 @@ $('#element').popover('toggle')
 
 #### `.popover('dispose')`
 
-Hides and destroys an element's popover. Popovers that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+Скрывает и уничтожает всплывающее окно элемента. Всплывающие окна, использующие делегирование (которые создаются с использованием [опции `selector`](#параметры)), не могут быть уничтожены индивидуально для дочерних триггерных элементов.
 
 ```js
 $('#element').popover('dispose')
@@ -352,7 +351,7 @@ $('#element').popover('dispose')
 
 #### `.popover('enable')`
 
-Gives an element's popover the ability to be shown. **Popovers are enabled by default.**
+Дает возможность отображения всплывающего окна элемента. **Всплывающие окна включены по умолчанию.**
 
 ```js
 $('#element').popover('enable')
@@ -360,7 +359,7 @@ $('#element').popover('enable')
 
 #### `.popover('disable')`
 
-Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled.
+Удаляет возможность отображения всплывающего окна элемента. Всплывающее окно будет отображаться, только если оно будет повторно включено.
 
 ```js
 $('#element').popover('disable')
@@ -368,7 +367,7 @@ $('#element').popover('disable')
 
 #### `.popover('toggleEnabled')`
 
-Toggles the ability for an element's popover to be shown or hidden.
+Переключает возможность отображения или скрытия всплывающего окна элемента.
 
 ```js
 $('#element').popover('toggleEnabled')
@@ -376,47 +375,47 @@ $('#element').popover('toggleEnabled')
 
 #### `.popover('update')`
 
-Updates the position of an element's popover.
+Обновляет позицию всплывающего окна элемента.
 
 ```js
 $('#element').popover('update')
 ```
 
-### Events
+### События
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Тип события</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.popover</td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>Это событие запускается немедленно при вызове метода экземпляра <code>show</code>.</td>
     </tr>
     <tr>
       <td>shown.bs.popover</td>
-      <td>This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>Это событие запускается, когда всплывающее окно становится видимым для пользователя (будет ожидать завершения переходов CSS).</td>
     </tr>
     <tr>
       <td>hide.bs.popover</td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>Это событие запускается сразу после вызова метода экземпляра <code>hide</code>.</td>
     </tr>
     <tr>
       <td>hidden.bs.popover</td>
-      <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>Это событие запускается, когда всплывающее окно перестает быть скрытым от пользователя (будет ждать завершения переходов CSS).</td>
     </tr>
     <tr>
       <td>inserted.bs.popover</td>
-      <td>This event is fired after the <code>show.bs.popover</code> event when the popover template has been added to the DOM.</td>
+      <td>Это событие запускается после события <code>show.bs.popover</code>, когда шаблон всплывающего окна добавлен в DOM.</td>
     </tr>
   </tbody>
 </table>
 
 ```js
 $('#myPopover').on('hidden.bs.popover', function () {
-  // do something...
+  // сделайте что-нибудь...
 })
 ```

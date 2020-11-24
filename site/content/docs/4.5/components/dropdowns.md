@@ -1,125 +1,125 @@
 ---
 layout: docs
-title: Dropdowns
-description: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+title: Выпадающие списки
+description: Переключайте контекстные наложения для отображения списков ссылок и многого другого с помощью плагина раскрывающегося списка Bootstrap.
 group: components
 toc: true
 ---
 
-## Overview
+## Обзор
 
-Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Выпадающие списки - это переключаемые контекстные наложения для отображения списков ссылок и многого другого. Они сделаны интерактивными с помощью включенного плагина JavaScript для выпадающего меню Bootstrap. Они переключаются щелчком, а не при наведении курсора; это [намеренное дизайнерское решение](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-Dropdowns are built on a third party library, [Popper.js](https://popper.js.org/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before Bootstrap's JavaScript or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js. Popper.js isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
+Выпадающие списки созданы на основе сторонней библиотеки, [Popper.js](https://popper.js.org/), которая обеспечивает динамическое позиционирование и обнаружение области просмотра. Обязательно включите [popper.min.js]({{< param "cdn.popper" >}}) перед Bootstrap JavaScript или используйте `bootstrap.bundle.min.js` / `bootstrap.bundle.js` который содержит Popper.js. Popper.js не используется для размещения раскрывающихся списков на панели навигации, хотя динамическое позиционирование не требуется.
 
-If you're building our JavaScript from source, it [requires `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
+Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
 
-## Accessibility
+## Доступность
 
-The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
+[<abbr title="Инициатива обеспечения доступности Интернета">WAI</abbr> <abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) стандарт определяет фактический [виджет `role="menu"`](https://www.w3.org/WAI/PF/aria/roles#menu), но это характерно для меню, похожего на приложение, которое запускает действия или функции. Меню <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr> могут содержать только пункты меню, пункты меню флажков, пункты меню радиокнопок, группы радиокнопок и подменю.
 
-Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
+С другой стороны, выпадающие списки Bootstrap разработаны как общие и применимы к различным ситуациям и структурам разметки. Например, можно создавать раскрывающиеся списки, содержащие дополнительные входные данные и элементы управления формой, такие как поля поиска или формы входа. По этой причине Bootstrap не ожидает (и не добавляет автоматически) какие-либо атрибуты `role` и `aria-`, необходимые для истинных <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>. Авторы должны сами включить эти более конкретные атрибуты.
 
-However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.
+Однако Bootstrap добавляет встроенную поддержку для большинства стандартных взаимодействий с меню клавиатуры, таких как возможность перемещаться по отдельным элементам `.dropdown-item` с помощью клавиш курсора и закрывать меню с помощью клавиши <kbd>ESC</kbd>.
 
-## Examples
+## Примеры
 
-Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Dropdowns can be triggered from `<a>` or `<button>` elements to better fit your potential needs.
+Оберните переключатель раскрывающегося списка (Вашу кнопку или ссылку) и раскрывающееся меню внутри `.dropdown`, или другого элемента, объявляющего `position: relative;`. Выпадающие списки можно запускать из элементов `<a>` или `<button>`, чтобы лучше соответствовать вашим потенциальным потребностям.
 
-### Single button
+### Одна кнопка
 
-Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements:
+Любой отдельный `.btn` можно превратить в раскрывающийся список с некоторыми изменениями разметки. Вот как Вы можете заставить их работать с любым элементом `<button>`:
 
 {{< example >}}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
+    Кнопка выпадающего списка
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Действие</a>
+    <a class="dropdown-item" href="#">Другое действие</a>
+    <a class="dropdown-item" href="#">Что-то еще здесь</a>
   </div>
 </div>
 {{< /example >}}
 
-And with `<a>` elements:
+И с элементами `<a>`:
 
 {{< example >}}
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
+    Ссылка выпадающего списка
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Действие</a>
+    <a class="dropdown-item" href="#">Другое действие</a>
+    <a class="dropdown-item" href="#">Что-то еще здесь</a>
   </div>
 </div>
 {{< /example >}}
 
-The best part is you can do this with any button variant, too:
+Самое приятное то, что Вы можете сделать это и с любым вариантом кнопки:
 
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
 </div>
@@ -128,159 +128,159 @@ The best part is you can do this with any button variant, too:
 <!-- Example single danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
+    Действие
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Действие</a>
+    <a class="dropdown-item" href="#">Другое действие</a>
+    <a class="dropdown-item" href="#">Что-то еще здесь</a>
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
+    <a class="dropdown-item" href="#">Отдельная ссылка</a>
   </div>
 </div>
 ```
 
-### Split button
+### Раздельная кнопка
 
-Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
+Точно так же создайте раскрывающиеся списки с разделенными кнопками с практически такой же разметкой, что и раскрывающиеся списки с одной кнопкой, но с добавлением `.dropdown-toggle-split` для правильного интервала вокруг курсора раскрывающегося списка.
 
-We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
+Мы используем этот дополнительный класс, чтобы уменьшить горизонтальный `padding` по обе стороны от курсора на 25% и удалить `margin-left`, который добавляется для обычных раскрывающихся списков кнопок. Эти дополнительные изменения удерживают курсор в центре разделенной кнопки и обеспечивают область нажатия более подходящего размера рядом с основной кнопкой.
 
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-success">Success</button>
     <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-danger">Danger</button>
     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div><!-- /btn-group -->
 </div>
 
 ```html
-<!-- Example split danger button -->
+<!-- Пример раздельной кнопки Опасность -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger">Действие</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" href="#">Действие</a>
+    <a class="dropdown-item" href="#">Другое действие</a>
+    <a class="dropdown-item" href="#">Что-то еще здесь</a>
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
+    <a class="dropdown-item" href="#">Отдельная ссылка</a>
   </div>
 </div>
 ```
 
-## Sizing
+## Размеры
 
-Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+Выпадающие кнопки работают с кнопками всех размеров, включая кнопки по умолчанию и кнопки с разделенным раскрывающимся списком.
 
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Large button
+      Большая кнопка
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-lg btn-secondary">Large split button</button>
+    <button type="button" class="btn btn-lg btn-secondary">Большая раздельная кнопка</button>
     <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
 </div>
 
 ```html
-<!-- Large button groups (default and split) -->
+<!-- Группы больших кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Large button
+    Большая кнопка
   </button>
   <div class="dropdown-menu">
     ...
@@ -288,10 +288,10 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg" type="button">
-    Large split button
+    Большая раздельная кнопка
   </button>
   <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
     ...
@@ -302,36 +302,36 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Small button
+      Маленькая кнопка
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-sm btn-secondary">Small split button</button>
+    <button type="button" class="btn btn-sm btn-secondary">Маленькая раздельная кнопка</button>
     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
 </div>
 
 ```html
-<!-- Small button groups (default and split) -->
+<!-- Небольшие группы кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Small button
+    Маленькая кнопка
   </button>
   <div class="dropdown-menu">
     ...
@@ -339,10 +339,10 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm" type="button">
-    Small split button
+    Маленькая раздельная кнопка
   </button>
   <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
     ...
@@ -350,442 +350,442 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 ```
 
-## Directions
+## Направления
 
-### Dropup
+### Выпадающий вверх
 
-Trigger dropdown menus above elements by adding `.dropup` to the parent element.
+Вызвать раскрывающееся меню над элементами, добавив к родительскому элементу `.dropup`.
 
 <div class="bd-example">
   <div class="btn-group dropup">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropup
+      Выпадающий вверх
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
   <div class="btn-group dropup">
     <button type="button" class="btn btn-secondary">
-      Split dropup
+      Раздельный выпадающий вверх
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
 </div>
 
 ```html
-<!-- Default dropup button -->
+<!-- Кнопка выпадающего меню по умолчанию -->
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
+    Выпадающий вверх
   </button>
   <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
+    <!-- Ссылки раскрывающегося меню -->
   </div>
 </div>
 
-<!-- Split dropup button -->
+<!-- Раздельная кнопка выпадающая вверх -->
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary">
-    Split dropup
+    Раздельный выпад вверх
   </button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
+    <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
+    <!-- Ссылки раскрывающегося меню -->
   </div>
 </div>
 ```
 
-### Dropright
+### Выпад вправо
 
-Trigger dropdown menus at the right of the elements by adding `.dropright` to the parent element.
+Откройте раскрывающееся меню справа от элементов, добавив `.dropright` к родительскому элементу.
 
 <div class="bd-example">
   <div class="btn-group dropright">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropright
+      Выпадающий вправо
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
   <div class="btn-group dropright">
     <button type="button" class="btn btn-secondary">
-      Split dropright
+      Раздельный выпадающий вправо
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropright</span>
+      <span class="sr-only">Переключатель выпада вправо</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
 </div>
 
 ```html
-<!-- Default dropright button -->
+<!-- Кнопка выпадающего вправо по умолчанию -->
 <div class="btn-group dropright">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropright
+    Выпадающий вправо
   </button>
   <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
+    <!-- Ссылки раскрывающегося меню -->
   </div>
 </div>
 
-<!-- Split dropright button -->
+<!-- Раздельная кнопка выпадающего вправо по умолчанию -->
 <div class="btn-group dropright">
   <button type="button" class="btn btn-secondary">
-    Split dropright
+    Раздельный выпадающий вправо
   </button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropright</span>
+    <span class="sr-only">Переключатель выпада вправо</span>
   </button>
   <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
+    <!-- Ссылки раскрывающегося меню -->
   </div>
 </div>
 ```
 
-### Dropleft
+### Выпадающий влево
 
-Trigger dropdown menus at the left of the elements by adding `.dropleft` to the parent element.
+Активируйте раскрывающиеся меню слева от элементов, добавив `.dropleft` к родительскому элементу.
 
 <div class="bd-example">
   <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropleft
+      Выпадающий влево
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
   <div class="btn-group">
     <div class="btn-group dropleft" role="group">
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropleft</span>
+        <span class="sr-only">Переключатель выпадающего влево</span>
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" href="#">Действие</a>
+        <a class="dropdown-item" href="#">Другое действие</a>
+        <a class="dropdown-item" href="#">Что-то еще здесь</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
+        <a class="dropdown-item" href="#">Отдельная ссылка</a>
       </div>
     </div>
     <button type="button" class="btn btn-secondary">
-      Split dropleft
+      Раздельный выпадающий влево
     </button>
   </div>
 </div>
 
 ```html
-<!-- Default dropleft button -->
+<!-- Кнопка выпадающая влево по умолчанию -->
 <div class="btn-group dropleft">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropleft
+    Выпадающий влево
   </button>
   <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
+    <!-- Ссылки раскрывающегося меню -->
   </div>
 </div>
 
-<!-- Split dropleft button -->
+<!-- Раздельная кнопка выпадающая влево -->
 <div class="btn-group">
   <div class="btn-group dropleft" role="group">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropleft</span>
+      <span class="sr-only">Переключатель выпадающего влево</span>
     </button>
     <div class="dropdown-menu">
-      <!-- Dropdown menu links -->
+      <!-- Ссылки раскрывающегося меню -->
     </div>
   </div>
   <button type="button" class="btn btn-secondary">
-    Split dropleft
+    Раздельный выпадающий влево
   </button>
 </div>
 ```
 
-## Menu items
+## Пункты меню
 
-Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s.
+Исторически содержимое выпадающего меню *должно было быть* ссылками, но в версии 4 это уже не так. Теперь Вы можете при желании использовать элементы `<button>` в раскрывающихся списках вместо просто `<a>`.
 
 {{< example >}}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown
+    Выпадающий вниз
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button">Действие</button>
+    <button class="dropdown-item" type="button">Другое действие</button>
+    <button class="dropdown-item" type="button">Что-то еще здесь</button>
   </div>
 </div>
 {{< /example >}}
 
-You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
+Вы также можете создавать неинтерактивные выпадающие элементы с помощью `.dropdown-item-text`. Не стесняйтесь изменять стиль с помощью пользовательских CSS или текстовых утилит.
 
 {{< example >}}
 <div class="dropdown-menu">
-  <span class="dropdown-item-text">Dropdown item text</span>
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
-  <a class="dropdown-item" href="#">Something else here</a>
+  <span class="dropdown-item-text">Текст выпадающего списка</span>
+  <a class="dropdown-item" href="#">Действие</a>
+  <a class="dropdown-item" href="#">Другое действие</a>
+  <a class="dropdown-item" href="#">Что-то еще здесь</a>
 </div>
 {{< /example >}}
 
-### Active
+### Активный
 
-Add `.active` to items in the dropdown to **style them as active**.
+Добавьте `.active` к элементам в раскрывающемся списке, чтобы **сделать их активными**.
 
 {{< example >}}
 <div class="dropdown-menu">
-  <a class="dropdown-item" href="#">Regular link</a>
-  <a class="dropdown-item active" href="#">Active link</a>
-  <a class="dropdown-item" href="#">Another link</a>
+  <a class="dropdown-item" href="#">Обычная ссылка</a>
+  <a class="dropdown-item active" href="#">Активная ссылка</a>
+  <a class="dropdown-item" href="#">Другая ссылка</a>
 </div>
 {{< /example >}}
 
-### Disabled
+### Отключенный
 
-Add `.disabled` to items in the dropdown to **style them as disabled**.
+Добавьте `.disabled` к элементам в раскрывающемся списке, чтобы **сделать их отключенными**.
 
 {{< example >}}
 <div class="dropdown-menu">
-  <a class="dropdown-item" href="#">Regular link</a>
-  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Disabled link</a>
-  <a class="dropdown-item" href="#">Another link</a>
+  <a class="dropdown-item" href="#">Обычная ссылка</a>
+  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная ссылка</a>
+  <a class="dropdown-item" href="#">Другая ссылка</a>
 </div>
 {{< /example >}}
 
-## Menu alignment
+## Выравнивание меню
 
-By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add `.dropdown-menu-right` to a `.dropdown-menu` to right align the dropdown menu.
+По умолчанию раскрывающееся меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте `.dropdown-menu-right` в `.dropdown-menu`, чтобы выровнять раскрывающееся меню по правому краю.
 
 {{< callout info >}}
-**Heads up!** Dropdowns are positioned thanks to Popper.js (except when they are contained in a navbar).
+**Внимание!** Выпадающие списки располагаются благодаря Popper.js (кроме случаев, когда они содержатся в навигационной панели).
 {{< /callout >}}
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Right-aligned menu
+    Меню с выравниванием по правому краю
   </button>
   <div class="dropdown-menu dropdown-menu-right">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button">Действие</button>
+    <button class="dropdown-item" type="button">Другое действие</button>
+    <button class="dropdown-item" type="button">Что-то еще здесь</button>
   </div>
 </div>
 {{< /example >}}
 
-### Responsive alignment
+### Адаптивное выравнивание
 
-If you want to use responsive alignment, disable dynamic positioning by adding the `data-display="static"` attribute and use the responsive variation classes.
+Если Вы хотите использовать адаптивное выравнивание, отключите динамическое позиционирование, добавив атрибут `data-display="static"` и используйте гибкие классы вариантов.
 
-To align **right** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu{-sm|-md|-lg|-xl}-right`.
+Чтобы выровнять **вправо** раскрывающееся меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu{-sm|-md|-lg|-xl}-right`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-    Left-aligned but right aligned when large screen
+    По левому краю, но по правому краю на большом экране
   </button>
   <div class="dropdown-menu dropdown-menu-lg-right">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button">Действие</button>
+    <button class="dropdown-item" type="button">Другое действие</button>
+    <button class="dropdown-item" type="button">Что-то еще здесь</button>
   </div>
 </div>
 {{< /example >}}
 
-To align **left** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu-right` and `.dropdown-menu{-sm|-md|-lg|-xl}-left`.
+Чтобы выровнять **слева** раскрывающееся меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu-right` и `.dropdown-menu{-sm|-md|-lg|-xl}-left`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-    Right-aligned but left aligned when large screen
+    По правому краю, но по левому краю на большом экране
   </button>
   <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
+    <button class="dropdown-item" type="button">Действие</button>
+    <button class="dropdown-item" type="button">Другое действие</button>
+    <button class="dropdown-item" type="button">Что-то еще здесь</button>
   </div>
 </div>
 {{< /example >}}
 
-Note that you don't need to add a `data-display="static"` attribute to dropdown buttons in navbars, since Popper.js isn't used in navbars.
+Обратите внимание, что Вам не нужно добавлять атрибут `data-display="static"` к кнопкам раскрывающегося меню на панели навигации, поскольку Popper.js не используется в панелях навигации.
 
-## Menu content
+## Содержание меню
 
-### Headers
+### Заголовки
 
-Add a header to label sections of actions in any dropdown menu.
+Добавьте заголовок для обозначения разделов действий в любом раскрывающемся меню.
 
 {{< example >}}
 <div class="dropdown-menu">
-  <h6 class="dropdown-header">Dropdown header</h6>
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
+  <h6 class="dropdown-header">Заголовок раскрывающегося списка</h6>
+  <a class="dropdown-item" href="#">Действие</a>
+  <a class="dropdown-item" href="#">Другое действие</a>
 </div>
 {{< /example >}}
 
-### Dividers
+### Разделители
 
-Separate groups of related menu items with a divider.
+Разделите группы связанных пунктов меню разделителем.
 
 {{< example >}}
 <div class="dropdown-menu">
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
-  <a class="dropdown-item" href="#">Something else here</a>
+  <a class="dropdown-item" href="#">Действие</a>
+  <a class="dropdown-item" href="#">Другое действие</a>
+  <a class="dropdown-item" href="#">Что-то еще здесь</a>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">Separated link</a>
+  <a class="dropdown-item" href="#">Отдельная ссылка</a>
 </div>
 {{< /example >}}
 
-### Text
+### Текст
 
-Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
+Поместите произвольный текст в раскрывающееся меню с текстом и используйте [утилиты отступа]({{< docsref "/utilities/spacing" >}}). Обратите внимание, что Вам, вероятно, потребуются дополнительные стили размеров, чтобы ограничить ширину меню.
 
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
-    Some example text that's free-flowing within the dropdown menu.
+    Пример текста, который свободно перемещается в раскрывающемся меню.
   </p>
   <p class="mb-0">
-    And this is more example text.
+    И это еще один пример текста.
   </p>
 </div>
 {{< /example >}}
 
-### Forms
+### Формы
 
-Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
+Поместите форму в раскрывающееся меню или превратите ее в раскрывающееся меню и используйте [утилиты полей или отступов]({{< docsref "/utilities/spacing" >}}), чтобы дать ей необходимое отрицательное пространство.
 
 {{< example >}}
 <div class="dropdown-menu">
   <form class="px-4 py-3">
     <div class="form-group">
-      <label for="exampleDropdownFormEmail1">Email address</label>
+      <label for="exampleDropdownFormEmail1">Адрес электронной почты</label>
       <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
     </div>
     <div class="form-group">
-      <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      <label for="exampleDropdownFormPassword1">Пароль</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Пароль">
     </div>
     <div class="form-group">
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="dropdownCheck">
         <label class="form-check-label" for="dropdownCheck">
-          Remember me
+          Запомните меня
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Войти в систему</button>
   </form>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">New around here? Sign up</a>
-  <a class="dropdown-item" href="#">Forgot password?</a>
+  <a class="dropdown-item" href="#">Новенький здесь? Зарегистрироваться</a>
+  <a class="dropdown-item" href="#">Забыли пароль?</a>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <form class="dropdown-menu p-4">
   <div class="form-group">
-    <label for="exampleDropdownFormEmail2">Email address</label>
+    <label for="exampleDropdownFormEmail2">Адрес электронной почты</label>
     <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
   </div>
   <div class="form-group">
-    <label for="exampleDropdownFormPassword2">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+    <label for="exampleDropdownFormPassword2">Пароль</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Пароль">
   </div>
   <div class="form-group">
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="dropdownCheck2">
       <label class="form-check-label" for="dropdownCheck2">
-        Remember me
+        Запомните меня
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Войти в систему</button>
 </form>
 {{< /example >}}
 
-## Dropdown options
+## Параметры раскрывающегося списка
 
-Use `data-offset` or `data-reference` to change the location of the dropdown.
+Используйте `data-offset` или `data-reference`, чтобы изменить расположение раскрывающегося списка.
 
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown mr-1">
     <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-      Offset
+      Смещение
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
     </div>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Reference</button>
+    <button type="button" class="btn btn-secondary">Справка</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-      <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Действие</a>
+      <a class="dropdown-item" href="#">Другое действие</a>
+      <a class="dropdown-item" href="#">Что-то еще здесь</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+      <a class="dropdown-item" href="#">Отдельная ссылка</a>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Usage
+## Применение
 
-Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent list item. The `data-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.
+С помощью атрибутов данных или JavaScript плагин раскрывающегося списка переключает скрытый контент (раскрывающиеся меню) путем переключения класса `.show` в родительском элементе списка. Атрибут `data-toggle="dropdown"` используется для закрытия раскрывающихся меню на уровне приложения, поэтому рекомендуется всегда использовать его.
 
 {{< callout info >}}
-On touch-enabled devices, opening a dropdown adds empty (`$.noop`) `mouseover` handlers to the immediate children of the `<body>` element. This admittedly ugly hack is necessary to work around a [quirk in iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty `mouseover` handlers are removed.
+На устройствах с сенсорным экраном открытие раскрывающегося списка добавляет пустые (`$.noop`) обработчики `mouseover` к непосредственным дочерним элементам элемента `<body>`. Этот, по общему признанию, уродливый взлом необходим, чтобы обойти [причуду в делегировании событий iOS](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), которая в противном случае предотвратила бы нажатие где-нибудь за пределами раскрывающегося списка от запуска кода, закрывающего раскрывающийся список. После закрытия раскрывающегося списка эти дополнительные пустые обработчики `mouseover` указателя мыши удаляются.
 {{< /callout >}}
 
-### Via data attributes
+### Через атрибуты данных
 
-Add `data-toggle="dropdown"` to a link or button to toggle a dropdown.
+Добавьте `data-toggle="dropdown"` к ссылке или кнопке, чтобы переключить раскрывающийся список.
 
 ```html
 <div class="dropdown">
   <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown trigger
+    Триггер выпадающего списка
   </button>
   <div class="dropdown-menu" aria-labelledby="dLabel">
     ...
@@ -793,31 +793,31 @@ Add `data-toggle="dropdown"` to a link or button to toggle a dropdown.
 </div>
 ```
 
-### Via JavaScript
+### Через JavaScript
 
-Call the dropdowns via JavaScript:
+Вызов выпадающих списков через JavaScript:
 
 ```js
 $('.dropdown-toggle').dropdown()
 ```
 
 {{< callout info >}}
-##### `data-toggle="dropdown"` still required
+##### `data-toggle="dropdown"` все еще требуется
 
-Regardless of whether you call your dropdown via JavaScript or instead use the data-api, `data-toggle="dropdown"` is always required to be present on the dropdown's trigger element.
+Независимо от того, вызываете ли Вы раскрывающийся список через JavaScript или вместо этого используете data-api, в элементе триггера раскрывающегося списка всегда должен присутствовать `data-toggle="dropdown"`.
 {{< /callout >}}
 
-### Options
+### Параметры
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-offset=""`.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Имя</th>
+      <th style="width: 100px;">Тип</th>
+      <th style="width: 50px;">По умолчанию</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -826,70 +826,70 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>number | string | function</td>
       <td>0</td>
       <td>
-        <p>Offset of the dropdown relative to its target.</p>
-        <p>When a function is used to determine the offset, it is called with an object containing the offset data as its first argument. The function must return an object with the same structure. The triggering element DOM node is passed as the second argument.</p>
-        <p>For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">offset docs</a>.</p>
+        <p>Смещение раскрывающегося списка относительно его цели.</p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
+        <p>Для получения дополнительной информации смотрите Popper.js <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a>.</p>
       </td>
     </tr>
     <tr>
       <td>flip</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">flip docs</a>.</td>
+      <td>Разрешить раскрывающийся список переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации смотрите Popper.js <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документацию по переворачиванию</a>.</td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Overflow constraint boundary of the dropdown menu. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+      <td>Граница ограничения переполнения раскрывающегося меню. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, или ссылка на HTMLElement (только JavaScript). Для получения дополнительной информации смотрите Popper.js <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию по предотвращению переполнения</a>.</td>
     </tr>
     <tr>
       <td>reference</td>
       <td>string | element</td>
       <td>'toggle'</td>
-      <td>Reference element of the dropdown menu. Accepts the values of <code>'toggle'</code>, <code>'parent'</code>, or an HTMLElement reference. For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#referenceObject">referenceObject docs</a>.</td>
+      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code>, или ссылки HTMLElement. Для получения дополнительной информации смотрите Popper.js's <a href="https://popper.js.org/docs/v1/#referenceObject">документацию по объекту</a>.</td>
     </tr>
     <tr>
       <td>display</td>
       <td>string</td>
       <td>'dynamic'</td>
-      <td>By default, we use Popper.js for dynamic positioning. Disable this with <code>static</code>.</td>
+      <td>По умолчанию мы используем Popper.js для динамического позиционирования. Отключите это с помощью <code>static</code>.</td>
     </tr>
     <tr>
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper.js's configuration</a></td>
+      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Конфигурацию Popper.js</a></td>
     </tr>
   </tbody>
 </table>
 
-Note when `boundary` is set to any value other than `'scrollParent'`, the style `position: static` is applied to the `.dropdown` container.
+Обратите внимание, что если параметр `boundary` имеет любое значение, отличное от `'scrollParent'`, к контейнеру `.dropdown` применяется стиль `position: static`.
 
-### Methods
+### Методы
 
-| Method | Description |
+| Метод | Описание |
 | --- | --- |
-| `$().dropdown('toggle')` | Toggles the dropdown menu of a given navbar or tabbed navigation. |
-| `$().dropdown('show')` | Shows the dropdown menu of a given navbar or tabbed navigation. |
-| `$().dropdown('hide')` | Hides the dropdown menu of a given navbar or tabbed navigation. |
-| `$().dropdown('update')` | Updates the position of an element's dropdown. |
-| `$().dropdown('dispose')` | Destroys an element's dropdown. |
+| `$().dropdown('toggle')` | Переключает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `$().dropdown('show')` | Показывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `$().dropdown('hide')` | Скрывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `$().dropdown('update')` | Обновляет позицию раскрывающегося списка элемента. |
+| `$().dropdown('dispose')` | Уничтожает раскрывающийся список элемента. |
 
-### Events
+### События
 
-All dropdown events are fired at the `.dropdown-menu`'s parent element and have a `relatedTarget` property, whose value is the toggling anchor element.
-`hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original event type is `click`) that contains an Event Object for the click event.
+Все выпадающие события запускаются в родительском элементе `.dropdown-menu` и имеют свойство `relatedTarget`, значением которого является переключаемый элемент привязки.
+События `hide.bs.dropdown` и `hidden.bs.dropdown` имеют свойство `clickEvent` (только если исходный тип события `click`), который содержит объект события для события щелчка.
 
-| Event | Description |
+| События | Описание |
 | --- | --- |
-| `show.bs.dropdown` | This event fires immediately when the show instance method is called. |
-| `shown.bs.dropdown` | This event is fired when the dropdown has been made visible to the user (will wait for CSS transitions, to complete). |
-| `hide.bs.dropdown` | This event is fired immediately when the hide instance method has been called. |
-| `hidden.bs.dropdown`| This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete). |
+| `show.bs.dropdown` | Это событие срабатывает немедленно, когда вызывается метод экземпляра шоу. |
+| `shown.bs.dropdown` | Это событие запускается, когда раскрывающийся список становится видимым для пользователя (будет ожидать завершения переходов CSS). |
+| `hide.bs.dropdown` | Это событие запускается сразу после вызова метода экземпляра hide. |
+| `hidden.bs.dropdown`| Это событие запускается, когда раскрывающийся список перестает быть скрытым от пользователя (будет ожидать завершения переходов CSS). |
 
 ```js
 $('#myDropdown').on('show.bs.dropdown', function () {
-  // do something...
+  // сделайте что-нибудь...
 })
 ```
