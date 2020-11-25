@@ -10,15 +10,15 @@ toc: true
 
 Что нужно знать при использовании плагина popover:
 
-- Всплывающие окна полагаются на стороннюю библиотеку [Popper.js](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед `bootstrap.js` или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js, чтобы всплывающие окна работали!
+- Popovers полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js, который содержит Popper чтобы поповеры работали!
 - Для всплывающих окон требуется [плагин всплывающей подсказки]({{< docsref "/components/tooltips" >}}) в качестве зависимости.
 - Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
-- Всплывающие окна включены по соображениям производительности, поэтому **вы должны инициализировать их самостоятельно**.
+- Всплывающие окна включены по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно**.
 - Значения `title` и `content` нулевой длины никогда не будут показывать всплывающее окно.
 - Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
-- Запуск всплывающих окон для скрытых элементов не будет работать.
+- Запуск всплывающих окон для скрытых элементов не работает.
 - Всплывающие окна для элементов `.disabled` или `disabled` должны запускаться в элементе оболочки.
-- При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте `.text-nowrap` на Ваших `<a>`, чтобы избежать такого поведения.
+- При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте `.text-nowrap` на Ваших `<a>` чтобы избежать такого поведения.
 - Всплывающие окна должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.
 - Всплывающие окна могут запускаться благодаря элементу внутри теневого DOM.
 
@@ -227,7 +227,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. См. <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
+      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -260,19 +260,28 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию смещения</a> Popper.js.</td>
+      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a> Popper.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
+      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+    </tr>
+    <tr>
+      <td>customClass</td>
+      <td>string | function</td>
+      <td>''</td>
+      <td>
+        <p>Добавляйте классы в всплывающее окно, когда оно отображается. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: <code>'a b'</code>.</p>
+        <p>Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов.</p>
+      </td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации preventOverflow</a> Popper.js.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию preventOverflow</a> Popper.</td>
     </tr>
     <tr>
       <td>sanitize</td>
@@ -296,7 +305,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a></td>
     </tr>
   </tbody>
 </table>

@@ -281,8 +281,8 @@ toc: true
 Включить элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):
 
 ```js
-$('#myList a').on('click', function (e) {
-  e.preventDefault()
+$('#myList a').on('click', function (event) {
+  event.preventDefault()
   $(this).tab('show')
 })
 ```
@@ -384,8 +384,8 @@ $('#someListItem').tab('show')
 </table>
 
 ```js
-$('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
-  e.target // недавно активированная вкладка
-  e.relatedTarget // предыдущая активная вкладка
+$('a[data-toggle="list"]').on('shown.bs.tab', function (event) {
+  event.target // недавно активированная вкладка
+  event.relatedTarget // предыдущая активная вкладка
 })
 ```

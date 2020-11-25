@@ -24,9 +24,9 @@ toc: true
 
 ### JS
 
-Многие из наших компонентов требуют использования JavaScript для работы. В частности, для них требуютсяire [jQuery](https://jquery.com/), [Popper.js](https://popper.js.org/) и наши собственные плагины JavaScript. Мы используем [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), но также поддерживается полная версия.
+Многие из наших компонентов требуют использования JavaScript для работы. В частности, для них требуются [jQuery](https://jquery.com/), [Popper](https://popper.js.org/) и наши собственные плагины JavaScript. Мы используем [тонкую сборку jQuery](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), но также поддерживается полная версия.
 
-Поместите **один из следующих тегов `<script>`** в конце ваших страниц, прямо перед закрывающим тегом `</body>`, чтобы включить их. Сначала должен быть jQuery, затем Popper.js, а затем наши плагины JavaScript.
+Поместите **один из следующих `<script>`** в конце Ваших страниц, прямо перед закрывающим тегом `</body>`, чтобы включить их. Сначала должен быть jQuery, затем Popper, а затем наши плагины JavaScript.
 
 #### Связка
 
@@ -39,7 +39,7 @@ toc: true
 
 #### Раздельно
 
-Если Вы решите использовать отдельное решение для сценариев, сначала должен быть Popper.js (если Вы используете всплывающие подсказки или всплывающие окна), а затем наши плагины JavaScript.
+Если Вы решите использовать отдельные скрипты, сначала должен быть Popper (если Вы используете всплывающие подсказки или всплывающие окна), а затем наши плагины JavaScript.
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@ toc: true
 
 #### Компоненты
 
-Интересно, какие компоненты явно требуют jQuery, нашего JavaScript и Popper.js? Щелкните ссылку "Показать компоненты" ниже. Если Вы не уверены в структуре страницы, продолжайте читать, чтобы увидеть пример шаблона страницы.
+Интересно, какие компоненты явно требуют jQuery, нашего JavaScript и Popper? Щелкните ссылку "Показать компоненты" ниже. Если Вы не уверены в структуре страницы, продолжайте читать, чтобы увидеть пример шаблона страницы.
 
 <details>
 <summary class="text-primary mb-3">Показать компоненты, требующие JavaScript</summary>
@@ -92,7 +92,8 @@ toc: true
     <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Вариант 2: jQuery, Popper.js и Bootstrap JS
+    <!-- Вариант 2: Отдельные JS для Popper и Bootstrap -->
+    <!--
     <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>

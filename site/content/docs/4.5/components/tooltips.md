@@ -10,8 +10,8 @@ toc: true
 
 Что нужно знать при использовании плагина всплывающей подсказки:
 
-- Подсказки полагаются на стороннюю библиотеку [Popper.js](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед `bootstrap.js` или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js, чтобы всплывающие подсказки работали!
-- Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
+- Подсказки полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper чтобы всплывающие подсказки работали!
+- Если вы создаете наш JavaScript из исходного кода, он [требует `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
 - Всплывающие подсказки используются по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно**.
 - Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.
 - Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
@@ -201,7 +201,7 @@ $('#example').tooltip({ boundary: 'window' })
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>сли предусмотрен селектор, объекты всплывающей подсказки будут делегированы указанным целям. На практике это также используется для применения всплывающих подсказок к динамически добавляемым элементам DOM (поддержка (<code>jQuery.on</code>). См <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
+      <td>Если предусмотрен селектор, объекты всплывающей подсказки будут делегированы указанным целям. На практике это также используется для применения всплывающих подсказок к динамически добавляемым элементам DOM (поддержка <code>jQuery.on</code>). Смотрите <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -238,22 +238,31 @@ $('#example').tooltip({ boundary: 'window' })
       <td>number | string | function</td>
       <td>0</td>
       <td>
-        <p>Смещение подсказки относительно цели.</p>
-        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента..</p>
-        <p>Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a> Popper.js.</p>
+        <p>Смещение всплывающей подсказки относительно цели.</p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
+        <p>Дополнительную информацию смотрите Popper <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a>.</p>
       </td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
+      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+    </tr>
+    <tr>
+      <td>customClass</td>
+      <td>string | function</td>
+      <td>''</td>
+      <td>
+        <p>Добавляйте классы во всплывающую подсказку, когда она отображается. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: <code>'a b'</code>.</p>
+        <p>Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов.</p>
+      </td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации preventOverflow</a> Popper.js.</td>
+      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию preventOverflow</a> Popper.</td>
     </tr>
     <tr>
       <td>sanitize</td>
@@ -277,7 +286,7 @@ $('#example').tooltip({ boundary: 'window' })
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

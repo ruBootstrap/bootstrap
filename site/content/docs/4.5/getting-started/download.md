@@ -13,7 +13,7 @@ toc: true
 - Скомпилированные и минимизированные пакеты CSS (см. [сравнение файлов CSS]({{< docsref "/getting-started/contents#css-файлы" >}}))
 - Скомпилированные и минимизированные плагины JavaScript (см. [сравнение JS файлов]({{< docsref "/getting-started/contents#js-файлы" >}}))
 
-Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript (jQuery и Popper.js).
+Это не включает документацию, исходные файлы или любые дополнительные зависимости JavaScript (jQuery и Popper).
 
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Скачать</a>
 
@@ -43,7 +43,7 @@ toc: true
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-Если Вы используете наш скомпилированный JavaScript и предпочитаете включать Popper.js отдельно, добавьте Popper.js перед нашим JS, желательно через CDN.
+Если Вы используете наш скомпилированный JavaScript и предпочитаете включать Popper отдельно, добавьте Popper перед нашим JS, желательно через CDN.
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>

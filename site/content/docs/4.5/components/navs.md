@@ -526,8 +526,8 @@ toc: true
 Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
 
 ```js
-$('#myTab a').on('click', function (e) {
-  e.preventDefault()
+$('#myTab a').on('click', function (event) {
+  event.preventDefault()
   $(this).tab('show')
 })
 ```
@@ -645,8 +645,8 @@ $('#someTab').tab('show')
 </table>
 
 ```js
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  e.target // недавно активированная вкладка
-  e.relatedTarget // предыдущая активная вкладка
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+  event.target // недавно активированная вкладка
+  event.relatedTarget // предыдущая активная вкладка
 })
 ```

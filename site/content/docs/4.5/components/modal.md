@@ -820,7 +820,7 @@ $('#myModal').modal('handleUpdate')
 </table>
 
 ```js
-$('#myModal').on('hidden.bs.modal', function (e) {
+$('#myModal').on('hidden.bs.modal', function (event) {
   // сделайте что-нибудь...
 })
 ```

@@ -28,7 +28,7 @@
           Когда Вам нужно только включить скомпилированный CSS или JS Bootstrap, Вы можете использовать <a href="https://www.jsdelivr.com/">jsDelivr</a>.
         </p>
         <p>
-          Посмотрите, как это работает, с помощью нашего простого <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#starter-template">стартового шаблона</a> или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a> , чтобы начать свой следующий проект. Вы также можете включить Popper.js и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">отдельно</a>.
+          Посмотрите на это в действии с помощью нашего простого <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#начальный-шаблон">начального шаблона</a> или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a>, чтобы начать свой следующий проект. Вы также можете включить Popper и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#раздельно">отдельно</a>.
         </p>
         <a class="btn btn-lg btn-outline-primary mb-3" href="/docs/{{ .Site.Params.docs_version }}/layout/overview/">Изучите документацию</a>
       </div>
@@ -36,7 +36,7 @@
       {{ highlight (printf (`<!-- CSS -->
 <link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">
 `) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
-      {{ highlight (printf (`<!-- jQuery and JavaScript Bundle with Popper.js -->
+      {{ highlight (printf (`<!-- Пакет jQuery и JavaScript с Popper -->
 <script src="%s" integrity=%q crossorigin="anonymous"></script>
 <script src="%s" integrity=%q crossorigin="anonymous"></script>
 `) .Site.Params.cdn.jquery (.Site.Params.cdn.jquery_hash | safeHTMLAttr) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
