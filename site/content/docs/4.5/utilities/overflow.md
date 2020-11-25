@@ -21,4 +21,4 @@ group: utilities
 <div class="overflow-hidden">...</div>
 ```
 
-Используя переменные Sass, вы можете настроить утилиты переполнения, изменив переменную `$overflows` в `_variables.scss`.
+Используя переменные Sass, Вы можете настроить утилиты переполнения, изменив переменную `$overflows` в `_variables.scss`.

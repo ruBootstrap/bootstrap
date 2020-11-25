@@ -18,7 +18,7 @@ toc: true
 import 'bootstrap';
 ```
 
-Кроме того, вы можете **импортировать плагины по отдельности** по мере необходимости:
+Кроме того, Вы можете **импортировать плагины по отдельности** по мере необходимости:
 
 ```js
 import 'bootstrap/js/dist/util';
@@ -77,7 +77,7 @@ Bootstrap зависит от [jQuery](https://jquery.com/) и [Popper](https://
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
-В этом случае вы можете использовать существующее правило для `css` без каких-либо специальных изменений в конфигурации webpack, за исключением того, что вам не нужен `sass-loader` только [style-loader](https://github.com/webpack-contrib/style-loader) и [css-loader](https://github.com/webpack-contrib/css-loader).
+В этом случае Вы можете использовать существующее правило для `css` без каких-либо специальных изменений в конфигурации webpack, за исключением того, что Вам не нужен `sass-loader` только [style-loader](https://github.com/webpack-contrib/style-loader) и [css-loader](https://github.com/webpack-contrib/css-loader).
 
 ```js
 ...
