@@ -1,6 +1,6 @@
 ---
 layout: examples
-title: Grid Template
+title: Шаблон сетки
 extra_css:
   - "grid.css"
 body_class: "py-4"
@@ -9,12 +9,12 @@ include_js: false
 
 <div class="container">
 
-  <h1>Bootstrap grid examples</h1>
-  <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-  <p>In these examples the <code>.themed-grid-col</code> class is added to the columns to add some theming. This is not a class that is available in Bootstrap by default.</p>
+  <h1>Примеры сетки bootstrap</h1>
+  <p class="lead">Базовые макеты сеток, которые познакомят Вас со строительством в сеточной системе Bootstrap.</p>
+  <p>В этих примерах к столбцам добавлен класс <code>.themed-grid-col</code>, чтобы добавить тематику. Это не тот класс, который по умолчанию доступен в Bootstrap.</p>
 
-  <h2 class="mt-4">Five grid tiers</h2>
-  <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+  <h2 class="mt-4">Пять уровней сетки</h2>
+  <p>В сеточной системе Bootstrap есть пять уровней, по одному для каждого диапазона поддерживаемых нами устройств. Каждый уровень начинается с минимального размера области просмотра и автоматически применяется к более крупным устройствам, если не отменен.</p>
 
   <div class="row mb-3">
     <div class="col-4 themed-grid-col">.col-4</div>
@@ -46,39 +46,39 @@ include_js: false
     <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
   </div>
 
-  <h2 class="mt-4">Three equal columns</h2>
-  <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+  <h2 class="mt-4">Три равных столбца</h2>
+  <p>Получите три столбца одинаковой ширины, <strong>начиная с настольных компьютеров и масштабирования до больших настольных компьютеров</strong>. На мобильных устройствах, планшетах и более ранних версиях столбцы автоматически складываются.</p>
   <div class="row mb-3">
     <div class="col-md-4 themed-grid-col">.col-md-4</div>
     <div class="col-md-4 themed-grid-col">.col-md-4</div>
     <div class="col-md-4 themed-grid-col">.col-md-4</div>
   </div>
 
-  <h2 class="mt-4">Three unequal columns</h2>
-  <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+  <h2 class="mt-4">Три неравных столбца</h2>
+  <p>Получите три столбца, <strong>начиная с настольных компьютеров и масштабирования до больших настольных компьютеров</strong> различной ширины. Помните, что количество столбцов сетки должно составлять до двенадцати для одного горизонтального блока. Более того, столбцы начинают складываться независимо от области просмотра.</p>
   <div class="row mb-3">
     <div class="col-md-3 themed-grid-col">.col-md-3</div>
     <div class="col-md-6 themed-grid-col">.col-md-6</div>
     <div class="col-md-3 themed-grid-col">.col-md-3</div>
   </div>
 
-  <h2 class="mt-4">Two columns</h2>
-  <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+  <h2 class="mt-4">Две колонки</h2>
+  <p>Получите две колонки, <strong>начиная с настольных компьютеров и масштабирования до больших настольных компьютеров</strong>.</p>
   <div class="row mb-3">
     <div class="col-md-8 themed-grid-col">.col-md-8</div>
     <div class="col-md-4 themed-grid-col">.col-md-4</div>
   </div>
 
-  <h2 class="mt-4">Full width, single column</h2>
+  <h2 class="mt-4">Полная ширина, один столбец</h2>
   <p class="text-warning">
-    No grid classes are necessary for full-width elements.
+    Для полноширинных элементов классы сетки не требуются.
   </p>
 
   <hr class="my-4">
 
-  <h2 class="mt-4">Two columns with two nested columns</h2>
-  <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-  <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+  <h2 class="mt-4">Два столбца с двумя вложенными столбцами</h2>
+  <p>Согласно документации, вложенность проста - просто поместите строку столбцов в существующий столбец. Это дает Вам две колонки <strong>начиная с настольных компьютеров и масштабирования до больших настольных компьютеров</strong>, с двумя другими (равной ширины) в большем столбце.</p>
+  <p>При размерах мобильных устройств, планшетов и ниже эти столбцы и их вложенные столбцы будут складываться.</p>
   <div class="row mb-3">
     <div class="col-md-8 themed-grid-col">
       <div class="pb-3">
@@ -94,9 +94,9 @@ include_js: false
 
   <hr class="my-4">
 
-  <h2 class="mt-4">Mixed: mobile and desktop</h2>
-  <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small, this class infix is not used), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-  <p>Each tier of classes scales up, meaning if you plan on setting the same widths for md, lg and xl, you only need to specify md.</p>
+  <h2 class="mt-4">Смешанный: мобильный и настольный</h2>
+  <p>Сетка Bootstrap v4 имеет пять уровней классов: xs (очень маленький, этот инфикс класса не используется), sm (маленький), md (средний), lg (большой) и xl (очень большой). Вы можете использовать практически любую комбинацию этих классов для создания более динамичных и гибких макетов.</p>
+  <p>Каждый уровень классов масштабируется, что означает, что если Вы планируете установить одинаковую ширину для md, lg и xl, Вам нужно только указать md.</p>
   <div class="row mb-3">
     <div class="col-md-8 themed-grid-col">.col-md-8</div>
     <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
@@ -113,7 +113,7 @@ include_js: false
 
   <hr class="my-4">
 
-  <h2 class="mt-4">Mixed: mobile, tablet, and desktop</h2>
+  <h2 class="mt-4">Смешанный: мобильный, планшетный и настольный</h2>
   <div class="row mb-3">
     <div class="col-sm-6 col-lg-8 themed-grid-col">.col-sm-6 .col-lg-8</div>
     <div class="col-6 col-lg-4 themed-grid-col">.col-6 .col-lg-4</div>
@@ -127,8 +127,8 @@ include_js: false
 </div>
 
 <div class="container" id="containers">
-  <h2 class="mt-4">Containers</h2>
-  <p>Additional classes added in Bootstrap v4.4 allow containers that are 100% wide until a particular breakpoint.</p>
+  <h2 class="mt-4">Контейнеры</h2>
+  <p>Дополнительные классы, добавленные в Bootstrap v4.4, позволяют использовать контейнеры шириной 100% до определенной контрольной точки.</p>
 </div>
 
 <div class="container themed-container">.container</div>
