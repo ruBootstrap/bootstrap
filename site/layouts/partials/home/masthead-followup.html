@@ -33,10 +33,10 @@
     </div>
     <div class="col-md-7 pl-md-5">
       {{ highlight (printf (`<!-- Только CSS -->
-<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">
+<link href="%s" rel="stylesheet"crossorigin="anonymous">
 `) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
       {{ highlight (printf (`<!-- Пакет JavaScript с Popper -->
-<script src="%s" integrity=%q crossorigin="anonymous"></script>
+<script src="%s"crossorigin="anonymous"></script>
 `) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
     </div>
   </section>
