@@ -263,10 +263,10 @@ toc: true
   <div class="row">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
       </div>
     </div>
     <div class="col-8">
@@ -292,10 +292,10 @@ toc: true
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Главная</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Профиль</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Сообщения</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Главная</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Профиль</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Сообщения</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
     </div>
   </div>
   <div class="col-8">
@@ -311,16 +311,16 @@ toc: true
 
 ### Использование атрибутов данных
 
-Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
+Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-bs-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
 
 ```html
 <div role="tabpanel">
   <!-- Группа списка -->
   <div class="list-group" id="myList" role="tablist">
-    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Главная</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Профиль</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Сообщения</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Настройки</a>
   </div>
 
 <!-- Панели вкладок -->
@@ -342,8 +342,8 @@ var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (e) {
-    e.preventDefault()
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
     tabTrigger.show()
   })
 })
@@ -376,14 +376,14 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### конструктор
 
-Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-target` либо `href`, нацеленный на узел контейнера в DOM.
+Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-bs-target` либо `href`, нацеленный на узел контейнера в DOM.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
 </div>
 
 <div class="tab-content">
@@ -464,9 +464,9 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
 </table>
 
 ```js
-var tabEl = document.querySelector('a[data-toggle="list"]')
-tabEl.addEventListener('shown.bs.tab', function (e) {
-  e.target // недавно активированная вкладка
-  e.relatedTarget // предыдущая активная вкладка
+var tabEl = document.querySelector('a[data-bs-toggle="list"]')
+tabEl.addEventListener('shown.bs.tab', function (event) {
+  event.target // недавно активированная вкладка
+  event.relatedTarget // предыдущая активная вкладка
 })
 ```

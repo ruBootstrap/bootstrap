@@ -37,7 +37,7 @@ toc: true
         <a class="nav-link" href="#mdo">@mdo</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#one">один</a></li>
           <li><a class="dropdown-item" href="#two">два</a></li>
@@ -47,7 +47,7 @@ toc: true
       </li>
     </ul>
   </nav>
-  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example" tabindex="0">
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <h4 id="fat">@fat</h4>
     <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
     <h4 id="mdo">@mdo</h4>
@@ -74,7 +74,7 @@ toc: true
       <a class="nav-link" href="#mdo">@mdo</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
       <ul class="dropdown-menu dropdown-menu-right">
         <li><a class="dropdown-item" href="#one">один</a></li>
         <li><a class="dropdown-item" href="#two">два</a></li>
@@ -84,7 +84,7 @@ toc: true
     </li>
   </ul>
 </nav>
-<div data-spy="scroll" data-target="#navbar-example2" data-offset="0" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
   <h4 id="fat">@fat</h4>
   <p>...</p>
   <h4 id="mdo">@mdo</h4>
@@ -123,7 +123,7 @@ toc: true
       </nav>
     </div>
     <div class="col-8">
-      <div data-spy="scroll" data-target="#navbar-example3" data-offset="0" class="scrollspy-example-2" tabindex="0">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Элемент 1</h4>
         <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
         <h5 id="item-1-1">Элемент 1-1</h5>
@@ -161,7 +161,7 @@ toc: true
   </nav>
 </nav>
 
-<div data-spy="scroll" data-target="#navbar-example3" data-offset="0" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
   <h4 id="item-1">Элемент 1</h4>
   <p>...</p>
   <h5 id="item-1-1">Элемент 1-1</h5>
@@ -194,7 +194,7 @@ toc: true
       </div>
     </div>
     <div class="col-8">
-      <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" tabindex="0">
+      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <h4 id="list-item-1">Элемент 1</h4>
         <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
         <h4 id="list-item-2">Элемент 2</h4>
@@ -215,7 +215,7 @@ toc: true
   <a class="list-group-item list-group-item-action" href="#list-item-3">Элемент 3</a>
   <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
 </div>
-<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="list-item-1">Элемент 1</h4>
   <p>...</p>
   <h4 id="list-item-2">Элемент 2</h4>
@@ -232,7 +232,7 @@ toc: true
 
 ### Через атрибуты данных
 
-Чтобы легко добавить поведение прокрутки к Вашей навигации на верхней панели, добавьте `data-spy="scroll"` к элементу, за которым Вы хотите следить (чаще всего это `<body>`). Затем добавьте атрибут `data-target` с идентификатором или классом родительского элемента любого компонента Bootstrap `.nav`.
+Чтобы легко добавить поведение прокрутки к Вашей навигации на верхней панели, добавьте `data-bs-spy="scroll"` к элементу, за которым Вы хотите следить (чаще всего это `<body>`). Затем добавьте атрибут `data-bs-target` с идентификатором или классом родительского элемента любого компонента Bootstrap `.nav`.
 
 ```css
 body {
@@ -241,7 +241,7 @@ body {
 ```
 
 ```html
-<body data-spy="scroll" data-target="#navbar-example">
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
   ...
   <div id="navbar-example">
     <ul class="nav nav-tabs" role="tablist">
@@ -281,7 +281,7 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 При использовании отслеживания прокрутки в сочетании с добавлением или удалением элементов из DOM Вам необходимо вызвать метод обновления следующим образом:
 
 ```js
-var dataSpyList = [].slice.call(document.querySelectorAll('[data-spy="scroll"]'))
+var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
   bootstrap.ScrollSpy.getInstance(dataSpyEl)
     .refresh()
@@ -303,7 +303,7 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-offset=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-offset=""`.
 
 <table class="table">
   <thead>
@@ -354,7 +354,7 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
 </table>
 
 ```js
-var firstScrollSpyEl = document.querySelector('[data-spy="scroll"]')
+var firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', function () {
   // сделайте что-нибудь...
 })

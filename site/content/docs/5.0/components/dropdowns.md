@@ -10,7 +10,7 @@ toc: true
 
 Выпадающие списки - это переключаемые контекстные наложения для отображения списков ссылок и многого другого. Они сделаны интерактивными с помощью включенного плагина JavaScript для выпадающего меню Bootstrap. Они переключаются щелчком, а не при наведении курсора; это [намеренное дизайнерское решение](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-Выпадающие списки созданы на основе сторонней библиотеки, [Popper.js](https://popper.js.org/), которая обеспечивает динамическое позиционирование и обнаружение области просмотра. Не забудьте включить [popper.min.js]({{< param "cdn.popper" >}}) перед загрузочным JavaScript или используйте `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js. Popper.js не используется для размещения выпадающих списков на панели навигации, хотя динамическое позиционирование не требуется.
+Выпадающие списки созданы на основе сторонней библиотеки, [Popper](https://popper.js.org/), которая обеспечивает динамическое позиционирование и обнаружение области просмотра. Не забудьте включить [popper.min.js]({{< param "cdn.popper" >}}) перед загрузочным JavaScript или используйте `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js. Popper.js не используется для размещения выпадающих списков на панели навигации, хотя динамическое позиционирование не требуется.
 
 ## Доступность
 
@@ -30,7 +30,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -45,7 +45,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Ссылка выпадающего списка
   </a>
 
@@ -61,7 +61,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -71,7 +71,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Secondary</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Secondary</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -81,7 +81,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Success</button>
+    <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Success</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -91,7 +91,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Info</button>
+    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Info</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -101,7 +101,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Warning</button>
+    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Warning</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -111,7 +111,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Danger</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Danger</button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -125,7 +125,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Example single danger button -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Действие
   </button>
   <ul class="dropdown-menu">
@@ -147,7 +147,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -160,7 +160,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -173,7 +173,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -186,7 +186,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -199,7 +199,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -212,7 +212,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -229,7 +229,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <!-- Example split danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Действие</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка</span>
   </button>
   <ul class="dropdown-menu">
@@ -248,7 +248,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group">
-    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Большая кнопка
     </button>
     <ul class="dropdown-menu">
@@ -261,7 +261,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-lg btn-secondary">Большая разделенная кнопка</button>
-    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель всплывающей кнопки</span>
     </button>
     <ul class="dropdown-menu">
@@ -277,7 +277,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Группы больших кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
-  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Большая кнопка
   </button>
   <ul class="dropdown-menu">
@@ -288,7 +288,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button class="btn btn-secondary btn-lg" type="button">
     Большая раздельная кнопка
   </button>
-  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка</span>
   </button>
   <ul class="dropdown-menu">
@@ -299,7 +299,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Маленькая кнопка
     </button>
     <ul class="dropdown-menu">
@@ -312,7 +312,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-sm btn-secondary">Маленькая кнопка разделения</button>
-    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu">
@@ -327,7 +327,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ```html
 <div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Маленькая кнопка
   </button>
   <ul class="dropdown-menu">
@@ -338,7 +338,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button class="btn btn-secondary btn-sm" type="button">
     Маленькая раздельная кнопка
   </button>
-  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка</span>
   </button>
   <ul class="dropdown-menu">
@@ -353,7 +353,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -372,13 +372,13 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Выпадающий список
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -401,7 +401,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group dropup">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающий список вверх
     </button>
     <ul class="dropdown-menu">
@@ -416,7 +416,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <button type="button" class="btn btn-secondary">
       Раздельная кнопка выпадающего списка вверх
     </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка вверх</span>
     </button>
     <ul class="dropdown-menu">
@@ -432,7 +432,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Кнопка выпадающего меню по умолчанию -->
 <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список вверх
   </button>
   <ul class="dropdown-menu">
@@ -445,7 +445,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button type="button" class="btn btn-secondary">
     Раздельная кнопка выпадающего списка вверх
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка</span>
   </button>
   <ul class="dropdown-menu">
@@ -460,7 +460,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group dropright">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающий список вправо
     </button>
     <ul class="dropdown-menu">
@@ -475,7 +475,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <button type="button" class="btn btn-secondary">
       Раздельная кнопка выпадающего списка вправо
     </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка вправо</span>
     </button>
     <ul class="dropdown-menu">
@@ -491,7 +491,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Кнопка выпадающего списка вправо по умолчанию -->
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список вправо
   </button>
   <ul class="dropdown-menu">
@@ -504,7 +504,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button type="button" class="btn btn-secondary">
     Раздельный выпадающий список вправо
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка вправо</span>
   </button>
   <ul class="dropdown-menu">
@@ -519,7 +519,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <div class="bd-example">
   <div class="btn-group dropleft">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающий список влево
     </button>
     <ul class="dropdown-menu">
@@ -532,7 +532,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
   <div class="btn-group">
     <div class="btn-group dropleft" role="group">
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Переключатель выпадающего списка влево</span>
       </button>
       <ul class="dropdown-menu">
@@ -552,7 +552,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Кнопка выпадающего списка влево по умолчанию -->
 <div class="btn-group dropleft">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список влево
   </button>
   <ul class="dropdown-menu">
@@ -563,7 +563,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <!-- Раздельная кнопка выпадающего списка влево -->
 <div class="btn-group">
   <div class="btn-group dropleft" role="group">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка влево</span>
     </button>
     <ul class="dropdown-menu">
@@ -582,7 +582,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -633,12 +633,12 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 По умолчанию выпадающее меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте `.dropdown-menu-right` в `.dropdown-menu`, чтобы выровнять выпадающее меню по правому краю..
 
 {{< callout info >}}
-**Внимание!** Выпадающие списки позиционируются благодаря Popper.js (кроме случаев, когда они содержатся в навигационной панели).
+**Внимание!** Выпадающие списки позиционируются благодаря Popper (кроме случаев, когда они содержатся в навигационной панели).
 {{< /callout >}}
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Меню с выравниванием по правому краю
   </button>
   <ul class="dropdown-menu dropdown-menu-right">
@@ -651,13 +651,13 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ### Отзывчивое выравнивание
 
-Если Вы хотите использовать адаптивное выравнивание, отключите динамическое позиционирование, добавив атрибут `data-display="static"` и используйте гибкие классы вариантов.
+Если Вы хотите использовать адаптивное выравнивание, отключите динамическое позиционирование, добавив атрибут `data-bs-display="static"` и используйте гибкие классы вариантов.
 
 Чтобы выровнять **по правой стороне** выпадающее меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-right`.
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     По левому краю, но по правому краю на большом экране
   </button>
   <ul class="dropdown-menu dropdown-menu-lg-right">
@@ -672,7 +672,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     По правому краю, но по левому краю на большом экране
   </button>
   <ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
@@ -683,7 +683,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 {{< /example >}}
 
-Обратите внимание, что Вам не нужно добавлять атрибут `data-display="static"` к кнопке выпадающего списка в навигационных панелях, поскольку Popper.js не используется в навигационных панелях.
+Обратите внимание, что Вам не нужно добавлять атрибут `data-bs-display="static"` к кнопке выпадающего списка в навигационных панелях, поскольку Popper не используется в навигационных панелях.
 
 ## Содержание меню
 
@@ -783,12 +783,12 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ## Параметры выпадающего списка
 
-Используйте `data-offset` или `data-reference`, чтобы изменить расположение выпадающего списка.
+Используйте `data-bs-offset` или `data-bs-reference`, чтобы изменить расположение выпадающего списка.
 
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown mr-1">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
       Смещение
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
@@ -799,7 +799,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Ссылка</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
@@ -815,7 +815,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ## Использование
 
-С помощью атрибутов данных или JavaScript плагин выпадающего списка переключает скрытый контент (выпадающие меню) путем переключения класса `.show` в родительском элементе списка. Атрибут `data-toggle="dropdown"` используется для закрытия выпадающих меню на уровне приложения, поэтому рекомендуется всегда использовать его.
+С помощью атрибутов данных или JavaScript плагин раскрывающегося списка переключает скрытый контент (раскрывающиеся меню), переключая класс `.show` в родительском элементе списка `.dropdown-menu`. Атрибут `data-bs-toggle="dropdown"` используется для закрытия выпадающих меню на уровне приложения, поэтому рекомендуется всегда использовать его.
 
 {{< callout info >}}
 На устройствах с сенсорным экраном открытие выпадающего списка добавляет пустые обработчики `mouseover` к непосредственным потомкам элемента `<body>`. Этот, по общему признанию, уродливый хак необходим, чтобы обойти [причуду в делегировании событий iOS](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), которая в противном случае предотвратила бы нажатие где-нибудь за пределами выпадающего списка от запуска кода, закрывающего выпадающий список. После закрытия выпадающего списка эти дополнительные пустые обработчики `mouseover` удаляются.
@@ -823,11 +823,11 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ### Через атрибуты данных
 
-Добавьте `data-toggle="dropdown"` к ссылке или кнопке, чтобы переключить выпадающий список.
+Добавьте `data-bs-toggle="dropdown"` к ссылке или кнопке, чтобы переключить выпадающий список.
 
 ```html
 <div class="dropdown">
-  <button id="dLabel" type="button" data-toggle="dropdown" aria-expanded="false">
+  <button id="dLabel" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Триггер выпадающего списка
   </button>
   <ul class="dropdown-menu" aria-labelledby="dLabel">
@@ -848,14 +848,14 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 ```
 
 {{< callout info >}}
-##### `data-toggle="dropdown"` по-прежнему требуется
+##### `data-bs-toggle="dropdown"` по-прежнему требуется
 
-Независимо от того, вызываете ли вы выпадающий список через JavaScript или вместо этого используете data-api, в элементе триггера выпадающего списка всегда должен присутствовать `data-toggle="dropdown"`.
+Независимо от того, вызываете ли вы выпадающий список через JavaScript или вместо этого используете data-api, в элементе триггера выпадающего списка всегда должен присутствовать `data-bs-toggle="dropdown"`.
 {{< /callout >}}
 
 ### Параметры
 
-Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-offset=""`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-offset=""`.
 
 <table class="table">
   <thead>
@@ -874,38 +874,38 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td>
         <p>Смещение выпадающего списка относительно его цели.</p>
         <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации смещения</a> Popper.js.</p>
+        <p>Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации смещения</a> Popper.</p>
       </td>
     </tr>
     <tr>
       <td><code>flip</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Разрешить выпадающий список переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документации переворотов</a> Popper.js.</td>
+      <td>Разрешить выпадающий список переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документации переворотов</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения выпадающего меню. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращения переполнения</a> Popper.js.</td>
+      <td>Граница ограничения переполнения выпадающего меню. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращения переполнения</a> Popper.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
       <td>string | element</td>
       <td><code>'toggle'</code></td>
-      <td>Ссылочный элемент выпадающего меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылку HTMLElement. Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#referenceObject">документацию ссылки объекта</a> Popper.js.</td>
+      <td>Ссылочный элемент выпадающего меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылку HTMLElement. Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#referenceObject">документацию ссылки объекта</a> Popper.</td>
     </tr>
     <tr>
       <td><code>display</code></td>
       <td>string</td>
       <td><code>'dynamic'</code></td>
-      <td>По умолчанию мы используем Popper.js для динамического позиционирования. Отключите это с помощью <code>static</code>.</td>
+      <td>По умолчанию мы используем Popper для динамического позиционирования. Отключите это с помощью <code>static</code>.</td>
     </tr>
     <tr>
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

@@ -52,7 +52,7 @@ extra_js:
   </div>
   <div class="col-md-4">
     <label for="validationCustomUsername" class="form-label">Имя пользователя</label>
-    <div class="input-group">
+    <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
       <div class="invalid-feedback">
@@ -166,6 +166,8 @@ extra_js:
 Для недопустимых полей убедитесь, что недопустимая обратная связь/сообщение об ошибке связано с соответствующим полем формы с помощью `aria-describedby` (отмечая, что этот атрибут позволяет ссылаться на более чем один `id`, в случае если поле уже указывает на дополнительную форму текст).
 
 Чтобы исправить [проблемы с радиусами границ](https://github.com/twbs/bootstrap/issues/25110), для групп ввода требуется дополнительный класс `.has-validation`.
+
+To fix [issues with border radii](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
 
 {{< example >}}
 <form class="row g-3">

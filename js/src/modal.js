@@ -70,8 +70,8 @@ const CLASS_NAME_STATIC = 'modal-static'
 
 const SELECTOR_DIALOG = '.modal-dialog'
 const SELECTOR_MODAL_BODY = '.modal-body'
-const SELECTOR_DATA_TOGGLE = '[data-toggle="modal"]'
-const SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
+const SELECTOR_DATA_DISMISS = '[data-bs-dismiss="modal"]'
 const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
 const SELECTOR_STICKY_CONTENT = '.sticky-top'
 
@@ -365,7 +365,11 @@ class Modal {
           return
         }
 
-        this._triggerBackdropTransition()
+        if (this._config.backdrop === 'static') {
+          this._triggerBackdropTransition()
+        } else {
+          this.hide()
+        }
       })
 
       if (animate) {
@@ -404,35 +408,31 @@ class Modal {
   }
 
   _triggerBackdropTransition() {
-    if (this._config.backdrop === 'static') {
-      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED)
-      if (hideEvent.defaultPrevented) {
-        return
-      }
-
-      const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight
-
-      if (!isModalOverflowing) {
-        this._element.style.overflowY = 'hidden'
-      }
-
-      this._element.classList.add(CLASS_NAME_STATIC)
-      const modalTransitionDuration = getTransitionDurationFromElement(this._dialog)
-      EventHandler.off(this._element, TRANSITION_END)
-      EventHandler.one(this._element, TRANSITION_END, () => {
-        this._element.classList.remove(CLASS_NAME_STATIC)
-        if (!isModalOverflowing) {
-          EventHandler.one(this._element, TRANSITION_END, () => {
-            this._element.style.overflowY = ''
-          })
-          emulateTransitionEnd(this._element, modalTransitionDuration)
-        }
-      })
-      emulateTransitionEnd(this._element, modalTransitionDuration)
-      this._element.focus()
-    } else {
-      this.hide()
+    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED)
+    if (hideEvent.defaultPrevented) {
+      return
     }
+
+    const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight
+
+    if (!isModalOverflowing) {
+      this._element.style.overflowY = 'hidden'
+    }
+
+    this._element.classList.add(CLASS_NAME_STATIC)
+    const modalTransitionDuration = getTransitionDurationFromElement(this._dialog)
+    EventHandler.off(this._element, TRANSITION_END)
+    EventHandler.one(this._element, TRANSITION_END, () => {
+      this._element.classList.remove(CLASS_NAME_STATIC)
+      if (!isModalOverflowing) {
+        EventHandler.one(this._element, TRANSITION_END, () => {
+          this._element.style.overflowY = ''
+        })
+        emulateTransitionEnd(this._element, modalTransitionDuration)
+      }
+    })
+    emulateTransitionEnd(this._element, modalTransitionDuration)
+    this._element.focus()
   }
 
   // ----------------------------------------------------------------------
@@ -474,7 +474,7 @@ class Modal {
           const actualPadding = element.style.paddingRight
           const calculatedPadding = window.getComputedStyle(element)['padding-right']
           Manipulator.setDataAttribute(element, 'padding-right', actualPadding)
-          element.style.paddingRight = `${parseFloat(calculatedPadding) + this._scrollbarWidth}px`
+          element.style.paddingRight = `${Number.parseFloat(calculatedPadding) + this._scrollbarWidth}px`
         })
 
       // Adjust sticky content margin
@@ -483,7 +483,7 @@ class Modal {
           const actualMargin = element.style.marginRight
           const calculatedMargin = window.getComputedStyle(element)['margin-right']
           Manipulator.setDataAttribute(element, 'margin-right', actualMargin)
-          element.style.marginRight = `${parseFloat(calculatedMargin) - this._scrollbarWidth}px`
+          element.style.marginRight = `${Number.parseFloat(calculatedMargin) - this._scrollbarWidth}px`
         })
 
       // Adjust body padding
@@ -491,7 +491,7 @@ class Modal {
       const calculatedPadding = window.getComputedStyle(document.body)['padding-right']
 
       Manipulator.setDataAttribute(document.body, 'padding-right', actualPadding)
-      document.body.style.paddingRight = `${parseFloat(calculatedPadding) + this._scrollbarWidth}px`
+      document.body.style.paddingRight = `${Number.parseFloat(calculatedPadding) + this._scrollbarWidth}px`
     }
 
     document.body.classList.add(CLASS_NAME_OPEN)

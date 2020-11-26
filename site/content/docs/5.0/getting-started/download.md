@@ -13,7 +13,7 @@ toc: true
 - Скомпилированные и минимизированные пакеты CSS (см. [Сравнение файлов CSS]({{< docsref "/getting-started/contents#файлы-css" >}}))
 - Скомпилированные и минимизированные плагины JavaScript (См. [сравнение JS-файлов]({{< docsref "/getting-started/contents#файлы-js" >}}))
 
-Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript, такие как Popper.js.
+Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript, такие как Popper.
 
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Скачать</a>
 

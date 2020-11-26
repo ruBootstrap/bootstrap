@@ -64,7 +64,7 @@ describe('Tooltip', () => {
 
   describe('constructor', () => {
     it('should not take care of disallowed data attributes', () => {
-      fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-sanitize="false" title="Another tooltip">'
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" data-bs-sanitize="false" title="Another tooltip">'
 
       const tooltipEl = fixtureEl.querySelector('a')
       const tooltip = new Tooltip(tooltipEl)
@@ -107,7 +107,7 @@ describe('Tooltip', () => {
       tooltipInContainerEl.click()
     })
 
-    it('should allow to pass config to popper.js with `popperConfig`', () => {
+    it('should allow to pass config to Popper with `popperConfig`', () => {
       fixtureEl.innerHTML = '<a href="#" rel="tooltip">'
 
       const tooltipEl = fixtureEl.querySelector('a')
@@ -631,6 +631,61 @@ describe('Tooltip', () => {
       }, 0)
 
       tooltipEl.dispatchEvent(createEvent('mouseover'))
+    })
+
+    it('should show a tooltip with custom class provided in data attributes', done => {
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip" data-bs-custom-class="custom-class">'
+
+      const tooltipEl = fixtureEl.querySelector('a')
+      const tooltip = new Tooltip(tooltipEl)
+
+      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+        const tip = document.querySelector('.tooltip')
+        expect(tip).toBeDefined()
+        expect(tip.classList.contains('custom-class')).toBeTrue()
+        done()
+      })
+
+      tooltip.show()
+    })
+
+    it('should show a tooltip with custom class provided as a string in config', done => {
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip">'
+
+      const tooltipEl = fixtureEl.querySelector('a')
+      const tooltip = new Tooltip(tooltipEl, {
+        customClass: 'custom-class custom-class-2'
+      })
+
+      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+        const tip = document.querySelector('.tooltip')
+        expect(tip).toBeDefined()
+        expect(tip.classList.contains('custom-class')).toBeTrue()
+        expect(tip.classList.contains('custom-class-2')).toBeTrue()
+        done()
+      })
+
+      tooltip.show()
+    })
+
+    it('should show a tooltip with custom class provided as a function in config', done => {
+      fixtureEl.innerHTML = '<a href="#" rel="tooltip" title="Another tooltip">'
+
+      const spy = jasmine.createSpy('customClass').and.returnValue('custom-class')
+      const tooltipEl = fixtureEl.querySelector('a')
+      const tooltip = new Tooltip(tooltipEl, {
+        customClass: spy
+      })
+
+      tooltipEl.addEventListener('shown.bs.tooltip', () => {
+        const tip = document.querySelector('.tooltip')
+        expect(tip).toBeDefined()
+        expect(spy).toHaveBeenCalled()
+        expect(tip.classList.contains('custom-class')).toBeTrue()
+        done()
+      })
+
+      tooltip.show()
     })
   })
 

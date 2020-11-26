@@ -1,29 +1,21 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    {{ partial "header" . }}
-  </head>
-  <body>
-    {{ partial "skippy" . }}
-
-    {{ partial "docs-navbar" . }}
-
-    <header class="py-5 border-bottom">
-      <div class="container pt-md-1 pb-md-4">
-        <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
-        <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-        {{ if eq .Title "Примеры" }}
-        <div class="d-flex flex-column flex-sm-row">
-          <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Скачать примеры');">Скачать примеры</a>
-          <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-outline-secondary mt-3 mt-sm-0 ml-sm-3" onclick="ga('send', 'event', 'Примеры', 'Hero', 'Скачать');">Скачать исходный код</a>
-        </div>
-        {{ end }}
+{{ define "main" }}
+  <header class="py-5 border-bottom">
+    <div class="container pt-md-1 pb-md-4">
+      <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
+      <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
+      {{ if eq .Title "Examples" }}
+      <div class="d-flex flex-column flex-sm-row">
+        <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">Скачать примеры</a>
+        <a href="{{ .Site.Params.download.source }}" class="btn btn-lg btn-outline-secondary mt-3 mt-sm-0 ml-sm-3" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Скачать исходный код</a>
       </div>
-    </header>
+      {{ end }}
+      {{ partial "ads" . }}
+    </div>
+  </header>
 
-    <main class="bd-content order-1 py-5" id="content">
-      <div class="container">
-        {{ .Content }}
+  <main class="bd-content order-1 py-5" id="content">
+    <div class="container">
+      {{ .Content }}
 
         {{ if eq .Title "Примеры" }}
           <hr class="my-5">
@@ -33,19 +25,22 @@
                 {{ partial "icons/droplet-fill.svg" (dict "width" "32" "height" "32") }}
               </div>
               <h2 class="display-6 fw-normal">В будущее с темами Bootstrap</h2>
-              <p class="col-md-10 col-lg-8 mx-auto lead">Вам нужно нечто большее, чем эти примеры? Поднимите Bootstrap на новый уровень с премиальными темами из <a href="{{ .Site.Params.themes }}">официальной торговой площадки Bootstrap Themes</a>. Они созданы как собственные расширенные фреймворки, богатые новыми компонентами и плагинами, документацией и мощными инструментами сборки.</p>
+              <p class="col-md-10 col-lg-8 mx-auto lead">
+                Вам нужно нечто большее, чем эти примеры? Поднимите Bootstrap на новый уровень с премиальными темами из <a href="{{ .Site.Params.themes }}">официальной торговой площадки Bootstrap Themes</a>. Они созданы как собственные расширенные фреймворки, богатые новыми компонентами и плагинами, документацией и мощными инструментами сборки.
+              </p>
               <a href="{{ .Site.Params.themes }}" class="btn btn-lg btn-outline-primary mb-3">Обзор тем</a>
             </div>
             <img class="d-block img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage.png,
                                                                 /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage@2x.png 2x"
                                                         src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage.png"
-                                                        alt="Bootstrap Themes" width="1150" height="320" loading="lazy">
+                                                        alt="Темы Bootstrap" width="1150" height="320" loading="lazy">
           </div>
-        {{ end }}
-      </div>
-    </main>
-
-    {{ partial "footer" . }}
-    {{ partial "scripts" . }}
-  </body>
-</html>
+          <img class="d-block img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage.png,
+                                                              /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage@2x.png 2x"
+                                                        src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage.png"
+                                                        alt="Темы Bootstrap" width="1150" height="320" loading="lazy">
+        </div>
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

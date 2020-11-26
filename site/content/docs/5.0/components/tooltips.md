@@ -10,7 +10,7 @@ toc: true
 
 Что нужно знать при использовании плагина всплывающей подсказки:
 
-- Подсказки полагаются на стороннюю библиотеку [Popper.js](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) еред bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper .js, чтобы всплывающие подсказки работали!
+- Подсказки полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper, чтобы всплывающие подсказки работали!
 - Всплывающие подсказки используются по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно **.
 - Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.
 - Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
@@ -28,10 +28,10 @@ toc: true
 
 ## Пример: включить всплывающие подсказки везде
 
-Один из способов инициализировать все всплывающие подсказки на странице - это выбрать их по их атрибуту `data-toggle`:
+Один из способов инициализировать все всплывающие подсказки на странице - это выбрать их по их атрибуту `data-bs-toggle`:
 
 ```js
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
@@ -42,7 +42,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Подсказка по умолчанию">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Другая подсказка">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Еще один здесь тоже">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="Последний совет!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+  <p class="muted">Tight pants next level keffiyeh <a href="#" data-bs-toggle="tooltip" title="Подсказка по умолчанию">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-bs-toggle="tooltip" title="Другая подсказка">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-bs-toggle="tooltip" title="Еще один здесь тоже">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-bs-toggle="tooltip" title="Последний совет!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
   </p>
 </div>
 
@@ -50,25 +50,25 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Подсказка вверху">Подсказка вверху</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Подсказка справа">Подсказка справа</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Подсказка внизу">Подсказка внизу</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Подсказка слева">Подсказка слева</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">Всплывающая подсказка с HTML</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Подсказка вверху">Подсказка вверху</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Подсказка справа">Подсказка справа</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Подсказка внизу">Подсказка внизу</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Подсказка слева">Подсказка слева</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">Всплывающая подсказка с HTML</button>
   </div>
 </div>
 
 ```html
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Подсказка вверху">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Подсказка вверху">
   Подсказка вверху
 </button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Подсказка справа">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Подсказка справа">
   Подсказка справа
 </button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Подсказка внизу">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Подсказка внизу">
   Подсказка внизу
 </button>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Подсказка слева">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Подсказка слева">
   Подсказка слева
 </button>
 ```
@@ -76,7 +76,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 И с добавленным пользовательским HTML:
 
 ```html
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">
   Всплывающая подсказка с HTML
 </button>
 ```
@@ -84,7 +84,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 С SVG:
 
 <div class="bd-example tooltip-demo">
-  <a href="#" data-toggle="tooltip" title="Подсказка по умолчанию">
+  <a href="#" data-bs-toggle="tooltip" title="Подсказка по умолчанию">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
       <rect width="100%" height="100%" fill="#563d7c" />
       <circle cx="50" cy="50" r="30" fill="#007bff" />
@@ -128,7 +128,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ```html
 <!-- HTML для записи -->
-<a href="#" data-toggle="tooltip" title="Текст всплывающей подсказки!">Наведите на меня</a>
+<a href="#" data-bs-toggle="tooltip" title="Текст всплывающей подсказки!">Наведите на меня</a>
 
 <!-- Разметка, созданная плагином -->
 <div class="tooltip bs-tooltip-top" role="tooltip">
@@ -145,7 +145,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 <div class="tooltip-demo">
 {{< example >}}
-<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Отключенная всплывающая подсказка">
   <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
 </span>
 {{< /example >}}
@@ -153,7 +153,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-animation =" "`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation =" "`.
 
 {{< callout warning >}}
 Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
@@ -216,7 +216,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>Если предусмотрен селектор, объекты всплывающей подсказки будут делегированы указанным целям. На практике это также используется для применения всплывающих подсказок к динамически добавляемым элементам DOM (поддержка <code>jQuery.on</code>). См. <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
+      <td>Если предусмотрен селектор, объекты всплывающей подсказки будут делегированы указанным целям. На практике это также используется для применения всплывающих подсказок к динамически добавляемым элементам DOM (поддержка <code>jQuery.on</code>). Смотрите <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">информативный пример</a>.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -255,7 +255,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>
         <p>Смещение всплывающей подсказки относительно цели.</p>
         <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a> Popper.js.</p>
+        <p>Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a> Popper.</p>
       </td>
     </tr>
     <tr>
@@ -263,13 +263,21 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>string | array</td>
       <td><code>'flip'</code></td>
       <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации см.
-     <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
+     <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию предотвращения переполнения</a> Popper.js.</td>
+      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию предотвращения переполнения</a> Popper.</td>
+    <tr>
+      <td><code>customClass</code></td>
+      <td>string | function</td>
+      <td><code>''</code></td>
+      <td>
+        <p>Добавляйте классы во всплывающую подсказку, когда она отображается. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: <code>'class-1 class-2'</code>.</p>
+        <p>Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов.</p>
+      </td>
     </tr>
     <tr>
       <td><code>sanitize</code></td>
@@ -293,7 +301,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a>.</td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

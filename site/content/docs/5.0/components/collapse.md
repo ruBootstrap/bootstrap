@@ -22,14 +22,14 @@ toc: true
 - `.collapsing` применяется во время переходов
 - `.collapse.show` показывает содержимое
 
-Вы можете использовать ссылку с атрибутом `href` или кнопку с атрибутом `data-target`. В обоих случаях требуется `data-toggle="collapse"`.
+Вы можете использовать ссылку с атрибутом `href` или кнопку с атрибутом `data-bs-target`. В обоих случаях требуется `data-bs-toggle="collapse"`.
 
 {{< example >}}
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Ссылка с href
   </a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Кнопка с data-target
   </button>
 </p>
@@ -42,14 +42,14 @@ toc: true
 
 ## Множество целей
 
-`<button>` или `<a>` могут отображать и скрывать несколько элементов, ссылаясь на них с помощью селектора в его атрибуте `href` или `data-target`.
-Несколько `<button>` или `<a>` могут отображать и скрывать элемент, если каждый из них ссылается на свой атрибут `href` или `data-target`
+`<button>` или `<a>` могут отображать и скрывать несколько элементов, ссылаясь на них с помощью селектора в его атрибуте `href` или `data-bs-target`.
+Несколько `<button>` или `<a>` могут отображать и скрывать элемент, если каждый из них ссылается на свой атрибут `href` или `data-bs-target`
 
 {{< example >}}
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Переключить первый элемент</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Переключить второй элемент</button>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Переключить оба элемента</button>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Переключить первый элемент</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Переключить второй элемент</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Переключить оба элемента</button>
 </p>
 <div class="row">
   <div class="col">
@@ -73,7 +73,7 @@ toc: true
 
 Не забудьте добавить к элементу управления `aria-expanded`. Этот атрибут явно передает текущее состояние сворачиваемого элемента, привязанного к элементу управления, для программ чтения с экрана и аналогичных вспомогательных технологий. Если складной элемент закрыт по умолчанию, атрибут элемента управления должен иметь значение `aria-expanded="false"`. Если Вы установили открываемый складной элемент по умолчанию с помощью класса `show`, вместо этого установите `aria-expanded="true"` для элемента управления. Плагин автоматически переключит этот атрибут в элементе управления в зависимости от того, был ли открыт или закрыт складной элемент (через JavaScript или потому, что пользователь активировал другой элемент управления, также связанный с тем же складным элементом). Если элемент HTML элемента управления не является кнопкой (например, `<a>` или `<div>`), атрибут `role="button"` должен быть добавлен к элементу.
 
-Если Ваш элемент управления нацелен на один сворачиваемый элемент - т.е. атрибут `data-target` указывает на селектор `id` Вы должны добавить атрибут `aria-controls` к элементу управления, содержащий `id` элемента управления. разборный элемент. Современные средства чтения с экрана и аналогичные вспомогательные технологии используют этот атрибут, чтобы предоставить пользователям дополнительные ярлыки для перехода непосредственно к самому сворачиваемому элементу.
+Если Ваш элемент управления нацелен на один сворачиваемый элемент - т.е. атрибут `data-bs-target` указывает на селектор `id` Вы должны добавить атрибут `aria-controls` к элементу управления, содержащий `id` элемента управления. разборный элемент. Современные средства чтения с экрана и аналогичные вспомогательные технологии используют этот атрибут, чтобы предоставить пользователям дополнительные ярлыки для перехода непосредственно к самому сворачиваемому элементу.
 
 Обратите внимание, что текущая реализация Bootstrap не охватывает различные *необязательные* взаимодействия с клавиатурой, описанные в [аккордеонном шаблоне WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - Вам нужно будет включить их самостоятельно в собственный JavaScript.
 
@@ -89,9 +89,9 @@ toc: true
 
 ### Через атрибуты данных
 
-Просто добавьте к элементу `data-toggle="collapse"` и `data-target`, чтобы автоматически назначить управление одним или несколькими сворачиваемыми элементами. Атрибут `data-target` принимает CSS-селектор, к которому применяется коллапс. Не забудьте добавить к складному элементу класс `collapse`. Если Вы хотите, чтобы он был открыт по умолчанию, добавьте дополнительный класс `show`.
+Просто добавьте к элементу `data-bs-toggle="collapse"` и `data-bs-target`, чтобы автоматически назначить управление одним или несколькими сворачиваемыми элементами. Атрибут `data-bs-target` принимает CSS-селектор, к которому применяется коллапс. Не забудьте добавить к складному элементу класс `collapse`. Если Вы хотите, чтобы он был открыт по умолчанию, добавьте дополнительный класс `show`.
 
-Чтобы добавить управление группами в виде аккордеона в сворачиваемую область, добавьте атрибут данных `data-parent="#selector"`. Обратитесь к демонстрации, чтобы увидеть это в действии.
+Чтобы добавить управление группами в виде аккордеона в сворачиваемую область, добавьте атрибут данных `data-bs-parent="#selector"`. Обратитесь к демонстрации, чтобы увидеть это в действии.
 
 ### Через JavaScript
 
@@ -106,7 +106,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Параметры
 
-Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-parent=""`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-parent=""`.
 
 <table class="table">
   <thead>

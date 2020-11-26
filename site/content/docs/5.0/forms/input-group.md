@@ -159,7 +159,7 @@ toc: true
 
 {{< example >}}
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -172,7 +172,7 @@ toc: true
 
 <div class="input-group mb-3">
   <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu dropdown-menu-right">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -183,7 +183,7 @@ toc: true
 </div>
 
 <div class="input-group">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действия до</a></li>
     <li><a class="dropdown-item" href="#">Другое действие до</a></li>
@@ -192,7 +192,7 @@ toc: true
     <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
   </ul>
   <input type="text" class="form-control" aria-label="Ввод текста с помощью 2-х раскрывающихся кнопок">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
   <ul class="dropdown-menu dropdown-menu-right">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
@@ -208,7 +208,7 @@ toc: true
 {{< example >}}
 <div class="input-group mb-3">
   <button type="button" class="btn btn-outline-secondary">Действия</button>
-  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающий список</span>
   </button>
   <ul class="dropdown-menu">
@@ -224,7 +224,7 @@ toc: true
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Ввод текста с помощью кнопки сегментированного раскрывающегося списка">
   <button type="button" class="btn btn-outline-secondary">Действия</button>
-  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающий список</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right">
@@ -299,8 +299,8 @@ toc: true
 </div>
 
 <div class="input-group mb-3">
-  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03" aria-label="Загрузка">Кнопка</button>
-  <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Кнопка</button>
+  <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Загрузка">
 </div>
 
 <div class="input-group">

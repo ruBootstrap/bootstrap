@@ -24,11 +24,11 @@ toc: true
 
 ### Скрипты
 
-Многие из наших компонентов требуют использования JavaScript для работы. В частности, для них требуются наши собственные плагины JavaScript и [Popper.js](https://popper.js.org/). Поместите **один из следующих скриптов `<script>`** в конце ваших страниц, прямо перед закрывающим тегом `</body>`, чтобы включить их.
+Многие из наших компонентов требуют использования JavaScript для работы. В частности, для них требуются наши собственные плагины JavaScript и [Popper](https://popper.js.org/). Поместите **один из следующих скриптов `<script>`** в конце ваших страниц, прямо перед закрывающим тегом `</body>`, чтобы включить их.
 
 #### Связка
 
-Включите каждый плагин Bootstrap JavaScript и зависимости в один из двух наших пакетов. Наши `bootstrap.bundle.js` и `bootstrap.bundle.min.js` включают [Popper](https://popper.js.org/). Для получения дополнительной информации о том, что входит в Bootstrap, см. наш раздел [содержимое]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}).
+Включите каждый плагин Bootstrap JavaScript и зависимости в один из двух наших пакетов. Наши `bootstrap.bundle.js` и `bootstrap.bundle.min.js` включают [Popper](https://popper.js.org/). Для получения дополнительной информации о том, что входит в Bootstrap, см. наш раздел [содержимое]({{< docsref "/getting-started/contents#предварительно-скомпилированный-bootstrap" >}}).
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@ toc: true
 
 #### Компоненты
 
-Интересно, какие компоненты явно требуют нашего JavaScript и Popper.js? Кликните на ссылку "Показать компоненты" ниже. Если Вы совсем не уверены в общей структуре страницы, продолжайте читать, чтобы найти образец шаблона страницы.
+Интересно, какие компоненты явно требуют нашего JavaScript и Popper? Кликните на ссылку "Показать компоненты" ниже. Если Вы совсем не уверены в общей структуре страницы, продолжайте читать, чтобы найти образец шаблона страницы.
 
 <details>
 <summary class="text-primary mb-3">Показать компоненты, требующие JavaScript</summary>
@@ -58,11 +58,11 @@ toc: true
 - Buttons (Кнопки) для переключения состояний и функционала флажка/радио
 - Carousel (Карусель) для любого поведения слайдов, элементов управления и индикаторов
 - Collapse (Сворачиваемое) для переключения видимости содержимого
-- Dropdowns (Выпадающие списки) для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Dropdowns (Выпадающие списки) для отображения и позиционирования (также требуется [Popper](https://popper.js.org/))
 - Modals (Модальные окна) для отображения, позиционирования и прокрутки
 - Navbar (Панель навигации) для расширения нашего плагина Сворачиваемое для реализации адаптивного поведения
 - Toasts (Тосты) для показа и отклонения
-- Tooltips (Всплывающие подсказки) и popovers (всплывающие окна) для отображения и позиционирования (также требуется [Popper.js](https://popper.js.org/))
+- Tooltips (Всплывающие подсказки) и popovers (всплывающие окна) для отображения и позиционирования (также требуется [Popper](https://popper.js.org/))
 - Scrollspy (Отслеживание прокрутки) для поведения прокрутки и обновлений навигации
 {{< /markdown >}}
 </details>
@@ -89,10 +89,10 @@ toc: true
 
     <!-- Дополнительный JavaScript; выберите один из двух! -->
 
-    <!-- Вариант 1: Bootstrap в связке с Popper.js -->
+    <!-- Вариант 1: Bootstrap в связке с Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Вариант 2: Bootstrap JS отдельно от Popper.js
+    <!-- Вариант 2: Bootstrap JS отдельно от Popper
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
     -->

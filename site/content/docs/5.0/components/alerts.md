@@ -55,7 +55,7 @@ toc: true
 
 - Убедитесь, что Вы загрузили плагин уведомлений или скомпилированный Bootstrap JavaScript.
 - Добавьте [кнопку закрытия]({{< docsref "/components/close-button" >}}) и класс `.alert-dismissible`, который добавляет дополнительный отступ справа от уведомления и позиционирует кнопку закрытия.
-- На кнопку закрытия добавьте атрибут `data-dismiss="alert"`, который активирует функциональность JavaScript. Обязательно используйте с ним элемент `<button>` для правильного поведения на всех устройствах.
+- На кнопку закрытия добавьте атрибут `data-bs-dismiss="alert"`, который активирует функциональность JavaScript. Обязательно используйте с ним элемент `<button>` для правильного поведения на всех устройствах.
 - Чтобы анимировать уведомления при их отклонении, не забудьте добавить классы `.fade` и `.show`.
 
 Вы можете увидеть это в действии на живой демонстрации:
@@ -63,7 +63,7 @@ toc: true
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Святой гуакамоле!</strong> Вам следует проверить некоторые из этих полей ниже.
-  <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
 </div>
 {{< /example >}}
 
@@ -87,7 +87,7 @@ alertList.forEach(function (alert) {
 Или с атрибутами `data` на кнопке **в пределах уведомления**, как показано выше:
 
 ``` html
-<button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
 ```
 
 Обратите внимание, что закрытие уведомления приведет к его удалению из DOM.
@@ -101,7 +101,7 @@ var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
 ```
 
-Это заставляет предупреждение прослушивать события клика на дочерних элементах, которые имеют атрибут `data-dismiss="alert"`. (Не требуется при использовании автоматической инициализации data-api.)
+Это заставляет предупреждение прослушивать события клика на дочерних элементах, которые имеют атрибут `data-bs-dismiss="alert"`. (Не требуется при использовании автоматической инициализации data-api.)
 
 <table class="table">
   <thead>

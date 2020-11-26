@@ -44,13 +44,13 @@ myModal.addEventListener('shown.bs.modal', function () {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Заголовок модального окна</h5>
-          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
           <p>Здесь идет основной текст модального окна</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
           <button type="button" class="btn btn-primary">Сохранить изменения</button>
         </div>
       </div>
@@ -64,13 +64,13 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Здесь идет основной текст модального окна</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -87,13 +87,13 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLiveLabel">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Уууу, вы читаете этот текст в модальном!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -101,14 +101,14 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLive">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">
     Запустите демо модального окна
   </button>
 </div>
 
 ```html
 <!-- Кнопка-триггер модального окна -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Запустите демо модального окна
 </button>
 
@@ -118,13 +118,13 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -136,18 +136,18 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 Если фон установлен на статический, модальное окно не закроется при нажатии вне его. Нажмите кнопку ниже, чтобы попробовать.
 
-<div class="modal fade" id="staticBackdropLive" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLiveLabel">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Я не закроюсь, если ты щелкнешь вне меня. Даже не пытайтесь нажимать клавишу выхода.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Понял</button>
       </div>
     </div>
@@ -155,30 +155,30 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdropLive">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
     Запустить модальное окно со статическим фоном
   </button>
 </div>
 
 ```html
 <!-- Кнопка-триггер модального окна -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   Запустить модальное окно со статическим фоном
 </button>
 
 <!-- Модальное окно -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Понял</button>
       </div>
     </div>
@@ -196,7 +196,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -219,7 +219,7 @@ myModal.addEventListener('shown.bs.modal', function () {
         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -227,7 +227,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
     Запустите демо модального окна
   </button>
 </div>
@@ -239,7 +239,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalScrollableTitle">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -262,7 +262,7 @@ myModal.addEventListener('shown.bs.modal', function () {
         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -270,7 +270,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">
     Запустите демо модального окна
   </button>
 </div>
@@ -291,13 +291,13 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -309,7 +309,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -319,7 +319,7 @@ myModal.addEventListener('shown.bs.modal', function () {
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -327,10 +327,10 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
     Вертикально центрированное модальное окно
   </button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenteredScrollable">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
     Вертикально центрированное прокручиваемое модальное окно
   </button>
 </div>
@@ -356,17 +356,17 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalPopoversLabel">Заголовок модального окна</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <h5>Всплывающие окна в модальном окне</h5>
-        <p>Эта <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="В этом атрибуте задается содержимое тела всплывающего окна." data-container="#exampleModalPopovers">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+        <p>Эта <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-bs-content="В этом атрибуте задается содержимое тела всплывающего окна." data-bs-container="#exampleModalPopovers">кнопка</a> вызывает всплывающее окно при нажатии.</p>
         <hr>
         <h5>Всплывающие подсказки в модальном окне</h5>
-        <p><a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">Эта ссылка</a> и <a href="#" class="tooltip-test" title="Tooltip" data-container="#exampleModalPopovers">эта ссылка</a> имеют всплывающие подсказки при наведении курсора.</p>
+        <p><a href="#" class="tooltip-test" title="Tooltip" data-bs-container="#exampleModalPopovers">Эта ссылка</a> и <a href="#" class="tooltip-test" title="Tooltip" data-bs-container="#exampleModalPopovers">эта ссылка</a> имеют всплывающие подсказки при наведении курсора.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -374,7 +374,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPopovers">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopovers">
     Запустите демо модального окна
   </button>
 </div>
@@ -382,7 +382,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 ```html
 <div class="modal-body">
   <h5>Всплывающие окна в модальном окне</h5>
-  <p>Эта <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="В этом атрибуте задается содержимое тела всплывающего окна.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+  <p>Эта <a href="#" role="button" class="btn btn-secondary popover-test" title="Заголовок всплывающего окна" data-bs-content="В этом атрибуте задается содержимое тела всплывающего окна.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
   <hr>
   <h5>Всплывающие подсказки в модальном окне</h5>
   <p><a href="#" class="tooltip-test" title="Tooltip">Эта ссылка</a> и <a href="#" class="tooltip-test" title="Tooltip">эта ссылка</a> имеют всплывающие подсказки при наведении курсора.</p>
@@ -398,7 +398,7 @@ myModal.addEventListener('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="gridModalLabel">Сетки в модальных окнах</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <div class="container-fluid bd-example-row">
@@ -429,7 +429,7 @@ myModal.addEventListener('shown.bs.modal', function () {
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
@@ -437,7 +437,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 
 <div class="bd-example">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gridSystemModal">
   Запустите демо модального окна
 </button>
 </div>
@@ -480,16 +480,16 @@ myModal.addEventListener('shown.bs.modal', function () {
 Ниже представлена живая демонстрация, за которой следуют примеры HTML и JavaScript. Для получения дополнительной информации [прочтите документацию по модальным событиям](#события) для получения подробной информации о `relatedTarget`.
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Открыть модальное окно для @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Открыть модальное окно для @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Открыть модальное окно для @getbootstrap</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Открыть модальное окно для @mdo</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Открыть модальное окно для @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Открыть модальное окно для @getbootstrap</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Новое сообщение</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <form>
@@ -504,7 +504,7 @@ myModal.addEventListener('shown.bs.modal', function () {
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         <button type="button" class="btn btn-primary">Отправить сообщение</button>
       </div>
     </div>
@@ -517,8 +517,8 @@ var exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', function (event) {
   // Кнопка, запускающая модальное окно
   var button = event.relatedTarget
-  // Извлечь информацию из атрибутов data- *
-  var recipient = button.getAttribute('data-whatever')
+  // Извлечь информацию из атрибутов data-bs- *
+  var recipient = button.getAttribute('data-bs-whatever')
   // При необходимости вы можете инициировать запрос AJAX здесь
   // а затем выполните обновление в обратном вызове.
   //
@@ -598,9 +598,9 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 Наш модальный класс по умолчанию без модификатора представляет собой модальное окно «среднего» размера.
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalXl">Очень большое модальное окно</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLg">Большое модальное окно</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalSm">Маленькое модальное окно</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Очень большое модальное окно</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLg">Большое модальное окно</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalSm">Маленькое модальное окно</button>
 </div>
 
 ```html
@@ -614,7 +614,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalXlLabel">Очень большое модальное окно</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
@@ -628,7 +628,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalLgLabel">Большое модальное окно</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
@@ -642,7 +642,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalSmLabel">Маленькое модальное окно</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
@@ -691,12 +691,12 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 </table>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreen">Полноэкранный</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenSm">Полноэкранный меньше sm</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenMd">Полноэкранный меньше md</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenLg">Полноэкранный меньше lg</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenXl">Полноэкранный меньше xl</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalFullscreenXxl">Полноэкранный меньше xxl</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Полноэкранный</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenSm">Полноэкранный меньше sm</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenMd">Полноэкранный меньше md</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenLg">Полноэкранный меньше lg</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXl">Полноэкранный меньше xl</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXxl">Полноэкранный меньше xxl</button>
 </div>
 
 ```html
@@ -711,7 +711,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Полноэкранное модальное окно</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -734,7 +734,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
         <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -745,13 +745,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenSmLabel">Полноэкранный меньше sm</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -762,13 +762,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenMdLabel">Полноэкранный меньше md</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -779,13 +779,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenLgLabel">Полноэкранный меньше lg</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -796,13 +796,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenXlLabel">Полноэкранный меньше xl</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -813,13 +813,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title h4" id="exampleModalFullscreenXxlLabel">Полноэкранный меньше xxl</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Закрыть"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -827,14 +827,14 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 ## Использование
 
-Модальный плагин переключает Ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также добавляет `.modal-open` к `<body> `, чтобы переопределить поведение прокрутки по умолчанию, и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при клике вне модального окна.
+Модальный плагин переключает Ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также добавляет `.modal-open` к `<body>`, чтобы переопределить поведение прокрутки по умолчанию, и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при клике вне модального окна.
 
 ### Через атрибуты данных
 
-Активируйте модальное окно без написания JavaScript. Установите `data-toggle =" modal "` на элементе контроллера, таком как кнопка, вместе с `data-target =" # foo "` или `href =" # foo "`, чтобы настроить таргетинг на конкретный модальный элемент для переключения.
+Активируйте модальное окно без написания JavaScript. Установите `data-bs-toggle="modal"` на элементе контроллера, таком как кнопка, вместе с `data-bs-target="#foo"` или `href="#foo"`, чтобы настроить таргетинг на конкретный модальный элемент для переключения.
 
 ```html
-<button type="button" data-toggle="modal" data-target="#myModal">Запустить модальное окно</button>
+<button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Запустить модальное окно</button>
 ```
 
 ### Через JavaScript
@@ -847,7 +847,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-backdrop =" "`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-backdrop=""`.
 
 <table class="table">
   <thead>
@@ -988,7 +988,7 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Возвращает эк�
 
 ```js
 var myModalEl = document.getElementById('myModal')
-myModalEl.addEventListener('hidden.bs.modal', function (e) {
+myModalEl.addEventListener('hidden.bs.modal', function (event) {
   // сделайте что-нибудь...
 })
 ```

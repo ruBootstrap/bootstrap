@@ -10,7 +10,7 @@ toc: true
 
 Что нужно знать при использовании плагина всплывающих окон:
 
-- Всплывающие окна полагаются на стороннюю библиотеку [Popper.js](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js, чтобы всплывающие окна работали!
+- Всплывающие окна полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js, чтобы всплывающие окна работали!
 - Всплывающие окна требуют [плагина всплывающей подсказки]]({{< docsref "/components/tooltips" >}}) в качестве зависимости.
 - Всплывающие окна выбираются из соображений производительности, поэтому **Вы должны инициализировать их самостоятельно**.
 - Значения `title` и `content` нулевой длины никогда не будут показывать всплывающее окно.
@@ -29,10 +29,10 @@ toc: true
 
 ## Пример: Включить всплывающие окна везде
 
-Один из способов инициализировать все всплывающие окна на странице - выбрать их по атрибуту `data-toggle`:
+Один из способов инициализировать все всплывающие окна на странице - выбрать их по атрибуту `data-bs-toggle`:
 
 ```js
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
@@ -51,7 +51,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 ## Пример
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Заголовок всплывающего сообщения" data-content="А вот и потрясающий контент. Это очень интересно. Правильно?">Нажмите, чтобы переключить всплывающее окно</button>
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Заголовок всплывающего сообщения" data-bs-content="А вот и потрясающий контент. Это очень интересно. Правильно?">Нажмите, чтобы переключить всплывающее окно</button>
 {{< /example >}}
 
 ### Четыре направления
@@ -60,36 +60,36 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
       Всплывающее сообщение вверху
     </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
       Всплывающее сообщение справа
     </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
       Всплывающее сообщение внизу
     </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
       Всплывающее сообщение слева
     </button>
   </div>
 </div>
 
 ```html
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение вверху
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение справа
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение внизу
 </button>
 
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
   Всплывающее сообщение слева
 </button>
 ```
@@ -105,7 +105,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 {{< /callout >}}
 
 {{< example >}}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Отклоняемое всплывающее окно" data-content="А вот и потрясающий контент. Это очень интересно. Правильно?">Отклоняемое всплывающее окно</a>
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Отклоняемое всплывающее окно" data-bs-content="А вот и потрясающий контент. Это очень интересно. Правильно?">Отклоняемое всплывающее окно</a>
 {{< /example >}}
 
 ```js
@@ -118,10 +118,10 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути вы захотите запустить всплывающее окно из оболочки `<div>` или `<span>` и переопределить `pointer-events` на отключенном элементе.
 
-Для отключенных триггеров всплывающего окна Вы также можете предпочесть `data-trigger="hover"`, чтобы всплывающее окно отображалось как немедленная визуальная обратная связь для ваших пользователей, поскольку они могут не ожидать _клик_ на отключенный элемент.
+Для отключенных триггеров всплывающего окна Вы также можете предпочесть `data-bs-trigger="hover"`, чтобы всплывающее окно отображалось как немедленная визуальная обратная связь для Ваших пользователей, поскольку они могут не ожидать _клик_ на отключенный элемент.
 
 {{< example >}}
-<span class="d-inline-block" data-toggle="popover" data-content="Отключенное всплывающее окно">
+<span class="d-inline-block" data-bs-toggle="popover" data-bs-content="Отключенное всплывающее окно">
   <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
 </span>
 {{< /example >}}
@@ -148,7 +148,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-animation=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`.
 
 {{< callout warning >}}
 Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
@@ -183,7 +183,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td>string | element | function</td>
       <td><code>''</code></td>
       <td>
-        <p>Значение содержимого по умолчанию, если атрибут <code>data-content</code> отсутствует.</p>
+        <p>Значение содержимого по умолчанию, если атрибут <code>data-bs-content</code> отсутствует.</p>
         <p>Если задана функция, она будет вызываться со ссылкой <code>this</code>, установленной на элемент, к которому прикреплено всплывающее окно.</p>
       </td>
     </tr>
@@ -216,7 +216,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон динамического HTML-контента. См. <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
+      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон динамического HTML-контента. См. <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">информативный пример</a>.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -249,19 +249,27 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>offset</code></td>
       <td>number | string</td>
       <td><code>0</code></td>
-      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документация по смещению </a> Popper.js.</td>
+      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документация по смещению </a> Popper.</td>
     </tr>
     <tr>
       <td><code>fallbackPlacement</code></td>
       <td>string | array</td>
       <td><code>'flip'</code></td>
-      <td>Разрешить указать, какую позицию Всплывающего окна будет использовать при откате. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документация по поведению</a> Popper.js.</td>
+      <td>Разрешить указать, какую позицию Всплывающего окна будет использовать при откате. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документация по поведению</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации обратитесь к Popper.js <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращение переполнения</a>.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации обратитесь к Popper <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращение переполнения</a>.</td>
+    <tr>
+      <td><code>customClass</code></td>
+      <td>string | function</td>
+      <td><code>''</code></td>
+      <td>
+        <p>Добавляйте классы в всплывающее окно, когда оно отображается. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: <code>'class-1 class-2'</code>.</p>
+        <p>Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов.</p>
+      </td>
     </tr>
     <tr>
       <td><code>sanitize</code></td>
@@ -285,7 +293,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, см <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js's</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -329,7 +337,7 @@ myPopover.toggle()
 
 #### dispose
 
-Скрывает и уничтожает всплывающее окно элемента. Всплывающие окна, использующие делегирование (которые создаются с использованием [параметр `selector`](#options)), не могут быть уничтожены индивидуально для дочерних элементов триггера.
+Скрывает и уничтожает всплывающее окно элемента. Всплывающие окна, использующие делегирование (которые создаются с использованием [параметр `selector`](#параметры)), не могут быть уничтожены индивидуально для дочерних элементов триггера.
 
 ```js
 myPopover.dispose()

@@ -17,7 +17,7 @@ toc: true
 
 ## Полагаться на JavaScript
 
-JavaScript в Bootstrap включает все компоненты в наших основных файлах папки dist (`bootstrap.js` и `bootstrap.min.js`), и даже нашу основную зависимость (Popper.js) с нашими файлами пакетов (`bootstrap.bundle.js` и `bootstrap.bundle.min.js`). Пока Вы настраиваете через Sass, не забудьте удалить связанный JavaScript.
+JavaScript в Bootstrap включает все компоненты в наших основных файлах папки dist (`bootstrap.js` и `bootstrap.min.js`), и даже нашу основную зависимость (Popper) с нашими файлами пакетов (`bootstrap.bundle.js` и `bootstrap.bundle.min.js`). Пока Вы настраиваете через Sass, не забудьте удалить связанный JavaScript.
 
 Например, если Вы используете свой собственный сборщик JavaScript, такой как Webpack или Rollup, Вы должны импортировать только тот JavaScript, который планируете использовать. В приведенном ниже примере мы показываем, как просто включить наш модальный JavaScript:
 

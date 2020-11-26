@@ -12,7 +12,7 @@
       <a class="btn btn-lg btn-outline-primary mb-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Читать документацию по установке</a>
     </div>
     <div class="col-md-7 pl-md-5">
-      {{ highlight "npm install bootstrap" "sh" "" }}
+      {{ highlight "npm install bootstrap@next" "sh" "" }}
       {{ highlight (printf ("gem install bootstrap -v %s") .Site.Params.current_ruby_version) "sh" "" }}
     </div>
   </section>
@@ -27,15 +27,15 @@
         Когда Вам нужно только включить скомпилированный CSS или JS Bootstrap, Вы можете использовать <a href="https://www.jsdelivr.com/">jsDelivr</a>.
       </p>
       <p>
-        Посмотрите, как это работает, с помощью нашего простого <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#starter-template">стартового шаблона</a>, или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a>, чтобы начать свой следующий проект. Вы также можете включить Popper.js и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">отдельно</a>.
+        Посмотрите, как это работает, с помощью нашего простого <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#стартовый-шаблон">стартового шаблона</a>, или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a>, чтобы начать свой следующий проект. Вы также можете включить Popper и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#отдельный">отдельно</a>.
       </p>
       <a class="btn btn-lg btn-outline-primary mb-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">Исследовать документы</a>
     </div>
     <div class="col-md-7 pl-md-5">
-      {{ highlight (printf (`<!-- CSS only -->
+      {{ highlight (printf (`<!-- Только CSS -->
 <link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">
 `) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
-      {{ highlight (printf (`<!-- JavaScript Bundle with Popper.js -->
+      {{ highlight (printf (`<!-- Пакет JavaScript с Popper -->
 <script src="%s" integrity=%q crossorigin="anonymous"></script>
 `) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
     </div>
@@ -81,7 +81,7 @@
         <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png,
                                                     /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes@2x.png 2x"
                                             src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png"
-                                            alt="Bootstrap Icons" width="700" height="500" loading="lazy">
+                                            alt="Темы Bootstrap" width="700" height="500" loading="lazy">
     </div>
   </section>
 </div>

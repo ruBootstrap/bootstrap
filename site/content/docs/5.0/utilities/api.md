@@ -17,9 +17,11 @@ toc: true
 | `property` | **Обязательно** | Имя свойства. Это может быть строка или массив строк (например, horizontal paddings (горизонтальные отступы) или margins (поля)). |
 | `values` | **Обязательно** | Список значений или карта, если Вы не хотите, чтобы имя класса совпадало со значением. Если в качестве ключа карты используется `null`, он не компилируется. |
 | `class` | Необязательно | Переменная для имени класса, если Вы не хотите, чтобы оно совпадало со свойством. Если Вы не предоставили ключ `class`, а ключ `property` представляет собой массив строк, имя класса будет первым элементом массива `property`. |
+| `state` | Необязательно | Список вариантов псевдоклассов, таких как `:hover` или `:focus`, которые создаются для утилиты. Нет значения по умолчанию. |
 | `responsive` | Необязательно | Логическое значение, указывающее, нужно ли создавать адаптивные классы. По умолчанию `false`. |
 | `rfs` | Необязательно | Логическое значение, чтобы разрешить плавное изменение масштаба. Взгляните на страницу [RFS]({{< docsref "/getting-started/rfs" >}}), чтобы узнать, как это работает. по умолчанию false. |
 | `print` | Необязательно | Логическое значение, указывающее, нужно ли создавать классы для печати. По умолчанию `false`. |
+
 {{< /bs-table >}}
 
 ## Пояснение API
@@ -51,15 +53,18 @@ $utilities: (
 .opacity-100 { opacity: 1; }
 ```
 
-### Пользовательский префикс класса
+## Состояния
 
-Используйте опцию `class`, чтобы изменить префикс класса, используемый в скомпилированном CSS:
+Используйте опцию `state` для генерации вариаций псевдокласса. Примеры псевдоклассов: `:hover` и `:focus`. Когда предоставляется список состояний, для этого псевдокласса создаются имена классов. Например, чтобы изменить непрозрачность при наведении указателя мыши, добавьте `state: hover`, и Вы получите `.opacity-hover: hover` в Вашем скомпилированном CSS.
+
+Нужны несколько псевдоклассов? Используйте список состояний, разделенных пробелами: `state: hover focus`.
 
 ```scss
 $utilities: (
   "opacity": (
     property: opacity,
-    class: o,
+    class: opacity,
+    state: hover,
     values: (
       0: 0,
       25: .25,
@@ -68,17 +73,17 @@ $utilities: (
       100: 1,
     )
   )
- );
+);
 ```
 
 Что выводит следующее:
 
 ```css
-.o-0 { opacity: 0; }
-.o-25 { opacity: .25; }
-.o-50 { opacity: .5; }
-.o-75 { opacity: .75; }
-.o-100 { opacity: 1; }
+.opacity-0-hover:hover { opacity: 0; }
+.opacity-25-hover:hover { opacity: .25; }
+.opacity-50-hover:hover { opacity: .5; }
+.opacity-75-hover:hover { opacity: .75; }
+.opacity-100-hover:hover { opacity: 1; }
 ```
 
 ### Адаптивные утилиты
@@ -173,7 +178,6 @@ $utilities: (
 $utilities: (
   "opacity": (
     property: opacity,
-    class: o,
     print: true,
     values: (
       0: 0,
@@ -189,18 +193,18 @@ $utilities: (
 Что выводит следующее:
 
 ```css
-.o-0 { opacity: 0; }
-.o-25 { opacity: .25; }
-.o-50 { opacity: .5; }
-.o-75 { opacity: .75; }
-.o-100 { opacity: 1; }
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: .25; }
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+.opacity-100 { opacity: 1; }
 
 @media print {
-  .o-print-0 { opacity: 0; }
-  .o-print-25 { opacity: .25; }
-  .o-print-50 { opacity: .5; }
-  .o-print-75 { opacity: .75; }
-  .o-print-100 { opacity: 1; }
+  .opacity-print-0 { opacity: 0; }
+  .opacity-print-25 { opacity: .25; }
+  .opacity-print-50 { opacity: .5; }
+  .opacity-print-75 { opacity: .75; }
+  .opacity-print-100 { opacity: 1; }
 }
 ```
 
@@ -214,6 +218,7 @@ $utilities: (
 
 ```scss
 @import "bootstrap/scss/utilities";
+
 $utilities: map-merge(
   $utilities,
   (
@@ -233,6 +238,7 @@ $utilities: map-merge(
 
 ```scss
 @import "bootstrap/scss/utilities";
+
 $utilities: map-merge(
   $utilities,
   (
@@ -255,6 +261,7 @@ $utilities: map-merge(
 
 ```scss
 @import "bootstrap/scss/utilities";
+
 $utilities: map-merge(
   $utilities,
   (

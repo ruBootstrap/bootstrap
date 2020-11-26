@@ -7,6 +7,16 @@ aliases: "/migration/"
 toc: true
 ---
 
+## v5.0.0-beta1
+
+### JavaScript
+
+- Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+
+### Sass
+
+- Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+
 ## v5.0.0-alpha3
 
 ### Поддержка браузера
@@ -342,7 +352,7 @@ toc: true
 
 ### Сетка
 
-- Уменьшено количество реагирующих утилит заказов на контрольную точку. Утилита высшего порядка с номером теперь `.order-5` вместо `.order-12`. [См. #28874](https://github.com/twbs/bootstrap/pull/28874).
+- Уменьшено количество реагирующих утилит заказов на точку останова. Утилита высшего порядка с номером теперь `.order-5` вместо `.order-12`. [См. #28874](https://github.com/twbs/bootstrap/pull/28874).
 
 ### Разное
 

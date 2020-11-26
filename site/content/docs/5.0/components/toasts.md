@@ -34,7 +34,7 @@ toc: true
     {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
     <strong class="mr-auto">Bootstrap</strong>
     <small>11 мин. назад</small>
-    <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
@@ -52,7 +52,7 @@ toc: true
     {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
     <strong class="mr-auto">Bootstrap</strong>
     <small class="text-muted">11 мин. назад</small>
-    <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
@@ -70,7 +70,7 @@ toc: true
     {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
     <strong class="mr-auto">Bootstrap</strong>
     <small class="text-muted">прямо сейчас</small>
-    <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
     Видно? Именно так.
@@ -82,7 +82,7 @@ toc: true
     {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
     <strong class="mr-auto">Bootstrap</strong>
     <small class="text-muted">2 секунды назад</small>
-    <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
     Внимание, тосты складываются автоматически
@@ -99,7 +99,7 @@ toc: true
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
   </div>
-  <button type="button" class="btn-close ml-auto mr-2" data-dismiss="toast" aria-label="Close"></button>
+  <button type="button" class="btn-close ml-auto mr-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -111,7 +111,7 @@ toc: true
     Привет мир! Это тост-сообщение.
     <div class="mt-2 pt-2 border-top">
       <button type="button" class="btn btn-primary btn-sm">Действовать</button>
-      <button type="button" class="btn btn-secondary btn-sm" data-dismiss="toast">Закрыть</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Закрыть</button>
     </div>
   </div>
 </div>
@@ -126,7 +126,7 @@ toc: true
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
   </div>
-  <button type="button" class="btn-close btn-close-white ml-auto mr-2" data-dismiss="toast" aria-label="Close"></button>
+  <button type="button" class="btn-close btn-close-white ml-auto mr-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -141,7 +141,7 @@ toc: true
       {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
       <strong class="mr-auto">Bootstrap</strong>
       <small>11 мин. назад</small>
-      <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
       Привет мир! Это тост-сообщение.
@@ -163,7 +163,7 @@ toc: true
         {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
         <strong class="mr-auto">Bootstrap</strong>
         <small class="text-muted">прямо сейчас</small>
-        <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
       <div class="toast-body">
         Видно? Именно так.
@@ -175,7 +175,7 @@ toc: true
         {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
         <strong class="mr-auto">Bootstrap</strong>
         <small class="text-muted">2 секунды назад</small>
-        <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
       <div class="toast-body">
         Внимание, тосты складываются автоматически
@@ -197,7 +197,7 @@ toc: true
       {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
       <strong class="mr-auto">Bootstrap</strong>
       <small>11 мин. назад</small>
-      <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
       Привет мир! Это тост-сообщение.
@@ -217,7 +217,7 @@ toc: true
 По мере изменения отображаемого содержимого не забудьте обновить [таймаут `delay`](#параметры), чтобы у людей было достаточно времени, чтобы прочитать тост.
 
 ```html
-<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
+<div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
 ```
@@ -225,12 +225,12 @@ toc: true
 При использовании `autohide: false` Вы должны добавить кнопку закрытия, чтобы пользователи могли закрыть всплывающее сообщение.
 
 {{< example class="bg-light" >}}
-<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="false">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
     <strong class="mr-auto">Bootstrap</strong>
     <small>11 мин. назад</small>
-    <button type="button" class="btn-close" data-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
@@ -253,7 +253,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-`, как в `data-animation=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`.
 
 <table class="table">
   <thead>

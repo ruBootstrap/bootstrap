@@ -59,7 +59,7 @@ const CLASS_NAME_MENURIGHT = 'dropdown-menu-right'
 const CLASS_NAME_NAVBAR = 'navbar'
 const CLASS_NAME_POSITION_STATIC = 'position-static'
 
-const SELECTOR_DATA_TOGGLE = '[data-toggle="dropdown"]'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dropdown"]'
 const SELECTOR_FORM_CHILD = '.dropdown form'
 const SELECTOR_MENU = '.dropdown-menu'
 const SELECTOR_NAVBAR_NAV = '.navbar-nav'
@@ -156,10 +156,10 @@ class Dropdown {
       return
     }
 
-    // Disable totally Popper.js for Dropdown in Navbar
+    // Totally disable Popper for Dropdowns in Navbar
     if (!this._inNavbar) {
       if (typeof Popper === 'undefined') {
-        throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org)')
+        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)')
       }
 
       let referenceElement = this._element
@@ -329,7 +329,7 @@ class Dropdown {
       }
     }
 
-    // Disable Popper.js if we have a static display
+    // Disable Popper if we have a static display
     if (this._config.display === 'static') {
       popperConfig.modifiers.applyStyle = {
         enabled: false
