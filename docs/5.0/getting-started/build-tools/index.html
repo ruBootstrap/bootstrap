@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,10 +82,9 @@
   <body>
     <div class="skippy overflow-hidden">
   <div class="container-xl">
-    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#content">Перейти к основному содержанию</a>
+    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#контент">Перейти к основному содержанию</a>
 
-    
-      <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+    <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
   </div>
 </div>
 
@@ -96,7 +95,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+    &lt;<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
       <svg class="bi" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -166,16 +165,18 @@
   </nav>
 </header>
 
-    <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+
+    
+  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative mr-auto">
-      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-docs-version="5.0">
+      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-bd-docs-version="5.0">
     </form>
 
     <h6>Перевод официальной документации Bootstrap 5</h6>
 
-    <div class="dropdown ml-auto">
-  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-toggle="dropdown" aria-expanded="false" data-display="static">
+    <div class="dropdown ml-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-none d-lg-inline">Bootstrap</span> v5.0
   </button>
   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -188,7 +189,7 @@
 </div>
 
 
-    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewBox="0 0 16 16">
   <title>Expand</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
@@ -204,14 +205,14 @@
 </nav>
 
 
-    <div class="container-xxl my-md-4 bd-layout">
-      <aside class="bd-sidebar">
-        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+  <div class="container-xxl my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
 
     <li class="mb-1 active">
-      <a class="d-inline-flex align-items-center rounded" data-toggle="collapse" href="#getting-started-collapse" role="button" aria-expanded="true" aria-current="true">
+      <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="true" aria-current="true">
         Начало работы
-      </a>
+      </button>
       <div class="collapse show" id="getting-started-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded"  title="Начните работу с Bootstrap" >Вступление</a></li>
@@ -228,9 +229,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#customize-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
         Настройка
-      </a>
+      </button>
       <div class="collapse" id="customize-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded"  title="Настройка и расширение" >Обзор</a></li>
@@ -245,9 +246,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#layout-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
         Макет
-      </a>
+      </button>
       <div class="collapse" id="layout-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded"  title="Контрольные точки" >Breakpoints</a></li>
@@ -262,9 +263,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#content-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
         Контент
-      </a>
+      </button>
       <div class="collapse" id="content-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded"  title="Перезагрузка" >Reboot</a></li>
@@ -277,9 +278,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#forms-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
         Формы
-      </a>
+      </button>
       <div class="collapse" id="forms-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded"  title="Примеры и рекомендации форм" >Обзор</a></li>
@@ -296,9 +297,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#components-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
         Компоненты
-      </a>
+      </button>
       <div class="collapse" id="components-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded"  title="Аккордеон" >Accordion</a></li>
@@ -328,9 +329,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#helpers-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
         Помощники
-      </a>
+      </button>
       <div class="collapse" id="helpers-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded"  title="Очистка" >Clearfix</a></li>
@@ -345,9 +346,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#utilities-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
         Утилиты
-      </a>
+      </button>
       <div class="collapse" id="utilities-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded"  title="API" >API</a></li>
@@ -370,9 +371,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#extend-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
         Дополнительно
-      </a>
+      </button>
       <div class="collapse" id="extend-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded"  title="Подход" >Подход</a></li>
@@ -382,9 +383,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#about-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
         Инфо
-      </a>
+      </button>
       <div class="collapse" id="about-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded"  title="Обзор" >Обзор</a></li>
@@ -405,26 +406,23 @@
   </ul>
 </nav>
 
-      </aside>
+    </aside>
 
-      <main class="bd-main order-1">
-        <div class="bd-intro pl-lg-4">
-          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-            <div class="btn-group">
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/getting-started/build-tools.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://v5.getbootstrap.com/docs/5.0/getting-started/build-tools/" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
-            </div>
-            <h1 class="bd-title" id="content">Инструменты сборки</h1>
-          </div>
-          <p class="bd-lead">Узнайте, как использовать включенные в Bootstrap сценарии npm для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.</p>
+    <main class="bd-main order-1">
+      <div class="bd-intro pl-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/build-tools.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Инструменты сборки</h1>
         </div>
+        <p class="bd-lead">Узнайте, как использовать включенные в Bootstrap сценарии npm для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.</p>
+        <script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&placement=getbootstrapcom" id="_carbonads_js"></script>
 
-        
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5">
-          </div>
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
-            <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
-            <nav id="TableOfContents">
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
+          <nav id="TableOfContents">
   <ul>
     <li><a href="#настройка-инструмента">Настройка инструмента</a></li>
     <li><a href="#использование-скриптов-npm">Использование скриптов npm</a></li>
@@ -433,13 +431,13 @@
     <li><a href="#исправление-проблем">Исправление проблем</a></li>
   </ul>
 </nav>
-          </div>
+        </div>
+      
+
+      <div class="bd-content pl-lg-4">
         
 
-        <div class="bd-content pl-lg-4">
-          
-
-          <h2 id="настройка-инструмента">Настройка инструмента</h2>
+        <h2 id="настройка-инструмента">Настройка инструмента</h2>
 <p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-alpha3/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.</p>
 <p>Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:</p>
 <ol>
@@ -506,9 +504,10 @@
 <h2 id="исправление-проблем">Исправление проблем</h2>
 <p>Если у Вас возникнут проблемы с установкой зависимостей, удалите все предыдущие версии зависимостей (глобальные и локальные). Затем перезапустите <code>npm install</code>.</p>
 
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
+  </div>
+
 
     <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
   <div class="container">
@@ -533,5 +532,7 @@
 <script src="/docs/5.0/assets/js/docs.min.js"></script>
 
 
-    </body>
+    
+  
+  </body>
 </html>

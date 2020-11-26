@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,10 +82,9 @@
   <body>
     <div class="skippy overflow-hidden">
   <div class="container-xl">
-    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#content">Перейти к основному содержанию</a>
+    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#контент">Перейти к основному содержанию</a>
 
-    
-      <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+    <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
   </div>
 </div>
 
@@ -96,7 +95,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+    &lt;<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
       <svg class="bi" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -166,16 +165,18 @@
   </nav>
 </header>
 
-    <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+
+    
+  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative mr-auto">
-      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-docs-version="5.0">
+      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-bd-docs-version="5.0">
     </form>
 
     <h6>Перевод официальной документации Bootstrap 5</h6>
 
-    <div class="dropdown ml-auto">
-  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-toggle="dropdown" aria-expanded="false" data-display="static">
+    <div class="dropdown ml-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-none d-lg-inline">Bootstrap</span> v5.0
   </button>
   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -188,7 +189,7 @@
 </div>
 
 
-    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewBox="0 0 16 16">
   <title>Expand</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
@@ -204,14 +205,14 @@
 </nav>
 
 
-    <div class="container-xxl my-md-4 bd-layout">
-      <aside class="bd-sidebar">
-        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+  <div class="container-xxl my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#getting-started-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
         Начало работы
-      </a>
+      </button>
       <div class="collapse" id="getting-started-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded"  title="Начните работу с Bootstrap" >Вступление</a></li>
@@ -228,9 +229,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#customize-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
         Настройка
-      </a>
+      </button>
       <div class="collapse" id="customize-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded"  title="Настройка и расширение" >Обзор</a></li>
@@ -245,9 +246,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#layout-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
         Макет
-      </a>
+      </button>
       <div class="collapse" id="layout-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded"  title="Контрольные точки" >Breakpoints</a></li>
@@ -262,9 +263,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#content-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
         Контент
-      </a>
+      </button>
       <div class="collapse" id="content-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded"  title="Перезагрузка" >Reboot</a></li>
@@ -277,9 +278,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#forms-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
         Формы
-      </a>
+      </button>
       <div class="collapse" id="forms-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded"  title="Примеры и рекомендации форм" >Обзор</a></li>
@@ -296,9 +297,9 @@
     </li>
 
     <li class="mb-1 active">
-      <a class="d-inline-flex align-items-center rounded" data-toggle="collapse" href="#components-collapse" role="button" aria-expanded="true" aria-current="true">
+      <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true" aria-current="true">
         Компоненты
-      </a>
+      </button>
       <div class="collapse show" id="components-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded"  title="Аккордеон" >Accordion</a></li>
@@ -328,9 +329,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#helpers-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
         Помощники
-      </a>
+      </button>
       <div class="collapse" id="helpers-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded"  title="Очистка" >Clearfix</a></li>
@@ -345,9 +346,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#utilities-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
         Утилиты
-      </a>
+      </button>
       <div class="collapse" id="utilities-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded"  title="API" >API</a></li>
@@ -370,9 +371,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#extend-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
         Дополнительно
-      </a>
+      </button>
       <div class="collapse" id="extend-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded"  title="Подход" >Подход</a></li>
@@ -382,9 +383,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#about-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
         Инфо
-      </a>
+      </button>
       <div class="collapse" id="about-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded"  title="Обзор" >Обзор</a></li>
@@ -405,26 +406,23 @@
   </ul>
 </nav>
 
-      </aside>
+    </aside>
 
-      <main class="bd-main order-1">
-        <div class="bd-intro pl-lg-4">
-          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-            <div class="btn-group">
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/components/carousel.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://v5.getbootstrap.com/docs/5.0/components/carousel/" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
-            </div>
-            <h1 class="bd-title" id="content">Карусель</h1>
-          </div>
-          <p class="bd-lead">Компонент слайд-шоу для циклического перехода по элементам - изображениям или текстовым слайдам - например, карусели.</p>
+    <main class="bd-main order-1">
+      <div class="bd-intro pl-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/carousel.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Карусель</h1>
         </div>
+        <p class="bd-lead">Компонент слайд-шоу для циклического перехода по элементам - изображениям или текстовым слайдам - например, карусели.</p>
+        <script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&placement=getbootstrapcom" id="_carbonads_js"></script>
 
-        
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5">
-          </div>
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
-            <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
-            <nav id="TableOfContents">
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
+          <nav id="TableOfContents">
   <ul>
     <li><a href="#как-это-работает">Как это работает</a></li>
     <li><a href="#пример">Пример</a>
@@ -450,13 +448,13 @@
     </li>
   </ul>
 </nav>
-          </div>
+        </div>
+      
+
+      <div class="bd-content pl-lg-4">
         
 
-        <div class="bd-content pl-lg-4">
-          
-
-          <h2 id="как-это-работает">Как это работает</h2>
+        <h2 id="как-это-работает">Как это работает</h2>
 <p>Карусель - это слайд-шоу для циклического просмотра серии контента, созданного с помощью преобразований CSS 3D и небольшого количества JavaScript. Он работает с серией изображений, текста или пользовательской разметки. Он также включает поддержку предыдущих/следующих элементов управления и индикаторов.</p>
 <p>В браузерах, где поддерживается <a href="https://www.w3.org/TR/page-visibility/">API видимости страницы</a>, карусель не будет скользить, когда веб-страница не видна пользователю (например, когда браузер вкладка неактивна, окно браузера свернуто и т.д.).</p>
 <div class="bd-callout bd-callout-info">
@@ -466,11 +464,11 @@
 <p>Имейте в виду, что вложенные карусели не поддерживаются, а карусели обычно не соответствуют общедоступным стандартам.</p>
 <h2 id="пример">Пример</h2>
 <p>Карусели не нормализуют автоматически размеры слайдов. Таким образом, Вам может потребоваться использовать дополнительные утилиты или настраиваемые стили для соответствующего размера содержимого. Хотя карусели поддерживают элементы управления и индикаторы предыдущий/следующий, они явно не требуются. Добавляйте и настраивайте по своему усмотрению.</p>
-<p><strong>Класс <code>.active</code> необходимо добавить на один из слайдов</strong>, иначе карусель не будет видна. Также не забудьте установить уникальный идентификатор в <code>.carousel</code> для дополнительных элементов управления, особенно если Вы используете несколько каруселей на одной странице. Элементы управления и индикаторы должны иметь атрибут <code>data-target</code> (или <code>href</code> для ссылок), который соответствует идентификатору элемента <code>.carousel</code>.</p>
+<p><strong>Класс <code>.active</code> необходимо добавить на один из слайдов</strong>, иначе карусель не будет видна. Также не забудьте установить уникальный идентификатор в <code>.carousel</code> для дополнительных элементов управления, особенно если Вы используете несколько каруселей на одной странице. Элементы управления и индикаторы должны иметь атрибут <code>data-bs-target</code> (или <code>href</code> для ссылок), который соответствует идентификатору элемента <code>.carousel</code>.</p>
 <h3 id="только-слайды">Только слайды</h3>
 <p>Вот карусель только со слайдами. Обратите внимание на наличие <code>.d-block</code> и <code>.w-100</code> на изображениях карусели, чтобы предотвратить выравнивание изображений по умолчанию в браузере.</p>
 <div class="bd-example">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Первый слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em">Первый слайд</text></svg>
@@ -486,7 +484,7 @@
     </div>
   </div>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleSlidesOnly&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleSlidesOnly&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
@@ -502,7 +500,7 @@
 <h3 id="с-элементами-управления">С элементами управления</h3>
 <p>Добавление предыдущего и следующего элементов управления:</p>
 <div class="bd-example">
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Первый слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em">Первый слайд</text></svg>
@@ -517,16 +515,16 @@
 
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleControls&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleControls&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
@@ -538,11 +536,11 @@
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleControls&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -550,11 +548,11 @@
 <h3 id="с-индикаторами">С индикаторами</h3>
 <p>Вы также можете добавить индикаторы в карусель вместе с элементами управления.</p>
 <div class="bd-example">
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -570,20 +568,20 @@
 
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleIndicators&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleIndicators&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
@@ -596,11 +594,11 @@
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleIndicators&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -608,11 +606,11 @@
 <h3 id="с-подписями">С подписями</h3>
 <p>Легко добавляйте подписи к слайдам с помощью элемента <code>.carousel-caption</code> внутри любого <code>.carousel-item</code>. Их можно легко скрыть в меньших окнах просмотра, как показано ниже, с помощью дополнительных <a href="/docs/5.0/utilities/display/">утилит отображения</a>. Сначала мы скрываем их с помощью <code>.d-none</code> и возвращаем их на устройства среднего размера с помощью <code>.d-md-block</code>.</p>
 <div class="bd-example">
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -640,20 +638,20 @@
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleCaptions&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleCaptions&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
@@ -678,11 +676,11 @@
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleCaptions&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -690,7 +688,7 @@
 <h3 id="плавный-переход">Плавный переход</h3>
 <p>Добавьте <code>.carousel-fade</code> в свою карусель, чтобы анимировать слайды с плавным переходом вместо слайда.</p>
 <div class="bd-example">
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Первый слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em">Первый слайд</text></svg>
@@ -705,16 +703,16 @@
 
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleFade&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide carousel-fade&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleFade&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide carousel-fade&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
@@ -726,25 +724,25 @@
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleFade&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="индивидуальный-интервал-carousel-item">Индивидуальный интервал <code>.carousel-item</code></h3>
-<p>Добавьте <code>data-interval=&quot;&quot;</code> в <code>.carousel-item</code>, чтобы изменить время задержки между автоматическим циклическим переходом к следующему элементу.</p>
+<p>Добавьте <code>data-bs-interval=&quot;&quot;</code> в <code>.carousel-item</code>, чтобы изменить время задержки между автоматическим циклическим переходом к следующему элементу.</p>
 <div class="bd-example">
-<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-interval="10000">
+    <div class="carousel-item active" data-bs-interval="10000">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Первый слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em">Первый слайд</text></svg>
 
     </div>
-    <div class="carousel-item" data-interval="2000">
+    <div class="carousel-item" data-bs-interval="2000">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Второй слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"/><text x="50%" y="50%" fill="#444" dy=".3em">Второй слайд</text></svg>
 
     </div>
@@ -753,32 +751,32 @@
 
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleInterval&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleInterval&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span> <span class="na">data-interval</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span> <span class="na">data-interval</span><span class="o">=</span><span class="s">&#34;2000&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;2000&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleInterval&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -786,14 +784,14 @@
 <h2 id="темный-вариант">Темный вариант</h2>
 <p>Добавьте <code>.carousel-dark</code> к <code>.carousel</code> для более темных элементов управления, индикаторов и подписей. Элементы управления были инвертированы по сравнению с их белой заливкой по умолчанию с помощью свойства CSS <code>filter</code>. Заголовки и элементы управления имеют дополнительные переменные Sass, которые настраивают <code>color</code> и <code>background-color</code>.</p>
 <div class="bd-example">
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleDark" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleDark" data-slide-to="1"></li>
-    <li data-target="#carouselExampleDark" data-slide-to="2"></li>
+    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-interval="10000">
+    <div class="carousel-item active" data-bs-interval="10000">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Первый слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#f5f5f5"/><text x="50%" y="50%" fill="#aaa" dy=".3em">Первый слайд</text></svg>
 
       <div class="carousel-caption d-none d-md-block">
@@ -801,7 +799,7 @@
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </div>
-    <div class="carousel-item" data-interval="2000">
+    <div class="carousel-item" data-bs-interval="2000">
       <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Второй слайд" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#bbb" dy=".3em">Второй слайд</text></svg>
 
       <div class="carousel-caption d-none d-md-block">
@@ -818,30 +816,30 @@
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </a>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleDark&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel carousel-dark slide&#34;</span> <span class="na">data-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;carouselExampleDark&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel carousel-dark slide&#34;</span> <span class="na">data-bs-ride</span><span class="o">=</span><span class="s">&#34;carousel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-indicators&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;active&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">data-bs-slide-to</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-inner&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span> <span class="na">data-interval</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item active&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Метка первого слайда<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Nulla vitae elit libero, a pharetra augue mollis interdum.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span> <span class="na">data-interval</span><span class="o">=</span><span class="s">&#34;2000&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-item&#34;</span> <span class="na">data-bs-interval</span><span class="o">=</span><span class="s">&#34;2000&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-caption d-none d-md-block&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Метка второго слайда<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
@@ -856,25 +854,25 @@
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;prev&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-prev-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Предыдущий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#carouselExampleDark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-slide</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;carousel-control-next-icon&#34;</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Следующий<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="использование">Использование</h2>
 <h3 id="через-атрибуты-данных">Через атрибуты данных</h3>
-<p>Используйте атрибуты данных, чтобы легко контролировать положение карусели. <code>data-slide</code> принимает ключевые слова <code>prev</code> или <code>next</code>, которые изменяют положение слайда относительно его текущего положения. В качестве альтернативы, используйте <code>data-slide-to</code>, чтобы передать необработанный индекс слайда в карусель <code>data-slide-to=&quot;2&quot;</code>, который сдвигает положение слайда на конкретный индекс, начинающийся с <code>0</code>.</p>
-<p>Атрибут <code>data-ride=&quot;carousel&quot;</code> используется для пометки карусели как анимированной, начиная с загрузки страницы. Если Вы не используете <code>data-ride=&quot;carousel&quot;</code> для инициализации карусели, Вам придется инициализировать ее самостоятельно. <strong>Его нельзя использовать в сочетании с (избыточной и ненужной) явной инициализацией JavaScript той же карусели.</strong></p>
+<p>Используйте атрибуты данных, чтобы легко контролировать положение карусели. <code>data-bs-slide</code> принимает ключевые слова <code>prev</code> или <code>next</code>, которые изменяют положение слайда относительно его текущего положения. В качестве альтернативы, используйте <code>data-bs-slide-to</code>, чтобы передать необработанный индекс слайда в карусель <code>data-bs-slide-to=&quot;2&quot;</code>, который сдвигает положение слайда на конкретный индекс, начинающийся с <code>0</code>.</p>
+<p>Атрибут <code>data-bs-ride=&quot;carousel&quot;</code> используется для пометки карусели как анимированной, начиная с загрузки страницы. Если Вы не используете <code>data-bs-ride=&quot;carousel&quot;</code> для инициализации карусели, Вам придется инициализировать ее самостоятельно. <strong>Его нельзя использовать в сочетании с (избыточной и ненужной) явной инициализацией JavaScript той же карусели.</strong></p>
 <h3 id="через-javascript">Через JavaScript</h3>
 <p>Вызов карусели вручную с помощью:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCarousel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">(</span><span class="nx">myCarousel</span><span class="p">)</span>
 </code></pre></div><h3 id="параметры">Параметры</h3>
-<p>Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-</code>, как в <code>data-interval=&quot;&quot;</code>.</p>
+<p>Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-bs-</code>, как в <code>data-bs-interval=&quot;&quot;</code>.</p>
 <table class="table">
   <thead>
     <tr>
@@ -1015,9 +1013,10 @@
 </code></pre></div><h3 id="изменить-продолжительность-перехода">Изменить продолжительность перехода</h3>
 <p>Продолжительность перехода <code>.carousel-item</code> может быть изменена с помощью переменной Sass <code>$carousel-transition</code> перед компиляцией или пользовательскими стилями, если Вы используете скомпилированный CSS. Если применяется несколько переходов, убедитесь, что сначала определен переход преобразования (например, <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
 
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
+  </div>
+
 
     <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
   <div class="container">
@@ -1042,5 +1041,7 @@
 <script src="/docs/5.0/assets/js/docs.min.js"></script>
 
 
-    </body>
+    
+  
+  </body>
 </html>

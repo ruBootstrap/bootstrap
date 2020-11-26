@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,10 +82,9 @@
   <body>
     <div class="skippy overflow-hidden">
   <div class="container-xl">
-    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#content">Перейти к основному содержанию</a>
+    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#контент">Перейти к основному содержанию</a>
 
-    
-      <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+    <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
   </div>
 </div>
 
@@ -96,7 +95,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+    &lt;<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
       <svg class="bi" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -166,16 +165,18 @@
   </nav>
 </header>
 
-    <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+
+    
+  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative mr-auto">
-      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-docs-version="5.0">
+      <input type="search" class="form-control" id="search-input" placeholder="Искать..." aria-label="Искать в документации для..." autocomplete="off" data-bd-docs-version="5.0">
     </form>
 
     <h6>Перевод официальной документации Bootstrap 5</h6>
 
-    <div class="dropdown ml-auto">
-  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-toggle="dropdown" aria-expanded="false" data-display="static">
+    <div class="dropdown ml-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
     <span class="d-none d-lg-inline">Bootstrap</span> v5.0
   </button>
   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
@@ -188,7 +189,7 @@
 </div>
 
 
-    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ml-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewBox="0 0 16 16">
   <title>Expand</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
@@ -204,14 +205,14 @@
 </nav>
 
 
-    <div class="container-xxl my-md-4 bd-layout">
-      <aside class="bd-sidebar">
-        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+  <div class="container-xxl my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
 
     <li class="mb-1 active">
-      <a class="d-inline-flex align-items-center rounded" data-toggle="collapse" href="#getting-started-collapse" role="button" aria-expanded="true" aria-current="true">
+      <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="true" aria-current="true">
         Начало работы
-      </a>
+      </button>
       <div class="collapse show" id="getting-started-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded"  title="Начните работу с Bootstrap" >Вступление</a></li>
@@ -228,9 +229,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#customize-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
         Настройка
-      </a>
+      </button>
       <div class="collapse" id="customize-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded"  title="Настройка и расширение" >Обзор</a></li>
@@ -245,9 +246,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#layout-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
         Макет
-      </a>
+      </button>
       <div class="collapse" id="layout-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded"  title="Контрольные точки" >Breakpoints</a></li>
@@ -262,9 +263,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#content-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
         Контент
-      </a>
+      </button>
       <div class="collapse" id="content-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded"  title="Перезагрузка" >Reboot</a></li>
@@ -277,9 +278,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#forms-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
         Формы
-      </a>
+      </button>
       <div class="collapse" id="forms-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded"  title="Примеры и рекомендации форм" >Обзор</a></li>
@@ -296,9 +297,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#components-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
         Компоненты
-      </a>
+      </button>
       <div class="collapse" id="components-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded"  title="Аккордеон" >Accordion</a></li>
@@ -328,9 +329,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#helpers-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
         Помощники
-      </a>
+      </button>
       <div class="collapse" id="helpers-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded"  title="Очистка" >Clearfix</a></li>
@@ -345,9 +346,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#utilities-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
         Утилиты
-      </a>
+      </button>
       <div class="collapse" id="utilities-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded"  title="API" >API</a></li>
@@ -370,9 +371,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#extend-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
         Дополнительно
-      </a>
+      </button>
       <div class="collapse" id="extend-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded"  title="Подход" >Подход</a></li>
@@ -382,9 +383,9 @@
     </li>
 
     <li class="mb-1">
-      <a class="d-inline-flex align-items-center rounded collapsed" data-toggle="collapse" href="#about-collapse" role="button" aria-expanded="false">
+      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
         Инфо
-      </a>
+      </button>
       <div class="collapse" id="about-collapse">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded"  title="Обзор" >Обзор</a></li>
@@ -405,46 +406,49 @@
   </ul>
 </nav>
 
-      </aside>
+    </aside>
 
-      <main class="bd-main order-1">
-        <div class="bd-intro pl-lg-4">
-          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-            <div class="btn-group">
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/main-ru/site/content/docs/5.0/getting-started/javascript.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
-              <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://v5.getbootstrap.com/docs/5.0/getting-started/javascript/" title="View and edit this file on GitHub" target="_blank" rel="noopener">Оригинал</a>
-            </div>
-            <h1 class="bd-title" id="content">JavaScript</h1>
-          </div>
-          <p class="bd-lead">Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.</p>
+    <main class="bd-main order-1">
+      <div class="bd-intro pl-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">JavaScript</h1>
         </div>
+        <p class="bd-lead">Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.</p>
+        <script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&placement=getbootstrapcom" id="_carbonads_js"></script>
 
-        
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5">
-          </div>
-          <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
-            <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
-            <nav id="TableOfContents">
+      </div>
+
+      
+        <div class="bd-toc mt-4 mb-5 my-md-0 pl-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">На этой странице</strong>
+          <nav id="TableOfContents">
   <ul>
     <li><a href="#индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</a></li>
     <li><a href="#использование-bootstrap-как-модуля">Использование Bootstrap как модуля</a></li>
-    <li><a href="#программный-api">Программный API</a></li>
+    <li><a href="#программный-api">Программный API</a>
+      <ul>
+        <li><a href="#асинхронные-функции-и-переходы">Асинхронные функции и переходы</a></li>
+        <li><a href="#настройки-по-умолчанию">Настройки по умолчанию</a></li>
+      </ul>
+    </li>
     <li><a href="#нет-конфликта-только-если-вы-используете-jquery">Нет конфликта (только если Вы используете jQuery)</a></li>
+    <li><a href="#номера-версий">Номера версий</a></li>
     <li><a href="#никаких-специальных-резервных-вариантов-при-отключенном-javascript">Никаких специальных резервных вариантов при отключенном JavaScript</a></li>
     <li><a href="#чистильщик">Чистильщик</a></li>
   </ul>
 </nav>
-          </div>
+        </div>
+      
+
+      <div class="bd-content pl-lg-4">
         
 
-        <div class="bd-content pl-lg-4">
-          
-
-          <h2 id="индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</h2>
+        <h2 id="индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</h2>
 <p>Плагины могут быть включены индивидуально (с использованием отдельного файла <code>js/dist/*.js</code> в Bootstrap), или все сразу с помощью <code>bootstrap.js</code> или минифицированного <code>bootstrap.min.js</code> (не включайте оба).</p>
 <p>Если Вы используете bundler (Webpack, Rollup&hellip;), Вы можете использовать файлы <code>/js/dist/*.js</code> готовые для UMD.</p>
 <h2 id="использование-bootstrap-как-модуля">Использование Bootstrap как модуля</h2>
-<p>Мы предоставляем версию Bootstrap, построенную как <code>ESM</code> (<code>bootstrap.esm.js</code> и <code>bootstrap.esm.min.js</code>), которая позволяет Вам использовать Bootstrap в качестве модуля в Вашем браузере, если Ваши <a href="https://caniuse.com/#feat=es6-module">целевые браузеры поддерживают его</a>.</p>
+<p>Мы предоставляем версию Bootstrap, построенную как <code>ESM</code> (<code>bootstrap.esm.js</code> и <code>bootstrap.esm.min.js</code>), которая позволяет Вам использовать Bootstrap в качестве модуля в Вашем браузере, если Ваши <a href="https://caniuse.com/es6-module">целевые браузеры поддерживают его</a>.</p>
 <p>html</p>
 <script type="module">
   import { Toast } from 'bootstrap.esm.min.js'
@@ -455,7 +459,7 @@
 <pre><code>
 <div class="bd-callout bd-callout-warning">
 <h2 id="несовместимые-плагины">Несовместимые плагины</h2>
-<p>Из-за ограничений браузера некоторые из наших плагинов, а именно плагины Dropdown, Tooltip и Popover, нельзя использовать в теге <code>&lt;script&gt;</code> с типом <code>module</code>, потому что они зависят от Popper.js. Для получения дополнительной информации об этой проблеме см <a href="https://v8.dev/features/modules#specifiers">здесь</a>.
+<p>Из-за ограничений браузера некоторые из наших плагинов, а именно плагины Dropdown, Tooltip и Popover, нельзя использовать в теге <code>&lt;script&gt;</code> с типом <code>module</code>, потому что они зависят от Popper. Для получения дополнительной информации об этой проблеме см <a href="https://v8.dev/features/modules#specifiers">здесь</a>.
 </div>
 
 
@@ -463,11 +467,11 @@
 
 Некоторые плагины и компоненты CSS зависят от других плагинов. Если Вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации.
 
-Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от [Popper.js](https://popper.js.org/).
+Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от [Popper](https://popper.js.org/).
 
 ## Все еще хотите использовать jQuery? Это возможно!
 
-Bootstrap 5 разработан для использования без jQuery, но все же можно использовать наши компоненты с jQuery. **Если Bootstrap обнаружит `jQuery` в объекте `window`**, он добавит все наши компоненты в систему плагинов jQuery; это означает, что вы сможете использовать `$('[data-toggle=&quot;tooltip&quot;]').tooltip()` для включения всплывающих подсказок. То же самое и с другими нашими компонентами.
+Bootstrap 5 разработан для использования без jQuery, но все же можно использовать наши компоненты с jQuery. **Если Bootstrap обнаружит `jQuery` в объекте `window`**, он добавит все наши компоненты в систему плагинов jQuery; это означает, что вы сможете использовать `$('[data-bs-toggle=&quot;tooltip&quot;]').tooltip()` для включения всплывающих подсказок. То же самое и с другими нашими компонентами.
 
 ## Атрибуты данных
 
@@ -486,75 +490,60 @@ Bootstrap предоставляет настраиваемые события �
 
 Все инфинитивные события обеспечивают функциональность [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). Это дает возможность остановить выполнение действия до его запуска. Возврат false от обработчика событий также автоматически вызывает `preventDefault()`.
 
-js
+```js
 var myModal = document.getElementById('myModal')
 
-myModal.addEventListener('show.bs.modal', function (e) {
+myModal.addEventListener('show.bs.modal', function (event) {
   if (!data) {
-    return e.preventDefault() // останавливает отображение модального окна
+    return event.preventDefault() // останавливает отображение модального окна
   }
 })
 </code></pre><div class="bd-callout bd-callout-warning">
 <h2 id="события-jquery">События jQuery</h2>
-<p>Bootstrap обнаружит jQuery, если <code>jQuery</code> присутствует в объекте <code>window</code>, а атрибут <code>data-no-jquery</code> не установлен в <code>&lt;body&gt;</code>. Если jQuery найден, Bootstrap будет генерировать события благодаря системе событий jQuery. Поэтому, если Вы хотите прослушивать события Bootstrap, вам придется использовать методы jQuery (<code>.on</code>, <code>.one</code>) вместо <code>addEventListener</code>.</p>
-<p>js
-$('#myTab a').on(&lsquo;shown.bs.tab&rsquo;, function () {
-// сделай что-нибудь&hellip;
-})</p>
-<pre><code></code></pre>
+<p>Bootstrap обнаружит jQuery, если <code>jQuery</code> присутствует в объекте <code>window</code>, а атрибут <code>data-bs-no-jquery</code> не установлен в <code>&lt;body&gt;</code>. Если jQuery найден, Bootstrap будет генерировать события благодаря системе событий jQuery. Поэтому, если Вы хотите прослушивать события Bootstrap, вам придется использовать методы jQuery (<code>.on</code>, <code>.one</code>) вместо <code>addEventListener</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// сделайте что-нибудь...
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div>
 </div>
 
 <h2 id="программный-api">Программный API</h2>
 <p>Все конструкторы принимают необязательный объект параметров или ничего (который запускает плагин с его поведением по умолчанию):</p>
-<p>js
-var myModalEl = document.getElementById(&lsquo;myModal&rsquo;)</p>
-<p>var modal = new bootstrap.Modal(myModalEl) // инициализирован по умолчанию
-var modal = new bootstrap.Modal(myModalEl, { keyboard: false }) // инициализирован без клавиатуры</p>
-<pre><code>
-Если Вы хотите получить конкретный экземпляр плагина, каждый плагин предоставляет метод `getInstance`. Чтобы получить его непосредственно из элемента, сделайте следующее: `bootstrap.Popover.getInstance(myPopoverEl)`.
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
 
-### Асинхронные функции и переходы
+<span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// инициализирован по умолчанию
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">,</span> <span class="p">{</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span> <span class="c1">// инициализирован без клавиатуры
+</span></code></pre></div><p>Если Вы хотите получить конкретный экземпляр плагина, каждый плагин предоставляет метод <code>getInstance</code>. Чтобы получить его непосредственно из элемента, сделайте следующее: <code>bootstrap.Popover.getInstance(myPopoverEl)</code>.</p>
+<h3 id="асинхронные-функции-и-переходы">Асинхронные функции и переходы</h3>
+<p>Все программные методы API <strong>асинхронны</strong>и возвращаются вызывающей стороне после начала перехода, но <strong>до его завершения</strong>.</p>
+<p>Чтобы выполнить действие после завершения перехода, Вы можете прослушать соответствующее событие.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCollapseEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;#myCollapse&#39;</span><span class="p">)</span>
 
-Все программные методы API **асинхронны**и возвращаются вызывающей стороне после начала перехода, но **до его завершения**.
+<span class="nx">myCollapseEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Действие, выполняемое после раскрытия сворачиваемой области
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div><p>Кроме того, вызов метода <strong>переходного компонента будет проигнорирован</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCarouselEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myCarousel&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myCarouselEl</span><span class="p">)</span> <span class="c1">// Получить экземпляр карусели
+</span><span class="c1"></span>
+<span class="nx">myCarouselEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;slid.bs.carousel&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// Перейдет к слайду 2, как только переход к слайду 1 завершится
+</span><span class="c1"></span><span class="p">})</span>
 
-Чтобы выполнить действие после завершения перехода, Вы можете прослушать соответствующее событие.
-
-js
-var myCollapseEl = document.getElementById('#myCollapse')
-
-myCollapseEl.addEventListener('shown.bs.collapse', function (e) {
-  // Действие, выполняемое после раскрытия сворачиваемой области
-})
-</code></pre><p>Кроме того, вызов метода <strong>переходного компонента будет проигнорирован</strong>.</p>
-<p>js
-var myCarouselEl = document.getElementById(&lsquo;myCarousel&rsquo;)
-var carousel = bootstrap.Carousel.getInstance(myCarouselEl) // Получить экземпляр карусели</p>
-<p>myCarouselEl.addEventListener(&lsquo;slid.bs.carousel&rsquo;, function (e) {
-carousel.to(&lsquo;2&rsquo;) // Перейдет к слайду 2, как только переход к слайду 1 завершится
-})</p>
-<p>carousel.to(&lsquo;1&rsquo;) // Начнется переход к слайду 1 и вернется к вызывающему
-carousel.to(&lsquo;2&rsquo;) // !! Будет проигнорировано, так как переход к слайду 1 не завершен !!</p>
-<pre><code>
-### Настройки по умолчанию
-
-Вы можете изменить настройки плагина по умолчанию, изменив его объект `Constructor.Default`:
-
-js
-// изменяет значение по умолчанию для опции `keyboard` модального плагина на false
-bootstrap.Modal.Default.keyboard = false
-</code></pre><h2 id="нет-конфликта-только-если-вы-используете-jquery">Нет конфликта (только если Вы используете jQuery)</h2>
+<span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Начнется переход к слайду 1 и вернется к вызывающему
+</span><span class="c1"></span><span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Будет проигнорировано, так как переход к слайду 1 не завершен !!
+</span></code></pre></div><h3 id="настройки-по-умолчанию">Настройки по умолчанию</h3>
+<p>Вы можете изменить настройки плагина по умолчанию, изменив его объект <code>Constructor.Default</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// изменяет значение по умолчанию для опции `keyboard` модального плагина на false
+</span><span class="c1"></span><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div><h2 id="нет-конфликта-только-если-вы-используете-jquery">Нет конфликта (только если Вы используете jQuery)</h2>
 <p>Иногда необходимо использовать плагины Bootstrap с другими фреймворками пользовательского интерфейса. В этих обстоятельствах иногда могут возникать конфликты пространств имен. Если это произойдет, Вы можете вызвать <code>.noConflict</code> в плагине, значение которого Вы хотите вернуть.</p>
-<p>js
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button к ранее присвоенному значению
-$.fn.bootstrapBtn = bootstrapButton // функциональность Bootstrap</p>
-<pre><code>
-## Номера версий
-
-Доступ к версии каждого из плагинов Bootstrap можно получить через свойство `VERSION` конструктора плагина. Например, для плагина всплывающей подсказки:
-
-js
-bootstrap.Tooltip.VERSION // =&gt; &quot;5.0.0-alpha3&quot;
-</code></pre><h2 id="никаких-специальных-резервных-вариантов-при-отключенном-javascript">Никаких специальных резервных вариантов при отключенном JavaScript</h2>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button к ранее присвоенному значению
+</span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn функциональность Bootstrap
+</span></code></pre></div><h2 id="номера-версий">Номера версий</h2>
+<p>Доступ к версии каждого из плагинов Bootstrap можно получить через свойство <code>VERSION</code> конструктора плагина. Например, для плагина всплывающей подсказки:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;5.0.0-alpha3&#34;
+</span></code></pre></div><h2 id="никаких-специальных-резервных-вариантов-при-отключенном-javascript">Никаких специальных резервных вариантов при отключенном JavaScript</h2>
 <p>Плагины Bootstrap не особо изящен при отключенном JavaScript. Если в этом случае Вам важен опыт пользователя, используйте <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>, чтобы объяснить ситуацию (и как повторно включить JavaScript) для Ваших пользователей и/или добавить свои собственные резервные варианты.</p>
 <div class="bd-callout bd-callout-warning">
 <h5 id="сторонние-библиотеки">Сторонние библиотеки</h5>
@@ -564,69 +553,65 @@ bootstrap.Tooltip.VERSION // =&gt; &quot;5.0.0-alpha3&quot;
 <h2 id="чистильщик">Чистильщик</h2>
 <p>Всплывающие подсказки и всплывающие окна используют наше встроенное средство очистки для очистки параметров, принимающих HTML.</p>
 <p>Значение <code>allowList</code> по умолчанию следующее:</p>
-<p>js
-var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]<em>$/i
-var DefaultAllowlist = {
-// Глобальные атрибуты разрешены для любого указанного ниже элемента.
-&lsquo;</em>': [&lsquo;class&rsquo;, &lsquo;dir&rsquo;, &lsquo;id&rsquo;, &lsquo;lang&rsquo;, &lsquo;role&rsquo;, ARIA_ATTRIBUTE_PATTERN],
-a: [&lsquo;target&rsquo;, &lsquo;href&rsquo;, &lsquo;title&rsquo;, &lsquo;rel&rsquo;],
-area: [],
-b: [],
-br: [],
-col: [],
-code: [],
-div: [],
-em: [],
-hr: [],
-h1: [],
-h2: [],
-h3: [],
-h4: [],
-h5: [],
-h6: [],
-i: [],
-img: [&lsquo;src&rsquo;, &lsquo;srcset&rsquo;, &lsquo;alt&rsquo;, &lsquo;title&rsquo;, &lsquo;width&rsquo;, &lsquo;height&rsquo;],
-li: [],
-ol: [],
-p: [],
-pre: [],
-s: [],
-small: [],
-span: [],
-sub: [],
-sup: [],
-strong: [],
-u: [],
-ul: []
-}</p>
-<pre><code>
-Если вы хотите добавить новые значения в этот список разрешений по умолчанию `allowList`, вы можете сделать следующее:
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span> <span class="o">=</span> <span class="sr">/^aria-[\w-]*$/i</span>
+<span class="kd">var</span> <span class="nx">DefaultAllowlist</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// Глобальные атрибуты разрешены для любого указанного ниже элемента.
+</span><span class="c1"></span>  <span class="s1">&#39;*&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
+  <span class="nx">a</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;rel&#39;</span><span class="p">],</span>
+  <span class="nx">area</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">b</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">br</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">col</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">code</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">div</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">em</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">hr</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h1</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h2</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h3</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h4</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h5</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">h6</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">i</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">img</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;srcset&#39;</span><span class="p">,</span> <span class="s1">&#39;alt&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">],</span>
+  <span class="nx">li</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">ol</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">p</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">pre</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">s</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">small</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">span</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">sub</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">sup</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">strong</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">u</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">ul</span><span class="o">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div><p>Если вы хотите добавить новые значения в этот список разрешений по умолчанию <code>allowList</code>, вы можете сделать следующее:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myDefaultAllowList</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">allowList</span>
 
-js
-var myDefaultAllowList = bootstrap.Tooltip.Default.allowList
+<span class="c1">// Чтобы разрешить элементы таблицы
+</span><span class="c1"></span><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
 
-// Чтобы разрешить элементы таблицы
-myDefaultAllowList.table = []
+<span class="c1">// Чтобы разрешить элементы td и атрибуты параметров данных в элементах td
+</span><span class="c1"></span><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data-bs-option&#39;</span><span class="p">]</span>
 
-// Чтобы разрешить элементы td и атрибуты параметров данных в элементах td
-myDefaultAllowList.td = ['data-option']
+<span class="c1">// Вы можете отправить собственное регулярное выражение для проверки своих атрибутов.
+</span><span class="c1">// Будьте осторожны, чтобы Ваши регулярные выражения были слишком слабыми
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-[\w-]+/</span>
+<span class="nx">myDefaultAllowList</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">myCustomRegex</span><span class="p">)</span>
+</code></pre></div><p>Если Вы хотите обойти нашу очистку, потому что предпочитаете использовать специальную библиотеку, например <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, Вам следует сделать следующее:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">yourTooltipEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;yourTooltip&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">yourTooltipEl</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">sanitizeFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">content</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+      </div>
+    </main>
+  </div>
 
-// Вы можете отправить собственное регулярное выражение для проверки своих атрибутов.
-// Будьте осторожны, чтобы Ваши регулярные выражения были слишком слабыми
-var myCustomRegex = /^data-my-app-[\w-]+/
-myDefaultAllowList['*'].push(myCustomRegex)
-</code></pre><p>Если Вы хотите обойти нашу очистку, потому что предпочитаете использовать специальную библиотеку, например <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, Вам следует сделать следующее:</p>
-<p>js
-var yourTooltipEl = document.getElementById(&lsquo;yourTooltip&rsquo;)
-var tooltip = new bootstrap.Tooltip(yourTooltipEl, {
-sanitizeFn: function (content) {
-return DOMPurify.sanitize(content)
-}
-})</p>
-<pre><code></code></pre>
-        </div>
-      </main>
-    </div>
 
     <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
   <div class="container">
@@ -651,5 +636,7 @@ return DOMPurify.sanitize(content)
 <script src="/docs/5.0/assets/js/docs.min.js"></script>
 
 
-    </body>
+    
+  
+  </body>
 </html>
