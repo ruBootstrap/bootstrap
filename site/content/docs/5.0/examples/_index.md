@@ -7,14 +7,19 @@ aliases: "/examples/"
 
 {{< list-examples.inline >}}
 {{ range $entry := $.Site.Data.examples -}}
-  <h2>{{ $entry.category }}</h2>
+  <h2 id="{{ $entry.slug }}">{{ $entry.category }}</h2>
   <p>{{ $entry.description }}</p>
+  {{ if eq $entry.category "RTL" -}}
+    <div class="bd-callout bd-callout-warning">
+      <p>Функция RTL все еще является <strong>экспериментальной</strong> и, вероятно, будет развиваться в соответствии с отзывами пользователей. Заметили что-то или хотите предложить улучшение? <a href="{{ $.Site.Params.repo }}/issues/new">Откройте вопрос</a>, мы будем рады узнать Ваше мнение.</p>
+    </div>
+  {{ end -}}
 
   {{ range $i, $example := $entry.examples -}}
     {{- $len := len $entry.examples -}}
     {{ if (eq $i 0) }}<div class="row">{{ end }}
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="/docs/{{ $.Site.Params.docs_version }}/examples/{{ $example.slug }}/">
+        <a href="/docs/{{ $.Site.Params.docs_version }}/examples/{{ $example.slug }}/"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
           <img class="img-thumbnail mb-3" srcset="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug }}.png,
                                                   /docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug }}@2x.png 2x"
                                           src="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug }}.png"

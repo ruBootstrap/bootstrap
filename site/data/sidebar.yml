@@ -28,6 +28,9 @@
     - title: RFS
       hint: Механизм изменения размера
       slug: rfs
+    - title: RTL
+      hint: RTL
+      slug: rtl
 
 - title: Настройка
   slug: customize

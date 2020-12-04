@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru"{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
+<html {{ if eq .Page.Params.direction "rtl" }}lang="ar" dir="rtl"{{ else }}lang="ru"{{ end }}{{ with .Page.Params.html_class }} class="{{ . }}"{{ end }}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

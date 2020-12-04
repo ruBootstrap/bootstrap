@@ -75,7 +75,7 @@ toc: true
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
-      <ul class="dropdown-menu dropdown-menu-right">
+      <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="#one">один</a></li>
         <li><a class="dropdown-item" href="#two">два</a></li>
         <li><hr class="dropdown-divider"></li>
@@ -110,14 +110,14 @@ toc: true
         <nav class="nav nav-pills flex-column">
           <a class="nav-link" href="#item-1">Элемент 1</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#item-1-1">Элемент 1-1</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-2">Элемент 1-2</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
           </nav>
           <a class="nav-link" href="#item-2">Элемент 2</a>
           <a class="nav-link" href="#item-3">Элемент 3</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#item-3-1">Элемент 3-1</a>
-            <a class="nav-link ml-3 my-1" href="#item-3-2">Элемент 3-2</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
           </nav>
         </nav>
       </nav>
@@ -149,14 +149,14 @@ toc: true
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#item-1">Элемент 1</a>
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link ml-3 my-1" href="#item-1-1">Элемент 1-1</a>
-      <a class="nav-link ml-3 my-1" href="#item-1-2">Элемент 1-2</a>
+      <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
+      <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
     </nav>
     <a class="nav-link" href="#item-2">Элемент 2</a>
     <a class="nav-link" href="#item-3">Элемент 3</a>
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link ml-3 my-1" href="#item-3-1">Элемент 3-1</a>
-      <a class="nav-link ml-3 my-1" href="#item-3-2">Элемент 3-2</a>
+      <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
+      <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
     </nav>
   </nav>
 </nav>

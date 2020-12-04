@@ -27,8 +27,8 @@ toc: true
 Выровняйте изображения по [вспомогательным классам с плавающей точкой]({{< docsref "/utilities/float" >}}) или [классам выравнивания текста]({{< docsref "/utilities/text#text-alignment" >}}). Изображения уровня `block` можно центрировать с помощью [утилиты класса поля `.mx-auto`]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="rounded float-left" >}}
-{{< placeholder width="200" height="200" class="rounded float-right" >}}
+{{< placeholder width="200" height="200" class="rounded float-start" >}}
+{{< placeholder width="200" height="200" class="rounded float-end" >}}
 {{< /example >}}
 
 

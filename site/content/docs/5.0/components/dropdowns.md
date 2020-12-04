@@ -395,6 +395,11 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ## Направления
 
+{{< callout info >}}
+#### RTL
+При использовании Bootstrap в RTL направления отражаются, то есть `.dropstart` будет отображаться с правой стороны.
+{{< /callout >}}
+
 ### Вверх
 
 Вызвать выпадающее меню над элементами, добавив к родительскому элементу `.dropup`.
@@ -456,10 +461,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ### Вправо
 
-Откройте выпадающее меню справа от элементов, добавив `.dropright` к родительскому элементу.
+Вызовите раскрывающееся меню справа от элементов, добавив `.dropend` к родительскому элементу.
 
 <div class="bd-example">
-  <div class="btn-group dropright">
+  <div class="btn-group dropend">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающий список вправо
     </button>
@@ -471,7 +476,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
       <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
     </ul>
   </div>
-  <div class="btn-group dropright">
+  <div class="btn-group dropend">
     <button type="button" class="btn btn-secondary">
       Раздельная кнопка выпадающего списка вправо
     </button>
@@ -490,7 +495,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ```html
 <!-- Кнопка выпадающего списка вправо по умолчанию -->
-<div class="btn-group dropright">
+<div class="btn-group dropend">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список вправо
   </button>
@@ -500,7 +505,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 <!-- Раздельная кнопка выпадающего списка вправо -->
-<div class="btn-group dropright">
+<div class="btn-group dropend">
   <button type="button" class="btn btn-secondary">
     Раздельный выпадающий список вправо
   </button>
@@ -515,10 +520,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ### Влево
 
-Активируйте выпадающие меню слева от элементов, добавив `.dropleft` к родительскому элементу.
+Активируйте раскрывающиеся меню слева от элементов, добавив `.dropstart` к родительскому элементу.
 
 <div class="bd-example">
-  <div class="btn-group dropleft">
+  <div class="btn-group dropstart">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающий список влево
     </button>
@@ -531,7 +536,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     </ul>
   </div>
   <div class="btn-group">
-    <div class="btn-group dropleft" role="group">
+    <div class="btn-group dropstart" role="group">
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
         <span class="visually-hidden">Переключатель выпадающего списка влево</span>
       </button>
@@ -551,7 +556,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ```html
 <!-- Кнопка выпадающего списка влево по умолчанию -->
-<div class="btn-group dropleft">
+<div class="btn-group dropstart">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список влево
   </button>
@@ -562,7 +567,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 <!-- Раздельная кнопка выпадающего списка влево -->
 <div class="btn-group">
-  <div class="btn-group dropleft" role="group">
+  <div class="btn-group dropstart" role="group">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Переключатель выпадающего списка влево</span>
     </button>
@@ -630,7 +635,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ## Выравнивание меню
 
-По умолчанию выпадающее меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте `.dropdown-menu-right` в `.dropdown-menu`, чтобы выровнять выпадающее меню по правому краю..
+По умолчанию раскрывающееся меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте `.dropdown-menu-end` в `.dropdown-menu`, чтобы выровнять раскрывающееся меню по правому краю. При использовании Bootstrap в RTL направления отражаются, то есть `.dropdown-menu-end` появится слева.
 
 {{< callout info >}}
 **Внимание!** Выпадающие списки позиционируются благодаря Popper (кроме случаев, когда они содержатся в навигационной панели).
@@ -641,7 +646,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Меню с выравниванием по правому краю
   </button>
-  <ul class="dropdown-menu dropdown-menu-right">
+  <ul class="dropdown-menu dropdown-menu-end">
     <li><button class="dropdown-item" type="button">Действие</button></li>
     <li><button class="dropdown-item" type="button">Другое действие</button></li>
     <li><button class="dropdown-item" type="button">Что-то еще здесь</button></li>
@@ -653,14 +658,14 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 Если Вы хотите использовать адаптивное выравнивание, отключите динамическое позиционирование, добавив атрибут `data-bs-display="static"` и используйте гибкие классы вариантов.
 
-Чтобы выровнять **по правой стороне** выпадающее меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-right`.
+Чтобы выровнять **справа** раскрывающееся меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu {-sm | -md | -lg | -xl | -xxl} -end`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     По левому краю, но по правому краю на большом экране
   </button>
-  <ul class="dropdown-menu dropdown-menu-lg-right">
+  <ul class="dropdown-menu dropdown-menu-lg-end">
     <li><button class="dropdown-item" type="button">Действие</button></li>
     <li><button class="dropdown-item" type="button">Другое действие</button></li>
     <li><button class="dropdown-item" type="button">Что-то еще здесь</button></li>
@@ -668,14 +673,14 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 {{< /example >}}
 
-Чтобы выровнять **по левой стороне** выпадающее меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu-right` и `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-left`.
+Чтобы выровнять **слева** раскрывающееся меню с заданной контрольной точкой или больше, добавьте `.dropdown-menu-end` и `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     По правому краю, но по левому краю на большом экране
   </button>
-  <ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
     <li><button class="dropdown-item" type="button">Действие</button></li>
     <li><button class="dropdown-item" type="button">Другое действие</button></li>
     <li><button class="dropdown-item" type="button">Что-то еще здесь</button></li>
@@ -787,7 +792,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="d-flex">
-  <div class="dropdown mr-1">
+  <div class="dropdown me-1">
     <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
       Смещение
     </button>

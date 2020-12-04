@@ -46,7 +46,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   </p>
 </div>
 
-Наведите курсор на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево.
+Наведите курсор на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево. Направления зеркалируются при использовании Bootstrap в RTL.
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">

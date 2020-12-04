@@ -4,14 +4,14 @@
       <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
         {{ partial "icons/homepage-hero.svg" (dict "class" "img-fluid mb-3 mb-md-0" "width" "600" "height" "533") }}
       </div>
-      <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-left">
+      <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
         <h1 class="mb-3">Создавайте быстрые, отзывчивые сайты с помощью Bootstrap</h1>
         <p class="lead mb-4">
           Быстро создавайте и настраивайте адаптивные сайты, ориентированные на мобильные устройства, с помощью Bootstrap, самого популярного в мире инструментария с открытым исходным кодом для интерфейса пользователя, включающего Sass переменные и миксины, адаптивную сеточную систему, обширные готовые компоненты и мощные плагины JavaScript.
         </p>
 
         <div class="d-flex flex-column flex-md-row">
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Начало работы</a>
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 me-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Начало работы</a>
           <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ .Site.Params.current_version }}');">Скачать</a>
         </div>
         <p class="text-muted mb-0">

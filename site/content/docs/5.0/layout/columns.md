@@ -264,20 +264,20 @@ toc: true
 
 #### Утилиты полей
 
-С переходом на flexbox в v4 Вы можете использовать утилиты полей, такие как `.mr-auto`, чтобы отодвинуть одноуровневые колонки друг от друга.
+С переходом на flexbox в v4 Вы можете использовать утилиты полей, такие как `.me-auto`, чтобы отодвинуть одноуровневые столбцы друг от друга.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+    <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
   </div>
   <div class="row">
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
-    <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+    <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+    <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
   </div>
   <div class="row">
-    <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+    <div class="col-auto me-auto">.col-auto .me-auto</div>
     <div class="col-auto">.col-auto</div>
   </div>
 </div>
@@ -300,7 +300,7 @@ toc: true
 
 {{< example >}}
 <div class="clearfix">
-  {{< placeholder width="100%" height="210" class="col-md-6 float-md-right mb-3 ml-md-3" text="Responsive floated image" >}}
+  {{< placeholder width="100%" height="210" class="col-md-6 float-md-end mb-3 ms-md-3" text="Responsive floated image" >}}
 
   <p>
     Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris paddenstoel nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

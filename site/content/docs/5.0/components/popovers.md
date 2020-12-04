@@ -56,7 +56,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 ### Четыре направления
 
-Доступны четыре варианта: по верхнему, правому, нижнему и левому краям.
+Доступны четыре варианта: по верхнему, правому, нижнему и левому краям. Направления зеркалируются при использовании Bootstrap в RTL.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">

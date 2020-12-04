@@ -15,9 +15,9 @@ toc: true
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
 <span class="border-top"></span>
-<span class="border-right"></span>
+<span class="border-end"></span>
 <span class="border-bottom"></span>
-<span class="border-left"></span>
+<span class="border-start"></span>
 {{< /example >}}
 
 ### Вычитание
@@ -25,9 +25,9 @@ toc: true
 {{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
 <span class="border-0"></span>
 <span class="border-top-0"></span>
-<span class="border-right-0"></span>
+<span class="border-end-0"></span>
 <span class="border-bottom-0"></span>
-<span class="border-left-0"></span>
+<span class="border-start-0"></span>
 {{< /example >}}
 
 ## Цвет границы
@@ -60,9 +60,9 @@ toc: true
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Пример закругленного изображения" >}}
 {{< placeholder width="75" height="75" class="rounded-top" title="Пример закругленного изображения сверху" >}}
-{{< placeholder width="75" height="75" class="rounded-right" title="Пример закругленного изображения справа" >}}
+{{< placeholder width="75" height="75" class="rounded-end" title="Пример закругленного изображения справа" >}}
 {{< placeholder width="75" height="75" class="rounded-bottom" title="Пример закругленного изображения снизу" >}}
-{{< placeholder width="75" height="75" class="rounded-left" title="Пример закругленного изображения слева" >}}
+{{< placeholder width="75" height="75" class="rounded-start" title="Пример закругленного изображения слева" >}}
 {{< placeholder width="75" height="75" class="rounded-circle" title="Полностью круглое изображение" >}}
 {{< placeholder width="150" height="75" class="rounded-pill" title="Закругленное изображение таблетки" >}}
 {{< /example >}}

@@ -40,7 +40,7 @@ toc: true
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
@@ -63,7 +63,7 @@ toc: true
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
@@ -71,7 +71,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-В этом примере используются [цвет]({{< docsref "/utilities/colors" >}}) (`bg-light`) и [отступы]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `mr-sm-0`, `my-sm-0`) служебные классы.
+В этом примере используются классы утилит [цвета]({{< docsref "/utilities/colors" >}}) (`bg-light`) и [интервала]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `me-sm-0`, `my-sm-0`).
 
 ### Бренд
 
@@ -218,7 +218,7 @@ toc: true
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
       <button class="btn btn-outline-success" type="submit">Поиск</button>
     </form>
   </div>
@@ -232,7 +232,7 @@ toc: true
   <div class="container-fluid">
     <a class="navbar-brand">Панель навигации</a>
     <form class="d-flex">
-      <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
       <button class="btn btn-outline-success" type="submit">Поиск</button>
     </form>
   </div>
@@ -257,7 +257,7 @@ toc: true
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <form class="container-fluid justify-content-start">
-    <button class="btn btn-outline-success mr-2" type="button">Главная кнопка</button>
+    <button class="btn btn-outline-success me-2" type="button">Главная кнопка</button>
     <button class="btn btn-sm btn-outline-secondary" type="button">Меньшая кнопка</button>
   </form>
 </nav>
@@ -287,7 +287,7 @@ toc: true
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
@@ -318,7 +318,7 @@ toc: true
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
@@ -333,7 +333,7 @@ toc: true
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
           <button class="btn btn-outline-light" type="submit">Поиск</button>
         </form>
       </div>
@@ -347,7 +347,7 @@ toc: true
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
@@ -362,7 +362,7 @@ toc: true
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
           <button class="btn btn-outline-light" type="submit">Поиск</button>
         </form>
       </div>
@@ -376,7 +376,7 @@ toc: true
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
@@ -391,7 +391,7 @@ toc: true
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
           <button class="btn btn-outline-primary" type="submit">Поиск</button>
         </form>
       </div>
@@ -495,7 +495,7 @@ toc: true
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">Скрытый бренд</a>
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
@@ -507,7 +507,7 @@ toc: true
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
@@ -525,7 +525,7 @@ toc: true
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
@@ -537,7 +537,7 @@ toc: true
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>
@@ -555,7 +555,7 @@ toc: true
     </button>
     <a class="navbar-brand" href="#">Панель навигации</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
@@ -567,7 +567,7 @@ toc: true
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>

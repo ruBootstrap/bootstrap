@@ -11,7 +11,7 @@ toc: true
 
 Карта `$utilities` содержит все наши утилиты и позже объединяется с Вашей пользовательской картой `$utilities`, если она есть. Карта утилит содержит ключевой список групп утилит, которые принимают следующие параметры:
 
-{{< bs-table "table text-left" >}}
+{{< bs-table "table text-start" >}}
 | Опция | Тип | Описание |
 | --- | --- | --- |
 | `property` | **Обязательно** | Имя свойства. Это может быть строка или массив строк (например, horizontal paddings (горизонтальные отступы) или margins (поля)). |
@@ -21,6 +21,7 @@ toc: true
 | `responsive` | Необязательно | Логическое значение, указывающее, нужно ли создавать адаптивные классы. По умолчанию `false`. |
 | `rfs` | Необязательно | Логическое значение, чтобы разрешить плавное изменение масштаба. Взгляните на страницу [RFS]({{< docsref "/getting-started/rfs" >}}), чтобы узнать, как это работает. по умолчанию false. |
 | `print` | Необязательно | Логическое значение, указывающее, нужно ли создавать классы для печати. По умолчанию `false`. |
+| `rtl` | Необязательно | Логическое значение, указывающее, следует ли сохранять утилиту в RTL. По умолчанию `true`. |
 
 {{< /bs-table >}}
 
@@ -269,3 +270,31 @@ $utilities: map-merge(
   )
 );
 ```
+
+#### Remove utility in RTL
+
+Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
+
+```scss
+$utilities: (
+  "word-wrap": (
+    property: word-wrap word-break,
+    class: text,
+    values: (break: break-word),
+    rtl: false
+  ),
+);
+```
+
+Output:
+
+```css
+/* rtl:begin:remove */
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+/* rtl:end:remove */
+```
+
+This doesn't output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).

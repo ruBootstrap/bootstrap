@@ -21,6 +21,6 @@ group: content
 {{< example >}}
 <figure class="figure">
   {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
-  <figcaption class="figure-caption text-right">Подпись к изображению выше.</figcaption>
+  <figcaption class="figure-caption text-end">Подпись к изображению выше.</figcaption>
 </figure>
 {{< /example >}}

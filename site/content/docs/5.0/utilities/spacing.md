@@ -27,8 +27,8 @@ toc: true
 
 - `t` - для классов, которые устанавливают `margin-top` или `padding-top`
 - `b` - для классов, которые устанавливают `margin-bottom` или `padding-bottom`
-- `l` - для классов, которые устанавливают `margin-left` или `padding-left`
-- `r` - для классов, которые устанавливают `margin-right` или `padding-right`
+- `s` - для классов, которые устанавливают `margin-left` или `padding-left` в LTR, `margin-right` или `padding-right` в RTL
+- `e` - для классов, которые устанавливают `margin-right` или `padding-right` в LTR, `margin-left` или `padding-left` в RTL
 - `x` - для классов, которые устанавливают оба `*-left` и `*-right`
 - `y` - для классов, которые устанавливают оба `*-top` и `*-bottom`
 - `blank` - для классов, которые устанавливают a `margin` или `padding` со всех 4 сторон элемента
@@ -50,7 +50,7 @@ toc: true
   margin-top: 0 !important;
 }
 
-.ml-1 {
+.ms-1 {
   margin-left: ($spacer * .25) !important;
 }
 

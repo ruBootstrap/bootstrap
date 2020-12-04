@@ -285,7 +285,7 @@ toc: true
   </div>
 </div>
 
-<div class="card text-right" style="width: 18rem;">
+<div class="card text-end" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Особое обращение с заголовком</h5>
     <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>

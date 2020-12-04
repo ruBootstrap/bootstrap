@@ -173,7 +173,7 @@ toc: true
 <div class="input-group mb-3">
   <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
-  <ul class="dropdown-menu dropdown-menu-right">
+  <ul class="dropdown-menu dropdown-menu-end">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -193,7 +193,7 @@ toc: true
   </ul>
   <input type="text" class="form-control" aria-label="Ввод текста с помощью 2-х раскрывающихся кнопок">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
-  <ul class="dropdown-menu dropdown-menu-right">
+  <ul class="dropdown-menu dropdown-menu-end">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -227,7 +227,7 @@ toc: true
   <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающий список</span>
   </button>
-  <ul class="dropdown-menu dropdown-menu-right">
+  <ul class="dropdown-menu dropdown-menu-end">
     <li><a class="dropdown-item" href="#">Действия</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>

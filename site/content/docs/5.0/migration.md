@@ -9,13 +9,72 @@ toc: true
 
 ## v5.0.0-beta1
 
+### RTL
+
+**Функция RTL все еще экспериментальная и, вероятно, будет развиваться в соответствии с отзывами пользователей.** Заметили что-то или хотите предложить улучшение? [Откройте проблему]({{< param repo >}}/issues/new), мы будем рады узнать Ваше мнение.
+
+#### Sass
+
+Переменные, утилиты и миксины, чувствительные к горизонтальному направлению, переименованы с более логичными именами - `start` и `end` вместо `left` и `right`.
+
+##### Компоненты
+
+- Переименованы `.dropleft` и `.dropright` в `.dropstart` и `dropend`.
+- Переименованы `.dropdown-menu-*-left` и `.dropdown-menu-*-right` в `.dropdown-menu-*-start` и `.dropdown-menu-*-end`.
+- Переименованы `.bs-popover-left` и `.bs-popover-right` в `.bs-popover-start` и `.bs-popover-end`.
+- Переименованы `.bs-tooltip-left` и `.bs-tooltip-right` в `.bs-tooltip-start` и `.bs-tooltip-end`.
+- Переименованы `.carousel-item-left` и `.carousel-item-right` в `.carousel-item-start` и `.carousel-item-end`.
+
+##### Утилиты
+
+- Переименованы `.left-*` и `.right-*` в `.start-*` и `.end-*`.
+- Переименованы `.float-left` и `.float-right` в `.float-start` и `.float-end`.
+- Переименованы `.border-left` и `.border-right` в `.border-start` и `.border-end`.
+- Переименованы `.rounded-left` и `.rounded-right` в `.rounded-start` и `.rounded-end`.
+- Переименованы `.ml-*` и `.mr-*` в `.ms-*` и `.me-*`.
+- Переименованы `.pl-*` и `.pr-*` в `.ps-*` и `.pe-*`.
+- Переименованы `.text-left` и `.text-right` в `.text-start` и `.text-end`.
+
+Соответственно, переименовываются и конкретные варианты точек останова (например, `.text-md-start` заменяет `.text-md-left`).
+
+##### Миксины
+
+- Переименованы `border-left-radius()` и `border-right-radius()` в `border-start-radius()` и `border-end-radius()` — а также их угловые относительные варианты (например, `.border-bottom-left-radius` стал `.border-bottom-start-radius`).
+- Переименованы `caret-left()` и `caret-right()` в `caret-start()` и `caret-end()` — впоследствии миксин `caret()` теперь принимает в качестве аргументов `start` и `end` вместо `left` и `right`.
+
+##### Переменные
+
+- Новый `$breadcrumb-divider-flipped`, если в RTL нужен другой разделитель хлебных крошек.
+- Переименованы `$navbar-brand-margin-right` в `$navbar-brand-margin-end`.
+- Переименованы `$pagination-margin-left` в `$pagination-margin-start`.
+- Переименованы `$form-check-padding-left` в `$form-check-padding-start`.
+- Переименованы `$form-switch-padding-left` в `$form-switch-padding-start`.
+- Переименованы `$form-check-inline-margin-right` в `$form-check-inline-margin-end`.
+- Переименованы `$form-select-feedback-icon-padding-right` в `$form-select-feedback-icon-padding-end`.
+
+
 ### JavaScript
 
-- Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и Вашего собственного кода. Например, мы используем `data-bs-toggle` вместо `data-toggle`.
 
 ### Sass
 
-- Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+- Переименована функция `scale-color()` в `shift-color()`, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.
+
+### Утилиты
+
+- Добавлены новые утилиты `.translate-middle-x` и `.translate-middle-y` для горизонтального или вертикального центрирования абсолютных/фиксированных элементов.
+
+### Компоненты
+
+#### Хлебные крошки
+
+- Упрощен внешний вид панировочных сухарей по умолчанию за счет удаления `padding`, `background-color` и `border-radius`.
+- Добавлено новое настраиваемое свойство CSS `--bs-breadcrumb-divider` для легкой настройки без перекомпиляции CSS.
+
+#### Всплывающие сообщения
+
+- Теперь всплывающие сообщения(тосты) можно [позиционировать]({{< docsref "/components/toasts#размещение" >}}) в `.toast-container` с помощью [утилит позиционирования]({{< docsref "/utilities/position" >}}).
 
 ## v5.0.0-alpha3
 

@@ -30,7 +30,7 @@ aliases: "/docs/5.0/helpers/"
 
 {{< example >}}
 <div class="bg-info clearfix">
-  <button type="button" class="btn btn-secondary float-left">Кнопка примера перемещена влево</button>
-  <button type="button" class="btn btn-secondary float-right">Кнопка примера перемещена вправо</button>
+  <button type="button" class="btn btn-secondary float-start">Кнопка примера перемещена влево</button>
+  <button type="button" class="btn btn-secondary float-end">Кнопка примера перемещена вправо</button>
 </div>
 {{< /example >}}

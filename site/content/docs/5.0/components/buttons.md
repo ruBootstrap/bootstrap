@@ -160,7 +160,7 @@ Bootstrap включает несколько предопределенных �
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary mr-md-2" type="button">Кнопка</button>
+  <button class="btn btn-primary me-md-2" type="button">Кнопка</button>
   <button class="btn btn-primary" type="button">Кнопка</button>
 </div>
 {{< /example >}}

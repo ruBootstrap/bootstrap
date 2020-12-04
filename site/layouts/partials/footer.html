@@ -1,11 +1,11 @@
-<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-left">
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
   <div class="container">
-    <ul class="bd-footer-links pl-0 mb-3">
+    <ul class="bd-footer-links ps-0 mb-3">
       <li class="d-inline-block"><a href="{{ .Site.Params.telegram_ru }}">Чат в телеграмм</a></li>
-      <li class="d-inline-block ml-3"><a href="{{ .Site.Params.github_org }}">GitHub</a></li>
-      <li class="d-inline-block ml-3"><a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a></li>
-      <li class="d-inline-block ml-3"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Примеры</a></li>
-      <li class="d-inline-block ml-3"><a href="/docs/{{ .Site.Params.docs_version }}/about/overview/">Инфо</a></li>
+      <li class="d-inline-block"><a href="{{ .Site.Params.github_org }}">GitHub</a></li>
+      <li class="d-inline-block ms-3"><a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a></li>
+      <li class="d-inline-block ms-3"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Примеры</a></li>
+      <li class="d-inline-block ms-3"><a href="/docs/{{ .Site.Params.docs_version }}/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/{{ .Site.Params.docs_version }}/about/team/">командой Bootstrap</a> с помощью <a href="{{ .Site.Params.repo }}/graphs/contributors">наших контрибьюторов</a>.</p>
     <p class="mb-0">Текущая версия v{{ .Site.Params.current_version }}. Код под лицензией <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>

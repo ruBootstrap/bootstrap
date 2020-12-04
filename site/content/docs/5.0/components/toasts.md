@@ -13,8 +13,7 @@ toc: true
 Что нужно знать при использовании плагина всплывающих сообщений:
 
 - Всплывающие сообщения включены по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно**.
-- **Обратите внимание, что Вы несете ответственность за размещение всплывающих сообщений.**
-- Всплывающие сообщения  будут автоматически скрываться, если Вы не укажете `autohide: false`.
+- Всплывающие сообщения будут автоматически скрываться, если Вы не укажете `autohide: false`.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -31,8 +30,8 @@ toc: true
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-    <strong class="mr-auto">Bootstrap</strong>
+    {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+    <strong class="me-auto">Bootstrap</strong>
     <small>11 мин. назад</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
@@ -49,8 +48,8 @@ toc: true
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-    <strong class="mr-auto">Bootstrap</strong>
+    {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+    <strong class="me-auto">Bootstrap</strong>
     <small class="text-muted">11 мин. назад</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
@@ -62,30 +61,32 @@ toc: true
 
 ### Укладка
 
-Когда у Вас несколько тостов, мы по умолчанию располагаем их вертикально для удобного чтения.
+Вы можете складывать всплывающие сообщения, завернув их в контейнер для тостов, который по вертикали добавит некоторого расстояния.
 
 {{< example class="bg-light" >}}
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-    <strong class="mr-auto">Bootstrap</strong>
-    <small class="text-muted">прямо сейчас</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+<div class="toast-container">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">прямо сейчас</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+    <div class="toast-body">
+      Видите? Именно так.
+    </div>
   </div>
-  <div class="toast-body">
-    Видно? Именно так.
-  </div>
-</div>
 
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-    <strong class="mr-auto">Bootstrap</strong>
-    <small class="text-muted">2 секунды назад</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-  </div>
-  <div class="toast-body">
-    Внимание, тосты складываются автоматически
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">2 секунды назад</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+    <div class="toast-body">
+      Внимание, всплывающие сообщения складываются автоматически
+    </div>
   </div>
 </div>
 {{< /example >}}
@@ -99,7 +100,7 @@ toc: true
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
   </div>
-  <button type="button" class="btn-close ml-auto mr-2" data-bs-dismiss="toast" aria-label="Close"></button>
+  <button type="button" class="btn-close ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -126,7 +127,7 @@ toc: true
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
   </div>
-  <button type="button" class="btn-close btn-close-white ml-auto mr-2" data-bs-dismiss="toast" aria-label="Close"></button>
+  <button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -134,17 +135,35 @@ toc: true
 
 Размещайте тосты с настраиваемым CSS по мере необходимости. Верхний правый угол часто используется для уведомлений, как и верхний средний. Если Вы собираетесь показывать только один тост за раз, поместите стили позиционирования прямо в `.toast`.
 
-{{< example class="bg-dark" >}}
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-  <div class="toast" style="position: absolute; top: 0; right: 0;">
-    <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-      <strong class="mr-auto">Bootstrap</strong>
-      <small>11 мин. назад</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-    </div>
-    <div class="toast-body">
-      Привет мир! Это тост-сообщение.
+{{< example >}}
+<form>
+  <div class="form-group mb-3">
+    <label for="selectToastPlacement">Размещение всплывающего сообщения</label>
+    <select class="form-select mt-2" id="selectToastPlacement">
+      <option value="" selected>Выберите позицию...</option>
+      <option value="top-0 start-0">Верх слева</option>
+      <option value="top-0 start-50 translate-middle-x">Верх по центру</option>
+      <option value="top-0 end-0">Верх справа</option>
+      <option value="top-50 start-0 translate-middle-y">Середина слева</option>
+      <option value="top-50 start-50 translate-middle">Середина по центру</option>
+      <option value="top-50 end-0 translate-middle-y">Середина справа</option>
+      <option value="bottom-0 start-0">Низ слева</option>
+      <option value="bottom-0 start-50 translate-middle-x">Низ по центру</option>
+      <option value="bottom-0 end-0">Низ справа</option>
+    </select>
+  </div>
+</form>
+<div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+  <div class="toast-container position-absolute p-3" id="toastPlacement">
+    <div class="toast">
+      <div class="toast-header">
+        {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 мин назад</small>
+      </div>
+      <div class="toast-body">
+        Привет мир! Это тост-сообщение.
+      </div>
     </div>
   </div>
 </div>
@@ -152,17 +171,20 @@ toc: true
 
 Для систем, которые генерируют больше уведомлений, рассмотрите возможность использования элемента упаковки, чтобы их можно было легко складывать.
 
-{{< example class="bg-dark" >}}
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-  <!-- Расположите это -->
-  <div style="position: absolute; top: 0; right: 0;">
+{{< example class="bg-dark bd-example-toasts p-0" >}}
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+  <!-- Позиционируйте его: -->
+  <!-- - `.toast-container` для промежутка между тостами -->
+  <!-- - `.position-absolute`, `top-0` & `end-0` чтобы тосты располагались в правом верхнем углу -->
+  <!-- - `.p-3` чтобы тосты не прилипали к краю контейнера  -->
+  <div class="toast-container position-absolute top-0 end-0 p-3">
 
     <!-- Затем положите тосты внутрь -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-        <strong class="mr-auto">Bootstrap</strong>
-        <small class="text-muted">прямо сейчас</small>
+        {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">just now</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
       <div class="toast-body">
@@ -172,8 +194,8 @@ toc: true
 
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-        <strong class="mr-auto">Bootstrap</strong>
+        {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+        <strong class="me-auto">Bootstrap</strong>
         <small class="text-muted">2 секунды назад</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
@@ -187,16 +209,16 @@ toc: true
 
 Вы также можете поработать с утилитами flexbox для выравнивания тостов по горизонтали и/или вертикали.
 
-{{< example class="bg-dark" >}}
+{{< example class="bg-dark bd-example-toasts d-flex" >}}
 <!-- Контейнер Flexbox для выравнивания тостов -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
   <!-- Затем положите тосты внутрь -->
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-      {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-      <strong class="mr-auto">Bootstrap</strong>
-      <small>11 мин. назад</small>
+      {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 мин назад</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
@@ -227,8 +249,8 @@ toc: true
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
-    {{< placeholder width="20" height="20" background="#007aff" class="rounded mr-2" text="false" title="false" >}}
-    <strong class="mr-auto">Bootstrap</strong>
+    {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+    <strong class="me-auto">Bootstrap</strong>
     <small>11 мин. назад</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
