@@ -21,13 +21,13 @@
     - v: "4.5"
 
 - group: v5.x
-  baseurl: "https://v5.getbootstrap.com/docs"
-  description: "Текущая мажорная версия. Последнее обновление v5.0.0-alpha3."
+  baseurl: "https://getbootstrap.com/docs"
+  description: "Текущая мажорная версия. Последнее обновление v5.0.0-beta1."
   versions:
     - v: "5.0"
 
 - group: v5.x [RU]
   baseurl: "https://getbootstrap.su/docs"
-  description: "Текущий основной выпуск. Последнее обновление v5.0.0-alpha3."
+  description: "Текущий основной выпуск. Последнее обновление v5.0.0-beta1."
   versions:
     - v: "5.0"

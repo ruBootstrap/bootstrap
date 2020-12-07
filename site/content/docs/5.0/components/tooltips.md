@@ -21,6 +21,10 @@ toc: true
 - Всплывающие подсказки могут запускаться благодаря элементу внутри теневой модели DOM.
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
@@ -249,27 +253,17 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       </td>
     </tr>
     <tr>
-      <td><code>offset</code></td>
-      <td>number | string | function</td>
-      <td><code>0</code></td>
-      <td>
-        <p>Смещение всплывающей подсказки относительно цели.</p>
-        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a> Popper.</p>
-      </td>
-    </tr>
-    <tr>
       <td><code>fallbackPlacement</code></td>
-      <td>string | array</td>
-      <td><code>'flip'</code></td>
-      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации см.
-     <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+      <td>null | array</td>
+      <td><code>null</code></td>
+      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документации о поведении</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
-      <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию предотвращения переполнения</a> Popper.</td>
+      <td><code>'clippingParents'</code></td>
+      <td>Граница ограничения переполнения всплывающей подсказки. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в Popper <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">документации preventOverflow</a>.</td>
+    </tr>
     <tr>
       <td><code>customClass</code></td>
       <td>string | function</td>
@@ -283,7 +277,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Включите или отключите очистку. Если активировано, параметры <code>'template'</code> и <code>'title'</code> варианты будут продезинфицированы.</td>
+      <td>Включите или отключите дезинфекцию. Если активированы параметры <code>'template'</code> и <code>'title'</code> , будут очищены. Смотрите раздел <a href="{{< docsref "/getting-started/javascript#очистка" >}}">очистки в нашей документации по JavaScript</a>.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>

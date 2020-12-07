@@ -27,7 +27,7 @@ import Alert from 'bootstrap/js/dist/alert';
 ```
 
 Bootstrap зависит от [Popper](https://popper.js.org/), который указан в свойстве `peerDependencies`.
-Это означает, что Вам нужно обязательно добавить его в свой `package.json` используя `npm install popper.js`.
+Это означает, что Вам нужно обязательно добавить его в свой `package.json` используя `npm install @popperjs/core`.
 
 ## Импорт Стилей
 

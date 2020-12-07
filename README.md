@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.su/docs/5.0/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://v5.getbootstrap.com/docs/5.0/"><strong>[EN] Explore Bootstrap docs »</strong></a>
+  <a href="https://getbootstrap.su/docs/5.0/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.0/"><strong>[EN] Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Report bug</a>
@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.0-alpha3.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.0-beta1.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
 - Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.0-alpha3`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.0-beta1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.0/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
@@ -141,7 +141,7 @@ bootstrap/
 
 ## Документация
 
-Документация Bootstrap, включенная в этот репо в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://v5.getbootstrap.com/>. Документы также можно запускать локально.
+Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://getbootstrap.com/>. Документы также можно запускать локально.
 
 Поиск по документации поддерживается [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
 

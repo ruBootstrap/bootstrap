@@ -644,7 +644,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Меню с выравниванием по правому краю
+    Пример меню с выравниванием по правому краю
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
     <li><button class="dropdown-item" type="button">Действие</button></li>
@@ -873,32 +873,22 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
   </thead>
   <tbody>
     <tr>
-      <td><code>offset</code></td>
-      <td>number | string | function</td>
-      <td><code>0</code></td>
-      <td>
-        <p>Смещение выпадающего списка относительно его цели.</p>
-        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации смещения</a> Popper.</p>
-      </td>
-    </tr>
-    <tr>
       <td><code>flip</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Разрешить выпадающий список переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документации переворотов</a> Popper.</td>
+      <td>Разрешить раскрывающемуся списку переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/">документацию</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения выпадающего меню. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращения переполнения</a> Popper.</td>
+      <td>Граница ограничения переполнения раскрывающегося меню. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow документации</a> Popper.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
       <td>string | element</td>
       <td><code>'toggle'</code></td>
-      <td>Ссылочный элемент выпадающего меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылку HTMLElement. Дополнительную информацию см в <a href="https://popper.js.org/docs/v1/#referenceObject">документацию ссылки объекта</a> Popper.</td>
+      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылки HTMLElement. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/constructors/#createpopper">документацию по конструктору</a> Popper.</td>
     </tr>
     <tr>
       <td><code>display</code></td>

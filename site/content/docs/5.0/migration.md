@@ -56,6 +56,9 @@ toc: true
 ### JavaScript
 
 - Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и Вашего собственного кода. Например, мы используем `data-bs-toggle` вместо `data-toggle`.
+- Обновлен Popper до v2.x:
+  - Удалена опция `offset` из наших плагинов Tooltip/Popover и Dropdown; это все еще может быть достигнуто с помощью параметра `popperConfig`.
+  - Параметр `fallbackPlacement` стал `fallbackPlacements`.
 
 ### Sass
 

@@ -22,6 +22,10 @@ toc: true
 - Всплывающие окна могут запускаться благодаря элементу внутри теневой DOM.
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
@@ -275,7 +279,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Включите или отключите обеззараживание. Если активированы параметры <code>'template'</code>, <code>'content'</code> и <code>'title'</code> будут очищены.</td>
+      <td>Включите или отключите дезинфекцию. Если активированы параметры <code>'template'</code>, <code>'content'</code> и <code>'title'</code>, будут очищены. Смотрите раздел <a href="{{< docsref "/getting-started/javascript#чистильщик" >}}">очистки в нашей документации по JavaScript</a>.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
