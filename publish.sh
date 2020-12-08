@@ -15,8 +15,8 @@ echo "Removing existing files"
 rm -rf $docs/*
 
 echo "Generating site"
-npm run docs-build
-# hugo
+# npm run docs-build
+hugo
 
 echo "Updating gh-pages branch"
 
