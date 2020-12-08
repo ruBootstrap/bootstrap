@@ -26,6 +26,10 @@ toc: true
 {{< /callout >}}
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 

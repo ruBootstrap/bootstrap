@@ -25,6 +25,10 @@ toc: true
 {{< /callout >}}
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
@@ -256,7 +260,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>fallbackPlacement</code></td>
       <td>null | array</td>
       <td><code>null</code></td>
-      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документации о поведении</a> Popper.</td>
+      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документации о поведении</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
