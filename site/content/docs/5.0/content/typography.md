@@ -132,7 +132,7 @@ Bootstrap устанавливает основные глобальные ст�
 
 {{< example >}}
 <p class="lead">
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  This is a lead paragraph. It stands out from regular paragraphs.
 </p>
 {{< /example >}}
 
@@ -188,7 +188,7 @@ Bootstrap устанавливает основные глобальные ст�
 
 {{< example >}}
 <blockquote class="blockquote">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p>A well-known quote, contained in a blockquote element.</p>
 </blockquote>
 {{< /example >}}
 
@@ -199,7 +199,7 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure>
   <blockquote class="blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
@@ -214,7 +214,7 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure class="text-center">
   <blockquote class="blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
@@ -225,7 +225,7 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure class="text-end">
   <blockquote class="blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
@@ -241,21 +241,18 @@ Bootstrap устанавливает основные глобальные ст�
 
 {{< example >}}
 <ul class="list-unstyled">
-  <li>Lorem ipsum dolor sit amet</li>
-  <li>Consectetur adipiscing elit</li>
-  <li>Integer molestie lorem at massa</li>
-  <li>Facilisis in pretium nisl aliquet</li>
-  <li>Nulla volutpat aliquam velit
+  <li>This is a list.</li>
+  <li>It appears completely unstyled.</li>
+  <li>Structurally, it's still a list.</li>
+  <li>However, this style only applies to immediate child elements.</li>
+  <li>Nested lists:
     <ul>
-      <li>Phasellus iaculis neque</li>
-      <li>Purus sodales ultricies</li>
-      <li>Vestibulum laoreet porttitor sem</li>
-      <li>Ac tristique libero volutpat at</li>
+      <li>are unaffected by this style</li>
+      <li>will still show a bullet</li>
+      <li>and have appropriate left margin</li>
     </ul>
   </li>
-  <li>Faucibus porta lacus fringilla vel</li>
-  <li>Aenean sit amet erat nunc</li>
-  <li>Eget porttitor lorem</li>
+  <li>This may still come in handy in some situations.</li>
 </ul>
 {{< /example >}}
 
@@ -265,9 +262,9 @@ Bootstrap устанавливает основные глобальные ст�
 
 {{< example >}}
 <ul class="list-inline">
-  <li class="list-inline-item">Lorem ipsum</li>
-  <li class="list-inline-item">Phasellus iaculis</li>
-  <li class="list-inline-item">Nulla volutpat</li>
+  <li class="list-inline-item">This is a list item.</li>
+  <li class="list-inline-item">And another one.</li>
+  <li class="list-inline-item">But they're displayed inline.</li>
 </ul>
 {{< /example >}}
 
@@ -280,23 +277,23 @@ Bootstrap устанавливает основные глобальные ст�
   <dt class="col-sm-3">Списки описаний</dt>
   <dd class="col-sm-9">Список описаний идеально подходит для определения терминов.</dd>
 
-  <dt class="col-sm-3">Euismod</dt>
+  <dt class="col-sm-3">Термин</dt>
   <dd class="col-sm-9">
-    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-    <p>Donec id elit non mi porta gravida at eget metus.</p>
+    <p>Определение термина.</p>
+    <p>И еще немного текста определения заполнителя.</p>
   </dd>
 
-  <dt class="col-sm-3">Malesuada porta</dt>
-  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+  <dt class="col-sm-3">Другой термин</dt>
+  <dd class="col-sm-9">Это определение короткое, поэтому никаких лишних абзацев или чего-либо еще.</dd>
 
-  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-  <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+  <dt class="col-sm-3 text-truncate">Усеченный термин усечен</dt>
+  <dd class="col-sm-9">Это может быть полезно, когда места мало. Добавляет многоточие в конце.</dd>
 
   <dt class="col-sm-3">Вложенность</dt>
   <dd class="col-sm-9">
     <dl class="row">
       <dt class="col-sm-4">Список вложенных определений</dt>
-      <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+      <dd class="col-sm-8">Я слышал, Вам нравятся списки определений. Позвольте мне поместить список определений в Ваш список определений.</dd>
     </dl>
   </dd>
 </dl>

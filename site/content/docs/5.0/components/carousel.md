@@ -121,21 +121,21 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка первого слайда</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Второй слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка второго слайда</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка третьего слайда</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
       </div>
     </div>
   </div>
@@ -222,21 +222,21 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#aaa" background="#f5f5f5" text="Первый слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка первого слайда</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#bbb" background="#eee" text="Второй слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка второго слайда</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#999" background="#e5e5e5" text="Третий слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка третьего слайда</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
       </div>
     </div>
   </div>

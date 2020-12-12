@@ -86,7 +86,7 @@ toc: true
     </tr>
     <tr>
       <td>Скрыто только на xl</td>
-      <td><code>.d-xl-none</code></td>
+      <td><code>.d-xl-none .d-xxl-block</code></td>
     </tr>
     <tr>
       <td>Скрыто только на xxl</td>

@@ -254,22 +254,17 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td>Как запускается всплывающее окно - click | hover | focus | manual. Вы можете передать несколько триггеров; разделите их пробелом. <code>manual</code> нельзя комбинировать с другими триггерами.</td>
     </tr>
     <tr>
-      <td><code>offset</code></td>
-      <td>number | string</td>
-      <td><code>0</code></td>
-      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документация по смещению </a> Popper.</td>
-    </tr>
-    <tr>
-      <td><code>fallbackPlacement</code></td>
+      <td><code>fallbackPlacements</code></td>
       <td>string | array</td>
       <td><code>'flip'</code></td>
-      <td>Разрешить указать, какую позицию Всплывающего окна будет использовать при откате. Для получения дополнительной информации см. <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документация по поведению</a> Popper.</td>
+      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документацию о поведении Popper</a>.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации обратитесь к Popper <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации предотвращение переполнения</a>.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">документации preventOverflow Popper</a>.</td>
+    </tr>
     <tr>
       <td><code>customClass</code></td>
       <td>string | function</td>
@@ -301,7 +296,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

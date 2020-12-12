@@ -53,10 +53,10 @@ toc: true
 
     <!-- Дополнительный JavaScript; выберите один из двух! -->
 
-    <!-- Вариант 1: пакет Bootstrap с Popper.js -->
+    <!-- Вариант 1: пакет Bootstrap с Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Вариант 2: отдельные Popper.js и Bootstrap JS-->
+    <!-- Вариант 2: отдельные JS для Popper и Bootstrap -->
     <!--
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>

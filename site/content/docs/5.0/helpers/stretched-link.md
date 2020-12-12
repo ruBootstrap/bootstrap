@@ -29,12 +29,11 @@ group: helpers
   {{< placeholder width="144" height="144" class="flex-shrink-0 me-3" text="false" title="Общее изображение-заглушка" >}}
   <div>
     <h5 class="mt-0">Пользовательский компонент с растянутой ссылкой</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <a href="#" class="stretched-link">Перейти куда-нибудь</a>
+    <p>Это некий заполнитель для пользовательского компонента. Он предназначен для имитации того, как будет выглядеть реальный контент, и мы используем его здесь, чтобы придать компоненту немного тела и размера.</p>
+    <a href="#" class="stretched-link">Иди куда-нибудь</a>
   </div>
 </div>
 {{< /example >}}
-
 
 {{< example >}}
 <div class="row g-0 bg-light position-relative">
@@ -43,8 +42,8 @@ group: helpers
   </div>
   <div class="col-md-6 p-4 ps-md-0">
     <h5 class="mt-0">Столбцы с растянутой ссылкой</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <a href="#" class="stretched-link">Перейти куда-нибудь</a>
+    <p>Другой экземпляр содержимого-заполнителя для этого другого настраиваемого компонента. Он предназначен для имитации того, как будет выглядеть реальный контент, и мы используем его здесь, чтобы придать компоненту немного тела и размера.</p>
+    <a href="#" class="stretched-link">Иди куда-нибудь</a>
   </div>
 </div>
 {{< /example >}}

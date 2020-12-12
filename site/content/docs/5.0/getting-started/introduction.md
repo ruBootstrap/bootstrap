@@ -151,12 +151,11 @@ Bootstrap разработан *mobile first (сначала мобильный)
 
 Будьте в курсе развития Bootstrap и обращайтесь к сообществу с помощью этих полезных ресурсов.
 
-- Обсуждайте в чате Telegram [@getbootstrap_ru](https://t.me/getbootstrap_ru).
-- Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
-- Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/).
-- Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).
+- Обсуждайте в чате Telegram [@getbootstrap_ru]({{< param telegram >}}).
+- Читайте и подписывайтесь на [Официальный блог Bootstrap]({{< param blog >}}).
+- Присоединиться к [официальной комнате Slack]({{< param slack >}}).
 - Общайтесь с другими Bootstrappers в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
-- Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.
+- Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/search?q=keywords:bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.
 
 Вы также можете следить за [@getbootstrap в Твиттере](https://twitter.com/{{< param twitter >}}), чтобы следить за последними слухами и потрясающими музыкальными клипами.

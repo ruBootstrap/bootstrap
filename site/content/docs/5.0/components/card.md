@@ -81,9 +81,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -94,9 +94,9 @@ toc: true
     Рекомендуемые
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -104,9 +104,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-footer">
     Футер карточки
@@ -126,9 +126,9 @@ toc: true
     <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Ссылка карточки</a>
@@ -174,7 +174,7 @@ toc: true
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>Известная цитата, содержащаяся в элементе цитаты..</p>
       <footer class="blockquote-footer">Кто-то известный в <cite title="Заголовок источника">Заголовке источника</cite></footer>
     </blockquote>
   </div>

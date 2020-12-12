@@ -900,7 +900,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию в Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

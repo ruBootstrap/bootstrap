@@ -50,8 +50,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-bs-toggle="tooltip" title="Подсказка по умолчанию">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-bs-toggle="tooltip" title="Другая подсказка">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-bs-toggle="tooltip" title="Еще один здесь тоже">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-bs-toggle="tooltip" title="Последний совет!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
-  </p>
+  <p class="muted">Текст-заполнитель для демонстрации некоторых <a href="#" data-bs-toggle="tooltip" title="Всплывающая подсказка по умолчанию">инлайновых ссылок</a> с подсказками. Теперь это просто наполнитель, а не убийца. Содержимое размещено здесь только для имитации присутствия <a href="#" data-bs-toggle="tooltip" title="Другая всплывающая подсказка">настоящего текста</a>. И все это просто для того, чтобы дать вам представление о том, как всплывающие подсказки будут выглядеть при использовании в реальных ситуациях. Надеюсь, Вы теперь увидели, как <a href="#" data-bs-toggle="tooltip" title="Еще один здесь тоже">эти всплывающие подсказки по ссылкам</a> могут работать на практике, если вы их используете. на <a href="#" data-bs-toggle="tooltip" title="Последний совет!">вашем собственном</a> сайте или проекте.</p>
 </div>
 
 Наведите курсор на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево. Направления зеркалируются при использовании Bootstrap в RTL.
@@ -257,7 +256,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       </td>
     </tr>
     <tr>
-      <td><code>fallbackPlacement</code></td>
+      <td><code>fallbackPlacements</code></td>
       <td>null | array</td>
       <td><code>null</code></td>
       <td>Разрешить указать, какую позицию Popper будет использовать при откате. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документации о поведении</a> Popper.</td>
@@ -299,7 +298,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, см. <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>
