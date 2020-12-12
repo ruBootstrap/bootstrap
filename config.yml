@@ -57,6 +57,7 @@ params:
   telegram_ru:          "https://t.me/getbootstrap_ru"
   repo:                 "https://github.com/twbs/bootstrap"
   repo_ru_bootstrap:    "https://github.com/ruBootstrap/bootstrap"
+  telegram:             "https://t.me/getbootstrap_ru"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com/"
   opencollective:       "https://opencollective.com/bootstrap"
