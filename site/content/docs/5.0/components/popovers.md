@@ -66,41 +66,20 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 Доступны четыре варианта: по верхнему, правому, нижнему и левому краям. Направления зеркалируются при использовании Bootstrap в RTL.
 
-<div class="bd-example popover-demo">
-  <div class="bd-example-popovers">
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее сообщение вверху
-    </button>
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее сообщение справа
-    </button>
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее сообщение внизу
-    </button>
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее сообщение слева
-    </button>
-  </div>
-</div>
-
-```html
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Всплывающее сообщение вверху
+{{< example >}}
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+  Всплывающее окно вверху
 </button>
-
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Всплывающее сообщение справа
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+  Всплывающее окно справа
 </button>
-
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
-  Всплывающее сообщение внизу
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+  Всплывающее окно внизу
 </button>
-
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Всплывающее сообщение слева
+<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+  Всплывающее окно слева
 </button>
-```
+{{< /example >}}
 
 ### Отклонить при следующем нажатии
 
@@ -124,13 +103,13 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 ### Отключенные элементы
 
-Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути вы захотите запустить всплывающее окно из оболочки `<div>` или `<span>` и переопределить `pointer-events` на отключенном элементе.
+Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути вы захотите вызвать всплывающее окно из оболочки `<div>` или `<span>`.
 
 Для отключенных триггеров всплывающего окна Вы также можете предпочесть `data-bs-trigger="hover"`, чтобы всплывающее окно отображалось как немедленная визуальная обратная связь для Ваших пользователей, поскольку они могут не ожидать _клик_ на отключенный элемент.
 
 {{< example >}}
 <span class="d-inline-block" data-bs-toggle="popover" data-bs-content="Отключенное всплывающее окно">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
+  <button class="btn btn-primary" type="button" disabled>Отключенная кнопка</button>
 </span>
 {{< /example >}}
 
@@ -255,9 +234,9 @@ var popover = new bootstrap.Popover(exampleEl, options)
     </tr>
     <tr>
       <td><code>fallbackPlacements</code></td>
-      <td>string | array</td>
-      <td><code>'flip'</code></td>
-      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документацию о поведении Popper</a>.</td>
+      <td>array</td>
+      <td><code>['top', 'right', 'bottom', 'left']</code></td>
+      <td>Определите резервные места размещения, предоставив список мест размещения в массиве (в порядке предпочтения). Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документацию о поведении</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>

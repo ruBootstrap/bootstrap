@@ -148,12 +148,12 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Отключенные элементы
 
-Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут сфокусироваться, навести на них курсор или щелкнуть их, чтобы вызвать всплывающую подсказку (или всплывающее окно). В качестве обходного пути Вы захотите вызвать всплывающую подсказку из оболочки `<div>` или `<span>`, в идеале сделанной с фокусировкой на клавиатуре, используя `tabindex="0"`, и переопределить `pointer-events` на отключенный элемент.
+Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут сфокусироваться, навести на них курсор или щелкнуть их, чтобы вызвать всплывающую подсказку (или всплывающее окно). В качестве обходного пути Вы захотите вызвать всплывающую подсказку из оболочки `<div>` или `<span>`, в идеале сделанной с фокусировкой на клавиатуре, используя `tabindex="0"`.
 
 <div class="tooltip-demo">
 {{< example >}}
-<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Отключенная всплывающая подсказка">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
+<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Отключенная подсказка">
+  <button class="btn btn-primary" type="button" disabled>Отключенная кнопка</button>
 </span>
 {{< /example >}}
 </div>
@@ -257,9 +257,9 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
     </tr>
     <tr>
       <td><code>fallbackPlacements</code></td>
-      <td>null | array</td>
-      <td><code>null</code></td>
-      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документации о поведении</a> Popper.</td>
+      <td>array</td>
+      <td><code>['top', 'right', 'bottom', 'left']</code></td>
+      <td>Определите резервные места размещения, предоставив список мест размещения в массиве (в порядке предпочтения). Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">документацию о поведении</a> Popper.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>

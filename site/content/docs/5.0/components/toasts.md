@@ -137,8 +137,8 @@ toc: true
 
 {{< example >}}
 <form>
-  <div class="form-group mb-3">
-    <label for="selectToastPlacement">Размещение всплывающего сообщения</label>
+  <div class="mb-3">
+    <label for="selectToastPlacement">Размещение тостов</label>
     <select class="form-select mt-2" id="selectToastPlacement">
       <option value="" selected>Выберите позицию...</option>
       <option value="top-0 start-0">Верх слева</option>
