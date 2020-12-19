@@ -118,7 +118,7 @@ $font-family-sans-serif:
   Helvetica Neue #{"/* rtl:insert:Arabic */"},
   // Кросс-платформенное общее семейство шрифтов (шрифт пользовательского интерфейса по умолчанию)
   system-ui,
-  // Safari для macOS and iOS (San Francisco)
+  // Safari для macOS и iOS (San Francisco)
   -apple-system,
   // Chrome < 56 для macOS (Сан-Франциско)
   BlinkMacSystemFont,

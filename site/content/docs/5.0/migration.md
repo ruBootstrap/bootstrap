@@ -11,12 +11,15 @@ toc: true
 
 ### Sass
 
-- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
-- Extended form validation states customization capabilities. Added three new optional parameters to the `form-validation-state` mixin: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. These parameters can be set in the `$form-validation-states` map. [See #31757](https://github.com/twbs/bootstrap/pull/31757).
+#### Утилиты
+
+- Расширен помощник `.visually-hidden-focusable`, чтобы также работать с контейнерами, используя `:focus-within`.
+- `bootstrap-utilities.css` теперь также включает наших помощников. Помощников больше не нужно импортировать в пользовательские сборки.
+- Расширенные возможности настройки состояний проверки формы. Добавлены три новых необязательных параметра `form-validation-state` миксин: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. Эти параметры могут быть установлены в карте `$form-validation-states`. [Смотрите #31757](https://github.com/twbs/bootstrap/pull/31757).
 
 ### JavaScript
 
-- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+- Значение по умолчанию для `fallbackPlacements` изменено на `['top', 'right', 'bottom', 'left']` для лучшего размещения элементов popper.
 
 ## v5.0.0-beta1
 
@@ -30,7 +33,7 @@ toc: true
 
 ##### Компоненты
 
-- Переименованы `.dropleft` и `.dropright` в `.dropstart` и `dropend`.
+- Переименованы `.dropleft` и `.dropright` в `.dropstart` и `.dropend`.
 - Переименованы `.dropdown-menu-*-left` и `.dropdown-menu-*-right` в `.dropdown-menu-*-start` и `.dropdown-menu-*-end`.
 - Переименованы `.bs-popover-left` и `.bs-popover-right` в `.bs-popover-start` и `.bs-popover-end`.
 - Переименованы `.bs-tooltip-left` и `.bs-tooltip-right` в `.bs-tooltip-start` и `.bs-tooltip-end`.
@@ -54,14 +57,6 @@ toc: true
 - Переименованы `caret-left()` и `caret-right()` в `caret-start()` и `caret-end()` — впоследствии миксин `caret()` теперь принимает в качестве аргументов `start` и `end` вместо `left` и `right`.
 
 ##### Переменные
-
-- Новый `$breadcrumb-divider-flipped`, если в RTL нужен другой разделитель хлебных крошек.
-- Переименованы `$navbar-brand-margin-right` в `$navbar-brand-margin-end`.
-- Переименованы `$pagination-margin-left` в `$pagination-margin-start`.
-- Переименованы `$form-check-padding-left` в `$form-check-padding-start`.
-- Переименованы `$form-switch-padding-left` в `$form-switch-padding-start`.
-- Переименованы `$form-check-inline-margin-right` в `$form-check-inline-margin-end`.
-- Переименованы `$form-select-feedback-icon-padding-right` в `$form-select-feedback-icon-padding-end`.
 
 ### JavaScript
 
