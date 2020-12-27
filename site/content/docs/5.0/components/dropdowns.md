@@ -886,9 +886,9 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
     </tr>
     <tr>
       <td><code>reference</code></td>
-      <td>string | element</td>
+      <td>string | element | object</td>
       <td><code>'toggle'</code></td>
-      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылки HTMLElement. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/constructors/#createpopper">документацию по конструктору</a> Popper.</td>
+      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code>, ссылки HTMLElement или объекта, предоставляющего <code>getBoundingClientRect</code>. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/constructors/#createpopper">документации по конструктору</a> и <a href="https://popper.js.org/docs/v2/virtual-elements/">документации виртуальных элементов</a> Popper.</td>
     </tr>
     <tr>
       <td><code>display</code></td>
