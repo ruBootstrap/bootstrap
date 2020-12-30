@@ -206,6 +206,34 @@ toc: true
 </div>
 {{< /example >}}
 
+### Подавление касания смахивания
+
+По умолчанию карусели поддерживают смахивание влево/вправо на устройствах с сенсорным экраном для перемещения между слайдами. Это можно явно подавить с помощью атрибута `data-bs-touch`. Пример ниже также не включает атрибут `data-bs-ride`, и имеет `data-bs-interval="false"`, что означает, что он не будет воспроизводиться автоматически.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+{{< /example >}}
+
 ## Темный вариант
 
 Добавьте `.carousel-dark` к `.carousel` для более темных элементов управления, индикаторов и подписей. Элементы управления были инвертированы по сравнению с их белой заливкой по умолчанию с помощью свойства CSS `filter`. Заголовки и элементы управления имеют дополнительные переменные Sass, которые настраивают `color` и `background-color`.
@@ -286,7 +314,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td><code>interval</code></td>
       <td>number</td>
       <td><code>5000</code></td>
-      <td>Время задержки между автоматическим циклическим переключением элемента. Если false, карусель не будет автоматически повторяться.</td>
+      <td>Время задержки между автоматическим циклическим переключением элемента. Если <code>false</code>, карусель не будет автоматически повторяться.</td>
     </tr>
     <tr>
       <td><code>keyboard</code></td>
@@ -297,15 +325,15 @@ var carousel = new bootstrap.Carousel(myCarousel)
     <tr>
       <td><code>pause</code></td>
       <td>string | boolean</td>
-      <td><code>"hover"</code></td>
-      <td><p>Если установлено значение <code>"hover"</code>, приостанавливает цикл карусели на <code>mouseenter</code> и возобновляет циклическое движение карусели на <code>mouseleave</code>. Если установлено значение <code>false</code>, при наведении курсора на карусель она не приостанавливается.</p>
-      <p>На устройствах с сенсорным экраном, когда установлено значение <code>"hover"</code>, цикл будет приостанавливаться на <code>touchend</code> (после того, как пользователь завершит взаимодействие с каруселью) на два интервала, прежде чем автоматически возобновляется. Обратите внимание, что это в дополнение к описанному выше поведению мыши.</p></td>
+      <td><code>'hover'</code></td>
+      <td><p>Если задано значение <code>'hover'</code>, приостанавливает цикл карусели на <code>mouseenter</code> и возобновляет цикл карусели на <code>mouseleave</code>. Если установлено значение <code>false</code>, при наведении курсора на карусель она не приостанавливается.</p>
+      <p>На устройствах с сенсорным экраном, когда установлено значение <code>'hover'</code>, цикл будет приостанавливаться на <code>touchend</code> (после того, как пользователь закончит взаимодействие с каруселью) на два интервала, прежде чем автоматически возобновляется. Обратите внимание, что это в дополнение к описанному выше поведению мыши.</p></td>
     </tr>
     <tr>
-      <td><code>slide</code></td>
+      <td><code>ride</code></td>
       <td>string | boolean</td>
       <td><code>false</code></td>
-      <td>Автоматически воспроизводит карусель после того, как пользователь вручную перебирает первый элемент. Если "carousel" автоматически воспроизводит карусель при загрузке.</td>
+      <td>Автоматически отображает карусель после того, как пользователь вручную перебирает первый элемент. Если установлено значение <code>'carousel'</code>, карусель автоматически отображается при загрузке.</td>
     </tr>
     <tr>
       <td><code>wrap</code></td>
