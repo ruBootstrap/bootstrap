@@ -236,4 +236,4 @@ bootstrap/
 
 ## Авторское право и лицензия
 
-Авторское право на код и документацию 2011–2020 гг. [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) Код выпущен под [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документы выпущены под [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторские права на код и документацию 2011–2021 гг. принадлежат [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенные под [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

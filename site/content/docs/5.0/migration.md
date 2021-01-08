@@ -13,9 +13,10 @@ toc: true
 
 #### Утилиты
 
+- Параметр `--aspect-ratio` переименован в `--bs-aspect-ratio`, чтобы соответствовать другим настраиваемым свойствам.
 - Расширен помощник `.visually-hidden-focusable`, чтобы также работать с контейнерами, используя `:focus-within`.
 - `bootstrap-utilities.css` теперь также включает наших помощников. Помощников больше не нужно импортировать в пользовательские сборки.
-- Расширенные возможности настройки состояний проверки формы. Добавлены три новых необязательных параметра `form-validation-state` миксин: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. Эти параметры могут быть установлены в карте `$form-validation-states`. [Смотрите #31757](https://github.com/twbs/bootstrap/pull/31757).
+- Расширенные возможности настройки состояний проверки формы. В миксин `form-validation-state` добавлены три новых необязательных параметра: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. Эти параметры могут быть установлены в карте `$form-validation-states`. [Смотрите #31757](https://github.com/twbs/bootstrap/pull/31757).
 
 ### JavaScript
 

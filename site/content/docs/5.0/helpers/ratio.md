@@ -49,10 +49,10 @@ toc: true
 
 Каждый класс `.ratio-*` включает настраиваемое свойство CSS (или переменную CSS) в селекторе. Вы можете переопределить эту переменную CSS, чтобы создавать настраиваемые соотношения сторон на лету с помощью некоторых быстрых вычислений с Вашей стороны.
 
-Например, чтобы создать соотношение сторон 2x1, установите `--aspect-ratio: 50%` для параметра `.ratio`.
+Например, чтобы создать соотношение сторон 2x1, установите `--bs-aspect-ratio: 50%` для параметра `.ratio`.
 
 {{< example class="bd-example-ratios" >}}
-<div class="ratio" style="--aspect-ratio: 50%;">
+<div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
 {{< /example >}}
@@ -62,7 +62,7 @@ toc: true
 ```scss
 .ratio-4x3 {
   @include media-breakpoint-up(md) {
-    --aspect-ratio: 50%; // 2x1
+    --bs-aspect-ratio: 50%; // 2x1
   }
 }
 ```

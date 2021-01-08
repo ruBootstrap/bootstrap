@@ -22,7 +22,7 @@ toc: true
 - `.collapsing` применяется во время переходов
 - `.collapse.show` показывает содержимое
 
-Вы можете использовать ссылку с атрибутом `href` или кнопку с атрибутом `data-bs-target`. В обоих случаях требуется `data-bs-toggle="collapse"`.
+Как правило, мы рекомендуем использовать кнопку с атрибутом `data-bs-target`. Хотя это не рекомендуется с семантической точки зрения, Вы также можете использовать ссылку с атрибутом `href` (и `role="button"`). В обоих случаях требуется `data-bs-toggle="collapse"`.
 
 {{< example >}}
 <p>
@@ -35,7 +35,7 @@ toc: true
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    Некоторый заполнитель для компонента сворачивания. Эта панель по умолчанию скрыта, но открывается, когда пользователь активирует соответствующий триггер.
   </div>
 </div>
 {{< /example >}}
@@ -55,14 +55,14 @@ toc: true
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
-        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        Некоторый заполнитель для первого компонента сворачивания в этом примере множественного сворачивания. Эта панель по умолчанию скрыта, но открывается, когда пользователь активирует соответствующий триггер.
       </div>
     </div>
   </div>
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
-        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        Некоторое содержимое заполнителя для второго компонента сворачивания в этом примере множественного сворачивания. Эта панель по умолчанию скрыта, но открывается, когда пользователь активирует соответствующий триггер.
       </div>
     </div>
   </div>

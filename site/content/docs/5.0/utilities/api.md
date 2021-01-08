@@ -215,9 +215,11 @@ $utilities: (
 
 ### Добавление утилит
 
-Новые утилиты могут быть добавлены к карте по умолчанию `$utilities` с помощью `map-merge`. Сначала убедитесь, что наш `_utilities.scss` импортирован, а затем используйте `map-merge`, чтобы добавить Ваши дополнительные утилиты. Например, вот как добавить отзывчивую утилиту `cursor` с тремя значениями.
+Новые утилиты могут быть добавлены к карте по умолчанию `$utilities` с помощью `map-merge`. Убедитесь, что наши необходимые файлы Sass и `_utilities.scss` сначала импортированы, а затем используйте `map-merge`, чтобы добавить Ваши дополнительные утилиты. Например, вот как добавить отзывчивую утилиту `cursor` с тремя значениями.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -238,6 +240,8 @@ $utilities: map-merge(
 Измените существующие утилиты в карте по умолчанию `$utilities` с помощью функций `map-get` и `map-merge`. В приведенном ниже примере мы добавляем дополнительное значение к утилитам `width`. Начните с начального `map-merge`, а затем укажите, какую утилиту Вы хотите изменить. Оттуда извлеките вложенную карту `"width"` «map-get» для доступа и изменения параметров и значений утилиты.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -261,6 +265,8 @@ $utilities: map-merge(
 Удалите любую из утилит по умолчанию, установив для ключа группы значение `null`. Например, чтобы удалить все наши утилиты `width`, создайте `$utilities`, `map-merge` и добавьте внутрь `"width": null`.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(

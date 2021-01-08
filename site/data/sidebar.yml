@@ -1,3 +1,6 @@
+# This file holds all sidebar menu's entries.
+# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+
 - title: Начало работы
   slug: getting-started
   pages:
@@ -66,11 +69,9 @@
     - title: Containers
       hint: Контейнеры
       slug: containers
-    - title: Grid
+    - title: Сетка
       hint: Сетка
       slug: grid
-    # - title: Rows
-      # slug: rows
     - title: Columns
       hint: Колонки
       slug: columns
@@ -306,3 +307,7 @@
     - title: Переводы
       hint: Переводы
       slug: translations
+
+- title: Миграция
+  hint: Миграция
+  slug: migration
