@@ -80,25 +80,25 @@
 
   </head>
   <body>
-    <div class="skippy overflow-hidden">
+    <div class="skippy visually-hidden-focusable overflow-hidden">
   <div class="container-xl">
-    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#контент">Перейти к основному содержанию</a>
-
-    <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+    <a class="d-inline-flex p-2 m-1" href="#контент">Перейти к основному содержанию</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
   </div>
 </div>
 
 
     <header class="navbar navbar-expand-md navbar-dark bd-navbar">
-  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Основная навигация">
     <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Переключить навигацию">
-      <svg class="bi" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+
     </button>
 
     <div class="collapse navbar-collapse" id="bdNavbar">
@@ -169,7 +169,9 @@
     
   <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
-    
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Поиск в документации..." aria-label="Искать в документации для..." autocomplete="off" data-bd-docs-version="5.0">
+    </form>
 
     <h6>Перевод официальной документации Bootstrap 5</h6>
 
@@ -188,12 +190,12 @@
 
 
     <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
   <title>Expand</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
 </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
   <title>Collapse</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
 </svg>
@@ -206,310 +208,200 @@
   <div class="container-xxl my-md-4 bd-layout">
     <aside class="bd-sidebar">
       <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Навигация документации"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Начало работы
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false"
-        >
-        Начало работы
-      </button>
-      <div class="collapse" id="getting-started-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded"
-              >Вступление</a></li>
-          <li><a href="/docs/5.0/getting-started/download/" class="d-inline-flex align-items-center rounded"
-              >Скачать</a></li>
-          <li><a href="/docs/5.0/getting-started/contents/" class="d-inline-flex align-items-center rounded"
-              >Содержимое</a></li>
-          <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded"
-              >Браузеры и устройства</a></li>
-          <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded"
-              >JavaScript</a></li>
-          <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded"
-              >Инструменты сборки</a></li>
-          <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded"
-              >Webpack</a></li>
-          <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded"
-              >Доступность</a></li>
-          <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded"
-              >RFS</a></li>
-          <li><a href="/docs/5.0/getting-started/rtl/" class="d-inline-flex align-items-center rounded"
-              >RTL</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Вступление</a></li>
+              <li><a href="/docs/5.0/getting-started/download/" class="d-inline-flex align-items-center rounded">Скачать</a></li>
+              <li><a href="/docs/5.0/getting-started/contents/" class="d-inline-flex align-items-center rounded">Содержимое</a></li>
+              <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Браузеры и устройства</a></li>
+              <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">Инструменты сборки</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Доступность</a></li>
+              <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.0/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Настройка
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false"
-        >
-        Настройка
-      </button>
-      <div class="collapse" id="customize-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded"
-              >Обзор</a></li>
-          <li><a href="/docs/5.0/customize/sass/" class="d-inline-flex align-items-center rounded"
-              >Sass</a></li>
-          <li><a href="/docs/5.0/customize/options/" class="d-inline-flex align-items-center rounded"
-              >Параметры</a></li>
-          <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded"
-              >Цвет</a></li>
-          <li><a href="/docs/5.0/customize/components/" class="d-inline-flex align-items-center rounded"
-              >Компоненты</a></li>
-          <li><a href="/docs/5.0/customize/css-variables/" class="d-inline-flex align-items-center rounded"
-              >CSS переменные</a></li>
-          <li><a href="/docs/5.0/customize/optimize/" class="d-inline-flex align-items-center rounded"
-              >Оптимизация</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded">Обзор</a></li>
+              <li><a href="/docs/5.0/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.0/customize/options/" class="d-inline-flex align-items-center rounded">Параметры</a></li>
+              <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded">Цвет</a></li>
+              <li><a href="/docs/5.0/customize/components/" class="d-inline-flex align-items-center rounded">Компоненты</a></li>
+              <li><a href="/docs/5.0/customize/css-variables/" class="d-inline-flex align-items-center rounded">CSS переменные</a></li>
+              <li><a href="/docs/5.0/customize/optimize/" class="d-inline-flex align-items-center rounded">Оптимизация</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Макет
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false"
-        >
-        Макет
-      </button>
-      <div class="collapse" id="layout-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded"
-              >Breakpoints</a></li>
-          <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded"
-              >Containers</a></li>
-          <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded"
-              >Grid</a></li>
-          <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded"
-              >Columns</a></li>
-          <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded"
-              >Gutters</a></li>
-          <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded"
-              >Utilities</a></li>
-          <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded"
-              >Z-index</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Containers</a></li>
+              <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Сетка</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Columns</a></li>
+              <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilities</a></li>
+              <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+          Контент
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false"
-        >
-        Контент
-      </button>
-      <div class="collapse" id="content-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded"
-              >Reboot</a></li>
-          <li><a href="/docs/5.0/content/typography/" class="d-inline-flex align-items-center rounded"
-              >Типография</a></li>
-          <li><a href="/docs/5.0/content/images/" class="d-inline-flex align-items-center rounded"
-              >Изображения</a></li>
-          <li><a href="/docs/5.0/content/tables/" class="d-inline-flex align-items-center rounded"
-              >Таблицы</a></li>
-          <li><a href="/docs/5.0/content/figures/" class="d-inline-flex align-items-center rounded"
-              >Figures</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.0/content/typography/" class="d-inline-flex align-items-center rounded">Типография</a></li>
+              <li><a href="/docs/5.0/content/images/" class="d-inline-flex align-items-center rounded">Изображения</a></li>
+              <li><a href="/docs/5.0/content/tables/" class="d-inline-flex align-items-center rounded">Таблицы</a></li>
+              <li><a href="/docs/5.0/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+          Формы
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false"
-        >
-        Формы
-      </button>
-      <div class="collapse" id="forms-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded"
-              >Обзор</a></li>
-          <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded"
-              >Form control</a></li>
-          <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded"
-              >Select</a></li>
-          <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded"
-              >Checks &amp; radios</a></li>
-          <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded"
-              >Range</a></li>
-          <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded"
-              >Input group</a></li>
-          <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded"
-              >Floating labels</a></li>
-          <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded"
-              >Layout</a></li>
-          <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded"
-              >Validation</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded">Обзор</a></li>
+              <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded">Form control</a></li>
+              <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded">Range</a></li>
+              <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded">Input group</a></li>
+              <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Floating labels</a></li>
+              <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded">Validation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true" aria-current="true">
+          Компоненты
+        </button>
 
-    <li class="mb-1 active">
-      <button class="btn d-inline-flex align-items-center rounded"
-        data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true"
-         aria-current="true" >
-        Компоненты
-      </button>
-      <div class="collapse show" id="components-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded"
-              >Accordion</a></li>
-          <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded"
-              >Alerts</a></li>
-          <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded"
-              >Badge</a></li>
-          <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded"
-              >Breadcrumb</a></li>
-          <li><a href="/docs/5.0/components/buttons/" class="d-inline-flex align-items-center rounded"
-              >Buttons</a></li>
-          <li><a href="/docs/5.0/components/button-group/" class="d-inline-flex align-items-center rounded"
-              >Button group</a></li>
-          <li><a href="/docs/5.0/components/card/" class="d-inline-flex align-items-center rounded"
-              >Card</a></li>
-          <li><a href="/docs/5.0/components/carousel/" class="d-inline-flex align-items-center rounded"
-              >Carousel</a></li>
-          <li><a href="/docs/5.0/components/close-button/" class="d-inline-flex align-items-center rounded"
-              >Close button</a></li>
-          <li><a href="/docs/5.0/components/collapse/" class="d-inline-flex align-items-center rounded"
-              >Collapse</a></li>
-          <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded"
-              >Dropdowns</a></li>
-          <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded"
-              >List group</a></li>
-          <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded"
-              >Modal</a></li>
-          <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded"
-              >Navs &amp; tabs</a></li>
-          <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded"
-              >Navbar</a></li>
-          <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded"
-              >Pagination</a></li>
-          <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded"
-              >Popovers</a></li>
-          <li><a href="/docs/5.0/components/progress/" class="d-inline-flex align-items-center rounded"
-              >Progress</a></li>
-          <li><a href="/docs/5.0/components/scrollspy/" class="d-inline-flex align-items-center rounded active"
-               aria-current="page" >Scrollspy</a></li>
-          <li><a href="/docs/5.0/components/spinners/" class="d-inline-flex align-items-center rounded"
-              >Spinners</a></li>
-          <li><a href="/docs/5.0/components/toasts/" class="d-inline-flex align-items-center rounded"
-              >Toasts</a></li>
-          <li><a href="/docs/5.0/components/tooltips/" class="d-inline-flex align-items-center rounded"
-              >Tooltips</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse show" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.0/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.0/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.0/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.0/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.0/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.0/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.0/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.0/components/scrollspy/" class="d-inline-flex align-items-center rounded active" aria-current="page">Scrollspy</a></li>
+              <li><a href="/docs/5.0/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.0/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
+              <li><a href="/docs/5.0/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Помощники
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false"
-        >
-        Помощники
-      </button>
-      <div class="collapse" id="helpers-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded"
-              >Clearfix</a></li>
-          <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded"
-              >Colored links</a></li>
-          <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded"
-              >Ratio</a></li>
-          <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded"
-              >Position</a></li>
-          <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded"
-              >Visually hidden</a></li>
-          <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded"
-              >Stretched link</a></li>
-          <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded"
-              >Text truncation</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Colored links</a></li>
+              <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded">Ratio</a></li>
+              <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
+              <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visually hidden</a></li>
+              <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Stretched link</a></li>
+              <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Text truncation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Утилиты
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false"
-        >
-        Утилиты
-      </button>
-      <div class="collapse" id="utilities-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded"
-              >API</a></li>
-          <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded"
-              >Borders</a></li>
-          <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded"
-              >Colors</a></li>
-          <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded"
-              >Display</a></li>
-          <li><a href="/docs/5.0/utilities/flex/" class="d-inline-flex align-items-center rounded"
-              >Flex</a></li>
-          <li><a href="/docs/5.0/utilities/float/" class="d-inline-flex align-items-center rounded"
-              >Float</a></li>
-          <li><a href="/docs/5.0/utilities/interactions/" class="d-inline-flex align-items-center rounded"
-              >Interactions</a></li>
-          <li><a href="/docs/5.0/utilities/overflow/" class="d-inline-flex align-items-center rounded"
-              >Overflow</a></li>
-          <li><a href="/docs/5.0/utilities/position/" class="d-inline-flex align-items-center rounded"
-              >Position</a></li>
-          <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded"
-              >Shadows</a></li>
-          <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded"
-              >Sizing</a></li>
-          <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded"
-              >Spacing</a></li>
-          <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded"
-              >Text</a></li>
-          <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded"
-              >Vertical align</a></li>
-          <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded"
-              >Visibility</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
+              <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
+              <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.0/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.0/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.0/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interactions</a></li>
+              <li><a href="/docs/5.0/utilities/overflow/" class="d-inline-flex align-items-center rounded">Overflow</a></li>
+              <li><a href="/docs/5.0/utilities/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
+              <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">Shadows</a></li>
+              <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">Sizing</a></li>
+              <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">Spacing</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">Text</a></li>
+              <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Vertical align</a></li>
+              <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibility</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Дополнительно
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false"
-        >
-        Дополнительно
-      </button>
-      <div class="collapse" id="extend-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded"
-              >Подход</a></li>
-          <li><a href="/docs/5.0/extend/icons/" class="d-inline-flex align-items-center rounded"
-              >Иконки</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded">Подход</a></li>
+              <li><a href="/docs/5.0/extend/icons/" class="d-inline-flex align-items-center rounded">Иконки</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          Инфо
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed"
-        data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false"
-        >
-        Инфо
-      </button>
-      <div class="collapse" id="about-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-          <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded"
-              >Обзор</a></li>
-          <li><a href="/docs/5.0/about/team/" class="d-inline-flex align-items-center rounded"
-              >Команда</a></li>
-          <li><a href="/docs/5.0/about/brand/" class="d-inline-flex align-items-center rounded"
-              >Бренд</a></li>
-          <li><a href="/docs/5.0/about/license/" class="d-inline-flex align-items-center rounded"
-              >Лицензия</a></li>
-          <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded"
-              >Переводы</a></li>
-        </ul>
-      </div>
-    </li>
-
-    <li class="my-3 mx-4 border-top"></li>
-    <li>
-      <a href="/docs/5.0/migration/" class="d-inline-flex align-items-center rounded">
-        Миграция
-      </a>
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded">Обзор</a></li>
+              <li><a href="/docs/5.0/about/team/" class="d-inline-flex align-items-center rounded">Команда</a></li>
+              <li><a href="/docs/5.0/about/brand/" class="d-inline-flex align-items-center rounded">Бренд</a></li>
+              <li><a href="/docs/5.0/about/license/" class="d-inline-flex align-items-center rounded">Лицензия</a></li>
+              <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded">Переводы</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.0/migration/" class="d-inline-flex align-items-center rounded">
+          Миграция
+        </a>
       </li>
   </ul>
 </nav>
@@ -596,17 +488,16 @@
   </nav>
   <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <h4 id="fat">@fat</h4>
-    <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+    <p>Контент-заполнитель для примера scrollspy. У Вас лучшая архитектура. Марки в паспорте, она космополитична. Прекрасно, свежо, яростно, у нас все на замке. Никогда не планировал, что однажды потеряю тебя. Она съедает твое сердце. Ваш поцелуй космический, каждое движение волшебно. Я имею в виду тех, я имею в виду, как будто она одна. Приветствую близких, давайте отправимся в путешествие. Просто наслаждайся ночью, как 4 июля! Но Вы бы предпочли зря.</p>
     <h4 id="mdo">@mdo</h4>
-    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+    <p>Контент-заполнитель для примера scrollspy. Потому что она муза и художник. (Вот как мы это делаем) Итак, Вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать мне все. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться.</p>
     <h4 id="one">один</h4>
-    <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+    <p>Контент-заполнитель для примера scrollspy. Уносит тебя на много миль, так высоко, потому что у нее такая интернациональная улыбка. В моей постели незнакомец, в голове стучит. О нет. В другой жизни я бы заставил тебя остаться. «Потому что я, я способен на все. Костюм для моей коронной битвы. Воровал у родителей спиртное и забирался на крышу. Тон, загар подходит и готов, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Думаю, я забыл, что у меня был выбор.</p>
     <h4 id="two">два</h4>
-    <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
+    <p>Контент-заполнитель для примера scrollspy. Пришло время вывести большие воздушные шары. Я иду, я иду по воздуху (сегодня вечером). Ага, мы максимально использовали кредитные карты и нас выгнали из бара. Эй, кричите всем вам, дети, покупайте бутылку на свои деньги за аренду. Я заставляю твое сердце биться быстрее в моих обтягивающих джинсах. Если будет возможность, лучше оставь ее себе. Эй, кричите всем вам, дети, покупайте бутылку на свои деньги за аренду.</p>
     <h4 id="three">три</h4>
-    <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-    <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
-    </p>
+    <p>Контент-заполнитель для примера scrollspy. Если ты хочешь танцевать, если ты хочешь всего этого, ты знаешь, что я девушка, которой тебе следует позвонить. Я бы прошел сквозь шторм. Так что позволь мне надеть твой костюм на день рождения. Тот, который ускользнул. В прошлую пятницу вечером, да, я думаю, мы нарушили закон, всегда говорим, что остановимся. Потому что она немного от Йоко, и она немного от «О нет». Я хочу, чтобы челюсть отвисла, глаза выскочили, голова кружилась, тело шокировало. Ага, мы максимально использовали кредитные карты и нас выгнали из бара.</p>
+    <p>И еще несколько заполнителей, на всякий случай.</p>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar navbar-light bg-light px-3&#34;</span><span class="p">&gt;</span>
@@ -666,19 +557,19 @@
     <div class="col-8">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Элемент 1</h4>
-        <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
+        <p>Контент-заполнитель для примера scrollspy. Этот относится к пункту 1. Возносит вас на много миль, так высоко, потому что у нее такая интернациональная улыбка. В моей постели незнакомец, в голове стучит. О нет. В другой жизни я бы заставил тебя остаться. «Потому что я, я способен на все. Костюм для моей коронной битвы. Воровал у родителей спиртное и забирался на крышу. Тон, загар подходит и готов, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Думаю, я забыл, что у меня есть выбор.</p>
         <h5 id="item-1-1">Элемент 1-1</h5>
-        <p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 1-1. У вас лучшая архитектура. Марки в паспорте, она космополитична. Прекрасно, свежо, яростно, у нас все на замке. Никогда не планировал, что однажды потеряю тебя. Она съедает твое сердце. Ваш поцелуй космический, каждое движение волшебно. Я имею в виду тех, я имею в виду, как будто она одна. Приветствую близких, давайте отправимся в путешествие. Просто наслаждайся ночью, как 4 июля! Но вы бы предпочли зря.</p>
         <h5 id="item-1-2">Элемент 1-2</h5>
-        <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 1-2. Ее любовь подобна наркотику. Все мои девочки винтажные Chanel baby. Получил мотель и построил форт из листов. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать мне все. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться. Поймай ее, если сможешь. Жалящая, как пчела, я заработал свои полосы.</p>
         <h4 id="item-2">Элемент 2</h4>
-        <p>Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in proident.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 2. Не нужно извинений. Сейчас нет страха, отпусти и просто будь свободным, я буду любить тебя безоговорочно. В прошлую пятницу вечером. Не будь застенчивым парнем, держу пари, это красиво. Летом после школы, когда мы впервые встретились. Потому что она муза и художник. Какая? Подождите. Нет нет Нет Нет. Думал, что я был исключением.</p>
         <h4 id="item-3">Элемент 3</h4>
-        <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 3. Слухи на улице, тебе есть что мне показать, мне. За все эти деньги мне не купить машину времени. Сделайте это как свой день рождения каждый день. Итак, мы вышли на бульвар. Ты заставляешь меня чувствовать, что я живу подростковой мечтой, как ты меня заводишь Пропустить разговор, все это слышал, пора прогуляться. Слухи на улице, тебе есть что показать мне, мне. В этом нет ничего страшного, ничего страшного, ничего страшного.</p>
         <h5 id="item-3-1">Элемент 3-1</h5>
-        <p>Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam laboris ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat exercitation. Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure proident ipsum esse qui.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 3-1. Детка, ты посмел сделать это? В этом нет ничего страшного. Да, тебе повезло, если ты летишь на ее самолете. Просто наслаждайся ночью, как 4 июля! Стоять на передовой, когда начинают падать бомбы. Так что будь уверен, прежде чем отдать мне все.</p>
         <h5 id="item-3-2">Элемент 3-2</h5>
-        <p>Labore sit culpa commodo elit adipisicing sit aliquip elit proident voluptate minim mollit nostrud aute reprehenderit do. Mollit excepteur eu Lorem ipsum anim commodo sint labore Lorem in exercitation velit incididunt. Occaecat consectetur nisi in occaecat proident minim enim sunt reprehenderit exercitation cupidatat et do officia. Aliquip consequat ad labore labore mollit ut amet. Sit pariatur tempor proident in veniam culpa aliqua excepteur elit magna fugiat eiusmod amet officia.</p>
+        <p>Контент-заполнитель для примера scrollspy. Это относится к пункту 3-2. Ты оригинальный, не подлежит замене. Всю ночь они играют, твоя песня. Калифорнийские девушки, мы неоспоримы. Как птица без клетки. Сейчас нет страха, отпусти и просто будь свободным, я буду любить тебя безоговорочно. Я вижу надпись на стене. Вы можете путешествовать по миру, но ничто не приближается к золотому берегу.</p>
       </div>
     </div>
   </div>
@@ -731,13 +622,13 @@
     <div class="col-8">
       <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <h4 id="list-item-1">Элемент 1</h4>
-        <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
+        <p>Контент-заполнитель для примера группы списков scrollspy. Это относится к пункту 1. Не нужно извиняться. Сейчас нет страха, отпусти и просто будь свободным, я буду любить тебя безоговорочно. В прошлую пятницу вечером. Не будь застенчивым парнем, держу пари, это красиво. Летом после школы, когда мы впервые встретились. Потому что она муза и художник. Какая? Подождите. Думал, что я был исключением.</p>
         <h4 id="list-item-2">Элемент 2</h4>
-        <p>Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in proident.</p>
+        <p>Контент-заполнитель для примера группы списков scrollspy. Этот относится к пункту 2. Да, она танцует под свой ритм. О нет. Ты мог бы быть лучшим. Потому что, детка, ты фейерверк. Может быть причина, по которой все двери закрыты. Откройте свое сердце и просто позвольте ему начаться. Так шикарно, да, она классика.</p>
         <h4 id="list-item-3">Элемент 3</h4>
-        <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+        <p>Контент-заполнитель для примера группы списков scrollspy. Это относится к пункту 3. Мы идем все выше и выше. Никогда друг без друга мы заключили пакт. Я хожу по воздуху. Кто-то сказал, что тебе удалили татуировку. Теперь я плыву как бабочка. Тон, загар подходит и готов, включите его, потому что он становится тяжелым. Потому что однажды ты мой, когда ты мой. Вы просто должны зажечь свет и позволить ему сиять! Итак, мы вышли на бульвар. Вы когда-нибудь чувствовали себя такими тонкими, как бумага. Я все это вижу, я вижу это сейчас.</p>
         <h4 id="list-item-4">Элемент 4</h4>
-        <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
+        <p>Контент-заполнитель для примера группы списков scrollspy. Это относится к пункту 4. Летом после школы, когда мы впервые встретились. Сейчас нет страха, отпусти и просто будь свободным, я буду любить тебя безоговорочно. Поцелованная солнцем кожа такая горячая, что мы растопим твое эскимо. Эта любовь заставит вас взлететь.</p>
       </div>
     </div>
   </div>
