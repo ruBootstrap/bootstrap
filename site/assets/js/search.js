@@ -21,15 +21,15 @@
   })
 
   window.docsearch({
-    apiKey: '0200257f5c30f9e74217d07bd67d50ba',
-    indexName: 'bootstrap',
+    apiKey: '11d7cdbc7ad186db4e2493f9c0d3aa1c',
+    indexName: 'bootstrap-su',
     inputSelector: '#search-input',
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
     },
     transformData: function (hits) {
       return hits.map(function (hit) {
-        var liveUrl = 'https://getbootstrap.com/'
+        var liveUrl = 'https://getbootstrap.su/'
 
         hit.url = window.location.origin.startsWith(liveUrl) ?
           // On production, return the result as is
