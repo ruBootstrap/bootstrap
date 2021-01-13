@@ -4,8 +4,8 @@ url="https://github.com/ruBootstrap/rubootstrap.git"
 branch="master"
 
 echo "Deleting old publication"
-# rm -rf $docs
-# git submodule add -b $branch $url $docs
+rm -rf $docs
+git submodule add -b $branch $url $docs
 
 echo "Generating site"
 hugo
