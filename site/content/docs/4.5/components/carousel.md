@@ -123,21 +123,21 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка первого слайда</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Второй слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка второго слайда</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
       </div>
     </div>
     <div class="carousel-item">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Метка третьего слайда</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
       </div>
     </div>
   </div>
@@ -208,6 +208,33 @@ toc: true
 </div>
 {{< /example >}}
 
+### Disable touch swiping
+
+Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-touch` attribute. The example below also does not include the `data-ride` attribute and has `data-interval="false"` so it doesn't autoplay.
+
+{{< example >}}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{{< /example >}}
 
 ## Применение
 
@@ -243,7 +270,7 @@ $('.carousel').carousel()
       <td>interval</td>
       <td>number</td>
       <td>5000</td>
-      <td>Время задержки между автоматическим циклическим переключением элемента. Если false, карусель не будет автоматически повторяться.</td>
+      <td>Время задержки между автоматическим циклическим переключением элемента. Если <code>false</code>, карусель не будет автоматически повторяться.</td>
     </tr>
     <tr>
       <td>keyboard</td>
@@ -255,14 +282,14 @@ $('.carousel').carousel()
       <td>pause</td>
       <td>string | boolean</td>
       <td>"hover"</td>
-      <td><p>Если установлено значение <code>"hover"</code>, приостанавливает цикл карусели на <code>mouseenter</code> и возобновляет циклическое движение карусели на <code>mouseleave</code>. Если установлено значение <code>false</code>, при наведении курсора на карусель она не приостанавливается.</p>
-      <p>На устройствах с сенсорным экраном, когда установлено значение <code>"hover"</code>, цикл будет приостанавливаться на <code>touchend</code> (после того, как пользователь завершит взаимодействие с каруселью) на два интервала, прежде чем автоматически возобновляется. Обратите внимание, что это в дополнение к описанному выше поведению мыши.</p></td>
+      <td><p>Если установлено значение <code>'hover'</code>, приостанавливает цикл карусели на <code>mouseenter</code> и возобновляет циклическое движение карусели на <code>mouseleave</code>. Если установлено значение <code>false</code>, при наведении курсора на карусель она не приостанавливается.</p>
+      <p>На устройствах с сенсорным экраном, когда установлено значение <code>'hover'</code>, цикл будет приостанавливаться на <code>touchend</code> (после того, как пользователь завершит взаимодействие с каруселью) на два интервала, прежде чем автоматически возобновляется. Обратите внимание, что это в дополнение к описанному выше поведению мыши.</p></td>
     </tr>
     <tr>
       <td>ride</td>
       <td>string</td>
       <td>false</td>
-      <td>Автоматически воспроизводит карусель после того, как пользователь вручную перебирает первый элемент. Если "карусель", автоматически воспроизводит карусель при загрузке.</td>
+      <td>Автоматически воспроизводит карусель после того, как пользователь вручную перебирает первый элемент. Если <code>'carousel'</code>, автоматически воспроизводит карусель при загрузке.</td>
     </tr>
     <tr>
       <td>wrap</td>

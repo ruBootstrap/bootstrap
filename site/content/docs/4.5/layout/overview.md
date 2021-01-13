@@ -21,7 +21,7 @@ Bootstrap поставляется с тремя разными контейне
 
 Посмотрите на них в действии и сравните их в нашем [примере сетки]({{< docsref "/examples/grid#контейнеры" >}}).
 
-<table class="table text-left">
+<table class="table">
   <thead>
     <tr>
       <th></th>

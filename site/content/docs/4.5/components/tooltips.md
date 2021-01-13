@@ -11,7 +11,7 @@ toc: true
 Что нужно знать при использовании плагина всплывающей подсказки:
 
 - Подсказки полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper чтобы всплывающие подсказки работали!
-- Если Вы создаете наш JavaScript из исходного кода, он [требует `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
+- Если Вы создаете наш JavaScript из исходного кода, для него [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
 - Всплывающие подсказки используются по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно**.
 - Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.
 - Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
@@ -42,7 +42,7 @@ $(function () {
 Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+  <p class="muted">Placeholder text to demonstrate some <a href="#" data-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-toggle="tooltip" title="The last tip!">your own</a> site or project.
   </p>
 </div>
 
@@ -240,7 +240,7 @@ $('#example').tooltip({ boundary: 'window' })
       <td>
         <p>Смещение всплывающей подсказки относительно цели.</p>
         <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Дополнительную информацию смотрите Popper <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a>.</p>
+        <p>Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации Popper по смещению</a>.</p>
       </td>
     </tr>
     <tr>

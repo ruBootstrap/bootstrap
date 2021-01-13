@@ -29,8 +29,8 @@ group: utilities
   {{< placeholder width="144" height="144" class="mr-3" text=" " title="Общее изображение-заполнитель" >}}
   <div class="media-body">
     <h5 class="mt-0">Медиа с растянутой ссылкой</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <a href="#" class="stretched-link">Перейти куда-нибудь</a>
+    <p>Это некий заполнитель для медиа-объекта. Он предназначен для имитации того, как будет выглядеть реальный контент, и мы используем его здесь, чтобы придать компоненту немного тела и размера.</p>
+    <a href="#" class="stretched-link">Иди куда-нибудь</a>
   </div>
 </div>
 {{< /example >}}
@@ -44,8 +44,8 @@ group: utilities
   </div>
   <div class="col-md-6 position-static p-4 pl-md-0">
     <h5 class="mt-0">Столбцы с растянутой ссылкой</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <a href="#" class="stretched-link">Перейти куда-нибудь</a>
+    <p>Другой экземпляр содержимого-заполнителя для этого другого настраиваемого компонента. Он предназначен для имитации того, как будет выглядеть реальный контент, и мы используем его здесь, чтобы придать компоненту немного тела и размера.</p>
+    <a href="#" class="stretched-link">Иди куда-нибудь</a>
   </div>
 </div>
 {{< /example >}}

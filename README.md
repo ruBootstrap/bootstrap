@@ -113,7 +113,7 @@ bootstrap/
 
 Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://v4.getbootstrap.su/>. Документы также можно запускать локально.
 
-Поиск по документации осуществляется с помощью [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/src/search.js`.
+Поиск по документации осуществляется с помощью [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
 
 ### Запуск документации локально
 
@@ -207,4 +207,4 @@ bootstrap/
 
 ## Авторское право и лицензия
 
-Авторское право на код и документацию 2011–2020 гг. На [Авторы Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенное под [Лицензия MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документы выпущены по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторское право на код и документацию 2011–2021 гг. принадлежит [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенное под [Лицензия MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

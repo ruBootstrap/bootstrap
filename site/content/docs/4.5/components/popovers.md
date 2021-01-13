@@ -10,13 +10,13 @@ toc: true
 
 Что нужно знать при использовании плагина popover:
 
-- Popovers полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js, который содержит Popper чтобы поповеры работали!
+- Popovers полагаются на стороннюю библиотеку [Popper](https://popper.js.org/) для позиционирования. Вы должны включить [popper.min.js]({{< param "cdn.popper" >}}) перед bootstrap.js или использовать `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper чтобы поповеры работали!
 - Для всплывающих окон требуется [плагин всплывающей подсказки]({{< docsref "/components/tooltips" >}}) в качестве зависимости.
-- Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
+- Если Вы создаете наш JavaScript из исходного кода, для него [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
 - Всплывающие окна включены по соображениям производительности, поэтому **Вы должны инициализировать их самостоятельно**.
 - Значения `title` и `content` нулевой длины никогда не будут показывать всплывающее окно.
 - Укажите `container: 'body'`, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).
-- Запуск всплывающих окон для скрытых элементов не работает.
+- Запуск всплывающих окон для скрытых элементов не будет работать.
 - Всплывающие окна для элементов `.disabled` или `disabled` должны запускаться в элементе оболочки.
 - При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте `.text-nowrap` на Ваших `<a>` чтобы избежать такого поведения.
 - Всплывающие окна должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.
@@ -60,40 +60,20 @@ $(function () {
 
 Доступны четыре варианта: по верхнему, правому, нижнему и левому краям.
 
-<div class="bd-example popover-demo">
-  <div class="bd-example-popovers">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно вверху
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно справа
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно внизу
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно слева
-    </button>
-  </div>
-</div>
-
-```html
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+{{< example >}}
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
   Всплывающее окно вверху
 </button>
-
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover">
   Всплывающее окно справа
 </button>
-
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Всплывающее окно внизу
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Bottom popover">
+  Всплывающее окно снизу
 </button>
-
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Left popover">
   Всплывающее окно слева
 </button>
-```
+{{< /example >}}
 
 ### Отклонить при следующем нажатии
 
@@ -227,7 +207,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
+      <td>Если предусмотрен селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="{{< param repo >}}/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -260,13 +240,13 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a> Popper.</td>
+      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации Popper по смещению</a>.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию Popper о поведении</a></td>
     </tr>
     <tr>
       <td>customClass</td>
@@ -281,7 +261,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию preventOverflow</a> Popper.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию Popper по preventOverflow</a>.</td>
     </tr>
     <tr>
       <td>sanitize</td>
@@ -305,7 +285,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>

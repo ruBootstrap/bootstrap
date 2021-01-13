@@ -43,7 +43,7 @@ toc: true
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-Если Вы используете наш скомпилированный JavaScript и предпочитаете включать Popper отдельно, добавьте Popper перед нашим JS, желательно через CDN.
+Если Вы используете наш скомпилированный JavaScript и предпочитаете включать Popper отдельно, добавьте Popper перед нашим JS, предпочтительно через CDN.
 
 ```html
 <script src="{{< param "cdn.jquery" >}}" integrity="{{< param "cdn.jquery_hash" >}}" crossorigin="anonymous"></script>

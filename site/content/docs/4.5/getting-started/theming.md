@@ -301,7 +301,10 @@ $border-width: 0;
   {{- range $.Site.Data.colors }}
     {{- if (and (not (eq .name "white")) (not (eq .name "gray")) (not (eq .name "gray-dark"))) }}
     <div class="col-md-4">
-      <div class="p-3 mb-3 swatch-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 text-monospace swatch-{{ .name }}">
+        <strong class="d-block">${{ .name }}</strong>
+        <small>{{ .hex }}</small>
+      </div>
     </div>
     {{ end -}}
   {{ end -}}
@@ -332,7 +335,10 @@ $border-width: 0;
   {{< theme-colors.inline >}}
   {{- range (index $.Site.Data "theme-colors") }}
     <div class="col-md-4">
-      <div class="p-3 mb-3 bg-{{ .name }} {{ if (or (eq .name "light") (eq .name "warning")) }}text-dark{{ else }}text-white{{ end }}">{{ .name | title }}</div>
+      <div class="p-3 mb-3 text-monospace bg-{{ .name }} {{ if (or (eq .name "light") (eq .name "warning")) }}text-dark{{ else }}text-white{{ end }}">
+        <strong class="d-block">${{ .name }}</strong>
+        <small>{{ .hex }}</small>
+      </div>
     </div>
   {{ end -}}
   {{< /theme-colors.inline >}}
@@ -346,7 +352,10 @@ $border-width: 0;
   <div class="col-md-4">
     {{< theme-colors.inline >}}
     {{- range $.Site.Data.grays }}
-      <div class="p-3 swatch-{{ .name }}">{{ .name | title }}</div>
+      <div class="p-3 text-monospace swatch-{{ .name }}">
+        <strong class="d-block">$gray-{{ .name }}</strong>
+        <small>{{ .hex }}</small>
+      </div>
     {{ end -}}
   {{< /theme-colors.inline >}}
   </div>

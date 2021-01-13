@@ -113,27 +113,17 @@ $font-family-sans-serif:
 
 <div class="bd-example">
 {{< markdown >}}
-* Lorem ipsum dolor sit amet
-* Consectetur adipiscing elit
-* Integer molestie lorem at massa
-* Facilisis in pretium nisl aliquet
-* Nulla volutpat aliquam velit
-  * Phasellus iaculis neque
-  * Purus sodales ultricies
-  * Vestibulum laoreet porttitor sem
-  * Ac tristique libero volutpat at
-* Faucibus porta lacus fringilla vel
-* Aenean sit amet erat nunc
-* Eget porttitor lorem
+* All lists have their top margin removed
+* And their bottom margin normalized
+* Nested lists have no bottom margin
+  * This way they have a more even appearance
+  * Particularly when followed by more list items
+* The left padding has also been reset
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-4. Facilisis in pretium nisl aliquet
-5. Nulla volutpat aliquam velit
-6. Faucibus porta lacus fringilla vel
-7. Aenean sit amet erat nunc
-8. Eget porttitor lorem
+1. Here's an ordered list
+2. With a few list items
+3. It has the same overall look
+4. As the previous unordered list
 {{< /markdown >}}
 </div>
 
@@ -143,11 +133,11 @@ $font-family-sans-serif:
   <dl>
     <dt>Списки описаний</dt>
     <dd>Список описаний идеально подходит для определения терминов.</dd>
-    <dt>Euismod</dt>
-    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
-    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-    <dt>Malesuada porta</dt>
-    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    <dt>Срок</dt>
+    <dd>Определение термина.</dd>
+    <dd>Второе определение того же термина.</dd>
+    <dt>Другой термин</dt>
+    <dd>Определение этого другого термина.</dd>
   </dl>
 </div>
 
@@ -324,7 +314,7 @@ $font-family-sans-serif:
 
 <div class="bd-example">
   <blockquote class="blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
   </blockquote>
 </div>

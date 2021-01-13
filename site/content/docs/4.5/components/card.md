@@ -81,9 +81,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -94,9 +94,9 @@ toc: true
     Рекомендуемые
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -104,9 +104,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-footer">
     Подвал карточки
@@ -126,9 +126,9 @@ toc: true
     <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Ссылка карточки</a>
@@ -174,8 +174,8 @@ toc: true
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Кто-то известный в <cite title="Названии Источника">Названии Источника</cite></footer>
+      <p>Известная цитата, содержащаяся в элементе цитаты.</p>
+      <footer class="blockquote-footer">Кто-то известный в <cite title="Название источника">названии источника</cite></footer>
     </blockquote>
   </div>
 </div>
@@ -762,7 +762,7 @@ toc: true
   </div>
   <div class="card p-3">
     <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
           Кто-то известный в <cite title="Названии Источника">Названии Источника</cite>
@@ -780,7 +780,7 @@ toc: true
   </div>
   <div class="card bg-primary text-white text-center p-3">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <p>A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer text-white">
         <small>
           Кто-то известный в <cite title="Названии Источника">Названии Источника</cite>
@@ -800,7 +800,7 @@ toc: true
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">
         <small class="text-muted">
           Кто-то известный в <cite title="Названии Источника">Названии Источника</cite>
