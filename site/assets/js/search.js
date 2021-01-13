@@ -27,8 +27,8 @@
   }
 
   window.docsearch({
-    apiKey: '5990ad008512000bba2cf951ccf0332f',
-    indexName: 'bootstrap',
+    apiKey: '11d7cdbc7ad186db4e2493f9c0d3aa1c',
+    indexName: 'bootstrap-su',
     inputSelector: '#search-input',
     algoliaOptions: {
       facetFilters: ['version:' + siteDocsVersion]
@@ -36,7 +36,7 @@
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://getbootstrap.com/'
+        var liveUrl = 'https://v4.getbootstrap.su/'
 
         hit.url = currentUrl.lastIndexOf(liveUrl, 0) === 0 ?
           // On production, return the result as is
@@ -55,6 +55,6 @@
       })
     },
     // Set debug to `true` if you want to inspect the dropdown
-    debug: false
+    debug: true
   })
 })()
