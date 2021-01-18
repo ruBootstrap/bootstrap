@@ -36,11 +36,11 @@ Bootstrap использует [сценарии npm](https://docs.npmjs.com/mis
 
 ## Sass
 
-Bootstrap v4 uses [Node Sass](https://github.com/sass/node-sass) for compiling our Sass source files into CSS files (included in our build process). In order to end up with the same generated CSS when compiling Sass using your own asset pipeline, you'll need to use a Sass compiler that supports at least the features that Node Sass does. This is important to note because as of October 26, 2020, LibSass and packages built on top of it—including Node Sass—are [deprecated](https://sass-lang.com/blog/libsass-is-deprecated).
+Bootstrap v4 использует [Node Sass](https://github.com/sass/node-sass) для компиляции наших исходных файлов Sass в файлы CSS (включенные в наш процесс сборки). Чтобы получить тот же сгенерированный CSS при компиляции Sass с использованием Вашего собственного конвейера ресурсов, Вам необходимо использовать компилятор Sass, который поддерживает по крайней мере функции, которые делает Node Sass. Это важно отметить, поскольку с 26 октября 2020 года LibSass и пакеты, созданные на его основе, включая Node Sass, [устарели](https://sass-lang.com/blog/libsass-is-deprecated).
 
-If you require newer Sass features or compatibility with newer CSS standards, [Dart Sass](https://sass-lang.com/dart-sass) is now the primary implementation of Sass and supports a JavaScript API that's fully compatible with Node Sass (with a few exceptions listed on Dart Sass's [GitHub page](https://github.com/sass/dart-sass)).
+Если Вам требуются новые функции Sass или совместимость с новыми стандартами CSS, [Dart Sass](https://sass-lang.com/dart-sass) теперь является основной реализацией Sass и поддерживает API JavaScript, полностью совместимый с Node Sass. (за некоторыми исключениями, перечисленными на [странице GitHub](https://github.com/sass/dart-sass) Dart Sass).
 
-We increase the Sass rounding precision to 6 (by default, it's 5 in Node Sass) to prevent issues with browser rounding. If you use Dart Sass this won't be something you need to adjust, as that compiler uses a rounding precision of 10 and for efficiency reasons does not allow it to be adjusted.
+Мы увеличиваем точность округления Sass до 6 (по умолчанию это 5 в Node Sass), чтобы предотвратить проблемы с округлением в браузере. Если Вы используете Dart Sass, Вам не нужно будет это настраивать, поскольку этот компилятор использует точность округления, равную 10, и по соображениям эффективности не позволяет ее настраивать.
 
 ## Autoprefixer
 

@@ -11,7 +11,7 @@
 
 - group: v4.x [RU]
   baseurl: "https://v4.getbootstrap.su/docs"
-  description: "Текущий основной выпуск и его дополнительные версии. Последнее обновление было v4.5.3."
+  description: "Перевод текущей основной версии. Последнее обновление было v4.5.3."
   versions:
     - v: "4.0"
     - v: "4.1"
@@ -29,3 +29,5 @@
 - group: v5.x [RU]
   baseurl: "https://getbootstrap.su/docs"
   description: "Наш следующий основной релиз. Перевод 5 версии фреймворка бутстрап."
+  versions:
+    - v: "5.0"
