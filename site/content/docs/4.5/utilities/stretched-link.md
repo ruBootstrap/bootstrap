@@ -5,7 +5,7 @@ description: Сделайте любой элемент HTML или компон
 group: utilities
 ---
 
-Добавьте `.stretched-link` к ссылке, чтобы сделать ее [содержащий блок](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) доступным для кликов через псевдоэлемент `::after`. В большинстве случаев это означает, что элемент с `position: relative;`, который содержит ссылку с классом `.stretched-link`, является интерактивным.
+Добавьте `.stretched-link` к ссылке, чтобы сделать ее [содержащий блок](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) доступным для кликов через псевдоэлемент `::after`. В большинстве случаев это означает, что элемент с `position: relative;`, который содержит ссылку с классом `.stretched-link`, является интерактивным. Обратите внимание, учитывая [как работает CSS `position`](https://www.w3.org/TR/CSS21/visuren.html#propdef-position), `.stretched-link` нельзя смешивать с большинством элементов таблицы.
 
 Карточки имеют в Bootstrap по умолчанию `position: relative`, поэтому в этом случае Вы можете безопасно добавить класс `.stretched-link` к ссылке в карточке без каких-либо других изменений HTML.
 

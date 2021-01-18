@@ -30,6 +30,18 @@ Bootstrap использует [сценарии npm](https://docs.npmjs.com/mis
 
 Запустите `npm run`, чтобы увидеть все сценарии npm.
 
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
+
+## Sass
+
+Bootstrap v4 uses [Node Sass](https://github.com/sass/node-sass) for compiling our Sass source files into CSS files (included in our build process). In order to end up with the same generated CSS when compiling Sass using your own asset pipeline, you'll need to use a Sass compiler that supports at least the features that Node Sass does. This is important to note because as of October 26, 2020, LibSass and packages built on top of it—including Node Sass—are [deprecated](https://sass-lang.com/blog/libsass-is-deprecated).
+
+If you require newer Sass features or compatibility with newer CSS standards, [Dart Sass](https://sass-lang.com/dart-sass) is now the primary implementation of Sass and supports a JavaScript API that's fully compatible with Node Sass (with a few exceptions listed on Dart Sass's [GitHub page](https://github.com/sass/dart-sass)).
+
+We increase the Sass rounding precision to 6 (by default, it's 5 in Node Sass) to prevent issues with browser rounding. If you use Dart Sass this won't be something you need to adjust, as that compiler uses a rounding precision of 10 and for efficiency reasons does not allow it to be adjusted.
+
 ## Autoprefixer
 
 Bootstrap использует [Autoprefixer][autoprefixer] (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя нам писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах поставщиков, подобных тем, которые есть в v3.
