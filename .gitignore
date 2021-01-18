@@ -9,12 +9,6 @@
 # Hugo resources folder
 /resources/
 
-# Ignore ruby/bundler files;
-# keeping them here so that when we switch branches they don't show up
-/.bundle/
-/vendor/
-/.ruby-version
-
 # Numerous always-ignore extensions
 *.diff
 *.err
