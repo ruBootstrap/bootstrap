@@ -6,7 +6,7 @@ group: customize
 toc: true
 ---
 
-Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, примеси и многое другое. В нашей сборке мы увеличили точность округления Sass до 6 (по умолчанию 5), чтобы предотвратить проблемы с округлением в браузере.
+Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, миксины и многое другое.
 
 ## Файловая структура
 
@@ -42,16 +42,20 @@ your-project/
 // Вариант А: Включите весь Bootstrap
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// Add custom code after this
 ```
 
 ```scss
 // Custom.scss
 // Вариант Б. Включите части Bootstrap
 
-// Необходимые
+// Обязательные
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+
+// Включите здесь переопределения пользовательских переменных по умолчанию
 
 // Необязательные
 @import "../node_modules/bootstrap/scss/root";
@@ -70,20 +74,34 @@ your-project/
 
 Вы найдете полный список переменных Bootstrap в `scss/_variables.scss`. Некоторые переменные имеют значение `null`, эти переменные не выводят свойство, если они не переопределены в Вашей конфигурации.
 
-Переопределения переменных в одном файле Sass могут быть до или после переменных по умолчанию. Однако при переопределении файлов Sass Ваши переопределения должны выполняться до того, как Вы импортируете файлы Sass для Bootstrap.
+Переопределения переменных должны происходить после импорта наших функций, переменных и миксинов, но до остальной части импорта.
 
 Вот пример, который меняет `background-color` и `color` для `<body>` при импорте и компиляции Bootstrap через npm:
 
 ```scss
+// Обязательные
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
 // Ваша переменная переопределяет
 $body-bg: #000;
 $body-color: #111;
 
 // Bootstrap и его переменные по умолчанию
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Необязательные
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
 ```
 
 При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.
+
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
 
 ## Карты и циклы
 
@@ -139,7 +157,7 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
-...
+// etc
 ```
 
 ## Обязательные ключи

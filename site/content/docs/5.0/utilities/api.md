@@ -260,6 +260,25 @@ $utilities: map-merge(
 );
 ```
 
+#### Переименование утилит
+
+Отсутствуют утилиты v4 или Вы привыкли к другому соглашению об именах? API утилит можно использовать для переопределения результирующего `class` данной утилиты - например, чтобы переименовать утилиты `.ms-*` в старые `.ml-*`:
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities, (
+    "margin-start": map-merge(
+      map-get($utilities, "margin-start"),
+      ( class: ml ),
+    ),
+  )
+);
+```
+
 ### Удаление утилит
 
 Удалите любую из утилит по умолчанию, установив для ключа группы значение `null`. Например, чтобы удалить все наши утилиты `width`, создайте `$utilities`, `map-merge` и добавьте внутрь `"width": null`.
@@ -277,9 +296,9 @@ $utilities: map-merge(
 );
 ```
 
-#### Remove utility in RTL
+#### Удалить утилиту в RTL
 
-Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
+Некоторые крайние случаи затрудняют [стилизацию RTL](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), например, разрывы строк на арабском языке. Таким образом, утилиты можно исключить из вывода RTL, установив для опции `rtl` значение `false`:
 
 ```scss
 $utilities: (
@@ -292,7 +311,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 /* rtl:begin:remove */
@@ -303,4 +322,4 @@ Output:
 /* rtl:end:remove */
 ```
 
-This doesn't output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).
+Это ничего не выводит в RTL, благодаря [управляющей директиве RTLCSS `remove`](https://rtlcss.com/learn/usage-guide/control-directives/#remove).

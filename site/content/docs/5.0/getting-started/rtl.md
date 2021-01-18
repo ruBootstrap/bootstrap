@@ -136,7 +136,43 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-## Хлебные крошки
+### LTR и RTL одновременно
+
+Нужны и LTR, и RTL на одной странице? Благодаря [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/), это довольно просто. Оберните свой `@import` классом и установите собственное правило переименования для RTLCSS:
+
+```scss
+/* rtl:begin:options: {
+  "autoRename": true,
+  "stringMap":[
+    "name": "ltr-rtl",
+    "priority": 100,
+    "search": ["ltr"],
+    "replace": ["rtl"],
+    "options": {
+      "scope": "*",
+      "ignoreCase": false
+    }
+  ]
+} */
+.ltr {
+  @import "../node_modules/bootstrap/scss/bootstrap";
+}
+/*rtl:end:options*/
+```
+
+После запуска Sass, а затем RTLCSS, каждый селектор в Ваших файлах CSS будет предваряться `.ltr` и `.rtl` для файлов RTL. Теперь Вы можете использовать оба файла на одной странице и просто использовать `.ltr` или `.rtl` в оболочках Ваших компонентов, чтобы использовать то или иное направление.
+
+{{< callout warning >}}
+#### Пограничные случаи и известные ограничения
+
+Хотя такой подход понятен, обратите внимание на следующее:
+
+1. При переключении `.ltr` и `.rtl` убедитесь, что вы добавили атрибуты `dir` и `lang` соответственно.
+2. Загрузка обоих файлов может стать настоящим узким местом для производительности: подумайте о некоторой [оптимизации]({{< docsref "/customize/optimize" >}}) и, возможно, попробуйте [загрузить один из этих файлов асинхронно](https://www.filamentgroup.com/lab/load-css-simpler/).
+3. Вложение стилей таким образом предотвратит работу миксина `form-validation-state()` должным образом, поэтому Вам придется немного подправить его самостоятельно. [Смотрите #31223](https://github.com/twbs/bootstrap/issues/31223).
+{{< /callout >}}
+
+## Случай хлебных крошек
 
 [Разделитель хлебных крошек]({{< docsref "/components/breadcrumb" >}}/#разделители) единственный случай, когда требуется собственная новая переменная, а именно `$breadcrumb-divider-flipped`, по умолчанию `$breadcrumb-divider`.
 

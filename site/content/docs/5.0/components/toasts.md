@@ -41,9 +41,49 @@ toc: true
 </div>
 {{< /example >}}
 
+### Лайв
+
+Нажмите кнопку ниже, чтобы отобразить всплывающее сообщение (расположение с нашими утилитами в правом нижнем углу), которое по умолчанию было скрыто с помощью `.hide`.
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 мин назад</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Привет, мир! Это тост-сообщение.
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Показать лайв тосты</button>
+</div>
+
+```html
+<button type="button" class="btn btn-primary" id="liveToastBtn">Показать лайв тосты</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 мин назад</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Привет, мир! Это тост-сообщение.
+    </div>
+  </div>
+</div>
+```
+
 ### Полупрозрачный
 
-Тосты тоже слегка полупрозрачные, поэтому они смешиваются с тем, на чем могут появиться. Для браузеров, поддерживающих свойство CSS `backdrop-filter`, мы также попытаемся размыть элементы под всплывающим окном.
+Тосты тоже немного полупрозрачные, поэтому они растушевываются поверх всего, на чем могут появиться.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -96,11 +136,13 @@ toc: true
 Настройте свои тосты, удалив субкомпоненты, настроив с помощью [утилит]({{< docsref "/utilities/api" >}}) или добавив собственную разметку. Здесь мы создали более простой тост, удалив по умолчанию `.toast-header`, добавив собственную иконку скрытия из [Иконок Bootstrap]({{< param icons >}}), и используя некоторые [утилиты flexbox]({{< docsref "/utilities/flex" >}}), чтобы настроить макет.
 
 {{< example class="bg-light" >}}
-<div class="toast d-flex align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-body">
-    Привет мир! Это тост-сообщение.
+<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+    Привет, мир! Это тост-сообщение.
+   </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
-  <button type="button" class="btn-close ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -120,14 +162,16 @@ toc: true
 
 ### Цветовые схемы
 
-Основываясь на приведенном выше примере, Вы можете создавать различные цветовые схемы всплывающих окон с помощью наших [утилит цвета]({{< docsref "/utilities/colors" >}}). Здесь мы добавили `.bg-primary` и `.text-white` к `.toast`, а затем добавили `.text-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
+Основываясь на приведенном выше примере, вы можете создавать различные цветовые схемы всплывающих окон с помощью наших [утилит цвета]({{< docsref "/utilities/colors" >}}). Здесь мы добавили `.bg-primary` и `.text-white` в `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
 
 {{< example class="bg-light" >}}
-<div class="toast d-flex align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
-  <div class="toast-body">
-    Привет мир! Это тост-сообщение.
+<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Привет, мир! Это тост-сообщение.
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
-  <button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
