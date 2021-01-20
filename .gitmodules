@@ -1,4 +1,8 @@
 [submodule "_gh_pages_4"]
-        path = _gh_pages_4
-        url = https://github.com/ruBootstrap/rubootstrap.git
-        branch = master
+	path = _gh_pages_4
+	url = https://github.com/ruBootstrap/rubootstrap.git
+	branch = master
+[submodule "_gh_pages"]
+	path = _gh_pages
+	url = https://github.com/ruBootstrap/rubootstrap.git
+	branch = master

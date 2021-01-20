@@ -1,4 +1,4 @@
-docs="_gh_pages_4"
+docs="_gh_pages"
 site="v4.getbootstrap.su"
 url="https://github.com/ruBootstrap/rubootstrap.git"
 branch="master"
