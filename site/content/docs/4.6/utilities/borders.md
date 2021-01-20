@@ -3,7 +3,7 @@ layout: docs
 title: Границы
 description: Используйте утилиты для создания границ, чтобы быстро настроить границу и радиус границы элемента. Отлично подходит для изображений, кнопок или любого другого элемента.
 group: utilities
-aliases: "/docs/4.5/utilities/"
+aliases: "/docs/4.6/utilities/"
 toc: true
 ---
 

@@ -438,7 +438,52 @@ When the container is within your navbar, its horizontal padding is removed at b
 </nav>
 {{< /example >}}
 
-## Отзывчивое поведение
+## Прокрутка
+
+Добавьте `.navbar-nav-scroll` к `.navbar-collapse` (или другому субкомпоненту навигационной панели), чтобы включить вертикальную прокрутку внутри переключаемого содержимого свернутой навигационной панели. По умолчанию прокрутка начинается с `75vh` (или 75% высоты области просмотра), но Вы можете переопределить это с помощью встроенных или настраиваемых стилей. В больших окнах просмотра, когда панель навигации развернута, содержимое будет отображаться так же, как и на панели навигации по умолчанию.
+
+Обратите внимание, что такое поведение имеет потенциальный недостаток `overflow` — при установке `overflow-y: auto` (требуется для прокрутки содержимого здесь), `overflow-x` является эквивалентом `auto`, который обрезает некоторые горизонтальное содержание.
+
+Вот пример навигационной панели, использующей `.navbar-nav-scroll` с `style="max-height: 100px;"`, с некоторыми дополнительными утилитами полей для оптимального интервала.
+
+{{< example >}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Прокрутка навигационной панели</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Главная <span class="sr-only">(текущая)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ссылка</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Link
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <li><a class="dropdown-item" href="#">Действие</a></li>
+          <li><a class="dropdown-item" href="#">Другое действие</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <button class="btn btn-outline-success" type="submit">ИСкать</button>
+    </form>
+  </div>
+</nav>
+{{< /example >}}
+
+## Responsive behaviors
 
 Панели навигации могут использовать классы `.navbar-toggler`, `.navbar-collapse` и `.navbar-expand{-sm|-md|-lg|-xl}`, чтобы определять, когда их содержимое сворачивается за кнопкой. В сочетании с другими утилитами Вы можете легко выбрать, когда показывать или скрывать определенные элементы.
 

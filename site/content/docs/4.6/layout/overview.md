@@ -3,7 +3,7 @@ layout: docs
 title: Обзор
 description: Компоненты и опции для компоновки Вашего проекта Bootstrap, включая контейнеры-оболочки, мощную систему сеток, гибкий медиа-объект и адаптивные служебные классы.
 group: layout
-aliases: "/docs/4.5/layout/"
+aliases: "/docs/4.6/layout/"
 toc: true
 ---
 

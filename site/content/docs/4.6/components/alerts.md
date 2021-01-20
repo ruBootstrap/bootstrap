@@ -5,7 +5,7 @@ description: Предоставляйте контекстные сообщен�
 group: components
 aliases:
   - "/components/"
-  - "/docs/4.5/components/"
+  - "/docs/4.6/components/"
 toc: true
 ---
 

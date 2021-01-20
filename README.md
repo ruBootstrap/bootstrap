@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getbootstrap.com/">
-    <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
+    <img src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.com/docs/4.5/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v4.getbootstrap.su/docs/4.5/"><strong>Изучите перевод документации Bootstrap »</strong></a>
+  <a href="https://getbootstrap.com/docs/4.6/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v4.getbootstrap.su/docs/4.6/"><strong>Изучите перевод документации Bootstrap »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Сообщить об ошибке</a>
@@ -20,7 +20,6 @@
   ·
   <a href="https://blog.getbootstrap.com/">Блог</a>
 </p>
-
 
 ## Содержание
 
@@ -36,20 +35,18 @@
 - [Благодарности](#благодарности)
 - [Авторское право и лицензия](#авторское-право-и-лицензия)
 
-
 ## Быстрый старт
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.5.3.zip)
+- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.6.0.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.5.3`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.5.3`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.6.0`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.0`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
-
+Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.6/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
 
 ## Статус
 
@@ -68,7 +65,6 @@
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap)](#backers)
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap)](#sponsors)
-
 
 ## Что включено
 
@@ -103,11 +99,9 @@ bootstrap/
 
 Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/), но не [jQuery](https://jquery.com/).
 
-
 ## Ошибки и запросы функций
 
 Есть ошибка или запрос функции? Сначала прочтите [руководство по проблеме](https://github.com/twbs/bootstrap/blob/v4-dev/.github/CONTRIBUTING.md#using-the-issue-tracker) и выполните поиск существующих и закрытых проблем. Если Ваша проблема или идея еще не решена, [пожалуйста, откройте новый запрос](https://github.com/twbs/bootstrap/issues/new).
-
 
 ## Документация
 
@@ -130,7 +124,6 @@ bootstrap/
 
 [Предыдущие выпуски](https://github.com/twbs/bootstrap/releases) и их документация также доступны для загрузки.
 
-
 ## Участие
 
 Прочтите наши [правила участия](https://github.com/twbs/bootstrap/blob/v4-dev/.github/CONTRIBUTING.md). Включены инструкции по открытию вопросов, стандарты кодирования и примечания по развитию.
@@ -138,7 +131,6 @@ bootstrap/
 Более того, если Ваш запрос на включение содержит исправления или функции JavaScript, Вы должны включить [соответствующие модульные тесты](https://github.com/twbs/bootstrap/tree/v4-dev/js/tests). Весь HTML и CSS должны соответствовать [руководству по коду](https://github.com/mdo/code-guide), которое поддерживает [Mark Otto](https://github.com/mdo).
 
 Настройки редактора доступны в [конфигурации редактора](https://github.com/twbs/bootstrap/blob/v4-dev/.editorconfig) для удобного использования в обычных текстовых редакторах. Узнайте больше и загрузите плагины на <https://editorconfig.org/>.
-
 
 ## Сообщество
 
@@ -152,13 +144,11 @@ bootstrap/
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной доступности.
 
-
 ## Управление версиями
 
 Для прозрачности нашего цикла выпуска и для обеспечения обратной совместимости Bootstrap поддерживается в соответствии с [руководящими принципами семантического управления версиями](https://semver.org/). Иногда мы ошибаемся, но по возможности придерживаемся этих правил.
 
 См. [раздел релизов нашего проекта GitHub](https://github.com/twbs/bootstrap/releases) для просмотра журналов изменений для каждой версии выпуска Bootstrap. Сообщения с объявлениями о выпуске в [официальном блоге Bootstrap](https://blog.getbootstrap.com/) содержат сводку наиболее значимых изменений, внесенных в каждый выпуск.
-
 
 ## Создатели
 
@@ -172,7 +162,6 @@ bootstrap/
 - <https://twitter.com/fat>
 - <https://github.com/fat>
 
-
 ## Благодарности
 
 <a href="https://www.browserstack.com/">
@@ -180,7 +169,6 @@ bootstrap/
 </a>
 
 Спасибо [BrowserStack](https://www.browserstack.com/) за предоставление инфраструктуры, которая позволяет нам тестировать в реальных браузерах!
-
 
 ## Спонсоры
 
@@ -197,13 +185,11 @@ bootstrap/
 [![](https://opencollective.com/bootstrap/sponsor/8/avatar.svg)](https://opencollective.com/bootstrap/sponsor/8/website)
 [![](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
 
-
 ## Сторонники
 
 Спасибо всем нашим спонсорам! 🙏 [[Станьте спонсором](https://opencollective.com/bootstrap#backer)]
 
 [![Backers](https://opencollective.com/bootstrap/backers.svg?width=890)](https://opencollective.com/bootstrap#backers)
-
 
 ## Авторское право и лицензия
 

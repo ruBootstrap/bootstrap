@@ -5,7 +5,7 @@ description: Узнайте больше о команде, поддержива
 group: about
 aliases:
   - "/about/"
-  - "/docs/4.5/about/"
+  - "/docs/4.6/about/"
 ---
 
 ## Команда

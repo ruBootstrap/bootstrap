@@ -3,7 +3,7 @@ layout: docs
 title: Перезагрузка
 description: Перезагрузка, набор изменений CSS для конкретных элементов в одном файле, запускает Bootstrap, чтобы обеспечить элегантную, последовательную и простую основу для развития.
 group: content
-aliases: "/docs/4.5/content/"
+aliases: "/docs/4.6/content/"
 toc: true
 ---
 
