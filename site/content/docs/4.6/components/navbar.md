@@ -483,7 +483,7 @@ When the container is within your navbar, its horizontal padding is removed at b
 </nav>
 {{< /example >}}
 
-## Responsive behaviors
+## Отзывчивое поведение
 
 Панели навигации могут использовать классы `.navbar-toggler`, `.navbar-collapse` и `.navbar-expand{-sm|-md|-lg|-xl}`, чтобы определять, когда их содержимое сворачивается за кнопкой. В сочетании с другими утилитами Вы можете легко выбрать, когда показывать или скрывать определенные элементы.
 
