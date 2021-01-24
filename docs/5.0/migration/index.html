@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -571,7 +571,8 @@
 <li>Переименованы <code>.pl-*</code> и <code>.pr-*</code> в <code>.ps-*</code> и <code>.pe-*</code>.</li>
 <li>Переименованы <code>.text-left</code> и <code>.text-right</code> в <code>.text-start</code> и <code>.text-end</code>.</li>
 </ul>
-<p>Соответственно, переименовываются и конкретные варианты точек останова (например, <code>.text-md-start</code> заменяет <code>.text-md-left</code>).</p>
+<p>Соответственно, переименовываются и конкретные варианты контрольных точек (например, <code>.text-md-start</code> заменяет <code>.text-md-left</code>).</p>
+<p><strong>Примечание</strong>: если Вы использовали v4 для создания страниц RTL, убедитесь, что отменили изменения, упомянутые выше: например, используйте <code>.*-start</code>, если Вы использовали <code>.*-right</code>.</p>
 <h5 id="миксины">Миксины</h5>
 <ul>
 <li>Переименованы <code>border-left-radius()</code> и <code>border-right-radius()</code> в <code>border-start-radius()</code> и <code>border-end-radius()</code> — а также их угловые относительные варианты (например, <code>.border-bottom-left-radius</code> стал <code>.border-bottom-start-radius</code>).</li>
@@ -640,6 +641,7 @@
 <li>Утилиты <code>.font-style-*</code> переименованы в <code>.fst-*</code> для краткости и единообразия.</li>
 <li>Добавлен <code>.d-grid</code>к утилитам отображения</li>
 <li>Добавлены новые утилиты <code>gap</code> (<code>.gap</code>) для макетов CSS Grid</li>
+<li>Удалены  <code>.rounded-sm</code> и <code>rounded-lg</code>, и добавлены <code>.rounded-0</code> в <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Смотрите #31687</a>.</li>
 </ul>
 </li>
 </ul>

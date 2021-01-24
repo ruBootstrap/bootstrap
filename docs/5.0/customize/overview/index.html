@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -478,7 +478,20 @@
 </ol>
 <p>Хотя мы не можем здесь подробно описывать, как использовать каждый менеджер пакетов, мы можем дать некоторые рекомендации по <a href="/docs/5.0/customize/sass/">использованию Bootstrap с Вашим собственным компилятором Sass</a>.</p>
 <p>Для тех, кто хочет использовать файлы распространения, просмотрите <a href="/docs/5.0/getting-started/introduction/">страницу начала работы</a>, чтобы узнать, как включить эти файлы и пример HTML-страницы. Оттуда обратитесь к документации по макету, компонентам и поведению, которые Вы хотите использовать.</p>
-<p>По мере того, как вы знакомитесь с Bootstrap, продолжайте изучать этот раздел, чтобы получить более подробную информацию о том, как использовать наши глобальные параметры, использование и изменение нашей цветовой системы, как мы создаем наши компоненты, как использовать наш растущий список настраиваемых свойств CSS и как для оптимизации Вашего кода при сборке с помощью Bootstrap.</p>
+<p>По мере знакомства с Bootstrap продолжайте изучать этот раздел, чтобы получить более подробную информацию о том, как использовать наши глобальные параметры, использование и изменение нашей цветовой системы, как мы создаем наши компоненты, как использовать наш растущий список настраиваемых свойств CSS и как для оптимизации Вашего кода при сборке с помощью Bootstrap.</p>
+<h2 id="csp-и-встроенные-svg">CSP и встроенные SVG</h2>
+<p>Некоторые компоненты Bootstrap включают встроенные SVG-файлы в наш CSS, чтобы согласованно и легко стилизовать компоненты в разных браузерах и на разных устройствах. <strong>Для организаций с более строгими конфигурациями <abbr title="Политика безопасности контента">CSP</abbr></strong>, мы задокументировали все экземпляры наших встроенных SVG (все из которых применяются через <code>background-image</code>), поэтому Вы можете более тщательно изучить свои варианты.</p>
+<ul>
+<li><a href="/docs/5.0/components/accordion/">Accordion</a></li>
+<li><a href="/docs/5.0/components/close-button/">Close button</a> (используется в уведомлениях и модальных окнах)</li>
+<li><a href="/docs/5.0/forms/checks-radios/">Form checkboxes and radio buttons</a></li>
+<li><a href="/docs/5.0/forms/checks-radios/#switches">Form switches</a></li>
+<li><a href="/docs/5.0/forms/validation/#server-side">Form validation icons</a></li>
+<li><a href="/docs/5.0/forms/select/">Select menus</a></li>
+<li><a href="/docs/5.0/components/carousel/#with-controls">Carousel controls</a></li>
+<li><a href="/docs/5.0/components/navbar/#responsive-behaviors">Navbar toggle buttons</a></li>
+</ul>
+<p>На основе <a href="https://github.com/twbs/bootstrap/issues/25394">обсуждения сообщества</a> некоторые варианты решения этой проблемы в Вашей собственной кодовой базе включают замену URL-адресов локально размещенными ресурсами, удаление изображений и использование встроенных изображений ( невозможно во всех компонентах) и изменение Вашего CSP. Наша рекомендация - внимательно изучить свои собственные политики безопасности и при необходимости выбрать лучший путь для дальнейшего развития.</p>
 
       </div>
     </main>

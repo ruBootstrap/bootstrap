@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -435,9 +435,10 @@
       <ul>
         <li><a href="#пользовательские-значения-rtl">Пользовательские значения RTL</a></li>
         <li><a href="#альтернативный-стек-шрифтов">Альтернативный стек шрифтов</a></li>
+        <li><a href="#ltr-и-rtl-одновременно">LTR и RTL одновременно</a></li>
       </ul>
     </li>
-    <li><a href="#хлебные-крошки">Хлебные крошки</a></li>
+    <li><a href="#случай-хлебных-крошек">Случай хлебных крошек</a></li>
     <li><a href="#дополнительные-ресурсы">Дополнительные ресурсы</a></li>
   </ul>
 </nav>
@@ -544,7 +545,38 @@
   <span class="no">sans-serif</span><span class="o">,</span>
   <span class="c1">// Emoji шрифты</span>
   <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="nv">!default</span><span class="p">;</span>
-</code></pre></div><h2 id="хлебные-крошки">Хлебные крошки</h2>
+</code></pre></div><h3 id="ltr-и-rtl-одновременно">LTR и RTL одновременно</h3>
+<p>Нужны и LTR, и RTL на одной странице? Благодаря <a href="https://rtlcss.com/learn/usage-guide/string-map/">RTLCSS String Maps</a>, это довольно просто. Оберните свой <code>@import</code> классом и установите собственное правило переименования для RTLCSS:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* rtl:begin:options: {
+</span><span class="cm">  &#34;autoRename&#34;: true,
+</span><span class="cm">  &#34;stringMap&#34;:[
+</span><span class="cm">    &#34;name&#34;: &#34;ltr-rtl&#34;,
+</span><span class="cm">    &#34;priority&#34;: 100,
+</span><span class="cm">    &#34;search&#34;: [&#34;ltr&#34;],
+</span><span class="cm">    &#34;replace&#34;: [&#34;rtl&#34;],
+</span><span class="cm">    &#34;options&#34;: {
+</span><span class="cm">      &#34;scope&#34;: &#34;*&#34;,
+</span><span class="cm">      &#34;ignoreCase&#34;: false
+</span><span class="cm">    }
+</span><span class="cm">  ]
+</span><span class="cm">} */</span>
+<span class="nc">.ltr</span> <span class="p">{</span>
+  <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/*rtl:end:options*/</span>
+</code></pre></div><p>После запуска Sass, а затем RTLCSS, каждый селектор в Ваших файлах CSS будет предваряться <code>.ltr</code> и <code>.rtl</code> для файлов RTL. Теперь Вы можете использовать оба файла на одной странице и просто использовать <code>.ltr</code> или <code>.rtl</code> в оболочках Ваших компонентов, чтобы использовать то или иное направление.</p>
+<div class="bd-callout bd-callout-warning">
+<h4 id="пограничные-случаи-и-известные-ограничения">Пограничные случаи и известные ограничения</h4>
+<p>Хотя такой подход понятен, обратите внимание на следующее:</p>
+<ol>
+<li>При переключении <code>.ltr</code> и <code>.rtl</code> убедитесь, что вы добавили атрибуты <code>dir</code> и <code>lang</code> соответственно.</li>
+<li>Загрузка обоих файлов может стать настоящим узким местом для производительности: подумайте о некоторой <a href="/docs/5.0/customize/optimize/">оптимизации</a> и, возможно, попробуйте <a href="https://www.filamentgroup.com/lab/load-css-simpler/">загрузить один из этих файлов асинхронно</a>.</li>
+<li>Вложение стилей таким образом предотвратит работу миксина <code>form-validation-state()</code> должным образом, поэтому Вам придется немного подправить его самостоятельно. <a href="https://github.com/twbs/bootstrap/issues/31223">Смотрите #31223</a>.</li>
+</ol>
+
+</div>
+
+<h2 id="случай-хлебных-крошек">Случай хлебных крошек</h2>
 <p><a href="/docs/5.0/components/breadcrumb//#%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D0%B8">Разделитель хлебных крошек</a> единственный случай, когда требуется собственная новая переменная, а именно <code>$breadcrumb-divider-flipped</code>, по умолчанию <code>$breadcrumb-divider</code>.</p>
 <h2 id="дополнительные-ресурсы">Дополнительные ресурсы</h2>
 <ul>

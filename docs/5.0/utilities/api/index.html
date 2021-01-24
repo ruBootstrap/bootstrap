@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -434,10 +434,14 @@
     <li><a href="#использование-api">Использование API</a>
       <ul>
         <li><a href="#добавление-утилит">Добавление утилит</a></li>
-        <li><a href="#изменение-утилит">Изменение утилит</a></li>
+        <li><a href="#изменение-утилит">Изменение утилит</a>
+          <ul>
+            <li><a href="#переименование-утилит">Переименование утилит</a></li>
+          </ul>
+        </li>
         <li><a href="#удаление-утилит">Удаление утилит</a>
           <ul>
-            <li><a href="#remove-utility-in-rtl">Remove utility in RTL</a></li>
+            <li><a href="#удалить-утилиту-в-rtl">Удалить утилиту в RTL</a></li>
           </ul>
         </li>
       </ul>
@@ -685,6 +689,20 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
+</code></pre></div><h4 id="переименование-утилит">Переименование утилит</h4>
+<p>Отсутствуют утилиты v4 или Вы привыкли к другому соглашению об именах? API утилит можно использовать для переопределения результирующего <code>class</code> данной утилиты - например, чтобы переименовать утилиты <code>.ms-*</code> в старые <code>.ml-*</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
+
+<span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+  <span class="nv">$utilities</span><span class="o">,</span> <span class="p">(</span>
+    <span class="s2">&#34;margin-start&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+      <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;margin-start&#34;</span><span class="p">)</span><span class="o">,</span>
+      <span class="p">(</span> <span class="n">class</span><span class="o">:</span> <span class="n">ml</span> <span class="p">)</span><span class="o">,</span>
+    <span class="p">)</span><span class="o">,</span>
+  <span class="p">)</span>
+<span class="p">);</span>
 </code></pre></div><h3 id="удаление-утилит">Удаление утилит</h3>
 <p>Удалите любую из утилит по умолчанию, установив для ключа группы значение <code>null</code>. Например, чтобы удалить все наши утилиты <code>width</code>, создайте <code>$utilities</code>, <code>map-merge</code> и добавьте внутрь <code>&quot;width&quot;: null</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
@@ -697,8 +715,8 @@
     <span class="s2">&#34;width&#34;</span><span class="o">:</span> <span class="n">null</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h4 id="remove-utility-in-rtl">Remove utility in RTL</h4>
-<p>Some edge cases make <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a>, such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the <code>rtl</code> option to <code>false</code>:</p>
+</code></pre></div><h4 id="удалить-утилиту-в-rtl">Удалить утилиту в RTL</h4>
+<p>Некоторые крайние случаи затрудняют <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">стилизацию RTL</a>, например, разрывы строк на арабском языке. Таким образом, утилиты можно исключить из вывода RTL, установив для опции <code>rtl</code> значение <code>false</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;word-wrap&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="n">property</span><span class="o">:</span> <span class="no">word-wrap</span> <span class="no">word-break</span><span class="o">,</span>
@@ -707,14 +725,14 @@
     <span class="n">rtl</span><span class="o">:</span> <span class="n">false</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Вывод:</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* rtl:begin:remove */</span>
 <span class="p">.</span><span class="nc">text-break</span> <span class="p">{</span>
   <span class="k">word-wrap</span><span class="p">:</span> <span class="kc">break-word</span> <span class="cp">!important</span><span class="p">;</span>
   <span class="k">word-break</span><span class="p">:</span> <span class="kc">break-word</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c">/* rtl:end:remove */</span>
-</code></pre></div><p>This doesn&rsquo;t output anything in RTL, thanks to <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">the RTLCSS <code>remove</code> control directive</a>.</p>
+</code></pre></div><p>Это ничего не выводит в RTL, благодаря <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">управляющей директиве RTLCSS <code>remove</code></a>.</p>
 
       </div>
     </main>

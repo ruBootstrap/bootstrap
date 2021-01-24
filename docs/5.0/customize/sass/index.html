@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -449,7 +449,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p>Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, примеси и многое другое. В нашей сборке мы увеличили точность округления Sass до 6 (по умолчанию 5), чтобы предотвратить проблемы с округлением в браузере.</p>
+        <p>Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, миксины и многое другое.</p>
 <h2 id="файловая-структура">Файловая структура</h2>
 <p>По возможности избегайте изменения файлов ядра Bootstrap. Для Sass это означает создание собственной таблицы стилей, которая импортирует Bootstrap, чтобы вы могли изменять и расширять ее. Предполагая, что вы используете менеджер пакетов, такой как npm, у вас будет файловая структура, которая выглядит следующим образом:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">your-project/
@@ -472,14 +472,18 @@
 </span><span class="c1">// Вариант А: Включите весь Bootstrap
 </span><span class="c1"></span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+
+<span class="c1">// Add custom code after this
+</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
 </span><span class="c1">// Вариант Б. Включите части Bootstrap
 </span><span class="c1"></span>
-<span class="c1">// Необходимые
+<span class="c1">// Обязательные
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
 
+<span class="c1">// Включите здесь переопределения пользовательских переменных по умолчанию
+</span><span class="c1"></span>
 <span class="c1">// Необязательные
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
@@ -491,15 +495,29 @@
 <h2 id="значения-переменных-по-умолчанию">Значения переменных по умолчанию</h2>
 <p>Каждая переменная Sass в Bootstrap включает флаг <code>!default</code> позволяющий переопределить значение переменной по умолчанию в Вашем собственном Sass без изменения исходного кода Bootstrap. Скопируйте и вставьте переменные по мере необходимости, измените их значения и удалите флаг <code>!default</code>. Если переменная уже была назначена, она не будет повторно назначена значениями по умолчанию в Bootstrap.</p>
 <p>Вы найдете полный список переменных Bootstrap в <code>scss/_variables.scss</code>. Некоторые переменные имеют значение <code>null</code>, эти переменные не выводят свойство, если они не переопределены в Вашей конфигурации.</p>
-<p>Переопределения переменных в одном файле Sass могут быть до или после переменных по умолчанию. Однако при переопределении файлов Sass Ваши переопределения должны выполняться до того, как Вы импортируете файлы Sass для Bootstrap.</p>
+<p>Переопределения переменных должны происходить после импорта наших функций, переменных и миксинов, но до остальной части импорта.</p>
 <p>Вот пример, который меняет <code>background-color</code> и <code>color</code> для <code>&lt;body&gt;</code> при импорте и компиляции Bootstrap через npm:</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Ваша переменная переопределяет
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Обязательные
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+
+<span class="c1">// Ваша переменная переопределяет
 </span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
 <span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#111</span><span class="p">;</span>
 
 <span class="c1">// Bootstrap и его переменные по умолчанию
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</code></pre></div><p>При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.</p>
+</span><span class="c1"></span>
+<span class="c1">// Необязательные
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
+<span class="c1">// etc
+</span></code></pre></div><p>При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.</p>
+<div class="bd-callout bd-callout-info">
+<strong>Начните работу с Bootstrap через npm с помощью нашего начального проекта!</strong> Перейдите в репозиторий шаблонов <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstrap-npm-starter</a>, чтобы узнать, как создать и настроить Bootstrap в своем собственном проекте npm. Включает компилятор Sass, Autoprefixer, Stylelint, PurgeCSS и иконки Bootstrap.
+</div>
+
 <h2 id="карты-и-циклы">Карты и циклы</h2>
 <p>Bootstrap включает в себя несколько карт Sass, пар ключ-значение, которые упрощают создание семейств связанных CSS. Мы используем карты Sass для наших цветов, контрольных точек сетки и многого другого. Как и переменные Sass, все карты Sass включают флаг <code>! Default</code> и могут быть переопределены и расширены.</p>
 <p>Некоторые из наших Sass-карт по умолчанию объединены в пустые. Это сделано для того, чтобы упростить расширение данной карты Sass, но это происходит за счет того, что <em>удаление</em> элементов с карты становится немного сложнее.</p>
@@ -534,8 +552,8 @@
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
-<span class="nc">...</span>
-</code></pre></div><h2 id="обязательные-ключи">Обязательные ключи</h2>
+<span class="c1">// etc
+</span></code></pre></div><h2 id="обязательные-ключи">Обязательные ключи</h2>
 <p>Bootstrap предполагает наличие определенных ключей в картах Sass, которые мы использовали, и расширяем их сами. Когда Вы настраиваете включенные карты, Вы можете столкнуться с ошибками, когда используется конкретный ключ карты Sass.</p>
 <p>Например, мы используем ключи <code>primary</code>, <code>success</code> и <code>danger</code> из <code>$theme-colors</code> для ссылок, кнопок и состояний формы. Замена значений этих ключей не должна вызывать проблем, но их удаление может вызвать проблемы с компиляцией Sass. В этих случаях вам нужно будет изменить код Sass, который использует эти значения.</p>
 <h2 id="функции">Функции</h2>

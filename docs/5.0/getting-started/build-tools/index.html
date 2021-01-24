@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.5/" target="_blank">v4.5.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -425,7 +425,8 @@
   <ul>
     <li><a href="#настройка-инструмента">Настройка инструмента</a></li>
     <li><a href="#использование-скриптов-npm">Использование скриптов npm</a></li>
-    <li><a href="#автопрефикс">Автопрефикс</a></li>
+    <li><a href="#sass">Sass</a></li>
+    <li><a href="#автопрефиксер">Автопрефиксер</a></li>
     <li><a href="#rtlcss">RTLCSS</a></li>
     <li><a href="#локальная-документация">Локальная документация</a></li>
     <li><a href="#исправление-проблем">Исправление проблем</a></li>
@@ -490,7 +491,14 @@
     </tr>
   </tbody>
 </table>
-<h2 id="автопрефикс">Автопрефикс</h2>
+<div class="bd-callout bd-callout-info">
+<strong>Начните работу с Bootstrap через npm с помощью нашего начального проекта!</strong> Перейдите в репозиторий шаблонов <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstrap-npm-starter</a>, чтобы узнать, как создать и настроить Bootstrap в своем собственном проекте npm. Включает компилятор Sass, Autoprefixer, Stylelint, PurgeCSS и иконки Bootstrap.
+</div>
+
+<h2 id="sass">Sass</h2>
+<p>Bootstrap использует <a href="https://sass-lang.com/dart-sass">Dart Sass</a> для компиляции наших исходных файлов Sass в файлы CSS (включенные в наш процесс сборки), и мы рекомендуем Вам сделать то же самое, если Вы компилируете Sass с использованием собственного конвейера активов. Ранее мы использовали Node Sass для Bootstrap v4, но LibSass и пакеты, созданные на его основе, включая Node Sass, теперь <a href="https://sass-lang.com/blog/libsass-is-deprecated">устарели</a>.</p>
+<p>Dart Sass использует точность округления 10 и из соображений эффективности не позволяет изменять это значение. Мы не снижаем эту точность во время дальнейшей обработки нашего сгенерированного CSS, например, во время минификации, но если Вы решите это сделать, мы рекомендуем поддерживать точность не менее 6, чтобы предотвратить проблемы с округлением в браузере.</p>
+<h2 id="автопрефиксер">Автопрефиксер</h2>
 <p>Bootstrap использует <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах от поставщиков, подобных тем, что есть в v3.</p>
 <p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta1/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
 <h2 id="rtlcss">RTLCSS</h2>
