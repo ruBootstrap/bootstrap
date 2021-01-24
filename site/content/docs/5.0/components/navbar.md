@@ -29,6 +29,8 @@ toc: true
 - Утилиты Flex и Spacing для любых элементов управления и действий формы.
 - `.navbar-text` для добавления вертикально центрированных строк текста.
 - `.collapse.navbar-collapse` для группировки и скрытия содержимого навигационной панели по родительской контрольной точке.
+- Добавьте необязательный `.navbar-scroll`, чтобы установить `max-height` и [прокручивать расширенное содержимое панели навигации](#прокрутка).
+
 
 Вот пример всех подкомпонентов, включенных в адаптивную светлую навигационную панель, которая автоматически сворачивается в контрольной точке `lg` (большая).
 
@@ -471,6 +473,53 @@ toc: true
 <nav class="navbar sticky-top navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Приклеен к верху</a>
+  </div>
+</nav>
+{{< /example >}}
+
+## Прокрутка
+
+Добавьте `.navbar-nav-scroll` в `.navbar-nav` (или другой субкомпонент навигационной панели), чтобы включить вертикальную прокрутку внутри переключаемого содержимого свернутой навигационной панели. По умолчанию прокрутка начинается с `75vh` (или 75% высоты области просмотра), но Вы можете переопределить это с помощью локального настраиваемого свойства CSS `--bs-navbar-height` или настраиваемых стилей. В больших окнах просмотра, когда панель навигации развернута, содержимое будет отображаться так же, как и на панели навигации по умолчанию.
+
+Обратите внимание, что такое поведение имеет потенциальный недостаток `overflow`—при установке `overflow-y: auto` (требуется для прокрутки содержимого здесь), `overflow-x` является эквивалентом `auto`, который обрезает некоторые горизонтальное содержание.
+
+Вот пример навигационной панели, использующей `.navbar-nav-scroll` с `style="--bs-scroll-height: 100px;"`, с некоторыми дополнительными утилитами полей для оптимального интервала.
+
+{{< example >}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Прокрутка навигационной панели</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ссылка</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Искать</button>
+      </form>
+    </div>
   </div>
 </nav>
 {{< /example >}}
