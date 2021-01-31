@@ -11,7 +11,7 @@ group: utilities
 
 {{< example >}}
 <div class="shadow-none p-3 mb-5 bg-light rounded">Нет тени</div>
-<div class="shadow-sm p-3 mb-5 bg-white rounded">Маленькая тень</div>
-<div class="shadow p-3 mb-5 bg-white rounded">Обычная тень</div>
-<div class="shadow-lg p-3 mb-5 bg-white rounded">Большая тень</div>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">Маленькая тень</div>
+<div class="shadow p-3 mb-5 bg-body rounded">Обычная тень</div>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">Большая тень</div>
 {{< /example >}}

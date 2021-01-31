@@ -81,19 +81,19 @@ toc: true
 
 ## Флажки и радио
 
-Поместите любой флажок или переключатель в надстройку группы ввода вместо текста.
+Поместите любой флажок или переключатель в надстройку группы ввода вместо текста. Мы рекомендуем добавить `.mt-0` к `.form-check-input`, когда рядом с полем ввода нет видимого текста.
 
 {{< example >}}
 <div class="input-group mb-3">
   <div class="input-group-text">
-    <input class="form-check-input" type="checkbox" value="" aria-label="Флажок для следующего ввода текста">
+    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Флажок для следующего ввода текста">
   </div>
   <input type="text" class="form-control" aria-label="Ввод текста с флажком">
 </div>
 
 <div class="input-group">
   <div class="input-group-text">
-    <input class="form-check-input" type="radio" value="" aria-label="Радиокнопка для следующего ввода текста">
+    <input class="form-check-input mt-0" type="radio" value="" aria-label="Радиокнопка для следующего ввода текста">
   </div>
   <input type="text" class="form-control" aria-label="Ввод текста с переключателем">
 </div>
