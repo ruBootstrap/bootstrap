@@ -6,7 +6,7 @@ group: helpers
 toc: false
 ---
 
-Вы можете использовать классы `.link-*` для раскрашивания ссылок. В отличие от [`.text-*` классов]({{< docsref "/utilities/colors#colors" >}}), эти классы имеют состояние `:hover` и `:focus`.
+Вы можете использовать классы `.link-*` для раскрашивания ссылок. В отличие от [классов `.text-*`]({{< docsref "/utilities/colors" >}}), эти классы имеют состояние `:hover` и `:focus`.
 
 {{< example >}}
 {{< colored-links.inline >}}

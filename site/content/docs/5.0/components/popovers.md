@@ -135,7 +135,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`.
+Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`. Обязательно измените тип case имени опции с camelCase на kebab-case при передаче через атрибуты данных. Например: вместо использования `data-bs-customClass="beautifier"` используйте `data-bs-custom-class="beautifier"`.
 
 {{< callout warning >}}
 Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
@@ -241,8 +241,8 @@ var popover = new bootstrap.Popover(exampleEl, options)
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
-      <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку на HTMLElement (только JavaScript). Для получения дополнительной информации обратитесь к <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">документации preventOverflow Popper</a>.</td>
+      <td><code>'clippingParents'</code></td>
+      <td>Граница ограничения переполнения всплывающего окна. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow</a> документации Popper.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
@@ -276,16 +276,29 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td>array | string | function</td>
       <td><code>[0, 0]</code></td>
       <td>
-        <p>Offset of the popover relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
-        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
-        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+        <p>Смещение всплывающего окна относительно его цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>offset</code></td>
+      <td>array | string | function</td>
+      <td><code>[0, 8]</code></td>
+      <td>
+        <p>Смещение всплывающего окна относительно его цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
       </td>
     </tr>
     <tr>
       <td><code>popperConfig</code></td>
-      <td>null | object</td>
+      <td>null | object | function</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
+      <td>
+        <p>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</p>
+        <p>Когда функция используется для создания конфигурации Popper, она вызывается с объектом, который содержит конфигурацию Popper по умолчанию для Bootstrap. Это поможет вам использовать и объединить настройки по умолчанию с вашей собственной конфигурацией. Функция должна возвращать объект конфигурации для Popper.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -295,6 +308,18 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 В качестве альтернативы параметры для отдельных всплывающих окон можно указать с помощью атрибутов данных, как описано выше.
 {{< /callout >}}
+
+#### Использование функции с `popperConfig`
+
+```js
+var popover = new bootstrap.Popover(element, {
+  popperConfig: function (defaultBsPopperConfig) {
+    // var newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})
+```
 
 ### Методы
 

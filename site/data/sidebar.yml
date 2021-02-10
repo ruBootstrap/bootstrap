@@ -236,6 +236,9 @@
     - title: API
       hint: API
       slug: api
+    - title: Background
+      hint: Фон
+      slug: background
     - title: Borders
       hint: Границы
       slug: borders

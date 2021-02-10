@@ -30,10 +30,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -635,10 +635,12 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ## Выравнивание меню
 
-По умолчанию раскрывающееся меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте `.dropdown-menu-end` в `.dropdown-menu`, чтобы выровнять раскрывающееся меню по правому краю. При использовании Bootstrap в RTL направления отражаются, то есть `.dropdown-menu-end` появится слева.
+По умолчанию раскрывающееся меню автоматически располагается на 100% сверху и слева от своего родителя. Вы можете изменить это с помощью направленных классов `.drop*`, но Вы также можете управлять ими с помощью дополнительных классов-модификаторов.
+
+Добавьте `.dropdown-menu-end` в `.dropdown-menu`, чтобы выровнять раскрывающееся меню по правому краю. При использовании Bootstrap в RTL направления отражаются, то есть `.dropdown-menu-end` появится слева.
 
 {{< callout info >}}
-**Внимание!** Выпадающие списки позиционируются благодаря Popper (кроме случаев, когда они содержатся в навигационной панели).
+**Внимание!** Выпадающие списки позиционируются благодаря Popper, за исключением случаев, когда они содержатся в навигационной панели.
 {{< /callout >}}
 
 {{< example >}}
@@ -689,6 +691,89 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 {{< /example >}}
 
 Обратите внимание, что Вам не нужно добавлять атрибут `data-bs-display="static"` к кнопке выпадающего списка в навигационных панелях, поскольку Popper не используется в навигационных панелях.
+
+### Варианты выравнивания
+
+Воспользовавшись большинством вариантов, показанных выше, вот небольшая демонстрация кухонной мойки с различными вариантами выравнивания раскрывающегося списка в одном месте.
+
+{{< example >}}
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    Выпадающий список
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Меню с выравниванием по правому краю
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+    По левому краю, по правому краю lg
+  </button>
+  <ul class="dropdown-menu dropdown-menu-lg-end">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+    По правому краю, по левому краю lg
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group dropstart">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    ВС в начале
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    ВС в конце
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group dropup">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    ВС вверху
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+{{< /example >}}
 
 ## Содержание меню
 
@@ -881,8 +966,8 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
-      <td><code>'scrollParent'</code></td>
-      <td>Граница ограничения переполнения раскрывающегося меню. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow документации</a> Popper.</td>
+      <td><code>'clippingParents'</code></td>
+      <td>Граница ограничения переполнения раскрывающегося меню. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow</a> документации Popper.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
@@ -901,21 +986,44 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td>array | string | function</td>
       <td><code>[0, 0]</code></td>
       <td>
-        <p>Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
-        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
-        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+        <p>Смещение раскрывающегося списка относительно его цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>offset</code></td>
+      <td>array | string | function</td>
+      <td><code>[0, 2]</code></td>
+      <td>
+        <p>Смещение раскрывающегося списка относительно его цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
       </td>
     </tr>
     <tr>
       <td><code>popperConfig</code></td>
-      <td>null | object</td>
+      <td>null | object | function</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию в Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
+      <td>
+        <p>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</p>
+        <p>Когда функция используется для создания конфигурации Popper, она вызывается с объектом, который содержит конфигурацию Popper по умолчанию для Bootstrap. Это поможет Вам использовать и объединить настройки по умолчанию с Вашей собственной конфигурацией. Функция должна возвращать объект конфигурации для Popper.</p>
+      </td>
     </tr>
   </tbody>
 </table>
 
-Обратите внимание, когда для параметра `boundary` установлено любое значение, кроме `'scrollParent'`, стиль `position: static` применяется к контейнеру `.dropdown`.
+#### Использование функции с `popperConfig`
+
+```js
+var dropdown = new bootstrap.Dropdown(element, {
+  popperConfig: function (defaultBsPopperConfig) {
+    // var newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})
+```
 
 ### Методы
 
@@ -968,8 +1076,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 
 ### События
 
-Все выпадающие события запускаются в родительском элементе `.dropdown-menu` и имеют свойство `relatedTarget`, значением которого является переключаемый элемент привязки.
-События `hide.bs.dropdown` и `hidden.bs.dropdown` имеют свойство `clickEvent` (только если исходный тип события `click`), который содержит объект события для события щелчка.
+Все выпадающие события запускаются в переключающемся элементе, а затем всплывают. Таким образом, Вы также можете добавить прослушивателей событий в родительский элемент. `hide.bs.dropdown` и `hidden.bs.dropdown` имеют свойство `clickEvent` (только если исходный тип события `click`), который содержит объект события для события клика.
 
 <table class="table">
   <thead>

@@ -51,7 +51,7 @@ toc: true
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
       <small>11 мин назад</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
       Привет, мир! Это тост-сообщение.
@@ -72,7 +72,7 @@ toc: true
       <img src="..." class="rounded me-2" alt="...">
       <strong class="me-auto">Bootstrap</strong>
       <small>11 мин назад</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
       Привет, мир! Это тост-сообщение.
@@ -141,7 +141,7 @@ toc: true
     <div class="toast-body">
     Привет, мир! Это тост-сообщение.
    </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
 </div>
 {{< /example >}}
@@ -162,7 +162,7 @@ toc: true
 
 ### Цветовые схемы
 
-Основываясь на приведенном выше примере, вы можете создавать различные цветовые схемы всплывающих окон с помощью наших [утилит цвета]({{< docsref "/utilities/colors" >}}). Здесь мы добавили `.bg-primary` и `.text-white` в `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
+Основываясь на приведенном выше примере, Вы можете создавать различные цветовые схемы тостов с помощью наших [цветов]({{< docsref "/utilities/colors" >}}) и [фонов]({{< docsref "/utilities/background" >}}). Здесь мы добавили `.bg-primary` и `.text-white` в `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -170,7 +170,7 @@ toc: true
     <div class="toast-body">
       Привет, мир! Это тост-сообщение.
     </div>
-    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
 </div>
 {{< /example >}}

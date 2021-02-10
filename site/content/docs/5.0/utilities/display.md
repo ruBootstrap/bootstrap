@@ -150,3 +150,11 @@ toc: true
 <div class="d-none d-print-block">Только печать (скрыть только на экране)</div>
 <div class="d-none d-lg-block d-print-block">Скрыть до большого размера на экране, но всегда показывать на печати</div>
 {{< /example >}}
+
+## Sass
+
+### Utilities API
+
+Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}
