@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -447,7 +448,7 @@
 <tr>
 <td><code>$enable-shadows</code></td>
 <td><code>true</code> или <code>false</code> (по умолчанию)</td>
-<td>Включает предопределенные <code>box-shadow</code> стили для различных компонентов.</td>
+<td>Включает предопределенные декоративные стили <code>box-shadow</code> для различных компонентов. Не влияет на <code>box-shadow</code>, используемый для состояний фокуса.</td>
 </tr>
 <tr>
 <td><code>$enable-gradients</code></td>
@@ -462,7 +463,7 @@
 <tr>
 <td><code>$enable-reduced-motion</code></td>
 <td><code>true</code> (по умолчанию) или <code>false</code></td>
-<td>Включает <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">медиа выражение <code>prefers-reduced-motion</code></a>, который подавляет определенные анимации/переходы на основе настроек браузера/операционной системы пользователя.</td>
+<td>Включает <a href="/docs/5.0/getting-started/accessibility/#%D0%B7%D0%B0%D0%BC%D0%B5%D0%B4%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5">медиа выражение <code>prefers-reduced-motion</code></a>, который подавляет определенные анимации/переходы на основе настроек браузера/операционной системы пользователя.</td>
 </tr>
 <tr>
 <td><code>$enable-grid-classes</code></td>
@@ -496,8 +497,8 @@
 </tr>
 <tr>
 <td><code>$enable-deprecation-messages</code></td>
-<td><code>true</code> или <code>false</code> (по умолчанию)</td>
-<td>Устанавливает значение <code>true</code>, чтобы показывать предупреждения при использовании любых устаревших примесей и функций, которые планируется удалить в <code>v5</code>.</td>
+<td><code>true</code> (по умолчанию) или <code>false</code></td>
+<td>Установите значение <code>false</code>, чтобы скрыть предупреждения при использовании любых устаревших миксинов и функций, которые планируется удалить в <code>v6</code>.</td>
 </tr>
 <tr>
 <td><code>$enable-important-utilities</code></td>
@@ -523,8 +524,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

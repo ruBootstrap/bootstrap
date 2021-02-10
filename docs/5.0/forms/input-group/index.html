@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -557,31 +558,31 @@
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Пример размера поля ввода&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;inputGroup-sizing-lg&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="флажки-и-радио">Флажки и радио</h2>
-<p>Поместите любой флажок или переключатель в надстройку группы ввода вместо текста.</p>
+<p>Поместите любой флажок или переключатель в надстройку группы ввода вместо текста. Мы рекомендуем добавлять <code>.mt-0</code> к <code>.form-check-input</code>, когда рядом с полем ввода нет видимого текста.</p>
 <div class="bd-example">
 <div class="input-group mb-3">
   <div class="input-group-text">
-    <input class="form-check-input" type="checkbox" value="" aria-label="Флажок для следующего ввода текста">
+    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Флажок для следующего ввода текста">
   </div>
   <input type="text" class="form-control" aria-label="Ввод текста с флажком">
 </div>
 
 <div class="input-group">
   <div class="input-group-text">
-    <input class="form-check-input" type="radio" value="" aria-label="Радиокнопка для следующего ввода текста">
+    <input class="form-check-input mt-0" type="radio" value="" aria-label="Радиокнопка для следующего ввода текста">
   </div>
   <input type="text" class="form-control" aria-label="Ввод текста с переключателем">
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group mb-3&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Флажок для следующего ввода текста&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input mt-0&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Флажок для следующего ввода текста&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Ввод текста с флажком&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-group-text&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Радиокнопка для следующего ввода текста&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input mt-0&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Радиокнопка для следующего ввода текста&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Ввод текста с переключателем&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
@@ -953,8 +954,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

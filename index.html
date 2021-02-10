@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,12 +182,14 @@
 
         <div class="d-flex flex-column flex-md-row">
           <a href="/docs/5.0/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 me-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Начало работы</a>
-          <a href="/docs/5.0/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 5.0.0-beta1');">Скачать</a>
+          <a href="/docs/5.0/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 5.0.0-beta2');">Скачать</a>
         </div>
         <p class="text-muted mb-0">
-          В данный момент <strong>v5.0.0-beta1</strong>
+          В данный момент <strong>v5.0.0-beta2</strong>
           <span class="px-1">&middot;</span>
-          <a href="/docs/versions/" class="link-secondary">Предыдущие релизы</a>
+          <a href="https://v4.getbootstrap.su/docs/4.6/getting-started/introduction/" class="link-secondary">v4.6.x документация</a>
+          <span class="px-1">&middot;</span>
+          <a href="/docs/versions/" class="link-secondary">Все релизы</a>
         </p>
       </div>
     </div>
@@ -212,7 +214,7 @@
     </div>
     <div class="col-md-7 ps-md-5">
       <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm install bootstrap@next</code></pre></div>
-      <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">gem install bootstrap -v 5.0.0.beta1</code></pre></div>
+      <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">gem install bootstrap -v 5.0.0.beta2</code></pre></div>
     </div>
   </section>
 
@@ -235,11 +237,11 @@
     </div>
     <div class="col-md-7 ps-md-5">
       <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Только CSS --&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </code></pre></div>
       <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Пакет JavaScript с Popper --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js&#34;</span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-%!(EXTRA template.HTMLAttr=sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW)</code></pre></div>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js&#34;</span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+%!(EXTRA template.HTMLAttr=sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0)</code></pre></div>
     </div>
   </section>
 
@@ -310,8 +312,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

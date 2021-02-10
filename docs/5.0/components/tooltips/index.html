@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -430,7 +431,11 @@
       <ul>
         <li><a href="#разметка">Разметка</a></li>
         <li><a href="#отключенные-элементы">Отключенные элементы</a></li>
-        <li><a href="#параметры">Параметры</a></li>
+        <li><a href="#параметры">Параметры</a>
+          <ul>
+            <li><a href="#использование-функции-с-popperconfig">Использование функции с <code>popperConfig</code></a></li>
+          </ul>
+        </li>
         <li><a href="#методы">Методы</a>
           <ul>
             <li><a href="#show">show</a></li>
@@ -571,7 +576,7 @@
 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 </div>
 <h3 id="параметры">Параметры</h3>
-<p>Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-bs-</code>, как в <code>data-bs-animation =&quot; &quot;</code>.</p>
+<p>Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-bs-</code>, как в <code>data-bs-animation=&quot;&quot;</code>. Обязательно измените тип case имени опции с camelCase на kebab-case при передаче через атрибуты данных. Например: вместо использования <code>data-bs-customClass=&quot;beautifier&quot;</code> используйте <code>data-bs-custom-class=&quot;beautifier&quot;</code>.</p>
 <div class="bd-callout bd-callout-warning">
 Обратите внимание, что по соображениям безопасности параметры <code>sanitize</code>, <code>sanitizeFn</code> и <code>allowList</code> не могут быть предоставлены с использованием атрибутов данных.
 </div>
@@ -705,10 +710,33 @@
       <td>Здесь Вы можете предоставить свою собственную функцию дезинфекции. Это может быть полезно, если Вы предпочитаете использовать специальную библиотеку для выполнения очистки.</td>
     </tr>
     <tr>
+      <td><code>offset</code></td>
+      <td>array | string | function</td>
+      <td><code>[0, 0]</code></td>
+      <td>
+        <p>Смещение всплывающей подсказки относительно цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>offset</code></td>
+      <td>array | string | function</td>
+      <td><code>[0, 0]</code></td>
+      <td>
+        <p>Смещение всплывающей подсказки относительно цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: <code>data-bs-offset="10,20"</code></p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и popper rects в качестве первого аргумента. Узел DOM запускающего элемента передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset</a> документации Popper.</p>
+      </td>
+    </tr>
+    <tr>
       <td><code>popperConfig</code></td>
-      <td>null | object</td>
+      <td>null | object | function</td>
       <td><code>null</code></td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</td>
+      <td>
+        <p>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v2/constructors/#options">конфигурацию Popper</a>.</p>
+        <p>Когда функция используется для создания конфигурации Popper, она вызывается с объектом, который содержит конфигурацию Popper по умолчанию для Bootstrap. Это поможет вам использовать и объединить настройки по умолчанию с вашей собственной конфигурацией. Функция должна возвращать объект конфигурации для Popper.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -717,7 +745,15 @@
 <p>В качестве альтернативы параметры для отдельных всплывающих подсказок можно указать с помощью атрибутов данных, как описано выше.
 </div>
 
-<h3 id="методы">Методы</h3>
+<h4 id="использование-функции-с-popperconfig">Использование функции с <code>popperConfig</code></h4>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// var newPopperConfig = {...}
+</span><span class="c1"></span>    <span class="c1">// use defaultBsPopperConfig if needed...
+</span><span class="c1"></span>    <span class="c1">// return newPopperConfig
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><h3 id="методы">Методы</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="асинхронные-методы-и-переходы">Асинхронные методы и переходы</h4>
 <p>Все методы API <strong>асинхронны</strong> и запускают <strong>переход</strong>. Они возвращаются к вызывающей стороне, как только переход начинается, но <strong>до его завершения</strong>. Кроме того, вызов метода <strong>переходного компонента будет проигнорирован</strong>.</p>
@@ -808,8 +844,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -546,7 +547,11 @@
 </ul>
 <h3 id="javascript">JavaScript</h3>
 <ul>
+<li>Восстановлена опция <code>offset</code> для плагинов Dropdown, Popover и Tooltip.</li>
 <li>Значение по умолчанию для <code>fallbackPlacements</code> изменено на <code>['top', 'right', 'bottom', 'left']</code> для лучшего размещения элементов popper.</li>
+<li>Все события для раскрывающегося списка теперь запускаются кнопкой-переключателем раскрывающегося списка, а затем всплывают до родительского элемента.</li>
+<li>Выпадающие меню теперь имеют атрибут <code>data-bs-popper=&quot;static&quot;</code>, установленный, когда положение раскрывающегося списка статично, и <code>data-bs-popper=&quot;none&quot;</code>, когда раскрывающееся меню находится на панели навигации. Это добавлено нашим JavaScript и помогает нам использовать настраиваемые стили положения, не мешая позиционированию Popper.</li>
+<li><code>popperConfig</code> может быть передан как функция, которая принимает конфигурацию Popper по умолчанию Bootstrap в качестве аргумента, так что Вы можете объединить эту конфигурацию по умолчанию по-своему.</li>
 </ul>
 <h2 id="v500-beta1">v5.0.0-beta1</h2>
 <h3 id="rtl">RTL</h3>
@@ -877,36 +882,37 @@
 <li>Документы групп ввода перемещены в новый раздел форм.</li>
 </ul>
 </li>
-<li>Переставлены исходные файлы Sass в <code>scss/forms/</code>, включая перемещение стилей групп ввода.</li>
+<li>Перегруппированы исходные файлы Sass в <code>scss/forms/</code>, включая перемещение стилей групп ввода.</li>
 <li>Объединение собственных и настраиваемых флажков и радио в один класс <code>.form-check</code>.
 <ul>
-<li>Новые проверки теперь поддерживают изменение размеров с помощью классов <code>em</code>/<code>font-size</code> или явных модификаторов.</li>
+<li>Новые проверки теперь поддерживают изменение размера с помощью классов <code>em</code>/<code>font-size</code> или явных модификаторов.</li>
 <li>Новые проверки теперь по умолчанию увеличены в размере для повышения удобства использования.</li>
 <li>Удалены <code>.custom-control</code> и связанные классы.</li>
 <li>Большинство переменных <code>$custom-control</code> переименовано в <code>$form-control</code>.</li>
 </ul>
 </li>
-<li>Объединение нативного и пользовательского выбора в <code>.form-select</code>.
+<li>Комбинация собственного и пользовательского выбора в <code>.form-select</code>.
 <ul>
 <li>Удалены <code>.custom-select</code> и связанные классы.</li>
 <li>Большинство переменных <code>$custom-select</code> переименовано в <code>$form-select</code>.</li>
 </ul>
 </li>
-<li>Обновленный компонент ввода файлов с тем же общим дизайном, но улучшенным HTML.
+<li>Обновленный компонент ввода файлов с тем же общим дизайном, но с улучшенным HTML.
 <ul>
 <li>Реорганизована разметка <code>.form-file</code> для устранения некоторых визуальных ошибок, при этом разрешен перевод и изменение текста кнопок через HTML вместо CSS.</li>
 <li>Полностью исключены собственные компоненты <code>.form-control-file</code> и <code>.form-control-range</code>.</li>
-<li><code>.custom-file</code> переименован в <code>.form-file</code> (включая переменные). <strong>Будьте осторожны:</strong> <code>.form-file</code> был позже удален в <code>v5.0.0-alpha3</code>, теперь Вы можете использовать <code>.form-control</code>.</li>
+<li>Переименован <code>.custom-file</code> в <code>.form-file</code> (включая переменные). <strong>Будьте осторожны:</strong> <code>.form-file</code> был позже удален в <code>v5.0.0-alpha3</code>, теперь Вы можете использовать <code>.form-control</code>.</li>
 <li>Добавлена поддержка стилей <code>:focus</code> и <code>:disabled</code>.</li>
 </ul>
 </li>
-<li><code>.custom-range</code> переименован в <code>.form-range</code> (включая переменные).</li>
-<li>Удален <code>.form-group</code> для утилит margin (мы заменили наши примеры документации на <code>.mb-3</code>).</li>
-<li>Удален <code>.form-row</code> для более гибкой сетки.</li>
+<li>Переименован <code>.custom-range</code> в <code>.form-range</code> (включая переменные).</li>
+<li>Удален <code>.form-group</code> для утилит полей (мы заменили наши примеры документации на <code>.mb-3</code>).</li>
+<li>Удален <code>.form-row</code> для более гибкой сетки полей.</li>
 <li>Удален <code>.form-inline</code> для более гибкой сетки.</li>
-<li>Прекращена поддержка <code>.form-control-plaintext</code> внутри <code>.input-group</code>.</li>
+<li>Удалена поддержка для <code>.form-control-plaintext</code> внутри <code>.input-group</code>.</li>
 <li>Удален <code>.input-group-append</code> и <code>.input-group-prepend</code>. Теперь Вы можете просто добавить кнопки и <code>.input-group-text</code> в качестве прямых потомков групп ввода.</li>
-<li>Для меток форм теперь требуется класс <code>.form-label</code>. Переменные Sass теперь доступны для стилизации меток форм в соответствии с Вашими потребностями. <a href="https://github.com/twbs/bootstrap/pull/30476">См. #30476</a></li>
+<li>Для меток форм теперь требуется класс <code>.form-label</code>. Переменные Sass теперь доступны для стилизации меток форм в соответствии с Вашими потребностями. <a href="https://github.com/twbs/bootstrap/pull/30476">Смотрите #30476</a></li>
+<li><code>.form-text</code> больше не устанавливает <code>display</code>, но устанавливает <code>color</code> и <code>font-size</code>. Поэтому вместо <code>&lt;small class=&quot;form-text text-muted&quot;&gt;</code> Вы должны теперь использовать <code>&lt;div class=&quot;form-text&quot;&gt;</code>.</li>
 </ul>
 <h3 id="компоненты-3">Компоненты</h3>
 <ul>
@@ -996,8 +1002,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

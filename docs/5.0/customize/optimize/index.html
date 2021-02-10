@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -429,7 +430,7 @@
     <li><a href="#неиспользуемый-css">Неиспользуемый CSS</a></li>
     <li><a href="#минификация-и-сжатие">Минификация и сжатие</a></li>
     <li><a href="#неблокирующие-файлы">Неблокирующие файлы</a></li>
-    <li><a href="#всегда-используйте-https">Всегда используйте https</a></li>
+    <li><a href="#всегда-используйте-https">Всегда используйте HTTPS</a></li>
   </ul>
 </nav>
         </div>
@@ -481,7 +482,8 @@
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;helpers&#34;</span><span class="p">;</span>
 
 <span class="c1">// Utilities
-</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;utilities/api&#34;</span><span class="p">;</span></code></pre></div>
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;utilities/api&#34;</span><span class="p">;</span>
+</code></pre></div>
 <p>Если Вы не используете компонент, закомментируйте его или удалите полностью. Например, если Вы не используете карусель, удалите этот импорт, чтобы сохранить некоторый размер файла в скомпилированном CSS. Имейте в виду, что между импортом Sass есть некоторые зависимости, которые могут затруднить пропуск файла.</p>
 <h2 id="полагаться-на-javascript">Полагаться на JavaScript</h2>
 <p>JavaScript в Bootstrap включает все компоненты в наших основных файлах папки dist (<code>bootstrap.js</code> и <code>bootstrap.min.js</code>), и даже нашу основную зависимость (Popper) с нашими файлами пакетов (<code>bootstrap.bundle.js</code> и <code>bootstrap.bundle.min.js</code>). Пока Вы настраиваете через Sass, не забудьте удалить связанный JavaScript.</p>
@@ -522,8 +524,9 @@
 <p>По возможности обязательно сжимайте весь код, который Вы показываете своим посетителям. Если Вы используете файлы Bootstrap из папки dist, постарайтесь придерживаться минифицированных версий (обозначенных расширениями <code>.min.css</code> и <code>.min.js</code>). Если Вы создаете Bootstrap из исходного кода с помощью своей собственной системы сборки, обязательно реализуйте собственные минификаторы для HTML, CSS и JS.</p>
 <h2 id="неблокирующие-файлы">Неблокирующие файлы</h2>
 <p><em>Помощь в этом разделе нужна, рассмотрите возможность открытия PR. Спасибо!</em></p>
-<h2 id="всегда-используйте-https">Всегда используйте https</h2>
-<p><em>Помощь в этом разделе нужна, рассмотрите возможность открытия PR. Спасибо!</em></p>
+<h2 id="всегда-используйте-https">Всегда используйте HTTPS</h2>
+<p>Ваш веб-сайт должен быть доступен только через HTTPS-соединения в рабочей среде. HTTPS повышает безопасность, конфиденциальность и доступность всех сайтов, а также <a href="https://https.cio.gov/everything/">не существует такого понятия, как нечувствительный веб-трафик</a>. Шаги по настройке Вашего веб-сайта для обслуживания исключительно через HTTPS сильно различаются в зависимости от Вашей архитектуры и провайдера веб-хостинга и, следовательно, выходят за рамки этих документов.</p>
+<p>Сайты, обслуживаемые по HTTPS, также должны иметь доступ ко всем таблицам стилей, скриптам и другим ресурсам через HTTPS-соединения. В противном случае Вы будете отправлять пользователям <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">смешанный активный контент</a>, что приведет к потенциальным уязвимостям, при которых сайт может быть скомпрометирован путем изменения зависимость. Это может привести к проблемам с безопасностью и отображению предупреждений в браузере для пользователей. Независимо от того, получаете ли Вы Bootstrap из CDN или обслуживаете его самостоятельно, убедитесь, что Вы получаете доступ к нему только через HTTPS-соединения.</p>
 
       </div>
     </main>
@@ -540,8 +543,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 

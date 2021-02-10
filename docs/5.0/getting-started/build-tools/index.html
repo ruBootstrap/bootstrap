@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -182,7 +182,7 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Последняя (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/" target="_blank">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://v4.getbootstrap.su/docs/4.6/">v4.6.x</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">Все версии</a></li>
   </ul>
@@ -353,6 +353,7 @@
         <div class="collapse" id="utilities-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
               <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
               <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
               <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
@@ -439,16 +440,16 @@
         
 
         <h2 id="настройка-инструмента">Настройка инструмента</h2>
-<p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta1/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.</p>
+<p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta2/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.</p>
 <p>Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:</p>
 <ol>
 <li><a href="https://nodejs.org/en/download/">Загрузите и установите Node.js</a>, который мы используем для управления нашими зависимостями.</li>
-<li>Либо <a href="https://github.com/twbs/bootstrap/archive/v5.0.0-beta1.zip">загрузите исходные коды Bootstrap</a>, либо сделайте &ldquo;форк&rdquo; <a href="https://github.com/twbs/bootstrap">репозитория Bootstrap</a>.</li>
-<li>Перейдите в корневой каталог <code>/bootstrap</code> и запустите <code>npm install</code>, чтобы установить наши локальные зависимости, перечисленные в <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta1/package.json">package.json</a>.</li>
+<li>Либо <a href="https://github.com/twbs/bootstrap/archive/v5.0.0-beta2.zip">загрузите исходные коды Bootstrap</a>, либо сделайте &ldquo;форк&rdquo; <a href="https://github.com/twbs/bootstrap">репозитория Bootstrap</a>.</li>
+<li>Перейдите в корневой каталог <code>/bootstrap</code> и запустите <code>npm install</code>, чтобы установить наши локальные зависимости, перечисленные в <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta2/package.json">package.json</a>.</li>
 </ol>
 <p>По завершении Вы сможете запускать различные команды из командной строки.</p>
 <h2 id="использование-скриптов-npm">Использование скриптов npm</h2>
-<p>Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta1/package.json">package.json</a> включает множество задач для разработки проекта. Запустите <code>npm run</code>, чтобы увидеть все сценарии npm в Вашем терминале. <strong>Основные задачи включают:</strong></p>
+<p>Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta2/package.json">package.json</a> включает множество задач для разработки проекта. Запустите <code>npm run</code>, чтобы увидеть все сценарии npm в Вашем терминале. <strong>Основные задачи включают:</strong></p>
 <table class="table">
   <thead>
     <tr>
@@ -500,7 +501,7 @@
 <p>Dart Sass использует точность округления 10 и из соображений эффективности не позволяет изменять это значение. Мы не снижаем эту точность во время дальнейшей обработки нашего сгенерированного CSS, например, во время минификации, но если Вы решите это сделать, мы рекомендуем поддерживать точность не менее 6, чтобы предотвратить проблемы с округлением в браузере.</p>
 <h2 id="автопрефиксер">Автопрефиксер</h2>
 <p>Bootstrap использует <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах от поставщиков, подобных тем, что есть в v3.</p>
-<p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta1/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
+<p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v5.0.0-beta2/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
 <h2 id="rtlcss">RTLCSS</h2>
 <p>Bootstrap использует <a href="https://rtlcss.com/">RTLCSS</a> для обработки скомпилированного CSS и преобразования их в RTL - в основном заменяя свойства, учитывающие горизонтальное направление (например, <code>padding-left</code>), их противоположностью. Это позволяет нам писать наш CSS только один раз и вносить незначительные изменения с помощью RTLCSS директив <a href="https://rtlcss.com/learn/usage-guide/control-directives/">control</a> и <a href="https://rtlcss.com/learn/usage-guide/value-directives/">value</a>.</p>
 <h2 id="локальная-документация">Локальная документация</h2>
@@ -529,8 +530,8 @@
       <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
     </ul>
     <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta1. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta1. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <p class="mb-0">Текущая версия v5.0.0-beta2. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <p class="mb-0">Перевод версии v5.0.0-beta2. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
   </div>
 </footer>
 
