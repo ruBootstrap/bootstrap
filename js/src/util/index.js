@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta2): util/index.js
+ * Bootstrap (v5.0.0-beta3): util/index.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -166,7 +166,7 @@ const isDisabled = element => {
     return element.disabled
   }
 
-  return element.getAttribute('disabled') !== 'false'
+  return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false'
 }
 
 const findShadowRoot = element => {
