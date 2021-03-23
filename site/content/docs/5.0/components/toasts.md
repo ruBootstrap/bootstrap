@@ -162,7 +162,7 @@ toc: true
 
 ### Цветовые схемы
 
-Основываясь на приведенном выше примере, Вы можете создавать различные цветовые схемы тостов с помощью наших [цветов]({{< docsref "/utilities/colors" >}}) и [фонов]({{< docsref "/utilities/background" >}}). Здесь мы добавили `.bg-primary` и `.text-white` в `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
+Основываясь на приведенном выше примере, Вы можете создавать различные цветовые схемы тостов с помощью наших утилит [цвета]({{< docsref "/utilities/colors" >}}) и [фона]({{< docsref "/utilities/background" >}}). Здесь мы добавили `.bg-primary` и `.text-white` к `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для получения четких краев мы удаляем границу по умолчанию с помощью `.border-0`.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -304,9 +304,13 @@ toc: true
 </div>
 {{< /example >}}
 
-## Поведение JavaScript
+## Sass
 
-### Использование
+### Переменные
+
+{{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
+
+## Использование
 
 Инициализировать тосты через JavaScript:
 

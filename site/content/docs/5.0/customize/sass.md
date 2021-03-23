@@ -41,29 +41,35 @@ your-project/
 // Custom.scss
 // Вариант А: Включите весь Bootstrap
 
+// Include any default variable overrides here (though functions won't be available)
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Add custom code after this
+// Then add additional custom code here
 ```
 
 ```scss
 // Custom.scss
 // Вариант Б. Включите части Bootstrap
 
-// Обязательные
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
 @import "../node_modules/bootstrap/scss/functions";
+
+// 2. Включите сюда любые переопределения переменных по умолчанию
+
+// 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-// Включите здесь переопределения пользовательских переменных по умолчанию
-
-// Необязательные
+// 4. Включите любые дополнительные компоненты Bootstrap, как Вам нравится
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
+
+// 5. Добавьте сюда дополнительный пользовательский код
 ```
 
 С этой настройкой, Вы можете приступить к изменению любых переменных и карт Sass в Вашем `custom.scss`. Вы также можете начать добавлять части Bootstrap в разделе `// Optional` по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла `bootstrap.scss` в качестве отправной точки.
@@ -81,16 +87,18 @@ your-project/
 ```scss
 // Обязательные
 @import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
 
-// Ваша переменная переопределяет
+// Переопределения переменных по умолчанию
 $body-bg: #000;
 $body-color: #111;
 
+// Обязательные
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
 // Bootstrap и его переменные по умолчанию
 
-// Необязательные
+// Дополнительные компоненты Bootstrap здесь
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";

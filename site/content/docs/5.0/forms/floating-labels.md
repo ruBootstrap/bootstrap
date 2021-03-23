@@ -100,3 +100,9 @@ toc: true
   </div>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

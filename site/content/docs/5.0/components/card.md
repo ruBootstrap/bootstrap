@@ -721,3 +721,9 @@ toc: true
 ### Masonry
 
 В `v4` мы использовали метод только CSS для имитации поведения столбцов, подобных [Masonry](https://masonry.desandro.com/), но этот метод имел множество неприятных [побочных эффектов](https://github.com/twbs/bootstrap/pull/28922). Если Вы хотите иметь этот тип макета в `v5`, Вы можете просто использовать плагин Masonry. **Masonry не входит в Bootstrap**, , но мы сделали [демонстрационный пример]({{< docsref "/examples/masonry" >}}), чтобы помочь Вам начать работу.
+
+## Sass
+
+### Переменные
+
+{{< scss-docs name="card-variables" file="scss/_variables.scss" >}}

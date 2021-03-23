@@ -3,6 +3,7 @@ layout: docs
 title: Тени
 description: Добавляйте или удаляйте тени к элементам с помощью утилит box-shadow.
 group: utilities
+toc: true
 ---
 
 ## Примеры
@@ -15,3 +16,15 @@ group: utilities
 <div class="shadow p-3 mb-5 bg-body rounded">Обычная тень</div>
 <div class="shadow-lg p-3 mb-5 bg-body rounded">Большая тень</div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}

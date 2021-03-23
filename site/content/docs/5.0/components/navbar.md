@@ -78,6 +78,10 @@ toc: true
 
 `.navbar-brand` может применяться к большинству элементов, но якорь работает лучше всего, поскольку для некоторых элементов могут потребоваться служебные классы или пользовательские стили.
 
+#### Text
+
+Add your text within an element with the `.navbar-brand` class.
+
 {{< example >}}
 <!-- Как ссылка -->
 <nav class="navbar navbar-light bg-light">
@@ -94,10 +98,11 @@ toc: true
 </nav>
 {{< /example >}}
 
-Добавление изображений в `.navbar-brand`, скорее всего, всегда потребует настраиваемых стилей или утилит для правильного размера. Вот несколько примеров для демонстрации.
+#### Изображение
+
+Вы можете заменить текст внутри `.navbar-brand` на `<img>`.
 
 {{< example >}}
-<!-- Как изображение -->
 <nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -107,12 +112,15 @@ toc: true
 </nav>
 {{< /example >}}
 
+#### Изображение и текст
+
+Вы также можете использовать некоторые дополнительные утилиты для одновременного добавления изображения и текста. Обратите внимание на добавление `.d-inline-block` и `.align-text-top` в `<img>`.
+
 {{< example >}}
-<!-- Изображение и текст -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
       Bootstrap
     </a>
   </div>
@@ -691,3 +699,17 @@ toc: true
 {{< /example >}}
 
 При этом мы рекомендуем включить дополнительный JavaScript для программного перемещения фокуса на контейнер при его открытии. В противном случае пользователям клавиатуры и вспомогательным технологиям, скорее всего, будет сложно найти вновь обнаруженный контент, особенно если контейнер, который был открыт, находится *перед* переключателем в структуре документа. Мы также рекомендуем убедиться, что у переключателя есть атрибут `aria-controls`, указывающий на `id` контейнера содержимого. Теоретически это позволяет пользователям вспомогательных технологий напрямую переходить от переключателя к контейнеру, который он контролирует, но в настоящее время эта поддержка весьма неоднородна.
+
+## Sass
+
+### Переменные
+
+{{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+
+### Цикл
+
+[Классы адаптивного навбара развертывания/свертывания](#responsive-behaviors) (например, `.navbar-expand-lg`) объединяются с картой `$breakpoints` и генерируются с помощью цикла в `scss/_navbar.scss`.
+
+{{< scss-docs name="navbar-expand-loop" file="scss/_navbar.scss" >}}

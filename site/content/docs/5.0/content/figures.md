@@ -3,6 +3,7 @@ layout: docs
 title: Figures
 description: Документация и примеры для отображения связанных изображений и текста с помощью компонента figure в Bootstrap.
 group: content
+toc: true
 ---
 
 Каждый раз, когда Вам нужно отобразить часть контента, например изображение с необязательной подписью, подумайте об использовании `<figure>`.
@@ -24,3 +25,9 @@ group: content
   <figcaption class="figure-caption text-end">Подпись к изображению выше.</figcaption>
 </figure>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="figure-variables" file="scss/_variables.scss" >}}

@@ -25,6 +25,9 @@
     - title: Webpack
       hint: Сборщики
       slug: webpack
+    - title: Parcel
+      hint: Parcel
+      slug: parcel
     - title: Доступность
       hint: Возможности и ограничения
       slug: accessibility
@@ -183,6 +186,9 @@
     - title: Navbar
       hint: Панель навигации
       slug: navbar
+    - title: Offcanvas
+      hint: Вне холста
+      slug: offcanvas
     - title: Pagination
       hint: Пагинация
       slug: pagination

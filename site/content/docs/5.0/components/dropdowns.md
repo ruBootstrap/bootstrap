@@ -903,6 +903,28 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 {{< /example >}}
 
+## Sass
+
+### Переменные
+
+Переменные для всех выпадающих списков:
+
+{{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
+
+Переменные для [темного раскрывающегося списка](#dark-dropdowns):
+
+{{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
+
+Переменные для курсоров на основе CSS, которые указывают на интерактивность раскрывающегося списка:
+
+{{< scss-docs name="caret-variables" file="scss/_variables.scss" >}}
+
+### Миксины
+
+Миксины используются для генерации курсоров на основе CSS и могут быть найдены в `scss/mixins/_caret.scss`.
+
+{{< scss-docs name="caret-mixins" file="scss/mixins/_caret.scss" >}}
+
 ## Использование
 
 С помощью атрибутов данных или JavaScript плагин раскрывающегося списка переключает скрытый контент (раскрывающиеся меню), переключая класс `.show` в родительском элементе списка `.dropdown-menu`. Атрибут `data-bs-toggle="dropdown"` используется для закрытия выпадающих меню на уровне приложения, поэтому рекомендуется всегда использовать его.
@@ -957,12 +979,6 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>flip</code></td>
-      <td>boolean</td>
-      <td><code>true</code></td>
-      <td>Разрешить раскрывающемуся списку переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v2/modifiers/flip/">документацию</a> Popper.</td>
-    </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>

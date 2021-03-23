@@ -50,3 +50,11 @@ toc: true
 <div class="vw-100">Ширина 100vw</div>
 <div class="vh-100">Высота 100vh</div>
 ```
+
+## Sass
+
+### Utilities API
+
+Sizing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-sizing" file="scss/_utilities.scss" >}}

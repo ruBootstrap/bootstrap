@@ -113,6 +113,12 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 </span>
 {{< /example >}}
 
+## Sass
+
+### Переменные
+
+{{< scss-docs name="popover-variables" file="scss/_variables.scss" >}}
+
 ## Использование
 
 Включить всплывающие окна через JavaScript:

@@ -94,6 +94,48 @@ toc: true
 </ul>
 {{< /example >}}
 
+## Пронумерованный
+
+Добавьте класс модификатора `.list-group-numbered` (и, при необходимости, используйте элемент `<ol>`), чтобы выбрать элементы группы нумерованных списков. Числа генерируются с помощью CSS (в отличие от стиля браузера по умолчанию для `<ol>`) для лучшего размещения внутри элементов группы списков и для лучшей настройки.
+
+Числа генерируются с помощью `counter-reset` в `<ol>`, а затем стилируются и помещаются с помощью псевдоэлемента `::before` в `<li>` с `counter-increment` и `content`.
+
+{{< example >}}
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Cras justo odio</li>
+</ol>
+{{< /example >}}
+
+Они также отлично работают с настраиваемым контентом.
+
+{{< example >}}
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Подзаголовок</div>
+      Cras justo odio
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Подзаголовок</div>
+      Cras justo odio
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Подзаголовок</div>
+      Cras justo odio
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+</ol>
+{{< /example >}}
+
 ## По горизонтали
 
 Добавьте `.list-group-horizontal`, чтобы изменить расположение элементов группы списков с вертикального на горизонтальное во всех контрольных точках. В качестве альтернативы, выберите адаптивный вариант `.list-group-horizontal-{sm|md|lg|xl|xxl}`, чтобы сделать группу списков горизонтальной, начиная с `min-width` контрольной точки. В настоящее время **группы горизонтального списка нельзя комбинировать с группами скрытого списка.**
@@ -254,6 +296,23 @@ toc: true
 </div>
 {{< /example >}}
 
+## Sass
+
+### Variables
+
+{{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
+
+### Mixins
+
+Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+
+{{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
+
+### Loop
+
+Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+
+{{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
 ## Поведение JavaScript
 

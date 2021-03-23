@@ -201,6 +201,15 @@
   }
 }
 
+.bd-example-offcanvas {
+  @include border-start-radius(0);
+
+  .offcanvas {
+    position: static;
+    height: 200px;
+  }
+}
+
 // Tooltips
 .tooltip-demo a {
   white-space: nowrap;

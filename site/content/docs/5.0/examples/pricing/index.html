@@ -6,76 +6,144 @@ extra_css:
 include_js: false
 ---
 
-<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
-  <p class="h5 my-0 me-md-auto fw-normal">Название компании</p>
-  <nav class="my-2 my-md-0 me-md-3">
-    <a class="p-2 text-dark" href="#">Функции</a>
-    <a class="p-2 text-dark" href="#">Предприятие</a>
-    <a class="p-2 text-dark" href="#">Поддержка</a>
-    <a class="p-2 text-dark" href="#">Ценообразование</a>
-  </nav>
-  <a class="btn btn-outline-primary" href="#">Зарегистрироваться</a>
-</header>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Оформить</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
 
-<main class="container">
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Ценообразование</h1>
-    <p class="lead">С помощью этого примера Bootstrap быстро создайте эффективную таблицу цен для Ваших потенциальных клиентов. Он построен с использованием компонентов и утилит Bootstrap по умолчанию с небольшой настройкой.</p>
+<div class="container py-3">
+  <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+      <span class="fs-4">Пример цены</span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Функции</a>
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Корпорация</a>
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Поддержка</a>
+      <a class="py-2 text-dark text-decoration-none" href="#">Ценообразование</a>
+    </nav>
+  </header>
+
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Цена</h1>
+    <p class="fs-5 text-muted">С помощью этого примера Bootstrap быстро создайте эффективную таблицу цен для Ваших потенциальных клиентов. Он построен с использованием компонентов и утилит Bootstrap по умолчанию с небольшой настройкой.</p>
   </div>
 
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Бесплатно</h4>
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Бесплатно</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/мес</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Зарегистрироваться бесплатно</button>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">0₽ <small class="text-muted">/ м.</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>10 пользователей включено</li>
-          <li>2 ГБ хранилища</li>
-          <li>Поддержка по эл. почте</li>
-          <li>Доступ к Справочному центру</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Зарегистрируйтесь бесплатно</button>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Про</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/мес</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Начать</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Корпоративный</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/мес</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Связаться с нами</button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <h2 class="display-6 text-center mb-4">Сравнить планы</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Бесплатно</th>
+            <th style="width: 22%;">Про</th>
+            <th style="width: 22%;">Корпоративный</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Публичный</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Приватный</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Права</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Совместное использование</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Неограниченное количество участников</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Дополнительная безопасность</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Про</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">1000₽ <small class="text-muted">/ м.</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>20 пользователей включено</li>
-          <li>10 ГБ хранилища</li>
-          <li>Приоритетная поддержка по эл. почте</li>
-          <li>Доступ к Справочному центру</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">Начать</button>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">Предприятие</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">2500₽ <small class="text-muted">/ м.</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>30 пользователей включено</li>
-          <li>15 ГБ хранилища</li>
-          <li>Поддержка по телефону и эл. почте</li>
-          <li>Доступ к Справочному центру</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">Связаться с нами</button>
-      </div>
-    </div>
-    </div>
-  </div>
+  </main>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
@@ -86,32 +154,32 @@ include_js: false
       <div class="col-6 col-md">
         <h5>Особенности</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Крутой персонал</a></li>
-          <li><a class="link-secondary" href="#">Случайная особенность</a></li>
-          <li><a class="link-secondary" href="#">Особенная команда</a></li>
-          <li><a class="link-secondary" href="#">Персонал для разработчиков</a></li>
-          <li><a class="link-secondary" href="#">Другой</a></li>
-          <li><a class="link-secondary" href="#">Последний раз</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Крутой персонал</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Случайная функция</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Командная функция</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Персонал для разработчиков</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Другой</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Последний раз</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
         <h5>Ресурсы</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Ресурс</a></li>
-          <li><a class="link-secondary" href="#">Имя ресурса</a></li>
-          <li><a class="link-secondary" href="#">Другой ресурс</a></li>
-          <li><a class="link-secondary" href="#">Последний ресурс</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Ресурс</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Имя ресурса</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Другой ресурс</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Последний ресурс</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
         <h5>О нас</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Команда</a></li>
-          <li><a class="link-secondary" href="#">Локация</a></li>
-          <li><a class="link-secondary" href="#">Конфиденциальность</a></li>
-          <li><a class="link-secondary" href="#">Условия</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Команда</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Локация</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Конфиденциальность</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Условия</a></li>
         </ul>
       </div>
     </div>
   </footer>
-</main>
+</div>

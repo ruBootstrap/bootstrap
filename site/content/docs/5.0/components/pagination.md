@@ -155,3 +155,13 @@ toc: true
   </ul>
 </nav>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
+
+### Mixins
+
+{{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}

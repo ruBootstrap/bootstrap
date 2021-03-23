@@ -137,3 +137,15 @@ Bootstrap предоставляет несколько [утилит для у�
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 ```
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
+
+### Keyframes
+
+Used for creating the CSS animations for `.progress-bar-animated`. Included in `scss/_progress-bar.scss`.
+
+{{< scss-docs name="progress-keyframes" file="scss/_progress.scss" >}}

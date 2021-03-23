@@ -99,6 +99,12 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   </a>
 </div>
 
+## Sass
+
+### Переменные
+
+{{< scss-docs name="tooltip-variables" file="scss/_variables.scss" >}}
+
 ## Использование
 
 Плагин всплывающих подсказок генерирует контент и разметку по запросу и по умолчанию помещает всплывающие подсказки после их триггерного элемента.

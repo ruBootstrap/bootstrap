@@ -775,9 +775,17 @@ toc: true
 {{< /tables.inline >}}
 {{< /highlight >}}
 
-## Настройка в Sass
+## Sass
 
-- Переменные коэффициента (`$table-striped-bg-factor`, `$table-active-bg-factor` и `$table-hover-bg-factor`) используются для определения контраста в вариантах таблиц.
-- За исключением светлого и темного вариантов таблицы, цвета темы осветляются переменной `$table-bg-level`.
+### Переменные
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
+
+### Цикл
+
+{{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
+
+### Кастомизация
+
+- Факторные переменные (`$table-striped-bg-factor`, `$table-active-bg-factor` и `$table-hover-bg-factor`) используются для определения контраста в вариантах таблиц.
+- Кроме светлого и темного вариантов таблицы, цвета темы осветляются переменной `$table-bg-level`.

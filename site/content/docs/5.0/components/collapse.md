@@ -77,6 +77,18 @@ toc: true
 
 Обратите внимание, что текущая реализация Bootstrap не охватывает различные *необязательные* взаимодействия с клавиатурой, описанные в [аккордеонном шаблоне WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - Вам нужно будет включить их самостоятельно в собственный JavaScript.
 
+## Sass
+
+### Переменные
+
+{{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
+
+### Классы
+
+Классы перехода сворачивания можно найти в `scss/_transitions.scss`, поскольку они используются в нескольких компонентах (сворачивание и аккордеон).
+
+{{< scss-docs name="collapse-classes" file="scss/_transitions.scss" >}}
+
 ## Использование
 
 Плагин collapse использует несколько классов для работы:

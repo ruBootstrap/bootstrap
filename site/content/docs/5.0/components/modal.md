@@ -509,6 +509,75 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 })
 ```
 
+### Переключение между модальными окнами
+
+Переключайтесь между несколькими модальными окнами с помощью умного размещения атрибутов `data-bs-target` и `data-bs-toggle`. Например, Вы можете переключить модальное окно сброса пароля из уже открытого модального окна входа. **Обратите внимание, что несколько модальных окон не могут быть открыты одновременно** - этот метод просто переключает между двумя отдельными модальными окнами.
+
+<div class="bd-example">
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Модальное 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Покажите второй модальное окно и скройте его с помощью кнопки ниже.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">Модальное 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Скройте это модальное окно и покажите первое с помощью кнопки ниже.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Вернуться к первому</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Открыть первое модальное окно</a>
+</div>
+
+```html
+<!-- Первый модальный диалог -->
+<div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      ...
+      <div class="modal-footer">
+        <!-- Перейти ко второму диалогу -->
+        <button class="btn btn-primary" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть #modal2</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Второй модальный диалог -->
+<div class="modal fade" id="modal2" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      ...
+      <div class="modal-footer">
+        <!-- Перейти к первому диалоговому окну, атрибут `data-bs-dismiss` можно не указывать - нажатие на ссылку в любом случае закроет диалоговое окно -->
+        <a class="btn btn-primary" href="#modal" data-bs-toggle="modal" role="button">Открыть #modal</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Открыть первый диалог -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#modal" role="button">Открыть #modal</a>
+```
+
 ### Изменение анимации
 
 Переменная `$modal-fade-transform` определяет состояние преобразования `.modal-dialog` перед модальной плавной анимацией, переменная `$modal-show-transform` определяет преобразование `.modal-dialog` в конец модальной плавной анимации.
@@ -793,6 +862,18 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   </div>
 </div>
 
+## Sass
+
+### Переменные
+
+{{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
+
+### Цикл
+
+[Адаптивные полноэкранные модальные окна](#fullscreen-modal) генерируются с помощью карты `$breakpoints` и цикла в `scss/_modal.scss`.
+
+{{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
+
 ## Использование
 
 Модальный плагин переключает Ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также добавляет `.modal-open` к `<body>`, чтобы переопределить поведение прокрутки по умолчанию, и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при клике вне модального окна.
@@ -878,6 +959,13 @@ myModal.toggle()
 
 ```js
 myModal.show()
+```
+
+Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property).
+
+```js
+var modalToggle = document.getElementById('toggleMyModal') // relatedTarget
+myModal.show(modalToggle)
 ```
 
 #### hide

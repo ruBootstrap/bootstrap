@@ -269,3 +269,9 @@ toc: true
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
 <label class="btn btn-outline-danger" for="danger-outlined">Радио цвета danger</label>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}

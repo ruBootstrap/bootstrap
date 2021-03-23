@@ -41,3 +41,9 @@ toc: true
 <label for="customRange3" class="form-label">Пример диапазона</label>
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-range-variables" file="scss/_variables.scss" >}}

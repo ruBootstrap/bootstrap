@@ -82,8 +82,6 @@ toc: true
 
 Настройте свой доступный `font-size`, изменив карту Sass `$font-sizes`.
 
-{{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
-
 ## Толщина шрифта и курсив
 
 С помощью этих утилит можно быстро изменить `font-weight` или `font-style`. Утилиты `font-style` сокращенно обозначаются как `.fst-*`, а утилиты `font-weight` сокращаются как `.fw-*`.
@@ -136,3 +134,21 @@ toc: true
 <p class="text-decoration-line-through">В этом тексте проходит линия.</p>
 <a href="#" class="text-decoration-none">Текстовое оформление этой ссылки удалено.</a>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
+
+### Maps
+
+Font-size utilities are generated from this map, in combination with our utilities API.
+
+{{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

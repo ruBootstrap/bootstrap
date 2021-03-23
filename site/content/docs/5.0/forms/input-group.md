@@ -308,3 +308,9 @@ toc: true
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Кнопка</button>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

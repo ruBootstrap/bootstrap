@@ -114,3 +114,17 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
   <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Карты
+
+Значения полезности позиции по умолчанию объявляются в карте Sass, а затем используются для создания наших утилит.
+
+{{< scss-docs name="position-map" file="scss/_variables.scss" >}}
+
+### Утилиты API
+
+Утилиты положения объявлены в нашем API утилит в файле `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}

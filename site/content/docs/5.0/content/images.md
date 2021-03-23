@@ -53,3 +53,11 @@ toc: true
   <img src="..." class="img-fluid img-thumbnail" alt="...">
 </picture>
 ```
+
+## Sass
+
+### Variables
+
+Variables are available for image thumbnails.
+
+{{< scss-docs name="thumbnail-variables" file="scss/_variables.scss" >}}
