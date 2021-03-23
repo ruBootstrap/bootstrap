@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
+    <meta name="generator" content="Hugo 0.77.0-DEV">
+    <title>Шаблон сетки · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.su/docs/5.0/examples/grid/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+  </head>
+  <body class="py-4">
+    
+<main>
+  <div class="container">
+
+    <h1>Примеры сетки Bootstrap</h1>
+    <p class="lead">Базовые макеты сеток, которые познакомят Вас со строительством в сеточной системе Bootstrap.</p>
+    <p>В этих примерах к колонкам добавлен класс <code>.themed-grid-col</code>, чтобы добавить тематику. Это не тот класс, который по умолчанию доступен в Bootstrap.</p>
+
+    <h2 class="mt-4">Пять уровней сетки</h2>
+    <p>В сеточной системе Bootstrap есть пять уровней, по одному для каждого диапазона поддерживаемых нами устройств. Каждый уровень начинается с минимального размера области просмотра и автоматически применяется к более крупным устройствам, если не отменен.</p>
+
+    <div class="row mb-3">
+      <div class="col-4 themed-grid-col">.col-4</div>
+      <div class="col-4 themed-grid-col">.col-4</div>
+      <div class="col-4 themed-grid-col">.col-4</div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+    </div>
+
+    <h2 class="mt-4">Три равных колонки</h2>
+    <p>Получите три колонки одинаковой ширины <strong>начиная с рабочих столов и заканчивая большими компьютерами</strong>. На мобильных устройствах, планшетах и более ранних версиях колонки автоматически складываются друг в друга.</p>
+    <div class="row mb-3">
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <h2 class="mt-4">Три равных колонки альтернативный вариант</h2>
+    <p>Используя классы <code>.row-cols-*</code>, Вы можете легко создать сетку с равными колонками.</p>
+    <div class="row row-cols-md-3 mb-3">
+      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
+      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
+      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
+    </div>
+
+    <h2 class="mt-4">Три неравных колонки</h2>
+    <p>Получите три колонки <strong>начиная с рабочих столов и заканчивая большими рабочими столами</strong> различной ширины. Помните, что количество колонок сетки должно составлять до двенадцати для одного горизонтального блока. Более того, колонки начинают складываться независимо от области просмотра.</p>
+    <div class="row mb-3">
+      <div class="col-md-3 themed-grid-col">.col-md-3</div>
+      <div class="col-md-6 themed-grid-col">.col-md-6</div>
+      <div class="col-md-3 themed-grid-col">.col-md-3</div>
+    </div>
+
+    <h2 class="mt-4">Две колонки</h2>
+    <p>Получите две колонки <strong>начиная с рабочих столов и заканчивая большими рабочими столами</strong>.</p>
+    <div class="row mb-3">
+      <div class="col-md-8 themed-grid-col">.col-md-8</div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <h2 class="mt-4">На всю ширину, одна колонка</h2>
+    <p class="text-warning">
+      Для элементов на всю ширину классы сетки не требуются.
+    </p>
+
+    <hr class="my-4">
+
+    <h2 class="mt-4">Две колонки с двумя вложенными колонками</h2>
+    <p>Согласно документации, вложенность выполняется просто - просто поместите строку колонок в существующий столбец. Это дает Вам две колонки, <strong>начиная с рабочих столов и масштабируясь до больших рабочих столов</strong>, и еще два (одинаковой ширины) в пределах большей колонки.</p>
+    <p>При размерах мобильных устройств, планшетов и ниже эти колонки и их вложенные колонки будут складываться друг с другом.</p>
+    <div class="row mb-3">
+      <div class="col-md-8 themed-grid-col">
+        <div class="pb-3">
+          .col-md-8
+        </div>
+        <div class="row">
+          <div class="col-md-6 themed-grid-col">.col-md-6</div>
+          <div class="col-md-6 themed-grid-col">.col-md-6</div>
+        </div>
+      </div>
+      <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="mt-4">Смешанный: мобильный и настольный</h2>
+    <p>Сетка Bootstrap v4 имеет пять уровней классов: xs (очень маленький, этот инфикс класса не используется), sm (маленький), md (средний), lg (большой) и xl (очень большой). Вы можете использовать практически любую комбинацию этих классов для создания более динамичных и гибких макетов.</p>
+    <p>Каждый уровень классов масштабируется, это означает, что если Вы планируете установить одинаковую ширину для md, lg и xl, Вам нужно только указать md.</p>
+    <div class="row mb-3">
+      <div class="col-md-8 themed-grid-col">.col-md-8</div>
+      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-6 themed-grid-col">.col-6</div>
+      <div class="col-6 themed-grid-col">.col-6</div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="mt-4">Смешанный: мобильный, планшетный и настольный</h2>
+    <div class="row mb-3">
+      <div class="col-sm-6 col-lg-8 themed-grid-col">.col-sm-6 .col-lg-8</div>
+      <div class="col-6 col-lg-4 themed-grid-col">.col-6 .col-lg-4</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+    </div>
+
+    <hr class="my-4">
+
+    <h2 class="mt-4">Промежутки</h2>
+    <p>С помощью классов <code>.gx-*</code> можно настраивать горизонтальные промежутки.</p>
+    <div class="row row-cols-1 row-cols-md-3 gx-4">
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gx-4</code> промежутками</div>
+    </div>
+    <p class="mt-4">Используйте классы <code>.gy-*</code> для управления вертикальными промежутками.</p>
+    <div class="row row-cols-1 row-cols-md-3 gy-4">
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.gy-4</code> промежутками</div>
+    </div>
+    <p class="mt-4">Классы <code>.g-*</code> озволяют регулировать промежутки в обоих направлениях.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+      <div class="col themed-grid-col"><code>.col</code> с <code>.g-3</code> промежутками</div>
+    </div>
+  </div>
+
+  <div class="container" id="containers">
+    <hr class="my-4">
+
+    <h2 class="mt-4">Контейнеры</h2>
+    <p>Дополнительные классы, добавленные в Bootstrap v4.4, позволяют использовать контейнеры со 100% шириной до определенной контрольной точки. v5 добавляет новую контрольную точку <code>xxl</code>.</p>
+  </div>
+
+  <div class="container themed-container">.container</div>
+  <div class="container-sm themed-container">.container-sm</div>
+  <div class="container-md themed-container">.container-md</div>
+  <div class="container-lg themed-container">.container-lg</div>
+  <div class="container-xl themed-container">.container-xl</div>
+  <div class="container-xxl themed-container">.container-xxl</div>
+  <div class="container-fluid themed-container">.container-fluid</div>
+</main>
+
+
+    
+  </body>
+</html>
