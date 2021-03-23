@@ -90,16 +90,8 @@
       slug: navbar-bottom
       description: "Пример единой панели навигации с нижней панелью навигации и дополнительным контентом."
     - name: Offcanvas navbar
-      slug: offcanvas-bottom
+      slug: offcanvas-navbar
       description: "Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста)."
-
-- category: Эксперименты
-  slug: experiments
-  description: "Примеры, ориентированные на перспективные функции или методы."
-  examples:
-    - name: Панель навигации вне холста
-      slug: offcanvas
-      description: "Превратите расширяемую панель навигации в скользящее меню вне холста."
 
 - category: RTL
   slug: rtl
