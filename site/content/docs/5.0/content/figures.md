@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Figures
+title: Иллюстрации
 description: Документация и примеры для отображения связанных изображений и текста с помощью компонента figure в Bootstrap.
 group: content
 toc: true
@@ -28,6 +28,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="figure-variables" file="scss/_variables.scss" >}}

@@ -56,8 +56,8 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
-Variables are available for image thumbnails.
+Переменные доступны для миниатюр изображений.
 
 {{< scss-docs name="thumbnail-variables" file="scss/_variables.scss" >}}

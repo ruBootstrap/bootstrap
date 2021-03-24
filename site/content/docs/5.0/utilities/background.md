@@ -49,7 +49,7 @@ toc: true
 
 {{< scss-docs name="variable-gradient" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available, but only a subset are used to generate any utilities.
+Также доступны оттенки серого, но для создания каких-либо утилит используется только подмножество.
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 

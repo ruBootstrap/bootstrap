@@ -237,13 +237,13 @@ buttons.forEach(function (button) {
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Миксины
 
-There are three mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin.
+Есть три миксина для кнопок: миксины для кнопок и вариантов контура кнопки (оба основаны на `$theme-colors`), плюс миксин размера кнопки.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
@@ -251,8 +251,8 @@ There are three mixins for buttons: button and button outline variant mixins (bo
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
-### Loops
+### Циклы
 
-Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
+Варианты кнопок (для обычных и контурных кнопок) используют соответствующие миксины с нашей картой `$theme-colors` для генерации классов модификаторов в `scss/_buttons.scss`.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}

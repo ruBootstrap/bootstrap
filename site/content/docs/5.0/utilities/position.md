@@ -68,7 +68,7 @@ toc: true
 </div>
 {{< /example >}}
 
-By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
+Добавляя классы `.translate-middle-x` или `.translate-middle-y`, элементы можно размещать только в горизонтальном или вертикальном направлении.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">

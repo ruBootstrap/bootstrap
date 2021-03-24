@@ -103,7 +103,7 @@
     - title: Таблицы
       hint: Стили таблиц
       slug: tables
-    - title: Figures
+    - title: Иллюстрации
       hint: Связанные изображения
       slug: figures
 
@@ -113,7 +113,7 @@
     - title: Обзор
       hint: Примеры и рекомендации форм
       slug: overview
-    - title: Form control
+    - title: Управление формой
       hint: Управление формой
       slug: form-control
     - title: Select
@@ -122,20 +122,20 @@
     - title: Checks & radios
       hint: Переключатели и флажки
       slug: checks-radios
-    - title: Range
+    - title: Диапазон
       hint: Диапазон
       slug: range
-    - title: Input group
+    - title: Группа ввода
       hint: Группа полей ввода
       slug: input-group
-    - title: Floating labels
+    - title: Плавающие метки
       hint: Плавающие метки
       slug: floating-labels
-    - title: Layout
+    - title: Макет
       hint: Макет
       slug: layout
-    - title: Validation
-      hint: Валидация
+    - title: Валидация
+      hint: Проверка
       slug: validation
 
 - title: Компоненты

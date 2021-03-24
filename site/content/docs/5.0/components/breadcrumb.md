@@ -8,7 +8,7 @@ toc: true
 
 ## Пример
 
-Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.
+Используйте упорядоченный или неупорядоченный список с элементами связанного списка, чтобы создать навигационную крошку с минимальным стилем. Используйте наши утилиты для добавления дополнительных стилей по желанию.
 
 {{< example >}}
 <nav aria-label="breadcrumb">

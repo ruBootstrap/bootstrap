@@ -44,6 +44,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-range-variables" file="scss/_variables.scss" >}}

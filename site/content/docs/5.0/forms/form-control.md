@@ -133,13 +133,13 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
-`$input-*` are shared across most of our form controls (and not buttons).
+`$input-*` используется большинством элементов управления формы (но не кнопками).
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 
-`$form-label-*` and `$form-text-*` are for our `<label>`s and `.form-text` component.
+`$form-label-*` и `$form-text-*` предназначены для наших компонентов `<label>` и `.form-text`.
 
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 

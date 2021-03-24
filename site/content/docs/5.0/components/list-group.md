@@ -12,11 +12,11 @@ toc: true
 
 {{< example >}}
 <ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li class="list-group-item">Элемент</li>
+  <li class="list-group-item">Второй элемент</li>
+  <li class="list-group-item">Третий элемент</li>
+  <li class="list-group-item">Четвертый элемент</li>
+  <li class="list-group-item">И пятый</li>
 </ul>
 {{< /example >}}
 
@@ -26,11 +26,11 @@ toc: true
 
 {{< example >}}
 <ul class="list-group">
-  <li class="list-group-item active" aria-current="true">An active item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li class="list-group-item active" aria-current="true">Активный элемент</li>
+  <li class="list-group-item">Второй элемент</li>
+  <li class="list-group-item">Третий элемент</li>
+  <li class="list-group-item">Четвертый элемент</li>
+  <li class="list-group-item">И пятый</li>
 </ul>
 {{< /example >}}
 
@@ -40,11 +40,11 @@ toc: true
 
 {{< example >}}
 <ul class="list-group">
-  <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li class="list-group-item disabled" aria-disabled="true">Отключенный элемент</li>
+  <li class="list-group-item">Второй элемент</li>
+  <li class="list-group-item">Третий элемент</li>
+  <li class="list-group-item">Четвертый элемент</li>
+  <li class="list-group-item">И пятый</li>
 </ul>
 {{< /example >}}
 
@@ -57,12 +57,12 @@ toc: true
 {{< example >}}
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    The current link item
+    Текущий элемент ссылка
   </a>
-  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+  <a href="#" class="list-group-item list-group-item-action">Второй элемент ссылка</a>
+  <a href="#" class="list-group-item list-group-item-action">Третий элемент ссылка</a>
+  <a href="#" class="list-group-item list-group-item-action">Четвертый элемент ссылка</a>
+  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Отключенный элемент ссылка</a>
 </div>
 {{< /example >}}
 
@@ -71,12 +71,12 @@ toc: true
 {{< example >}}
 <div class="list-group">
   <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-    The current button
+    Текущая кнопка
   </button>
-  <button type="button" class="list-group-item list-group-item-action">A second item</button>
-  <button type="button" class="list-group-item list-group-item-action">A third button item</button>
-  <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
-  <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+  <button type="button" class="list-group-item list-group-item-action">Второй элемент кнопка</button>
+  <button type="button" class="list-group-item list-group-item-action">Третий элемент кнопка</button>
+  <button type="button" class="list-group-item list-group-item-action">Четвертый элемент кнопка</button>
+  <button type="button" class="list-group-item list-group-item-action" disabled>Отключенный элемент кнопка</button>
 </div>
 {{< /example >}}
 
@@ -86,11 +86,11 @@ toc: true
 
 {{< example >}}
 <ul class="list-group list-group-flush">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li class="list-group-item">Элемент</li>
+  <li class="list-group-item">Второй элемент</li>
+  <li class="list-group-item">Третий элемент</li>
+  <li class="list-group-item">Четвертый элемент</li>
+  <li class="list-group-item">И пятый</li>
 </ul>
 {{< /example >}}
 
@@ -146,9 +146,9 @@ toc: true
 {{< list-group.inline >}}
 {{- range $.Site.Data.breakpoints }}
 <ul class="list-group list-group-horizontal{{ .abbr }}">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">Элемент</li>
+  <li class="list-group-item">Второй элемент</li>
+  <li class="list-group-item">Третий элемент</li>
 </ul>
 {{- end -}}
 {{< /list-group.inline >}}
@@ -160,7 +160,7 @@ toc: true
 
 {{< example >}}
 <ul class="list-group">
-  <li class="list-group-item">A simple default list group item</li>
+  <li class="list-group-item">Простой элемент группы списка по умолчанию</li>
 {{< list.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
   <li class="list-group-item list-group-item-{{ .name }}">Простой {{ .name }} элемент группы списка</li>
@@ -173,10 +173,10 @@ toc: true
 
 {{< example >}}
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+  <a href="#" class="list-group-item list-group-item-action">Простой элемент группы списка по умолчанию</a>
 {{< list.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">Простой {{ .name }} элемент группы списка</a>
 {{- end -}}
 {{< /list.inline >}}
 </div>
@@ -193,15 +193,15 @@ toc: true
 {{< example >}}
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    A list item
+    Элемент списка
     <span class="badge bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    A second list item
+    Второй элемент списка
     <span class="badge bg-primary rounded-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    A third list item
+    Третий элемент списка
     <span class="badge bg-primary rounded-pill">1</span>
   </li>
 </ul>
@@ -218,24 +218,24 @@ toc: true
       <h5 class="mb-1">Заголовок элемента группы списка</h5>
       <small>3 дня назад</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small>And some small print.</small>
+    <p class="mb-1">Некоторый заполнитель в абзаце.</p>
+    <small>И немного мелкого шрифта.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Заголовок элемента группы списка</h5>
       <small class="text-muted">3 дня назад</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
+    <p class="mb-1">Некоторый заполнитель в абзаце.</p>
+    <small class="text-muted">И какой-то приглушенный мелкий шрифт.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Заголовок элемента группы списка</h5>
       <small class="text-muted">3 дня назад</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
+    <p class="mb-1">Некоторый заполнитель в абзаце.</p>
+    <small class="text-muted">И какой-то приглушенный мелкий шрифт.</small>
   </a>
 </div>
 {{< /example >}}
@@ -248,23 +248,23 @@ toc: true
 <ul class="list-group">
   <li class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    First checkbox
+    Первый чекбокс
   </li>
   <li class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Second checkbox
+    Второй чекбокс
   </li>
   <li class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Third checkbox
+    Третий чекбокс
   </li>
   <li class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Fourth checkbox
+    Четвертый чекбокс
   </li>
   <li class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Fifth checkbox
+    Пятый чекбокс
   </li>
 </ul>
 {{< /example >}}
@@ -275,42 +275,42 @@ toc: true
 <div class="list-group">
   <label class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
-    First checkbox
+    Первый чекбокс
   </label>
   <label class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
-    Second checkbox
+    Второй чекбокс
   </label>
   <label class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
-    Third checkbox
+    Третий чекбокс
   </label>
   <label class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
-    Fourth checkbox
+    Четвертый чекбокс
   </label>
   <label class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
-    Fifth checkbox
+    Пятый чекбокс
   </label>
 </div>
 {{< /example >}}
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Миксины
 
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+Используется в сочетании с `$theme-colors` для генерации [классов контекстных вариантов](#contextual-classes) для `.list-group-item`.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Loop
+### Цикл
 
-Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+Цикл, который генерирует классы модификаторов с помощью миксина `list-group-item-variant()`.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
@@ -331,16 +331,16 @@ Loop that generates the modifier classes with the `list-group-item-variant()` mi
     <div class="col-8">
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-          <p>Some placeholder content in a paragraph relating to "Home". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Главной". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
         </div>
         <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-          <p>Some placeholder content in a paragraph relating to "Profile". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Профилю". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
         </div>
         <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-          <p>Some placeholder content in a paragraph relating to "Messages". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Сообщению". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
         </div>
         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-          <p>Some placeholder content in a paragraph relating to "Settings". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Настройке". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
         </div>
       </div>
     </div>
@@ -433,16 +433,16 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Методы
 
-#### конструктор
+#### constructor
 
 Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-bs-target` либо `href`, нацеленный на узел контейнера в DOM.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Главная</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Профиль</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Сообщения</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Настройки</a>
 </div>
 
 <div class="tab-content">

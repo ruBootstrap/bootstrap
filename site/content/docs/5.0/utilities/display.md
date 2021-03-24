@@ -153,8 +153,8 @@ toc: true
 
 ## Sass
 
-### Utilities API
+### API утилит
 
-Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты отображения объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}

@@ -13,7 +13,7 @@ toc: true
 Кроме того, поскольку страницы, вероятно, имеют более одного такого раздела навигации, рекомендуется предоставить описательный `aria-label` для `<nav>`, чтобы отразить его назначение. Например, если компонент разбивки на страницы используется для навигации между набором результатов поиска, подходящей меткой может быть `aria-label="Search results pages"`.
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -29,7 +29,7 @@ toc: true
 Хотите использовать значок или символ вместо текста для некоторых ссылок на страницы? Убедитесь, что Вы обеспечили надлежащую поддержку программы чтения с экрана с атрибутами `aria`.
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Предыдущая">
@@ -125,7 +125,7 @@ toc: true
 Измените выравнивание компонентов разбиения на страницы с помощью [утилит flexbox]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
@@ -141,7 +141,7 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<nav aria-label="Page navigation example">
+<nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
@@ -158,10 +158,10 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### Миксины
 
 {{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}

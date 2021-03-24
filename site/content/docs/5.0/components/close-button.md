@@ -33,6 +33,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="close-variables" file="scss/_variables.scss" >}}

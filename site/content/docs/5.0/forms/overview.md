@@ -115,7 +115,7 @@ sections:
     <legend>Пример отключенного набора полей</legend>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">Отключенное поле ввода</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Отключенное поле ввода">
     </div>
     <div class="mb-3">
       <label for="disabledSelect" class="form-label">Отключено меню выбора</label>

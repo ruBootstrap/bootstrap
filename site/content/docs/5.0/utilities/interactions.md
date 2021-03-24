@@ -32,8 +32,8 @@ Bootstrap предоставляет классы `.pe-none` и `.pe-auto` дл�
 
 ## Sass
 
-### Utilities API
+### API утилит
 
-Interaction utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты взаимодействия заявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-interaction" file="scss/_utilities.scss" >}}

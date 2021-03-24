@@ -311,6 +311,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

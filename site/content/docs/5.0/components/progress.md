@@ -140,12 +140,12 @@ Bootstrap предоставляет несколько [утилит для у�
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
 
-### Keyframes
+### Ключевые кадры
 
-Used for creating the CSS animations for `.progress-bar-animated`. Included in `scss/_progress-bar.scss`.
+Используется для создания CSS-анимации для `.progress-bar-animated`. Включен в `scss/_progress-bar.scss`.
 
 {{< scss-docs name="progress-keyframes" file="scss/_progress.scss" >}}

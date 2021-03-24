@@ -66,6 +66,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}

@@ -173,13 +173,13 @@ Bootstrap «спиннеры» можно использовать для ото
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
 
-### Keyframes
+### Ключевые кадры
 
-Used for creating the CSS animations for our spinners. Included in `scss/_spinners.scss`.
+Используется для создания анимации CSS для наших спиннеров. Включен в `scss/_spinners.scss`.
 
 {{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
 

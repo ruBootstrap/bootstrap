@@ -19,12 +19,12 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API утилит
 
-Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты теней объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}

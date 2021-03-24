@@ -81,9 +81,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Элемент</li>
+    <li class="list-group-item">Второй элемент</li>
+    <li class="list-group-item">Третий элемент</li>
   </ul>
 </div>
 {{< /example >}}
@@ -94,9 +94,9 @@ toc: true
     Рекомендуемые
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Элемент</li>
+    <li class="list-group-item">Второй элемент</li>
+    <li class="list-group-item">Третий элемент</li>
   </ul>
 </div>
 {{< /example >}}
@@ -104,9 +104,9 @@ toc: true
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Элемент</li>
+    <li class="list-group-item">Второй элемент</li>
+    <li class="list-group-item">Третий элемент</li>
   </ul>
   <div class="card-footer">
     Футер карточки
@@ -126,9 +126,9 @@ toc: true
     <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Элемент</li>
+    <li class="list-group-item">Второй элемент</li>
+    <li class="list-group-item">Третий элемент</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Ссылка карточки</a>
@@ -423,7 +423,7 @@ toc: true
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Шапка</div>
+  <div class="card-header">Хедер</div>
   <div class="card-body">
     <h5 class="card-title">{{ .name | title }} Заголовок карточки</h5>
     <p class="card-text">Несколько быстрых примеров текста для построения на основе Заголовок карточки и составления основной части содержимого карточки.</p>
@@ -445,7 +445,7 @@ toc: true
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Шапка</div>
+  <div class="card-header">Хедер</div>
   <div class="card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">
     <h5 class="card-title">{{ .name | title }} Заголовок карточки</h5>
     <p class="card-text">Несколько быстрых примеров текста для построения на основе Заголовок карточки и составления основной части содержимого карточки.</p>
@@ -461,7 +461,7 @@ toc: true
 
 {{< example >}}
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Шапка</div>
+  <div class="card-header bg-transparent border-success">Хедер</div>
   <div class="card-body text-success">
     <h5 class="card-title">Success Заголовок карточки</h5>
     <p class="card-text">Несколько быстрых примеров текста для построения на основе Заголовок карточки и составления основной части содержимого карточки.</p>

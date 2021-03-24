@@ -123,7 +123,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 ```html
-<!-- Example single danger button -->
+<!-- Пример отдельной кнопки danger -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Действие
@@ -226,7 +226,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 ```html
-<!-- Example split danger button -->
+<!-- Пример отдельной кнопки danger -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Действие</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">

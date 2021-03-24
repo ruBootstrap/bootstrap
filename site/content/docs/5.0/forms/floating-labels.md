@@ -103,6 +103,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

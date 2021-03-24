@@ -161,7 +161,7 @@ Since the offcanvas panel is conceptually a modal dialog, be sure to add `aria-l
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
 

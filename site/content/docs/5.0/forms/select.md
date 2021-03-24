@@ -78,6 +78,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-select-variables" file="scss/_variables.scss" >}}

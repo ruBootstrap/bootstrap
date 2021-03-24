@@ -272,6 +272,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}

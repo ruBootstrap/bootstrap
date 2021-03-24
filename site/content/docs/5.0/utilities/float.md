@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Float
+title: Плавающие
 description: Переключайте плавающие на любом элементе и в любой контрольной точке с помощью наших гибких утилит float.
 group: utilities
 toc: true
@@ -41,8 +41,8 @@ toc: true
 
 ## Sass
 
-### Utilities API
+### API утилит
 
-Float utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты флоат объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-float" file="scss/_utilities.scss" >}}

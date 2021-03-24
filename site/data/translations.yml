@@ -1,7 +1,7 @@
 - name: English
   code: en
   description: Bootstrap 5 Original
-  url: https://v5.getbootstrap.com/
+  url: https://getbootstrap.com/
 
 - name: Russian
   code: ru

@@ -101,10 +101,10 @@ toc: true
 Измените высоту строки с помощью утилит `.lh-*`.
 
 {{< example >}}
-<p class="lh-1">Some placeholder content to show off the line height utilities. Happy birthday. You could've been the greatest. She ride me like a roller coaster. I messed around and got addicted. You just gotta ignite the light and let it shine! I'm intrigued, for a peek, heard it's fascinating. Catch her if you can. I should've told you what you meant to me 'Cause now I pay the price. Do you ever feel, feel so paper thin.</p>
-<p class="lh-sm">But you better choose carefully. Yo, shout out to all you kids, buying bottle service, with your rent money. She's sweet as pie but if you break her heart. Just own the night like the 4th of July! In another life I would be your girl. Playing ping pong all night long, everything's all neon and hazy. Shorty so bad, I’m sprung and I don’t care.</p>
-<p class="lh-base">I can feel a phoenix inside of me. Maybe a reason why all the doors are closed. We go higher and higher. Passport stamps, she's cosmopolitan. Someone said you had your tattoo removed. All my girls vintage Chanel baby. Someone said you had your tattoo removed.</p>
-<p class="lh-lg">But I will get there. This is real so take a chance and don't ever look back, don't ever look back. You could travel the world but nothing comes close to the golden coast. Of anything and everything. Venice beach and Palm Springs, summertime is everything. Do you ever feel already buried deep six feet under? It's time to bring out the big balloons. So cover your eyes, I have a surprise. So I don't have to say you were the one that got away.</p>
+<p class="lh-1">Некоторый заполнитель для демонстрации утилит высоты строки. С днем рождения. Ты мог бы быть лучшим. Она катается на мне как на американских горках. Я возился и пристрастился. Вы просто должны зажечь свет и позволить ему сиять! Я заинтригован, потому что слышал, что это увлекательно. Поймай ее, если сможешь. Я должен был сказать тебе, что ты значишь для меня, Потому что теперь я плачу цену. Вы когда-нибудь чувствовали себя такими тонкими, как бумага.</p>
+<p class="lh-sm">Но лучше выбирать внимательно. Эй, кричите всем вам, дети, покупайте услуги по продаже бутылок на свои деньги за аренду. Она мила, как пирог, но если ты разобьешь ей сердце. Просто наслаждайся ночью, как 4 июля! В другой жизни я была бы твоей девушкой. Всю ночь играю в пинг-понг, все в неоновом свете и туманно. Коротышка, так плохо, я подпрыгнул, и мне все равно.</p>
+<p class="lh-base">Я чувствую внутри себя феникса. Может быть причина, по которой все двери закрыты. Мы идем все выше и выше. Марки в паспорте, она космополитична. Кто-то сказал, что тебе удалили татуировку. Все мои девочки винтажные Chanel baby. Кто-то сказал, что тебе удалили татуировку.</p>
+<p class="lh-lg">Но я доберусь туда. Это реально, так что рискните и никогда не оглядывайтесь назад, никогда не оглядывайтесь назад. Вы можете путешествовать по миру, но ничто не может сравниться с золотым берегом. О чем угодно и обо всем. Пляж Венеции и Палм-Спрингс, лето - это все. Вы когда-нибудь чувствовали себя похороненным на глубине шести футов? Пришло время вывести большие воздушные шары. Так закрой глаза, у меня есть сюрприз. Так что мне не нужно говорить, что это вы сбежали.</p>
 {{< /example >}}
 
 ## Моноширинный
@@ -137,18 +137,18 @@ toc: true
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 
-### Maps
+### Карты
 
-Font-size utilities are generated from this map, in combination with our utilities API.
+Утилиты с размером шрифта генерируются из этой карты в сочетании с нашим API утилит.
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API утилит
 
-Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты шрифта и текста указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}
