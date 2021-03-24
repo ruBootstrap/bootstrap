@@ -19,13 +19,7 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/features/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/flex/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/utilities/float/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/headers/</loc>
@@ -130,6 +124,9 @@
     <loc>https://getbootstrap.su/docs/5.0/extend/icons/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/content/figures/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/build-tools/</loc>
   </url>
   <url>
@@ -203,6 +200,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/migration/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/utilities/float/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/floating-labels/</loc>
