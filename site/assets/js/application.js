@@ -96,7 +96,7 @@
       var modalTitle = exampleModal.querySelector('.modal-title')
       var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-      modalTitle.textContent = 'New message to ' + recipient
+      modalTitle.textContent = 'Новое сообщение для ' + recipient
       modalBodyInput.value = recipient
     })
   }
@@ -113,7 +113,7 @@
   }
 
   // Insert copy to clipboard button before .highlight
-  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
+  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Скопировать в буфер обмена">Копировать</button></div>'
   document.querySelectorAll('div.highlight')
     .forEach(function (element) {
       element.insertAdjacentHTML('beforebegin', btnHtml)
@@ -140,22 +140,22 @@
   clipboard.on('success', function (e) {
     var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copied!')
+    e.trigger.setAttribute('data-bs-original-title', 'Скопировано!')
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
     e.clearSelection()
   })
 
   clipboard.on('error', function (e) {
     var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-    var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
+    var fallbackMsg = 'Нажмите ' + modifierKey + 'C, чтобы скопировать'
     var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
 
     e.trigger.setAttribute('data-bs-original-title', fallbackMsg)
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
   })
 
   anchors.options = {

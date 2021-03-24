@@ -16,7 +16,7 @@ toc: true
 
 Мы предоставляем версию Bootstrap, построенную как `ESM` (`bootstrap.esm.js` и `bootstrap.esm.min.js`), которая позволяет Вам использовать Bootstrap в качестве модуля в Вашем браузере, если Ваши [целевые браузеры поддерживают его](https://caniuse.com/es6-module).
 
-html
+```html
 <script type="module">
   import { Toast } from 'bootstrap.esm.min.js'
 

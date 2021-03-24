@@ -1,4 +1,4 @@
-docs="_gh_pages"
+docs="_site"
 ghPagesBranch="gh-pages"
 site="getbootstrap.su"
 
@@ -8,7 +8,7 @@ mkdir $docs
 git worktree prune
 rm -rf .git/worktrees/$docs/
 
-echo "Checking out gh-pages branch into _gh_pages"
+echo "Checking out gh-pages branch into _site"
 git worktree add -B $ghPagesBranch $docs origin/$ghPagesBranch
 
 echo "Removing existing files"
