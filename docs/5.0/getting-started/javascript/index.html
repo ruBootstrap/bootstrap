@@ -414,7 +414,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
           <h1 class="bd-title" id="content">JavaScript</h1>
         </div>
         <p class="bd-lead">Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.</p>
@@ -428,6 +428,10 @@
   <ul>
     <li><a href="#индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</a></li>
     <li><a href="#использование-bootstrap-как-модуля">Использование Bootstrap как модуля</a></li>
+    <li><a href="#зависимости">Зависимости</a></li>
+    <li><a href="#все-еще-хотите-использовать-jquery-это-возможно">Все еще хотите использовать jQuery? Это возможно!</a></li>
+    <li><a href="#атрибуты-данных">Атрибуты данных</a></li>
+    <li><a href="#события">События</a></li>
     <li><a href="#программный-api">Программный API</a>
       <ul>
         <li><a href="#селекторы-css-в-конструкторах">Селекторы CSS в конструкторах</a></li>
@@ -452,56 +456,41 @@
 <p>Если Вы используете bundler (Webpack, Rollup&hellip;), Вы можете использовать файлы <code>/js/dist/*.js</code> готовые для UMD.</p>
 <h2 id="использование-bootstrap-как-модуля">Использование Bootstrap как модуля</h2>
 <p>Мы предоставляем версию Bootstrap, построенную как <code>ESM</code> (<code>bootstrap.esm.js</code> и <code>bootstrap.esm.min.js</code>), которая позволяет Вам использовать Bootstrap в качестве модуля в Вашем браузере, если Ваши <a href="https://caniuse.com/es6-module">целевые браузеры поддерживают его</a>.</p>
-<p>html</p>
-<script type="module">
-  import { Toast } from 'bootstrap.esm.min.js'
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
+  <span class="kr">import</span> <span class="p">{</span> <span class="nx">Toast</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap.esm.min.js&#39;</span>
 
-  Array.from(document.querySelectorAll('.toast'))
-    .forEach(toastNode => new Toast(toastNode))
-</script>
-<pre><code>
-<div class="bd-callout bd-callout-warning">
+  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.toast&#39;</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">toastNode</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">(</span><span class="nx">toastNode</span><span class="p">))</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-callout bd-callout-warning">
 <h2 id="несовместимые-плагины">Несовместимые плагины</h2>
 <p>Из-за ограничений браузера некоторые из наших плагинов, а именно плагины Dropdown, Tooltip и Popover, нельзя использовать в теге <code>&lt;script&gt;</code> с типом <code>module</code>, потому что они зависят от Popper. Для получения дополнительной информации об этой проблеме см <a href="https://v8.dev/features/modules#specifiers">здесь</a>.
 </div>
 
-
-## Зависимости
-
-Некоторые плагины и компоненты CSS зависят от других плагинов. Если Вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации.
-
-Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от [Popper](https://popper.js.org/).
-
-## Все еще хотите использовать jQuery? Это возможно!
-
-Bootstrap 5 разработан для использования без jQuery, но все же можно использовать наши компоненты с jQuery. **Если Bootstrap обнаружит `jQuery` в объекте `window`**, он добавит все наши компоненты в систему плагинов jQuery; это означает, что вы сможете использовать `$('[data-bs-toggle=&quot;tooltip&quot;]').tooltip()` для включения всплывающих подсказок. То же самое и с другими нашими компонентами.
-
-## Атрибуты данных
-
-Почти все плагины Bootstrap можно включить и настроить только с помощью HTML с атрибутами данных (наш предпочтительный способ использования функциональности JavaScript). Обязательно **используйте только один набор атрибутов данных для одного элемента** (например, Вы не можете запускать всплывающую подсказку и модальное окно с помощью одной кнопки.)
-
+<h2 id="зависимости">Зависимости</h2>
+<p>Некоторые плагины и компоненты CSS зависят от других плагинов. Если Вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации.</p>
+<p>Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от <a href="https://popper.js.org/">Popper</a>.</p>
+<h2 id="все-еще-хотите-использовать-jquery-это-возможно">Все еще хотите использовать jQuery? Это возможно!</h2>
+<p>Bootstrap 5 разработан для использования без jQuery, но все же можно использовать наши компоненты с jQuery. <strong>Если Bootstrap обнаружит <code>jQuery</code> в объекте <code>window</code></strong>, он добавит все наши компоненты в систему плагинов jQuery; это означает, что вы сможете использовать <code>$('[data-bs-toggle=&quot;tooltip&quot;]').tooltip()</code> для включения всплывающих подсказок. То же самое и с другими нашими компонентами.</p>
+<h2 id="атрибуты-данных">Атрибуты данных</h2>
+<p>Почти все плагины Bootstrap можно включить и настроить только с помощью HTML с атрибутами данных (наш предпочтительный способ использования функциональности JavaScript). Обязательно <strong>используйте только один набор атрибутов данных для одного элемента</strong> (например, Вы не можете запускать всплывающую подсказку и модальное окно с помощью одной кнопки.)</p>
 <div class="bd-callout bd-callout-warning">
 <h2 id="селекторы">Селекторы</h2>
 <p>В настоящее время для запросов к элементам DOM мы используем собственные методы <code>querySelector</code> и <code>querySelectorAll</code> из соображений производительности, поэтому Вы должны использовать <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">допустимые селекторы</a>.
 Если Вы используете специальные селекторы, например: <code>collapse:Example</code>, не забудьте их экранировать.
 </div>
 
+<h2 id="события">События</h2>
+<p>Bootstrap предоставляет настраиваемые события для уникальных действий большинства плагинов. Как правило, они бывают в форме причастия прошедшего времени и инфинитива, где инфинитив (например, <code>show</code>) запускается в начале события, а его форма причастия прошедшего времени (например, <code>shown</code>) запускается после завершения действия.</p>
+<p>Все инфинитивные события обеспечивают функциональность <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>. Это дает возможность остановить выполнение действия до его запуска. Возврат false от обработчика событий также автоматически вызывает <code>preventDefault()</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
 
-## События
-
-Bootstrap предоставляет настраиваемые события для уникальных действий большинства плагинов. Как правило, они бывают в форме причастия прошедшего времени и инфинитива, где инфинитив (например, `show`) запускается в начале события, а его форма причастия прошедшего времени (например, `shown`) запускается после завершения действия.
-
-Все инфинитивные события обеспечивают функциональность [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). Это дает возможность остановить выполнение действия до его запуска. Возврат false от обработчика событий также автоматически вызывает `preventDefault()`.
-
-```js
-var myModal = document.getElementById('myModal')
-
-myModal.addEventListener('show.bs.modal', function (event) {
-  if (!data) {
-    return event.preventDefault() // останавливает отображение модального окна
-  }
-})
-</code></pre><div class="bd-callout bd-callout-warning">
+<span class="nx">myModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// останавливает отображение модального окна
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><div class="bd-callout bd-callout-warning">
 <h2 id="события-jquery">События jQuery</h2>
 <p>Bootstrap обнаружит jQuery, если <code>jQuery</code> присутствует в объекте <code>window</code>, а атрибут <code>data-bs-no-jquery</code> не установлен в <code>&lt;body&gt;</code>. Если jQuery найден, Bootstrap будет генерировать события благодаря системе событий jQuery. Поэтому, если Вы хотите прослушивать события Bootstrap, вам придется использовать методы jQuery (<code>.on</code>, <code>.one</code>) вместо <code>addEventListener</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
