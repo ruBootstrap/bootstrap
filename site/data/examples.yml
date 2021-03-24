@@ -68,10 +68,7 @@
       description: "Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д."
     - name: Шпаргалка
       slug: cheatsheet
-      description: "Kitchen sink of Bootstrap components."
-    - name: Шпаргалка RTL
-      slug: cheatsheet-rtl
-      description: "Kitchen sink of Bootstrap components, RTL."
+      description: "Шпаргалка Bootstrap компонентов."
 
 - category: Панели навигации
   slug: navbars
@@ -89,7 +86,7 @@
     - name: Нижняя панель навигации
       slug: navbar-bottom
       description: "Пример единой панели навигации с нижней панелью навигации и дополнительным контентом."
-    - name: Offcanvas navbar
+    - name: Панель навигации вне холста
       slug: offcanvas-navbar
       description: "Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста)."
 
@@ -97,6 +94,9 @@
   slug: rtl
   description: "Посмотрите, как работает RTL-версия Bootstrap с этими модифицированными примерами пользовательских компонентов."
   examples:
+    - name: Шпаргалка RTL
+      slug: cheatsheet-rtl
+      description: "Шпаргалка Bootstrap компонентов, RTL."
     - name: Альбом RTL
       slug: album-rtl
       description: "Простой одностраничный шаблон для фотогалерей, портфолио и т.д."
