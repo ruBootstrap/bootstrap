@@ -66,25 +66,25 @@
 - title: Макет
   slug: layout
   pages:
-    - title: Breakpoints
+    - title: Контрольные точки
       hint: Контрольные точки
       slug: breakpoints
-    - title: Containers
+    - title: Контейнеры
       hint: Контейнеры
       slug: containers
     - title: Сетка
       hint: Сетка
       slug: grid
-    - title: Columns
+    - title: Колонки
       hint: Колонки
       slug: columns
-    - title: Gutters
+    - title: Промежутки
       hint: Промежутки
       slug: gutters
-    - title: Utilities
+    - title: Утилиты
       hint: Утилиты
       slug: utilities
-    - title: Z-index
+    - title: Z-индекс
       hint: Z-индекс
       slug: z-index
 
