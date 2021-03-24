@@ -188,7 +188,7 @@ Bootstrap устанавливает основные глобальные ст�
 
 {{< example >}}
 <blockquote class="blockquote">
-  <p>A well-known quote, contained in a blockquote element.</p>
+  <p>Известная цитата, содержащаяся в элементе цитаты.</p>
 </blockquote>
 {{< /example >}}
 
@@ -199,10 +199,10 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure>
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Известная цитата, содержащаяся в элементе цитаты.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Кто-то, известный в <cite title="Source Title">названии источника</cite>
   </figcaption>
 </figure>
 {{< /example >}}
@@ -214,10 +214,10 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure class="text-center">
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Известная цитата, содержащаяся в элементе цитаты.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Кто-то, известный в <cite title="Source Title">названии источника</cite>
   </figcaption>
 </figure>
 {{< /example >}}
@@ -225,10 +225,10 @@ Bootstrap устанавливает основные глобальные ст�
 {{< example >}}
 <figure class="text-end">
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Известная цитата, содержащаяся в элементе цитаты.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Кто-то, известный в <cite title="Source Title">названии источника</cite>
   </figcaption>
 </figure>
 {{< /example >}}
