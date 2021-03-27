@@ -22,12 +22,6 @@
     <loc>https://getbootstrap.su/docs/5.0/utilities/flex/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/headers/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/heroes/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/javascript/</loc>
   </url>
   <url>
@@ -97,6 +91,9 @@
     <loc>https://getbootstrap.su/docs/5.0/components/dropdowns/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/heroes/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/borders/</loc>
   </url>
   <url>
@@ -113,6 +110,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/headers/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/badge/</loc>
