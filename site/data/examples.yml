@@ -52,7 +52,7 @@
     - name: Закрепленный футер и панель навигации
       slug: sticky-footer-navbar
       description: "Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации."
-    - name: Jumbotron
+    - name: Джамботрон
       slug: jumbotron
       description: "Используйте утилиты для воссоздания и улучшения jumbotron Bootstrap 4."
 

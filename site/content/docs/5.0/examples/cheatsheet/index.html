@@ -1,6 +1,6 @@
 ---
 layout: examples
-title: Cheatsheet
+title: Шпаргалка
 extra_css:
   - "cheatsheet.css"
 extra_js:
@@ -12,37 +12,37 @@ body_class: "bg-light"
   <div class="container-fluid d-flex align-items-center">
     <h1 class="d-flex align-items-center fs-4 text-white mb-0">
       <img src="/docs/5.0/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
-      Cheatsheet
+      Шпаргалка
     </h1>
-    <a href="{{< docsref "/examples/cheatsheet-rtl" >}}" class="ms-auto link-light" hreflang="ar">RTL cheatsheet</a>
+    <a href="{{< docsref "/examples/cheatsheet-rtl" >}}" class="ms-auto link-light" hreflang="ar">Шпаргалка по RTL</a>
   </div>
 </header>
 <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
-  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">На этой странице</h2>
   <nav class="small" id="toc">
     <ul class="list-unstyled">
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Содержание</button>
         <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
-          <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#typography">Типография</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#images">Изображения</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#tables">Таблицы</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#figures">Фигуры</a></li>
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Формы</button>
         <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
-          <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
-          <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#overview">Обзор</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Отключенные формы</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Размеры</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Группа ввода</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Плавающие метки</a></li>
+          <li><a class="d-inline-flex align-items-center rounded" href="#validation">Валидация</a></li>
         </ul>
       </li>
       <li class="my-2">
-        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+        <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Компоненты</button>
         <ul class="list-unstyled ps-3 collapse" id="components-collapse">
           <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
           <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
@@ -71,31 +71,31 @@ body_class: "bg-light"
 </aside>
 <div class="bd-cheatsheet container-fluid bg-body">
   <section id="content">
-    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Содержание</h2>
 
     <article class="my-3" id="typography">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Typography</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/content/typography" >}}">Documentation</a>
+        <h3>Типография</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/content/typography" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        <p class="display-1">Display 1</p>
-        <p class="display-2">Display 2</p>
-        <p class="display-3">Display 3</p>
-        <p class="display-4">Display 4</p>
-        <p class="display-5">Display 5</p>
-        <p class="display-6">Display 6</p>
+        <p class="display-1">Дисплей 1</p>
+        <p class="display-2">Дисплей 2</p>
+        <p class="display-3">Дисплей 3</p>
+        <p class="display-4">Дисплей 4</p>
+        <p class="display-5">Дисплей 5</p>
+        <p class="display-6">Дисплей 6</p>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <p class="h1">Heading 1</p>
-        <p class="h2">Heading 2</p>
-        <p class="h3">Heading 3</p>
-        <p class="h4">Heading 4</p>
-        <p class="h5">Heading 5</p>
-        <p class="h6">Heading 6</p>
+        <p class="h1">Заголовок 1</p>
+        <p class="h2">Заголовок 2</p>
+        <p class="h3">Заголовок 3</p>
+        <p class="h4">Заголовок 4</p>
+        <p class="h5">Заголовок 5</p>
+        <p class="h6">Заголовок 6</p>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
@@ -105,69 +105,69 @@ body_class: "bg-light"
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-        <p><del>This line of text is meant to be treated as deleted text.</del></p>
-        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-        <p><u>This line of text will render as underlined.</u></p>
-        <p><small>This line of text is meant to be treated as fine print.</small></p>
-        <p><strong>This line rendered as bold text.</strong></p>
-        <p><em>This line rendered as italicized text.</em></p>
+        <p>Вы можете использовать тег mark для <mark>выделения</mark> текста.</p>
+        <p><del>Эта строка текста должна рассматриваться как удаленный текст.</del></p>
+        <p><s>Эта строка текста считается неверной.</s></p>
+        <p><ins>Эта строка текста должна рассматриваться как дополнение к документу.</ins></p>
+        <p><u>Эта строка текста будет отображаться как подчеркнутая.</u></p>
+        <p><small>Эту строку текста следует рассматривать как мелкий шрифт.</small></p>
+        <p><strong>Эта строка выделена жирным шрифтом.</strong></p>
+        <p><em>Эта строка выделена курсивом.</em></p>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <blockquote class="blockquote">
-          <p>A well-known quote, contained in a blockquote element.</p>
-          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <p>Известная цитата, содержащаяся в элементе цитаты.</p>
+          <footer class="blockquote-footer">Кто-то, известный в <cite title="Название источника">названии источника</cite></footer>
         </blockquote>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <ul class="list-unstyled">
-          <li>This is a list.</li>
-          <li>It appears completely unstyled.</li>
-          <li>Structurally, it's still a list.</li>
-          <li>However, this style only applies to immediate child elements.</li>
-          <li>Nested lists:
+          <li>Это список.</li>
+          <li>Это выглядит совершенно без стиля.</li>
+          <li>Конструктивно это все-таки список.</li>
+          <li>Однако этот стиль применяется только к непосредственным дочерним элементам.</li>
+          <li>Вложенные списки:
             <ul>
-              <li>are unaffected by this style</li>
-              <li>will still show a bullet</li>
-              <li>and have appropriate left margin</li>
+              <li>не подвержены влиянию этого стиля</li>
+              <li>все равно покажет пулю</li>
+              <li>и иметь соответствующее левое поле</li>
             </ul>
           </li>
-          <li>This may still come in handy in some situations.</li>
+          <li>Это может пригодиться в некоторых ситуациях.</li>
         </ul>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <ul class="list-inline">
-          <li class="list-inline-item">This is a list item.</li>
-          <li class="list-inline-item">And another one.</li>
-          <li class="list-inline-item">But they're displayed inline.</li>
+          <li class="list-inline-item">Это элемент списка.</li>
+          <li class="list-inline-item">И еще один.</li>
+          <li class="list-inline-item">Но они отображаются встроенными.</li>
         </ul>
         {{< /example >}}
       </div>
     </article>
     <article class="my-3" id="images">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Images</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/content/images" >}}">Documentation</a>
+        <h3>Изображения</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/content/images" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
+        {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Адаптивное изображение" >}}
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        {{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
+        {{< placeholder width="200" height="200" class="img-thumbnail" title="Обычное квадратное изображение-заполнитель с белой рамкой вокруг него, что делает его похожим на фотографию, сделанную на старую камеру мгновенного действия" >}}
         {{< /example >}}
       </div>
     </article>
     <article class="my-3" id="tables">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Tables</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/content/tables" >}}">Documentation</a>
+        <h3>Таблицы</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/content/tables" >}}">Документация</a>
       </div>
 
       <div>
@@ -176,9 +176,9 @@ body_class: "bg-light"
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Обращение</th>
           </tr>
           </thead>
           <tbody>
@@ -208,9 +208,9 @@ body_class: "bg-light"
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Обращение</th>
           </tr>
           </thead>
           <tbody>
@@ -239,23 +239,23 @@ body_class: "bg-light"
         <table class="table table-hover">
           <thead>
           <tr>
-            <th scope="col">Class</th>
-            <th scope="col">Heading</th>
-            <th scope="col">Heading</th>
+            <th scope="col">Класс</th>
+            <th scope="col">Заголовок</th>
+            <th scope="col">Заголовок</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <th scope="row">Default</th>
-            <td>Cell</td>
-            <td>Cell</td>
+            <th scope="row">По умолчанию</th>
+            <td>Ячейка</td>
+            <td>Ячейка</td>
           </tr>
           {{< table.inline >}}
           {{- range (index $.Site.Data "theme-colors") }}
           <tr class="table-{{ .name }}">
             <th scope="row">{{ .name | title }}</th>
-            <td>Cell</td>
-            <td>Cell</td>
+            <td>Ячейка</td>
+            <td>Ячейка</td>
           </tr>
           {{- end -}}
           {{< /table.inline >}}
@@ -268,9 +268,9 @@ body_class: "bg-light"
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Обращение</th>
           </tr>
           </thead>
           <tbody>
@@ -298,15 +298,15 @@ body_class: "bg-light"
     </article>
     <article class="my-3" id="figures">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Figures</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/content/figures" >}}">Documentation</a>
+        <h3>Иллюстрации</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/content/figures" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <figure class="figure">
           {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
-          <figcaption class="figure-caption">A caption for the above image.</figcaption>
+          <figcaption class="figure-caption">Подпись к изображению выше.</figcaption>
         </figure>
         {{< /example >}}
       </div>
@@ -314,54 +314,54 @@ body_class: "bg-light"
   </section>
 
   <section id="forms">
-    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Forms</h2>
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Формы</h2>
 
     <article class="my-3" id="overview">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Overview</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/overview" >}}">Documentation</a>
+        <h3>Обзор</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/overview" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="exampleInputPassword1" class="form-label">Пароль</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <label class="form-check-label" for="exampleCheck1">Проверить меня</label>
           </div>
           <fieldset class="mb-3">
-            <legend>Radios buttons</legend>
+            <legend>Кнопки радио</legend>
             <div class="form-check">
               <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
-              <label class="form-check-label" for="exampleRadio1">Default radio</label>
+              <label class="form-check-label" for="exampleRadio1">Радио по умолчанию</label>
             </div>
             <div class="mb-3 form-check">
               <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
-              <label class="form-check-label" for="exampleRadio2">Another radio</label>
+              <label class="form-check-label" for="exampleRadio2">Другое радио</label>
             </div>
           </fieldset>
           <div class="mb-3">
-            <label class="form-label" for="customFile">Upload</label>
+            <label class="form-label" for="customFile">Загрузить</label>
             <input type="file" class="form-control" id="customFile">
           </div>
           <div class="mb-3 form-check form-switch">
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Флажок переключателя флажка ввода</label>
           </div>
           <div class="mb-3">
-            <label for="customRange3" class="form-label">Example range</label>
+            <label for="customRange3" class="form-label">Пример диапазона</label>
             <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Подтвердить</button>
         </form>
         {{< /example >}}
       </div>
@@ -369,7 +369,7 @@ body_class: "bg-light"
     <article class="my-3" id="disabled-forms">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Disabled forms</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/overview" >}}#disabled-forms">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/overview" >}}#disabled-forms">Документация</a>
       </div>
 
       <div>
@@ -377,47 +377,47 @@ body_class: "bg-light"
         <form>
           <fieldset disabled aria-label="Disabled fieldset example">
             <div class="mb-3">
-              <label for="disabledTextInput" class="form-label">Disabled input</label>
-              <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+              <label for="disabledTextInput" class="form-label">Отключенный ввод</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Отключенный ввод">
             </div>
             <div class="mb-3">
-              <label for="disabledSelect" class="form-label">Disabled select menu</label>
+              <label for="disabledSelect" class="form-label">Отключено меню выбора</label>
               <select id="disabledSelect" class="form-select">
-                <option>Disabled select</option>
+                <option>Отключен выбор</option>
               </select>
             </div>
             <div class="mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
                 <label class="form-check-label" for="disabledFieldsetCheck">
-                  Can't check this
+                  Не могу это проверить
                 </label>
               </div>
             </div>
             <fieldset class="mb-3">
-              <legend>Disabled radios buttons</legend>
+              <legend>Отключенные радиокнопки</legend>
               <div class="form-check">
                 <input type="radio" name="radios" class="form-check-input" id="disabledRadio1" disabled>
-                <label class="form-check-label" for="disabledRadio1">Disabled radio</label>
+                <label class="form-check-label" for="disabledRadio1">Отключенное радио</label>
               </div>
               <div class="mb-3 form-check">
                 <input type="radio" name="radios" class="form-check-input" id="disabledRadio2" disabled>
-                <label class="form-check-label" for="disabledRadio2">Another radio</label>
+                <label class="form-check-label" for="disabledRadio2">Другое радио</label>
               </div>
             </fieldset>
             <div class="mb-3">
-              <label class="form-label" for="disabledCustomFile">Upload</label>
+              <label class="form-label" for="disabledCustomFile">Загрузка</label>
               <input type="file" class="form-control" id="disabledCustomFile" disabled>
             </div>
             <div class="mb-3 form-check form-switch">
               <input class="form-check-input" type="checkbox" id="disabledSwitchCheckChecked" checked disabled>
-              <label class="form-check-label" for="disabledSwitchCheckChecked">Disabled checked switch checkbox input</label>
+              <label class="form-check-label" for="disabledSwitchCheckChecked">Отключено переключение флажка переключателя ввода</label>
             </div>
             <div class="mb-3">
-              <label for="disabledRange" class="form-label">Disabled range</label>
+              <label for="disabledRange" class="form-label">Отключенный диапазон</label>
               <input type="range" class="form-range" min="0" max="5" step="0.5" id="disabledRange">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Подтвердить</button>
           </fieldset>
         </form>
         {{< /example >}}
@@ -425,8 +425,8 @@ body_class: "bg-light"
     </article>
     <article class="my-3" id="sizing">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Sizing</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/form-control" >}}#sizing">Documentation</a>
+        <h3>Размеры</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/form-control" >}}#sizing">Документация</a>
       </div>
 
       <div>
@@ -436,10 +436,10 @@ body_class: "bg-light"
         </div>
         <div class="mb-3">
           <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected>Откройте это меню выбора</option>
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
           </select>
         </div>
         <div class="mb-3">
@@ -453,10 +453,10 @@ body_class: "bg-light"
         </div>
         <div class="mb-3">
           <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected>Откройте это меню выбора</option>
+            <option value="1">Один</option>
+            <option value="2">Два</option>
+            <option value="3">Три</option>
           </select>
         </div>
         <div class="mb-3">
@@ -467,41 +467,41 @@ body_class: "bg-light"
     </article>
     <article class="my-3" id="input-group">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Input group</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/input-group" >}}">Documentation</a>
+        <h3>Группа ввода</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/input-group" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-label="Имя пользователя получателя" aria-describedby="basic-addon2">
           <span class="input-group-text" id="basic-addon2">@example.com</span>
         </div>
-        <label for="basic-url" class="form-label">Your vanity URL</label>
+        <label for="basic-url" class="form-label">Ваш тщеславный URL</label>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <input type="text" class="form-control" aria-label="Сумма (с точностью до доллара)">
           <span class="input-group-text">.00</span>
         </div>
         <div class="input-group">
-          <span class="input-group-text">With textarea</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <span class="input-group-text">С текстовым полем</span>
+          <textarea class="form-control" aria-label="С текстовым полем"></textarea>
         </div>
         {{< /example >}}
       </div>
     </article>
     <article class="my-3" id="floating-labels">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Floating labels</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/floating-labels" >}}">Documentation</a>
+        <h3>Плавающие метки</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/floating-labels" >}}">Документация</a>
       </div>
 
       <div>
@@ -509,11 +509,11 @@ body_class: "bg-light"
         <form>
           <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <label for="floatingInput">Адрес электронной почты</label>
           </div>
           <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <label for="floatingPassword">Пароль</label>
           </div>
         </form>
         {{< /example >}}
@@ -521,74 +521,74 @@ body_class: "bg-light"
     </article>
     <article class="my-3" id="validation">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-        <h3>Validation</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/forms/validation" >}}">Documentation</a>
+        <h3>Валидация</h3>
+        <a class="d-flex align-items-center" href="{{< docsref "/forms/validation" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <form class="row g-3">
           <div class="col-md-4">
-            <label for="validationServer01" class="form-label">First name</label>
+            <label for="validationServer01" class="form-label">Имя</label>
             <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
             <div class="valid-feedback">
-              Looks good!
+              Выглядит хорошо!
             </div>
           </div>
           <div class="col-md-4">
-            <label for="validationServer02" class="form-label">Last name</label>
+            <label for="validationServer02" class="form-label">Фамилия</label>
             <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
             <div class="valid-feedback">
-              Looks good!
+              Выглядит хорошо!
             </div>
           </div>
           <div class="col-md-4">
-            <label for="validationServerUsername" class="form-label">Username</label>
+            <label for="validationServerUsername" class="form-label">Имя пользователя</label>
             <div class="input-group has-validation">
               <span class="input-group-text" id="inputGroupPrepend3">@</span>
               <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
               <div class="invalid-feedback">
-                Please choose a username.
+                Пожалуйста, введите имя пользователя.
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <label for="validationServer03" class="form-label">City</label>
+            <label for="validationServer03" class="form-label">Город</label>
             <input type="text" class="form-control is-invalid" id="validationServer03" required>
             <div class="invalid-feedback">
-              Please provide a valid city.
+              Пожалуйста, укажите действующий город.
             </div>
           </div>
           <div class="col-md-3">
-            <label for="validationServer04" class="form-label">State</label>
+            <label for="validationServer04" class="form-label">Область</label>
             <select class="form-select is-invalid" id="validationServer04" required>
-              <option selected disabled value="">Choose...</option>
+              <option selected disabled value="">Выберите...</option>
               <option>...</option>
             </select>
             <div class="invalid-feedback">
-              Please select a valid state.
+              Пожалуйста, выберите допустимую область.
             </div>
           </div>
           <div class="col-md-3">
-            <label for="validationServer05" class="form-label">Zip</label>
+            <label for="validationServer05" class="form-label">Индекс</label>
             <input type="text" class="form-control is-invalid" id="validationServer05" required>
             <div class="invalid-feedback">
-              Please provide a valid zip.
+              Пожалуйста, предоставьте действующий почтовый индекс.
             </div>
           </div>
           <div class="col-12">
             <div class="form-check">
               <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
               <label class="form-check-label" for="invalidCheck3">
-                Agree to terms and conditions
+                Согласен с условиями
               </label>
               <div class="invalid-feedback">
-                You must agree before submitting.
+                Вы должны согласиться перед отправкой.
               </div>
             </div>
           </div>
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary" type="submit">Отправить форму</button>
           </div>
         </form>
         {{< /example >}}
@@ -597,12 +597,12 @@ body_class: "bg-light"
   </section>
 
   <section id="components">
-    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Components</h2>
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Компоненты</h2>
 
     <article class="my-3" id="accordion">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Accordion</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/accordion" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/accordion" >}}">Документация</a>
       </div>
 
       <div>
@@ -611,36 +611,36 @@ body_class: "bg-light"
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
+                Аккордеонный элемент #1
               </button>
             </h4>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>Это тело аккордеона первого элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
+                Аккордеонный элемент #2
               </button>
             </h4>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h4 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
+                Аккордеонный элемент #3
               </button>
             </h4>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <strong>Это тело "гармошки" третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
               </div>
             </div>
           </div>
@@ -651,7 +651,7 @@ body_class: "bg-light"
     <article class="my-3" id="alerts">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Alerts</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/alerts" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/alerts" >}}">Документация</a>
       </div>
 
       <div>
@@ -659,7 +659,7 @@ body_class: "bg-light"
         {{< alerts.inline >}}
         {{- range (index $.Site.Data "theme-colors") }}
         <div class="alert alert-{{ .name }} alert-dismissible fade show" role="alert">
-          A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+          Простое {{ .name }} оповещение с <a href="#" class="alert-link">примером ссылки</a>. Нажмите, если хотите.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>{{ end -}}
         {{< /alerts.inline >}}
@@ -667,10 +667,10 @@ body_class: "bg-light"
 
         {{< example show_markup="false" >}}
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">Well done!</h4>
-          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+          <h4 class="alert-heading">Отличная работа!</h4>
+          <p>О да, вы успешно прочитали это важное предупреждающее сообщение. Этот пример текста будет длиться немного дольше, чтобы вы могли увидеть, как интервалы в предупреждении работают с этим типом контента.</p>
           <hr>
-          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          <p class="mb-0">Когда вам нужно, обязательно используйте утилиты маржи, чтобы все было в порядке и порядке.</p>
         </div>
         {{< /example >}}
       </div>
@@ -678,19 +678,19 @@ body_class: "bg-light"
     <article class="my-3" id="badge">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Badge</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/badge" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/badge" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        <p class="h1">Example heading <span class="badge bg-primary">New</span></p>
-        <p class="h2">Example heading <span class="badge bg-secondary">New</span></p>
-        <p class="h3">Example heading <span class="badge bg-success">New</span></p>
-        <p class="h4">Example heading <span class="badge bg-danger">New</span></p>
-        <p class="h5">Example heading <span class="badge bg-warning text-dark">New</span></p>
-        <p class="h6">Example heading <span class="badge bg-info text-dark">New</span></p>
-        <p class="h6">Example heading <span class="badge bg-light text-dark">New</span></p>
-        <p class="h6">Example heading <span class="badge bg-dark">New</span></p>
+        <p class="h1">Пример заголовка <span class="badge bg-primary">Новое</span></p>
+        <p class="h2">Пример заголовка <span class="badge bg-secondary">Новое</span></p>
+        <p class="h3">Пример заголовка <span class="badge bg-success">Новое</span></p>
+        <p class="h4">Пример заголовка <span class="badge bg-danger">Новое</span></p>
+        <p class="h5">Пример заголовка <span class="badge bg-warning text-dark">Новое</span></p>
+        <p class="h6">Пример заголовка <span class="badge bg-info text-dark">Новое</span></p>
+        <p class="h6">Пример заголовка <span class="badge bg-light text-dark">Новое</span></p>
+        <p class="h6">Пример заголовка <span class="badge bg-dark">Новое</span></p>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
@@ -704,7 +704,7 @@ body_class: "bg-light"
     <article class="my-3" id="breadcrumb">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Breadcrumb</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/breadcrumb" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/breadcrumb" >}}">Документация</a>
       </div>
 
       <div>
@@ -712,8 +712,8 @@ body_class: "bg-light"
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Главная</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li class="breadcrumb-item"><a href="#">Библиотека</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Данные</li>
           </ol>
         </nav>
         {{< /example >}}
@@ -722,7 +722,7 @@ body_class: "bg-light"
     <article class="my-3" id="buttons">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Buttons</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/buttons" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/buttons" >}}">Документация</a>
       </div>
 
       <div>
@@ -733,7 +733,7 @@ body_class: "bg-light"
         {{- end -}}
         {{< /buttons.inline >}}
 
-        <button type="button" class="btn btn-link">Link</button>
+        <button type="button" class="btn btn-link">Ссылка</button>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
@@ -745,33 +745,33 @@ body_class: "bg-light"
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        <button type="button" class="btn btn-primary">Standard button</button>
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-primary btn-sm">Маленькая кнопка</button>
+        <button type="button" class="btn btn-primary">Стандартная кнопка</button>
+        <button type="button" class="btn btn-primary btn-lg">Большая кнопка</button>
         {{< /example >}}
       </div>
     </article>
     <article class="my-3" id="button-group">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Button group</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/button-group" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/button-group" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-          <div class="btn-group me-2" role="group" aria-label="First group">
+        <div class="btn-toolbar" role="toolbar" aria-label="Панель инструментов с группами кнопок">
+          <div class="btn-group me-2" role="group" aria-label="Первая группа">
             <button type="button" class="btn btn-secondary">1</button>
             <button type="button" class="btn btn-secondary">2</button>
             <button type="button" class="btn btn-secondary">3</button>
             <button type="button" class="btn btn-secondary">4</button>
           </div>
-          <div class="btn-group me-2" role="group" aria-label="Second group">
+          <div class="btn-group me-2" role="group" aria-label="Вторая группа">
             <button type="button" class="btn btn-secondary">5</button>
             <button type="button" class="btn btn-secondary">6</button>
             <button type="button" class="btn btn-secondary">7</button>
           </div>
-          <div class="btn-group" role="group" aria-label="Third group">
+          <div class="btn-group" role="group" aria-label="Третья группа">
             <button type="button" class="btn btn-secondary">8</button>
           </div>
         </div>
@@ -781,7 +781,7 @@ body_class: "bg-light"
     <article class="my-3" id="card">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Card</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/card" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/card" >}}">Документация</a>
       </div>
 
       <div>
@@ -791,41 +791,41 @@ body_class: "bg-light"
             <div class="card">
               {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Заголовок карточки</h5>
+                <p class="card-text">Небольшой пример текста, который будет построен на заголовке карточки и составляет основную часть содержимого карточки.</p>
+                <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
               <div class="card-header">
-                Featured
+                Рекомендуемые
               </div>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Заголовок карточки</h5>
+                <p class="card-text">Небольшой пример текста, который будет построен на заголовке карточки и составляет основную часть содержимого карточки.</p>
+                <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
               </div>
               <div class="card-footer text-muted">
-                2 days ago
+                2 дня назад
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">Заголовок карточки</h5>
+                <p class="card-text">Небольшой пример текста, который будет построен на заголовке карточки и составляет основную часть содержимого карточки.</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">Элемент</li>
+                <li class="list-group-item">Второй элемент</li>
+                <li class="list-group-item">Третий элемент</li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="#" class="card-link">Ссылка карточки</a>
+                <a href="#" class="card-link">Другая ссылка</a>
               </div>
             </div>
           </div>
@@ -837,9 +837,9 @@ body_class: "bg-light"
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Заголовок карточки</h5>
+                    <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже как естественный ввод к дополнительному контенту. Этот контент немного длиннее.</p>
+                    <p class="card-text"><small class="text-muted">Последнее обновление: 3 мин. назад</small></p>
                   </div>
                 </div>
               </div>
@@ -852,47 +852,47 @@ body_class: "bg-light"
     <article class="my-3" id="carousel">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Carousel</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/carousel" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/carousel" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Слайд 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>Метка первого слайда</h5>
+                <p>Некоторый типичный заполнитель содержимого для первого слайда.</p>
               </div>
             </div>
             <div class="carousel-item">
-              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Второй слайд" >}}
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h5>Метка второго слайда</h5>
+                <p>Некоторый типичный заполнитель содержимого для второго слайда.</p>
               </div>
             </div>
             <div class="carousel-item">
-              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+              {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5>Метка третьего слайда</h5>
+                <p>Некоторый типичный заполнитель содержимого для третьего слайда.</p>
               </div>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Предыдущий</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Следующий</span>
           </button>
         </div>
         {{< /example >}}
@@ -901,7 +901,7 @@ body_class: "bg-light"
     <article class="my-3" id="dropdowns">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Dropdowns</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/dropdowns" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/dropdowns" >}}">Документация</a>
       </div>
 
       <div>
@@ -909,41 +909,41 @@ body_class: "bg-light"
         <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
           <div class="dropdown">
             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButtonSM" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Кнопка раскрывающегося списка
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSM">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Кнопка раскрывающегося списка
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
           <div class="dropdown">
             <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Кнопка раскрывающегося списка
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLG">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
         </div>
@@ -951,69 +951,69 @@ body_class: "bg-light"
 
         {{< example show_markup="false" >}}
         <div class="btn-group">
-          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary">Основная</button>
           <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-secondary">Вторичная</button>
           <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-success">Успешная</button>
           <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-info">Инфо</button>
           <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning">Внимание</button>
           <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-danger">Опасность</button>
           <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <span class="visually-hidden">Переключить раскрывающийся список</span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
           </ul>
         </div><!-- /btn-group -->
         {{< /example >}}
@@ -1022,41 +1022,41 @@ body_class: "bg-light"
         <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
           <div class="dropend">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropendMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropend button
+              Кнопка раскрывающаяся в конец
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropendMenuButton">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
           <div class="dropup">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropupMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropup button
+              Кнопка раскрывающаяся в вверх
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropupMenuButton">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
           <div class="dropstart">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropstartMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropstart button
+              Кнопка раскрывающаяся в начало
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropstartMenuButton">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
         </div>
@@ -1066,14 +1066,14 @@ body_class: "bg-light"
         <div class="btn-group">
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownRightMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              End-aligned menu
+              Выровненное по краю конца меню
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownRightMenuButton">
-              <li><h6 class="dropdown-header">Dropdown header</h6></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><h6 class="dropdown-header">Заголовок раскрывающегося списка</h6></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
         </div>
@@ -1083,36 +1083,36 @@ body_class: "bg-light"
     <article class="my-3" id="list-group">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>List group</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/list-group" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/list-group" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <ul class="list-group">
-          <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
+          <li class="list-group-item disabled" aria-disabled="true">Отключенный элемент</li>
+          <li class="list-group-item">Второй элемент</li>
+          <li class="list-group-item">Третий элемент</li>
+          <li class="list-group-item">Четвертый элемент</li>
+          <li class="list-group-item">И пятый</li>
         </ul>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
+          <li class="list-group-item">Элемент</li>
+          <li class="list-group-item">Второй элемент</li>
+          <li class="list-group-item">Третий элемент</li>
+          <li class="list-group-item">Четвертый элемент</li>
+          <li class="list-group-item">И пятый</li>
         </ul>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+          <a href="#" class="list-group-item list-group-item-action">Простой элемент группы списка по умолчанию</a>
           {{< list.inline >}}
           {{- range (index $.Site.Data "theme-colors") }}
-          <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">Простой {{ .name }} элемент группы списка</a>
           {{- end -}}
           {{< /list.inline >}}
         </div>
@@ -1122,23 +1122,23 @@ body_class: "bg-light"
     <article class="my-3" id="modal">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Modal</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/modal" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/modal" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <div class="d-flex justify-content-between flex-wrap">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalDefault">
-            Launch demo modal
+            Запустить демонстрационное модальное окно
           </button>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
-            Launch static backdrop modal
+            Запустить статическое модальное окно
           </button>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-            Vertically centered scrollable modal
+            Вертикально центрированное прокручиваемое модальное окно
           </button>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
-            Full screen
+            Полноэкранное
           </button>
         </div>
         {{< /example >}}
@@ -1147,16 +1147,16 @@ body_class: "bg-light"
     <article class="my-3" id="navs">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Navs</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/navs-tabs" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/navs-tabs" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
         <nav class="nav">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link active" aria-current="page" href="#">Активная</a>
+          <a class="nav-link" href="#">Ссылка</a>
+          <a class="nav-link" href="#">Ссылка</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
         </nav>
         {{< /example >}}
 
@@ -1165,18 +1165,18 @@ body_class: "bg-light"
           <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
+            <p>Контент-заполнитель для панели вкладок. Это относится к домашней вкладке. Уносит тебя на много миль, так высоко, потому что у нее такая интернациональная улыбка. В моей постели незнакомец, в голове стучит. О нет. В другой жизни я бы заставил тебя остаться. «Потому что я, я способен на все. Костюм для моей коронной битвы. Воровал у родителей спиртное и забирался на крышу. Тон, загар подходит и готов, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Думаю, я забыл, что у меня есть выбор.</p>
           </div>
           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <p>Placeholder content for the tab panel. This one relates to the profile tab. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
+            <p>Контент-заполнитель для панели вкладок. Это относится к вкладке профиля. У вас лучшая архитектура. Марки в паспорте, она космополитична. Прекрасно, свежо, яростно, у нас все на замке. Никогда не планировал, что однажды потеряю тебя. Она съедает твое сердце. Ваш поцелуй космический, каждое движение волшебно. Я имею в виду тех, я имею в виду, как будто она единственная. Приветствую близких, давайте отправимся в путешествие. Просто наслаждайся ночью, как 4 июля! Но вы бы предпочли зря.</p>
           </div>
           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <p>Placeholder content for the tab panel. This one relates to the contact tab. Her love is like a drug. All my girls vintage Chanel baby. Got a motel and built a fort out of sheets. 'Cause she's the muse and the artist. (This is how we do) So you wanna play with magic. So just be sure before you give it all to me. I'm walking, I'm walking on air (tonight). Skip the talk, heard it all, time to walk the walk. Catch her if you can. Stinging like a bee I earned my stripes.</p>
+            <p>Контент-заполнитель для панели вкладок. Это относится к вкладке контактов. Ее любовь подобна наркотику. Все мои девочки винтажные Chanel baby. Получил мотель и построил форт из листов. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать мне все. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться. Поймай ее, если сможешь. Жалящая, как пчела, я заработал свои полосы.</p>
           </div>
         </div>
         {{< /example >}}
@@ -1184,16 +1184,16 @@ body_class: "bg-light"
         {{< example show_markup="false" >}}
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link active" aria-current="page" href="#">Активная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Ссылка</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Ссылка</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
           </li>
         </ul>
         {{< /example >}}
@@ -1202,7 +1202,7 @@ body_class: "bg-light"
     <article class="my-3" id="navbar">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Navbar</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/navbar" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/navbar" >}}">Документация</a>
       </div>
 
       <div>
@@ -1222,26 +1222,26 @@ body_class: "bg-light"
                   <a class="nav-link active" aria-current="page" href="#">Главная</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Ссылка</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Раскрывающийся список вниз
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
                 </li>
               </ul>
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                <button class="btn btn-outline-dark" type="submit">Поиск</button>
               </form>
             </div>
           </div>
@@ -1261,26 +1261,26 @@ body_class: "bg-light"
                   <a class="nav-link active" aria-current="page" href="#">Главная</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Ссылка</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Раскрывающийся список вниз
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
                 </li>
               </ul>
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                <button class="btn btn-outline-light" type="submit">Поиск</button>
               </form>
             </div>
           </div>
@@ -1291,12 +1291,12 @@ body_class: "bg-light"
     <article class="my-3" id="pagination">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Pagination</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/pagination" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/pagination" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        <nav aria-label="Pagination example">
+        <nav aria-label="Пример разбивки на страницы">
           <ul class="pagination pagination-sm">
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item active" aria-current="page">
@@ -1308,10 +1308,10 @@ body_class: "bg-light"
         {{< /example >}}
 
         {{< example show_markup="false" >}}
-        <nav aria-label="Standard pagination example">
+        <nav aria-label="Стандартный пример пагинации">
           <ul class="pagination">
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
+              <a class="page-link" href="#" aria-label="Предыдущий">
                 <span aria-hidden="true">&laquo;</span>
               </a>
             </li>
@@ -1319,7 +1319,7 @@ body_class: "bg-light"
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
+              <a class="page-link" href="#" aria-label="Следующий">
                 <span aria-hidden="true">&raquo;</span>
               </a>
             </li>
@@ -1331,7 +1331,7 @@ body_class: "bg-light"
         <nav aria-label="Another pagination example">
           <ul class="pagination pagination-lg flex-wrap">
             <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущий</a>
             </li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item active" aria-current="page">
@@ -1339,7 +1339,7 @@ body_class: "bg-light"
             </li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-              <a class="page-link" href="#">Next</a>
+              <a class="page-link" href="#">Следующий</a>
             </li>
           </ul>
         </nav>
@@ -1349,26 +1349,26 @@ body_class: "bg-light"
     <article class="my-3" id="popovers">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Popovers</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/popovers" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/popovers" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" >}}
-        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Нажмите, чтобы переключить всплывающее окно</button>
         {{< /example >}}
 
         {{< example show_markup="false" >}}
         <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-          Popover on top
+          Поповер вверх
         </button>
         <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-          Popover on end
+          Поповер в конец
         </button>
         <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-          Popover on bottom
+          Поповер вниз
         </button>
         <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-          Popover on start
+          Поповер в начало
         </button>
         {{< /example >}}
       </div>
@@ -1376,7 +1376,7 @@ body_class: "bg-light"
     <article class="my-3" id="progress">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Progress</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/progress" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/progress" >}}">Документация</a>
       </div>
 
       <div>
@@ -1409,13 +1409,13 @@ body_class: "bg-light"
     <article class="my-3" id="scrollspy">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Scrollspy</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/scrollspy" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/scrollspy" >}}">Документация</a>
       </div>
 
       <div>
         <div class="bd-example">
           <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Панель навигации</a>
             <ul class="nav nav-pills">
               <li class="nav-item">
                 <a class="nav-link" href="#fat">@fat</a>
@@ -1424,28 +1424,28 @@ body_class: "bg-light"
                 <a class="nav-link" href="#mdo">@mdo</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Раскрывающийся список вниз</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#one">one</a></li>
-                  <li><a class="dropdown-item" href="#two">two</a></li>
+                  <li><a class="dropdown-item" href="#one">один</a></li>
+                  <li><a class="dropdown-item" href="#two">два</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#three">three</a></li>
+                  <li><a class="dropdown-item" href="#three">три</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
           <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
             <h4 id="fat">@fat</h4>
-            <p>Placeholder content for the scrollspy example. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
+            <p>Контент-заполнитель для примера scrollspy. У вас лучшая архитектура. Марки в паспорте, она космополитична. Прекрасно, свежо, яростно, у нас все на замке. Никогда не планировал, что однажды потеряю тебя. Она съедает твое сердце. Ваш поцелуй космический, каждое движение волшебно. Я имею в виду тех, я имею в виду, как будто она единственная. Приветствую близких, давайте отправимся в путешествие. Просто наслаждайся ночью, как 4 июля! Но вы бы предпочли зря.</p>
             <h4 id="mdo">@mdo</h4>
-            <p>Placeholder content for the scrollspy example. 'Cause she's the muse and the artist. (This is how we do) So you wanna play with magic. So just be sure before you give it all to me. I'm walking, I'm walking on air (tonight). Skip the talk, heard it all, time to walk the walk.</p>
-            <h4 id="one">one</h4>
-            <p>Placeholder content for the scrollspy example. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
-            <h4 id="two">two</h4>
-            <p>Placeholder content for the scrollspy example. It's time to bring out the big balloons. I'm walking, I'm walking on air (tonight). Yeah, we maxed our credit cards and got kicked out of the bar. Yo, shout out to all you kids, buying bottle service, with your rent money. I'm ma get your heart racing in my skin-tight jeans. If you get the chance you better keep her. Yo, shout out to all you kids, buying bottle service, with your rent money.</p>
-            <h4 id="three">three</h4>
-            <p>Placeholder content for the scrollspy example. If you wanna dance, if you want it all, you know that I'm the girl that you should call. Walk through the storm I would. So let me get you in your birthday suit. The one that got away. Last Friday night, yeah I think we broke the law, always say we're gonna stop. 'Cause she's a little bit of Yoko, And she's a little bit of 'Oh no'. I want the jaw droppin', eye poppin', head turnin', body shockin'. Yeah, we maxed our credit cards and got kicked out of the bar.</p>
-            <p>And some more placeholder content, for good measure.</p>
+            <p>Контент-заполнитель для примера scrollspy. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать мне все. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться.</p>
+            <h4 id="one">один</h4>
+            <p>Контент-заполнитель для примера scrollspy. Уносит тебя на много миль, так высоко, потому что у нее такая интернациональная улыбка. В моей постели незнакомец, в голове стучит. О нет. В другой жизни я бы заставил тебя остаться. «Потому что я, я способен на все. Костюм для моей коронной битвы. Воровал у родителей спиртное и забирался на крышу. Тон, загар подходит и готов, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Думаю, я забыл, что у меня есть выбор.</p>
+            <h4 id="two">два</h4>
+            <p>Контент-заполнитель для примера scrollspy. Пришло время вывести большие воздушные шары. Я иду, я иду по воздуху (сегодня вечером). Да, мы максимально увеличили наши кредитные карты и нас выгнали из бара. Эй, кричите всем своим детям, покупайте бутылку на свои деньги за аренду. Я заставляю твое сердце биться быстрее в моих обтягивающих джинсах. Если будет возможность, лучше оставь ее себе. Эй, кричите всем вам, дети, покупайте услуги по продаже бутылок на свои деньги за аренду.</p>
+            <h4 id="three">три</h4>
+            <p>Контент-заполнитель для примера scrollspy. Если ты хочешь танцевать, если хочешь всего этого, ты знаешь, что я девушка, которой тебе следует позвонить. Я бы прошел сквозь шторм. Так что позволь мне надеть твой костюм на день рождения. Тот, который ускользнул. В прошлую пятницу вечером, да, я думаю, мы нарушили закон, всегда говорим, что остановимся. Потому что она немного от Йоко, и она немного от «О нет». Я хочу, чтобы челюсть отвисла, глаза выскочили, голова кружилась, тело шокировало. Да, мы максимально увеличили наши кредитные карты и нас выгнали из бара.</p>
+            <p>И еще кое-что для заполнителя.</p>
           </div>
         </div>
       </div>
@@ -1453,7 +1453,7 @@ body_class: "bg-light"
     <article class="my-3" id="spinners">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Spinners</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/spinners" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/spinners" >}}">Документация</a>
       </div>
 
       <div>
@@ -1461,7 +1461,7 @@ body_class: "bg-light"
         {{< spinner.inline >}}
         {{- range (index $.Site.Data "theme-colors") }}
         <div class="spinner-border text-{{ .name }}" role="status">
-          <span class="visually-hidden">Loading...</span>
+          <span class="visually-hidden">Загрузка...</span>
         </div>
         {{- end -}}
         {{< /spinner.inline >}}
@@ -1471,7 +1471,7 @@ body_class: "bg-light"
         {{< spinner.inline >}}
         {{- range (index $.Site.Data "theme-colors") }}
         <div class="spinner-grow text-{{ .name }}" role="status">
-          <span class="visually-hidden">Loading...</span>
+          <span class="visually-hidden">Загрузка...</span>
         </div>
         {{- end -}}
         {{< /spinner.inline >}}
@@ -1481,7 +1481,7 @@ body_class: "bg-light"
     <article class="my-3" id="toasts">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Toasts</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/toasts" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/toasts" >}}">Документация</a>
       </div>
 
       <div>
@@ -1490,11 +1490,11 @@ body_class: "bg-light"
           <div class="toast-header">
             {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
             <strong class="me-auto">Bootstrap</strong>
-            <small class="text-muted">11 mins ago</small>
+            <small class="text-muted">11 минут назад</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body">
-            Hello, world! This is a toast message.
+            Привет мир! Это тост-сообщение.
           </div>
         </div>
         {{< /example >}}
@@ -1503,16 +1503,16 @@ body_class: "bg-light"
     <article class="mt-3 mb-5 pb-5" id="tooltips">
       <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
         <h3>Tooltips</h3>
-        <a class="d-flex align-items-center" href="{{< docsref "/components/tooltips" >}}">Documentation</a>
+        <a class="d-flex align-items-center" href="{{< docsref "/components/tooltips" >}}">Документация</a>
       </div>
 
       <div>
         {{< example show_markup="false" class="tooltip-demo" >}}
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on end">Tooltip on end</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on start">Tooltip on start</button>
-        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Всплывающая подсказка вверху</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on end">Всплывающая подсказка в конце</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Всплывающая подсказка внизу</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on start">Всплывающая подсказка в начале</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Всплывающая подсказка с HTML</button>
         {{< /example >}}
       </div>
     </article>
@@ -1523,15 +1523,15 @@ body_class: "bg-light"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
   </div>
@@ -1540,15 +1540,15 @@ body_class: "bg-light"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLiveLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="staticBackdropLiveLabel">Заголовок модального окна</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-        <p>I will not close if you click outside me. Don't even try to press escape key.</p>
+        <p>Я не закроюсь, если ты щелкнешь вне меня. Даже не пытайтесь нажимать клавишу выхода.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Понял</button>
       </div>
     </div>
   </div>
@@ -1557,18 +1557,18 @@ body_class: "bg-light"
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-        <p>Placeholder text for this demonstration of a vertically centered modal dialog.</p>
-        <p>In this case, the dialog has a bit more content, just to show how vertical centering can be added to a scrollable modal.</p>
-        <p>What follows is just some placeholder text for this modal dialog. Sipping on Rosé, Silver Lake sun, coming up all lazy. It’s in the palm of your hand now baby. So we hit the boulevard. So make a wish, I'll make it like your birthday everyday. Do you ever feel already buried deep six feet under? It's time to bring out the big balloons. You could've been the greatest. Passport stamps, she's cosmopolitan. Your kiss is cosmic, every move is magic.</p>
-        <p>We're living the life. We're doing it right. Open up your heart. I was tryna hit it and quit it. Her love is like a drug. Always leaves a trail of stardust. The girl's a freak, she drive a jeep in Laguna Beach. Fine, fresh, fierce, we got it on lock. All my girls vintage Chanel baby.</p>
+        <p>Текст-заполнитель для демонстрации вертикально центрированного модального диалогового окна.</p>
+        <p>В этом случае в диалоговом окне немного больше содержимого, просто чтобы показать, как можно добавить вертикальное центрирование к прокручиваемому модальному окну.</p>
+        <p>Далее следует лишь текст-заполнитель для этого модального диалогового окна. Потягивая Розе, солнце Серебряного озера, лениво вставая. Теперь это у тебя на ладони, детка. Итак, мы вышли на бульвар. Так что загадывай желание, я сделаю это как твой день рождения каждый день. Вы когда-нибудь чувствовали себя похороненными на глубине шести футов? Пришло время вывести большие воздушные шары. Ты мог бы быть лучшим. Марки в паспорте, она космополитична. Ваш поцелуй космический, каждое движение волшебно.</p>
+        <p>Мы живем жизнью. Мы делаем это правильно. Откройте свое сердце. Я пытался ударить и бросить. Ее любовь подобна наркотику. Всегда оставляет за собой след звездной пыли. Девушка урод, она водит джип в Лагуна-Бич. Прекрасно, свежо, яростно, у нас все на замке. Все мои девочки винтажные Chanel baby.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
   </div>
@@ -1577,21 +1577,21 @@ body_class: "bg-light"
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Полноэкранный модальное окно</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-        <p>What follows is just some placeholder text for this modal dialog. I feel like I'm already there. I’m gon’ put her in a coma. Boom, boom, boom. You're reading me like erotica, boy, you make me feel exotic, yeah. Happy birthday. From Tokyo to Mexico, to Rio. I knew you were.</p>
-        <p>Last Friday night. Calling out my name. Kiss her, touch her, squeeze her buns. Heavy is the head that wears the crown. So open up your heart and just let it begin. Boy all this time was worth the waiting. You know that I'm the girl that you should call. End of the rainbow looking treasure. You're reading me like erotica, boy, you make me feel exotic, yeah. Do you know that there's still a chance for you 'Cause there's a spark in you? So I sat quietly, agreed politely. From Tokyo to Mexico, to Rio.</p>
-        <p>Don't be a shy kinda guy I'll bet it's beautiful. You fall asleep during foreplay, 'Cause the pills you take, are more your forte. Open up your heart. You're never gonna be unsatisfied. Know that you are worthy. This one goes out to the ladies at breakfast in last night's dress. You think you've seen her in a magazine. I should've told you what you meant to me 'Cause now I pay the price. Takes you miles high, so high, 'cause she’s got that one international smile.</p>
-        <p>Yo, shout out to all you kids, buying bottle service, with your rent money. So I sat quietly, agreed politely. They say, be afraid you're not like the others, futuristic lover. Boom, boom, boom. Don't need apologies. We can dance, until we die, you and I, will be young forever. If you choose to walk away, don’t walk away. You know that I'm the girl that you should call. This Friday night, do it all again.</p>
-        <p>I'm walking on air. But lil' mama so dope. It's time to bring out the big balloons. Are you ready for, ready for. The boys break their necks try'na to creep a little sneak peek. Summer after high school when we first met. If you want it all. (This is how we do) You open my eyes and I'm ready to go, lead me into the light.</p>
-        <p>Growing fast into a bolt of lightning. We freak in my jeep, Snoop Doggy Dogg on the stereo. Baby do you dare to do this? Open up your heart and just let it begin. Peach-pink lips, yeah, everybody stares. Be your teenage dream tonight. Are you brave enough to let me see your peacock? You think I'm funny when I tell the punchline wrong. Woo! I knew you were. All this money can't buy me a time machine. I can't sleep let's run away and don't ever look back, don't ever look back.</p>
-        <p>Make it like your birthday everyday. I'm not sticking around to watch you go down. Uh-huh, I see you. For you I'll risk it all, all. I’m gon’ put her in a coma. She ride me like a roller coaster. You hear my voice, you hear that sound. 'Cause I will love you unconditionally (oh yeah). They say, be afraid you're not like the others, futuristic lover. There is no fear now, let go and just be free, I will love you unconditionally.</p>
-        <p>We can dance, until we die, you and I, will be young forever. Pop your Pérignon. Last Friday night, yeah I think we broke the law, always say we're gonna stop. Don't need apologies. Give you something good to celebrate. But don’t make me your enemy, your enemy, your enemy. Flowers in her hair, she don't care. Tone, tan fit and ready, turn it up cause its gettin' heavy.</p>
+        <p>Далее следует просто текст-заполнитель для этого модального диалогового окна. Я чувствую, что уже там. Я собираюсь ввести ее в кому. Бум бум бум. Ты читаешь меня как эротику, мальчик, ты заставляешь меня чувствовать себя экзотикой, да. С Днем рожденья. Из Токио в Мексику, в Рио. Я знал, что ты был.</p>
+        <p>В прошлую пятницу вечером. Выкрикивая мое имя. Поцелуй ее, прикоснись к ней, сожми ее булочки. Тяжела голова, носящая корону. Так что откройте свое сердце и просто позвольте ему начаться. Мальчик все это время стоил ожидания. Ты знаешь, что я девушка, которой тебе следует позвонить. Конец радужного сокровища. Ты читаешь меня как эротику, мальчик, ты заставляешь меня чувствовать себя экзотикой, да. Вы знаете, что у вас все еще есть шанс, потому что в вас есть искра? Так что я тихонько сел, вежливо согласился. Из Токио в Мексику, в Рио.</p>
+        <p>Не будь застенчивым парнем, держу пари, это красиво. Вы засыпаете во время прелюдии, потому что таблетки, которые вы принимаете, - ваша сильная сторона. Откройте свое сердце. Ты никогда не останешься неудовлетворенным. Знай, что ты достоин. Этот идет к дамам за завтраком в вчерашнем платье. Вы думаете, что видели ее в журнале. Я должен был сказать тебе, что ты значишь для меня, Потому что теперь я плачу цену. Уносит тебя на много миль, так высоко, потому что у нее такая интернациональная улыбка.</p>
+        <p>Эй, кричите всем вам, дети, покупайте услуги по продаже бутылок на свои деньги за аренду. Так что я тихонько сел, вежливо согласился. Говорят, бойся, ты не такой, как другие, футуристический любовник. Бум бум бум. Не нужно извинений. Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Если вы решили уйти, не уходите. Ты знаешь, что я девушка, которой тебе следует позвонить. В эту пятницу вечером сделай все это снова.</p>
+        <p>Я хожу по воздуху. Но мама такая крутая. Пришло время вывести большие воздушные шары. Вы готовы, готовы к. Мальчики ломают себе шеи, пытаясь подкрасться немного подглядеть. Летом после школы, когда мы впервые встретились. Если хочешь всего этого. (Вот как мы это делаем) Вы открываете мне глаза, и я готов идти, ведите меня к свету.</p>
+        <p>Быстро превращаясь в молнию. Мы уроды в моем джипе, Снуп Догги Догг по стереосистеме. Детка, ты посмел сделать это? Откройте свое сердце и просто позвольте ему начаться. Персиково-розовые губы, да, все смотрят. Будь своей подростковой мечтой сегодня вечером. Вы достаточно храбры, чтобы позволить мне увидеть вашего павлина? Вы думаете, что я смешной, когда я неправильно говорю кульминацию. Ву! Я знал, что ты был. За все эти деньги мне не купить машину времени. Я не могу спать, давай убежим и никогда не оглядывайся назад, никогда не оглядывайся.</p>
+        <p>Сделайте это как свой день рождения каждый день. Я не буду стоять и смотреть, как ты падаешь. Угу, я тебя вижу. Ради тебя я рискну всем, всем. Я собираюсь ввести ее в кому. Она катается на мне, как на американских горках. Вы слышите мой голос, вы слышите этот звук. Потому что я буду любить тебя безоговорочно (о да). Говорят, бойся, ты не такой, как другие, футуристический любовник. Сейчас нет страха, отпусти и просто будь свободным, я буду любить тебя безоговорочно.</p>
+        <p>Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Поп свой Периньон. В прошлую пятницу вечером, да, я думаю, мы нарушили закон, всегда говорим, что остановимся. Не нужно извинений. Подарите вам что-нибудь хорошее на радость. Но не делай меня своим врагом, своим врагом, своим врагом. Цветы в волосах, ей все равно. Тон, загар подходит и готов, включите его, потому что он становится тяжелым.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
