@@ -7,25 +7,16 @@
     <loc>https://getbootstrap.su/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/cheatsheet/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/helpers/clearfix/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/customize/css-variables/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/features/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/utilities/flex/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/javascript/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/jumbotron/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/offcanvas/</loc>
@@ -46,9 +37,6 @@
     <loc>https://getbootstrap.su/docs/5.0/customize/sass/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.0/examples/sidebars/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/webpack/</loc>
   </url>
   <url>
@@ -56,6 +44,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/components/accordion/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/sidebars/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/getting-started/browsers-devices/</loc>
@@ -226,6 +217,9 @@
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-static/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/jumbotron/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/navbar-bottom/</loc>
   </url>
   <url>
@@ -322,6 +316,9 @@
     <loc>https://getbootstrap.su/docs/5.0/forms/overview/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/features/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.0/components/breadcrumb/</loc>
   </url>
   <url>
@@ -362,6 +359,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/examples/sign-in/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.0/examples/cheatsheet/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.0/forms/select/</loc>
