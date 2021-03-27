@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,8 +20,12 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build
-        run: hugo --minify
+        # run: hugo --minify
+        run: npm run docs-compile
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
