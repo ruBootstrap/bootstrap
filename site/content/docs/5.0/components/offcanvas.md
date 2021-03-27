@@ -1,101 +1,101 @@
 ---
 layout: docs
-title: Offcanvas
-description: Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.
+title: Вне холста
+description: Встраивайте в свой проект скрытые боковые панели для навигации, корзины покупок и многого другого с помощью нескольких классов и нашего плагина JavaScript.
 group: components
 toc: true
 ---
 
-## How it works
+## Как это работает
 
-Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and `data` attributes are used to invoke our JavaScript.
+Offcanvas - это компонент боковой панели, который можно переключить с помощью JavaScript, чтобы он отображался с левого, правого или нижнего края области просмотра. Кнопки или якоря используются в качестве триггеров, которые прикрепляются к определенным элементам, которые вы переключаете, а атрибуты data используются для вызова нашего JavaScript.
 
-- Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.
-- Similarly, some [source Sass](#sass) variables for offcanvas's styles and dimensions are inherited from the modal's variables.
-- When shown, offcanvas includes a default backdrop that can be clicked to hide the offcanvas.
-- Similar to modals, only one offcanvas can be shown at a time.
+- Offcanvas использует тот же код JavaScript, что и модальные окна. Концептуально они очень похожи, но представляют собой отдельные плагины.
+- Точно так же некоторые переменные [источник Sass](#sass) для стилей и размеров offcanvas наследуются от переменных модального окна.
+- При отображении offcanvas включает фон по умолчанию, на который можно щелкнуть, чтобы скрыть offcanvas.
+- Как и в модальных окнах, одновременно может отображаться только один неактивный холст.
 
-**Heads up!** Given how CSS handles animations, you cannot use `margin` or `translate` on an `.offcanvas` element. Instead, use the class as an independent wrapping element.
+**Внимание!** Учитывая, как CSS обрабатывает анимацию, Вы не можете использовать `margin` или `translate` в элементе `.offcanvas`. Вместо этого используйте класс как независимый элемент оболочки.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## Примеры
 
-### Offcanvas components
+### Компоненты Offcanvas
 
-Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
+Ниже приведен пример offcanvas, который отображается по умолчанию (через `.show` на `.offcanvas`). Offcanvas включает поддержку заголовка с кнопкой закрытия и дополнительный класс тела для некоторого начального заполнения. Мы рекомендуем по возможности включать заголовки offcanvas с действиями по отклонению или предоставлять явное действие по отклонению.
 
 {{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" data-bs-backdrop="false" data-bs-scroll="true">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
-    Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+    Здесь размещается контент для offcanvas. Вы можете разместить здесь практически любой компонент Bootstrap или пользовательские элементы.
   </div>
 </div>
 {{< /example >}}
 
-### Live demo
+### Живая демонстрация
 
-Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the `.show` class on an element with the `.offcanvas` class.
+Используйте кнопки ниже, чтобы отображать и скрывать элемент offcanvas с помощью JavaScript, который переключает класс `.show` на элемент с классом `.offcanvas`.
 
-- `.offcanvas` hides content (default)
-- `.offcanvas.show` shows content
+- `.offcanvas` скрывает содержимое (по умолчанию)
+- `.offcanvas.show` показывает содержимое
 
-You can use a link with the `href` attribute, or a button with the `data-bs-target` attribute. In both cases, the `data-bs-toggle="offcanvas"` is required.
+Вы можете использовать ссылку с атрибутом `href` или кнопку с атрибутом `data-bs-target`. В обоих случаях требуется `data-bs-toggle="offcanvas"`.
 
 {{< example >}}
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-  Link with href
+  Ссылка с помощью атрибута href
 </a>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
+  Кнопка с атрибутом data-bs-target
 </button>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Вне холста</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
     <div class="">
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      Какой-то текст в качестве заполнителя. В реальной жизни у вас могут быть элементы, которые Вы выбрали. Нравится, текст, изображения, списки и т. д.
     </div>
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-        Dropdown button
+        Кнопка раскрывающегося списка
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Действие</a></li>
+        <li><a class="dropdown-item" href="#">Другое действие</a></li>
+        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
       </ul>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Placement
+## Размещение
 
-There's no default placement for offcanvas components, so you must add one of the modifier classes below;
+Для компонентов вне холста нет размещения по умолчанию, поэтому Вы должны добавить один из классов модификаторов ниже;
 
-- `.offcanvas-start` places offcanvas on the left of the viewport (shown above)
-- `.offcanvas-end` places offcanvas on the right of the viewport
-- `.offcanvas-bottom` places offcanvas on the bottom of the viewport
+- `.offcanvas-start` помещает offcanvas слева от области просмотра (показано выше)
+- `.offcanvas-end` помещает offcanvas в правую часть области просмотра
+- `.offcanvas-bottom` помещает offcanvas в нижнюю часть области просмотра
 
-Try the right and bottom examples out below.
+Попробуйте правый и нижний примеры ниже.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Переключатель справа offcanvas</button>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 id="offcanvasRightLabel">Offcanvas справа</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
     ...
@@ -104,12 +104,12 @@ Try the right and bottom examples out below.
 {{< /example >}}
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Переключатель снизу offcanvas</button>
 
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas снизу</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body small">
     ...
@@ -117,28 +117,28 @@ Try the right and bottom examples out below.
 </div>
 {{< /example >}}
 
-## Backdrop
+## Фон
 
-Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-bs-scroll` attribute to toggle `<body>` scrolling and `data-bs-backdrop` to toggle the backdrop.
+Прокрутка элемента `<body>` отключена, когда видны вне холста и его фон. Используйте атрибут `data-bs-scroll` для переключения прокрутки `<body>` и `data-bs-backdrop` для переключения фона.
 
 {{< example >}}
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Включить прокрутку body</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Включить фон (по умолчанию)</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Включите прокрутку и фон</button>
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Цветной с прокруткой</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <p>Попробуйте прокрутить оставшуюся часть страницы, чтобы увидеть этот параметр в действии.</p>
   </div>
 </div>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas с фоном</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
     <p>.....</p>
@@ -146,18 +146,18 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
 </div>
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">На фоне с прокруткой</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <p>Попробуйте прокрутить оставшуюся часть страницы, чтобы увидеть этот параметр в действии.</p>
   </div>
 </div>
 {{< /example >}}
 
-## Accessibility
+## Доступность
 
-Since the offcanvas panel is conceptually a modal dialog, be sure to add `aria-labelledby="..."`—referencing the offcanvas title—to `.offcanvas`. Note that you don’t need to add `role="dialog"` since we already add it via JavaScript.
+Так как панель offcanvas концептуально является модальным диалогом, не забудьте добавить `aria-labelledby="..."`—ссылку на заголовок offcanvas - в `.offcanvas`. Обратите внимание, что Вам не нужно добавлять `role="dialog"`, поскольку мы уже добавляем его через JavaScript.
 
 ## Sass
 
@@ -165,25 +165,25 @@ Since the offcanvas panel is conceptually a modal dialog, be sure to add `aria-l
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## Использование
 
-The offcanvas plugin utilizes a few classes and attributes to handle the heavy lifting:
+Плагин offcanvas использует несколько классов и атрибутов для выполнения тяжелой работы:
 
-- `.offcanvas` hides the content
-- `.offcanvas.show` shows the content
-- `.offcanvas-start` hides the offcanvas on the left
-- `.offcanvas-end` hides the offcanvas on the right
-- `.offcanvas-bottom` hides the offcanvas on the bottom
+- `.offcanvas` скрывает содержимое
+- `.offcanvas.show` показывает содержимое
+- `.offcanvas-start` скрывает offcanvas слева
+- `.offcanvas-end` скрывает offcanvas справа
+- `.offcanvas-bottom` скрывает offcanvas внизу
 
-Add a dismiss button with the `data-bs-dismiss="offcanvas"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
+Добавьте кнопку отклонения с атрибутом `data-bs-dismiss="offcanvas"`, который запускает функциональность JavaScript. Обязательно используйте с ним элемент `<button>` для правильного поведения на всех устройствах.
 
-### Via data attributes
+### Через атрибуты данных
 
-Add `data-bs-toggle="offcanvas"` and a `data-bs-target` or `href` to the element to automatically assign control of one offcanvas element. The `data-bs-target` attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class `offcanvas` to the offcanvas element. If you'd like it to default open, add the additional class `show`.
+Добавьте к элементу `data-bs-toggle="offcanvas"` и `data-bs-target` или `href`, чтобы автоматически назначить управление одним элементом вне холста. Атрибут `data-bs-target` принимает CSS-селектор для применения offcanvas. Не забудьте добавить класс `offcanvas` к элементу offcanvas. Если Вы хотите, чтобы он был открыт по умолчанию, добавьте дополнительный класс `show`.
 
-### Via JavaScript
+### Через JavaScript
 
-Enable manually with:
+Включить вручную с помощью:
 
 ```js
 var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
@@ -192,27 +192,27 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 })
 ```
 
-### Options
+### Опции
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-backdrop=""`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-backdrop=""`.
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| Название | Тип | По умолчанию | Описание |
 | --- | --- | --- | --- |
-| `backdrop` | boolean | `true` | Apply a backdrop on body while offcanvas is open |
-| `keyboard` | boolean | `true` | Closes the offcanvas when escape key is pressed |
-| `scroll` | boolean | `false` | Allow body scrolling while offcanvas is open |
+| `backdrop` | boolean | `true` | Нанесите фон на тело, пока не открыт холст |
+| `keyboard` | boolean | `true` | Закрывает offcanvas при нажатии клавиши выхода |
+| `scroll` | boolean | `false` | Разрешить прокрутку тела при открытом вне холста |
 {{< /bs-table >}}
 
-### Methods
+### Методы
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-Activates your content as an offcanvas element. Accepts an optional options `object`.
+Активирует Ваш контент как элемент вне холста. Принимает необязательные параметры `object`.
 
-You can create an offcanvas instance with the constructor, for example:
+Вы можете создать экземпляр offcanvas с помощью конструктора, например:
 
 ```js
 var myOffcanvas = document.getElementById('myOffcanvas')
@@ -220,30 +220,30 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 ```
 
 {{< bs-table "table" >}}
-| Method | Description |
+| Метод | Описание |
 | --- | --- |
-| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
-| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs).|
-| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs).|
-| `_getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element |
+| `toggle` | Переключает элемент вне холста на показанный или скрытый. **Возврат к вызывающей стороне до того, как элемент offcanvas был фактически показан или скрыт** (то есть до того, как произойдет событие `shown.bs.offcanvas` или `hidden.bs.offcanvas`). |
+| `show` | Показывает элемент вне холста. **Возврат к вызывающей стороне до того, как элемент offcanvas был фактически показан** (т.е. до того, как произойдет событие `shown.bs.offcanvas`).|
+| `hide` | Скрывает элемент вне холста. **Возврат к вызывающей стороне до того, как элемент offcanvas был фактически скрыт** (т.е. до того, как произойдет событие `hidden.bs.offcanvas`).|
+| `_getInstance` | *Статический* метод, который позволяет Вам получить экземпляр offcanvas, связанный с элементом DOM. |
 {{< /bs-table >}}
 
-### Events
+### События
 
-Bootstrap's offcanvas class exposes a few events for hooking into offcanvas functionality.
+Класс offcanvas в Bootstrap предоставляет несколько событий для подключения к функциональности offcanvas.
 
 {{< bs-table "table" >}}
-| Event type | Description |
+| Тип события | Описание |
 | --- | --- |
-| `show.bs.offcanvas` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
-| `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
+| `show.bs.offcanvas` | Это событие срабатывает немедленно, когда вызывается метод экземпляра `show`. |
+| `shown.bs.offcanvas` | Это событие запускается, когда элемент offcanvas стал видимым для пользователя (будет ждать завершения переходов CSS). |
+| `hide.bs.offcanvas` | Это событие запускается сразу после вызова метода `hide`. |
+| `hidden.bs.offcanvas` | Это событие запускается, когда элемент offcanvas был скрыт от пользователя (будет ждать завершения переходов CSS). |
 {{< /bs-table >}}
 
 ```js
 var myOffcanvas = document.getElementById('myOffcanvas')
 myOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
-  // do something...
+  // сделай что-нибудь...
 })
 ```
