@@ -9,7 +9,10 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo_ru_bootstrap }}/blob/main-ru/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+          <div class="btn-group btn-group-sm" role="group" aria-label="">
+            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.original_url }}{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}" title="" target="_blank" rel="noopener">Оригинал</a>
+            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo_ru_bootstrap }}/blob/main-ru/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+          </div>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
