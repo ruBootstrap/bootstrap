@@ -66,315 +66,315 @@ toc: true
   - `visibility()`
   - `form-control-focus()`
 
-- <span class="badge bg-danger">Breaking</span> Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+- <span class="badge bg-danger">Breaking</span> Функция `scale-color()` переименована в `shift-color()`, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.
 
-- `box-shadow` mixins now allow `null` values and drop `none` from multiple arguments. [Смотрите #30394](https://github.com/twbs/bootstrap/pull/30394).
+- Примеси `box-shadow` теперь допускают `null` значения и отбрасывают `none` из нескольких аргументов. [Смотрите #30394](https://github.com/twbs/bootstrap/pull/30394).
 
-- The `border-radius()` mixin now has a default value.
+- Примесь `border-radius()` теперь имеет значение по умолчанию.
 
-## Color system
+## Цветовая система
 
-- The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `shift-color()` will either tint or shade a color depending on whether its weight parameter is positive or negative. [Смотрите #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
+- Цветовая система, которая работала с `color-level()` и `$theme-color-interval`, была удалена в пользу новой цветовой системы. Все функции `lighten()` и `darken()` в нашей кодовой базе заменены на `tint-color()` и `shade-color()`. Эти функции будут смешивать цвет с белым или черным вместо изменения его яркости на фиксированную величину. `shift-color()` будет либо подкрашивать, либо затенять цвет в зависимости от того, является ли его параметр веса положительным или отрицательным. [Смотрите #30622](https://github.com/twbs/bootstrap/pull/30622) для получения дополнительных сведений.
 
-- Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.
+- Добавлены новые оттенки и оттенки для каждого цвета, предоставляя девять отдельных цветов для каждого основного цвета в качестве новых переменных Sass.
 
-- Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.1 AA contrast. Also changed our color contrast color from `$gray-900` to `$black`.
+- Улучшен цветовой контраст. Коэффициент цветовой контрастности увеличен с 3:1 до 4.5:1 и обновлены синий, зеленый, голубой и розовый цвета, чтобы обеспечить контраст WCAG 2.1 AA. Также изменен цвет нашего цветового контраста с `$gray-900` на `$black`.
 
-- To support our color system, we've added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
+- Для поддержки нашей цветовой системы мы добавили новые пользовательские функции `tint-color()` и `shade-color()` для правильного смешивания цвето.
 
-## Grid updates
+## Обновления сетки
 
-- **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
+- **Новая контрольная точка!** Добавлена новая контрольная точка `xxl` для `1400px` и выше. Никаких изменений для всех остальных контрольных точек.
 
-- **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system's gutters with our spacing utilities.
-  - Added new [gutter class](https://getbootstrap.su/docs/5.0/layout/gutters/) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
-  - <span class="badge bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
+- **Улучшенные промежутки.** Промежутки теперь устанавливаются в ремах, и они уже, чем v4 (`1.5rem`, или примерно `24px`, по сравнению с `30px`). Это выравнивает промежутки нашей сеточной системы с нашими утилитами интервала.
+  - Добавлен новый [класс gutter](https://getbootstrap.su/docs/5.0/layout/gutters/) (`.g-*`, `.gx-*` и `.gy-*`) для управления горизонтальным / вертикальные промежутки, горизонтальные промежутки и вертикальные промежутки.
+  - <span class="badge bg-danger">Breaking</span> `.no-gutters` переименован в `.g-0`, чтобы соответствовать новым утилитам промежутков.
 
-- Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
+- К столбцам больше не применяется `position: relative`, поэтому вам, возможно, придется добавить `.position-relative` к некоторым элементам, чтобы восстановить это поведение.
 
-- <span class="badge bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
+- <span class="badge bg-danger">Breaking</span> Удалили несколько классов `.order-*`, которые часто не использовались. Теперь из коробки мы предоставляем только от `.order-1` до `.order-5`.
 
-- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [Смотрите #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
+- <span class="badge bg-danger">Breaking</span> Отказ от компонента `.media`, так как его можно легко воспроизвести с помощью утилит. [Смотрите #28265](https://github.com/twbs/bootstrap/pull/28265) и [страница гибких утилит для примера]({{< docsref "/utilities/flex#media-object" >}}).
 
-- <span class="badge bg-danger">Breaking</span> `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
+- <span class="badge bg-danger">Breaking</span> `bootstrap-grid.css` теперь применяет к столбцу только `box-sizing: border-box` вместо сброса глобального размера поля. Таким образом, наши стили сетки можно использовать в большем количестве мест без помех.
 
-- `$enable-grid-classes` no longer disables the generation of container classes anymore. [Смотрите #29146.](https://github.com/twbs/bootstrap/pull/29146)
+- `$enable-grid-classes` больше не отключает создание контейнерных классов. [Смотрите #29146.](https://github.com/twbs/bootstrap/pull/29146)
 
-- Updated the `make-col` mixin to default to equal columns without a specified size.
+- Обновлен миксин `make-col` по умолчанию для равных столбцов без указанного размера.
 
-## Content, Reboot, etc
+## Контент, перезагрузка и т. д.
 
-- **[RFS]({{< docsref "/getting-started/rfs" >}}) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
+- **[RFS]({{< docsref "/getting-started/rfs" >}}) теперь включен по умолчанию.** Заголовки, использующие миксин `font-size()`, автоматически изменят свой `font-size` масштабировать вместе с окном просмотра. _Эта функция ранее была включена в v4._
 
-- <span class="badge bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
+- <span class="badge bg-danger">Breaking</span> Переработана типография дисплея, заменив переменные `$display-*` на карту Sass `$display-font-sizes`. Также удалены отдельные переменные `$display-*-weight` для одного `$display-font-weight` и скорректированы `font-size`s.
 
-- Added two new `.display-*` heading sizes, `.display-5` and `.display-6`.
+- Добавлены два новых размера заголовков `.display-*`, `.display-5` и `.display-6`.
 
-- **Links are underlined by default** (not just on hover), unless they're part of specific components.
+- **Ссылки по умолчанию подчеркнуты** (не только при наведении курсора), если они не являются частью определенных компонентов.
 
-- **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
+- **Переработанные таблицы**, чтобы обновить их стили и перестроить их с помощью переменных CSS для большего контроля над стилями.
 
-- <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
+- <span class="badge bg-danger">Breaking</span> Вложенные таблицы больше не наследуют стили.
 
-- <span class="badge bg-danger">Breaking</span> `.thead-light` and `.thead-dark` are dropped in favor of the `.table-*` variant classes which can be used for all table elements (`thead`, `tbody`, `tfoot`, `tr`, `th` and `td`).
+- <span class="badge bg-danger">Breaking</span> `.thead-light` и `.thead-dark` удаляются в пользу классов-вариантов `.table-*`, которые могут использоваться для всех элементов таблицы (`thead`, `tbody`, `tfoot`, `tr`, `th` и `td`).
 
-- <span class="badge bg-danger">Breaking</span> The `table-row-variant()` mixin is renamed to `table-variant()` and accepts only 2 parameters: `$color` (colon name) and `$value` (color code). The border color and accent colors are automatically calculated based on the table factor variables.
+- <span class="badge bg-danger">Breaking</span> Примесь `table-row-variant()` переименована в `table-variant()` и принимает только 2 параметра: `$color` (имя двоеточия) и `$value` (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.
 
-- Split table cell padding variables into `-y` and `-x`.
+- Разделены переменные заполнения ячеек таблицы на `-y` и `-x`.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.pre-scrollable` class. [Смотрите #29135](https://github.com/twbs/bootstrap/pull/29135)
+- <span class="badge bg-danger">Breaking</span> Удален класс `.pre-scrollable`. [Смотрите #29135](https://github.com/twbs/bootstrap/pull/29135)
 
-- <span class="badge bg-danger">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [Смотрите #29267](https://github.com/twbs/bootstrap/pull/29267)
+- <span class="badge bg-danger">Breaking</span> Утилиты `.text-*` больше не добавляют к ссылкам состояния наведения и фокуса. Вместо этого можно использовать вспомогательные классы `.link-*`. [Смотрите #29267](https://github.com/twbs/bootstrap/pull/29267)
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.text-justify` class. [Смотрите #29793](https://github.com/twbs/bootstrap/pull/29793)
+- <span class="badge bg-danger">Breaking</span> Удален класс `.text-justify`. [Смотрите #29793](https://github.com/twbs/bootstrap/pull/29793)
 
-- Reset default horizontal `padding-left` on `<ul>` and `<ol>` elements from browser default `40px` to `2rem`.
+- Сброшен по умолчанию горизонтальный `padding-left` для элементов `<ul>` и `<ol>` с `40px` по умолчанию браузера на `2rem`.
 
-- Added `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [Смотрите #31877](https://github.com/twbs/bootstrap/pull/31877)
+- Добавлен `$enable-smooth-scroll`, который применяет `scroll-behavior: smooth` глобально, за исключением пользователей, запрашивающих уменьшение движения с помощью медиа-запроса `prefers-reduced-motion`. [Смотрите #31877](https://github.com/twbs/bootstrap/pull/31877)
 
 ## RTL
 
-- Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., `start` and `end` in lieu of `left` and `right`.
+- Переменные, утилиты и миксины, зависящие от горизонтального направления, были переименованы для использования логических свойств, подобных тем, которые присутствуют в макетах flexbox, например, `start` и `end` вместо `left` и `right`.
 
-## Forms
+## Формы
 
-- **Added new floating forms!** We've promoted the Floating labels example to fully supported form components. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
+- **Добавлены новые плавающие формы!** Мы продвинули пример с плавающими метками до полностью поддерживаемых компонентов формы. [Смотрите новую страницу «Плавающие метки».]({{< docsref "/forms/floating-labels" >}})
 
-- <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
-  - `.custom-check` is now `.form-check`.
-  - `.custom-check.custom-switch` is now `.form-check.form-switch`.
-  - `.custom-select` is now `.form-select`.
-  - `.custom-file` and `.form-file` have been replaced by custom styles on top of `.form-control`.
-  - `.custom-range` is now `.form-range`.
-  - Dropped native `.form-control-file` and `.form-control-range`.
+- <span class="badge bg-danger">Breaking</span> **Объединенные собственные и настраиваемые элементы формы.** Флажки, радио, выборки и другие входные данные, которые имели собственные и настраиваемые классы в версии 4, были объединены. Теперь почти все наши элементы формы полностью настраиваемые, для большинства из них не требуется настраиваемый HTML.
+  - `.custom-check` теперь называется `.form-check`.
+  - `.custom-check.custom-switch` теперь называется `.form-check.form-switch`.
+  - `.custom-select` теперь называется `.form-select`.
+  - `.custom-file` и `.form-file` были заменены пользовательскими стилями поверх `.form-control`.
+  - `.custom-range` теперь называется `.form-range`.
+  - Удалены нативные `.form-control-file` и `.form-control-range`.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.input-group-append` and `.input-group-prepend`. You can now just add buttons and `.input-group-text` as direct children of the input groups.
+- <span class="badge bg-danger">Breaking</span> Удалены `.input-group-append` и `.input-group-prepend`. Теперь вы можете просто добавить кнопки и `.input-group-text` в качестве прямых потомков групп ввода.
 
-- The longstanding [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) is finally fixed by adding an additional `.has-validation` class to input groups with validation.
+- Давний [Отсутствующий радиус границы в группе ввода с ошибкой обратной связи с проверкой](https://github.com/twbs/bootstrap/issues/25110), наконец, исправлен путем добавления дополнительного класса `.has-validation` во входные группы с проверкой.
 
-- <span class="badge bg-danger">Breaking</span> **Dropped form-specific layout classes for our grid system.** Use our grid and utilities instead of `.form-group`, `.form-row`, or `.form-inline`.
+- <span class="badge bg-danger">Breaking</span> **Исключены классы макета, специфичные для формы, для нашей системы сеток.** Используйте нашу сетку и утилиты вместо `.form-group`, `.form-row` или `.form-inline`.
 
-- <span class="badge bg-danger">Breaking</span> Form labels now require `.form-label`.
+- <span class="badge bg-danger">Breaking</span> Метки форм теперь требуют `.form-label`.
 
-- <span class="badge bg-danger">Breaking</span> `.form-text` no longer sets `display`, allowing you to create inline or block help text as you wish just by changing the HTML element.
+- <span class="badge bg-danger">Breaking</span> `.form-text` больше не устанавливает `display`, позволяя вам создавать встроенный или блокировать текст справки по вашему желанию, просто изменяя элемент HTML.
 
-- Validation icons are no longer applied to `<select>`s with `multiple`.
+- Иконки валидации больше не применяются к элементам `<select>` с параметром `multiple`.
 
-- Rearranged source Sass files under `scss/forms/`, including input group styles.
+- Переставлены исходные файлы Sass в `scss/forms/`, включая стили группы ввода.
 
 <hr class="my-5">
 
-## Components
+## Компоненты
 
-- Unified `padding` values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our `$spacer` variable. [Смотрите #30564](https://github.com/twbs/bootstrap/pull/30564).
+- Унифицированные значения `padding` для предупреждений, хлебных крошек, карточек, раскрывающихся списков, групп списков, модальных окон, всплывающих окон и всплывающих подсказок должны основываться на нашей переменной `$spacer`. [Смотрите #30564](https://github.com/twbs/bootstrap/pull/30564).
 
-### Accordion
+### Аккордеон
 
-- Added [new accordion component]({{< docsref "/components/accordion" >}}!
+- Добавлен [новый компонент аккордеона]({{< docsref "/components/accordion" >}}!
 
-### Alerts
+### Оповещения
 
-- Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
+- В оповещениях теперь есть [примеры с иконками]({{< docsref "/components/alerts#icons" >}}).
 
-- Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
+- Удалены пользовательские стили для `<hr>` в каждом оповещении, поскольку они уже используют `currentColor`.
 
-### Badges
+### Значки
 
-- <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
+- <span class="badge bg-danger">Breaking</span> Удалены все классы цвета `.badge-*` для фоновых утилит (например, используйте `.bg-primary` вместо `.badge-primary`).
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.badge-pill`—use the `.rounded-pill` utility instead.
+- <span class="badge bg-danger">Breaking</span> Удалено `.badge-pill`используйте вместо нее утилиту `.rounded-pill`.
 
-- <span class="badge bg-danger">Breaking</span> Removed hover and focus styles for `<a>` and `<button>` elements.
+- <span class="badge bg-danger">Breaking</span> Удалены стили наведения и фокуса для элементов `<a>` и `<button>`.
 
-- Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
+- Увеличено заполнение по умолчанию для значков с `.25em`/`.5em` до `.35em`/`.65em`.
 
-### Breadcrumbs
+### Хлебные крошки
 
-- Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
+- Упрощен внешний вид хлебных крошек по умолчанию, удалив `padding`, `background-color` и `border-radius`.
 
-- Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
+- Добавлено новое настраиваемое свойство CSS `--bs-breadcrumb-divider` для легкой настройки без перекомпиляции CSS.
 
-### Buttons
+### Кнопки
 
-- <span class="badge bg-danger">Breaking</span> **[Toggle buttons](http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no long require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [Смотрите #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
+- <span class="badge bg-danger">Breaking</span> **[Кнопки переключения](http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons), с флажками или радио, больше не требуют JavaScript и имеют новую разметку.** Нам больше не нужен элемент-оболочка, добавьте `.btn-check` в `<input>`, и соедините его с любым `.btn` классы на `<label>`. [Смотрите #30650](https://github.com/twbs/bootstrap/pull/30650). _Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы»._
 
-- <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons)
+- <span class="badge bg-danger">Breaking</span> **Удалено `.btn-block` для утилит.** Вместо использования `.btn-block` в `.btn`, оберните ваши кнопки в `.d-grid` и утилитой `.gap-*` для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. [Прочтите документацию для некоторых примеров.](http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons)
 
-- Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
+- Обновлены миксины `button-variant()` и `button-outline-variant()` для поддержки дополнительных параметров.
 
-- Updated buttons to ensure increased contrast on hover and active states.
+- Обновлены кнопки для увеличения контраста при наведении и активном состоянии.
 
-- Disabled buttons now have `pointer-events: none;`.
+- Отключенные кнопки теперь имеют `pointer-events: none;`.
 
-### Card
+### Карточка
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
+- <span class="badge bg-danger">Breaking</span> Отказались от `.card-deck` в пользу нашей сетки. Оберните ваши карты в классы колонок и добавьте родительский контейнер `.row-cols-*`, чтобы воссоздать колоды карт (но с большим контролем над выравниванием).
 
-- <span class="badge bg-danger">Breaking</span> Dropped `.card-columns` in favor of Masonry. [Смотрите #28922](https://github.com/twbs/bootstrap/pull/28922).
+- <span class="badge bg-danger">Breaking</span> Отказались от `.card-columns` в пользу Masonry. [Смотрите #28922](https://github.com/twbs/bootstrap/pull/28922).
 
-- <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
+- <span class="badge bg-danger">Breaking</span> Заменен аккордеон на основе `.card` на [новый компонент Accordion]({{< docsref "/components/accordion" >}}).
 
-### Carousel
+### Карусель
 
-- Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
+- Добавлен новый [вариант `.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}}) для темного текста, элементов управления и индикаторов (отлично подходит для более светлого фона).
 
-- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({{< param "icons" >}}).
+- Шевронные иконки для элементов управления каруселью заменены новыми SVG из [Bootstrap Icons]({{< param "icons" >}}).
 
-### Close buttton
+### Кнопка закрытия
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
+- <span class="badge bg-danger">Breaking</span> `.close` переименован в `.btn-close` для менее общего названия.
 
-- Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
+- Кнопки закрытия теперь используют `background-image` (встроенный SVG) вместо `&times;` в HTML, что позволяет упростить настройку без необходимости касаться вашей разметки.
 
-- Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
+- Добавлен новый вариант `.btn-close-white`, который использует `filter: invert(1)` для включения более контрастных иконок удаления на более темном фоне.
 
-### Collapse
+### Сворачиваемое
 
-- Removed scroll anchoring for accordions.
+- Убрана привязка скролла для аккордеонов.
 
-### Dropdowns
+### Выпадающие списки
 
-- Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
+- Добавлен новый вариант `.dropdown-menu-dark` и связанные переменные для темных выпадающих списков по запросу.
 
-- Added new variable for `$dropdown-padding-x`.
+- Добавлена новая переменная для `$dropdown-padding-x`.
 
-- Darkened the dropdown divider for improved contrast.
+- Затемнен разделитель раскрывающегося списка для улучшения контраста.
 
-- <span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
+- <span class="badge bg-danger">Breaking</span> Все события для раскрывающегося списка теперь запускаются на кнопке-переключателе раскрывающегося списка, а затем всплывают до родительского элемента.
 
-- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static and `data-bs-popper="none"` when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
+- Выпадающие меню теперь имеют атрибут `data-bs-popper="static"`, установленный, когда положение раскрывающегося списка является статическим, и `data-bs-popper="none"`, когда раскрывающийся список находится на панели навигации. Это добавлено нашим JavaScript и помогает нам использовать настраиваемые стили положения, не мешая позиционированию Popper.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
+- <span class="badge bg-danger">Breaking</span> Исключена опция `flip` для плагина раскрывающегося списка в пользу собственной конфигурации Popper. Теперь вы можете отключить поведение переворачивания, передав пустой массив для параметра [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) в [flip](https://popper.js.org/docs/v2/modifiers/flip/) модификатор.
 
-- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+- На раскрывающиеся меню теперь можно щелкнуть с помощью новой опции `autoClose` для обработки [поведения автоматического закрытия]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). Вы можете использовать этот параметр, чтобы принять щелчок внутри или за пределами раскрывающегося меню, чтобы сделать его интерактивным.
 
-- Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
+- Выпадающие списки теперь поддерживают `.dropdown-item`, заключенные в `<li>`.
 
-### Jumbotron
+### Джамботрон
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](https://getbootstrap.su/docs/5.0/examples/jumbotron/)
+- <span class="badge bg-danger">Breaking</span> Убрали компонент jumbotron, так как его можно повторить с помощью утилит. [Смотрите наш новый пример Jumbotron для демонстрации.](https://getbootstrap.su/docs/5.0/examples/jumbotron/)
 
-### List group
+### Группа списка
 
-- Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
+- Добавлен новый [модификатор `.list-group-numbered`]({{< docsref "/components/list-group#numbered" >}}) в список групп.
 
-### Navs and tabs
+### Навигация и табы
 
-- Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
+- Добавлены новые переменные `null` для `font-size`, `font-weight`, `color` и `:hover` `color` в класс `.nav-link`.
 
-### Navbars
+### Панели навигации
 
-- <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
+- <span class="badge bg-danger">Breaking</span> Навбарам теперь требуется контейнер внутри (чтобы значительно упростить требования к интервалам и CSS).
 
 ### Offcanvas
 
-- Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
+- Добавлен новый [компонент offcanvas]({{< docsref "/components/offcanvas" >}}).
 
-### Pagination
+### Пагинация
 
-- Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
+- Ссылки на страницы теперь имеют настраиваемое поле `margin-left`, которое динамически округляется по всем углам, когда они отделены друг от друга.
 
-- Added `transition`s to pagination links.
+- Добавлен переход `transition` по ссылкам для пагинации.
 
-### Popovers
+### Поповеры
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
+- <span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающего окна по умолчанию `.arrow` переименован в `.popover-arrow`.
 
-- Renamed `whiteList` option to `allowList`.
+- Параметр `whiteList` переименован в `allowList`.
 
-### Spinners
+### Спиннеры
 
-- Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [Смотрите #31882](https://github.com/twbs/bootstrap/pull/31882).
+- Спиннеры теперь учитывают `prefers-reduced-motion: reduce`, замедляя анимацию. [Смотрите #31882](https://github.com/twbs/bootstrap/pull/31882).
 
-- Improved spinner vertical alignment.
+- Улучшено вертикальное выравнивание спиннера.
 
-### Toasts
+### Тосты
 
-- Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
+- Теперь тосты можно [позиционировать]({{< docsref "/components/toasts#placement" >}}) в `.toast-container` с помощью [утилит позиционирования]({{< docsref "/utilities/position" >}}).
 
-- Changed default toast duration to 5 seconds.
+- Изменена длительность тоста по умолчанию на 5 секунд.
 
-- Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
+- Удалено `overflow: hidden` из тостов и заменено правильным `border-radius` с функциями `calc()`.
 
-### Tooltips
+### Тултипы
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
+- <span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающей подсказки по умолчанию `.arrow` переименован в `.tooltip-arrow`.
 
-- <span class="badge bg-danger">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+- <span class="badge bg-danger">Breaking</span> Значение по умолчанию для `fallbackPlacements` изменено на `['top', 'right', 'bottom', 'left']` для лучшего размещения элементов.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
+- <span class="badge bg-danger">Breaking</span> Параметр `whiteList` переименован в `allowList`.
 
-## Utilities
+## Утилиты
 
-- <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directoinal names with the addition of RTL support:
-  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
-  - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
-  - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
-  - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
-  - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
-  - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-  - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+- <span class="badge bg-danger">Breaking</span> Переименовано несколько утилит для использования логических имен свойств вместо прямых имен с добавлением поддержки RTL:
+  - Переименованы `.left-*` и `.right-*` в `.start-*` и `.end-*`.
+  - Переименованы `.float-left` и `.float-right` в `.float-start` и `.float-end`.
+  - Переименованы `.border-left` и `.border-right` в `.border-start` и `.border-end`.
+  - Переименованы `.rounded-left` и `.rounded-right` в `.rounded-start` и `.rounded-end`.
+  - Переименованы `.ml-*` и `.mr-*` в `.ms-*` и `.me-*`.
+  - Переименованы `.pl-*` и `.pr-*` в `.ps-*` и `.pe-*`.
+  - Переименованы `.text-left` и `.text-right` в `.text-start` и `.text-end`.
 
-- <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
+- <span class="badge bg-danger">Breaking</span> По умолчанию отрицательные поля отключены.
 
-- Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
+- Добавлен новый класс `.bg-body` для быстрой установки фона `<body>` для дополнительных элементов.
 
-- Added new [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+- Добавлены новые [утилиты позиционирования]({{< docsref "/utilities/position#arrange-elements" >}}) для `top`, `right`, `bottom` и `left`. Значения для каждого свойства включают `0`, `50%` и `100%`.
 
-- Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
+- Добавлены новые утилиты `.translate-middle-x` и `.translate-middle-y` для горизонтального или вертикального центрирования абсолютных / фиксированных элементов.
 
-- Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
+- Добавлены новые [утилиты `border-width`]({{< docsref "/utilities/borders#border-width" >}}).
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+- <span class="badge bg-danger">Breaking</span> `.text-monospace` переименован в `.font-monospace`.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
+- <span class="badge bg-danger">Breaking</span> Удален `.text-hide`, так как это устаревший метод скрытия текста, который больше не следует использовать.
 
-- Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
+- Добавлены утилиты `.fs-*` для утилит `font-size` (с включенным RFS). Они используют тот же масштаб, что и заголовки HTML по умолчанию (1-6, от большого к маленькому), и могут быть изменены с помощью карты Sass.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Утилиты `.font-weight-*` переименованы в `.fw-*` для краткости и единообразия.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Утилиты `.font-style-*` переименованы в `.fst-*` для краткости и единообразия.
 
-- Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
+- Добавлен `.d-grid` для отображения утилит и новые утилиты `gap` (`.gap`) для макетов CSS Grid и flexbox.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [Смотрите #31687](https://github.com/twbs/bootstrap/pull/31687).
+- <span class="badge bg-danger">Breaking</span> Удалены `.rounded-sm` и `rounded-lg`, а также введена новая шкала классов от `.rounded-0` до `.rounded-3`. [Смотрите #31687](https://github.com/twbs/bootstrap/pull/31687).
 
-- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
+- Добавлены новые утилиты `line-height`: `.lh-1`, `.lh-sm`, `.lh-base` и `.lh-lg`. Смотреть [здесь]({{< docsref "/utilities/text#line-height" >}}).
 
-- Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
+- Утилита `.d-none` в нашем CSS перемещена, чтобы придать ей больший вес по сравнению с другими утилитами отображения.
 
-- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
+- Расширен помощник `.visually-hidden-focusable`, чтобы он также работал с контейнерами, используя `:focus-within`.
 
-## Helpers
+## Помощники
 
-- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
-  - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
-  - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
-  - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
+- <span class="badge bg-danger">Breaking</span> **Адаптивные помощники по внедрению были переименованы в [ratio helpers]({{< docsref "/helpers/ratio" >}})** с новыми именами классов и улучшенным поведением, а также полезной переменной CSS.
+  - Классы были переименованы, чтобы изменить соотношение сторон `by` на `x`. Например, `.ratio-16by9` теперь `.ratio-16x9`.
+  - Мы отказались от селектора `.embed-responsive-item` и группы элементов в пользу более простого селектора `.ratio > *`. Класс больше не нужен, и помощник по соотношению теперь работает с любым элементом HTML.
+  - Карта Sass `$embed-responsive-aspect-ratios` была переименована в `$aspect-ratios`, а ее значения были упрощены и теперь включают имя класса и процентное соотношение в качестве пары `key: value`.
+  - Переменные CSS теперь генерируются и включаются для каждого значения в карте Sass. Измените переменную `--bs-aspect-ratio` в `.ratio`, чтобы создать любое [настраиваемое соотношение сторон]({{< docsref "/helpers/ratio#custom-ratios" >}}).
 
-- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
-  - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
-  - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
-  - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
+- <span class="badge bg-danger">Breaking</span> **Классы программ чтения с экрана теперь [классы "визуально скрытые"]({{< docsref "/helpers/visually-hidden" >}}).**
+  - Изменен файл Sass с `scss/helpers/_screenreaders.scss` на `scss/helpers/_visually-hidden.scss`
+  - `.sr-only` и `.sr-only-focusable` переименованы в `.visually-hidden` и `.visually-hidden-focusable`
+  - Переименованы миксины `sr-only()` и `sr-only-focusable()` в `visually-hidden()` и `visually-hidden-focusable()`.
 
-- `bootstrap-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
+- `bootstrap-utilities.css` теперь также включает наших помощников. Помощников больше не нужно импортировать в пользовательские сборки.
 
 ## JavaScript
 
-- **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
+- **Отказ от зависимости jQuery** и переписаны плагины на обычный JavaScript.
 
-- <span class="badge bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- <span class="badge bg-danger">Breaking</span> Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и вашего собственного кода. Например, мы используем `data-bs-toggle` вместо `data-toggle`.
 
-- **All plugins can now accept a CSS selector as the first argument.** You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
+- **Все плагины теперь могут принимать селектор CSS в качестве первого аргумента.** Вы можете передать элемент DOM или любой допустимый селектор CSS, чтобы создать новый экземпляр плагина:
 
   ```js
   var modal = new bootstrap.Modal('#myModal')
   var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
   ```
 
-- `popperConfig` can be passed as a function that accepts the Bootstrap's default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
+- `popperConfig` может быть передан как функция, которая принимает конфигурацию Popper по умолчанию Bootstrap в качестве аргумента, так что вы можете объединить эту конфигурацию по умолчанию по-своему. **Применяется к раскрывающимся спискам, всплывающим подсказкам и всплывающим подсказкам.**
 
-- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
+- Значение по умолчанию для `fallbackPlacements` изменено на `['top', 'right', 'bottom', 'left']` для лучшего размещения элементов Popper. **Применяется к раскрывающимся спискам, всплывающим подсказкам и всплывающим подсказкам.**
 
-- Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
+- Удалено подчеркивание из общедоступных статических методов, таких как `_getInstance()` → `getInstance()`.
