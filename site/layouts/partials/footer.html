@@ -1,14 +1,58 @@
-<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
-  <div class="container">
-    <ul class="bd-footer-links ps-0 mb-3">
-      <li class="d-inline-block"><a href="{{ .Site.Params.telegram_ru }}"><b>Чат в телеграмм</b></a></li>
-      <li class="d-inline-block ms-3"><a href="{{ .Site.Params.github_org }}">GitHub</a></li>
-      <li class="d-inline-block ms-3"><a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Примеры</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/{{ .Site.Params.docs_version }}/about/overview/">Инфо</a></li>
-    </ul>
-    <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/{{ .Site.Params.docs_version }}/about/team/">командой Bootstrap</a> с помощью <a href="{{ .Site.Params.repo }}/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v{{ .Site.Params.current_version }}. Код под лицензией <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v{{ .Site.Params.translate_version }}. Перевод документации <a href="{{ .Site.Params.repo_ru_bootstrap }}">на github</a>.</p>
+<footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          {{ partial "icons/bootstrap-white-fill.svg" (dict "class" "d-block me-2" "width" "40" "height" "32") }}
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/{{ .Site.Params.docs_version }}/about/team/">командой Bootstrap</a> с помощью <a href="{{ .Site.Params.repo }}/graphs/contributors">наших участников</a>.</li>
+          <li class="mb-2">Код под лицензией <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Текущая версия v{{ .Site.Params.current_version }}.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Ссылки</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Главная</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/">Документация</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Примеры</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.opencollective }}">Темы</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.blog }}">Блог</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Руководства</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/">Начало работы</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/starter-template/">Стартовый шаблон</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Проекты</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/icons">Иконки</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/rfs">RFS</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Сообщество</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.telegram_ru }}"><b>Чат в телеграмм</b></a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap/issues">Вопросы</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap/discussions">Обсуждения</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Корпоративные спонсоры</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.opencollective }}">Открытый коллектив</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.slack }}">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>

@@ -98,7 +98,7 @@ toc: true
 
 Добавьте класс модификатора `.list-group-numbered` (и, при необходимости, используйте элемент `<ol>`), чтобы выбрать элементы группы нумерованных списков. Числа генерируются с помощью CSS (в отличие от стиля браузера по умолчанию для `<ol>`) для лучшего размещения внутри элементов группы списков и для лучшей настройки.
 
-Числа генерируются с помощью `counter-reset` в `<ol>`, а затем стилируются и помещаются с помощью псевдоэлемента `::before` в `<li>` с `counter-increment` и `content`.
+Числа генерируются с помощью `counter-reset` в `<ol>`, а затем стилируются и помещаются с помощью псевдоэлемента `::before` в `<li>` с помощью `counter-increment` и `content`.
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
@@ -351,10 +351,10 @@ toc: true
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Главная</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Профиль</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Сообщения</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
     </div>
   </div>
   <div class="col-8">
@@ -412,10 +412,10 @@ triggerTabList.forEach(function (triggerEl) {
 
 ```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+bootstrap.Tab.getInstance(triggerEl).show() // Выбрать вкладку по названию
 
 var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Выберите первую вкладку
 ```
 
 ### Эффект затухания

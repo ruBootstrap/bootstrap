@@ -144,3 +144,7 @@ toc: true
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="form-text-variables" file="scss/_variables.scss" >}}
+
+`$form-file-*` предназначены для ввода файла.
+
+{{< scss-docs name="form-file-variables" file="scss/_variables.scss" >}}

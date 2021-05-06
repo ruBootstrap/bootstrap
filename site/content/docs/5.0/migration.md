@@ -7,459 +7,374 @@ aliases: "/migration/"
 toc: true
 ---
 
-## v5.0.0-beta3
+## Зависимости
 
-### Компоненты
+- Отказ jQuery.
+- Обновлен с Popper v1.x до Popper v2.x.
+- Заменен Libsass на Dart Sass в качестве нашего компилятора Sass, учитывая, что Libsass устарел.
+- Мигрировал с Jekyll на Hugo для создания нашей документации.
 
-- Добавлен новый модификатор [`.list-group-numbered`]({{< docsref "/components/list-group#numbered" >}}) в список групп.
+## Поддержка браузера
 
-### JavaScript
+- Отказ Internet Explorer 10 и 11
+- Отказ Microsoft Edge < 16 (Legacy Edge)
+- Отказ Firefox < 60
+- Отказ Safari < 10
+- Отказ iOS Safari < 10
+- Отказ Chrome < 60
+- Отказ Android < 6
 
-- Все плагины теперь могут принимать селектор CSS в качестве первого аргумента. Вы можете передать элемент DOM или любой допустимый селектор CSS для создания нового экземпляра плагина:
+<hr class="my-5">
+
+## Изменения в документации
+
+- Обновленная домашняя страница, макет документов и нижний колонтитул.
+- Добавлено [новое руководство по Parcel](https://getbootstrap.su/docs/5.0/getting-started/parcel/).
+- Добавлен [новый раздел настройки](https://getbootstrap.su/docs/5.0/customize/overview/), заменяющий [страницу темы v4's](https://getbootstrap.su/docs/4.6/getting-started/theming/), с новыми подробностями о Sass, опциями глобальной конфигурации, цветовыми схемами, переменными CSS и многим другим.
+- Реорганизована вся документация по формам в [новый раздел форм](https://getbootstrap.su/docs/5.0/forms/overview/), разделив содержание на более сфокусированные страницы.
+- Аналогичным образом обновлен [раздел макетов](https://getbootstrap.su/docs/5.0/layout/breakpoints/), чтобы более четко обозначить содержимое сетки.
+- Страница компонента "Навигация" переименована в "Навигация и вкладки".
+- Страница "Чекбоксы" переименована в "Чекбоксы и радио".
+- Переработана навигационная панель и добавлена новая поднавигация, чтобы упростить просмотр наших сайтов и версий документации.
+- Добавлено новое сочетание клавиш для поля поиска: <kbd>Ctrl + /</kbd>.
+
+## Sass
+
+- Мы отказались от слияния карт Sass по умолчанию, чтобы упростить удаление избыточных значений. Имейте в виду, что теперь вам нужно определить все значения в картах Sass, например `$theme-colors`. Узнайте, как работать с [картами Sass]({{< docsref "/customize/sass#maps-and-loops" >}}).
+
+- <span class="badge bg-danger">Breaking</span> Переименована функция `color-yiq()` и связанные переменные переименованы в `color-contrast()`, поскольку она больше не связана с цветовым пространством YIQ. [Смотрите #30168.](https://github.com/twbs/bootstrap/pull/30168/)
+  - `$yiq-contrasted-threshold` переименован в `$min-contrast-ratio`.
+  - `$yiq-text-dark` и `$yiq-text-light` соответственно переименованы в `$color-contrast-dark` и `$color-contrast-light`.
+
+- <span class="badge bg-danger">Breaking</span> Удалены стили печати и переменная `$enable-print-styles`. Классы отображения печати все еще существуют. [Смотрите #28339](https://github.com/twbs/bootstrap/pull/28339).
+
+- <span class="badge bg-danger">Breaking</span> Отказ от функций `color()`, `theme-color()` и `gray()` в пользу переменных. [Смотрите #29083](https://github.com/twbs/bootstrap/pull/29083).
+
+- <span class="badge bg-danger">Breaking</span> Функция `theme-color-level()` переименована в `color-level()` и теперь принимает любой цвет, который вы хотите, вместо только `$theme-color` цвета. [Смотрите #29083](https://github.com/twbs/bootstrap/pull/29083) **Остерегайтесь:** `color-level()` позже был удален в `v5.0.0-alpha3`.
+
+- <span class="badge bg-danger">Breaking</span> Переименованы `$enable-prefers-reduced-motion-media-query` и `$enable-pointer-cursor-for-buttons` в `$enable-reduced-motion` и `$enable-button-pointers` для краткости.
+
+- <span class="badge bg-danger">Breaking</span> Удален миксин `bg-gradient-variant()`. Используйте класс `.bg-gradient` для добавления градиентов к элементам вместо сгенерированных классов `.bg-gradient-*`.
+
+- <span class="badge bg-danger">Breaking</span> **Удалены ранее устаревшие миксины:**
+  - `hover`, `hover-focus`, `plain-hover-focus` и `hover-focus-active`
+  - `float()`
+  - `form-control-mixin()`
+  - `nav-divider()`
+  - `retina-img()`
+  - `text-hide()` (также удален связанный класс утилит, `.text-hide`)
+  - `visibility()`
+  - `form-control-focus()`
+
+- <span class="badge bg-danger">Breaking</span> Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+
+- `box-shadow` mixins now allow `null` values and drop `none` from multiple arguments. [Смотрите #30394](https://github.com/twbs/bootstrap/pull/30394).
+
+- The `border-radius()` mixin now has a default value.
+
+## Color system
+
+- The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `shift-color()` will either tint or shade a color depending on whether its weight parameter is positive or negative. [Смотрите #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
+
+- Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.
+
+- Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.1 AA contrast. Also changed our color contrast color from `$gray-900` to `$black`.
+
+- To support our color system, we've added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
+
+## Grid updates
+
+- **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
+
+- **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system's gutters with our spacing utilities.
+  - Added new [gutter class](https://getbootstrap.su/docs/5.0/layout/gutters/) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
+  - <span class="badge bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
+
+- Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
+
+- <span class="badge bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
+
+- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [Смотрите #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
+
+- <span class="badge bg-danger">Breaking</span> `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
+
+- `$enable-grid-classes` no longer disables the generation of container classes anymore. [Смотрите #29146.](https://github.com/twbs/bootstrap/pull/29146)
+
+- Updated the `make-col` mixin to default to equal columns without a specified size.
+
+## Content, Reboot, etc
+
+- **[RFS]({{< docsref "/getting-started/rfs" >}}) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
+
+- <span class="badge bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
+
+- Added two new `.display-*` heading sizes, `.display-5` and `.display-6`.
+
+- **Links are underlined by default** (not just on hover), unless they're part of specific components.
+
+- **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
+
+- <span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
+
+- <span class="badge bg-danger">Breaking</span> `.thead-light` and `.thead-dark` are dropped in favor of the `.table-*` variant classes which can be used for all table elements (`thead`, `tbody`, `tfoot`, `tr`, `th` and `td`).
+
+- <span class="badge bg-danger">Breaking</span> The `table-row-variant()` mixin is renamed to `table-variant()` and accepts only 2 parameters: `$color` (colon name) and `$value` (color code). The border color and accent colors are automatically calculated based on the table factor variables.
+
+- Split table cell padding variables into `-y` and `-x`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.pre-scrollable` class. [Смотрите #29135](https://github.com/twbs/bootstrap/pull/29135)
+
+- <span class="badge bg-danger">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [Смотрите #29267](https://github.com/twbs/bootstrap/pull/29267)
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.text-justify` class. [Смотрите #29793](https://github.com/twbs/bootstrap/pull/29793)
+
+- Reset default horizontal `padding-left` on `<ul>` and `<ol>` elements from browser default `40px` to `2rem`.
+
+- Added `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [Смотрите #31877](https://github.com/twbs/bootstrap/pull/31877)
+
+## RTL
+
+- Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., `start` and `end` in lieu of `left` and `right`.
+
+## Forms
+
+- **Added new floating forms!** We've promoted the Floating labels example to fully supported form components. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
+
+- <span class="badge bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
+  - `.custom-check` is now `.form-check`.
+  - `.custom-check.custom-switch` is now `.form-check.form-switch`.
+  - `.custom-select` is now `.form-select`.
+  - `.custom-file` and `.form-file` have been replaced by custom styles on top of `.form-control`.
+  - `.custom-range` is now `.form-range`.
+  - Dropped native `.form-control-file` and `.form-control-range`.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.input-group-append` and `.input-group-prepend`. You can now just add buttons and `.input-group-text` as direct children of the input groups.
+
+- The longstanding [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) is finally fixed by adding an additional `.has-validation` class to input groups with validation.
+
+- <span class="badge bg-danger">Breaking</span> **Dropped form-specific layout classes for our grid system.** Use our grid and utilities instead of `.form-group`, `.form-row`, or `.form-inline`.
+
+- <span class="badge bg-danger">Breaking</span> Form labels now require `.form-label`.
+
+- <span class="badge bg-danger">Breaking</span> `.form-text` no longer sets `display`, allowing you to create inline or block help text as you wish just by changing the HTML element.
+
+- Validation icons are no longer applied to `<select>`s with `multiple`.
+
+- Rearranged source Sass files under `scss/forms/`, including input group styles.
+
+<hr class="my-5">
+
+## Components
+
+- Unified `padding` values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our `$spacer` variable. [Смотрите #30564](https://github.com/twbs/bootstrap/pull/30564).
+
+### Accordion
+
+- Added [new accordion component]({{< docsref "/components/accordion" >}}!
+
+### Alerts
+
+- Alerts now have [examples with icons]({{< docsref "/components/alerts#icons" >}}).
+
+- Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
+
+### Badges
+
+- <span class="badge bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.badge-pill`—use the `.rounded-pill` utility instead.
+
+- <span class="badge bg-danger">Breaking</span> Removed hover and focus styles for `<a>` and `<button>` elements.
+
+- Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
+
+### Breadcrumbs
+
+- Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
+
+- Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
+
+### Buttons
+
+- <span class="badge bg-danger">Breaking</span> **[Toggle buttons](http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons), with checkboxes or radios, no longer require JavaScript and have new markup.** We no long require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [Смотрите #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
+
+- <span class="badge bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.](http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons)
+
+- Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
+
+- Updated buttons to ensure increased contrast on hover and active states.
+
+- Disabled buttons now have `pointer-events: none;`.
+
+### Card
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
+
+- <span class="badge bg-danger">Breaking</span> Dropped `.card-columns` in favor of Masonry. [Смотрите #28922](https://github.com/twbs/bootstrap/pull/28922).
+
+- <span class="badge bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]({{< docsref "/components/accordion" >}}).
+
+### Carousel
+
+- Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
+
+- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({{< param "icons" >}}).
+
+### Close buttton
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
+
+- Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
+
+- Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
+
+### Collapse
+
+- Removed scroll anchoring for accordions.
+
+### Dropdowns
+
+- Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
+
+- Added new variable for `$dropdown-padding-x`.
+
+- Darkened the dropdown divider for improved contrast.
+
+- <span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
+
+- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static and `data-bs-popper="none"` when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
+
+- <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
+
+- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+
+- Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
+
+### Jumbotron
+
+- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](https://getbootstrap.su/docs/5.0/examples/jumbotron/)
+
+### List group
+
+- Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
+
+### Navs and tabs
+
+- Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
+
+### Navbars
+
+- <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
+
+### Offcanvas
+
+- Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
+
+### Pagination
+
+- Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
+
+- Added `transition`s to pagination links.
+
+### Popovers
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
+
+- Renamed `whiteList` option to `allowList`.
+
+### Spinners
+
+- Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [Смотрите #31882](https://github.com/twbs/bootstrap/pull/31882).
+
+- Improved spinner vertical alignment.
+
+### Toasts
+
+- Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
+
+- Changed default toast duration to 5 seconds.
+
+- Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
+
+### Tooltips
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
+
+- <span class="badge bg-danger">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+
+- <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
+
+## Utilities
+
+- <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directoinal names with the addition of RTL support:
+  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
+  - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
+  - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
+  - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
+  - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
+  - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
+  - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+
+- <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
+
+- Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
+
+- Added new [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+
+- Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
+
+- Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+
+- <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
+
+- Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
+
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+
+- Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
+
+- <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [Смотрите #31687](https://github.com/twbs/bootstrap/pull/31687).
+
+- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
+
+- Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
+
+- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
+
+## Helpers
+
+- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
+  - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
+  - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
+  - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
+  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
+
+- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
+  - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
+  - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
+  - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
+
+- `bootstrap-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
+
+## JavaScript
+
+- **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
+
+- <span class="badge bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+
+- **All plugins can now accept a CSS selector as the first argument.** You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
 
   ```js
   var modal = new bootstrap.Modal('#myModal')
   var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
   ```
 
-- Удалена опция `flip` для раскрывающегося списка плагинов в пользу собственной конфигурации popper. Теперь Вы можете отключить поведение переворачивания, передав пустой массив для параметра [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) в [flip](https://popper.js.org/docs/v2/modifiers/flip/) модификатор.
+- `popperConfig` can be passed as a function that accepts the Bootstrap's default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
 
-### Утилиты
+- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
 
-- Удалена запись `0` в карте `$border-widths`, чтобы удалить дублированный класс `.border-0`.
-
-## v5.0.0-beta2
-
-### Утилиты
-
-- Параметр `--aspect-ratio` переименован в `--bs-aspect-ratio`, чтобы соответствовать другим настраиваемым свойствам.
-- Расширен помощник `.visually-hidden-focusable`, чтобы также работать с контейнерами, используя `:focus-within`.
-- `bootstrap-utilities.css` теперь также включает наших помощников. Помощников больше не нужно импортировать в пользовательские сборки.
-- Расширенные возможности настройки состояний проверки формы. В миксин `form-validation-state` добавлены три новых необязательных параметра: `tooltip-color`, `tooltip-bg-color`, `focus-box-shadow`. Эти параметры могут быть установлены в карте `$form-validation-states`. [Смотрите #31757](https://github.com/twbs/bootstrap/pull/31757).
-
-### JavaScript
-
-- Восстановлена опция `offset` для плагинов Dropdown, Popover и Tooltip.
-- Значение по умолчанию для `fallbackPlacements` изменено на `['top', 'right', 'bottom', 'left']` для лучшего размещения элементов popper.
-- Все события для раскрывающегося списка теперь запускаются кнопкой-переключателем раскрывающегося списка, а затем всплывают до родительского элемента.
-- Выпадающие меню теперь имеют атрибут `data-bs-popper="static"`, установленный, когда положение раскрывающегося списка статично, и `data-bs-popper="none"`, когда раскрывающееся меню находится на панели навигации. Это добавлено нашим JavaScript и помогает нам использовать настраиваемые стили положения, не мешая позиционированию Popper.
-- `popperConfig` может быть передан как функция, которая принимает конфигурацию Popper по умолчанию Bootstrap в качестве аргумента, так что Вы можете объединить эту конфигурацию по умолчанию по-своему.
-
-## v5.0.0-beta1
-
-### RTL
-
-**Функция RTL все еще экспериментальная и, вероятно, будет развиваться в соответствии с отзывами пользователей.** Заметили что-то или хотите предложить улучшение? [Откройте проблему]({{< param repo >}}/issues/new), мы будем рады узнать Ваше мнение.
-
-#### Sass
-
-Переменные, утилиты и миксины, чувствительные к горизонтальному направлению, переименованы с более логичными именами - `start` и `end` вместо `left` и `right`.
-
-##### Компоненты
-
-- Переименованы `.dropleft` и `.dropright` в `.dropstart` и `.dropend`.
-- Переименованы `.dropdown-menu-*-left` и `.dropdown-menu-*-right` в `.dropdown-menu-*-start` и `.dropdown-menu-*-end`.
-- Переименованы `.bs-popover-left` и `.bs-popover-right` в `.bs-popover-start` и `.bs-popover-end`.
-- Переименованы `.bs-tooltip-left` и `.bs-tooltip-right` в `.bs-tooltip-start` и `.bs-tooltip-end`.
-- Переименованы `.carousel-item-left` и `.carousel-item-right` в `.carousel-item-start` и `.carousel-item-end`.
-
-##### Утилиты
-
-- Переименованы `.left-*` и `.right-*` в `.start-*` и `.end-*`.
-- Переименованы `.float-left` и `.float-right` в `.float-start` и `.float-end`.
-- Переименованы `.border-left` и `.border-right` в `.border-start` и `.border-end`.
-- Переименованы `.rounded-left` и `.rounded-right` в `.rounded-start` и `.rounded-end`.
-- Переименованы `.ml-*` и `.mr-*` в `.ms-*` и `.me-*`.
-- Переименованы `.pl-*` и `.pr-*` в `.ps-*` и `.pe-*`.
-- Переименованы `.text-left` и `.text-right` в `.text-start` и `.text-end`.
-
-Соответственно, переименовываются и конкретные варианты контрольных точек (например, `.text-md-start` заменяет `.text-md-left`).
-
-**Примечание**: если Вы использовали v4 для создания страниц RTL, убедитесь, что отменили изменения, упомянутые выше: например, используйте `.*-start`, если Вы использовали `.*-right`.
-
-##### Миксины
-
-- Переименованы `border-left-radius()` и `border-right-radius()` в `border-start-radius()` и `border-end-radius()` — а также их угловые относительные варианты (например, `.border-bottom-left-radius` стал `.border-bottom-start-radius`).
-- Переименованы `caret-left()` и `caret-right()` в `caret-start()` и `caret-end()` — впоследствии миксин `caret()` теперь принимает в качестве аргументов `start` и `end` вместо `left` и `right`.
-
-##### Переменные
-
-### JavaScript
-
-- Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и Вашего собственного кода. Например, мы используем `data-bs-toggle` вместо `data-toggle`.
-- Обновлен Popper до v2.x:
-  - Удалена опция `offset` из наших плагинов Tooltip/Popover и Dropdown; это все еще может быть достигнуто с помощью параметра `popperConfig`.
-  - Параметр `fallbackPlacement` стал `fallbackPlacements`.
-
-### Sass
-
-- Переименована функция `scale-color()` в `shift-color()`, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.
-
-### Утилиты
-
-- Добавлены новые утилиты `.translate-middle-x` и `.translate-middle-y` для горизонтального или вертикального центрирования абсолютных/фиксированных элементов.
-
-### Компоненты
-
-#### Хлебные крошки
-
-- Упрощен внешний вид панировочных сухарей по умолчанию за счет удаления `padding`, `background-color` и `border-radius`.
-- Добавлено новое настраиваемое свойство CSS `--bs-breadcrumb-divider` для легкой настройки без перекомпиляции CSS.
-
-#### Всплывающие сообщения
-
-- Теперь всплывающие сообщения(тосты) можно [позиционировать]({{< docsref "/components/toasts#размещение" >}}) в `.toast-container` с помощью [утилит позиционирования]({{< docsref "/utilities/position" >}}).
-
-## v5.0.0-alpha3
-
-### Поддержка браузера
-
-- Прекращена поддержка Microsoft Edge Legacy. См. [здесь](#поддержка-браузера-1) для получения информации о предыдущих изменениях поддержки браузеров.
-
-### Sass
-
-- Цветовая система, которая работала с `color-level()` и `$theme-color-interval`, была удалена в пользу новой цветовой системы. Все функции `lighten()` и `darken()` в нашей кодовой базе заменены на `tint-color()` и `shade-color()`. Эти функции будут смешивать цвет с белым или черным вместо того, чтобы изменять его яркость на фиксированную величину. `scale-color()` будет либо подкрашивать, либо затенять цвет в зависимости от того, является ли его параметр веса положительным или отрицательным. См. [этот PR](https://github.com/twbs/bootstrap/pull/30622) для получения более подробной информации.
-- Спиннеры теперь учитывают `prefers-reduced-motion: reduce` замедляя анимацию. [См. #31882](https://github.com/twbs/bootstrap/pull/31882).
-
-### Reboot
-
-- Представьте `$enable-smooth-scroll`, который применяет `scroll-behavior: smooth` глобально, за исключением пользователей, запрашивающих уменьшение движения с помощью медиа-запроса `prefers-reduced-motion`. [См. #31877](https://github.com/twbs/bootstrap/pull/31877)
-
-### Кнопки
-
-- [Исключено `.btn-block` в пользу служебных классов CSS-сетки.]({{< docsref "/components/buttons#блочные-кнопки" >}}) Вместо применения `.btn-block` для отдельных кнопок группа кнопок теперь обернута в родительский класс `.d-grid` и может использовать утилиты `.gap-*` для установки интервала.
-
-### Формы
-
-- Давний [Отсутствующий радиус границы во входной группе с ошибкой обратной связи с проверкой](https://github.com/twbs/bootstrap/issues/25110) наконец исправлен путем добавления дополнительного класса `.has-validation` во входные группы с проверкой.
-- Перемещен пример с плавающими метками в полностью поддерживаемый компонент формы. [Смотрите новую страницу с плавающими метками.]({{< docsref "/forms/floating-labels" >}})
-- Выбор файлов теперь используют класс `.form-control` и не требуют JavaScript, дополнительного HTML или дополнительных классов. [См. #31955](https://github.com/twbs/bootstrap/pull/31955).
-- Добавлен `cursor:pointer` к выборам цвета `.form-control-color`.
-
-### Утилиты
-
-- **Текстовые утилиты:**
-  - Добавлены утилиты `.fs-*` для утилит `font-size` (с включенным RFS). Они используют тот же масштаб, что и заголовки HTML по умолчанию (1-6, от большого к маленькому), и могут быть изменены с помощью карты Sass.
-  - Утилиты `.font-weight-*` переименованы в `.fw-*` для краткости и единообразия.
-  - Утилиты `.font-style-*` переименованы в `.fst-*` для краткости и единообразия.
-  - Добавлен `.d-grid`к утилитам отображения
-  - Добавлены новые утилиты `gap` (`.gap`) для макетов CSS Grid
-  - Удалены  `.rounded-sm` и `rounded-lg`, и добавлены `.rounded-0` в `.rounded-3`. [Смотрите #31687](https://github.com/twbs/bootstrap/pull/31687).
-## v5.0.0-alpha2
-
-### Sass
-
-- Добавлены параметры по умолчанию для каждого миксина `border-radius`. [См. #31571](https://github.com/twbs/bootstrap/pull/31571).
-- Обновлена следующая контрольная точка при нацеливании только на контрольную точку `xs`. [См. #31500](https://github.com/twbs/bootstrap/pull/31500).
-- Примеси `box-shadow` теперь допускают `null` значения и отбрасывают `none` из нескольких аргументов. [См. #30394](https://github.com/twbs/bootstrap/pull/30394).
-
-### Документация
-
-- Страница "Navs" переименована в "Navs & Tabs".
-- Вспомогательная страница "Screen readers" переименована в "Visually hidden", а имя файла `visually-hidden`.
-- Страница "Checks" переименована в "Checks & radios", а имя файла на `checks-radios`.
-- Улучшена документация групп кнопок проверки/включения радио.
-- Улучшены пропускные ссылки в наших документах.
-- Переработанная навигация по документам для больших касаний на мобильных устройствах и оптимизированная subnav.
-- [#31114](https://github.com/twbs/bootstrap/pull/31114): Улучшенная документация по форме в отношении доступности.
-
-### Макет
-
-- Горизонтальное заполнение контейнера обновлено в соответствии с размером `.row`.
-- [#31439](https://github.com/twbs/bootstrap/pull/31439): Удалено `flex: 1 0 100%` из строк из-за регрессии в поведении сетки.
-
-### Перезагрузка
-
-- Обновлен стиль `th`, чтобы использовать значение `null` по умолчанию для `font-weight` и наследовать `text-align` вместо явной установки.
-
-### Цвета
-
-- Коэффициент цветовой контрастности увеличен с 3:1 до 4.5:1.
-- Установите `$black` в качестве цветового контраста вместо `$gray-900`.
-- Улучшен цвет `$green` (и его псевдонима темы `$success`) для достижения нового минимального цветового контраста (переход от `#28a745` к `#198754`).
-- Улучшен цвет `$cyan` (и его псевдонима темы `$info`) чтобы он стал более ярким (переход от `#17a2b8` к `#0dcaf0`).
-
-### Формы
-
-- [#31383](https://github.com/twbs/bootstrap/pull/31383): Размер флажков и радио изменен на `1em` вместо `1.25em`, чтобы они лучше масштабировались с помощью настраиваемого символа `$font-size-base` и многое другое.
-
-### Компоненты
-
-#### Значки
-
-- [#31132](https://github.com/twbs/bootstrap/pull/31132): Увеличено заполнение по умолчанию для значков с `.25em`/`.5em` до `.35em`/`.65em`.
-
-#### Кнопки
-
-- [#30639](https://github.com/twbs/bootstrap/pull/30639): Отключенные состояния кнопок легче настраивать благодаря дополнительным аргументам в миксине `button-variant()`.
-- [#30989](https://github.com/twbs/bootstrap/pull/30989): Обновлены кнопки для увеличения контраста при наведении и активном состоянии.
-
-#### Карусель
-
-- Заменены значки шеврона для элементов управления каруселью на новые SVG из [Bootstrap Icons]({{< param "icons" >}}).
-- Добавлен новый [вариант `.carousel-dark`]({{< docsref "/components/carousel#темный-вариант" >}}) для темного текста, элементов управления и индикаторов (отлично подходит для более светлого фона).
-
-#### Кнопка закрытия
-
-- `.close` переименован в `.btn-close` для общего названия.
-- Кнопки закрытия теперь используют `background-image` (встроенный SVG) вместо `&times;` в HTML, что упрощает настройку без необходимости касаться Вашей разметки.
-- Добавлены новые переменные для лучшего контроля над настройкой.
-- Добавлен новый вариант `.btn-close-white`, который использует `filter: invert(1)` для включения более контрастных значков удаления на более темном фоне.
-
-#### Сворачиваемое
-
-- [#31346](https://github.com/twbs/bootstrap/pull/31346): Убрана привязка скролла для аккордеонов..
-
-#### Выпадающие списки
-
-- Добавлен новый вариант `.dropdown-menu-dark` и связанные переменные для темных выпадающих списков по запросу.
-- Добавлена новая переменная для `$dropdown-padding-x`.
-- Затемнен разделитель раскрывающегося списка для улучшения контраста.
-
-#### Навигация
-
-- [#31035](https://github.com/twbs/bootstrap/pull/31035): В класс `.nav-link` добавлены новые переменные `null` для `font-size`, `font-weight`, `color` и `:hover` `color`.
-
-#### Пагинация
-
-- Добавлен `transition` по ссылкам пагинации. [См. #31396](https://github.com/twbs/bootstrap/pull/31396).
-
-#### Всплывающие окна
-
-- Параметр `whiteList` переименован в `allowList`.
-
-#### Всплывающие сообщения
-
-- [#31109](https://github.com/twbs/bootstrap/pull/31109): Длительность тоста по умолчанию - 5 секунд..
-- [#31155](https://github.com/twbs/bootstrap/pull/31155): Очистка таймаута перед показом тостов.
-- [#31381](https://github.com/twbs/bootstrap/pull/31381): Из всплывающих окон удален `overflow: hidden` и заменен правильным `border-radius` с функциями `calc()`.
-- В обновленную документацию включены дополнительные примеры того, как настраивать тосты и темы.
-
-#### Всплывающие подсказки
-
-- Параметр `whiteList` переименован в `allowList`.
-
-### Помощники
-
-- Адаптивные помощники встраивания были переименованы в [ratio helpers]({{< docsref "/helpers/ratio" >}}) с новыми именами классов и улучшенным поведением, а также полезной переменной CSS.
-  - Классы были переименованы, чтобы изменить соотношение сторон `by` на `x`. Например, `.ratio-16by9` теперь `.ratio-16x9`.
-  - Мы отказались от селектора `.embed-responsive-item` и группы элементов в пользу более простого селектора `.ratio > *`. Класс больше не нужен, и помощник по соотношению теперь работает с любым элементом HTML.
-  - Карта Sass `$embed-responsive-aspect-ratios` была переименована в `$aspect-ratios`, а ее значения были упрощены и теперь включают имя класса и процентное соотношение в качестве пары `key: value`.
-  - Переменные CSS теперь генерируются и включаются для каждого значения в карте Sass. Измените переменную `--aspect-ratio` в `.ratio`, чтобы создать любое [настраиваемое соотношение сторон]({{< docsref "/helpers/ratio#custom-ratios" >}}).
-- Классы "Screen reader" теперь [классы "visually hidden"]({{< docsref "/helpers/visually-hidden" >}}).
-  - Изменен файл Sass с `scss/helpers/_screenreaders.scss` на `scss/helpers/_visually-hidden.scss`.
-  - `.sr-only` и `.sr-only-focusable` переименованы в `.visually-hidden` и `.visually-hidden-focusable`.
-  - Переименованы миксины `sr-only()` и `sr-only-focusable()` в `visually-hidden()` и `visually-hidden-focusable()`.
-
-### Утилиты
-
-- [#31280](https://github.com/twbs/bootstrap/pull/31280): Добавлены новые [утилиты расположения]({{< docsref "/utilities/position#arrange-elements" >}}) для `top`, `right`, `bottom` и `left`. Значения для каждого свойства включают `0`, `50%` и `100%`.
-  - Мы также добавили новые утилиты `translate` в дополнение к этим утилитам позиционирования для центрирования элементов при их позиционировании.
-  - В документацию добавлены отличные примеры, чтобы продемонстрировать это.
-- [#31484](https://github.com/twbs/bootstrap/pull/31484): Добавлена новая [утилита `border-width`]({{< docsref "/utilities/borders#border-width" >}}).
-- [#31473](https://github.com/twbs/bootstrap/pull/31473): Утилита `.d-none` была перемещена в наш CSS, чтобы придать ей больший вес по сравнению с другими утилитами отображения.
-- `.text-monospace` переименовано в `.font-monospace`.
-- Удален `.text-hide`, поскольку это устаревший метод скрытия текста, который больше не следует использовать.
-- Новые утилиты `line-height`: `.lh-1`, `.lh-sm`, `.lh-base` и `.lh-lg`. Смотреть [здесь]({{< docsref "/utilities/text#высота-линии" >}}).
-
----
-
-## v5.0.0-alpha1
-
-### Поддержка браузера
-
-См. Страницу браузера и устройств для получения подробной информации о том, что в настоящее время поддерживается в Bootstrap 5. Начиная с версии 4, вот что изменилось в поддержке нашего браузера:
-
-- Прекращена поддержка Internet Explorer 10 и 11.
-- Прекращена поддержка Microsoft Edge < 16.
-- Прекращена поддержка Firefox < 60.
-- Прекращена поддержка Safari < 10.
-- Прекращена поддержка iOS Safari < 10.
-- Прекращена поддержка Chrome < 60
-- Прекращена поддержка Android < 6
-
-### Sass
-
-Изменения в наших исходных файлах Sass и скомпилированном CSS.
-
-- Удалены миксины `hover`, `hover-focus`, `plain-hover-focus` и `hover-focus-active`. Для этого используйте обычный синтаксис CSS. [См. #28267](https://github.com/twbs/bootstrap/pull/28267).
-- Удалены ранее устаревшие миксины
-  - `float()`
-  - `form-control-mixin()`
-  - `nav-divider()`
-  - `retina-img()`
-  - `text-hide()` (также удалил связанный служебный класс, `.text-hide`)
-  - `visibility()`
-  - `form-control-focus()`
-- Переставлены исходные файлы форм в `scss/forms/`. [См. Подробнее в разделе форм.](#forms)
-- Удалены стили печати и переменная `$enable-print-styles`. Однако классы отображения печати остались неизменными. [См. #28339](https://github.com/twbs/bootstrap/pull/28339).
-- Убраны функции `color()`, `theme-color()` и `gray()` в пользу переменных. [См. #29083](https://github.com/twbs/bootstrap/pull/29083)
-- Функция `theme-color-level()` переименована в `color-level()` и теперь принимает любой цвет, который Вы хотите, вместо только цветов `$theme-color`. [См. #29083](https://github.com/twbs/bootstrap/pull/29083) **Будьте осторожны:** `color-level()` позже был удален в `v5.0.0-alpha3`.
-- `$enable-grid-classes` больше не отключает генерацию контейнерных классов [См. #29146](https://github.com/twbs/bootstrap/pull/29146)
-- Для краткости переименованы `$enable-prefers-reduced-motion-media-query` и `$enable-pointer-cursor-for-buttons` в `$enable-reduced-motion` и `$enable-button-pointers`.
-- Высота строк снижена из нескольких компонентов, чтобы упростить нашу кодовую базу. `button-size()` и `pagination-size()` больше не принимают параметры высоты строки. [См. #29271](https://github.com/twbs/bootstrap/pull/29271)
-- Примесь `button-variant()` теперь принимает 3 дополнительных параметра цвета для каждого состояния кнопки, чтобы переопределить цвет, предоставляемый `color-contrast()`.По умолчанию эти параметры определяют, какой цвет обеспечивает больший контраст по сравнению с цветом фона состояния кнопки с помощью `color-contrast()`.
-- Примесь `button-outline-variant()` теперь принимает дополнительный аргумент, `$active-color`, для установки цвета текста активного состояния кнопки. По умолчанию этот параметр определяет, какой цвет обеспечивает больший контраст по сравнению с активным цветом фона кнопки с помощью `color-contrast()`.
-- Избавьтесь от слияния карт Sass, что упрощает удаление избыточных значений. Имейте в виду, что теперь Вам нужно определить все значения в картах Sass, например `$theme-colors`. Узнайте, как работать с [Sass maps]({{< docsref "/customize/sass#карты-и-циклы" >}}).
-- Функция `color-yiq()` и связанные с ней переменные переименованы в `color-contrast()`, поскольку она больше не связана с цветовым пространством YIQ. [См. #30168.](https://github.com/twbs/bootstrap/pull/30168/)
-  - `$yiq-contrasted-threshold` переименована в `$min-contrast-ratio`.
-  - `$yiq-text-dark` и `$yiq-text-light` соответственно переименованы в `$color-contrast-dark` и `$color-contrast-light`.
-- Линейные градиенты упрощаются, когда градиенты включены, и поэтому `gradient-bg()` теперь принимает только необязательный параметр `$color`.
-- Примесь `bg-gradient-variant()` удалена, поскольку класс `.bg-gradient` теперь может использоваться для добавления градиентов к элементам вместо классов `.bg-gradient-*`.
-- `media-breakpoint-down()` использует саму контрольную точку вместо следующей контрольной точки. Используйте `media-breakpoint-down(lg)` вместо `media-breakpoint-down(md)` для целевых окон просмотра, меньших, чем контрольная точка `lg`.
-- Второй параметр миксина `media-breakpoint-between()` также использует саму контрольную точку вместо следующей контрольной точки. Используйте `media-between(sm, lg)` вместо `media-breakpoint-between(sm, md)` для нацеливания на окна просмотра между контрольными точками `sm` и `lg`.
-- Примесь `box-shadow()` теперь лучше поддерживает `none` и `null` с несколькими аргументами. Теперь Вы можете передать несколько аргументов с любым значением и получить ожидаемый результат. [См. #30394](https://github.com/twbs/bootstrap/pull/30394).
-- Каждая примесь `border-radius()` теперь имеет значение по умолчанию. Теперь Вы можете вызывать эти миксины без указания значения радиуса границы, и будет использоваться переменная `$border-radius`. [См. #31571](https://github.com/twbs/bootstrap/pull/31571)
-
-### JavaScript
-
-Изменения в наших исходных и скомпилированных файлах JavaScript.
-
-- Отказались от зависимости jQuery и переписали плагины на обычный JavaScript.
-- Удалено подчеркивание из общедоступных статических методов, таких как `_getInstance()` → `getInstance()`.
-
-### Цветовая система
-
-Мы обновили цветовую систему, которая используется в Bootstrap, чтобы улучшить цветовой контраст и предоставить гораздо более обширный набор цветов.
-
-- Обновлены синий и розовый базовые цвета (`-500`) для обеспечения контраста WCAG 2.1 AA.
-- Добавлены новые оттенки и оттенки для каждого цвета, предоставляя девять отдельных цветов для каждого основного цвета в качестве новых переменных Sass.
-- Для поддержки нашей цветовой системы мы добавили новые пользовательские функции `tint-color()` и `shade-color()` для правильного смешивания цветов.
-
-### Сетка и макет
-
-Изменения любых инструментов компоновки и нашей системы сеток.
-
-- Отказ от компонента `.media`, так как он может быть построен с помощью служебных классов. [См. #28265](https://github.com/twbs/bootstrap/pull/28265).
-- Удалена `position: relative` из колонок сетки.
-- Горизонтальное заполнение добавляется к прямым дочерним элементам в строке вместо самих колонок.
-  - Это упрощает нашу кодовую базу.
-  - Классы колонок теперь можно использовать отдельно. Каждый раз, когда они используются за пределами `.row`, горизонтальное заполнение добавляться не будет.
-- Адаптивные классы промежутков можно использовать для управления шириной промежутка в горизонтальном, вертикальном или обоих направлениях.
-- Ширина промежутка теперь установлена в `rem` и уменьшена с `30px` до `1.5rem` (24px).
-- `bootstrap-grid.css` теперь применяет только к колонке `box-sizing: border-box` вместо сброса глобального размера поля. Таким образом можно использовать сеточную систему, даже если `box-sizing: border-box` не применяется к каждому элементу.
-- Удалены `.no-gutters` в пользу новых классов расстояния между желобами. Вместо этого используйте `.g-0`. [Подробнее читайте в документации о промежутках.]({{< docsref "/layout/gutters" >}})
-
-### Контент, перезагрузка и т. д.
-
-Изменения в перезагрузке, типографике, таблицах и многом другом.
-
-- [RFS]({{< docsref "/getting-started/rfs" >}}) включен для автоматического изменения размера шрифта. [См. #29152](https://github.com/twbs/bootstrap/pull/29152)
-- Сброшен по умолчанию горизонтальный `padding-left` для элементов `<ul>` и `<ol>` с `40px` по умолчанию в браузере на `2rem`.
-- Упрощенные стили таблиц (без лишних верхних границ) и усиленное заполнение ячеек.
-- Вложенные таблицы больше не наследуют стили.
-- `.thead-light` и `.thead-dark` удаляются в пользу классов вариантов `.table-*`, которые могут использоваться для всех элементов таблицы (`thead`, `tbody`, `tfoot`, `tr`, `th` и `td`).
-- Примесь `table-row-variant()` переименована в `table-variant()` и принимает только 2 параметра: `$color` (имя двоеточия) и `$value` (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.
-- Разделите переменные заполнения ячеек таблицы на `-y` и `-x`.
-- Удален класс `.pre-scrollable`. [См. #29135](https://github.com/twbs/bootstrap/pull/29135)
-- Утилиты `.text-*` больше не добавляют к ссылкам состояния наведения и фокуса. Вместо этого можно использовать вспомогательные классы `.link-*`. [См. #29267](https://github.com/twbs/bootstrap/pull/29267)
-- Удален класс `.text-justify`. [См. #29793](https://github.com/twbs/bootstrap/pull/29793)
-
-### Типография
-
-- Удалены переменные `$display-*` для новой карты Sass `$display-font-sizes`.
-- Удалены отдельные переменные `$display-*-weight` для одного `$display-font-weight`.
-- Добавлены два новых стиля заголовков `.display-*`, `.display-5` и `.display-6`.
-- Изменены размеры существующих отображаемых заголовков для более единообразного набора `font-size`.
-
-### Формы
-
-- Переставлена документация формы в отдельный раздел верхнего уровня.
-   - Разделить старую страницу форм на несколько подстраниц.
-   - Документы групп ввода перемещены в новый раздел форм.
-- Перегруппированы исходные файлы Sass в `scss/forms/`, включая перемещение стилей групп ввода.
-- Объединение собственных и настраиваемых флажков и радио в один класс `.form-check`.
-  - Новые проверки теперь поддерживают изменение размера с помощью классов `em`/`font-size` или явных модификаторов.
-  - Новые проверки теперь по умолчанию увеличены в размере для повышения удобства использования.
-  - Удалены `.custom-control` и связанные классы.
-  - Большинство переменных `$custom-control` переименовано в `$form-control`.
-- Комбинация собственного и пользовательского выбора в `.form-select`.
-  - Удалены `.custom-select` и связанные классы.
-  - Большинство переменных `$custom-select` переименовано в `$form-select`.
-- Обновленный компонент ввода файлов с тем же общим дизайном, но с улучшенным HTML.
-  - Реорганизована разметка `.form-file` для устранения некоторых визуальных ошибок, при этом разрешен перевод и изменение текста кнопок через HTML вместо CSS.
-  - Полностью исключены собственные компоненты `.form-control-file` и `.form-control-range`.
-  - Переименован `.custom-file` в `.form-file` (включая переменные). **Будьте осторожны:** `.form-file` был позже удален в `v5.0.0-alpha3`, теперь Вы можете использовать `.form-control`.
-  - Добавлена поддержка стилей `:focus` и `:disabled`.
-- Переименован `.custom-range` в `.form-range` (включая переменные).
-- Удален `.form-group` для утилит полей (мы заменили наши примеры документации на `.mb-3`).
-- Удален `.form-row` для более гибкой сетки полей.
-- Удален `.form-inline` для более гибкой сетки.
-- Удалена поддержка для `.form-control-plaintext` внутри `.input-group`.
-- Удален `.input-group-append` и `.input-group-prepend`. Теперь Вы можете просто добавить кнопки и `.input-group-text` в качестве прямых потомков групп ввода.
-- Для меток форм теперь требуется класс `.form-label`. Переменные Sass теперь доступны для стилизации меток форм в соответствии с Вашими потребностями. [Смотрите #30476](https://github.com/twbs/bootstrap/pull/30476)
-- `.form-text` больше не устанавливает `display`, но устанавливает `color` и `font-size`. Поэтому вместо `<small class="form-text text-muted">` Вы должны теперь использовать `<div class="form-text">`.
-
-### Компоненты
-
-- Унифицированы значения `padding` для уведомлений, хлебных крошек, карт, раскрывающихся списков, групп списков, модальных окон, всплывающих окон и всплывающих подсказок на основе нашей переменной `$spacer`. [См. #30564](https://github.com/twbs/bootstrap/pull/30564).
-
-#### Отключенные состояния
-
-- Отключенные состояния кнопок, кнопки закрытия, ссылки на страницы и диапазона формы теперь имеют добавленные `pointer-events: none`. Это упрощает нашу кодовую базу и упрощает переопределение активных состояний в CSS. [#29296](https://github.com/twbs/bootstrap/pull/29296).
-
-#### Уведомления
-
-- Удалено автоматическое затемнение элементов `<hr>` в вариантах класса `.alert-*`. `<hr>` используют `rgba()` для своего цвета, так что они все равно должны естественным образом смешиваться.
-
-#### Значки
-
-Значки были переработаны, чтобы лучше отличать себя от кнопок и лучше использовать служебные классы.
-
-- Удалены и заменены классы модификаторов `.badge` на вспомогательные классы фона (например, используйте `.bg-primary` вместо `.badge-primary`).
-- Удалены `.badge-pill` из служебного класса `.rounded-pill`.
-- Удалены стили наведения и фокуса значка для `a.badge` и `button.badge`.
-
-#### Кнопки
-
-- Флажок/переключатель удален из подключаемого модуля кнопки в пользу решения только для CSS, которое задокументировано в [проверка формы и радио]({{< docsref "/forms/checks-radios#кнопки-переключения" >}}). Класс `.btn-check` может быть добавлен к входам, любая метка с `.btn` и классом модификатора может использоваться для оформления меток. [См. #30650](https://github.com/twbs/bootstrap/pull/30650).
-
-#### Карты
-
-- Удалены колонки карт в пользу Masonry сетки [См. #28922](https://github.com/twbs/bootstrap/pull/28922).
-- Удалены колоды карт в пользу сетки, которая добавляет гибкости по сравнению с отзывчивым поведением.
-
-#### Jumbotron
-
-- Компонент jumbotron удален в пользу служебных классов, таких как `.bg-light` для цвета фона и `.p-*` классов для управления заполнением.
-
-#### Панель навигации
-
-- Все панели навигации теперь требуют наличия контейнера внутри. Это значительно упрощает требования к интервалу и устраняет необходимость в обширных переопределениях CSS, которые мы добавили для адаптивных контейнеров в версии 4.
-
-#### Пагинация
-
-- Ссылки для разбивки на страницы теперь имеют настраиваемое поле `margin-left`, которое динамически округляется по всем углам, когда они отделены друг от друга.
-
-#### Высплывающие окна
-
-- `.arrow` переименовано в `.popover-arrow`
-
-#### Всплывающие подсказки
-
-- `.arrow` переименовано в `.tooltip-arrow`
-
-### Доступность
-
-- В отличие от старого `.sr-only-focusable`, который работал только в сочетании с `.sr-only`, `.sr-only-focusable` можно использовать как отдельный класс без `.sr-only`. [См. #28720](https://github.com/twbs/bootstrap/pull/28720).
-
-### Утилиты
-
-### Сетка
-
-- Уменьшено количество реагирующих утилит заказов на точку останова. Утилита высшего порядка с номером теперь `.order-5` вместо `.order-12`. [См. #28874](https://github.com/twbs/bootstrap/pull/28874).
-
-### Разное
-
-- Добавлен `.bg-body` для быстрой установки фона `<body>` для дополнительных элементов.
-- Утилиты с отрицательной маржей по умолчанию отключены. Вы можете снова включить их, установив `$enable-negative-margins: true`, но имейте в виду, что это может значительно увеличить размер файла.
-
-### Документация
-
-- Удалена страница "Стена ошибок браузера", потому что она устарела.
-- Перешли с Jekyll на Hugo
-
-### Инструменты сборки
-
-- Обновлены все зависимости разработки
-- Мы поддерживаем только последние выпуски Node.js LTS, которые на момент написания - 10 и 12.
+- Removed underscore from public static methods like `_getInstance()` → `getInstance()`.

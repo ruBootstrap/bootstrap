@@ -14,7 +14,7 @@ toc: true
 
 [Установка bootstrap]({{< docsref "/getting-started/download#npm" >}}) как модуль Node.js с использованием npm.
 
-Bootstrap зависит от [Popper](https://popper.js.org/), который указан в свойстве `peerDependencies`. Это означает, что Вам нужно обязательно добавить их обоих в свой `package.json` используя `npm install popper.js`.
+Bootstrap зависит от [Popper](https://popper.js.org/), который указан в свойстве `peerDependencies`. Это означает, что вам нужно обязательно добавить их обоих в свой `package.json`, используя `npm install @popperjs/core`.
 
 Когда все будет завершено, Ваш проект будет иметь такую структуру:
 

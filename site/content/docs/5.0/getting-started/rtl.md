@@ -93,7 +93,7 @@ toc: true
 $font-weight-bold: 700 #{/* rtl:600 */} !default;
 ```
 
-Что будет выводиться следующим образом для ваших CSS по умолчанию и RTL CSS:
+Что приведет к следующему для наших CSS и RTL CSS по умолчанию:
 
 ```css
 /* bootstrap.css */

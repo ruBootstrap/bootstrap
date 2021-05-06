@@ -281,3 +281,25 @@ $border-width: 0;
   border-radius: subtract($border-radius, $border-width);
 }
 ```
+
+## Миксины
+
+В нашем каталоге `scss/mixins/` есть множество миксинов, которые являются основными частями Bootstrap, а также могут использоваться в вашем собственном проекте.
+
+### Цветовые схемы
+
+Доступен сокращенный миксин для медиа-запроса `prefers-color-scheme` с поддержкой `light`, `dark` и пользовательских цветовых схем.
+
+{{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
+
+```scss
+.custom-element {
+  @include color-scheme(dark) {
+    // Вставьте сюда стили темного режима
+  }
+
+  @include color-scheme(custom-named-scheme) {
+    // Вставьте здесь собственные стили цветовой схемы
+  }
+}
+```

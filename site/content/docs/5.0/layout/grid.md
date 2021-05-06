@@ -17,14 +17,14 @@ toc: true
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      Один из трех колонок
+    <div class="col">
+      Колонка
     </div>
-    <div class="col-sm">
-      Один из трех колонок
+    <div class="col">
+      Колонка
     </div>
-    <div class="col-sm">
-      Один из трех колонок
+    <div class="col">
+      Колонка
     </div>
   </div>
 </div>
@@ -434,6 +434,9 @@ $grid-gutter-width: 1.5rem;
 
 // Подготавливает элемент к сетке (применив все, кроме ширины)
 @include make-col-ready();
+
+// Без дополнительных значений размера миксин создаст одинаковые столбцы (аналогично использованию .col)
+@include make-col();
 @include make-col($size, $columns: $grid-columns);
 
 // Получите удовольствие, смещая или изменяя порядок сортировки

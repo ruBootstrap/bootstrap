@@ -119,12 +119,12 @@ var tooltip = new bootstrap.Tooltip(exampleEl, options)
 {{< callout warning >}}
 ##### Переполнение `auto` и `scroll`
 
-Положение всплывающей подсказки пытается автоматически измениться, когда родительский контейнер имеет `overflow: auto` или `overflow: scroll`, как наш `.table-responsive`, но по-прежнему сохраняет исходное расположение размещения. Чтобы решить эту проблему, установите для параметра `boundary` значение, отличное от значения по умолчанию, `'scrollParent'`, например, `'window'`:
+Положение всплывающей подсказки пытается автоматически измениться, когда **родительский контейнер** имеет `overflow: auto` или `overflow: scroll`, как наш `.table-responsive`, но по-прежнему сохраняет исходное расположение размещения. Чтобы решить эту проблему, установите [параметр `boundary`](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (для модификатора переворота, использующего параметр `popperConfig`) для любого HTMLElement на переопределить значение по умолчанию `'clippingParents'`, например, `document.body`:
 
 ```js
 var exampleEl = document.getElementById('example')
 var tooltip = new bootstrap.Tooltip(exampleEl, {
-  boundary: 'window'
+  boundary: document.body // or document.querySelector('#boundary')
 })
 ```
 {{< /callout >}}
@@ -166,7 +166,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Параметры
 
-Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`. Обязательно измените тип case имени опции с camelCase на kebab-case при передаче через атрибуты данных. Например: вместо использования `data-bs-customClass="beautifier"` используйте `data-bs-custom-class="beautifier"`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`. Обязательно измените тип case имени параметра с camelCase на kebab-case при передаче параметров через атрибуты данных. Например, вместо использования `data-bs-customClass="beautifier"` используйте `data-bs-custom-class="beautifier"`.
 
 {{< callout warning >}}
 Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
@@ -271,7 +271,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Граница ограничения переполнения всплывающей подсказки. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в Popper <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">документации preventOverflow</a>.</td>
+      <td>Граница ограничения переполнения всплывающей подсказки (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow в документации Popper</a>.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>

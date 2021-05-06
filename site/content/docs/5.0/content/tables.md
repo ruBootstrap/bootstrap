@@ -281,7 +281,7 @@ toc: true
         <tr>
           <td>Эта ячейка наследует <code>vertical-align: middle;</code> из таблицы</td>
           <td>Эта ячейка наследует <code>vertical-align: middle;</code> из таблицы</td>
-          <td class="align-top">This cell is aligned to the top.</td>
+          <td class="align-top">Эта ячейка выровнена по верхнему краю.</td>
           <td>Это текст-заполнитель, предназначенный для того, чтобы занять довольно много места по вертикали, чтобы продемонстрировать, как работает вертикальное выравнивание в предыдущих ячейках.</td>
         </tr>
       </tbody>
@@ -290,31 +290,29 @@ toc: true
 </div>
 
 ```html
-<table class="table table-sm table-dark">
-  <div class="table-responsive">
-    <table class="table align-middle">
-      <thead>
-        <tr>
-          ...
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          ...
-        </tr>
-        <tr class="align-bottom">
-          ...
-        </tr>
-        <tr>
-          <td>...</td>
-          <td>...</td>
-          <td class="align-top">Эта ячейка выровнена по верхнему краю.</td>
-          <td>...</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</table>
+<div class="table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        ...
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        ...
+      </tr>
+      <tr class="align-bottom">
+        ...
+      </tr>
+      <tr>
+        <td>...</td>
+        <td>...</td>
+        <td class="align-top">Эта ячейка выровнена по верхнему краю.</td>
+        <td>...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 ```
 
 ## Вложенность

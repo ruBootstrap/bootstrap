@@ -903,6 +903,56 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 {{< /example >}}
 
+### Поведение автоматического закрытия
+
+По умолчанию раскрывающееся меню закрывается при нажатии внутри или вне раскрывающегося меню. Вы можете использовать опцию `autoClose`, чтобы изменить поведение раскрывающегося списка.
+
+{{< example >}}
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+    Раскрывающийся список по умолчанию
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+    Кликабельно снаружи
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+    Кликабельно внутри
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+    Ручное закрытие
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+    <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+  </ul>
+</div>
+{{< /example >}}
+
 ## Sass
 
 ### Переменные
@@ -967,7 +1017,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 
 ### Параметры
 
-Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-offset=""`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-offset=""`. Обязательно измените тип case имени параметра с camelCase на kebab-case при передаче параметров через атрибуты данных. Например, вместо использования `data-bs-autoClose="false"` используйте `data-bs-auto-close="false"`.
 
 <table class="table">
   <thead>
@@ -983,7 +1033,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Граница ограничения переполнения раскрывающегося меню. По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow</a> документации Popper.</td>
+      <td>Граница ограничения переполнения раскрывающегося меню (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительные сведения смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow в документации Popper</a>.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
@@ -1018,6 +1068,20 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       </td>
     </tr>
     <tr>
+      <td><code>autoClose</code></td>
+      <td>boolean | string</td>
+      <td><code>true</code></td>
+      <td>
+        <p>Настройте поведение автоматического закрытия раскрывающегося списка:</p>
+        <ul>
+          <li><code>true</code> - раскрывающийся список будет закрыт, щелкнув за пределами или внутри раскрывающегося меню.</li>
+          <li><code>false</code> - раскрывающийся список будет закрыт, если щелкнуть переключатель и вручную вызвать метод <code>hide</code> или <code>toggle</code>. (Также не закроется при нажатии клавиши <kbd>esc</kbd>)</li>
+          <li><code>'inside'</code> - раскрывающийся список будет закрыт (только) щелчком внутри раскрывающегося меню.</li>
+          <li><code>'outside'</code> - раскрывающийся список будет закрыт (только) при щелчке за пределами раскрывающегося меню.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td><code>popperConfig</code></td>
       <td>null | object | function</td>
       <td><code>null</code></td>
@@ -1035,7 +1099,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 var dropdown = new bootstrap.Dropdown(element, {
   popperConfig: function (defaultBsPopperConfig) {
     // var newPopperConfig = {...}
-    // use defaultBsPopperConfig if needed...
+    // при необходимости используйте defaultBsPopperConfig...
     // return newPopperConfig
   }
 })
