@@ -9,20 +9,20 @@ toc: true
 
 ## Зависимости
 
-- Отказ jQuery.
+- Удален jQuery.
 - Обновлен с Popper v1.x до Popper v2.x.
 - Заменен Libsass на Dart Sass в качестве нашего компилятора Sass, учитывая, что Libsass устарел.
 - Мигрировал с Jekyll на Hugo для создания нашей документации.
 
 ## Поддержка браузера
 
-- Отказ Internet Explorer 10 и 11
-- Отказ Microsoft Edge < 16 (Legacy Edge)
-- Отказ Firefox < 60
-- Отказ Safari < 10
-- Отказ iOS Safari < 10
-- Отказ Chrome < 60
-- Отказ Android < 6
+- Удален Internet Explorer 10 и 11
+- Удален Microsoft Edge < 16 (Legacy Edge)
+- Удален Firefox < 60
+- Удален Safari < 10
+- Удален iOS Safari < 10
+- Удален Chrome < 60
+- Удален Android < 6
 
 <hr class="my-5">
 
