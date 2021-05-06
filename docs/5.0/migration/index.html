@@ -433,37 +433,37 @@
     <li><a href="#поддержка-браузера">Поддержка браузера</a></li>
     <li><a href="#изменения-в-документации">Изменения в документации</a></li>
     <li><a href="#sass">Sass</a></li>
-    <li><a href="#color-system">Color system</a></li>
-    <li><a href="#grid-updates">Grid updates</a></li>
-    <li><a href="#content-reboot-etc">Content, Reboot, etc</a></li>
+    <li><a href="#цветовая-система">Цветовая система</a></li>
+    <li><a href="#обновления-сетки">Обновления сетки</a></li>
+    <li><a href="#контент-перезагрузка-и-т-д">Контент, перезагрузка и т. д.</a></li>
     <li><a href="#rtl">RTL</a></li>
-    <li><a href="#forms">Forms</a></li>
-    <li><a href="#components">Components</a>
+    <li><a href="#формы">Формы</a></li>
+    <li><a href="#компоненты">Компоненты</a>
       <ul>
-        <li><a href="#accordion">Accordion</a></li>
-        <li><a href="#alerts">Alerts</a></li>
-        <li><a href="#badges">Badges</a></li>
-        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-        <li><a href="#buttons">Buttons</a></li>
-        <li><a href="#card">Card</a></li>
-        <li><a href="#carousel">Carousel</a></li>
-        <li><a href="#close-buttton">Close buttton</a></li>
-        <li><a href="#collapse">Collapse</a></li>
-        <li><a href="#dropdowns">Dropdowns</a></li>
-        <li><a href="#jumbotron">Jumbotron</a></li>
-        <li><a href="#list-group">List group</a></li>
-        <li><a href="#navs-and-tabs">Navs and tabs</a></li>
-        <li><a href="#navbars">Navbars</a></li>
+        <li><a href="#аккордеон">Аккордеон</a></li>
+        <li><a href="#оповещения">Оповещения</a></li>
+        <li><a href="#значки">Значки</a></li>
+        <li><a href="#хлебные-крошки">Хлебные крошки</a></li>
+        <li><a href="#кнопки">Кнопки</a></li>
+        <li><a href="#карточка">Карточка</a></li>
+        <li><a href="#карусель">Карусель</a></li>
+        <li><a href="#кнопка-закрытия">Кнопка закрытия</a></li>
+        <li><a href="#сворачиваемое">Сворачиваемое</a></li>
+        <li><a href="#выпадающие-списки">Выпадающие списки</a></li>
+        <li><a href="#джамботрон">Джамботрон</a></li>
+        <li><a href="#группа-списка">Группа списка</a></li>
+        <li><a href="#навигация-и-табы">Навигация и табы</a></li>
+        <li><a href="#панели-навигации">Панели навигации</a></li>
         <li><a href="#offcanvas">Offcanvas</a></li>
-        <li><a href="#pagination">Pagination</a></li>
-        <li><a href="#popovers">Popovers</a></li>
-        <li><a href="#spinners">Spinners</a></li>
-        <li><a href="#toasts">Toasts</a></li>
-        <li><a href="#tooltips">Tooltips</a></li>
+        <li><a href="#пагинация">Пагинация</a></li>
+        <li><a href="#поповеры">Поповеры</a></li>
+        <li><a href="#спиннеры">Спиннеры</a></li>
+        <li><a href="#тосты">Тосты</a></li>
+        <li><a href="#тултипы">Тултипы</a></li>
       </ul>
     </li>
-    <li><a href="#utilities">Utilities</a></li>
-    <li><a href="#helpers">Helpers</a></li>
+    <li><a href="#утилиты">Утилиты</a></li>
+    <li><a href="#помощники">Помощники</a></li>
     <li><a href="#javascript">JavaScript</a></li>
   </ul>
 </nav>
@@ -544,447 +544,447 @@
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>scale-color()</code> function to <code>shift-color()</code> to avoid collision with Sass&rsquo;s own color scaling function.</p>
+<p><span class="badge bg-danger">Breaking</span> Функция <code>scale-color()</code> переименована в <code>shift-color()</code>, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.</p>
 </li>
 <li>
-<p><code>box-shadow</code> mixins now allow <code>null</code> values and drop <code>none</code> from multiple arguments. <a href="https://github.com/twbs/bootstrap/pull/30394">Смотрите #30394</a>.</p>
+<p>Примеси <code>box-shadow</code> теперь допускают <code>null</code> значения и отбрасывают <code>none</code> из нескольких аргументов. <a href="https://github.com/twbs/bootstrap/pull/30394">Смотрите #30394</a>.</p>
 </li>
 <li>
-<p>The <code>border-radius()</code> mixin now has a default value.</p>
-</li>
-</ul>
-<h2 id="color-system">Color system</h2>
-<ul>
-<li>
-<p>The color system which worked with <code>color-level()</code> and <code>$theme-color-interval</code> was removed in favor of a new color system. All <code>lighten()</code> and <code>darken()</code> functions in our codebase are replaced by <code>tint-color()</code> and <code>shade-color()</code>. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The <code>shift-color()</code> will either tint or shade a color depending on whether its weight parameter is positive or negative. <a href="https://github.com/twbs/bootstrap/pull/30622">Смотрите #30622</a> for more details.</p>
-</li>
-<li>
-<p>Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.</p>
-</li>
-<li>
-<p>Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.1 AA contrast. Also changed our color contrast color from <code>$gray-900</code> to <code>$black</code>.</p>
-</li>
-<li>
-<p>To support our color system, we&rsquo;ve added new custom <code>tint-color()</code> and <code>shade-color()</code> functions to mix our colors appropriately.</p>
+<p>Примесь <code>border-radius()</code> теперь имеет значение по умолчанию.</p>
 </li>
 </ul>
-<h2 id="grid-updates">Grid updates</h2>
+<h2 id="цветовая-система">Цветовая система</h2>
 <ul>
 <li>
-<p><strong>New breakpoint!</strong> Added new <code>xxl</code> breakpoint for <code>1400px</code> and up. No changes to all other breakpoints.</p>
+<p>Цветовая система, которая работала с <code>color-level()</code> и <code>$theme-color-interval</code>, была удалена в пользу новой цветовой системы. Все функции <code>lighten()</code> и <code>darken()</code> в нашей кодовой базе заменены на <code>tint-color()</code> и <code>shade-color()</code>. Эти функции будут смешивать цвет с белым или черным вместо изменения его яркости на фиксированную величину. <code>shift-color()</code> будет либо подкрашивать, либо затенять цвет в зависимости от того, является ли его параметр веса положительным или отрицательным. <a href="https://github.com/twbs/bootstrap/pull/30622">Смотрите #30622</a> для получения дополнительных сведений.</p>
 </li>
 <li>
-<p><strong>Improved gutters.</strong> Gutters are now set in rems, and are narrower than v4 (<code>1.5rem</code>, or about <code>24px</code>, down from <code>30px</code>). This aligns our grid system&rsquo;s gutters with our spacing utilities.</p>
+<p>Добавлены новые оттенки и оттенки для каждого цвета, предоставляя девять отдельных цветов для каждого основного цвета в качестве новых переменных Sass.</p>
+</li>
+<li>
+<p>Улучшен цветовой контраст. Коэффициент цветовой контрастности увеличен с 3:1 до 4.5:1 и обновлены синий, зеленый, голубой и розовый цвета, чтобы обеспечить контраст WCAG 2.1 AA. Также изменен цвет нашего цветового контраста с <code>$gray-900</code> на <code>$black</code>.</p>
+</li>
+<li>
+<p>Для поддержки нашей цветовой системы мы добавили новые пользовательские функции <code>tint-color()</code> и <code>shade-color()</code> для правильного смешивания цвето.</p>
+</li>
+</ul>
+<h2 id="обновления-сетки">Обновления сетки</h2>
 <ul>
-<li>Added new <a href="https://getbootstrap.su/docs/5.0/layout/gutters/">gutter class</a> (<code>.g-*</code>, <code>.gx-*</code>, and <code>.gy-*</code>) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.</li>
-<li><span class="badge bg-danger">Breaking</span> Renamed <code>.no-gutters</code> to <code>.g-0</code> to match new gutter utilities.</li>
+<li>
+<p><strong>Новая контрольная точка!</strong> Добавлена новая контрольная точка <code>xxl</code> для <code>1400px</code> и выше. Никаких изменений для всех остальных контрольных точек.</p>
+</li>
+<li>
+<p><strong>Улучшенные промежутки.</strong> Промежутки теперь устанавливаются в ремах, и они уже, чем v4 (<code>1.5rem</code>, или примерно <code>24px</code>, по сравнению с <code>30px</code>). Это выравнивает промежутки нашей сеточной системы с нашими утилитами интервала.</p>
+<ul>
+<li>Добавлен новый <a href="https://getbootstrap.su/docs/5.0/layout/gutters/">класс gutter</a> (<code>.g-*</code>, <code>.gx-*</code> и <code>.gy-*</code>) для управления горизонтальным / вертикальные промежутки, горизонтальные промежутки и вертикальные промежутки.</li>
+<li><span class="badge bg-danger">Breaking</span> <code>.no-gutters</code> переименован в <code>.g-0</code>, чтобы соответствовать новым утилитам промежутков.</li>
 </ul>
 </li>
 <li>
-<p>Columns no longer have <code>position: relative</code> applied, so you may have to add <code>.position-relative</code> to some elements to restore that behavior.</p>
+<p>К столбцам больше не применяется <code>position: relative</code>, поэтому вам, возможно, придется добавить <code>.position-relative</code> к некоторым элементам, чтобы восстановить это поведение.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped several <code>.order-*</code> classes that often went unused. We now only provide <code>.order-1</code> to <code>.order-5</code> out of the box.</p>
+<p><span class="badge bg-danger">Breaking</span> Удалили несколько классов <code>.order-*</code>, которые часто не использовались. Теперь из коробки мы предоставляем только от <code>.order-1</code> до <code>.order-5</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped the <code>.media</code> component as it can be easily replicated with utilities. <a href="https://github.com/twbs/bootstrap/pull/28265">Смотрите #28265</a> and the <a href="/docs/5.0/utilities/flex/#media-object">flex utilities page for an example</a>.</p>
+<p><span class="badge bg-danger">Breaking</span> Отказ от компонента <code>.media</code>, так как его можно легко воспроизвести с помощью утилит. <a href="https://github.com/twbs/bootstrap/pull/28265">Смотрите #28265</a> и <a href="/docs/5.0/utilities/flex/#media-object">страница гибких утилит для примера</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>bootstrap-grid.css</code> now only applies <code>box-sizing: border-box</code> to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.</p>
+<p><span class="badge bg-danger">Breaking</span> <code>bootstrap-grid.css</code> теперь применяет к столбцу только <code>box-sizing: border-box</code> вместо сброса глобального размера поля. Таким образом, наши стили сетки можно использовать в большем количестве мест без помех.</p>
 </li>
 <li>
-<p><code>$enable-grid-classes</code> no longer disables the generation of container classes anymore. <a href="https://github.com/twbs/bootstrap/pull/29146">Смотрите #29146.</a></p>
+<p><code>$enable-grid-classes</code> больше не отключает создание контейнерных классов. <a href="https://github.com/twbs/bootstrap/pull/29146">Смотрите #29146.</a></p>
 </li>
 <li>
-<p>Updated the <code>make-col</code> mixin to default to equal columns without a specified size.</p>
+<p>Обновлен миксин <code>make-col</code> по умолчанию для равных столбцов без указанного размера.</p>
 </li>
 </ul>
-<h2 id="content-reboot-etc">Content, Reboot, etc</h2>
+<h2 id="контент-перезагрузка-и-т-д">Контент, перезагрузка и т. д.</h2>
 <ul>
 <li>
-<p><strong><a href="/docs/5.0/getting-started/rfs/">RFS</a> is now enabled by default.</strong> Headings using the <code>font-size()</code> mixin will automatically adjust their <code>font-size</code> to scale with the viewport. <em>This feature was previously opt-in with v4.</em></p>
+<p><strong><a href="/docs/5.0/getting-started/rfs/">RFS</a> теперь включен по умолчанию.</strong> Заголовки, использующие миксин <code>font-size()</code>, автоматически изменят свой <code>font-size</code> масштабировать вместе с окном просмотра. <em>Эта функция ранее была включена в v4.</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Overhauled our display typography to replace our <code>$display-*</code> variables and with a <code>$display-font-sizes</code> Sass map. Also removed the individual <code>$display-*-weight</code> variables for a single <code>$display-font-weight</code> and adjusted <code>font-size</code>s.</p>
+<p><span class="badge bg-danger">Breaking</span> Переработана типография дисплея, заменив переменные <code>$display-*</code> на карту Sass <code>$display-font-sizes</code>. Также удалены отдельные переменные <code>$display-*-weight</code> для одного <code>$display-font-weight</code> и скорректированы <code>font-size</code>s.</p>
 </li>
 <li>
-<p>Added two new <code>.display-*</code> heading sizes, <code>.display-5</code> and <code>.display-6</code>.</p>
+<p>Добавлены два новых размера заголовков <code>.display-*</code>, <code>.display-5</code> и <code>.display-6</code>.</p>
 </li>
 <li>
-<p><strong>Links are underlined by default</strong> (not just on hover), unless they&rsquo;re part of specific components.</p>
+<p><strong>Ссылки по умолчанию подчеркнуты</strong> (не только при наведении курсора), если они не являются частью определенных компонентов.</p>
 </li>
 <li>
-<p><strong>Redesigned tables</strong> to refresh their styles and rebuild them with CSS variables for more control over styling.</p>
+<p><strong>Переработанные таблицы</strong>, чтобы обновить их стили и перестроить их с помощью переменных CSS для большего контроля над стилями.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Nested tables do not inherit styles anymore.</p>
+<p><span class="badge bg-danger">Breaking</span> Вложенные таблицы больше не наследуют стили.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> and <code>.thead-dark</code> are dropped in favor of the <code>.table-*</code> variant classes which can be used for all table elements (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code>).</p>
+<p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> и <code>.thead-dark</code> удаляются в пользу классов-вариантов <code>.table-*</code>, которые могут использоваться для всех элементов таблицы (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> и <code>td</code>).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> The <code>table-row-variant()</code> mixin is renamed to <code>table-variant()</code> and accepts only 2 parameters: <code>$color</code> (colon name) and <code>$value</code> (color code). The border color and accent colors are automatically calculated based on the table factor variables.</p>
+<p><span class="badge bg-danger">Breaking</span> Примесь <code>table-row-variant()</code> переименована в <code>table-variant()</code> и принимает только 2 параметра: <code>$color</code> (имя двоеточия) и <code>$value</code> (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.</p>
 </li>
 <li>
-<p>Split table cell padding variables into <code>-y</code> and <code>-x</code>.</p>
+<p>Разделены переменные заполнения ячеек таблицы на <code>-y</code> и <code>-x</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.pre-scrollable</code> class. <a href="https://github.com/twbs/bootstrap/pull/29135">Смотрите #29135</a></p>
+<p><span class="badge bg-danger">Breaking</span> Удален класс <code>.pre-scrollable</code>. <a href="https://github.com/twbs/bootstrap/pull/29135">Смотрите #29135</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.text-*</code> utilities do not add hover and focus states to links anymore. <code>.link-*</code> helper classes can be used instead. <a href="https://github.com/twbs/bootstrap/pull/29267">Смотрите #29267</a></p>
+<p><span class="badge bg-danger">Breaking</span> Утилиты <code>.text-*</code> больше не добавляют к ссылкам состояния наведения и фокуса. Вместо этого можно использовать вспомогательные классы <code>.link-*</code>. <a href="https://github.com/twbs/bootstrap/pull/29267">Смотрите #29267</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.text-justify</code> class. <a href="https://github.com/twbs/bootstrap/pull/29793">Смотрите #29793</a></p>
+<p><span class="badge bg-danger">Breaking</span> Удален класс <code>.text-justify</code>. <a href="https://github.com/twbs/bootstrap/pull/29793">Смотрите #29793</a></p>
 </li>
 <li>
-<p>Reset default horizontal <code>padding-left</code> on <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements from browser default <code>40px</code> to <code>2rem</code>.</p>
+<p>Сброшен по умолчанию горизонтальный <code>padding-left</code> для элементов <code>&lt;ul&gt;</code> и <code>&lt;ol&gt;</code> с <code>40px</code> по умолчанию браузера на <code>2rem</code>.</p>
 </li>
 <li>
-<p>Added <code>$enable-smooth-scroll</code>, which applies <code>scroll-behavior: smooth</code> globally—except for users asking for reduced motion through <code>prefers-reduced-motion</code> media query. <a href="https://github.com/twbs/bootstrap/pull/31877">Смотрите #31877</a></p>
+<p>Добавлен <code>$enable-smooth-scroll</code>, который применяет <code>scroll-behavior: smooth</code> глобально, за исключением пользователей, запрашивающих уменьшение движения с помощью медиа-запроса <code>prefers-reduced-motion</code>. <a href="https://github.com/twbs/bootstrap/pull/31877">Смотрите #31877</a></p>
 </li>
 </ul>
 <h2 id="rtl">RTL</h2>
 <ul>
-<li>Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., <code>start</code> and <code>end</code> in lieu of <code>left</code> and <code>right</code>.</li>
+<li>Переменные, утилиты и миксины, зависящие от горизонтального направления, были переименованы для использования логических свойств, подобных тем, которые присутствуют в макетах flexbox, например, <code>start</code> и <code>end</code> вместо <code>left</code> и <code>right</code>.</li>
 </ul>
-<h2 id="forms">Forms</h2>
+<h2 id="формы">Формы</h2>
 <ul>
 <li>
-<p><strong>Added new floating forms!</strong> We&rsquo;ve promoted the Floating labels example to fully supported form components. <a href="/docs/5.0/forms/floating-labels/">See the new Floating labels page.</a></p>
+<p><strong>Добавлены новые плавающие формы!</strong> Мы продвинули пример с плавающими метками до полностью поддерживаемых компонентов формы. <a href="/docs/5.0/forms/floating-labels/">Смотрите новую страницу «Плавающие метки».</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Consolidated native and custom form elements.</strong> Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.</p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Объединенные собственные и настраиваемые элементы формы.</strong> Флажки, радио, выборки и другие входные данные, которые имели собственные и настраиваемые классы в версии 4, были объединены. Теперь почти все наши элементы формы полностью настраиваемые, для большинства из них не требуется настраиваемый HTML.</p>
 <ul>
-<li><code>.custom-check</code> is now <code>.form-check</code>.</li>
-<li><code>.custom-check.custom-switch</code> is now <code>.form-check.form-switch</code>.</li>
-<li><code>.custom-select</code> is now <code>.form-select</code>.</li>
-<li><code>.custom-file</code> and <code>.form-file</code> have been replaced by custom styles on top of <code>.form-control</code>.</li>
-<li><code>.custom-range</code> is now <code>.form-range</code>.</li>
-<li>Dropped native <code>.form-control-file</code> and <code>.form-control-range</code>.</li>
+<li><code>.custom-check</code> теперь называется <code>.form-check</code>.</li>
+<li><code>.custom-check.custom-switch</code> теперь называется <code>.form-check.form-switch</code>.</li>
+<li><code>.custom-select</code> теперь называется <code>.form-select</code>.</li>
+<li><code>.custom-file</code> и <code>.form-file</code> были заменены пользовательскими стилями поверх <code>.form-control</code>.</li>
+<li><code>.custom-range</code> теперь называется <code>.form-range</code>.</li>
+<li>Удалены нативные <code>.form-control-file</code> и <code>.form-control-range</code>.</li>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.input-group-append</code> and <code>.input-group-prepend</code>. You can now just add buttons and <code>.input-group-text</code> as direct children of the input groups.</p>
+<p><span class="badge bg-danger">Breaking</span> Удалены <code>.input-group-append</code> и <code>.input-group-prepend</code>. Теперь вы можете просто добавить кнопки и <code>.input-group-text</code> в качестве прямых потомков групп ввода.</p>
 </li>
 <li>
-<p>The longstanding <a href="https://github.com/twbs/bootstrap/issues/25110">Missing border radius on input group with validation feedback bug</a> is finally fixed by adding an additional <code>.has-validation</code> class to input groups with validation.</p>
+<p>Давний <a href="https://github.com/twbs/bootstrap/issues/25110">Отсутствующий радиус границы в группе ввода с ошибкой обратной связи с проверкой</a>, наконец, исправлен путем добавления дополнительного класса <code>.has-validation</code> во входные группы с проверкой.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Dropped form-specific layout classes for our grid system.</strong> Use our grid and utilities instead of <code>.form-group</code>, <code>.form-row</code>, or <code>.form-inline</code>.</p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Исключены классы макета, специфичные для формы, для нашей системы сеток.</strong> Используйте нашу сетку и утилиты вместо <code>.form-group</code>, <code>.form-row</code> или <code>.form-inline</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Form labels now require <code>.form-label</code>.</p>
+<p><span class="badge bg-danger">Breaking</span> Метки форм теперь требуют <code>.form-label</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.form-text</code> no longer sets <code>display</code>, allowing you to create inline or block help text as you wish just by changing the HTML element.</p>
+<p><span class="badge bg-danger">Breaking</span> <code>.form-text</code> больше не устанавливает <code>display</code>, позволяя вам создавать встроенный или блокировать текст справки по вашему желанию, просто изменяя элемент HTML.</p>
 </li>
 <li>
-<p>Validation icons are no longer applied to <code>&lt;select&gt;</code>s with <code>multiple</code>.</p>
+<p>Иконки валидации больше не применяются к элементам <code>&lt;select&gt;</code> с параметром <code>multiple</code>.</p>
 </li>
 <li>
-<p>Rearranged source Sass files under <code>scss/forms/</code>, including input group styles.</p>
+<p>Переставлены исходные файлы Sass в <code>scss/forms/</code>, включая стили группы ввода.</p>
 </li>
 </ul>
 <hr class="my-5">
-<h2 id="components">Components</h2>
+<h2 id="компоненты">Компоненты</h2>
 <ul>
-<li>Unified <code>padding</code> values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our <code>$spacer</code> variable. <a href="https://github.com/twbs/bootstrap/pull/30564">Смотрите #30564</a>.</li>
+<li>Унифицированные значения <code>padding</code> для предупреждений, хлебных крошек, карточек, раскрывающихся списков, групп списков, модальных окон, всплывающих окон и всплывающих подсказок должны основываться на нашей переменной <code>$spacer</code>. <a href="https://github.com/twbs/bootstrap/pull/30564">Смотрите #30564</a>.</li>
 </ul>
-<h3 id="accordion">Accordion</h3>
+<h3 id="аккордеон">Аккордеон</h3>
 <ul>
-<li>Added [new accordion component](/docs/5.0/components/accordion/!</li>
+<li>Добавлен [новый компонент аккордеона](/docs/5.0/components/accordion/!</li>
 </ul>
-<h3 id="alerts">Alerts</h3>
+<h3 id="оповещения">Оповещения</h3>
 <ul>
 <li>
-<p>Alerts now have <a href="/docs/5.0/components/alerts/#icons">examples with icons</a>.</p>
+<p>В оповещениях теперь есть <a href="/docs/5.0/components/alerts/#icons">примеры с иконками</a>.</p>
 </li>
 <li>
-<p>Removed custom styles for <code>&lt;hr&gt;</code>s in each alert since they already use <code>currentColor</code>.</p>
-</li>
-</ul>
-<h3 id="badges">Badges</h3>
-<ul>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Dropped all <code>.badge-*</code> color classes for background utilities (e.g., use <code>.bg-primary</code> instead of <code>.badge-primary</code>).</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.badge-pill</code>—use the <code>.rounded-pill</code> utility instead.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Removed hover and focus styles for <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements.</p>
-</li>
-<li>
-<p>Increased default padding for badges from <code>.25em</code>/<code>.5em</code> to <code>.35em</code>/<code>.65em</code>.</p>
+<p>Удалены пользовательские стили для <code>&lt;hr&gt;</code> в каждом оповещении, поскольку они уже используют <code>currentColor</code>.</p>
 </li>
 </ul>
-<h3 id="breadcrumbs">Breadcrumbs</h3>
+<h3 id="значки">Значки</h3>
 <ul>
 <li>
-<p>Simplified the default appearance of breadcrumbs by removing <code>padding</code>, <code>background-color</code>, and <code>border-radius</code>.</p>
+<p><span class="badge bg-danger">Breaking</span> Удалены все классы цвета <code>.badge-*</code> для фоновых утилит (например, используйте <code>.bg-primary</code> вместо <code>.badge-primary</code>).</p>
 </li>
 <li>
-<p>Added new CSS custom property <code>--bs-breadcrumb-divider</code> for easy customization without needing to recompile CSS.</p>
+<p><span class="badge bg-danger">Breaking</span> Удалено <code>.badge-pill</code>используйте вместо нее утилиту <code>.rounded-pill</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Удалены стили наведения и фокуса для элементов <code>&lt;a&gt;</code> и <code>&lt;button&gt;</code>.</p>
+</li>
+<li>
+<p>Увеличено заполнение по умолчанию для значков с <code>.25em</code>/<code>.5em</code> до <code>.35em</code>/<code>.65em</code>.</p>
 </li>
 </ul>
-<h3 id="buttons">Buttons</h3>
+<h3 id="хлебные-крошки">Хлебные крошки</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong><a href="http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons">Toggle buttons</a>, with checkboxes or radios, no longer require JavaScript and have new markup.</strong> We no long require a wrapping element, add <code>.btn-check</code> to the <code>&lt;input&gt;</code>, and pair it with any <code>.btn</code> classes on the <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>The docs for this has moved from our Buttons page to the new Forms section.</em></p>
+<p>Упрощен внешний вид хлебных крошек по умолчанию, удалив <code>padding</code>, <code>background-color</code> и <code>border-radius</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Dropped <code>.btn-block</code> for utilities.</strong> Instead of using <code>.btn-block</code> on the <code>.btn</code>, wrap your buttons with <code>.d-grid</code> and a <code>.gap-*</code> utility to space them as needed. Switch to responsive classes for even more control over them. <a href="http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons">Read the docs for some examples.</a></p>
-</li>
-<li>
-<p>Updated our <code>button-variant()</code> and <code>button-outline-variant()</code> mixins to support additional parameters.</p>
-</li>
-<li>
-<p>Updated buttons to ensure increased contrast on hover and active states.</p>
-</li>
-<li>
-<p>Disabled buttons now have <code>pointer-events: none;</code>.</p>
+<p>Добавлено новое настраиваемое свойство CSS <code>--bs-breadcrumb-divider</code> для легкой настройки без перекомпиляции CSS.</p>
 </li>
 </ul>
-<h3 id="card">Card</h3>
+<h3 id="кнопки">Кнопки</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.card-deck</code> in favor of our grid. Wrap your cards in column classes and add a parent <code>.row-cols-*</code> container to recreate card decks (but with more control over responsive alignment).</p>
+<p><span class="badge bg-danger">Breaking</span> <strong><a href="http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons">Кнопки переключения</a>, с флажками или радио, больше не требуют JavaScript и имеют новую разметку.</strong> Нам больше не нужен элемент-оболочка, добавьте <code>.btn-check</code> в <code>&lt;input&gt;</code>, и соедините его с любым <code>.btn</code> классы на <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы».</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>.card-columns</code> in favor of Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Смотрите #28922</a>.</p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Удалено <code>.btn-block</code> для утилит.</strong> Вместо использования <code>.btn-block</code> в <code>.btn</code>, оберните ваши кнопки в <code>.d-grid</code> и утилитой <code>.gap-*</code> для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. <a href="http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons">Прочтите документацию для некоторых примеров.</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Replaced the <code>.card</code> based accordion with a <a href="/docs/5.0/components/accordion/">new Accordion component</a>.</p>
+<p>Обновлены миксины <code>button-variant()</code> и <code>button-outline-variant()</code> для поддержки дополнительных параметров.</p>
+</li>
+<li>
+<p>Обновлены кнопки для увеличения контраста при наведении и активном состоянии.</p>
+</li>
+<li>
+<p>Отключенные кнопки теперь имеют <code>pointer-events: none;</code>.</p>
 </li>
 </ul>
-<h3 id="carousel">Carousel</h3>
+<h3 id="карточка">Карточка</h3>
 <ul>
 <li>
-<p>Added new <a href="/docs/5.0/components/carousel/#dark-variant"><code>.carousel-dark</code> variant</a> for dark text, controls, and indicators (great for lighter backgrounds).</p>
+<p><span class="badge bg-danger">Breaking</span> Отказались от <code>.card-deck</code> в пользу нашей сетки. Оберните ваши карты в классы колонок и добавьте родительский контейнер <code>.row-cols-*</code>, чтобы воссоздать колоды карт (но с большим контролем над выравниванием).</p>
 </li>
 <li>
-<p>Replaced chevron icons for carousel controls with new SVGs from <a href="https://icons.getbootstrap.su/">Bootstrap Icons</a>.</p>
+<p><span class="badge bg-danger">Breaking</span> Отказались от <code>.card-columns</code> в пользу Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Смотрите #28922</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Заменен аккордеон на основе <code>.card</code> на <a href="/docs/5.0/components/accordion/">новый компонент Accordion</a>.</p>
 </li>
 </ul>
-<h3 id="close-buttton">Close buttton</h3>
+<h3 id="карусель">Карусель</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.close</code> to <code>.btn-close</code> for a less generic name.</p>
+<p>Добавлен новый <a href="/docs/5.0/components/carousel/#dark-variant">вариант <code>.carousel-dark</code></a> для темного текста, элементов управления и индикаторов (отлично подходит для более светлого фона).</p>
 </li>
 <li>
-<p>Close buttons now use a <code>background-image</code> (embedded SVG) instead of a <code>&amp;times;</code> in the HTML, allowing for easier customization without the need to touch your markup.</p>
-</li>
-<li>
-<p>Added new <code>.btn-close-white</code> variant that uses <code>filter: invert(1)</code> to enable higher contrast dismiss icons against darker backgrounds.</p>
+<p>Шевронные иконки для элементов управления каруселью заменены новыми SVG из <a href="https://icons.getbootstrap.su/">Bootstrap Icons</a>.</p>
 </li>
 </ul>
-<h3 id="collapse">Collapse</h3>
-<ul>
-<li>Removed scroll anchoring for accordions.</li>
-</ul>
-<h3 id="dropdowns">Dropdowns</h3>
+<h3 id="кнопка-закрытия">Кнопка закрытия</h3>
 <ul>
 <li>
-<p>Added new <code>.dropdown-menu-dark</code> variant and associated variables for on-demand dark dropdowns.</p>
+<p><span class="badge bg-danger">Breaking</span> <code>.close</code> переименован в <code>.btn-close</code> для менее общего названия.</p>
 </li>
 <li>
-<p>Added new variable for <code>$dropdown-padding-x</code>.</p>
+<p>Кнопки закрытия теперь используют <code>background-image</code> (встроенный SVG) вместо <code>&amp;times;</code> в HTML, что позволяет упростить настройку без необходимости касаться вашей разметки.</p>
 </li>
 <li>
-<p>Darkened the dropdown divider for improved contrast.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.</p>
-</li>
-<li>
-<p>Dropdown menus now have a <code>data-bs-popper=&quot;static&quot;</code> attribute set when the positioning of the dropdown is static and <code>data-bs-popper=&quot;none&quot;</code> when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper&rsquo;s positioning.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Dropped <code>flip</code> option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> option in <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> modifier.</p>
-</li>
-<li>
-<p>Dropdown menus can now be clickable with a new <code>autoClose</code> option to handle the <a href="/docs/5.0/components/dropdowns/#auto-close-behavior">auto close behavior</a>. You can use this option to accept the click inside or outside the dropdown menu to make it interactive.</p>
-</li>
-<li>
-<p>Dropdowns now support <code>.dropdown-item</code>s wrapped in <code>&lt;li&gt;</code>s.</p>
+<p>Добавлен новый вариант <code>.btn-close-white</code>, который использует <code>filter: invert(1)</code> для включения более контрастных иконок удаления на более темном фоне.</p>
 </li>
 </ul>
-<h3 id="jumbotron">Jumbotron</h3>
+<h3 id="сворачиваемое">Сворачиваемое</h3>
 <ul>
-<li><span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. <a href="https://getbootstrap.su/docs/5.0/examples/jumbotron/">See our new Jumbotron example for a demo.</a></li>
+<li>Убрана привязка скролла для аккордеонов.</li>
 </ul>
-<h3 id="list-group">List group</h3>
+<h3 id="выпадающие-списки">Выпадающие списки</h3>
 <ul>
-<li>Added new <a href="/docs/5.0/components/list-group/#numbered"><code>.list-group-numbered</code> modifier</a> to list groups.</li>
+<li>
+<p>Добавлен новый вариант <code>.dropdown-menu-dark</code> и связанные переменные для темных выпадающих списков по запросу.</p>
+</li>
+<li>
+<p>Добавлена новая переменная для <code>$dropdown-padding-x</code>.</p>
+</li>
+<li>
+<p>Затемнен разделитель раскрывающегося списка для улучшения контраста.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Все события для раскрывающегося списка теперь запускаются на кнопке-переключателе раскрывающегося списка, а затем всплывают до родительского элемента.</p>
+</li>
+<li>
+<p>Выпадающие меню теперь имеют атрибут <code>data-bs-popper=&quot;static&quot;</code>, установленный, когда положение раскрывающегося списка является статическим, и <code>data-bs-popper=&quot;none&quot;</code>, когда раскрывающийся список находится на панели навигации. Это добавлено нашим JavaScript и помогает нам использовать настраиваемые стили положения, не мешая позиционированию Popper.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Исключена опция <code>flip</code> для плагина раскрывающегося списка в пользу собственной конфигурации Popper. Теперь вы можете отключить поведение переворачивания, передав пустой массив для параметра <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> в <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> модификатор.</p>
+</li>
+<li>
+<p>На раскрывающиеся меню теперь можно щелкнуть с помощью новой опции <code>autoClose</code> для обработки <a href="/docs/5.0/components/dropdowns/#auto-close-behavior">поведения автоматического закрытия</a>. Вы можете использовать этот параметр, чтобы принять щелчок внутри или за пределами раскрывающегося меню, чтобы сделать его интерактивным.</p>
+</li>
+<li>
+<p>Выпадающие списки теперь поддерживают <code>.dropdown-item</code>, заключенные в <code>&lt;li&gt;</code>.</p>
+</li>
 </ul>
-<h3 id="navs-and-tabs">Navs and tabs</h3>
+<h3 id="джамботрон">Джамботрон</h3>
 <ul>
-<li>Added new <code>null</code> variables for <code>font-size</code>, <code>font-weight</code>, <code>color</code>, and <code>:hover</code> <code>color</code> to the <code>.nav-link</code> class.</li>
+<li><span class="badge bg-danger">Breaking</span> Убрали компонент jumbotron, так как его можно повторить с помощью утилит. <a href="https://getbootstrap.su/docs/5.0/examples/jumbotron/">Смотрите наш новый пример Jumbotron для демонстрации.</a></li>
 </ul>
-<h3 id="navbars">Navbars</h3>
+<h3 id="группа-списка">Группа списка</h3>
 <ul>
-<li><span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).</li>
+<li>Добавлен новый <a href="/docs/5.0/components/list-group/#numbered">модификатор <code>.list-group-numbered</code></a> в список групп.</li>
+</ul>
+<h3 id="навигация-и-табы">Навигация и табы</h3>
+<ul>
+<li>Добавлены новые переменные <code>null</code> для <code>font-size</code>, <code>font-weight</code>, <code>color</code> и <code>:hover</code> <code>color</code> в класс <code>.nav-link</code>.</li>
+</ul>
+<h3 id="панели-навигации">Панели навигации</h3>
+<ul>
+<li><span class="badge bg-danger">Breaking</span> Навбарам теперь требуется контейнер внутри (чтобы значительно упростить требования к интервалам и CSS).</li>
 </ul>
 <h3 id="offcanvas">Offcanvas</h3>
 <ul>
-<li>Added the new <a href="/docs/5.0/components/offcanvas/">offcanvas component</a>.</li>
+<li>Добавлен новый <a href="/docs/5.0/components/offcanvas/">компонент offcanvas</a>.</li>
 </ul>
-<h3 id="pagination">Pagination</h3>
+<h3 id="пагинация">Пагинация</h3>
 <ul>
 <li>
-<p>Pagination links now have customizable <code>margin-left</code> that are dynamically rounded on all corners when separated from one another.</p>
+<p>Ссылки на страницы теперь имеют настраиваемое поле <code>margin-left</code>, которое динамически округляется по всем углам, когда они отделены друг от друга.</p>
 </li>
 <li>
-<p>Added <code>transition</code>s to pagination links.</p>
-</li>
-</ul>
-<h3 id="popovers">Popovers</h3>
-<ul>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.arrow</code> to <code>.popover-arrow</code> in our default popover template.</p>
-</li>
-<li>
-<p>Renamed <code>whiteList</code> option to <code>allowList</code>.</p>
+<p>Добавлен переход <code>transition</code> по ссылкам для пагинации.</p>
 </li>
 </ul>
-<h3 id="spinners">Spinners</h3>
+<h3 id="поповеры">Поповеры</h3>
 <ul>
 <li>
-<p>Spinners now honor <code>prefers-reduced-motion: reduce</code> by slowing down animations. <a href="https://github.com/twbs/bootstrap/pull/31882">Смотрите #31882</a>.</p>
+<p><span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающего окна по умолчанию <code>.arrow</code> переименован в <code>.popover-arrow</code>.</p>
 </li>
 <li>
-<p>Improved spinner vertical alignment.</p>
+<p>Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
 </li>
 </ul>
-<h3 id="toasts">Toasts</h3>
+<h3 id="спиннеры">Спиннеры</h3>
 <ul>
 <li>
-<p>Toasts can now be <a href="/docs/5.0/components/toasts/#placement">positioned</a> in a <code>.toast-container</code> with the help of <a href="/docs/5.0/utilities/position/">positioning utilities</a>.</p>
+<p>Спиннеры теперь учитывают <code>prefers-reduced-motion: reduce</code>, замедляя анимацию. <a href="https://github.com/twbs/bootstrap/pull/31882">Смотрите #31882</a>.</p>
 </li>
 <li>
-<p>Changed default toast duration to 5 seconds.</p>
-</li>
-<li>
-<p>Removed <code>overflow: hidden</code> from toasts and replaced with proper <code>border-radius</code>s with <code>calc()</code> functions.</p>
+<p>Улучшено вертикальное выравнивание спиннера.</p>
 </li>
 </ul>
-<h3 id="tooltips">Tooltips</h3>
+<h3 id="тосты">Тосты</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.arrow</code> to <code>.tooltip-arrow</code> in our default tooltip template.</p>
+<p>Теперь тосты можно <a href="/docs/5.0/components/toasts/#placement">позиционировать</a> в <code>.toast-container</code> с помощью <a href="/docs/5.0/utilities/position/">утилит позиционирования</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> The default value for the <code>fallbackPlacements</code> is changed to <code>['top', 'right', 'bottom', 'left']</code> for better placement of popper elements.</p>
+<p>Изменена длительность тоста по умолчанию на 5 секунд.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>whiteList</code> option to <code>allowList</code>.</p>
+<p>Удалено <code>overflow: hidden</code> из тостов и заменено правильным <code>border-radius</code> с функциями <code>calc()</code>.</p>
 </li>
 </ul>
-<h2 id="utilities">Utilities</h2>
+<h3 id="тултипы">Тултипы</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directoinal names with the addition of RTL support:</p>
-<ul>
-<li>Renamed <code>.left-*</code> and <code>.right-*</code> to <code>.start-*</code> and <code>.end-*</code>.</li>
-<li>Renamed <code>.float-left</code> and <code>.float-right</code> to <code>.float-start</code> and <code>.float-end</code>.</li>
-<li>Renamed <code>.border-left</code> and <code>.border-right</code> to <code>.border-start</code> and <code>.border-end</code>.</li>
-<li>Renamed <code>.rounded-left</code> and <code>.rounded-right</code> to <code>.rounded-start</code> and <code>.rounded-end</code>.</li>
-<li>Renamed <code>.ml-*</code> and <code>.mr-*</code> to <code>.ms-*</code> and <code>.me-*</code>.</li>
-<li>Renamed <code>.pl-*</code> and <code>.pr-*</code> to <code>.ps-*</code> and <code>.pe-*</code>.</li>
-<li>Renamed <code>.text-left</code> and <code>.text-right</code> to <code>.text-start</code> and <code>.text-end</code>.</li>
-</ul>
+<p><span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающей подсказки по умолчанию <code>.arrow</code> переименован в <code>.tooltip-arrow</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Disabled negative margins by default.</p>
+<p><span class="badge bg-danger">Breaking</span> Значение по умолчанию для <code>fallbackPlacements</code> изменено на <code>['top', 'right', 'bottom', 'left']</code> для лучшего размещения элементов.</p>
 </li>
 <li>
-<p>Added new <code>.bg-body</code> class for quickly setting the <code>&lt;body&gt;</code>&rsquo;s background to additional elements.</p>
-</li>
-<li>
-<p>Added new <a href="/docs/5.0/utilities/position/#arrange-elements">position utilities</a> for <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. Values include <code>0</code>, <code>50%</code>, and <code>100%</code> for each property.</p>
-</li>
-<li>
-<p>Added new <code>.translate-middle-x</code> &amp; <code>.translate-middle-y</code> utilities to horizontally or vertically center absolute/fixed positioned elements.</p>
-</li>
-<li>
-<p>Added new <a href="/docs/5.0/utilities/borders/#border-width"><code>border-width</code> utilities</a>.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.text-monospace</code> to <code>.font-monospace</code>.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Removed <code>.text-hide</code> as it&rsquo;s an antiquated method for hiding text that shouldn&rsquo;t be used anymore.</p>
-</li>
-<li>
-<p>Added <code>.fs-*</code> utilities for <code>font-size</code> utilities (with RFS enabled). These use the same scale as HTML&rsquo;s default headings (1-6, large to small), and can be modified via Sass map.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.font-weight-*</code> utilities as <code>.fw-*</code> for brevity and consistency.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Renamed <code>.font-style-*</code> utilities as <code>.fst-*</code> for brevity and consistency.</p>
-</li>
-<li>
-<p>Added <code>.d-grid</code> to display utilities and new <code>gap</code> utilities (<code>.gap</code>) for CSS Grid and flexbox layouts.</p>
-</li>
-<li>
-<p><span class="badge bg-danger">Breaking</span> Removed <code>.rounded-sm</code> and <code>rounded-lg</code>, and introduced a new scale of classes, <code>.rounded-0</code> to <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Смотрите #31687</a>.</p>
-</li>
-<li>
-<p>Added new <code>line-height</code> utilities: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> and <code>.lh-lg</code>. See <a href="/docs/5.0/utilities/text/#line-height">here</a>.</p>
-</li>
-<li>
-<p>Moved the <code>.d-none</code> utility in our CSS to give it more weight over other display utilities.</p>
-</li>
-<li>
-<p>Extended the <code>.visually-hidden-focusable</code> helper to also work on containers, using <code>:focus-within</code>.</p>
+<p><span class="badge bg-danger">Breaking</span> Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
 </li>
 </ul>
-<h2 id="helpers">Helpers</h2>
+<h2 id="утилиты">Утилиты</h2>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Responsive embed helpers have been renamed to <a href="/docs/5.0/helpers/ratio/">ratio helpers</a></strong> with new class names and improved behaviors, as well as a helpful CSS variable.</p>
+<p><span class="badge bg-danger">Breaking</span> Переименовано несколько утилит для использования логических имен свойств вместо прямых имен с добавлением поддержки RTL:</p>
 <ul>
-<li>Classes have been renamed to change <code>by</code> to <code>x</code> in the aspect ratio. For example, <code>.ratio-16by9</code> is now <code>.ratio-16x9</code>.</li>
-<li>We&rsquo;ve dropped the <code>.embed-responsive-item</code> and element group selector in favor of a simpler <code>.ratio &gt; *</code> selector. No more class is needed, and the ratio helper now works with any HTML element.</li>
-<li>The <code>$embed-responsive-aspect-ratios</code> Sass map has been renamed to <code>$aspect-ratios</code> and its values have been simplified to include the class name and the percentage as the <code>key: value</code> pair.</li>
-<li>CSS variables are now generated and included for each value in the Sass map. Modify the <code>--bs-aspect-ratio</code> variable on the <code>.ratio</code> to create any <a href="/docs/5.0/helpers/ratio/#custom-ratios">custom aspect ratio</a>.</li>
+<li>Переименованы <code>.left-*</code> и <code>.right-*</code> в <code>.start-*</code> и <code>.end-*</code>.</li>
+<li>Переименованы <code>.float-left</code> и <code>.float-right</code> в <code>.float-start</code> и <code>.float-end</code>.</li>
+<li>Переименованы <code>.border-left</code> и <code>.border-right</code> в <code>.border-start</code> и <code>.border-end</code>.</li>
+<li>Переименованы <code>.rounded-left</code> и <code>.rounded-right</code> в <code>.rounded-start</code> и <code>.rounded-end</code>.</li>
+<li>Переименованы <code>.ml-*</code> и <code>.mr-*</code> в <code>.ms-*</code> и <code>.me-*</code>.</li>
+<li>Переименованы <code>.pl-*</code> и <code>.pr-*</code> в <code>.ps-*</code> и <code>.pe-*</code>.</li>
+<li>Переименованы <code>.text-left</code> и <code>.text-right</code> в <code>.text-start</code> и <code>.text-end</code>.</li>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>&ldquo;Screen reader&rdquo; classes are now <a href="/docs/5.0/helpers/visually-hidden/">&ldquo;visually hidden&rdquo; classes</a>.</strong></p>
+<p><span class="badge bg-danger">Breaking</span> По умолчанию отрицательные поля отключены.</p>
+</li>
+<li>
+<p>Добавлен новый класс <code>.bg-body</code> для быстрой установки фона <code>&lt;body&gt;</code> для дополнительных элементов.</p>
+</li>
+<li>
+<p>Добавлены новые <a href="/docs/5.0/utilities/position/#arrange-elements">утилиты позиционирования</a> для <code>top</code>, <code>right</code>, <code>bottom</code> и <code>left</code>. Значения для каждого свойства включают <code>0</code>, <code>50%</code> и <code>100%</code>.</p>
+</li>
+<li>
+<p>Добавлены новые утилиты <code>.translate-middle-x</code> и <code>.translate-middle-y</code> для горизонтального или вертикального центрирования абсолютных / фиксированных элементов.</p>
+</li>
+<li>
+<p>Добавлены новые <a href="/docs/5.0/utilities/borders/#border-width">утилиты <code>border-width</code></a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <code>.text-monospace</code> переименован в <code>.font-monospace</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Удален <code>.text-hide</code>, так как это устаревший метод скрытия текста, который больше не следует использовать.</p>
+</li>
+<li>
+<p>Добавлены утилиты <code>.fs-*</code> для утилит <code>font-size</code> (с включенным RFS). Они используют тот же масштаб, что и заголовки HTML по умолчанию (1-6, от большого к маленькому), и могут быть изменены с помощью карты Sass.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Утилиты <code>.font-weight-*</code> переименованы в <code>.fw-*</code> для краткости и единообразия.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Утилиты <code>.font-style-*</code> переименованы в <code>.fst-*</code> для краткости и единообразия.</p>
+</li>
+<li>
+<p>Добавлен <code>.d-grid</code> для отображения утилит и новые утилиты <code>gap</code> (<code>.gap</code>) для макетов CSS Grid и flexbox.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Удалены <code>.rounded-sm</code> и <code>rounded-lg</code>, а также введена новая шкала классов от <code>.rounded-0</code> до <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Смотрите #31687</a>.</p>
+</li>
+<li>
+<p>Добавлены новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. Смотреть <a href="/docs/5.0/utilities/text/#line-height">здесь</a>.</p>
+</li>
+<li>
+<p>Утилита <code>.d-none</code> в нашем CSS перемещена, чтобы придать ей больший вес по сравнению с другими утилитами отображения.</p>
+</li>
+<li>
+<p>Расширен помощник <code>.visually-hidden-focusable</code>, чтобы он также работал с контейнерами, используя <code>:focus-within</code>.</p>
+</li>
+</ul>
+<h2 id="помощники">Помощники</h2>
 <ul>
-<li>Changed the Sass file from <code>scss/helpers/_screenreaders.scss</code> to <code>scss/helpers/_visually-hidden.scss</code></li>
-<li>Renamed <code>.sr-only</code> and <code>.sr-only-focusable</code> to <code>.visually-hidden</code> and <code>.visually-hidden-focusable</code></li>
-<li>Renamed <code>sr-only()</code> and <code>sr-only-focusable()</code> mixins to <code>visually-hidden()</code> and <code>visually-hidden-focusable()</code>.</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Адаптивные помощники по внедрению были переименованы в <a href="/docs/5.0/helpers/ratio/">ratio helpers</a></strong> с новыми именами классов и улучшенным поведением, а также полезной переменной CSS.</p>
+<ul>
+<li>Классы были переименованы, чтобы изменить соотношение сторон <code>by</code> на <code>x</code>. Например, <code>.ratio-16by9</code> теперь <code>.ratio-16x9</code>.</li>
+<li>Мы отказались от селектора <code>.embed-responsive-item</code> и группы элементов в пользу более простого селектора <code>.ratio &gt; *</code>. Класс больше не нужен, и помощник по соотношению теперь работает с любым элементом HTML.</li>
+<li>Карта Sass <code>$embed-responsive-aspect-ratios</code> была переименована в <code>$aspect-ratios</code>, а ее значения были упрощены и теперь включают имя класса и процентное соотношение в качестве пары <code>key: value</code>.</li>
+<li>Переменные CSS теперь генерируются и включаются для каждого значения в карте Sass. Измените переменную <code>--bs-aspect-ratio</code> в <code>.ratio</code>, чтобы создать любое <a href="/docs/5.0/helpers/ratio/#custom-ratios">настраиваемое соотношение сторон</a>.</li>
 </ul>
 </li>
 <li>
-<p><code>bootstrap-utilities.css</code> now also includes our helpers. Helpers don&rsquo;t need to be imported in custom builds anymore.</p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Классы программ чтения с экрана теперь <a href="/docs/5.0/helpers/visually-hidden/">классы &ldquo;визуально скрытые&rdquo;</a>.</strong></p>
+<ul>
+<li>Изменен файл Sass с <code>scss/helpers/_screenreaders.scss</code> на <code>scss/helpers/_visually-hidden.scss</code></li>
+<li><code>.sr-only</code> и <code>.sr-only-focusable</code> переименованы в <code>.visually-hidden</code> и <code>.visually-hidden-focusable</code></li>
+<li>Переименованы миксины <code>sr-only()</code> и <code>sr-only-focusable()</code> в <code>visually-hidden()</code> и <code>visually-hidden-focusable()</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>bootstrap-utilities.css</code> теперь также включает наших помощников. Помощников больше не нужно импортировать в пользовательские сборки.</p>
 </li>
 </ul>
 <h2 id="javascript">JavaScript</h2>
 <ul>
 <li>
-<p><strong>Dropped jQuery dependency</strong> and rewrote plugins to be in regular JavaScript.</p>
+<p><strong>Отказ от зависимости jQuery</strong> и переписаны плагины на обычный JavaScript.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use <code>data-bs-toggle</code> instead of <code>data-toggle</code>.</p>
+<p><span class="badge bg-danger">Breaking</span> Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и вашего собственного кода. Например, мы используем <code>data-bs-toggle</code> вместо <code>data-toggle</code>.</p>
 </li>
 <li>
-<p><strong>All plugins can now accept a CSS selector as the first argument.</strong> You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:</p>
+<p><strong>Все плагины теперь могут принимать селектор CSS в качестве первого аргумента.</strong> Вы можете передать элемент DOM или любой допустимый селектор CSS, чтобы создать новый экземпляр плагина:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
 </code></pre></div></li>
 <li>
-<p><code>popperConfig</code> can be passed as a function that accepts the Bootstrap&rsquo;s default Popper config as an argument, so that you can merge this default configuration in your way. <strong>Applies to dropdowns, popovers, and tooltips.</strong></p>
+<p><code>popperConfig</code> может быть передан как функция, которая принимает конфигурацию Popper по умолчанию Bootstrap в качестве аргумента, так что вы можете объединить эту конфигурацию по умолчанию по-своему. <strong>Применяется к раскрывающимся спискам, всплывающим подсказкам и всплывающим подсказкам.</strong></p>
 </li>
 <li>
-<p>The default value for the <code>fallbackPlacements</code> is changed to <code>['top', 'right', 'bottom', 'left']</code> for better placement of Popper elements. <strong>Applies to dropdowns, popovers, and tooltips.</strong></p>
+<p>Значение по умолчанию для <code>fallbackPlacements</code> изменено на <code>['top', 'right', 'bottom', 'left']</code> для лучшего размещения элементов Popper. <strong>Применяется к раскрывающимся спискам, всплывающим подсказкам и всплывающим подсказкам.</strong></p>
 </li>
 <li>
-<p>Removed underscore from public static methods like <code>_getInstance()</code> → <code>getInstance()</code>.</p>
+<p>Удалено подчеркивание из общедоступных статических методов, таких как <code>_getInstance()</code> → <code>getInstance()</code>.</p>
 </li>
 </ul>
 
