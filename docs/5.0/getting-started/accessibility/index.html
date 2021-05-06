@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.82.0">
+<meta name="generator" content="Hugo 0.83.1">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -449,14 +449,14 @@
 
         <p>Bootstrap предоставляет простую в использовании структуру из готовых стилей, инструментов макета и интерактивных компонентов, позволяя разработчикам создавать веб-сайты и приложения, которые визуально привлекательны, функционально богаты и доступны прямо из коробки.</p>
 <h2 id="обзор-и-ограничения">Обзор и ограничения</h2>
-<p>Общая доступность любого проекта, созданного с помощью Bootstrap, во многом зависит от разметки автора, дополнительных стилей и сценариев, которые они включили. Однако при условии, что они были реализованы правильно, должно быть вполне возможно создавать веб-сайты и приложения с помощью Bootstrap, которые соответствуют <a href="https://www.w3.org/TR/WCAG21/"><abbr title="Рекомендации по доступности веб-контента">WCAG</abbr> 2.1</a> (A/AA/AAA), <a href="https://www.section508.gov/">Раздел 508</a>, а также аналогичные стандарты и требования доступности.</p>
+<p>Общая доступность любого проекта, созданного с помощью Bootstrap, во многом зависит от разметки автора, дополнительных стилей и сценариев, которые они включили. Однако при условии, что они были реализованы правильно, должно быть вполне возможно создавать веб-сайты и приложения с помощью Bootstrap, которые соответствуют <a href="https://www.w3.org/TR/WCAG/"><abbr title="Рекомендации по обеспечению доступности веб-контента">WCAG</abbr> 2.1</a> (A/AA/AAA), <a href="https://www.section508.gov/">Раздел 508</a>, а также аналогичные стандарты и требования доступности..</p>
 <h3 id="структурная-разметка">Структурная разметка</h3>
 <p>Стиль и макет Bootstrap можно применять к широкому спектру структур разметки. Эта документация направлена на то, чтобы предоставить разработчикам примеры передового опыта, чтобы продемонстрировать использование самого Bootstrap и проиллюстрировать соответствующую семантическую разметку, включая способы решения потенциальных проблем доступности.</p>
 <h3 id="интерактивные-компоненты">Интерактивные компоненты</h3>
 <p>Интерактивные компоненты Bootstrap, такие как модальные диалоги, раскрывающиеся меню и настраиваемые всплывающие подсказки, предназначены для работы с сенсорным экраном, мышью и клавиатурой. Благодаря использованию соответствующих <a href="https://www.w3.org/WAI/standards-guidelines/aria/"><abbr title="Инициатива веб-доступности">WAI</abbr>-<abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr></a> ролей и атрибутов, эти компоненты также должны быть понятными и управляемыми с использованием вспомогательных технологий (таких как программы чтения с экрана).</p>
 <p>Поскольку компоненты Bootstrap специально разработаны как общие, авторам может потребоваться включить дополнительные роли и атрибуты <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>, а также поведение JavaScript, чтобы точнее передать суть и функциональность их компонентов. Обычно это отмечается в документации.</p>
 <h3 id="цветовой-контраст">Цветовой контраст</h3>
-<p>Некоторые комбинации цветов, которые в настоящее время составляют палитру Bootstrap по умолчанию - используемые во всей структуре для таких вещей, как варианты кнопок, варианты уведомлений, индикаторы проверки формы - могут привести к <em>недостаточному</em> цветовому контрасту (ниже рекомендуемого <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">коэффициента контрастности цвета текста WCAG 2.1, равного 4.5:1</a> and the <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">коэффициент контрастности нетекстовых цветов WCAG 2.1, равного 3:1</a>), особенно при использовании на светлом фоне. Авторам рекомендуется протестировать свое конкретное использование цвета и, при необходимости, вручную изменить/расширить эти цвета по умолчанию, чтобы обеспечить адекватные коэффициенты цветового контраста.</p>
+<p>Некоторые комбинации цветов, которые в настоящее время составляют палитру Bootstrap по умолчанию - используемые во всей структуре для таких вещей, как варианты кнопок, варианты предупреждений, индикаторы проверки формы - могут привести к <em>недостаточному</em> цветовому контрасту (ниже рекомендуемого коэффициента контрастности цвета текста <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">WCAG 2.1, равного 4.5:1</a> и <a href="https://www.w3.org/TR/WCAG/#non-text-contrast">коэффициент контрастности нетекстовых цвето WCAG 2.1 3:1</a>), особенно при использовании на светлом фоне. Авторам рекомендуется протестировать свое конкретное использование цвета и, при необходимости, вручную изменить / расширить эти цвета по умолчанию, чтобы обеспечить адекватные коэффициенты цветового контраста.</p>
 <h3 id="визуально-скрытый-контент">Визуально скрытый контент</h3>
 <p>Контент, который должен быть визуально скрыт, но оставаться доступным для вспомогательных технологий, таких как программы чтения с экрана, можно стилизовать с помощью класса <code>.visually-hidden</code>. Это может быть полезно в ситуациях, когда дополнительная визуальная информация или подсказки (например, значение, обозначенное с помощью цвета) также должны быть переданы невизуальным пользователям.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>
@@ -466,15 +466,15 @@
 </code></pre></div><p>Для визуально скрытых интерактивных элементов управления, таких как традиционные ссылки «пропустить», используйте класс <code>.visually-hidden-focusable</code>. Это гарантирует, что элемент управления станет видимым после фокусировки (для зрячих пользователей клавиатуры). <strong>Будьте осторожны, по сравнению с эквивалентными классами <code>.sr-only</code> и <code>.sr-only-focusable</code> в прошлых версиях, Bootstrap 5 <code>.visually-hidden-focusable</code> является автономным классом и не должен использоваться в комбинация с классом <code>.visually-hidden</code></strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Перейти к основному содержанию<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="сниженное-движение">Сниженное движение</h3>
-<p>Bootstrap включает поддержку <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion">медиа-функции <code>prefers-reduced-motion</code></a>. В браузерах/средах, которые позволяют пользователю указывать свои предпочтения для уменьшения движения, большинство эффектов перехода CSS в Bootstrap (например, когда открывается или закрывается модальный диалог или скользящая анимация в каруселях) будут отключены, а значимая анимация (например, спиннеры) будет замедлена.</p>
+<p>Bootstrap включает поддержку <a href="https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion">мультимедийной функции <code>prefers-reduced-motion</code></a>. В браузерах / средах, которые позволяют пользователю указать свои предпочтения для уменьшения движения, большинство эффектов перехода CSS в Bootstrap (например, когда открывается или закрывается модальное диалоговое окно или скользящая анимация в каруселях) будут отключены, а значимые анимации ( например, блесны) будут замедляться.</p>
 <p>В браузерах, которые поддерживают <code>prefers-reduced-motion</code>, и где пользователь <em>не</em> явно указал, что они предпочитают уменьшенное движение (например, где <code>prefers-reduced-motion: no-preference</code>), Bootstrap позволяет плавную прокрутку используя свойство <code>scroll-behavior</code>.</p>
 <h2 id="дополнительные-ресурсы">Дополнительные ресурсы</h2>
 <ul>
-<li><a href="https://www.w3.org/TR/WCAG21/">Рекомендации по обеспечению доступности веб-контента (WCAG) 2.1</a></li>
+<li><a href="https://www.w3.org/TR/WCAG/">Рекомендации по обеспечению доступности веб-контента (WCAG) 2.1</a></li>
 <li><a href="https://www.a11yproject.com/">Проект A11Y</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Документация по доступности MDN</a></li>
 <li><a href="https://tenon.io/">Проверка доступности Tenon.io</a></li>
-<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Анализатор цветового контраста (CCA)</a></li>
+<li><a href="https://www.tpgi.com/color-contrast-checker/">Анализатор цветового контраста (CCA)</a></li>
 <li><a href="https://github.com/squizlabs/HTML_CodeSniffer">Букмарклет «HTML Codesniffer» для выявления проблем доступности</a></li>
 <li><a href="https://accessibilityinsights.io/">Microsoft Accessibility Insights</a></li>
 <li><a href="https://www.deque.com/axe/">Инструменты для тестирования Deque Axe</a></li>
@@ -485,18 +485,62 @@
   </div>
 
 
-    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
-  <div class="container">
-    <ul class="bd-footer-links ps-0 mb-3">
-      <li class="d-inline-block"><a href="https://t.me/getbootstrap_ru"><b>Чат в телеграмм</b></a></li>
-      <li class="d-inline-block ms-3"><a href="https://github.com/twbs">GitHub</a></li>
-      <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Примеры</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">Инфо</a></li>
-    </ul>
-    <p class="mb-0">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших контрибьюторов</a>.</p>
-    <p class="mb-0">Текущая версия v5.0.0-beta3. Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документы <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-    <p class="mb-0">Перевод версии v5.0.0-beta3. Перевод документации <a href="https://github.com/ruBootstrap/bootstrap">на github</a>.</p>
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
+          <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Текущая версия v5.0.0.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Ссылки</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Главная</a></li>
+          <li class="mb-2"><a href="/docs/5.0/">Документация</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">Примеры</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Темы</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Блог</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Руководства</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.0/getting-started/">Начало работы</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">Стартовый шаблон</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Проекты</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Иконки</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Сообщество</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://t.me/getbootstrap_ru"><b>Чат в телеграмм</b></a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Вопросы</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Обсуждения</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Корпоративные спонсоры</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Открытый коллектив</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
 
