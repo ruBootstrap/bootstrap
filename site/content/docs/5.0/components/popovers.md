@@ -141,7 +141,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Параметры
 
-Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-animation=""`. Обязательно измените тип case имени параметра с camelCase на kebab-case при передаче параметров через атрибуты данных. Например, вместо использования `data-bs-customClass="beautifier"` используйте `data-bs-custom-class="beautifier"`.
+Параметры можно передавать через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра в `data-bs-`, как в `data-bs-animation=""`. Обязательно измените тип case имени параметра с camelCase на kebab-case при передаче параметров через атрибуты данных. Например, вместо использования `data-bs-customClass="beautifier"` используйте `data-bs-custom-class="beautifier"`.
 
 {{< callout warning >}}
 Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
@@ -248,7 +248,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Граница ограничения переполнения всплывающего окна (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow в документации Popper</a>.</td>
+      <td>Граница ограничения переполнения всплывающего окна (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow документации Popper</a>.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>

@@ -22,7 +22,6 @@ toc: true
 - Удален Safari < 10
 - Удален iOS Safari < 10
 - Удален Chrome < 60
-- Удален Android < 6
 
 <hr class="my-5">
 

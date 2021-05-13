@@ -22,7 +22,7 @@
 </p>
 
 
-## Bootstrap 4
+## Bootstrap 5
 
 Наша ветка по умолчанию предназначена для разработки нашего предстоящего выпуска Bootstrap 5. Направляйтесь к [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) чтобы просмотреть readme, документацию и исходный код для Bootstrap 4.
 
@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.0.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.1.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
 - Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.0`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.0/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.

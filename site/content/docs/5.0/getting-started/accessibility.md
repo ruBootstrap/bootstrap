@@ -59,3 +59,4 @@ Bootstrap включает поддержку [мультимедийной фу
 - [Букмарклет «HTML Codesniffer» для выявления проблем доступности](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
 - [Инструменты для тестирования Deque Axe](https://www.deque.com/axe/)
+- [Введение в веб-доступность](https://www.w3.org/WAI/fundamentals/accessibility-intro/)

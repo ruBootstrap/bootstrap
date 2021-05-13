@@ -1033,7 +1033,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Граница ограничения переполнения раскрывающегося меню (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительные сведения смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow в документации Popper</a>.</td>
+      <td>Граница ограничения переполнения раскрывающегося меню (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительную информацию можно найти в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow документации Popper</a>.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
@@ -1078,6 +1078,20 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
           <li><code>false</code> - раскрывающийся список будет закрыт, если щелкнуть переключатель и вручную вызвать метод <code>hide</code> или <code>toggle</code>. (Также не закроется при нажатии клавиши <kbd>esc</kbd>)</li>
           <li><code>'inside'</code> - раскрывающийся список будет закрыт (только) щелчком внутри раскрывающегося меню.</li>
           <li><code>'outside'</code> - раскрывающийся список будет закрыт (только) при щелчке за пределами раскрывающегося меню.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>autoClose</code></td>
+      <td>boolean | string</td>
+      <td><code>true</code></td>
+      <td>
+        <p>Configure the auto close behavior of the dropdown:</p>
+        <ul>
+          <li><code>true</code> - the dropdown will be closed by clicking outside or inside the dropdown menu.</li>
+          <li><code>false</code> - the dropdown will be closed by clicking the toggle button and manually calling <code>hide</code> or <code>toggle</code> method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li>
+          <li><code>'inside'</code> - the dropdown will be closed (only) by clicking inside the dropdown menu.</li>
+          <li><code>'outside'</code> - the dropdown will be closed (only) by clicking outside the dropdown menu.</li>
         </ul>
       </td>
     </tr>

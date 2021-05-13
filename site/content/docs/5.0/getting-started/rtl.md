@@ -143,7 +143,7 @@ $font-family-sans-serif:
 ```scss
 /* rtl:begin:options: {
   "autoRename": true,
-  "stringMap":[
+  "stringMap":[ {
     "name": "ltr-rtl",
     "priority": 100,
     "search": ["ltr"],
@@ -152,7 +152,7 @@ $font-family-sans-serif:
       "scope": "*",
       "ignoreCase": false
     }
-  ]
+  } ]
 } */
 .ltr {
   @import "../node_modules/bootstrap/scss/bootstrap";
