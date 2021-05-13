@@ -1086,12 +1086,12 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
       <td>boolean | string</td>
       <td><code>true</code></td>
       <td>
-        <p>Configure the auto close behavior of the dropdown:</p>
+        <p>Настройте поведение автоматического закрытия раскрывающегося списка:</p>
         <ul>
-          <li><code>true</code> - the dropdown will be closed by clicking outside or inside the dropdown menu.</li>
-          <li><code>false</code> - the dropdown will be closed by clicking the toggle button and manually calling <code>hide</code> or <code>toggle</code> method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li>
-          <li><code>'inside'</code> - the dropdown will be closed (only) by clicking inside the dropdown menu.</li>
-          <li><code>'outside'</code> - the dropdown will be closed (only) by clicking outside the dropdown menu.</li>
+          <li><code>true</code> - раскрывающееся меню будет закрыто щелчком за пределами или внутри раскрывающегося меню.</li>
+          <li><code>false</code> - раскрывающийся список будет закрыт, если щелкнуть переключатель и вручную вызвать метод <code>hide</code> или <code>toggle</code>. (Также не будет закрыто нажатием клавиши <kbd>esc</kbd>)</li>
+          <li><code>'inside'</code> - раскрывающееся меню будет закрыто (только) при нажатии внутри раскрывающегося меню.</li>
+          <li><code>'outside'</code> - раскрывающееся меню будет закрыто (только) при щелчке вне раскрывающегося меню.</li>
         </ul>
       </td>
     </tr>

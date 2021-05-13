@@ -83,7 +83,7 @@ toc: true
 
 ### Полупрозрачный
 
-Toasts are slightly translucent to blend in with what's below them.
+Тосты слегка полупрозрачны, чтобы гармонировать с тем, что находится под ними.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
