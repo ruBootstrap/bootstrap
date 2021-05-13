@@ -78,6 +78,8 @@
 
 
 
+
+
   </head>
   <body>
     <div class="skippy visually-hidden-focusable overflow-hidden">
@@ -1799,7 +1801,7 @@
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Граница ограничения переполнения раскрывающегося меню (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительные сведения смотрите в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow в документации Popper</a>.</td>
+      <td>Граница ограничения переполнения раскрывающегося меню (применяется только к модификатору Popper preventOverflow). По умолчанию это <code>'clippingParents'</code> и может принимать ссылку HTMLElement (только через JavaScript). Дополнительную информацию можно найти в <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow документации Popper</a>.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
@@ -1844,6 +1846,20 @@
           <li><code>false</code> - раскрывающийся список будет закрыт, если щелкнуть переключатель и вручную вызвать метод <code>hide</code> или <code>toggle</code>. (Также не закроется при нажатии клавиши <kbd>esc</kbd>)</li>
           <li><code>'inside'</code> - раскрывающийся список будет закрыт (только) щелчком внутри раскрывающегося меню.</li>
           <li><code>'outside'</code> - раскрывающийся список будет закрыт (только) при щелчке за пределами раскрывающегося меню.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>autoClose</code></td>
+      <td>boolean | string</td>
+      <td><code>true</code></td>
+      <td>
+        <p>Настройте поведение автоматического закрытия раскрывающегося списка:</p>
+        <ul>
+          <li><code>true</code> - раскрывающееся меню будет закрыто щелчком за пределами или внутри раскрывающегося меню.</li>
+          <li><code>false</code> - раскрывающийся список будет закрыт, если щелкнуть переключатель и вручную вызвать метод <code>hide</code> или <code>toggle</code>. (Также не будет закрыто нажатием клавиши <kbd>esc</kbd>)</li>
+          <li><code>'inside'</code> - раскрывающееся меню будет закрыто (только) при нажатии внутри раскрывающегося меню.</li>
+          <li><code>'outside'</code> - раскрывающееся меню будет закрыто (только) при щелчке вне раскрывающегося меню.</li>
         </ul>
       </td>
     </tr>
@@ -1978,7 +1994,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.0.</li>
+          <li class="mb-2">Текущая версия v5.0.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

@@ -78,6 +78,8 @@
 
 
 
+
+
   </head>
   <body>
     <div class="skippy visually-hidden-focusable overflow-hidden">
@@ -1193,7 +1195,14 @@
   <span class="nc">.input-group</span> <span class="nc">.form-control</span><span class="o">,</span>
   <span class="nc">.input-group</span> <span class="nc">.form-select</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">3</span><span class="p">;</span>
+      <span class="k">@if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">@else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">2</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">3</span><span class="p">;</span>
+      <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -1238,7 +1247,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.0.</li>
+          <li class="mb-2">Текущая версия v5.0.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

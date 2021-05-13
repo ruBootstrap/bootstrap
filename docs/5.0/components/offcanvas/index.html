@@ -78,6 +78,8 @@
 
 
 
+
+
   </head>
   <body>
     <div class="skippy visually-hidden-focusable overflow-hidden">
@@ -570,22 +572,22 @@
 </ul>
 <p>Попробуйте верхний, правый и нижний примеры ниже.</p>
 <div class="bd-example">
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Переключатель вверху offcanvas</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Переключить верхнюю часть offcanvas</button>
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasTopLabel">Offcanvas вверху</h5>
+    <h5 id="offcanvasTopLabel">Верх Offcanvas</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     ...
   </div>
 </div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#offcanvasTop&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;offcanvasTop&#34;</span><span class="p">&gt;</span>Переключатель вверху offcanvas<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#offcanvasTop&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;offcanvasTop&#34;</span><span class="p">&gt;</span>Переключить верхнюю часть offcanvas<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas offcanvas-top&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasTop&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;offcanvasTopLabel&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-header&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasTopLabel&#34;</span><span class="p">&gt;</span>Offcanvas вверху<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasTopLabel&#34;</span><span class="p">&gt;</span>Верх Offcanvas<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close text-reset&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-body&#34;</span><span class="p">&gt;</span>
@@ -796,7 +798,7 @@
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>Показывает элемент offcanvas. <strong>Возврат к вызывающей стороне до фактического отображения элемента offcanvas</strong> (т.е. до того, как произойдет событие <code>shown.bs.offcanvas</code>).</td>
+<td>Показывает элемент offcanvas. <strong>Возврат к вызывающей стороне до того, как элемент offcanvas был фактически показан</strong> (то есть до того, как произойдет событие <code>shown.bs.offcanvas</code>).</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
@@ -804,7 +806,7 @@
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td><em>Статический</em> метод, который позволяет вам получить экземпляр offcanvas, связанный с элементом DOM</td>
+<td><em>Статический</em> метод, который позволяет вам получить экземпляр offcanvas, связанный с элементом DOM.</td>
 </tr>
 </tbody>
 </table>
@@ -859,7 +861,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.0.</li>
+          <li class="mb-2">Текущая версия v5.0.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
