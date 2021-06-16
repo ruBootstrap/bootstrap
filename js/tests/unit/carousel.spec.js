@@ -707,6 +707,34 @@ describe('Carousel', () => {
 
       carousel.next()
     })
+
+    it('should call next()/prev() instance methods when clicking the respective direction buttons', () => {
+      fixtureEl.innerHTML = [
+        '<div id="carousel" class="carousel slide">',
+        '  <div class="carousel-inner">',
+        '    <div class="carousel-item active">item 1</div>',
+        '    <div class="carousel-item">item 2</div>',
+        '    <div class="carousel-item">item 3</div>',
+        '  </div>',
+        '  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"></button>',
+        '  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"></button>',
+        '</div>'
+      ].join('')
+
+      const carouselEl = fixtureEl.querySelector('#carousel')
+      const prevBtnEl = fixtureEl.querySelector('.carousel-control-prev')
+      const nextBtnEl = fixtureEl.querySelector('.carousel-control-next')
+
+      const carousel = new Carousel(carouselEl)
+      const nextSpy = spyOn(carousel, 'next')
+      const prevSpy = spyOn(carousel, 'prev')
+
+      nextBtnEl.click()
+      prevBtnEl.click()
+
+      expect(nextSpy).toHaveBeenCalled()
+      expect(prevSpy).toHaveBeenCalled()
+    })
   })
 
   describe('nextWhenVisible', () => {
@@ -1199,6 +1227,60 @@ describe('Carousel', () => {
       const div = fixtureEl.querySelector('div')
 
       expect(Carousel.getInstance(div)).toEqual(null)
+    })
+  })
+
+  describe('getOrCreateInstance', () => {
+    it('should return carousel instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const carousel = new Carousel(div)
+
+      expect(Carousel.getOrCreateInstance(div)).toEqual(carousel)
+      expect(Carousel.getInstance(div)).toEqual(Carousel.getOrCreateInstance(div, {}))
+      expect(Carousel.getOrCreateInstance(div)).toBeInstanceOf(Carousel)
+    })
+
+    it('should return new instance when there is no carousel instance', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+
+      expect(Carousel.getInstance(div)).toEqual(null)
+      expect(Carousel.getOrCreateInstance(div)).toBeInstanceOf(Carousel)
+    })
+
+    it('should return new instance when there is no carousel instance with given configuration', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+
+      expect(Carousel.getInstance(div)).toEqual(null)
+      const carousel = Carousel.getOrCreateInstance(div, {
+        interval: 1
+      })
+      expect(carousel).toBeInstanceOf(Carousel)
+
+      expect(carousel._config.interval).toEqual(1)
+    })
+
+    it('should return the instance when exists without given configuration', () => {
+      fixtureEl.innerHTML = '<div></div>'
+
+      const div = fixtureEl.querySelector('div')
+      const carousel = new Carousel(div, {
+        interval: 1
+      })
+      expect(Carousel.getInstance(div)).toEqual(carousel)
+
+      const carousel2 = Carousel.getOrCreateInstance(div, {
+        interval: 2
+      })
+      expect(carousel).toBeInstanceOf(Carousel)
+      expect(carousel2).toEqual(carousel)
+
+      expect(carousel2._config.interval).toEqual(1)
     })
   })
 
