@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Механизм изменения размера Bootstrap адаптивно масштабирует общие свойства CSS, чтобы лучше использовать доступное пространство между окнами просмотра и устройствами.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -468,11 +468,11 @@
 <span class="p">}</span>
 </code></pre></div><p>Любое другое свойство можно передать миксину <code>rfs()</code> следующим образом:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="n">border-radius</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><p><code>!important</code> также можно просто добавить к любому значению, которое Вы хотите:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="nv">!important</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="использование-функций">Использование функций</h3>
 <p>Если Вы не хотите использовать include, есть еще две функции:</p>
@@ -483,8 +483,8 @@
 <p>В этом примере мы используем одну из встроенных в Bootstrap <a href="/docs/5.0/layout/breakpoints/">responsive breakpoint mixins</a> для применения стиля только ниже точки остановки <code>lg</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nt">padding</span><span class="nd">:</span> <span class="nt">rfs-fluid-value</span><span class="o">(</span><span class="nt">2rem</span><span class="o">)</span><span class="p">;</span>
-    <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">rfs-fluid-value</span><span class="o">(</span><span class="nt">1</span><span class="nc">.125rem</span><span class="o">)</span><span class="p">;</span>
+    <span class="na">padding</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">1</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">991</span><span class="p">.</span><span class="nc">98px</span><span class="o">)</span> <span class="p">{</span>
@@ -512,7 +512,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

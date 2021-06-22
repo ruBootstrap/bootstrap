@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -459,6 +459,7 @@
             <li><a href="#toggleenabled">toggleEnabled</a></li>
             <li><a href="#update">update</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#события">События</a></li>
@@ -552,8 +553,8 @@
 <span class="nv">$tooltip-bg</span><span class="o">:</span>                        <span class="nv">$black</span><span class="p">;</span>
 <span class="nv">$tooltip-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius</span><span class="p">;</span>
 <span class="nv">$tooltip-opacity</span><span class="o">:</span>                   <span class="mf">.9</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="mi">0</span><span class="p">;</span>
 
 <span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="mf">.8</span><span class="kt">rem</span><span class="p">;</span>
@@ -693,9 +694,9 @@
       <td>string</td>
       <td><code>'hover focus'</code></td>
       <td>
-        <p>Как запускается всплывающая подсказка - click | hover | focus | manual. Вы можете передать несколько триггеров; разделить их пробелом.</p>
-        <p><code>'manual'</code> указывает, что всплывающая подсказка будет запускаться программно через <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> и методы <code>.tooltip('toggle')</code>; это значение нельзя комбинировать с другими триггерами.</p>
-        <p>Само по себе <code>'hover'</code> приведет к появлению всплывающих подсказок, которые нельзя запускать с клавиатуры, и их следует использовать только при наличии альтернативных методов передачи той же информации пользователям клавиатуры.</p>
+        <p>Как запускается всплывающая подсказка - click | hover | focus | manual. Вы можете передать несколько триггеров; разделите их пробелом.</p>
+        <p><code>'manual'</code> указывает, что всплывающая подсказка будет запускаться программно через методы <code>.show()</code>, <code>.hide()</code> и <code>.toggle()</code>; это значение нельзя комбинировать с каким-либо другим триггером.</p>
+        <p>Само по себе <code>'hover'</code> приведет к появлению всплывающих подсказок, которые нельзя вызвать с клавиатуры, и их следует использовать только при наличии альтернативных методов передачи той же информации для пользователей клавиатуры.</p>
       </td>
     </tr>
     <tr>
@@ -817,6 +818,10 @@
 <p><em>Статический</em> метод, позволяющий получить экземпляр всплывающей подсказки, связанный с элементом DOM.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tooltip instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Статический</em> метод, который позволяет вам получить экземпляр всплывающей подсказки, связанный с элементом DOM, или создать новый, если он не был инициализирован.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tooltip instance
 </span></code></pre></div><h3 id="события">События</h3>
 <table class="table">
   <thead>
@@ -873,7 +878,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

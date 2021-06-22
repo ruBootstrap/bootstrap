@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Узнайте, как использовать включенные в Bootstrap сценарии npm для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -447,16 +447,16 @@
         
 
         <h2 id="настройка-инструмента">Настройка инструмента</h2>
-<p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.</p>
+<p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.2/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и другое.</p>
 <p>Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:</p>
 <ol>
 <li><a href="https://nodejs.org/en/download/">Загрузите и установите Node.js</a>, который мы используем для управления нашими зависимостями.</li>
-<li>Либо <a href="https://github.com/twbs/bootstrap/archive/v5.0.1.zip">загрузите исходные коды Bootstrap</a>, либо сделайте &ldquo;форк&rdquo; <a href="https://github.com/twbs/bootstrap">репозитория Bootstrap</a>.</li>
-<li>Перейдите в корневой каталог <code>/bootstrap</code> и запустите <code>npm install</code>, чтобы установить наши локальные зависимости, перечисленные в <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/package.json">package.json</a>.</li>
+<li>Либо <a href="https://github.com/twbs/bootstrap/archive/v5.0.2.zip">загрузите исходные коды Bootstrap</a>, либо сделайте &ldquo;форк&rdquo; <a href="https://github.com/twbs/bootstrap">репозитория Bootstrap</a>.</li>
+<li>Перейдите в корневой каталог <code>/bootstrap</code> и запустите <code>npm install</code>, чтобы установить наши локальные зависимости, перечисленные в <a href="https://github.com/twbs/bootstrap/blob/v5.0.2/package.json">package.json</a>.</li>
 </ol>
 <p>По завершении Вы сможете запускать различные команды из командной строки.</p>
 <h2 id="использование-скриптов-npm">Использование скриптов npm</h2>
-<p>Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/package.json">package.json</a> включает множество задач для разработки проекта. Запустите <code>npm run</code>, чтобы увидеть все сценарии npm в Вашем терминале. <strong>Основные задачи включают:</strong></p>
+<p>Наш <a href="https://github.com/twbs/bootstrap/blob/v5.0.2/package.json">package.json</a> включает множество задач для разработки проекта. Запустите <code>npm run</code>, чтобы увидеть все сценарии npm в Вашем терминале. <strong>Основные задачи включают:</strong></p>
 <table class="table">
   <thead>
     <tr>
@@ -508,7 +508,7 @@
 <p>Dart Sass использует точность округления 10 и из соображений эффективности не позволяет изменять это значение. Мы не снижаем эту точность во время дальнейшей обработки нашего сгенерированного CSS, например, во время минификации, но если Вы решите это сделать, мы рекомендуем поддерживать точность не менее 6, чтобы предотвратить проблемы с округлением в браузере.</p>
 <h2 id="автопрефиксер">Автопрефиксер</h2>
 <p>Bootstrap использует <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах от поставщиков, подобных тем, что есть в v3.</p>
-<p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
+<p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v5.0.2/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
 <h2 id="rtlcss">RTLCSS</h2>
 <p>Bootstrap использует <a href="https://rtlcss.com/">RTLCSS</a> для обработки скомпилированного CSS и преобразования их в RTL - в основном заменяя свойства, учитывающие горизонтальное направление (например, <code>padding-left</code>), их противоположностью. Это позволяет нам писать наш CSS только один раз и вносить незначительные изменения с помощью RTLCSS директив <a href="https://rtlcss.com/learn/usage-guide/control-directives/">control</a> и <a href="https://rtlcss.com/learn/usage-guide/value-directives/">value</a>.</p>
 <h2 id="локальная-документация">Локальная документация</h2>
@@ -538,7 +538,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

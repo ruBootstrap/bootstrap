@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Отслеживайте и просматривайте изменения в исходных файлах, документации и компонентах Bootstrap, чтобы помочь Вам перейти с v4 на v5.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -517,6 +517,13 @@
 </ul>
 </li>
 <li>
+<p><span class="badge bg-danger">Breaking</span> Параметры миксинов медиа-запросов изменены для более логичного подхода.</p>
+<ul>
+<li><code>media-breakpoint-down()</code> использует саму контрольную точку вместо следующей контрольной точки (например, <code>media-breakpoint-down(lg)</code> вместо <code>media-breakpoint-down(md)</code> цели области просмотра меньше, чем <code>lg</code>).</li>
+<li>Точно так же второй параметр в <code>media-breakpoint-between()</code> также использует саму контрольную точку вместо следующей контрольной точки (например, <code>media-between(sm, lg)</code> вместо <code>media-breakpoint-between(sm, md)</code> цели области просмотра между <code>sm</code> и <code>lg</code>).</li>
+</ul>
+</li>
+<li>
 <p><span class="badge bg-danger">Breaking</span> Удалены стили печати и переменная <code>$enable-print-styles</code>. Классы отображения печати все еще существуют. <a href="https://github.com/twbs/bootstrap/pull/28339">Смотрите #28339</a>.</p>
 </li>
 <li>
@@ -624,7 +631,7 @@
 <p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> и <code>.thead-dark</code> удаляются в пользу классов-вариантов <code>.table-*</code>, которые могут использоваться для всех элементов таблицы (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> и <code>td</code>).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Примесь <code>table-row-variant()</code> переименована в <code>table-variant()</code> и принимает только 2 параметра: <code>$color</code> (имя двоеточия) и <code>$value</code> (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.</p>
+<p><span class="badge bg-danger">Breaking</span> Примесь <code>table-row-variant()</code> переименована в <code>table-variant()</code> и принимает только 2 параметра: <code>$color</code> (название цвета) и <code>$value</code> (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.</p>
 </li>
 <li>
 <p>Разделены переменные заполнения ячеек таблицы на <code>-y</code> и <code>-x</code>.</p>
@@ -732,10 +739,10 @@
 <h3 id="кнопки">Кнопки</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong><a href="http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons">Кнопки переключения</a>, с флажками или радио, больше не требуют JavaScript и имеют новую разметку.</strong> Нам больше не нужен элемент-оболочка, добавьте <code>.btn-check</code> в <code>&lt;input&gt;</code>, и соедините его с любым <code>.btn</code> классы на <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы».</em></p>
+<p><span class="badge bg-danger">Breaking</span> <strong><a href="https://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons">Кнопки переключения</a>, с флажками или радио, больше не требуют JavaScript и имеют новую разметку.</strong> Нам больше не нужен элемент-оболочка, добавьте <code>.btn-check</code> в <code>&lt;input&gt;</code>, и соедините его с любыми классами <code>.btn</code> в <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы».</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Удалено <code>.btn-block</code> для утилит.</strong> Вместо использования <code>.btn-block</code> в <code>.btn</code>, оберните ваши кнопки в <code>.d-grid</code> и утилитой <code>.gap-*</code> для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. <a href="http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons">Прочтите документацию для некоторых примеров.</a></p>
+<p><span class="badge bg-danger">Breaking</span> <strong>Удален <code>.btn-block</code> для утилит.</strong> Вместо используйте <code>.btn-block</code> в <code>.btn</code>, оберните ваши кнопки с <code>.d-grid</code> и <code>.gap-*</code> утилитами для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. <a href="https://getbootstrap.com/docs/5.0/components/buttons/#block-buttons">Прочтите документацию для некоторых примеров.</a></p>
 </li>
 <li>
 <p>Обновлены миксины <code>button-variant()</code> и <code>button-outline-variant()</code> для поддержки дополнительных параметров.</p>
@@ -1005,7 +1012,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

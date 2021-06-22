@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Контейнеры - это фундаментальный строительный блок Bootstrap, который содержит, дополняет и выравнивает Ваш контент в пределах данного устройства или области просмотра.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -570,21 +570,21 @@
 </code></pre></div><h2 id="sass">Sass</h2>
 <p>Как показано выше, Bootstrap генерирует серию предопределенных контейнерных классов, чтобы помочь Вам создать желаемые макеты. Вы можете настроить эти предопределенные классы контейнеров, изменив карту Sass (находится в <code>_variables.scss</code>), которая их поддерживает:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xl</span><span class="o">:</span> <span class="mi">1140</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="o">:</span> <span class="mi">1140</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
 <p>Помимо настройки Sass, Вы также можете создавать свои собственные контейнеры с помощью нашего миксина Sass.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Исходный миксин
 </span><span class="c1"></span><span class="k">@mixin</span><span class="nf"> make-container</span><span class="p">(</span><span class="nv">$padding-x</span><span class="o">:</span> <span class="nv">$container-padding-x</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-  <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">padding-x</span><span class="p">;</span>
-  <span class="nt">padding-left</span><span class="nd">:</span> <span class="err">$</span><span class="nt">padding-x</span><span class="p">;</span>
-  <span class="nt">margin-right</span><span class="nd">:</span> <span class="nt">auto</span><span class="p">;</span>
-  <span class="nt">margin-left</span><span class="nd">:</span> <span class="nt">auto</span><span class="p">;</span>
+  <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$padding-x</span><span class="p">;</span>
+  <span class="na">padding-left</span><span class="o">:</span> <span class="nv">$padding-x</span><span class="p">;</span>
+  <span class="na">margin-right</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Применение
@@ -609,7 +609,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

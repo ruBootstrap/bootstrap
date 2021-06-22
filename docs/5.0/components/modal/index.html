@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Используйте плагин модального окна Bootstrap для JavaScript, чтобы добавить на свой сайт диалоговые окна для лайтбоксов, уведомлений пользователей или полностью настраиваемого контента.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -472,6 +472,7 @@
             <li><a href="#handleupdate">handleUpdate</a></li>
             <li><a href="#dispose">dispose</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#события">События</a></li>
@@ -1281,27 +1282,27 @@
 <span class="nv">$modal-lg</span><span class="o">:</span>                          <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
 <span class="nv">$modal-xl</span><span class="o">:</span>                          <span class="mi">1140</span><span class="kt">px</span><span class="p">;</span>
 
-<span class="nv">$modal-fade-transform</span><span class="o">:</span>              <span class="nf">translate</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">-50</span><span class="kt">px</span><span class="p">);</span>
-<span class="nv">$modal-show-transform</span><span class="o">:</span>              <span class="no">none</span><span class="p">;</span>
-<span class="nv">$modal-transition</span><span class="o">:</span>                  <span class="no">transform</span> <span class="mf">.3</span><span class="kt">s</span> <span class="n">ease-out</span><span class="p">;</span>
+<span class="nv">$modal-fade-transform</span><span class="o">:</span>              <span class="nf">translate</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">50</span><span class="kt">px</span><span class="p">);</span>
+<span class="nv">$modal-show-transform</span><span class="o">:</span>              <span class="ni">none</span><span class="p">;</span>
+<span class="nv">$modal-transition</span><span class="o">:</span>                  <span class="ni">transform</span> <span class="mf">.3</span><span class="kt">s</span> <span class="ni">ease-out</span><span class="p">;</span>
 <span class="nv">$modal-scale-transform</span><span class="o">:</span>             <span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="mf">.02</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="цикл">Цикл</h3>
 <p><a href="#fullscreen-modal">Адаптивные полноэкранные модальные окна</a> генерируются с помощью карты <code>$breakpoints</code> и цикла в <code>scss/_modal.scss</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">breakpoint</span> <span class="nt">in</span> <span class="nt">map-keys</span><span class="o">(</span><span class="err">$</span><span class="nt">grid-breakpoints</span><span class="o">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
   <span class="nv">$postfix</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$infix</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span><span class="o">,</span> <span class="nv">$infix</span> <span class="o">+</span> <span class="s2">&#34;-down&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
 
   <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
     <span class="nc">.modal-fullscreen</span><span class="si">#{</span><span class="nv">$postfix</span><span class="si">}</span> <span class="p">{</span>
-      <span class="nt">width</span><span class="nd">:</span> <span class="nt">100vw</span><span class="p">;</span>
-      <span class="nt">max-width</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
-      <span class="nt">height</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-      <span class="nt">margin</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span>
+      <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+      <span class="na">max-width</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+      <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+      <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 
       <span class="nc">.modal-content</span> <span class="p">{</span>
-        <span class="nt">height</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-        <span class="nt">border</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span>
+        <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+        <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
       <span class="p">}</span>
 
@@ -1310,7 +1311,7 @@
       <span class="p">}</span>
 
       <span class="nc">.modal-body</span> <span class="p">{</span>
-        <span class="nt">overflow-y</span><span class="nd">:</span> <span class="nt">auto</span><span class="p">;</span>
+        <span class="na">overflow-y</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
       <span class="p">}</span>
 
       <span class="nc">.modal-footer</span> <span class="p">{</span>
@@ -1321,7 +1322,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="использование">Использование</h2>
-<p>Модальный плагин переключает Ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также добавляет <code>.modal-open</code> к <code>&lt;body&gt;</code>, чтобы переопределить поведение прокрутки по умолчанию, и генерирует <code>.modal-backdrop</code>, чтобы предоставить область клика для отклонения отображаемых модальных окон при клике вне модального окна.</p>
+<p>Модальный плагин переключает ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также переопределяет поведение прокрутки по умолчанию и генерирует <code>.modal-backdrop</code>, чтобы предоставить область клика для отклонения отображаемых модальных окон при щелчке вне модального окна.</p>
 <h3 id="через-атрибуты-данных">Через атрибуты данных</h3>
 <p>Активируйте модальное окно без написания JavaScript. Установите <code>data-bs-toggle=&quot;modal&quot;</code> на элементе контроллера, таком как кнопка, вместе с <code>data-bs-target=&quot;#foo&quot;</code> или <code>href=&quot;#foo&quot;</code>, чтобы настроить таргетинг на конкретный модальный элемент для переключения.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;modal&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#myModal&#34;</span><span class="p">&gt;</span>Запустить модальное окно<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
@@ -1395,6 +1396,10 @@
 <p><em>Статический</em> метод, позволяющий получить модальный экземпляр, связанный с элементом DOM.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// Возвращает экземпляр Bootstrap modal
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Статический</em> метод, который позволяет вам получить модальный экземпляр, связанный с элементом DOM, или создать новый, если он не был инициализирован.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// Возвращает экземпляр модалки Bootstrap
 </span></code></pre></div><h3 id="события">События</h3>
 <p>Модальный класс Bootstrap предоставляет несколько событий для подключения к модальным функциям. Все модальные события запускаются в самом модальном окне (то есть в <code>&lt;div class=&quot;modal&quot;&gt;</code>).</p>
 <table class="table">
@@ -1448,7 +1453,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

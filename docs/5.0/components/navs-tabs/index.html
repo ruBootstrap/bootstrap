@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Документация и примеры использования включенных навигационных компонентов Bootstrap.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -465,6 +465,7 @@
             <li><a href="#show">show</a></li>
             <li><a href="#dispose">dispose</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#события">События</a></li>
@@ -907,7 +908,7 @@
 <span class="nv">$nav-link-font-weight</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
 <span class="nv">$nav-link-color</span><span class="o">:</span>                    <span class="nv">$link-color</span><span class="p">;</span>
 <span class="nv">$nav-link-hover-color</span><span class="o">:</span>              <span class="nv">$link-hover-color</span><span class="p">;</span>
-<span class="nv">$nav-link-transition</span><span class="o">:</span>               <span class="no">color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="o">,</span> <span class="no">background</span><span class="o">-</span><span class="no">color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="o">,</span> <span class="no">border</span><span class="o">-</span><span class="no">color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="n">ease-in-out</span><span class="p">;</span>
+<span class="nv">$nav-link-transition</span><span class="o">:</span>               <span class="ni">color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="o">,</span> <span class="n">background-color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="o">,</span> <span class="n">border-color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="p">;</span>
 <span class="nv">$nav-link-disabled-color</span><span class="o">:</span>           <span class="nv">$gray-600</span><span class="p">;</span>
 
 <span class="nv">$nav-tabs-border-color</span><span class="o">:</span>             <span class="nv">$gray-300</span><span class="p">;</span>
@@ -1179,6 +1180,10 @@
 <p><em>Статический</em> метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Статический</em> метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
 </span></code></pre></div><h3 id="события">События</h3>
 <p>При отображении новой вкладки события запускаются в следующем порядке:</p>
 <ol>
@@ -1236,7 +1241,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

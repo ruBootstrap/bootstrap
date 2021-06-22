@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Пуш-уведомления для посетителей с тостом, легким и легко настраиваемым предупреждающим сообщением.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -457,6 +457,8 @@
             <li><a href="#show">show</a></li>
             <li><a href="#hide">hide</a></li>
             <li><a href="#dispose">dispose</a></li>
+            <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#события">События</a></li>
@@ -511,7 +513,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="лайв">Лайв</h3>
 <p>Нажмите кнопку ниже, чтобы отобразить тост (расположенный с нашими утилитами в правом нижнем углу), который по умолчанию был скрыт с помощью <code>.hide</code>.</p>
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"/></svg>
@@ -530,7 +532,7 @@
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveToastBtn&#34;</span><span class="p">&gt;</span>Показать лайв тосты<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-fixed bottom-0 end-0 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;z-index: 5&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-fixed bottom-0 end-0 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;z-index: 11&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveToast&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toast hide&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;assertive&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toast-header&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rounded me-2&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
@@ -963,7 +965,15 @@
 </code></pre></div><h4 id="dispose">dispose</h4>
 <p>Скрывает тост элемента. Ваш тост останется в DOM, но больше не будет отображаться.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
-</code></pre></div><h3 id="события">События</h3>
+</code></pre></div><h4 id="getinstance">getInstance</h4>
+<p><em>Статический</em> метод, позволяющий получить экземпляр scrollspy, связанный с элементом DOM.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myToastEl&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap toast instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Статический</em> метод, который позволяет вам получить экземпляр scrollspy, связанный с элементом DOM, или создать новый, если он не был инициализирован.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myToastEl&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap toast instance
+</span></code></pre></div><h3 id="события">События</h3>
 <table class="table">
   <thead>
     <tr>
@@ -1011,7 +1021,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

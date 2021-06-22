@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Перезагрузка - это набор изменений CSS для конкретных элементов в одном файле, запускает Bootstrap, чтобы обеспечить элегантную, последовательную и простую основу для построения.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -488,11 +488,9 @@
 <p>Bootstrap использует «стек собственных шрифтов» или «стек системных шрифтов» для оптимального рендеринга текста на всех устройствах и ОС. Эти системные шрифты были разработаны специально для современных устройств с улучшенным отображением на экранах, поддержкой переменных шрифтов и многим другим. Узнайте больше о <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">стеках собственных шрифтов в этой статье <em>Smashing Magazine</em></a>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
   <span class="c1">// Кросс-платформенное общее семейство шрифтов (шрифт пользовательского интерфейса по умолчанию)</span>
-  <span class="n">system-ui</span><span class="o">,</span>
+  <span class="ni">system-ui</span><span class="o">,</span>
   <span class="c1">// Safari для macOS и iOS (San Francisco)</span>
   <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span>
-  <span class="c1">// Chrome &lt;56 для macOS (Сан-Франциско)</span>
-  <span class="n">BlinkMacSystemFont</span><span class="o">,</span>
   <span class="c1">// Windows</span>
   <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span>
   <span class="c1">// Android</span>
@@ -503,9 +501,9 @@
   <span class="s2">&#34;Noto Sans&#34;</span><span class="o">,</span>
   <span class="s2">&#34;Liberation Sans&#34;</span><span class="o">,</span>
   <span class="c1">// Резервный вариант без засечек</span>
-  <span class="no">sans-serif</span><span class="o">,</span>
+  <span class="ni">sans-serif</span><span class="o">,</span>
   <span class="c1">// Emoji шрифты</span>
-  <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="nv">!default</span><span class="p">;</span>
+  <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="k">!default</span><span class="p">;</span>
 </code></pre></div><p>Обратите внимание: поскольку стек шрифтов включает шрифты эмодзи, многие распространенные символы Unicode символов/дингбатов будут отображаться как разноцветные пиктограммы. Их внешний вид будет варьироваться в зависимости от стиля, используемого в собственном шрифте emoji браузера/платформы, и на них не будут влиять никакие <code>color</code> стили CSS.</p>
 <p><code>font-family</code> применяется к <code>&lt;body&gt;</code> и автоматически наследуется глобально через Bootstrap. Чтобы переключить глобально <code>font-family</code>, обновите <code>$font-family-base</code> и перекомпилируйте Bootstrap.</p>
 <h2 id="заголовки-и-абзацы">Заголовки и абзацы</h2>
@@ -866,7 +864,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

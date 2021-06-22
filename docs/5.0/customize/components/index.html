@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Узнайте, как и почему мы создаем почти все наши компоненты адаптивно, используя базовые классы и классы-модификаторы.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -452,7 +452,7 @@
 <p>Вот два примера того, как мы перебираем карту <code>$theme-colors</code> в цикле для генерации модификаторов для компонентов <code>.alert</code> и <code>.list-group</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
 </span><span class="c1"></span>
-<span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nv">$alert-background</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-bg-scale</span><span class="p">);</span>
   <span class="nv">$alert-border</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-border-scale</span><span class="p">);</span>
   <span class="nv">$alert-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-color-scale</span><span class="p">);</span>
@@ -469,7 +469,7 @@
 </span><span class="c1">// Add modifier classes to change text and background color on individual items.
 </span><span class="c1">// Organizationally, this must come after the `:hover` states.
 </span><span class="c1"></span>
-<span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nv">$list-group-variant-bg</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-bg-scale</span><span class="p">);</span>
   <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-color-scale</span><span class="p">);</span>
   <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
@@ -484,25 +484,25 @@
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// We deliberately hardcode the `bs-` prefix because we check
 </span><span class="c1">// this custom property in JS to determine Popper&#39;s positioning
 </span><span class="c1"></span>
-<span class="k">@each</span> <span class="err">$</span><span class="nt">breakpoint</span> <span class="nt">in</span> <span class="nt">map-keys</span><span class="o">(</span><span class="err">$</span><span class="nt">grid-breakpoints</span><span class="o">)</span> <span class="p">{</span>
+<span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
 
     <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-start</span> <span class="p">{</span>
-      <span class="nt">--bs-position</span><span class="nd">:</span> <span class="nt">start</span><span class="p">;</span>
+      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">start</span><span class="p">;</span>
 
       <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
-        <span class="nt">right</span><span class="nd">:</span> <span class="nt">auto</span> <span class="nn">#</span><span class="p">{</span><span class="s2">&#34;/* rtl:ignore */&#34;</span><span class="p">};</span>
-        <span class="nt">left</span><span class="nd">:</span> <span class="nt">0</span> <span class="nn">#</span><span class="p">{</span><span class="s2">&#34;/* rtl:ignore */&#34;</span><span class="p">};</span>
+        <span class="na">right</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
+        <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-end</span> <span class="p">{</span>
-      <span class="nt">--bs-position</span><span class="nd">:</span> <span class="nt">end</span><span class="p">;</span>
+      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">end</span><span class="p">;</span>
 
       <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
-        <span class="nt">right</span><span class="nd">:</span> <span class="nt">0</span> <span class="nn">#</span><span class="p">{</span><span class="s2">&#34;/* rtl:ignore */&#34;</span><span class="p">};</span>
-        <span class="nt">left</span><span class="nd">:</span> <span class="nt">auto</span> <span class="nn">#</span><span class="p">{</span><span class="s2">&#34;/* rtl:ignore */&#34;</span><span class="p">};</span>
+        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="na">left</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -510,12 +510,12 @@
 </code></pre></div>
 <p>Если вы измените свои <code>$grid-breakpoints</code>, Ваши изменения будут применяться ко всем циклам, повторяющимся по этой карте.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
+  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
 <p>Для получения дополнительной информации и примеров того, как изменить наши карты и переменные Sass, обратитесь к <a href="/docs/5.0/layout/grid/#sass">разделу Sass документации по Сетке</a>.</p>
@@ -565,7 +565,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Документация и примеры типографики Bootstrap, включая глобальные настройки, заголовки, основной текст, списки и т.д.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -577,12 +577,12 @@
 <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-6&#34;</span><span class="p">&gt;</span>Отображение 6<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </code></pre></div><p>Отображаемые заголовки настраиваются с помощью карты Sass <code>$display-font-sizes</code> и двух переменных: <code>$display-font-weight</code> и <code>$display-line-height</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$display-font-sizes</span><span class="o">:</span> <span class="p">(</span>
-  <span class="mi">1</span><span class="o">:</span> <span class="mi">5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">2</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">3</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">4</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">5</span><span class="o">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">6</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span>
+  <span class="na">1</span><span class="o">:</span> <span class="mi">5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">2</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">3</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">4</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">5</span><span class="o">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">6</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span>
 <span class="p">);</span>
 
 <span class="nv">$display-font-weight</span><span class="o">:</span> <span class="mi">300</span><span class="p">;</span>
@@ -806,7 +806,7 @@
 <h2 id="sass">Sass</h2>
 <h3 id="переменные">Переменные</h3>
 <p>В заголовках есть несколько переменных, определяющих размер и интервал.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$headings-margin-bottom</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$headings-margin-bottom</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$headings-font-family</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span>
 <span class="nv">$headings-font-style</span><span class="o">:</span>         <span class="n">null</span><span class="p">;</span>
 <span class="nv">$headings-font-weight</span><span class="o">:</span>        <span class="mi">500</span><span class="p">;</span>
@@ -831,7 +831,7 @@
 <span class="nv">$blockquote-footer-font-size</span><span class="o">:</span> <span class="nv">$small-font-size</span><span class="p">;</span>
 
 <span class="nv">$hr-margin-y</span><span class="o">:</span>                 <span class="nv">$spacer</span><span class="p">;</span>
-<span class="nv">$hr-color</span><span class="o">:</span>                    <span class="no">inherit</span><span class="p">;</span>
+<span class="nv">$hr-color</span><span class="o">:</span>                    <span class="ni">inherit</span><span class="p">;</span>
 <span class="nv">$hr-height</span><span class="o">:</span>                   <span class="nv">$border-width</span><span class="p">;</span>
 <span class="nv">$hr-opacity</span><span class="o">:</span>                  <span class="mf">.25</span><span class="p">;</span>
 
@@ -868,7 +868,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

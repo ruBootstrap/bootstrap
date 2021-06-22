@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bootstrap включает в себя широкий набор сокращенных вспомогательных классов полей, отступов и разрывов для изменения внешнего вида элемента.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -487,20 +487,20 @@
 </ul>
 <h3 id="примеры">Примеры</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.mt-0</span> <span class="p">{</span>
-  <span class="nt">margin-top</span><span class="nd">:</span> <span class="nt">0</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.ms-1</span> <span class="p">{</span>
-  <span class="nt">margin-left</span><span class="nd">:</span> <span class="o">(</span><span class="err">$</span><span class="nt">spacer</span> <span class="o">*</span> <span class="nc">.25</span><span class="o">)</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">)</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.px-2</span> <span class="p">{</span>
-  <span class="nt">padding-left</span><span class="nd">:</span> <span class="o">(</span><span class="err">$</span><span class="nt">spacer</span> <span class="o">*</span> <span class="nc">.5</span><span class="o">)</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
-  <span class="nt">padding-right</span><span class="nd">:</span> <span class="o">(</span><span class="err">$</span><span class="nt">spacer</span> <span class="o">*</span> <span class="nc">.5</span><span class="o">)</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+  <span class="na">padding-left</span><span class="o">:</span> <span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">)</span> <span class="k">!important</span><span class="p">;</span>
+  <span class="na">padding-right</span><span class="o">:</span> <span class="p">(</span><span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">)</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.p-3</span> <span class="p">{</span>
-  <span class="nt">padding</span><span class="nd">:</span> <span class="err">$</span><span class="nt">spacer</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="горизонтальное-центрирование">Горизонтальное центрирование</h3>
 <p>Кроме того, Bootstrap также включает класс <code>.mx-auto</code> для горизонтального центрирования содержимого уровня блока фиксированной ширины, то есть содержимого, имеющего набор <code>display: block</code> и <code>width</code>, путем установки горизонтальных полей на <code>auto</code>.</p>
@@ -516,7 +516,7 @@
 <p>В CSS свойства <code>margin</code> могут использовать отрицательные значения (<code>padding</code> не может). Эти отрицательные поля <strong>отключены по умолчанию</strong>, но могут быть включены в Sass, установив <code>$enable-negative-margins: true</code>.</p>
 <p>Синтаксис почти такой же, как у утилит с положительным значением поля по умолчанию, но с добавлением <code>n</code> перед запрошенным размером. Вот пример класса, противоположного <code>.mt-1</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.mt-n1</span> <span class="p">{</span>
-  <span class="nt">margin-top</span><span class="nd">:</span> <span class="nt">-0</span><span class="nc">.25rem</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="o">-</span><span class="mi">0</span><span class="mf">.25</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="разрыв">Разрыв</h2>
 <p>При использовании <code>display: grid</code> Вы можете использовать утилиты <code>gap</code> в родительском контейнере сетки. Это может сэкономить на добавлении утилит полей к отдельным элементам сетки (дочерним элементам контейнера <code>display: grid</code>). Утилиты Разрыва реагируют по умолчанию и генерируются через наш API утилит на основе Sass карты <code>$spacers</code>.</p>
@@ -537,12 +537,12 @@
 <p>Утилиты Spacing объявляются через карту Sass, а затем генерируются с помощью нашего API утилит.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$spacer</span><span class="o">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$spacers</span><span class="o">:</span> <span class="p">(</span>
-  <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-  <span class="mi">1</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="o">,</span>
-  <span class="mi">2</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="o">,</span>
-  <span class="mi">3</span><span class="o">:</span> <span class="nv">$spacer</span><span class="o">,</span>
-  <span class="mi">4</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span>
-  <span class="mi">5</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">3</span><span class="o">,</span>
+  <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="na">1</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="o">,</span>
+  <span class="na">2</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="o">,</span>
+  <span class="na">3</span><span class="o">:</span> <span class="nv">$spacer</span><span class="o">,</span>
+  <span class="na">4</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span>
+  <span class="na">5</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="o">*</span> <span class="mi">3</span><span class="o">,</span>
 <span class="p">);</span>
 
 <span class="nv">$negative-spacers</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$enable-negative-margins</span><span class="o">,</span> <span class="nf">negativify-map</span><span class="p">(</span><span class="nv">$spacers</span><span class="p">)</span><span class="o">,</span> <span class="n">null</span><span class="p">);</span>
@@ -695,7 +695,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

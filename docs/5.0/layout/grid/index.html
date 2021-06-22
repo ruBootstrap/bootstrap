@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Используйте нашу мощную сетку flexbox, ориентированную на мобильные устройства, для создания макетов всех форм и размеров благодаря системе из двенадцати колонок, шести адаптивным уровням по умолчанию, переменным и миксинам Sass, а также десяткам предопределенных классов.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -857,8 +857,8 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="ряд-колонок">Ряд колонок</h3>
-<p>Используйте адаптивные классы <code>.row-cols-*</code>, чтобы быстро установить количество колонок, которые лучше всего отображают Ваш контент и макет. В то время как обычные классы <code>.col-*</code> применяются к отдельным колонким (например, <code>.col-md-4</code>), классы колонок строк устанавливаются в родительском <code>.row</code> в качестве ярлыка. С помощью <code>.row-cols-auto</code> Вы можете придать колонким их естественную ширину.</p>
-<p>Используйте эти классы колонок строк, чтобы быстро создавать базовые макеты сетки или управлять макетами карточек.</p>
+<p>Используйте адаптивные классы <code>.row-cols-*</code>, чтобы быстро установить количество столбцов, которые лучше всего отображают ваш контент и макет. В то время как обычные классы <code>.col-*</code> применяются к отдельным столбцам (например, <code>.col-md-4</code>), классы столбцов строк устанавливаются в родительском <code>.row</code> по умолчанию для содержащихся столбцов. С помощью <code>.row-cols-auto</code> вы можете придать столбцам их естественную ширину.</p>
+<p>Используйте эти классы столбцов строк для быстрого создания базовых макетов сетки или для управления макетами карточек и переопределения при необходимости на уровне столбцов.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
   <div class="row row-cols-2">
@@ -961,7 +961,40 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Вы также можете использовать прилагаемый миксин Sass, <code>row-cols()</code>:</p>
+<div class="bd-example bd-example-row">
+<div class="container">
+  <div class="row row-cols-2 row-cols-lg-3">
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+    <div class="col-4 col-lg-2">Колонка</div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row row-cols-2 row-cols-lg-3&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4 col-lg-2&#34;</span><span class="p">&gt;</span>Колонка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Вы также можете использовать сопутствующий миксин Sass, <code>row-cols()</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
   <span class="c1">// Три колонки для начала
 </span><span class="c1"></span>  <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
@@ -1015,20 +1048,20 @@
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="o">:</span>      <span class="mi">12</span><span class="p">;</span>
 <span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
+  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xl</span><span class="o">:</span> <span class="mi">1140</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="o">:</span> <span class="mi">1140</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
 <h3 id="примеси">Примеси</h3>
@@ -1051,7 +1084,7 @@
   <span class="k">@include</span><span class="nd"> make-container</span><span class="p">();</span>
   <span class="c1">// Обязательно укажите эту ширину после примеси, чтобы переопределить
 </span><span class="c1"></span>  <span class="c1">// `width: 100%`, сгенерированная `make-container()`
-</span><span class="c1"></span>  <span class="nt">width</span><span class="nd">:</span> <span class="nt">800px</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="na">width</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.example-row</span> <span class="p">{</span>
@@ -1096,21 +1129,21 @@
 <p>Используя наши встроенные сеточные переменные и карты Sass, можно полностью настроить предопределенные классы сеток. Измените количество уровней, размеры медиа-запроса и ширину контейнера, а затем перекомпилируйте.</p>
 <h3 id="колонки-и-промежутки">Колонки и промежутки</h3>
 <p>Количество колонок сетки можно изменить с помощью переменных Sass. <code>$grid-columns</code> используется для генерации ширины (в процентах) каждого отдельного колонки, в то время как <code>$grid-gutter-width</code> устанавливает ширину промежутков между колонкими.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="nv">!default</span><span class="p">;</span>
-<span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="nv">!default</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="k">!default</span><span class="p">;</span>
+<span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!default</span><span class="p">;</span>
 </code></pre></div><h3 id="уровни-сетки">Уровни сетки</h3>
 <p>Выходя за рамки самих колонок, Вы также можете настроить количество уровней сетки. Если Вам нужно всего четыре уровня сетки, Вы бы обновили <code>$grid-breakpoints</code> и <code>$container-max-widths</code> примерно так:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">480</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">1024</span><span class="kt">px</span>
+  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">480</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">1024</span><span class="kt">px</span>
 <span class="p">);</span>
 
 <span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
-  <span class="n">sm</span><span class="o">:</span> <span class="mi">420</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
-  <span class="n">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">420</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">960</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div><p>При внесении любых изменений в переменные или карты Sass Вам необходимо сохранить изменения и перекомпилировать. В результате будет выведен новый набор предопределенных классов сетки для ширины колонок, смещений и порядка. Утилиты адаптивной видимости также будут обновлены для использования настраиваемых контрольных точек. Убедитесь, что Вы установили значения сетки в <code>px</code> (не <code>rem</code>, <code>em</code> или <code>%</code>).</p>
 
@@ -1130,7 +1163,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

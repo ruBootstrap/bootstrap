@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Группы списков - это гибкий и мощный компонент для отображения серии контента. Измените и расширьте их для поддержки практически любого содержимого внутри.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -460,6 +460,7 @@
             <li><a href="#show">show</a></li>
             <li><a href="#dispose">dispose</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#события">События</a></li>
@@ -955,9 +956,9 @@
 <span class="nv">$list-group-border-width</span><span class="o">:</span>           <span class="nv">$border-width</span><span class="p">;</span>
 <span class="nv">$list-group-border-radius</span><span class="o">:</span>          <span class="nv">$border-radius</span><span class="p">;</span>
 
-<span class="nv">$list-group-item-padding-y</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$list-group-item-padding-y</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$list-group-item-padding-x</span><span class="o">:</span>         <span class="nv">$spacer</span><span class="p">;</span>
-<span class="nv">$list-group-item-bg-scale</span><span class="o">:</span>          <span class="mi">-80</span><span class="kt">%</span><span class="p">;</span>
+<span class="nv">$list-group-item-bg-scale</span><span class="o">:</span>          <span class="o">-</span><span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
 <span class="nv">$list-group-item-color-scale</span><span class="o">:</span>       <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
 
 <span class="nv">$list-group-hover-bg</span><span class="o">:</span>               <span class="nv">$gray-100</span><span class="p">;</span>
@@ -978,20 +979,20 @@
 <p>Используется в сочетании с <code>$theme-colors</code> для генерации <a href="#contextual-classes">классов контекстных вариантов</a> для <code>.list-group-item</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
   <span class="nc">.list-group-item-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">background</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$background</span><span class="p">;</span>
 
     <span class="k">&amp;</span><span class="nc">.list-group-item-action</span> <span class="p">{</span>
-      <span class="k">&amp;</span><span class="nd">:hover</span><span class="o">,</span>
-      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-        <span class="nt">background-color</span><span class="nd">:</span> <span class="nt">shade-color</span><span class="o">(</span><span class="err">$</span><span class="nt">background</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span><span class="o">)</span><span class="p">;</span>
+      <span class="na">&amp;</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+      <span class="o">&amp;:</span><span class="ni">focus</span> <span class="p">{</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
       <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nc">.active</span> <span class="p">{</span>
-        <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">white</span><span class="p">;</span>
-        <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-        <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$white</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -1004,7 +1005,7 @@
 </span><span class="c1">// Add modifier classes to change text and background color on individual items.
 </span><span class="c1">// Organizationally, this must come after the `:hover` states.
 </span><span class="c1"></span>
-<span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nv">$list-group-variant-bg</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-bg-scale</span><span class="p">);</span>
   <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-color-scale</span><span class="p">);</span>
   <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
@@ -1140,7 +1141,11 @@
 <h4 id="getinstance">getInstance</h4>
 <p><em>Статический</em> метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Возвращает экземпляр таба Bootstrap
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Статический</em> метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Возвращает экземпляр таба Bootstrap
 </span></code></pre></div><h3 id="события">События</h3>
 <p>При отображении новой вкладки события запускаются в следующем порядке:</p>
 <ol>
@@ -1176,11 +1181,13 @@
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;a[data-bs-toggle=&#34;list&#34;]&#39;</span><span class="p">)</span>
-<span class="nx">tabEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// недавно активированная вкладка
-</span><span class="c1"></span>  <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// предыдущая активная вкладка
-</span><span class="c1"></span><span class="p">})</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tabElms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;a[data-bs-toggle=&#34;list&#34;]&#39;</span><span class="p">)</span>
+<span class="nx">tabElms</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">tabElm</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">tabElm</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// недавно активированная вкладка
+</span><span class="c1"></span>    <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// предыдущая активная вкладка
+</span><span class="c1"></span>  <span class="p">})</span>
+<span class="p">}</span>
 </code></pre></div>
       </div>
     </main>
@@ -1198,7 +1205,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

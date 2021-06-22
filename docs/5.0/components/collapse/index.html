@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Переключайте видимость контента в Вашем проекте с помощью нескольких классов и наших плагинов JavaScript.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.0">
@@ -551,19 +551,19 @@
 <p>Обратите внимание, что текущая реализация Bootstrap не охватывает различные <em>необязательные</em> взаимодействия с клавиатурой, описанные в <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">аккордеонном шаблоне WAI-ARIA Authoring Practices 1.1</a> - Вам нужно будет включить их самостоятельно в собственный JavaScript.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="переменные">Переменные</h3>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="no">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="n">ease</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="n">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="классы">Классы</h3>
 <p>Классы перехода сворачивания можно найти в <code>scss/_transitions.scss</code>, поскольку они используются в нескольких компонентах (сворачивание и аккордеон).</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.collapse</span> <span class="p">{</span>
   <span class="k">&amp;</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.show</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
+    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="nc">.collapsing</span> <span class="p">{</span>
-  <span class="nt">height</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span>
-  <span class="nt">overflow</span><span class="nd">:</span> <span class="nt">hidden</span><span class="p">;</span>
+  <span class="na">height</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="na">overflow</span><span class="o">:</span> <span class="ni">hidden</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="nv">$transition-collapse</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -649,8 +649,21 @@
       <td>Уничтожает сворачиваемый элемент. (Удаляет сохраненные данные в элементе DOM)</td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
-      <td>Статический метод, позволяющий получить экземпляр коллапса, связанный с элементом DOM..</td>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Статический метод, который позволяет вам получить экземпляр коллапса, связанный с элементом DOM, вы можете использовать его следующим образом: <code>bootstrap.Collapse.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Статический метод, который возвращает экземпляр коллапса, связанный с элементом DOM, или создает новый, если он не был инициализирован.
+         Вы можете использовать это так: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -703,7 +716,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.0/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.0.1.</li>
+          <li class="mb-2">Текущая версия v5.0.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
