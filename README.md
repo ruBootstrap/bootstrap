@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.1.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.2.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
 - Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.1`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.0/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
@@ -177,7 +177,7 @@ bootstrap/
 - Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/).
 - Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).
-- Общайтесь с другими Bootstrappers в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
+- Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.
 

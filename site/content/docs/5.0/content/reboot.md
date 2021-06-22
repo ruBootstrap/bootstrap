@@ -37,8 +37,6 @@ $font-family-sans-serif:
   system-ui,
   // Safari для macOS и iOS (San Francisco)
   -apple-system,
-  // Chrome <56 для macOS (Сан-Франциско)
-  BlinkMacSystemFont,
   // Windows
   "Segoe UI",
   // Android

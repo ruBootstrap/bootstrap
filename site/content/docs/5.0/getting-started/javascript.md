@@ -109,7 +109,7 @@ var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
 Чтобы выполнить действие после завершения перехода, Вы можете прослушать соответствующее событие.
 
 ```js
-var myCollapseEl = document.getElementById('#myCollapse')
+var myCollapseEl = document.getElementById('myCollapse')
 
 myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
   // Действие, выполняемое после раскрытия сворачиваемой области

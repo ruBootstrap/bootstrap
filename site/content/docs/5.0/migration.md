@@ -45,6 +45,10 @@ toc: true
   - `$yiq-contrasted-threshold` переименован в `$min-contrast-ratio`.
   - `$yiq-text-dark` и `$yiq-text-light` соответственно переименованы в `$color-contrast-dark` и `$color-contrast-light`.
 
+- <span class="badge bg-danger">Breaking</span> Параметры миксинов медиа-запросов изменены для более логичного подхода.
+  - `media-breakpoint-down()` использует саму контрольную точку вместо следующей контрольной точки (например, `media-breakpoint-down(lg)` вместо `media-breakpoint-down(md)` цели области просмотра меньше, чем `lg`).
+  - Точно так же второй параметр в `media-breakpoint-between()` также использует саму контрольную точку вместо следующей контрольной точки (например, `media-between(sm, lg)` вместо `media-breakpoint-between(sm, md)` цели области просмотра между `sm` и `lg`).
+
 - <span class="badge bg-danger">Breaking</span> Удалены стили печати и переменная `$enable-print-styles`. Классы отображения печати все еще существуют. [Смотрите #28339](https://github.com/twbs/bootstrap/pull/28339).
 
 - <span class="badge bg-danger">Breaking</span> Отказ от функций `color()`, `theme-color()` и `gray()` в пользу переменных. [Смотрите #29083](https://github.com/twbs/bootstrap/pull/29083).
@@ -117,7 +121,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> `.thead-light` и `.thead-dark` удаляются в пользу классов-вариантов `.table-*`, которые могут использоваться для всех элементов таблицы (`thead`, `tbody`, `tfoot`, `tr`, `th` и `td`).
 
-- <span class="badge bg-danger">Breaking</span> Примесь `table-row-variant()` переименована в `table-variant()` и принимает только 2 параметра: `$color` (имя двоеточия) и `$value` (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.
+- <span class="badge bg-danger">Breaking</span> Примесь `table-row-variant()` переименована в `table-variant()` и принимает только 2 параметра: `$color` (название цвета) и `$value` (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.
 
 - Разделены переменные заполнения ячеек таблицы на `-y` и `-x`.
 
@@ -195,9 +199,9 @@ toc: true
 
 ### Кнопки
 
-- <span class="badge bg-danger">Breaking</span> **[Кнопки переключения](http://getbootstrap.su/docs/5.0/forms/checks-radios/#toggle-buttons), с флажками или радио, больше не требуют JavaScript и имеют новую разметку.** Нам больше не нужен элемент-оболочка, добавьте `.btn-check` в `<input>`, и соедините его с любым `.btn` классы на `<label>`. [Смотрите #30650](https://github.com/twbs/bootstrap/pull/30650). _Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы»._
+- <span class="badge bg-danger">Breaking</span> **[Кнопки переключения](https://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons), с флажками или радио, больше не требуют JavaScript и имеют новую разметку.** Нам больше не нужен элемент-оболочка, добавьте `.btn-check` в `<input>`, и соедините его с любыми классами `.btn` в `<label>`. [Смотрите #30650](https://github.com/twbs/bootstrap/pull/30650). _Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы»._
 
-- <span class="badge bg-danger">Breaking</span> **Удалено `.btn-block` для утилит.** Вместо использования `.btn-block` в `.btn`, оберните ваши кнопки в `.d-grid` и утилитой `.gap-*` для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. [Прочтите документацию для некоторых примеров.](http://getbootstrap.su/docs/5.0/components/buttons/#block-buttons)
+- <span class="badge bg-danger">Breaking</span> **Удален `.btn-block` для утилит.** Вместо используйте `.btn-block` в `.btn`, оберните ваши кнопки с `.d-grid` и `.gap-*` утилитами для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. [Прочтите документацию для некоторых примеров.](https://getbootstrap.com/docs/5.0/components/buttons/#block-buttons)
 
 - Обновлены миксины `button-variant()` и `button-outline-variant()` для поддержки дополнительных параметров.
 

@@ -192,4 +192,4 @@ Bootstrap «спиннеры» можно использовать для ото
 [float]:   {{< docsref "/utilities/float" >}}
 [margin]:  {{< docsref "/utilities/spacing" >}}
 [sizing]:  {{< docsref "/utilities/sizing" >}}
-[text]:    {{< docsref "/content/typography" >}}
+[text]:    {{< docsref "/utilities/text" >}}

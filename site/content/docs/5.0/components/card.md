@@ -398,7 +398,7 @@ toc: true
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      {{< placeholder width="100%" height="250" text="Изображение" >}}
+      {{< placeholder width="100%" height="250" text="Изображение" class="img-fluid rounded-start" >}}
     </div>
     <div class="col-md-8">
       <div class="card-body">

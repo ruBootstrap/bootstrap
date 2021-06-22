@@ -45,7 +45,7 @@ toc: true
 
 Нажмите кнопку ниже, чтобы отобразить тост (расположенный с нашими утилитами в правом нижнем углу), который по умолчанию был скрыт с помощью `.hide`.
 
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
@@ -66,7 +66,7 @@ toc: true
 ```html
 <button type="button" class="btn btn-primary" id="liveToastBtn">Показать лайв тосты</button>
 
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
@@ -389,6 +389,24 @@ toast.hide()
 
 ```js
 toast.dispose()
+```
+
+#### getInstance
+
+*Статический* метод, позволяющий получить экземпляр scrollspy, связанный с элементом DOM.
+
+```js
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getInstance(myToastEl) // Returns a Bootstrap toast instance
+```
+
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр scrollspy, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
 ```
 
 ### События

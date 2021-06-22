@@ -825,7 +825,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 ## Использование
 
-Модальный плагин переключает Ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также добавляет `.modal-open` к `<body>`, чтобы переопределить поведение прокрутки по умолчанию, и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при клике вне модального окна.
+Модальный плагин переключает ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также переопределяет поведение прокрутки по умолчанию и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при щелчке вне модального окна.
 
 ### Через атрибуты данных
 
@@ -948,6 +948,15 @@ myModal.dispose()
 ```js
 var myModalEl = document.getElementById('myModal')
 var modal = bootstrap.Modal.getInstance(myModalEl) // Возвращает экземпляр Bootstrap modal
+```
+
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить модальный экземпляр, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var myModalEl = document.querySelector('#myModal')
+var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
 ```
 
 ### События

@@ -187,8 +187,21 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
       <td>Уничтожает сворачиваемый элемент. (Удаляет сохраненные данные в элементе DOM)</td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
-      <td>Статический метод, позволяющий получить экземпляр коллапса, связанный с элементом DOM..</td>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Статический метод, который позволяет вам получить экземпляр коллапса, связанный с элементом DOM, вы можете использовать его следующим образом: <code>bootstrap.Collapse.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Статический метод, который возвращает экземпляр коллапса, связанный с элементом DOM, или создает новый, если он не был инициализирован.
+         Вы можете использовать это так: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>
+      </td>
     </tr>
   </tbody>
 </table>

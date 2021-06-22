@@ -154,7 +154,7 @@ Bootstrap разработан *mobile first (сначала мобильный)
 - Обсуждайте в чате Telegram [@getbootstrap_ru]({{< param telegram >}}).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap]({{< param blog >}}).
 - Присоединиться к [официальной комнате Slack]({{< param slack >}}).
-- Общайтесь с другими Bootstrappers в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
+- Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.net`, в канале `##bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/search?q=keywords:bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.
 

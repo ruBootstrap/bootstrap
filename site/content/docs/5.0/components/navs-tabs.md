@@ -625,6 +625,15 @@ var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
 ```
 
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var triggerEl = document.querySelector('#trigger')
+var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap tab instance
+```
+
 ### События
 
 При отображении новой вкладки события запускаются в следующем порядке:

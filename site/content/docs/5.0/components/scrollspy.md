@@ -298,6 +298,15 @@ var scrollSpyContentEl = document.getElementById('content')
 var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
 ```
 
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр scrollspy, связанный с элементом DOM, или создать новый, если он не был инициализирован
+
+```js
+var scrollSpyContentEl = document.getElementById('content')
+var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
+```
+
 ### Параметры
 
 Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к `data-bs-`, как в `data-bs-offset=""`.

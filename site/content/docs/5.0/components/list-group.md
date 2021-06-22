@@ -481,7 +481,16 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Выберите перв
 
 ```js
 var triggerEl = document.querySelector('#trigger')
-var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
+var tab = bootstrap.Tab.getInstance(triggerEl) // Возвращает экземпляр таба Bootstrap
+```
+
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var triggerEl = document.querySelector('#trigger')
+var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Возвращает экземпляр таба Bootstrap
 ```
 
 ### События
@@ -523,9 +532,11 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
 </table>
 
 ```js
-var tabEl = document.querySelector('a[data-bs-toggle="list"]')
-tabEl.addEventListener('shown.bs.tab', function (event) {
-  event.target // недавно активированная вкладка
-  event.relatedTarget // предыдущая активная вкладка
-})
+var tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
+tabElms.forEach(function(tabElm) {
+  tabElm.addEventListener('shown.bs.tab', function (event) {
+    event.target // недавно активированная вкладка
+    event.relatedTarget // предыдущая активная вкладка
+  })
+}
 ```

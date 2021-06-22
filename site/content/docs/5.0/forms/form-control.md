@@ -34,16 +34,16 @@ toc: true
 Добавьте к входу логический атрибут `disabled` к полю ввода, чтобы он выглядел серым, и удалил события указателя.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Отключенное поле ввода" aria-label="Пример отключенного поля входа" disabled>
-<input class="form-control" type="text" placeholder="Отключенное поле ввода только для чтения" aria-label="Пример отключенного поля входа" disabled readonly>
+<input class="form-control" type="text" placeholder="Отключенный ввод" aria-label="Пример отключенного входа" disabled>
+<input class="form-control" type="text" value="Отключенный ввод, только для чтения" aria-label="Пример отключенного входа" disabled readonly>
 {{< /example >}}
 
 ## Только для чтения
 
-Добавьте логический атрибут `readonly` к полю ввода, чтобы предотвратить изменение значения. Поле ввода только для чтения выглядят светлее (как и отключенные поля ввода), но сохраняют стандартный курсор.
+Добавьте логический атрибут `readonly` к входу, чтобы предотвратить изменение входного значения.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Поле ввода только для чтения..." aria-label="пример поля ввода только для чтения" readonly>
+<input class="form-control" type="text" value="Ввод здесь только для чтения..." aria-label="привер ввода только для чтения" readonly>
 {{< /example >}}
 
 ## Обычный текст только для чтения

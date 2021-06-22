@@ -256,9 +256,9 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>string</td>
       <td><code>'hover focus'</code></td>
       <td>
-        <p>Как запускается всплывающая подсказка - click | hover | focus | manual. Вы можете передать несколько триггеров; разделить их пробелом.</p>
-        <p><code>'manual'</code> указывает, что всплывающая подсказка будет запускаться программно через <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> и методы <code>.tooltip('toggle')</code>; это значение нельзя комбинировать с другими триггерами.</p>
-        <p>Само по себе <code>'hover'</code> приведет к появлению всплывающих подсказок, которые нельзя запускать с клавиатуры, и их следует использовать только при наличии альтернативных методов передачи той же информации пользователям клавиатуры.</p>
+        <p>Как запускается всплывающая подсказка - click | hover | focus | manual. Вы можете передать несколько триггеров; разделите их пробелом.</p>
+        <p><code>'manual'</code> указывает, что всплывающая подсказка будет запускаться программно через методы <code>.show()</code>, <code>.hide()</code> и <code>.toggle()</code>; это значение нельзя комбинировать с каким-либо другим триггером.</p>
+        <p>Само по себе <code>'hover'</code> приведет к появлению всплывающих подсказок, которые нельзя вызвать с клавиатуры, и их следует использовать только при наличии альтернативных методов передачи той же информации для пользователей клавиатуры.</p>
       </td>
     </tr>
     <tr>
@@ -427,6 +427,15 @@ tooltip.update()
 ```js
 var exampleTriggerEl = document.getElementById('example')
 var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+```
+
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр всплывающей подсказки, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
 ```
 
 ### События

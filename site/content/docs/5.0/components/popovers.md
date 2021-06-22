@@ -407,6 +407,15 @@ var exampleTriggerEl = document.getElementById('example')
 var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Возвращает экземпляр всплывающего окна Bootstrap
 ```
 
+#### getOrCreateInstance
+
+*Статический* метод, который позволяет вам получить экземпляр всплывающего окна, связанный с элементом DOM, или создать новый, если он не был инициализирован.
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Возвращает экземпляр всплывающего окна Bootstrap
+```
+
 ### События
 
 <table class="table">

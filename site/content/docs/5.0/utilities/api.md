@@ -110,11 +110,11 @@ $utilities: (
 Что выводит следующее:
 
 ```css
-.opacity-0-hover:hover { opacity: 0; }
-.opacity-25-hover:hover { opacity: .25; }
-.opacity-50-hover:hover { opacity: .5; }
-.opacity-75-hover:hover { opacity: .75; }
-.opacity-100-hover:hover { opacity: 1; }
+.opacity-0-hover:hover { opacity: 0 !important; }
+.opacity-25-hover:hover { opacity: .25 !important; }
+.opacity-50-hover:hover { opacity: .5 !important; }
+.opacity-75-hover:hover { opacity: .75 !important; }
+.opacity-100-hover:hover { opacity: 1 !important; }
 ```
 
 ### Адаптивные утилиты
@@ -140,50 +140,50 @@ $utilities: (
 Что выводит следующее:
 
 ```css
-.opacity-0 { opacity: 0; }
-.opacity-25 { opacity: .25; }
-.opacity-50 { opacity: .5; }
-.opacity-75 { opacity: .75; }
-.opacity-100 { opacity: 1; }
+.opacity-0 { opacity: 0 !important; }
+.opacity-25 { opacity: .25 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-75 { opacity: .75 !important; }
+.opacity-100 { opacity: 1 !important; }
 
 @media (min-width: 576px) {
-  .opacity-sm-0 { opacity: 0; }
-  .opacity-sm-25 { opacity: .25; }
-  .opacity-sm-50 { opacity: .5; }
-  .opacity-sm-75 { opacity: .75; }
-  .opacity-sm-100 { opacity: 1; }
+  .opacity-sm-0 { opacity: 0 !important; }
+  .opacity-sm-25 { opacity: .25 !important; }
+  .opacity-sm-50 { opacity: .5 !important; }
+  .opacity-sm-75 { opacity: .75 !important; }
+  .opacity-sm-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 768px) {
-  .opacity-md-0 { opacity: 0; }
-  .opacity-md-25 { opacity: .25; }
-  .opacity-md-50 { opacity: .5; }
-  .opacity-md-75 { opacity: .75; }
-  .opacity-md-100 { opacity: 1; }
+  .opacity-md-0 { opacity: 0 !important; }
+  .opacity-md-25 { opacity: .25 !important; }
+  .opacity-md-50 { opacity: .5 !important; }
+  .opacity-md-75 { opacity: .75 !important; }
+  .opacity-md-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 992px) {
-  .opacity-lg-0 { opacity: 0; }
-  .opacity-lg-25 { opacity: .25; }
-  .opacity-lg-50 { opacity: .5; }
-  .opacity-lg-75 { opacity: .75; }
-  .opacity-lg-100 { opacity: 1; }
+  .opacity-lg-0 { opacity: 0 !important; }
+  .opacity-lg-25 { opacity: .25 !important; }
+  .opacity-lg-50 { opacity: .5 !important; }
+  .opacity-lg-75 { opacity: .75 !important; }
+  .opacity-lg-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1200px) {
-  .opacity-xl-0 { opacity: 0; }
-  .opacity-xl-25 { opacity: .25; }
-  .opacity-xl-50 { opacity: .5; }
-  .opacity-xl-75 { opacity: .75; }
-  .opacity-xl-100 { opacity: 1; }
+  .opacity-xl-0 { opacity: 0 !important; }
+  .opacity-xl-25 { opacity: .25 !important; }
+  .opacity-xl-50 { opacity: .5 !important; }
+  .opacity-xl-75 { opacity: .75 !important; }
+  .opacity-xl-100 { opacity: 1 !important; }
 }
 
 @media (min-width: 1400px) {
-  .opacity-xxl-0 { opacity: 0; }
-  .opacity-xxl-25 { opacity: .25; }
-  .opacity-xxl-50 { opacity: .5; }
-  .opacity-xxl-75 { opacity: .75; }
-  .opacity-xxl-100 { opacity: 1; }
+  .opacity-xxl-0 { opacity: 0 !important; }
+  .opacity-xxl-25 { opacity: .25 !important; }
+  .opacity-xxl-50 { opacity: .5 !important; }
+  .opacity-xxl-75 { opacity: .75 !important; }
+  .opacity-xxl-100 { opacity: 1 !important; }
 }
 ```
 
@@ -224,20 +224,24 @@ $utilities: (
 Что выводит следующее:
 
 ```css
-.opacity-0 { opacity: 0; }
-.opacity-25 { opacity: .25; }
-.opacity-50 { opacity: .5; }
-.opacity-75 { opacity: .75; }
-.opacity-100 { opacity: 1; }
+.opacity-0 { opacity: 0 !important; }
+.opacity-25 { opacity: .25 !important; }
+.opacity-50 { opacity: .5 !important; }
+.opacity-75 { opacity: .75 !important; }
+.opacity-100 { opacity: 1 !important; }
 
 @media print {
-  .opacity-print-0 { opacity: 0; }
-  .opacity-print-25 { opacity: .25; }
-  .opacity-print-50 { opacity: .5; }
-  .opacity-print-75 { opacity: .75; }
-  .opacity-print-100 { opacity: 1; }
+  .opacity-print-0 { opacity: 0 !important; }
+  .opacity-print-25 { opacity: .25 !important; }
+  .opacity-print-50 { opacity: .5 !important; }
+  .opacity-print-75 { opacity: .75 !important; }
+  .opacity-print-100 { opacity: 1 !important; }
 }
 ```
+
+## Важность
+
+Все утилиты, генерируемые API, включают `!important` , чтобы гарантировать, что они переопределяют компоненты и классы модификаторов должным образом. Вы можете переключать этот параметр глобально с помощью переменной `$enable-important-utilities` (по умолчанию `true`).
 
 ## Использование API
 
@@ -288,6 +292,57 @@ $utilities: map-merge(
     ),
   )
 );
+```
+
+#### Включение адаптивности
+
+Вы можете включить адаптивные классы для существующего набора утилит, которые в настоящее время не отвечают по умолчанию. Например, чтобы сделать классы `border` адаптивными:
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities, (
+    "border": map-merge(
+      map-get($utilities, "border"),
+      ( responsive: true ),
+    ),
+  )
+);
+```
+
+Теперь это будет генерировать ответные варианты `.border` и `.border-0` для каждой контрольной точки. Ваш сгенерированный CSS будет выглядеть так:
+
+```css
+.border { ... }
+.border-0 { ... }
+
+@media (min-width: 576px) {
+  .border-sm { ... }
+  .border-sm-0 { ... }
+}
+
+@media (min-width: 768px) {
+  .border-md { ... }
+  .border-md-0 { ... }
+}
+
+@media (min-width: 992px) {
+  .border-lg { ... }
+  .border-lg-0 { ... }
+}
+
+@media (min-width: 1200px) {
+  .border-xl { ... }
+  .border-xl-0 { ... }
+}
+
+@media (min-width: 1400px) {
+  .border-xxl { ... }
+  .border-xxl-0 { ... }
+}
 ```
 
 #### Переименование утилит
