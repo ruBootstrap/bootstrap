@@ -270,8 +270,8 @@ var bsAlert = new bootstrap.Alert(myAlert)
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised.
-        You can use it like this: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
+        Статический метод, который возвращает экземпляр предупреждения, связанный с элементом DOM, или создает новый, если он не был инициализирован.
+        Вы можете использовать это так: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>

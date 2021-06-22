@@ -227,7 +227,7 @@ var bsButton = new bootstrap.Button(button)
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the button instance associated to a DOM element, you can use it like this: <code>bootstrap.Button.getInstance(element)</code>
+        Статический метод, который позволяет вам получить экземпляр кнопки, связанный с элементом DOM, вы можете использовать это так: <code>bootstrap.Button.getInstance(element)</code>
       </td>
     </tr>
     <tr>
@@ -235,8 +235,8 @@ var bsButton = new bootstrap.Button(button)
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialised.
-        You can use it like this: <code>bootstrap.Button.getOrCreateInstance(element)</code>
+        Статический метод, который возвращает экземпляр кнопки, связанный с элементом DOM, или создает новый, если он не был инициализирован.
+        Вы можете использовать это так: <code>bootstrap.Button.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>

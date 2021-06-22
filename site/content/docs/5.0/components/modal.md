@@ -956,7 +956,7 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Возвращает эк�
 
 ```js
 var myModalEl = document.querySelector('#myModal')
-var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
+var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Возвращает экземпляр модалки Bootstrap
 ```
 
 ### События
