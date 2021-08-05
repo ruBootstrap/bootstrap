@@ -17,11 +17,8 @@
       hint: Узнайте о браузерах и устройствах
       slug: browsers-devices
     - title: JavaScript
-      hint: Оживите Bootstrap
+      hint: JavaScript
       slug: javascript
-    - title: Инструменты сборки
-      hint: Сценарии npm
-      slug: build-tools
     - title: Webpack
       hint: Сборщики
       slug: webpack
@@ -35,8 +32,11 @@
       hint: Механизм изменения размера
       slug: rfs
     - title: RTL
-      hint: RTL
+      hint: Справа налево
       slug: rtl
+    - title: Участие
+      hint: Внести вклад
+      slug: contribute
 
 - title: Настройка
   slug: customize
@@ -87,6 +87,9 @@
     - title: Z-индекс
       hint: Z-индекс
       slug: z-index
+    - title: CSS-сетка
+      hint: Сетка на css
+      slug: css-grid
 
 - title: Контент
   slug: content
@@ -192,6 +195,9 @@
     - title: Pagination
       hint: Пагинация
       slug: pagination
+    - title: Placeholders
+      hint: Заполнители
+      slug: placeholders
     - title: Popovers
       hint: Всплывающие окна
       slug: popovers
@@ -226,6 +232,9 @@
     - title: Position
       hint: Положение
       slug: position
+    - title: Stacks
+      hint: Стеки
+      slug: stacks
     - title: Visually hidden
       hint: Визуальное скрытие
       slug: visually-hidden
@@ -235,6 +244,9 @@
     - title: Text truncation
       hint: Укорачивание текста
       slug: text-truncation
+    - title: Vertical rule
+      hint: Вертикальное правило
+      slug: vertical-rule
 
 - title: Утилиты
   slug: utilities
@@ -263,6 +275,9 @@
     - title: Interactions
       hint: Взаимодействия
       slug: interactions
+    - title: Opacity
+      hint: Непрозрачность
+      slug: opacity
     - title: Overflow
       hint: Переполнение
       slug: overflow

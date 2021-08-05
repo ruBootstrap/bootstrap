@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getbootstrap.su/">
-    <img src="https://getbootstrap.su/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
+    <img src="https://getbootstrap.su/docs/5.1/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
   </a>
 </p>
 
@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.su/docs/5.0/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.0/"><strong>[EN] Explore Bootstrap docs »</strong></a>
+  <a href="https://getbootstrap.su/docs/5.1/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.1/"><strong>[EN] Explore Bootstrap docs »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Report bug</a>
@@ -46,14 +46,14 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.0.2.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.1.0.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
 - Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.0.2`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.1.0`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.0/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
+Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.1/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
 
 
 ## Статус
