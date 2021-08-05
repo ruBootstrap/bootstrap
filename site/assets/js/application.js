@@ -70,7 +70,7 @@
 
   if (alertTrigger) {
     alertTrigger.addEventListener('click', function () {
-      alert('Nice, you triggered this alert message!', 'success')
+      alert('Отлично, вы запустили это предупреждающее сообщение!', 'success')
     })
   }
 

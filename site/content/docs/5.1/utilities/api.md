@@ -68,7 +68,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .text-decoration-none { text-decoration: none !important; }
@@ -124,7 +124,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .o-0 { opacity: 0 !important; }
@@ -153,7 +153,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .text-opacity-25 { --bs-text-opacity: .25; }

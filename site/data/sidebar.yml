@@ -245,7 +245,7 @@
       hint: Укорачивание текста
       slug: text-truncation
     - title: Vertical rule
-      hint: Вертикальное правило
+      hint: Вертикальный разделитель
       slug: vertical-rule
 
 - title: Утилиты

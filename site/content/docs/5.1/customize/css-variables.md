@@ -49,6 +49,6 @@ a {
 }
 ```
 
-## Grid breakpoints
+## Контрольные точки сетки
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the mean time, you can use these variables in other CSS situations, as well as in your JavaScript.
+Хотя мы включаем контрольные точки нашей сетки как переменные CSS (кроме `xs`), имейте в виду, что **переменные CSS не работают в медиа-запросах**. Это предусмотрено спецификацией CSS для переменных, но может измениться в ближайшие годы с поддержкой переменных `env()`. Ознакомьтесь с [этим ответом на Stack Overflow](https://stackoverflow.com/a/47212942) для некоторых полезных ссылок. Между тем, вы можете использовать эти переменные в других ситуациях CSS, а также в своем JavaScript.

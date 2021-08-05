@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## Как это работает
+## Как это устроено
 
 Вот что вам нужно знать, прежде чем начать работу с навигационной панелью:
 
@@ -702,14 +702,14 @@ toc: true
 
 ### Offcanvas
 
-Transform your expanding and collapsing navbar into an offcanvas drawer with the offcanvas plugin. We extend both the offcanvas default styles and use our `.navbar-expand-*` classes to create a dynamic and flexible navigation sidebar.
+Превратите расширяющуюся и сворачивающуюся панель навигации в ящик вне холста с помощью плагина offcanvas. Мы расширяем оба стиля offcanvas по умолчанию и используем наши классы `.navbar-expand-*` для создания динамической и гибкой боковой панели навигации.
 
-In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
+В приведенном ниже примере, чтобы создать панель навигации вне холста, которая всегда сворачивается во всех точках останова, полностью опустите класс `.navbar-expand-*`.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <a class="navbar-brand" href="#">Навигационная панель Offcanvas</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -721,28 +721,28 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Ссылка</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Выпадающий список
             </a>
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
             </ul>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+          <button class="btn btn-outline-success" type="submit">Поиск</button>
         </form>
       </div>
     </div>
@@ -750,11 +750,11 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
 </nav>
 {{< /example >}}
 
-To create an offcanvas navbar that expands into a normal navbar at a specific breakpoint like `lg`, use `.navbar-expand-lg`.
+Чтобы создать панель навигации вне холста, которая расширяется в обычную панель навигации в определенной точке останова, такой как `lg`, используйте `.navbar-expand-lg`.
 
 ```html
 <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
-  <a class="navbar-brand" href="#">Offcanvas navbar</a>
+  <a class="navbar-brand" href="#">Навигационная панель Offcanvas</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
     <span class="navbar-toggler-icon"></span>
   </button>

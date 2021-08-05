@@ -1,28 +1,28 @@
 ---
 layout: docs
-title: Vertical rule
-description: Use the custom vertical rule helper to create vertical dividers like the `<hr>` element.
+title: Вертикальный разделитель
+description: Используйте вспомогательную функцию настраиваемых вертикальных правил для создания вертикальных разделителей, таких как элемент `<hr>`.
 group: helpers
 toc: true
 ---
 
-## How it works
+## Как это устроено
 
-Vertical rules are inspired by the `<hr>` element, allowing you to create vertical dividers in common layouts. They're styled just like `<hr>` elements:
+Вертикальные правила основаны на элементе `<hr>`, позволяющем создавать вертикальные разделители в общих макетах. Они стилизованы так же, как элементы `<hr>`:
 
-- They're `1px` wide
-- They have `min-height` of `1em`
-- Their color is set via `currentColor` and `opacity`
+- Они имеют ширину `1px`
+- У них `min-height` равняется `1em`
+- Их цвет устанавливается через `currentColor` и `opacity`
 
-Customize them with additional styles as needed.
+При необходимости настройте их дополнительными стилями.
 
-## Example
+## Пример
 
 {{< example >}}
 <div class="vr"></div>
 {{< /example >}}
 
-Vertical rules scale their height in flex layouts:
+Вертикальные правила масштабируют свою высоту в гибких макетах:
 
 {{< example >}}
 <div class="d-flex" style="height: 200px;">
@@ -30,15 +30,15 @@ Vertical rules scale their height in flex layouts:
 </div>
 {{< /example >}}
 
-## With stacks
+## Со стеками
 
-They can also be used in [stacks]({{< docsref "/helpers/stacks" >}}):
+Их также можно использовать в [стеках]({{< docsref "/helpers/stacks" >}}):
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border ms-auto">Second item</div>
+  <div class="bg-light border">Первый элемент</div>
+  <div class="bg-light border ms-auto">Второй элемент</div>
   <div class="vr"></div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Третий элемент</div>
 </div>
 {{< /example >}}

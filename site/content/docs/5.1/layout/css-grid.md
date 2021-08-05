@@ -1,50 +1,50 @@
 ---
 layout: docs
-title: CSS Grid
-description: Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.
+title: CSS-сетка
+description: Узнайте, как включить, использовать и настроить нашу альтернативную систему макета, основанную на CSS Grid, с примерами и фрагментами кода.
 group: layout
 toc: true
 ---
 
-Bootstrap's default grid system represents the culmination of over a decade of CSS layout techniques, tried and tested by millions of people. But, it was also created without many of the modern CSS features and techniques we're seeing in browsers like the new CSS Grid.
+Сетка по умолчанию в Bootstrap представляет собой кульминацию более чем десятилетних методов компоновки CSS, опробованных и протестированных миллионами людей. Но он также был создан без многих современных функций и методов CSS, которые мы видим в браузерах, таких как новая CSS Grid.
 
 {{< callout warning >}}
-**Heads up—our CSS Grid system is experimental and opt-in for v5.1.0!** We included it in our documentation's CSS to demonstrate it for you, but it's disabled by default. Keep reading to learn how to enable it in your projects.
+**Внимание! Наша система CSS Grid является экспериментальной и поддерживает версию 5.1.0!** Мы включили ее в CSS нашей документации, чтобы продемонстрировать ее вам, но по умолчанию она отключена. Продолжайте читать, чтобы узнать, как включить его в свои проекты.
 {{< /callout >}}
 
-## How it works
+## Как это устроено
 
-With Bootstrap 5, we've added the option to enable a separate grid system that's built on CSS Grid, but with a Bootstrap twist. You still get classes you can apply on a whim to build responsive layouts, but with a different approach under the hood.
+В Bootstrap 5 мы добавили возможность включения отдельной системы сеток, построенной на CSS Grid, но с поворотом Bootstrap. Вы по-прежнему получаете классы, которые можете применять по прихоти для создания адаптивных макетов, но с другим подходом под капотом.
 
-- **CSS Grid is opt-in.** Disable the default grid system by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`. Then, recompile your Sass.
+- **CSS Grid включен.** Отключите сетку по умолчанию, установив `$enable-grid-classes: false`, и включите CSS Grid, установив `$enable-cssgrid: true`. Затем перекомпилируйте свой Sass.
 
-- **Replace instances of `.row` with `.grid`.** The `.grid` class sets `display: grid` and creates a `grid-template` that you build on with your HTML.
+- **Замените экземпляры `.row` на `.grid`.** Класс `.grid` устанавливает `display: grid` и создает `grid-template`, который вы создаете с помощью вашего HTML.
 
-- **Replace `.col-*` classes with `.g-col-*` classes.** This is because our CSS Grid columns use the `grid-column` property instead of `width`.
+- **Замените классы `.col-*` классами `.g-col-*`.** Это потому, что наши столбцы CSS Grid используют свойство `grid-column` вместо `width`.
 
-- **Columns and gutter sizes are set via CSS variables.** Set these on the parent `.grid` and customize however you want, inline or in a stylesheet, with `--bs-columns` and `--bs-gap`.
+- **Столбцы и размеры желоба устанавливаются с помощью переменных CSS.** Задайте их в родительском `.grid` и настройте, как хотите, встроенным или в таблице стилей, с помощью `--bs-columns` и `--bs-gap`.
 
-In the future, Bootstrap will likely shift to a hybrid solution as the `gap` property has achieved nearly full browser support for flexbox.
+В будущем Bootstrap, вероятно, перейдет к гибридному решению, поскольку свойство `gap` обеспечило почти полную поддержку браузером flexbox.
 
-## Key differences
+## Ключевые отличия
 
-Compared to the default grid system:
+Сравнение с сеткой по умолчанию:
 
-- Flex utilities don't affect the CSS Grid columns in the same way.
+- Утилиты Flex не влияют на столбцы CSS Grid таким же образом.
 
-- Gaps replaces gutters. The `gap` property replaces the horizontal `padding` from our default grid system and functions more like `margin`.
+- Заменяет зазоры водосточные желоба. Свойство `gap` заменяет горизонтальный `padding` из нашей системы сетки по умолчанию и работает больше как `margin`.
 
-- As such, unlike `.row`s, `.grid`s have no negative margins and margin utilities cannot be used to change the grid gutters. Grid gaps are applied horizontally and vertically by default. See the [customizing section](#customizing) for more details.
+- Таким образом, в отличие от `.row`, `.grid` не имеет отрицательного отступа, и утилиты отступа не могут использоваться для изменения промежутков сетки. Промежутки сетки по умолчанию применяются по горизонтали и вертикали. Смотрите [раздел кастомизации](#кастомизация) для получения более подробной информации.
 
-- Inline and custom styles should be viewed as replacements for modifier classes (e.g., `style="--bs-columns: 3;"` vs `class="row-cols-3"`).
+- Встроенные и пользовательские стили следует рассматривать как замену для классов модификаторов (например, `style="--bs-columns: 3;"` против `class="row-cols-3"`).
 
-- Nesting works similarly, but may require you to reset your column counts on each instance of a nested `.grid`. See the [nesting section](#nesting) for details.
+- Вложение работает аналогично, но может потребовать от вас сбросить счетчик столбцов для каждого экземпляра вложенного файла `.grid`. Смотрите [раздел вложенности](#вложенность) для получения подробной информации.
 
-## Examples
+## Примеры
 
-### Three columns
+### Три колонки
 
-Three equal-width columns across all viewports and devices can be created by using the `.g-col-4` classes. Add [responsive classes](#responsive) to change the layout by viewport size.
+Три столбца одинаковой ширины во всех окнах просмотра и на всех устройствах могут быть созданы с помощью классов `.g-col-4`. Добавьте [отзывчивые классы](#адаптивность), чтобы изменить макет по размеру области просмотра.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -54,9 +54,9 @@ Three equal-width columns across all viewports and devices can be created by usi
 </div>
 {{< /example >}}
 
-### Responsive
+### Адаптивность
 
-Use responsive classes to adjust your layout across viewports. Here we start with two columns on the narrowest viewports, and then grow to three columns on medium viewports and above.
+Используйте адаптивные классы, чтобы настроить макет во всех окнах просмотра. Здесь мы начинаем с двух столбцов на самых узких окнах просмотра, а затем увеличиваем до трех столбцов на средних и выше.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -66,7 +66,7 @@ Use responsive classes to adjust your layout across viewports. Here we start wit
 </div>
 {{< /example >}}
 
-Compare that to this two column layout at all viewports.
+Сравните это с макетом из двух столбцов во всех окнах просмотра.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -75,9 +75,9 @@ Compare that to this two column layout at all viewports.
 </div>
 {{< /example >}}
 
-## Wrapping
+## Обертка
 
-Grid items automatically wrap to the next line when there's no more room horizontally. Note that the `gap` applies to horizontal and vertical gaps between grid items.
+Элементы сетки автоматически переносятся на следующую строку, когда по горизонтали больше нет места. Обратите внимание, что `gap` применяется к горизонтальным и вертикальным промежуткам между элементами сетки.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -89,9 +89,9 @@ Grid items automatically wrap to the next line when there's no more room horizon
 </div>
 {{< /example >}}
 
-## Starts
+## Начало
 
-Start classes aim to replace our default grid's offset classes, but they're not entirely the same. CSS Grid creates a grid template through styles that tell browsers to "start at this column" and "end at this column." Those properties are `grid-column-start` and `grid-column-end`. Start classes are shorthand for the former. Pair them with the column classes to size and align your columns however you need. Start classes begin at `1` as `0` is an invalid value for these properties.
+Стартовые классы призваны заменить классы смещения нашей сетки по умолчанию, но они не совсем такие же. CSS-Сетка создает шаблон сетки с помощью стилей, которые говорят браузерам «начинать с этого столбца» и «заканчиваться в этом столбце». Это свойства `grid-column-start` и `grid-column-end`. Стартовые классы являются сокращением для первых. Соедините их с классами столбцов, чтобы задать размер и выровнять столбцы, как вам нужно. Начальные классы начинаются с `1`, поскольку `0` является недопустимым значением для этих свойств.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -100,9 +100,9 @@ Start classes aim to replace our default grid's offset classes, but they're not 
 </div>
 {{< /example >}}
 
-## Auto columns
+## Авто колонки
 
-When there are no classes on the grid items (the immediate children of a `.grid`), each grid item will automatically be sized to one column.
+Когда в элементах сетки нет классов (непосредственные дочерние элементы для `.grid`), размер каждого элемента сетки автоматически будет равен одному столбцу.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -121,7 +121,7 @@ When there are no classes on the grid items (the immediate children of a `.grid`
 </div>
 {{< /example >}}
 
-This behavior can be mixed with grid column classes.
+Это поведение можно смешивать с классами столбцов сетки.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid">
@@ -135,67 +135,67 @@ This behavior can be mixed with grid column classes.
 </div>
 {{< /example >}}
 
-## Nesting
+## Вложенность
 
-Similar to our default grid system, our CSS Grid allows for easy nesting of `.grid`s. However, unlike the default, this grid inherits changes in the rows, columns, and gaps. Consider the example below:
+Подобно нашей сетке по умолчанию, наша CSS Grid позволяет легко встраивать файлы `.grid`. Однако, в отличие от значения по умолчанию, эта сетка наследует изменения в строках, столбцах и промежутках. Рассмотрим пример ниже:
 
-- We override the default number of columns with a local CSS variable: `--bs-columns: 3`.
-- In the first auto-column, the column count is inherited and each column is one-third of the available width.
-- In the second auto-column, we've reset the column count on the nested `.grid` to 12 (our default).
-- The third auto-column has no nested content.
+- Мы переопределяем количество столбцов по умолчанию с помощью локальной переменной CSS: `--bs-columns: 3`.
+- В первом автоматическом столбце количество столбцов наследуется, и каждый столбец составляет одну треть доступной ширины.
+- Во втором автоматическом столбце мы сбросили счетчик столбцов во вложенном `.grid` на 12 (наше значение по умолчанию).
+- В третьем автоколонке нет вложенного содержимого.
 
-In practice this allows for more complex and custom layouts when compared to our default grid system.
+На практике это позволяет создавать более сложные и настраиваемые макеты по сравнению с нашей сеткой по умолчанию.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-columns: 3;">
   <div>
-    First auto-column
+    Первая автоколонка
     <div class="grid">
-      <div>Auto-column</div>
-      <div>Auto-column</div>
+      <div>Автоколонка</div>
+      <div>Автоколонка</div>
     </div>
   </div>
   <div>
-    Second auto-column
+    Вторая автоколонка
     <div class="grid" style="--bs-columns: 12;">
       <div class="g-col-6">6 of 12</div>
       <div class="g-col-4">4 of 12</div>
       <div class="g-col-2">2 of 12</div>
     </div>
   </div>
-  <div>Third auto-column</div>
+  <div>Третья автоколонка</div>
 </div>
 {{< /example >}}
 
-## Customizing
+## Кастомизация
 
-Customize the number of columns, the number of rows, and the width of the gaps with local CSS variables.
+Настройте количество столбцов, количество строк и ширину промежутков с помощью локальных переменных CSS.
 
 {{< bs-table "table" >}}
-| Variable | Fallback value | Description |
+| Переменная | Резервное значение | Описание |
 | --- | --- | --- |
-| `--bs-rows` | `1` | The number of rows in your grid template |
-| `--bs-columns` | `12` | The number of columns in your grid template |
-| `--bs-gap` | `1.5rem` | The size of the gap between columns (vertical and horizontal) |
+| `--bs-rows` | `1` | Количество строк в шаблоне сетки |
+| `--bs-columns` | `12` | Количество столбцов в шаблоне сетки |
+| `--bs-gap` | `1.5rem` | Размер промежутка между столбцами (по вертикали и горизонтали) |
 {{< /bs-table >}}
 
-These CSS variables have no default value; instead, they apply fallback values that are used _until_ a local instance is provided. For example, we use `var(--bs-rows, 1)` for our CSS Grid rows, which ignores `--bs-rows` because that hasn't been set anywhere yet. Once it is, the `.grid` instance will use that value instead of the fallback value of `1`.
+Эти переменные CSS не имеют значения по умолчанию; вместо этого они применяют резервные значения, которые используются _до тех пор, пока не будет предоставлен_ локальный экземпляр. Например, мы используем `var(--bs-rows, 1)` для наших строк CSS Grid, который игнорирует `--bs-rows`, потому что он еще нигде не установлен. Как только это произойдет, экземпляр `.grid` будет использовать это значение вместо резервного значения `1`.
 
-### No grid classes
+### Нет классов сетки
 
-Immediate children elements of `.grid` are grid items, so they'll be sized without explicitly adding a `.g-col` class.
+Непосредственные дочерние элементы для `.grid` являются элементами сетки, поэтому их размер будет изменяться без явного добавления класса `.g-col`.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-columns: 3;">
-  <div>Auto-column</div>
-  <div>Auto-column</div>
-  <div>Auto-column</div>
+  <div>Автоколонка</div>
+  <div>Автоколонка</div>
+  <div>Автоколонка</div>
 </div>
 {{< /example >}}
 
-### Columns and gaps
+### Столбцы и промежутки
 
-Adjust the number of columns and the gap.
+Отрегулируйте количество столбцов и промежутков.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-columns: 4; --bs-gap: 5rem;">
@@ -211,21 +211,21 @@ Adjust the number of columns and the gap.
 </div>
 {{< /example >}}
 
-### Adding rows
+### Добавление строк
 
-Adding more rows and changing the placement of columns:
+Добавление дополнительных строк и изменение размещения столбцов:
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-rows: 3; --bs-columns: 3;">
-  <div>Auto-column</div>
-  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
-  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
+  <div>Автоколонка</div>
+  <div class="g-start-2" style="grid-row: 2">Автоколонка</div>
+  <div class="g-start-3" style="grid-row: 3">Автоколонка</div>
 </div>
 {{< /example >}}
 
-### Gaps
+### Промежутки
 
-Change the vertical gaps only by modifying the `row-gap`. Note that we use `gap` on `.grid`s, but `row-gap` and `column-gap` can be modified as needed.
+Изменяйте вертикальные промежутки, только изменяя `row-gap`. Обратите внимание, что мы используем `gap` в `.grid`, но `row-gap` и `column-gap` можно изменить по мере необходимости.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="row-gap: 0;">
@@ -237,7 +237,7 @@ Change the vertical gaps only by modifying the `row-gap`. Note that we use `gap`
 </div>
 {{< /example >}}
 
-Because of that, you can have different vertical and horizontal `gap`s, which can take a single value (all sides) or a pair of values (vertical and horizontal). This can be applied with an inline style for `gap`, or with our `--bs-gap` CSS variable.
+Из-за этого у вас могут быть разные вертикальные и горизонтальные `gap`, которые могут принимать одно значение (все стороны) или пару значений (вертикальное и горизонтальное). Это может быть применено со встроенным стилем для `gap` или с нашей CSS-переменной `--bs-gap`.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-gap: .25rem 1rem;">
@@ -251,16 +251,16 @@ Because of that, you can have different vertical and horizontal `gap`s, which ca
 
 ## Sass
 
-One limitation of the CSS Grid is that our default classes are still generated by two Sass variables, `$grid-columns` and `$grid-gutter-width`. This effectively predetermines the number of classes generated in our compiled CSS. You have two options here:
+Одним из ограничений CSS Grid является то, что наши классы по умолчанию по-прежнему генерируются двумя переменными Sass: `$grid-columns` и `$grid-gutter-width`. Это фактически предопределяет количество классов, сгенерированных в нашем скомпилированном CSS. У вас есть два варианта:
 
-- Modify those default Sass variables and recompile your CSS.
-- Use inline or custom styles to augment the provided classes.
+- Измените эти переменные Sass по умолчанию и перекомпилируйте свой CSS.
+- Используйте встроенные или настраиваемые стили для расширения предоставленных классов.
 
-For example, you can increase the column count and change the gap size, and then size your "columns" with a mix of inline styles and predefined CSS Grid column classes (e.g., `.g-col-4`).
+Например, вы можете увеличить количество столбцов и изменить размер зазора, а затем изменить размер «столбцов» с помощью сочетания встроенных стилей и предопределенных классов столбцов таблицы CSS (например, `.g-col-4`).
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid" style="--bs-columns: 18; --bs-gap: .5rem;">
-  <div style="grid-column: span 14;">14 columns</div>
+  <div style="grid-column: span 14;">14 колонок</div>
   <div class="g-col-4">.g-col-4</div>
 </div>
 {{< /example >}}

@@ -35,15 +35,15 @@ toc: true
 {{< /colors.inline >}}
 {{< /markdown >}}
 
-## Opacity
+## Непрозрачность
 
 <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
 
-As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+Начиная с версии 5.1.0, утилиты `background-color` генерируются с помощью Sass с использованием переменных CSS. Это позволяет изменять цвет в реальном времени без компиляции и динамических изменений альфа-прозрачности.
 
-### How it works
+### Как это устроено
 
-Consider our default `.bg-success` utility.
+Рассмотрим нашу стандартную утилиту `.bg-success`.
 
 ```css
 .bg-success {
@@ -52,25 +52,25 @@ Consider our default `.bg-success` utility.
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+Мы используем RGB-версию нашей переменной CSS `--bs-success` (со значением `25, 135, 84`) и добавляем вторую переменную CSS, `--bs-bg-opacity`, для альфа-прозрачности. (со значением по умолчанию `1` благодаря локальной переменной CSS). Это означает, что каждый раз, когда вы сейчас используете `.bg-success`, вашим вычисленным значением `color` будет `rgba(25, 135, 84, 1)`. Локальная переменная CSS внутри каждого класса `.bg-*` позволяет избежать проблем с наследованием, поэтому вложенные экземпляры утилит не имеют автоматически измененной альфа-прозрачности.
 
-### Example
+### Пример
 
-To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
+Чтобы изменить эту непрозрачность, переопределите `--bs-bg-opacity` с помощью пользовательских стилей или встроенных стилей.
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-white">Это фон успеха по умолчанию</div>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">Это успешный фон с непрозрачностью 50%</div>
 {{< /example >}}
 
 Or, choose from any of the `.bg-opacity` utilities:
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+<div class="bg-success p-2 text-white">Это фон успеха по умолчанию</div>
+<div class="bg-success p-2 text-white bg-opacity-75">Это успешный фон с непрозрачностью 75%</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">Это успешный фон с непрозрачностью 50%</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">Это успешный фон с непрозрачностью 25%</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">Это успешный фон с непрозрачностью 10%</div>
 {{< /example >}}
 
 ## Sass

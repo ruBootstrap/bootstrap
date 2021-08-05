@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Placeholders
-description: Use loading placeholders for your components or pages to indicate something may still be loading.
+title: Заполнители
+description: Используйте заполнители загрузки для ваших компонентов или страниц, чтобы указать, что что-то все еще загружается.
 group: components
 toc: true
 ---
 
-## About
+## Введение
 
-Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
+Заполнители можно использовать для улучшения восприятия вашего приложения. Они построены только с помощью HTML и CSS, а это значит, что для их создания не нужен JavaScript. Однако вам понадобится специальный JavaScript для переключения их видимости. Их внешний вид, цвет и размер можно легко настроить с помощью наших служебных классов.
 
-## Example
+## Пример
 
-In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
+В приведенном ниже примере мы берем типичный компонент карты и воссоздаем его с заполнителями, применяемыми для создания «загрузочной карты». Размер и пропорции у них одинаковы.
 
 <div class="bd-example bd-example-placeholder-cards d-flex justify-content-around">
 <div class="card">
   {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#20c997" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Заголовок карточки</h5>
+    <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -47,9 +47,9 @@ In the example below, we take a typical card component and recreate it with plac
   <img src="..." class="card-img-top" alt="...">
 
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Заголовок карточки</h5>
+    <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
+    <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
   </div>
 </div>
 
@@ -71,11 +71,11 @@ In the example below, we take a typical card component and recreate it with plac
 </div>
 ```
 
-## How it works
+## Как это устроено
 
-Create placeholders with the `.placeholder` class and a grid column class (e.g., `.col-6`) to set the `width`. They can replace the text inside an element or as be added as a modifier class to an existing component.
+Создайте заполнители с классом `.placeholder` и классом столбца сетки (например, `.col-6`), чтобы установить `width`. Они могут заменять текст внутри элемента или добавляться как класс-модификатор к существующему компоненту.
 
-We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
+Мы применяем дополнительный стиль к `.btn` через `::before`, чтобы обеспечить соблюдение высоты `height`. Вы можете расширить этот шаблон для других ситуаций по мере необходимости или добавить в элемент `&nbsp;`, чтобы отразить высоту, когда фактический текст отображается на его месте.
 
 {{< example >}}
 <p aria-hidden="true">
@@ -86,12 +86,12 @@ We apply additional styling to `.btn`s via `::before` to ensure the `height` is 
 {{< /example >}}
 
 {{< callout info >}}
-The use of `aria-hidden="true"` only indicates that the element should be hidden to screen readers. The *loading* behaviour of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavasSript code may be needed to *swap* the state of the placeholder and inform AT users of the update.
+Использование `aria-hidden="true"` только указывает, что элемент должен быть скрыт для программ чтения с экрана. Поведение *загрузки* заполнителя зависит от того, как авторы на самом деле будут использовать стили заполнителя, как они планируют обновлять вещи и т. д. Некоторый код JavasSript может потребоваться для *замены* состояния заполнителя и информирования пользователей AT об обновлении.
 {{< /callout >}}
 
-### Width
+### Ширина
 
-You can change the `width` through grid column classes, width utilities, or inline styles.
+Вы можете изменить `width` с помощью классов столбцов сетки, утилит ширины или встроенных стилей.
 
 {{< example >}}
 <span class="placeholder col-6"></span>
@@ -99,9 +99,9 @@ You can change the `width` through grid column classes, width utilities, or inli
 <span class="placeholder" style="width: 25%;"></span>
 {{< /example >}}
 
-### Color
+### Цвет
 
-By default, the `placeholder` uses `currentColor`. This can be overriden with a custom color or utility class.
+По умолчанию заполнитель `placeholder` использует `currentColor`. Это можно изменить с помощью настраиваемого цвета или служебного класса.
 
 {{< example >}}
 <span class="placeholder col-12"></span>
@@ -112,9 +112,9 @@ By default, the `placeholder` uses `currentColor`. This can be overriden with a 
 {{< /placeholders.inline >}}
 {{< /example >}}
 
-### Sizing
+### Размеры
 
-The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
+Размер `.placeholder` основывается на типографском стиле родительского элемента. Настройте их с помощью модификаторов размера: `.placeholder-lg`, `.placeholder-sm` или `.placeholder-xs`.
 
 {{< example >}}
 <span class="placeholder col-12 placeholder-lg"></span>
@@ -123,9 +123,9 @@ The size of `.placeholder`s are based on the typographic style of the parent ele
 <span class="placeholder col-12 placeholder-xs"></span>
 {{< /example >}}
 
-### Animation
+### Анимация
 
-Animate placehodlers with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being _actively_ loaded.
+Анимируйте заполнители с `.placeholder-glow` или `.placeholder-wave`, чтобы лучше передать представление о том, что что-то _активно_ загружается.
 
 {{< example >}}
 <p class="placeholder-glow">
@@ -139,6 +139,6 @@ Animate placehodlers with `.placeholder-glow` or `.placeholder-wave` to better c
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="placeholders" file="scss/_variables.scss" >}}

@@ -4,7 +4,7 @@ title: Элемент выбора (select)
 description: Настройте собственные `<select>` с помощью настраиваемого CSS, который изменяет первоначальный вид элемента.
 group: forms
 aliases:
-  - "/docs/5.0/forms/select/"
+  - "/docs/5.1/forms/select/"
 toc: true
 ---
 

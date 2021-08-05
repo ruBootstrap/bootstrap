@@ -1,77 +1,77 @@
 ---
 layout: docs
-title: Stacks
-description: Shorthand helpers that build on top of our flexbox utilities to make component layout faster and easier than ever.
+title: Стеки
+description: Сокращенные помощники, которые строятся на основе наших утилит flexbox, чтобы сделать компоновку компонентов быстрее и проще, чем когда-либо.
 group: helpers
 toc: true
 ---
 
-Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Bootstrap. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
+Стеки предлагают ярлык для применения ряда свойств flexbox для быстрого и легкого создания макетов в Bootstrap. Вся заслуга в концепции и реализации принадлежит [проекту Pylon](https://almonk.github.io/pylon/).
 
-## Vertical
+## Вертикальный
 
-Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
+Используйте `.vstack` для создания вертикальных макетов. По умолчанию сложенные элементы имеют полную ширину. Используйте утилиты `.gap-*` для добавления пробелов между элементами.
 
 {{< example >}}
 <div class="vstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border">Second item</div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Первый элемент</div>
+  <div class="bg-light border">Второй элемент</div>
+  <div class="bg-light border">Третий элемент</div>
 </div>
 {{< /example >}}
 
-## Horizontal
+## Горизонтальный
 
-Use `.hstack` for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use `.gap-*` utilities to add space between items.
+Используйте `.hstack` для горизонтальных макетов. Сложенные элементы по умолчанию центрируются по вертикали и занимают только необходимую ширину. Используйте утилиты `.gap-*` для добавления пробелов между элементами.
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border">Second item</div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Первый элемент</div>
+  <div class="bg-light border">Второй элемент</div>
+  <div class="bg-light border">Третий элемент</div>
 </div>
 {{< /example >}}
 
-Using horizontal margin utilities like `.ms-auto` as spacers:
+Использование утилит с горизонтальным полем, таких как `.ms-auto` в качестве разделителей:
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border ms-auto">Second item</div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Первый элемент</div>
+  <div class="bg-light border ms-auto">Второй элемент</div>
+  <div class="bg-light border">Третий элемент</div>
 </div>
 {{< /example >}}
 
-And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
+И с [вертикальными правилами]({{< docsref "/helpers/vertical-rule" >}}):
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border ms-auto">Second item</div>
+  <div class="bg-light border">Первый элемент</div>
+  <div class="bg-light border ms-auto">Второй элемент</div>
   <div class="vr"></div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Третий элемент</div>
 </div>
 {{< /example >}}
 
-## Examples
+## Примеры
 
-Use `.vstack` to stack buttons and other elements:
+Используйте `.vstack`, чтобы складывать кнопки и другие элементы:
 
 {{< example >}}
 <div class="vstack gap-2 col-md-5 mx-auto">
-  <button type="button" class="btn btn-secondary">Save changes</button>
-  <button type="button" class="btn btn-outline-secondary">Cancel</button>
+  <button type="button" class="btn btn-secondary">Сохранить изменения</button>
+  <button type="button" class="btn btn-outline-secondary">Отменить</button>
 </div>
 {{< /example >}}
 
-Create an inline form with `.hstack`:
+Создайте встроенную форму с помощью `.hstack`:
 
 {{< example >}}
 <div class="hstack gap-3">
-  <input class="form-control me-auto" type="text" placeholder="Add your item here...">
-  <button type="button" class="btn btn-secondary">Submit</button>
+  <input class="form-control me-auto" type="text" placeholder="Добавьте сюда свой товар...">
+  <button type="button" class="btn btn-secondary">Отправить</button>
   <div class="vr"></div>
-  <button type="button" class="btn btn-outline-danger">Reset</button>
+  <button type="button" class="btn btn-outline-danger">Сбросить</button>
 </div>
 {{< /example >}}
 
