@@ -56,6 +56,7 @@
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
     "docs": "npm-run-all docs-build docs-lint",
     "docs-build": "hugo --cleanDestinationDir",
+    "docs-add": "hugo",
     "docs-compile": "npm run docs-build",
     "docs-linkinator": "linkinator _site --recurse --skip \"^(?!http://localhost)\" --verbosity error",
     "docs-vnu": "node build/vnu-jar.js",
