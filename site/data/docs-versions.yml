@@ -11,7 +11,7 @@
     - v: "4.6"
 
 - group: v4.x [RU]
-  baseurl: "https://v4.getbootstrap.su/docs"
+  baseurl: "https://getbootstrap.su/docs"
   description: "Наш предыдущий основной выпуск с его второстепенными выпусками. Последнее обновление v4.6.0."
   versions:
     - v: "4.5"
