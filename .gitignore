@@ -1,7 +1,7 @@
 # Ignore docs files
 /_site/
 /_gh_pages/
-/_gh_pages_4/
+/_www/
 # Hugo resources folder
 /resources/
 

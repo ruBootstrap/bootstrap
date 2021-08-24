@@ -3,5 +3,6 @@
 **/vendor/
 /_site/
 /_gh_pages/
+/_www/
 /js/coverage/
 /site/static/sw.js
