@@ -1,6 +1,6 @@
 languageCode:           "ru-ru"
 title:                  "Bootstrap"
-baseURL:                "https://v4.getbootstrap.su"
+baseURL:                "https://getbootstrap.su"
 enableInlineShortcodes: true
 
 markup:
@@ -20,7 +20,7 @@ enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
-publishDir:             "_gh_pages"
+publishDir:             "_site"
 
 module:
   mounts:
