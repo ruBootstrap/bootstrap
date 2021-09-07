@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Передайте смысл через color с помощью нескольких служебных классов цвета. Также включает поддержку стилизации ссылок с помощью состояний наведения.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.87.0">
+<meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.1">
@@ -594,7 +594,15 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors-rgb</span><span class="o">:</span> <span class="nf">map-loop</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="n">to-rgb</span><span class="o">,</span> <span class="s2">&#34;$value&#34;</span><span class="p">);</span>
 </code></pre></div>
 <p>И цветовая непрозрачность основывается на этой собственной карте, которая используется API утилит:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities-text-colors</span><span class="o">:</span> <span class="nf">map-loop</span><span class="p">(</span><span class="nv">$utilities-colors</span><span class="o">,</span> <span class="n">rgba-css-var</span><span class="o">,</span> <span class="s2">&#34;$key&#34;</span><span class="o">,</span> <span class="s2">&#34;text&#34;</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities-text</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+  <span class="nv">$utilities-colors</span><span class="o">,</span>
+  <span class="p">(</span>
+    <span class="s2">&#34;black&#34;</span><span class="o">:</span> <span class="nf">to-rgb</span><span class="p">(</span><span class="nv">$black</span><span class="p">)</span><span class="o">,</span>
+    <span class="s2">&#34;white&#34;</span><span class="o">:</span> <span class="nf">to-rgb</span><span class="p">(</span><span class="nv">$white</span><span class="p">)</span><span class="o">,</span>
+    <span class="s2">&#34;body&#34;</span><span class="o">:</span> <span class="nf">to-rgb</span><span class="p">(</span><span class="nv">$body-color</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+<span class="nv">$utilities-text-colors</span><span class="o">:</span> <span class="nf">map-loop</span><span class="p">(</span><span class="nv">$utilities-text</span><span class="o">,</span> <span class="n">rgba-css-var</span><span class="o">,</span> <span class="s2">&#34;$key&#34;</span><span class="o">,</span> <span class="s2">&#34;text&#34;</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="api-утилит">API утилит</h3>
 <p>Утилиты цвета объявлены в нашем API утилит в <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Узнайте, как использовать API утилит.</a></p>
@@ -642,7 +650,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.1/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.1.0.</li>
+          <li class="mb-2">Текущая версия v5.1.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">

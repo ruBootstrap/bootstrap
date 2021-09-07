@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Используйте настраиваемые стили кнопок Bootstrap для действий в формах, диалоговых окнах и т.д. С поддержкой нескольких размеров, состояний и т.д.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.87.0">
+<meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.1">
@@ -441,9 +441,12 @@
     <li><a href="#теги-кнопок">Теги кнопок</a></li>
     <li><a href="#контурные-кнопки">Контурные кнопки</a></li>
     <li><a href="#размеры">Размеры</a></li>
-    <li><a href="#отключенное-состояние">Отключенное состояние</a></li>
+    <li><a href="#отключенное-состояние">Отключенное состояние</a>
+      <ul>
+        <li><a href="#предупреждение-о-функциональности-ссылок">Предупреждение о функциональности ссылок</a></li>
+      </ul>
+    </li>
     <li><a href="#блочные-кнопки">Блочные кнопки</a></li>
-    <li><a href="#блочные-кнопки-1">Блочные кнопки</a></li>
     <li><a href="#плагин-кнопки">Плагин кнопки</a>
       <ul>
         <li><a href="#переключение-состояния">Переключение состояния</a></li>
@@ -562,48 +565,25 @@
 <p>Класс <code>.disabled</code> использует <code>pointer-events: none</code>, чтобы попытаться отключить функциональность ссылок для <code>&lt;a&gt;</code>, но это свойство CSS еще не стандартизировано. Кроме того, даже в браузерах, которые поддерживают <code>pointer-events: none</code>, навигация с помощью клавиатуры остается неизменной, а это означает, что зрячие пользователи клавиатуры и пользователи вспомогательных технологий по-прежнему смогут активировать эти ссылки. Чтобы быть в безопасности, в дополнение к <code>aria-disabled=&quot;true&quot;</code>, также добавьте атрибут <code>tabindex=&quot;-1&quot;</code> в эти ссылки, чтобы они не получали фокус клавиатуры, и используйте собственный JavaScript, чтобы полностью отключить их функциональность .
 </div>
 
+<ul>
+<li><code>&lt;a&gt;</code> не поддерживают атрибут <code>disabled</code>, поэтому вы должны добавить класс <code>.disabled</code>, чтобы он визуально выглядел отключенным.</li>
+<li>Включены некоторые удобные для будущего стили для отключения всех <code>pointer-events</code> на кнопках привязки.</li>
+<li>Отключенные кнопки с использованием <code>&lt;a&gt;</code> должны включать атрибут <code>aria-disabled=&quot;true&quot;</code>, чтобы указать состояние элемента для вспомогательных технологий.</li>
+<li>Отключенные кнопки с использованием <code>&lt;a&gt;</code> <em>не должны</em> включать атрибут <code>href</code>.</li>
+</ul>
+<div class="bd-example">
+<a class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Первичная ссылка</a>
+<a class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Ссылка</a>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary btn-lg disabled&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Первичная ссылка<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary btn-lg disabled&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Ссылка<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="предупреждение-о-функциональности-ссылок">Предупреждение о функциональности ссылок</h3>
+<p>Чтобы охватить случаи, когда вам нужно сохранить атрибут <code>href</code> в отключенной ссылке, класс <code>.disabled</code> использует <code>pointer-events: none</code>, чтобы попытаться отключить функциональность ссылки для <code>&lt;a&gt;</code>. Обратите внимание, что это свойство CSS еще не стандартизировано для HTML, но все современные браузеры его поддерживают. Кроме того, даже в браузерах, которые поддерживают <code>pointer-events: none</code>, навигация с помощью клавиатуры остается неизменной, а это означает, что зрячие пользователи клавиатуры и пользователи вспомогательных технологий по-прежнему смогут активировать эти ссылки. Чтобы быть в безопасности, в дополнение к <code>aria-disabled=&quot;true&quot;</code> также включите атрибут <code>tabindex=&quot;-1&quot;</code> в эти ссылки, чтобы они не получали фокус клавиатуры, и используйте собственный JavaScript, чтобы полностью отключить их функциональность.</p>
+<div class="bd-example">
+<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Первичная ссылка</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Ссылка</a>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary btn-lg disabled&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Первичная ссылка<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary btn-lg disabled&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Ссылка<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="блочные-кнопки">Блочные кнопки</h2>
-<p>Создавайте гибкие стопки полноразмерных «блочных кнопок», как в Bootstrap 4, с помощью наших утилит display и gap. Используя утилиты вместо классов, специфичных для кнопок, мы получаем гораздо больший контроль над интервалом, выравниванием и адаптивным поведением.</p>
-<div class="bd-example">
-<div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button">Кнопка</button>
-  <button class="btn btn-primary" type="button">Кнопка</button>
-</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid gap-2&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Здесь мы создаем адаптивный вариант, начиная с вертикально расположенных кнопок до контрольной точки <code>md</code>, где <code>.d-md-block</code> заменяет класс <code>.d-grid</code>, тем самым сводя на нет утилиту <code>gap-2</code>. Измените размер браузера, чтобы увидеть, как они меняются.</p>
-<div class="bd-example">
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Кнопка</button>
-  <button class="btn btn-primary" type="button">Кнопка</button>
-</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid gap-2 d-md-block&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Вы можете настроить ширину кнопок блока с помощью классов ширины столбцов сетки. Например, для «кнопки блока» половинной ширины используйте <code>.col-6</code>. Отцентрируйте его также по горизонтали с помощью <code>.mx-auto</code>.</p>
-<div class="bd-example">
-<div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary" type="button">Кнопка</button>
-  <button class="btn btn-primary" type="button">Кнопка</button>
-</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid gap-2 col-6 mx-auto&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Дополнительные утилиты можно использовать для регулировки выравнивания кнопок по горизонтали. Здесь мы взяли наш предыдущий отзывчивый пример и добавили несколько утилит гибкости и утилиту поля для кнопки, чтобы выровнять кнопки по правому краю, когда они больше не сложены.</p>
-<div class="bd-example">
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary mr-md-2" type="button">Кнопка</button>
-  <button class="btn btn-primary" type="button">Кнопка</button>
-</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-grid gap-2 d-md-flex justify-content-md-end&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary mr-md-2&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="блочные-кнопки-1">Блочные кнопки</h2>
 <p>Создавайте гибкие стопки полноразмерных «блочных кнопок», как в Bootstrap 4, с помощью наших утилит display и gap. Используя утилиты вместо классов, специфичных для кнопок, мы получаем гораздо больший контроль над интервалом, выравниванием и поведением.</p>
 <div class="bd-example">
 <div class="d-grid gap-2">
@@ -662,10 +642,10 @@
 <div class="bd-example">
 <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Ссылка-переключатель</a>
 <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Активная ссылка-переключатель</a>
-<a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-bs-toggle="button">Отключенная ссылка-переключатель</a>
+<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Отключенная ссылка-переключатель</a>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Ссылка-переключатель<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary active&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-pressed</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Активная ссылка-переключатель<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary disabled&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Отключенная ссылка-переключатель<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary disabled&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Отключенная ссылка-переключатель<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="методы">Методы</h3>
 <p>Вы можете создать экземпляр кнопки с помощью конструктора кнопки, например:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">)</span>
@@ -921,7 +901,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.1/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.1.0.</li>
+          <li class="mb-2">Текущая версия v5.1.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
