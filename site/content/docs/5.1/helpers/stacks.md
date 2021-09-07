@@ -72,7 +72,7 @@ toc: true
 
 {{< example >}}
 <div class="hstack gap-3">
-  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
+  <input class="form-control me-auto" type="text" placeholder="Добавьте свой элемент сюда..." aria-label="Добавьте свой элемент сюда...">
   <button type="button" class="btn btn-secondary">Отправить</button>
   <div class="vr"></div>
   <button type="button" class="btn btn-outline-danger">Сбросить</button>

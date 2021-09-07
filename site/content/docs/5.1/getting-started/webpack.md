@@ -26,7 +26,7 @@ import * as bootstrap from 'bootstrap';
 ```js
 import Alert from 'bootstrap/js/dist/alert';
 
-// or, specify which plugins you need:
+// или укажите, какие плагины вам нужны:
 import { Tooltip, Toast, Popover } from 'bootstrap';
 ```
 
