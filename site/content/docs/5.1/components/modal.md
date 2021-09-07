@@ -526,7 +526,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
         Скройте это модальное окно и покажите первое с помощью кнопки ниже.
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Вернуться к первому</button>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Вернуться к первому</button>
       </div>
     </div>
   </div>

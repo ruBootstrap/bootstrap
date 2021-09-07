@@ -27,20 +27,10 @@ toc: true
 
 Нажмите кнопку ниже, чтобы отобразить предупреждение (скрытое с помощью встроенных стилей для запуска), затем отклоните (и уничтожьте) его с помощью встроенной кнопки закрытия.
 
+{{< example >}}
 <div id="liveAlertPlaceholder"></div>
-
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" id="liveAlertBtn">Показать живое уведомление</button>
-</div>
-
-```html
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Показать живое уведомление</button>
-
-<div class="alert alert-primary alert-dismissible" role="alert" id="liveAlert">
-  <strong>Отлично!</strong> Вы активировали это уведомление.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-```
+{{< /example >}}
 
 Мы используем следующий код JavaScript для запуска нашей демонстрации предупреждений в реальном времени:
 

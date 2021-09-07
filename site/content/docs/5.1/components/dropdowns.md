@@ -628,7 +628,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 {{< example >}}
 <ul class="dropdown-menu">
   <li><a class="dropdown-item" href="#">Обычная ссылка</a></li>
-  <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная ссылка</a></li>
+  <li><a class="dropdown-item disabled">Отключенная ссылка</a></li>
   <li><a class="dropdown-item" href="#">Другая ссылка</a></li>
 </ul>
 {{< /example >}}

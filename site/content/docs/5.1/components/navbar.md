@@ -60,7 +60,7 @@ toc: true
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+          <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -154,7 +154,7 @@ toc: true
           <a class="nav-link" href="#">Цена</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+          <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
     </div>
@@ -176,7 +176,7 @@ toc: true
         <a class="nav-link active" aria-current="page" href="#">Главная</a>
         <a class="nav-link" href="#">Рекомендуемые</a>
         <a class="nav-link" href="#">Цена</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+        <a class="nav-link disabled">Отключенная</a>
       </div>
     </div>
   </div>
@@ -566,7 +566,7 @@ toc: true
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+          <a class="nav-link disabled">Ссылка</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -606,7 +606,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+          <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -636,7 +636,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+          <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -666,7 +666,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+          <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex">

@@ -82,7 +82,7 @@ toc: true
   <span class="placeholder col-6"></span>
 </p>
 
-<a href="#" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
+<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
 {{< /example >}}
 
 {{< callout info >}}

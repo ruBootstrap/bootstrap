@@ -8,6 +8,10 @@ toc: true
 
 Стеки предлагают ярлык для применения ряда свойств flexbox для быстрого и легкого создания макетов в Bootstrap. Вся заслуга в концепции и реализации принадлежит [проекту Pylon](https://almonk.github.io/pylon/).
 
+{{< callout warning >}}
+Берегись! Поддержка утилит пробелов с помощью flexbox была недавно добавлена в Safari, поэтому подумайте о том, чтобы проверить поддержку вашего предполагаемого браузера. С макетом сетки проблем быть не должно. [Подробнее](https://caniuse.com/flexbox-gap).
+{{< /callout >}}
+
 ## Вертикальный
 
 Используйте `.vstack` для создания вертикальных макетов. По умолчанию сложенные элементы имеют полную ширину. Используйте утилиты `.gap-*` для добавления пробелов между элементами.
@@ -68,7 +72,7 @@ toc: true
 
 {{< example >}}
 <div class="hstack gap-3">
-  <input class="form-control me-auto" type="text" placeholder="Добавьте сюда свой товар...">
+  <input class="form-control me-auto" type="text" placeholder="Add your item here..." aria-label="Add your item here...">
   <button type="button" class="btn btn-secondary">Отправить</button>
   <div class="vr"></div>
   <button type="button" class="btn btn-outline-danger">Сбросить</button>

@@ -103,7 +103,7 @@ extra_js:
 
 {{< example lang="js" show_preview="false" >}}
 {{< js.inline >}}
-{{- readFile (printf "site/static/docs/%s/assets/js/validate-forms.js" .Site.Params.docs_version) -}}
+{{- readFile (path.Join "site/static/docs" .Site.Params.docs_version "assets/js/validate-forms.js") -}}
 {{< /js.inline >}}
 {{< /example >}}
 

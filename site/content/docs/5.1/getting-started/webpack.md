@@ -15,15 +15,19 @@ toc: true
 Импортируйте [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}), добавив эту строку в точку входа вашего приложения (обычно `index.js` или `app.js`):
 
 ```js
-// Вы можете указать, какие плагины Вам нужны
-import { Tooltip, Toast, Popover } from 'bootstrap';
+import 'bootstrap';
+
+// или получить все названные экспорты для дальнейшего использования
+import * as bootstrap from 'bootstrap';
 ```
 
 В качестве альтернативы, если Вам нужно всего несколько наших плагинов, Вы можете **импортировать плагины по отдельности** по мере необходимости:
 
 ```js
 import Alert from 'bootstrap/js/dist/alert';
-...
+
+// or, specify which plugins you need:
+import { Tooltip, Toast, Popover } from 'bootstrap';
 ```
 
 Bootstrap зависит от [Popper](https://popper.js.org/), который указан в свойстве `peerDependencies`.

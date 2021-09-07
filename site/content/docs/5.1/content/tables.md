@@ -559,7 +559,7 @@ toc: true
 <div class="bd-example">
   <table class="table">
     <caption>Список пользователей</caption>
-    {{< partial "table-content.html" >}}
+    {{< partial "table-content" >}}
   </table>
 </div>
 

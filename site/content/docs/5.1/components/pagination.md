@@ -58,7 +58,7 @@ toc: true
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
+      <a class="page-link">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -128,7 +128,7 @@ toc: true
 <nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
+      <a class="page-link">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -144,7 +144,7 @@ toc: true
 <nav aria-label="Пример навигации по страницам">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
+      <a class="page-link">Предыдущая</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
