@@ -12,12 +12,12 @@ toc: false
 <!-- Блочный уровень -->
 <div class="row">
   <div class="col-2 text-truncate">
-    This text is quite long, and will be truncated once displayed.
+    Этот текст довольно длинный и будет обрезан при отображении.
   </div>
 </div>
 
 <!-- Строчный уровень -->
 <span class="d-inline-block text-truncate" style="max-width: 150px;">
-  This text is quite long, and will be truncated once displayed.
+  Этот текст довольно длинный и будет обрезан при отображении.
 </span>
 {{< /example >}}

@@ -102,9 +102,9 @@ toc: true
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
-  <li class="list-group-item">A list item</li>
-  <li class="list-group-item">A list item</li>
-  <li class="list-group-item">A list item</li>
+  <li class="list-group-item">Элемент списка</li>
+  <li class="list-group-item">Элемент списка</li>
+  <li class="list-group-item">Элемент списка</li>
 </ol>
 {{< /example >}}
 
