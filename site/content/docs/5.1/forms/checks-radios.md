@@ -102,24 +102,24 @@ toc: true
 
 ## Переключатели
 
-Переключатель имеет разметку настраиваемого флажка, но использует класс `.form-switch` для визуализации переключателя. Коммутаторы также поддерживают атрибут `disabled`.
+Переключатель имеет разметку настраиваемого флажка, но для визуализации переключателя использует класс `.form-switch`. Рассмотрите возможность использования `role="switch"`, чтобы более точно передать характер управления вспомогательным технологиям, которые поддерживают эту роль. В старых вспомогательных технологиях это будет просто объявлено как обычный флажок в качестве запасного варианта. Коммутаторы также поддерживают атрибут `disabled`.
 
 {{< example >}}
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Поле флажок переключатель по умолчанию</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Ввод флажка переключателя по умолчанию</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-  <label class="form-check-label" for="flexSwitchCheckChecked">Выбранное поле флажок переключатель</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Выбран флажок переключателя ввода</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
-  <label class="form-check-label" for="flexSwitchCheckDisabled">Отключенное поле флажок переключатель</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+  <label class="form-check-label" for="flexSwitchCheckDisabled">Отключено переключение флажка ввода</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Отключенное выбранное поле флажок переключатель</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Отключено переключение флажка в поле ввода</label>
 </div>
 {{< /example >}}
 

@@ -94,8 +94,8 @@
   // Disable empty links in docs examples
   document.querySelectorAll('.bd-content [href="#"]')
     .forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault()
+      link.addEventListener('click', function (event) {
+        event.preventDefault()
       })
     })
 
@@ -142,25 +142,25 @@
     }
   })
 
-  clipboard.on('success', function (e) {
-    var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
+  clipboard.on('success', function (event) {
+    var tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', 'Скопировано!')
+    event.trigger.setAttribute('data-bs-original-title', 'Скопировано!')
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
-    e.clearSelection()
+    event.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
+    event.clearSelection()
   })
 
-  clipboard.on('error', function (e) {
+  clipboard.on('error', function (event) {
     var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     var fallbackMsg = 'Нажмите ' + modifierKey + 'C, чтобы скопировать'
-    var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
+    var tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', fallbackMsg)
+    event.trigger.setAttribute('data-bs-original-title', fallbackMsg)
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
+    event.trigger.setAttribute('data-bs-original-title', 'Скопировать в буфер обмена')
   })
 
   anchors.options = {

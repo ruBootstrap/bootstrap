@@ -433,7 +433,7 @@ Reboot включает усовершенствование для `role="butto
 Элемент `<abbr>` получает базовый стиль, чтобы выделить его среди текста абзаца.
 
 <div class="bd-example">
-  Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
+  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
 </div>
 
 ### Резюме

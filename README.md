@@ -12,9 +12,9 @@
   <a href="https://getbootstrap.su/docs/5.1/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.1/"><strong>[EN] Explore Bootstrap docs »</strong></a>
   <br>
   <br>
-  <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Report bug</a>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
-  <a href="https://github.com/twbs/bootstrap/issues/new?template=feature_request.md">Request feature</a>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
   ·
   <a href="https://themes.getbootstrap.com/">Themes</a>
   ·
@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.1.1.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.1.2.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
 - Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.1.1`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.1.2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.1/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
@@ -131,7 +131,7 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-Предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
+Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
 
 
 ## Ошибки и запросы улучшений

@@ -12,12 +12,12 @@ toc: false
 <!-- Блочный уровень -->
 <div class="row">
   <div class="col-2 text-truncate">
-    Praeterea iter est quasdam res quas ex communi.
+    This text is quite long, and will be truncated once displayed.
   </div>
 </div>
 
 <!-- Строчный уровень -->
 <span class="d-inline-block text-truncate" style="max-width: 150px;">
-  Praeterea iter est quasdam res quas ex communi.
+  This text is quite long, and will be truncated once displayed.
 </span>
 {{< /example >}}

@@ -71,7 +71,7 @@ your-project/
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 
-// 5. При желании можно в последнюю очередь включить служебный API для генерации классов на основе карты Sass в `_utililies.scss`
+// 5. При желании можно включить последний API утилит для генерации классов на основе карты Sass в `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 6. Добавьте сюда дополнительный пользовательский код
