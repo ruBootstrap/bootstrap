@@ -211,7 +211,7 @@ Offcanvas - это компонент боковой панели, которы�
 Включить вручную с помощью:
 
 ```js
-var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
+var offcanvasElementList = Array.prototype.slice.call(document.querySelectorAll('.offcanvas'))
 var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
   return new bootstrap.Offcanvas(offcanvasEl)
 })

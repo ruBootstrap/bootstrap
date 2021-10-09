@@ -526,7 +526,7 @@ toc: true
 Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
+var triggerTabList = Array.prototype.slice.call(document.querySelectorAll('#myTab button'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
 

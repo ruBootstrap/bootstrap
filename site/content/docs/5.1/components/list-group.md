@@ -397,7 +397,7 @@ toc: true
 Включите элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+var triggerTabList = Array.prototype.slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
 

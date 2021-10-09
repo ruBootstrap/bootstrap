@@ -335,7 +335,7 @@ if (toastTrigger) {
 Инициализировать тосты через JavaScript:
 
 ```js
-var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastElList = Array.prototype.slice.call(document.querySelectorAll('.toast'))
 var toastList = toastElList.map(function (toastEl) {
   return new bootstrap.Toast(toastEl, option)
 })

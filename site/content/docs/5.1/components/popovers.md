@@ -40,7 +40,7 @@ toc: true
 Один из способов инициализировать все всплывающие окна на странице - выбрать их по атрибуту `data-bs-toggle`:
 
 ```js
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })

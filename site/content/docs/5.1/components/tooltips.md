@@ -39,7 +39,7 @@ toc: true
 Один из способов инициализировать все всплывающие подсказки на странице - это выбрать их по их атрибуту `data-bs-toggle`:
 
 ```js
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })

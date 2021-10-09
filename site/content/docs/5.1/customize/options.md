@@ -19,6 +19,7 @@ group: customize
 | `$enable-transitions`          | `true` (по умолчанию) или `false`             | Включает предопределенные `transition` на различных компонентах. |
 | `$enable-reduced-motion`       | `true` (по умолчанию) или `false`             | Включает [медиа выражение `prefers-reduced-motion`]({{< docsref "/getting-started/accessibility#замедленное-движение" >}}), который подавляет определенные анимации/переходы на основе настроек браузера/операционной системы пользователя. |
 | `$enable-grid-classes`         | `true` (по умолчанию) или `false`             | Позволяет генерировать классы CSS для системы сеток (например `.row`, `.col-md-1` и т. д.). |
+| `$enable-container-classes`    | `true` (по умолчанию) или `false`             | Включает создание классов CSS для контейнеров макета. (Новое в v5.2.0) |
 | `$enable-caret`                | `true` (по умолчанию) или `false`             | Включает каретку псевдоэлемента `.dropdown-toggle`. |
 | `$enable-button-pointers`      | `true` (по умолчанию) или `false`             | Добавить курсор "в виде руки" к неотключенным кнопочным элементам. |
 | `$enable-rfs`                  | `true` (по умолчанию) или `false`             | Глобально включает [RFS]({{< docsref "/getting-started/rfs" >}}). |
@@ -26,4 +27,5 @@ group: customize
 | `$enable-negative-margins`     | `true` или `false` (по умолчанию)             | Позволяет генерировать [отрицательные утилиты margin]({{< docsref "/utilities/spacing#negative-margin" >}}). |
 | `$enable-deprecation-messages` | `true` (по умолчанию) или `false`             | Установите значение `false`, чтобы скрыть предупреждения при использовании любых устаревших миксинов и функций, которые планируется удалить в `v6`. |
 | `$enable-important-utilities`  | `true` (по умолчанию) или `false`             | Включает `!important` суффикс в служебных классах. |
+| `$enable-smooth-scroll`        | `true` (по умолчанию) или `false`             | Применяет `scroll-behavior: smooth` глобально, за исключением пользователей, запрашивающих уменьшение движения через [медиа-запрос `prefers-reduced-motion`]({{< docsref "/getting-started/accessibility#reduced-motion" >}}) |
 {{< /bs-table >}}

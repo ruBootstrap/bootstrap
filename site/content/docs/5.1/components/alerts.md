@@ -238,7 +238,7 @@ if (alertTrigger) {
 
 ```js
 var alertList = document.querySelectorAll('.alert')
-var alerts =  [].slice.call(alertList).map(function (element) {
+var alerts = Array.prototype.slice.call(alertList).map(function (element) {
   return new bootstrap.Alert(element)
 })
 ```

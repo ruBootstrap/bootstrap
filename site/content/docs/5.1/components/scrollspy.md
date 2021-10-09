@@ -278,7 +278,7 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 При использовании отслеживания прокрутки в сочетании с добавлением или удалением элементов из DOM Вам необходимо вызвать метод обновления следующим образом:
 
 ```js
-var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
+var dataSpyList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
 dataSpyList.forEach(function (dataSpyEl) {
   bootstrap.ScrollSpy.getInstance(dataSpyEl)
     .refresh()

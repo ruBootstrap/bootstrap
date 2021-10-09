@@ -1003,7 +1003,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 Вызов выпадающих списков через JavaScript:
 
 ```js
-var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownElementList = Array.prototype.slice.call(document.querySelectorAll('.dropdown-toggle'))
 var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
   return new bootstrap.Dropdown(dropdownToggleEl)
 })
