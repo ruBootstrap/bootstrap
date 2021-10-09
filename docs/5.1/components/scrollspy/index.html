@@ -695,7 +695,7 @@
 <h3 id="методы">Методы</h3>
 <h4 id="refresh">refresh</h4>
 <p>При использовании отслеживания прокрутки в сочетании с добавлением или удалением элементов из DOM Вам необходимо вызвать метод обновления следующим образом:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
 <span class="nx">dataSpyList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">refresh</span><span class="p">()</span>
@@ -778,7 +778,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.1/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.1.2.</li>
+          <li class="mb-2">Текущая версия v5.1.3.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
