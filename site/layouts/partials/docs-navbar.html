@@ -31,13 +31,13 @@
 
   <ul class="navbar-nav ml-md-auto">
     <li class="nav-item dropdown">
-      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-expanded="false">
         v{{ .Site.Params.docs_version }}
       </a>
       <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
-        <a class="dropdown-item active" href="/docs/{{ .Site.Params.docs_version }}/">Последняя (4.6.x)</a>
+        <a class="dropdown-item active" href="/docs/{{ .Site.Params.docs_version }}/">Последняя ({{ .Site.Params.docs_version }}.x)</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="https://getbootstrap.su/docs/5.0/">v5.x</a>
+        <a class="dropdown-item" href="https://getbootstrap.su/docs/5.1/">5.1.x</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="/docs/versions/">Все версии</a>
       </div>

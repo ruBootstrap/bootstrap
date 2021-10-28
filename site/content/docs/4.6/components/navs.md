@@ -28,7 +28,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -40,7 +40,7 @@ toc: true
   <a class="nav-link active" href="#">Активная</a>
   <a class="nav-link" href="#">Ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+  <a class="nav-link disabled">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -66,7 +66,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -85,7 +85,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -106,7 +106,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -118,7 +118,7 @@ toc: true
   <a class="nav-link active" href="#">Активная</a>
   <a class="nav-link" href="#">Ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+  <a class="nav-link disabled">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -138,7 +138,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -159,7 +159,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -180,7 +180,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -190,9 +190,9 @@ toc: true
 {{< example >}}
 <nav class="nav nav-pills nav-fill">
   <a class="nav-link active" href="#">Активная</a>
-  <a class="nav-link" href="#">Гораздо более длинная навигационная ссылка</a>
+  <a class="nav-link" href="#">Более длинная навигационная Ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+  <a class="nav-link disabled">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -210,7 +210,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -222,7 +222,7 @@ toc: true
   <a class="nav-link active" href="#">Активная</a>
   <a class="nav-link" href="#">Гораздо более длинная навигационная ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+  <a class="nav-link disabled">Отключенная</a>
 </nav>
 
 {{< /example >}}
@@ -235,7 +235,7 @@ toc: true
   <a class="flex-sm-fill text-sm-center nav-link active" href="#">Активная</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Более длинная навигационная ссылка</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Ссылка</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -257,7 +257,7 @@ toc: true
     <a class="nav-link active" href="#">Активная</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Выпадающий список</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -270,7 +270,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -283,7 +283,7 @@ toc: true
     <a class="nav-link active" href="#">Активная</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Выпадающий список</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -296,7 +296,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+    <a class="nav-link disabled">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}

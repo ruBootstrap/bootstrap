@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://getbootstrap.com/">
+  <a href="https://getbootstrap.su/">
     <img src="https://getbootstrap.com/docs/4.6/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
   </a>
 </p>
@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.com/docs/4.6/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v4.getbootstrap.su/docs/4.6/"><strong>Изучите перевод документации Bootstrap »</strong></a>
+  <a href="https://getbootstrap.su/docs/4.6/"><strong>Изучите документацию Bootstrap »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Сообщить об ошибке</a>
@@ -39,11 +39,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.6.0.zip)
+- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.6.1.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.6.0`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.0`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.6.1`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.6/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -51,7 +51,7 @@
 ## Статус
 
 [![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
-[![Build Status](https://github.com/twbs/bootstrap/workflows/JS%20Tests/badge.svg?branch=v4-dev)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av4-dev)
+[![Build Status](https://img.shields.io/github/workflow/status/twbs/bootstrap/JS%20Tests/v4-dev?label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Av4-dev)
 [![npm version](https://img.shields.io/npm/v/bootstrap)](https://www.npmjs.com/package/bootstrap)
 [![Gem version](https://img.shields.io/gem/v/bootstrap)](https://rubygems.org/gems/bootstrap)
 [![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue)](https://atmospherejs.com/twbs/bootstrap)
@@ -97,11 +97,11 @@ bootstrap/
         └── bootstrap.min.js.map
 ```
 
-Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/), но не [jQuery](https://jquery.com/).
+Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/), но не [jQuery](https://jquery.com/).
 
 ## Ошибки и запросы функций
 
-Есть ошибка или запрос функции? Сначала прочтите [руководство по проблеме](https://github.com/twbs/bootstrap/blob/v4-dev/.github/CONTRIBUTING.md#using-the-issue-tracker) и выполните поиск существующих и закрытых проблем. Если Ваша проблема или идея еще не решена, [пожалуйста, откройте новый запрос](https://github.com/twbs/bootstrap/issues/new).
+У вас есть ошибка или запрос функции? Сначала прочтите [руководство по проблеме](https://github.com/twbs/bootstrap/blob/v4-dev/.github/CONTRIBUTING.md#using-the-issue-tracker) и выполните поиск существующих и закрытых проблем. Если ваша проблема или идея еще не решена, [пожалуйста, откройте новый выпуск](https://github.com/twbs/bootstrap/issues/new).
 
 ## Документация
 
@@ -140,11 +140,9 @@ bootstrap/
 - Подпишитесь на [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
 - Прочтите и подпишитесь на [официальный блог Bootstrap](https://blog.getbootstrap.com/).
 - Присоединяйтесь к [официальной Slack-комнате](https://bootstrap-slack.herokuapp.com/).
-- Общайтесь с другими Бутстрапперами в IRC. На сервере `irc.freenode.net`, в канале `##bootstrap`.
+- Общайтесь с другими Бутстрапперами в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной доступности.
-
-## Управление версиями
 
 Для прозрачности нашего цикла выпуска и для обеспечения обратной совместимости Bootstrap поддерживается в соответствии с [руководящими принципами семантического управления версиями](https://semver.org/). Иногда мы ошибаемся, но по возможности придерживаемся этих правил.
 

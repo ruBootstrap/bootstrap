@@ -33,7 +33,7 @@ toc: true
         <a class="nav-link" href="#mdo">@mdo</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Выпадающий список</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#one">один</a>
           <a class="dropdown-item" href="#two">два</a>
@@ -69,7 +69,7 @@ toc: true
       <a class="nav-link" href="#mdo">@mdo</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Выпадающий список</a>
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#one">один</a>
         <a class="dropdown-item" href="#two">два</a>
