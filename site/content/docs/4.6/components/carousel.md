@@ -24,7 +24,7 @@ toc: true
 
 Карусели не нормализуют автоматически размеры слайдов. Таким образом, Вам может потребоваться использовать дополнительные утилиты или настраиваемые стили для соответствующего размера содержимого. Хотя карусели поддерживают элементы управления и индикаторы «предыдущий/следующий», они явно не требуются. Добавляйте и настраивайте по своему усмотрению.
 
-**Класс `.active` необходимо добавить к одному из слайдов** , иначе карусель не будет видна. Также не забудьте установить уникальный идентификатор в `.carousel` для дополнительных элементов управления, особенно если Вы используете несколько каруселей на одной странице. Элементы управления и индикаторы должны иметь атрибут `data-target` (или `href` для ссылок), который соответствует идентификатору элемента `.carousel`.
+**Класс `.active` необходимо добавить к одному из слайдов** , иначе карусель не будет видна. Также не забудьте установить уникальный `id` в `.carousel` для дополнительных элементов управления, особенно если Вы используете несколько каруселей на одной странице. Элементы управления и индикаторы должны иметь атрибут `data-target` (или `href` для ссылок), который соответствует `id` элемента `.carousel`.
 
 ### Только слайды
 
@@ -48,7 +48,7 @@ toc: true
 
 ### С элементами управления
 
-Добавление предыдущего и следующего элементов управления:
+Добавление предыдущего и следующего элементов управления. Мы рекомендуем использовать элементы `<button>`, но вы также можете использовать элементы `<a>` c `role="button"`.
 
 {{< example >}}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -63,14 +63,14 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Предыдущий</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
-  </a>
+  </button>
 </div>
 {{< /example >}}
 
@@ -96,14 +96,14 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Предыдущий</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
-  </a>
+  </button>
 </div>
 {{< /example >}}
 
@@ -141,14 +141,14 @@ toc: true
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Предыдущий</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
-  </a>
+  </button>
 </div>
 {{< /example >}}
 
@@ -169,14 +169,14 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Предыдущий</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
-  </a>
+  </button>
 </div>
 {{< /example >}}
 
@@ -197,20 +197,20 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Предыдущий</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
-  </a>
+  </button>
 </div>
 {{< /example >}}
 
-### Disable touch swiping
+### Отключить сенсорное смахивание
 
-Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-touch` attribute. The example below also does not include the `data-ride` attribute and has `data-interval="false"` so it doesn't autoplay.
+Карусели поддерживают смахивание влево / вправо на устройствах с сенсорным экраном для перемещения между слайдами. Это можно отключить с помощью атрибута `data-touch`. Пример ниже также не включает атрибут `data-ride` и имеет `data-interval="false"`, поэтому он не запускается автоматически.
 
 {{< example >}}
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
@@ -225,14 +225,14 @@ Carousels support swiping left/right on touchscreen devices to move between slid
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleControlsNoTouching" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-slide="next">
+    <span class="sr-only">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleControlsNoTouching" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <span class="sr-only">Следующий</span>
+  </button>
 </div>
 {{< /example >}}
 

@@ -123,7 +123,7 @@ toc: true
   <button type="button" class="btn btn-secondary">2</button>
 
   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Выпадающий список
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -155,7 +155,7 @@ toc: true
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
@@ -166,7 +166,7 @@ toc: true
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
@@ -175,7 +175,7 @@ toc: true
       </div>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
@@ -184,7 +184,7 @@ toc: true
       </div>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">

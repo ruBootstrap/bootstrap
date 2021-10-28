@@ -192,7 +192,7 @@ toc: true
 {{< example >}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Выпадающий список</button>
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -207,7 +207,7 @@ toc: true
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Выпадающий список</button>
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Выпадающий список</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -225,7 +225,7 @@ toc: true
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <button type="button" class="btn btn-outline-secondary">Действие</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель раскрывающегося списка</span>
     </button>
     <div class="dropdown-menu">
@@ -243,7 +243,7 @@ toc: true
   <input type="text" class="form-control" aria-label="Ввод текста с помощью кнопки сегментированного раскрывающегося списка">
   <div class="input-group-append">
     <button type="button" class="btn btn-outline-secondary">Действие</button>
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель раскрывающегося списка</span>
     </button>
     <div class="dropdown-menu">

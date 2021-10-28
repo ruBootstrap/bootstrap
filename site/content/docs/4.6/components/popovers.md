@@ -23,6 +23,10 @@ toc: true
 - Всплывающие окна могут запускаться благодаря элементу внутри теневого DOM.
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
@@ -267,7 +271,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = !(window.devicePixelRat
       <td>sanitize</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Включите или отключите дезинфекцию. Если активирован параметр <code>'template'</code>, <code>'content'</code> и <code>'title'</code> будут очищены.</td>
+      <td>Включите или отключите дезинфекцию. Если активирован параметр <code>'template'</code>, <code>'content'</code> и <code>'title'</code> будут очищены. Смотрите раздел <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer в нашей документации по JavaScript</a>.</td>
     </tr>
     <tr>
       <td>whiteList</td>

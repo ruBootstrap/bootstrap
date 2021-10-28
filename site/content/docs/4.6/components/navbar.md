@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Панель навигации
-description: Документация и примеры для мощного, отзывчивого навигационного верхнего колонтитула Bootstrap, панели навигации. Включает поддержку брендинга, навигации и т.д., включая поддержку нашего плагина сворачивания.
+description: Документация и примеры для мощного, отзывчивого навигационного заголовка Bootstrap, панели навигации. Включает поддержку брендинга, навигации, плагина свертывания и т. д.
 group: components
 toc: true
 ---
@@ -50,7 +50,7 @@ toc: true
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
           Выпадающий список
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -61,7 +61,7 @@ toc: true
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+        <a class="nav-link disabled">Отключенный</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -135,7 +135,7 @@ toc: true
         <a class="nav-link" href="#">Цены</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+        <a class="nav-link disabled">Отключенный</a>
       </li>
     </ul>
   </div>
@@ -155,7 +155,7 @@ toc: true
       <a class="nav-link active" href="#">Главная <span class="sr-only">(текущая)</span></a>
       <a class="nav-link" href="#">Функции</a>
       <a class="nav-link" href="#">Цены</a>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+      <a class="nav-link disabled">Отключенный</a>
     </div>
   </div>
 </nav>
@@ -181,7 +181,7 @@ toc: true
         <a class="nav-link" href="#">Цены</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Ссылка выпадающий список
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -472,7 +472,7 @@ When the container is within your navbar, its horizontal padding is removed at b
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+        <a class="nav-link disabled">Ссылка</a>
       </li>
     </ul>
     <form class="d-flex">
@@ -510,7 +510,7 @@ When the container is within your navbar, its horizontal padding is removed at b
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+        <a class="nav-link disabled">Отключенный</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -539,7 +539,7 @@ When the container is within your navbar, its horizontal padding is removed at b
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+        <a class="nav-link disabled">Отключенный</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -568,7 +568,7 @@ When the container is within your navbar, its horizontal padding is removed at b
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенный</a>
+        <a class="nav-link disabled">Отключенный</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -309,7 +309,7 @@ toc: true
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+        <a class="nav-link disabled">Отключенная</a>
       </li>
     </ul>
   </div>
@@ -332,7 +332,7 @@ toc: true
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная</a>
+        <a class="nav-link disabled">Отключенная</a>
       </li>
     </ul>
   </div>

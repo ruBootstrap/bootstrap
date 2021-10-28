@@ -22,6 +22,10 @@ toc: true
 - Всплывающие подсказки могут запускаться благодаря элементу внутри теневой модели DOM.
 
 {{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
+
+{{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
@@ -268,7 +272,7 @@ $('#example').tooltip({ boundary: 'window' })
       <td>sanitize</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Включите или отключите очистку. Если активированы параметры <code>'template'</code> и <code>'title'</code>, будут очищены.</td>
+      <td>Включите или отключите очистку. Если активированы параметры <code>'template'</code> и <code>'title'</code>, будут очищены. Смотрите раздел <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer в нашей документации по JavaScript</a>.</td>
     </tr>
     <tr>
       <td>whiteList</td>

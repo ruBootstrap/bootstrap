@@ -32,7 +32,7 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -47,7 +47,7 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
     Ссылка выпадающего списка
   </a>
 
@@ -63,7 +63,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Primary</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -73,7 +73,7 @@ toc: true
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Secondary</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -83,7 +83,7 @@ toc: true
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Success</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -93,7 +93,7 @@ toc: true
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Info</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -103,7 +103,7 @@ toc: true
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Warning</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -113,7 +113,7 @@ toc: true
     </div>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Danger</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
@@ -127,7 +127,7 @@ toc: true
 ```html
 <!-- Example single danger button -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Действие
   </button>
   <div class="dropdown-menu">
@@ -149,7 +149,7 @@ toc: true
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -162,7 +162,7 @@ toc: true
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -175,7 +175,7 @@ toc: true
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -188,7 +188,7 @@ toc: true
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -201,7 +201,7 @@ toc: true
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -214,7 +214,7 @@ toc: true
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -231,7 +231,7 @@ toc: true
 <!-- Пример раздельной кнопки Опасность -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Действие</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
     <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
@@ -250,7 +250,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group">
-    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
       Большая кнопка
     </button>
     <div class="dropdown-menu">
@@ -263,7 +263,7 @@ toc: true
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-lg btn-secondary">Большая раздельная кнопка</button>
-    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -279,7 +279,7 @@ toc: true
 ```html
 <!-- Группы больших кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
-  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Большая кнопка
   </button>
   <div class="dropdown-menu">
@@ -290,7 +290,7 @@ toc: true
   <button class="btn btn-secondary btn-lg" type="button">
     Большая раздельная кнопка
   </button>
-  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
     <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
@@ -301,7 +301,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
       Маленькая кнопка
     </button>
     <div class="dropdown-menu">
@@ -314,7 +314,7 @@ toc: true
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-sm btn-secondary">Маленькая раздельная кнопка</button>
-    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -330,7 +330,7 @@ toc: true
 ```html
 <!-- Небольшие группы кнопок (по умолчанию и разделенные) -->
 <div class="btn-group">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Маленькая кнопка
   </button>
   <div class="dropdown-menu">
@@ -341,7 +341,7 @@ toc: true
   <button class="btn btn-secondary btn-sm" type="button">
     Маленькая раздельная кнопка
   </button>
-  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
     <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
@@ -358,7 +358,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group dropup">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Выпадающий вверх
     </button>
     <div class="dropdown-menu">
@@ -373,7 +373,7 @@ toc: true
     <button type="button" class="btn btn-secondary">
       Раздельный выпадающий вверх
     </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu">
@@ -389,7 +389,7 @@ toc: true
 ```html
 <!-- Кнопка выпадающего меню по умолчанию -->
 <div class="btn-group dropup">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Выпадающий вверх
   </button>
   <div class="dropdown-menu">
@@ -402,7 +402,7 @@ toc: true
   <button type="button" class="btn btn-secondary">
     Раздельный выпад вверх
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
     <span class="sr-only">Переключатель выпадающего списка</span>
   </button>
   <div class="dropdown-menu">
@@ -417,7 +417,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group dropright">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Выпадающий вправо
     </button>
     <div class="dropdown-menu">
@@ -432,7 +432,7 @@ toc: true
     <button type="button" class="btn btn-secondary">
       Раздельный выпадающий вправо
     </button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпада вправо</span>
     </button>
     <div class="dropdown-menu">
@@ -448,7 +448,7 @@ toc: true
 ```html
 <!-- Кнопка выпадающего вправо по умолчанию -->
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Выпадающий вправо
   </button>
   <div class="dropdown-menu">
@@ -461,7 +461,7 @@ toc: true
   <button type="button" class="btn btn-secondary">
     Раздельный выпадающий вправо
   </button>
-  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
     <span class="sr-only">Переключатель выпада вправо</span>
   </button>
   <div class="dropdown-menu">
@@ -476,7 +476,7 @@ toc: true
 
 <div class="bd-example">
   <div class="btn-group dropleft">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Выпадающий влево
     </button>
     <div class="dropdown-menu">
@@ -489,7 +489,7 @@ toc: true
   </div>
   <div class="btn-group">
     <div class="btn-group dropleft" role="group">
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
         <span class="sr-only">Переключатель выпадающего влево</span>
       </button>
       <div class="dropdown-menu">
@@ -509,7 +509,7 @@ toc: true
 ```html
 <!-- Кнопка выпадающая влево по умолчанию -->
 <div class="btn-group dropleft">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Выпадающий влево
   </button>
   <div class="dropdown-menu">
@@ -520,7 +520,7 @@ toc: true
 <!-- Раздельная кнопка выпадающая влево -->
 <div class="btn-group">
   <div class="btn-group dropleft" role="group">
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего влево</span>
     </button>
     <div class="dropdown-menu">
@@ -539,7 +539,7 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
     Выпадающий вниз
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -580,7 +580,7 @@ toc: true
 {{< example >}}
 <div class="dropdown-menu">
   <a class="dropdown-item" href="#">Обычная ссылка</a>
-  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Отключенная ссылка</a>
+  <a class="dropdown-item disabled">Отключенная ссылка</a>
   <a class="dropdown-item" href="#">Другая ссылка</a>
 </div>
 {{< /example >}}
@@ -595,7 +595,7 @@ toc: true
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Меню с выравниванием по правому краю
   </button>
   <div class="dropdown-menu dropdown-menu-right">
@@ -614,7 +614,7 @@ toc: true
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false">
     По левому краю, но по правому краю на большом экране
   </button>
   <div class="dropdown-menu dropdown-menu-lg-right">
@@ -629,7 +629,7 @@ toc: true
 
 {{< example >}}
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false">
     По правому краю, но по левому краю на большом экране
   </button>
   <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
@@ -745,7 +745,7 @@ toc: true
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown mr-1">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
       Смещение
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
@@ -756,7 +756,7 @@ toc: true
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Справка</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
@@ -784,7 +784,7 @@ toc: true
 
 ```html
 <div class="dropdown">
-  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dLabel" type="button" data-toggle="dropdown" aria-expanded="false">
     Триггер выпадающего списка
   </button>
   <div class="dropdown-menu" aria-labelledby="dLabel">

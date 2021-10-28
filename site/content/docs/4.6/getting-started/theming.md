@@ -49,23 +49,27 @@ your-project/
 // Custom.scss
 // Вариант A. Включите весь Bootstrap
 
+// Include any default variable overrides here (though functions won't be available)
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Add custom code after this
+// Then add additional custom code here
 ```
 
 ```scss
 // Custom.scss
 // Вариант Б. Включите части Bootstrap
 
-// Необходимые
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-// Включите здесь переопределения пользовательских переменных по умолчанию
-
-// Необязательные
+// 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
@@ -86,18 +90,17 @@ your-project/
 Вот пример, который меняет `background-color` и `color` для `<body>` при импорте и компиляции Bootstrap через npm:
 
 ```scss
-// Необходимые
 @import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
 
-// Ваша переменная переопределяет
+// Default variable overrides
 $body-bg: #000;
 $body-color: #111;
 
-// Bootstrap и его переменные по умолчанию
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
-// Необязательные
+// Optional Bootstrap components here
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
@@ -304,7 +307,7 @@ $border-width: 0;
 | `$enable-print-styles`                       | `true` (по умолчанию) или `false`            | Включает стили для оптимизации печати. |
 | `$enable-responsive-font-sizes`              | `true` или `false` (по умолчанию)            | Включает [размер адаптивного шрифта]({{< docsref "/content/typography#адаптивные-размеры-шрифтов" >}}). |
 | `$enable-validation-icons`                   | `true` (по умолчанию) или `false`            | Включает иконки `background-image` в текстовых полях ввода и некоторых настраиваемых формах для состояний проверки. |
-| `$enable-deprecation-messages`               | `true` или `false` (по умолчанию)            | Установите значение `true` , чтобы показывать предупреждения при использовании любых устаревших миксинов и функций, которые планируется удалить в `v5`. |
+| `$enable-deprecation-messages`               | `true` (по умолчанию) или `false`            | Установите значение `false`, чтобы скрыть предупреждения при использовании любых устаревших миксинов и функций, которые планируется удалить в `v5`. |
 
 ## Цвет
 
