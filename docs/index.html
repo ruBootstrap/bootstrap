@@ -6,56 +6,56 @@ layout: home
 <main class="bs-docs-masthead" id="content" tabindex="-1">
   <div class="container">
     <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">B</span>
-    <p class="lead">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+    <p class="lead">Bootstrap - это самый популярный фреймворк HTML, CSS и JS для разработки адаптивных мобильных проектов в Интернете.</p>
     <p class="lead">
-      <a href="{{ site.baseurl }}/getting-started/#download" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Download Bootstrap</a>
+      <a href="{{ site.baseurl }}/getting-started/#download" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Скачать Bootstrap</a>
     </p>
-    <p class="version">Currently v{{ site.current_version }}</p>
-    {% include ads.html %}
+    <p class="version">Текущая версия v{{ site.current_version }}</p>
+    {{/*  {% include ads.html %}  */}}
   </div>
 </main>
 
 <div class="bs-docs-featurette">
   <div class="container">
-    <h2 class="bs-docs-featurette-title">Designed for everyone, everywhere</h2>
-    <p class="lead">Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p>
+    <h2 class="bs-docs-featurette-title">Создан для всех и везде</h2>
+    <p class="lead">Bootstrap делает интерфейсную веб-разработку быстрее и проще. Он предназначен для людей любого уровня подготовки, устройств всех форм и проектов любого размера.</p>
 
     <hr class="half-rule">
 
     <div class="row">
       <div class="col-sm-4">
         <img src="{{ site.baseurl }}/assets/img/sass-less.png" alt="Sass and Less support" class="img-responsive" width="1000" height="360">
-        <h3>Preprocessors</h3>
-        <p>Bootstrap ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, <a href="{{ site.baseurl }}/css/#less">Less</a> and <a href="{{ site.baseurl }}/css/#sass">Sass</a>. Quickly get started with precompiled CSS or build on the source.</p>
+        <h3>Препроцессоры</h3>
+        <p>Bootstrap поставляется с ванильным CSS, но в его исходном коде используются два самых популярных препроцессора CSS, <a href="{{ site.baseurl }}/css/#less">Less</a> и <a href="{{ site.baseurl }}/css/#sass">Sass</a>. Быстро приступайте к работе с предварительно скомпилированным CSS или используйте исходный код.</p>
       </div>
       <div class="col-sm-4">
         <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-responsive" width="1000" height="360">
-        <h3>One framework, every device.</h3>
-        <p>Bootstrap easily and efficiently scales your websites and applications with a single code base, from phones to tablets to desktops with CSS media queries.</p>
+        <h3>Один фреймворк, каждое устройство.</h3>
+        <p>Bootstrap легко и эффективно масштабирует ваши веб-сайты и приложения с помощью единой базы кода, от телефонов до планшетов и настольных компьютеров с помощью медиа-запросов CSS.</p>
       </div>
       <div class="col-sm-4">
         <img src="{{ site.baseurl }}/assets/img/components.png" alt="Components" class="img-responsive" width="1000" height="360">
-        <h3>Full of features</h3>
-        <p>With Bootstrap, you get extensive and beautiful documentation for common HTML elements, dozens of custom HTML and CSS components, and awesome jQuery plugins.</p>
+        <h3>Полон возможностей</h3>
+        <p>С Bootstrap вы получаете обширную и красивую документацию по распространенным элементам HTML, десятки настраиваемых компонентов HTML и CSS и потрясающие плагины jQuery.</p>
       </div>
     </div>
 
     <hr class="half-rule">
 
-    <p class="lead">Bootstrap is open source. It's hosted, developed, and maintained on GitHub.</p>
-    <a href="{{ site.repo }}" class="btn btn-outline btn-lg">View the GitHub project</a>
+    <p class="lead">Bootstrap имеет открытый исходный код. Он размещен, разработан и поддерживается на GitHub.</p>
+    <a href="{{ site.repo_ru }}" class="btn btn-outline btn-lg">Посмотреть проект GitHub</a>
   </div>
 </div>
 
 <div class="bs-docs-featurette">
   <div class="container">
-    <h2 class="bs-docs-featurette-title">Official Bootstrap Themes</h2>
+    <h2 class="bs-docs-featurette-title">Официальные темы Bootstrap</h2>
     <p class="lead">
-      Take Bootstrap to the next level with official premium themes. Each theme is its own toolkit featuring all of Bootstrap, brand new components and plugins, full docs, build tools, and more.
+      Поднимите Bootstrap на новый уровень с официальными премиальными темами. Каждая тема представляет собой собственный набор инструментов, включающий все Bootstrap, новые компоненты и плагины, полную документацию, инструменты для сборки и многое другое.
     </p>
 
     <p class="lead">
-      <a href="{{ site.themes }}" class="btn btn-outline btn-lg">Browse themes</a>
+      <a href="{{ site.themes }}" class="btn btn-outline btn-lg">Обзор тем</a>
     </p>
 
     <img class="img-responsive" src="{{ site.baseurl }}/assets/img/bs-themes.png" alt="Bootstrap Themes" width="1024" height="388">
@@ -65,8 +65,8 @@ layout: home
 
 <div class="bs-docs-featurette">
   <div class="container">
-    <h2 class="bs-docs-featurette-title">Built with Bootstrap</h2>
-    <p class="lead">Millions of amazing sites across the web are being built with Bootstrap. Get started on your own with our growing <a href="{{ site.baseurl }}/getting-started/#examples">collection of examples</a> or by exploring some of our favorites.</p>
+    <h2 class="bs-docs-featurette-title">Создан с помощью Bootstrap</h2>
+    <p class="lead">Миллионы удивительных сайтов в сети создаются с помощью Bootstrap. Начните самостоятельно с нашей постоянно растущей <a href="{{ site.baseurl }}/getting-started/#examples">коллекции примеров</a> или изучив некоторые из наших любимых.</p>
 
     <hr class="half-rule">
 
@@ -82,7 +82,7 @@ layout: home
 
     <hr class="half-rule">
 
-    <p class="lead">We showcase dozens of inspiring projects built with Bootstrap on the Bootstrap Expo.</p>
-    <a href="{{ site.expo }}" class="btn btn-outline btn-lg">Explore the Expo</a>
+    <p class="lead">Мы демонстрируем десятки вдохновляющих проектов, созданных с помощью Bootstrap, на Bootstrap Expo.</p>
+    <a href="{{ site.expo }}" class="btn btn-outline btn-lg">Исследуйте выставку</a>
   </div>
 </div>
