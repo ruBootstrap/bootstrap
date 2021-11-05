@@ -10,7 +10,7 @@ source:           docs
 destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
-url:              https://getbootstrap.com
+url:              https://getbootstrap.su
 baseurl:          /docs/3.4
 encoding:         UTF-8
 exclude:
@@ -20,12 +20,15 @@ plugins:
   - jekyll-sitemap
 
 # Custom vars
+languageCode:     ru-ru
 title:            Bootstrap
-description:      "The world's most popular mobile-first and responsive front-end framework."
+description:      "Самый популярный в мире адаптивный интерфейсный фреймворк, ориентированный прежде всего на мобильные устройства."
 current_version:  3.4.1
 docs_version:     3.4
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
+repo_ru:          https://github.com/ruBootstrap/bootstrap
+telegram_ru:      https://t.me/getbootstrap_ru
 
 download:
   source:         https://github.com/twbs/bootstrap/archive/v3.4.1.zip
