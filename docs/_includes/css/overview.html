@@ -1,49 +1,49 @@
 <div class="bs-docs-section">
-  <h1 id="overview" class="page-header">Overview</h1>
+  <h1 id="overview" class="page-header">Обзор</h1>
 
-  <p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+  <p class="lead">Узнайте о ключевых элементах инфраструктуры Bootstrap, в том числе о нашем подходе к лучшей, быстрой и надежной веб-разработке.</p>
 
   <h2 id="overview-doctype">HTML5 doctype</h2>
-  <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+  <p>Bootstrap использует определенные элементы HTML и свойства CSS, которые требуют использования типа документа HTML5. Включите его в начало всех ваших проектов.</p>
 {% highlight html %}
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   ...
 </html>
 {% endhighlight %}
 
-  <h2 id="overview-mobile">Mobile first</h2>
-  <p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
-  <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+  <h2 id="overview-mobile">Сначала мобильные</h2>
+  <p>В Bootstrap 2 мы добавили дополнительные удобные для мобильных устройств стили для ключевых аспектов фреймворка. В Bootstrap 3 мы с самого начала переписали проект, чтобы он был удобен для мобильных устройств. Вместо добавления дополнительных мобильных стилей они встроены прямо в ядро. Фактически, <strong>Bootstrap в первую очередь является мобильным</strong>. Стили Mobile first можно найти во всей библиотеке, а не в отдельных файлах.</p>
+  <p>Чтобы обеспечить правильный рендеринг и масштабирование при касании, <strong>добавьте метатег области просмотра</strong> в свой <code>&lt;head&gt;</code>.</p>
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endhighlight %}
-  <p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p>
+  <p>Вы можете отключить возможности масштабирования на мобильных устройствах, добавив <code>user-scalable=no</code> в метатег области просмотра. Это отключает масштабирование, то есть пользователи могут только прокручивать, и в результате ваш сайт будет больше похож на собственное приложение. В целом мы не рекомендуем это делать на всех сайтах, поэтому будьте осторожны!!</p>
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 {% endhighlight %}
 
-  <h2 id="overview-type-links">Typography and links</h2>
-  <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+  <h2 id="overview-type-links">Типография и ссылки</h2>
+  <p>Bootstrap устанавливает основные глобальные стили отображения, типографики и ссылок. В частности, мы:</p>
   <ul>
-    <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
-    <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
-    <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+    <li>Установите <code>background-color: #fff;</code> в <code>body</code></li>
+    <li>Используйте атрибуты <code>@font-family-base</code>, <code>@font-size-base</code> и <code>@line-height-base</code> в качестве нашей типографской основы</li>
+    <li>Установите глобальный цвет ссылки через <code>@link-color</code> и примените подчеркивание ссылок только на <code>:hover</code></li>
   </ul>
-  <p>These styles can be found within <code>scaffolding.less</code>.</p>
+  <p>Эти стили можно найти в <code>scaffolding.less</code>.</p>
 
   <h2 id="overview-normalize">Normalize.css</h2>
-  <p>For improved cross-browser rendering, we use <a href="https://necolas.github.io/normalize.css/" rel="noopener" target="_blank">Normalize.css</a>, a project by <a href="https://twitter.com/necolas" rel="noopener" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" rel="noopener" target="_blank">Jonathan Neal</a>.</p>
+  <p>Для улучшения кроссбраузерности рендеринга мы используем <a href="https://necolas.github.io/normalize.css/" rel="noopener" target="_blank">Normalize.css</a>, проект <a href="https://twitter.com/necolas" rel="noopener" target="_blank">Николас Галлахер</a> и <a href="https://twitter.com/jon_neal" rel="noopener" target="_blank">Джонатан Нил</a>.</p>
 
-  <h2 id="overview-container">Containers</h2>
-  <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
-  <p>Use <code>.container</code> for a responsive fixed width container.</p>
+  <h2 id="overview-container">Контейнеры</h2>
+  <p>Bootstrap требует, чтобы вмещающий элемент обернул содержимое сайта и разместил нашу сетку. Вы можете выбрать один из двух контейнеров для использования в своих проектах. Обратите внимание, что из-за <code>padding</code> и т. д. ни один из контейнеров не может быть вложенным.</p>
+  <p>Используйте <code>.container</code> для адаптивного контейнера фиксированной ширины.</p>
 {% highlight html %}
 <div class="container">
   ...
 </div>
 {% endhighlight %}
-  <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+  <p>Используйте <code>.container-fluid</code> для контейнера полной ширины, охватывающего всю ширину области просмотра.</p>
 {% highlight html %}
 <div class="container-fluid">
   ...

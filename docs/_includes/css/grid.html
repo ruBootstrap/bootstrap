@@ -1,39 +1,39 @@
 <div class="bs-docs-section">
-  <h1 id="grid" class="page-header">Grid system</h1>
+  <h1 id="grid" class="page-header">Система сеток</h1>
 
-  <p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+  <p class="lead">Bootstrap включает в себя адаптивную мобильную первую систему гибкой сетки, которая соответствующим образом масштабирует до 12 столбцов по мере увеличения размера устройства или области просмотра. Он включает <a href="#grid-example-basic">предопределенные классы</a> для простых вариантов макета, а также мощные <a href="#grid-less">миксины для создания более семантических макетов</a>.</p>
 
-  <h2 id="grid-intro">Introduction</h2>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+  <h2 id="grid-intro">Вступление</h2>
+  <p>Системы сетки используются для создания макетов страниц с помощью ряда строк и столбцов, в которых размещается ваш контент. Вот как работает сетка Bootstrap:</p>
   <ul>
-    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
-    <li>Use rows to create horizontal groups of columns.</li>
-    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
-    <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
-    <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
-    <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
-    <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
-    <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
-    <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li>
+    <li>Строки должны быть помещены в <code>.container</code> (фиксированная ширина) или <code>.container-fluid</code> (во всю ширину) для правильного выравнивания и заполнения.</li>
+    <li>Используйте строки для создания горизонтальных групп столбцов.</li>
+    <li>Содержимое следует размещать внутри столбцов, и только столбцы могут быть непосредственными дочерними элементами строк.</li>
+    <li>Предопределенные классы сетки, такие как <code>.row</code> и <code>.col-xs-4</code>, доступны для быстрого создания макетов сетки. Меньшее количество миксинов также можно использовать для более семантических макетов</li>
+    <li>Столбцы создают промежутки (промежутки между содержимым столбца) с помощью <code>padding</code>. Это заполнение смещено в строках для первого и последнего столбца посредством отрицательного поля на <code>.row</code>.</li>
+    <li>Из-за отрицательного поля приведенные ниже примеры неактуальны. Это значит, что содержимое столбцов сетки совмещается с содержимым, не относящимся к сетке.</li>
+    <li>Столбцы сетки создаются путем указания числа из двенадцати доступных столбцов, которые вы хотите охватить. Например, для трех равных столбцов будет использоваться три <code>.col-xs-4</code>.</li>
+    <li>Если в одной строке помещается более 12 столбцов, каждая группа дополнительных столбцов как одно целое переносится на новую строку.</li>
+    <li>Классы сетки применяются к устройствам с шириной экрана больше или равной размеру точки останова и переопределяют классы сетки, нацеленные на устройства меньшего размера. Поэтому, например, применение любого класса <code>.col-md-*</code> к элементу повлияет не только на его стиль на средних устройствах, но и на больших устройствах, если класс <code>.col-lg-*</code> не предоставлен.</li>
   </ul>
-  <p>Look to the examples for applying these principles to your code.</p>
+  <p>Посмотрите примеры применения этих принципов к вашему коду.</p>
 
-  <h2 id="grid-media-queries">Media queries</h2>
-  <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
+  <h2 id="grid-media-queries">Медиа-запросы</h2>
+  <p>Мы используем следующие медиа-запросы в наших файлах Less для создания ключевых точек останова в нашей сеточной системе.</p>
 {% highlight scss %}
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Очень маленькие устройства (телефоны, менее 768 пикселей) */
+/* Нет медиа-запроса, так как это значение по умолчанию в Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+/* Небольшие устройства (планшеты, 768 пикселей и выше) */
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) */
+/* Средние устройства (настольные компьютеры, 992 пикселей и выше) */
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Большие устройства (большие рабочие столы, 1200 пикселей и выше) */
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
-  <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
+  <p>Иногда мы расширяем эти медиа-запросы, чтобы включить <code>max-width</code>, чтобы ограничить CSS более узким набором устройств.</p>
 {% highlight scss %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
@@ -41,84 +41,84 @@
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
 
-  <h2 id="grid-options">Grid options</h2>
-  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <h2 id="grid-options">Параметры сетки</h2>
+  <p>Посмотрите, как аспекты сеточной системы Bootstrap работают на нескольких устройствах с помощью удобной таблицы.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
           <th></th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            Очень маленькие устройства
+            <small>Телефоны (&lt;768px)</small>
           </th>
           <th>
-            Small devices
-            <small>Tablets (&ge;768px)</small>
+            Маленькие устройства
+            <small>Планшеты (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
-            <small>Desktops (&ge;992px)</small>
+            Средние устройства
+            <small>ПК (&ge;992px)</small>
           </th>
           <th>
-            Large devices
-            <small>Desktops (&ge;1200px)</small>
+            Большие устройства
+            <small>ПК (&ge;1200px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap" scope="row">Grid behavior</th>
-          <td>Horizontal at all times</td>
-          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          <th class="text-nowrap" scope="row">Поведение сетки</th>
+          <td>Горизонтально всегда</td>
+          <td colspan="3">Свернут, чтобы начать, горизонтально над контрольными точками</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Container width</th>
-          <td>None (auto)</td>
+          <th class="text-nowrap" scope="row">Ширина контейнера</th>
+          <td>Нет (авто)</td>
           <td>750px</td>
           <td>970px</td>
           <td>1170px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Class prefix</th>
+          <th class="text-nowrap" scope="row">Префикс класса</th>
           <td><code>.col-xs-</code></td>
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row"># of columns</th>
+          <th class="text-nowrap" scope="row"># столбцов</th>
           <td colspan="4">12</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Column width</th>
-          <td class="text-muted">Auto</td>
+          <th class="text-nowrap" scope="row">Ширина колонки</th>
+          <td class="text-muted">Авто</td>
           <td>~62px</td>
           <td>~81px</td>
           <td>~97px</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Gutter width</th>
-          <td colspan="4">30px (15px on each side of a column)</td>
+          <th class="text-nowrap" scope="row">Ширина промежутка</th>
+          <td colspan="4">30px (15px с каждой стороны столбца)</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Nestable</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Вложенный</th>
+          <td colspan="4">Да</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Offsets</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Смещения</th>
+          <td colspan="4">Да</td>
         </tr>
         <tr>
-          <th class="text-nowrap" scope="row">Column ordering</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap" scope="row">Порядок столбцов</th>
+          <td colspan="4">Да</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <h2 id="grid-example-basic">Example: Stacked-to-horizontal</h2>
-  <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+  <h2 id="grid-example-basic">Пример: с накоплением по горизонтали</h2>
+  <p>Используя один набор классов сетки <code>.col-md-*</code>, вы можете создать базовую систему сетки, которая начинается на мобильных устройствах и планшетах (от очень малого до небольшого диапазона), а затем становится горизонтальной на настольные (средние) устройства. Поместите столбцы сетки в любой <code>.row</code>.</p>
   <div class="row show-grid">
     <div class="col-md-1">.col-md-1</div>
     <div class="col-md-1">.col-md-1</div>
@@ -176,8 +176,8 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-fluid">Example: Fluid container</h2>
-  <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p>
+  <h2 id="grid-example-fluid">Пример: заполняемый контейнер</h2>
+  <p>Превратите любой макет сетки с фиксированной шириной в макет полной ширины, изменив внешний <code>.container</code> на <code>.container-fluid</code>.</p>
 {% highlight html %}
 <div class="container-fluid">
   <div class="row">
@@ -186,8 +186,8 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-mixed">Example: Mobile and desktop</h2>
-  <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+  <h2 id="grid-example-mixed">Пример: мобильные устройства и компьютеры</h2>
+  <p>Не хотите, чтобы ваши столбцы просто складывались на небольших устройствах? Используйте классы сетки дополнительных малых и средних устройств, добавив в столбцы <code>.col-xs-*</code> <code>.col-md-*</code>. Смотрите пример ниже, чтобы лучше понять, как все это работает.</p>
   <div class="row show-grid">
     <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
     <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
@@ -202,28 +202,28 @@
     <div class="col-xs-6">.col-xs-6</div>
   </div>
 {% highlight html %}
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<!-- Сложите столбцы на мобильном устройстве, сделав одну полную ширину, а другую половину ширины -->
 <div class="row">
   <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<!-- Ширина столбцов начинается с 50% на мобильных устройствах и увеличивается до 33,3% на компьютерах -->
 <div class="row">
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns are always 50% wide, on mobile and desktop -->
+<!-- Столбцы всегда имеют ширину 50%, как на мобильных устройствах, так и на компьютерах -->
 <div class="row">
   <div class="col-xs-6">.col-xs-6</div>
   <div class="col-xs-6">.col-xs-6</div>
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-mixed-complete">Example: Mobile, tablet, desktop</h2>
-  <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+  <h2 id="grid-example-mixed-complete">Пример: мобильный телефон, планшет, компьютер</h2>
+  <p>Используйте предыдущий пример, создав еще более динамичные и мощные макеты с помощью классов <code>.col-sm-*</code> для планшета.</p>
   <div class="row show-grid">
     <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
     <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
@@ -231,7 +231,7 @@
   <div class="row show-grid">
     <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
     <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+    <!-- Необязательно: очистите столбцы XS, если их содержимое не совпадает по высоте -->
     <div class="clearfix visible-xs-block"></div>
     <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
   </div>
@@ -243,38 +243,38 @@
 <div class="row">
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <!-- Необязательно: очистите столбцы XS, если их содержимое не совпадает по высоте -->
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-example-wrapping">Example: Column wrapping</h2>
-  <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+  <h2 id="grid-example-wrapping">Пример: перенос столбца</h2>
+  <p>Если в одной строке помещается более 12 столбцов, каждая группа дополнительных столбцов будет, как единое целое, переноситься на новую строку.</p>
   <div class="row show-grid">
     <div class="col-xs-9">.col-xs-9</div>
-    <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-    <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+    <div class="col-xs-4">.col-xs-4<br>Поскольку 9 + 4 = 13 &gt; 12, этот div шириной в 4 столбца переносится на новую строку как один непрерывный блок.</div>
+    <div class="col-xs-6">.col-xs-6<br>Последующие столбцы продолжаются вдоль новой строки.</div>
   </div>
 {% highlight html %}
 <div class="row">
   <div class="col-xs-9">.col-xs-9</div>
-  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+  <div class="col-xs-4">.col-xs-4<br>Поскольку 9 + 4 = 13 &gt; 12, этот div шириной в 4 столбца переносится на новую строку как один непрерывный блок.</div>
+  <div class="col-xs-6">.col-xs-6<br>Последующие столбцы продолжаются вдоль новой строки.</div>
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-responsive-resets">Responsive column resets</h2>
-  <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="#responsive-utilities">responsive utility classes</a>.</p>
+  <h2 id="grid-responsive-resets">Адаптивный сброс столбца</h2>
+  <p>С четырьмя доступными уровнями сеток вы обязательно столкнетесь с проблемами, когда в определенных точках останова ваши столбцы не очищаются правильно, поскольку один выше другого. Чтобы исправить это, используйте комбинацию <code>.clearfix</code> и наших <a href="#responsive-utilities">отзывчивых служебных классов</a>.</p>
   <div class="row show-grid">
     <div class="col-xs-6 col-sm-3">
       .col-xs-6 .col-sm-3
       <br>
-      Resize your viewport or check it out on your phone for an example.
+      Измените размер окна просмотра или посмотрите его на своем телефоне для примера.
     </div>
     <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
-    <!-- Add the extra clearfix for only the required viewport -->
+    <!-- Добавьте дополнительный clearfix только для необходимого окна просмотра -->
     <div class="clearfix visible-xs-block"></div>
 
     <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
@@ -285,14 +285,14 @@
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
-  <!-- Add the extra clearfix for only the required viewport -->
+  <!-- Добавьте дополнительный clearfix только для необходимого окна просмотра -->
   <div class="clearfix visible-xs-block"></div>
 
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 </div>
 {% endhighlight %}
-  <p>In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. See this in action in <a href="{{ site.baseurl }}/examples/grid/">the grid example</a>.</p>
+  <p>В дополнение к очистке столбца в ответных точках останова вам может потребоваться <strong>сбросить смещения, подталкивания или вытягивания</strong>. Посмотрите, как это работает, в <a href="{{ site.baseurl }}/examples/grid/">примере сетки</a>.</p>
 {% highlight html %}
 <div class="row">
   <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -306,8 +306,8 @@
 {% endhighlight %}
 
 
-  <h2 id="grid-remove-gutters">Remove gutters</h2>
-  <p>Remove the gutters from a row and it's columns with the <code>.row-no-gutters</code> class.</p>
+  <h2 id="grid-remove-gutters">Удаление полей</h2>
+  <p>Удалите промежутки из строки и ее столбцов с помощью класса <code>.row-no-gutters</code>.</p>
   <div class="row row-no-gutters show-grid">
     <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
     <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
@@ -338,8 +338,8 @@
 {% endhighlight %}
 
 
-  <h2 id="grid-offsetting">Offsetting columns</h2>
-  <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
+  <h2 id="grid-offsetting">Смещение столбцов</h2>
+  <p>Переместите столбцы вправо с помощью классов <code>.col-md-offset-*</code>. Эти классы увеличивают левое поле столбца на <code>*</code> столбцов. Например, <code>.col-md-offset-4</code> перемещает <code>.col-md-4</code> на четыре столбца.</p>
   <div class="row show-grid">
     <div class="col-md-4">.col-md-4</div>
     <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
@@ -365,7 +365,7 @@
 </div>
 {% endhighlight %}
 
-  <p>You can also override offsets from lower grid tiers with <code>.col-*-offset-0</code> classes.</p>
+  <p>Вы также можете переопределить смещения от нижних ярусов сетки с помощью классов <code>.col-*-offset-0</code>.</p>
 {% highlight html %}
 <div class="row">
   <div class="col-xs-6 col-sm-4">
@@ -377,17 +377,17 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-nesting">Nesting columns</h2>
-  <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-sm-*</code> columns within an existing <code>.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+  <h2 id="grid-nesting">Вложенные колонки</h2>
+  <p>Чтобы вложить контент в сетку по умолчанию, добавьте новый <code>.row</code> и набор столбцов <code>.col-sm-*</code> в существующий столбец <code>.col-sm-*</code>. Вложенные строки должны включать набор столбцов, которые в сумме составляют до 12 или меньше (необязательно, чтобы вы использовали все 12 доступных столбцов).</p>
   <div class="row show-grid">
     <div class="col-sm-9">
-      Level 1: .col-sm-9
+      Уровень 1: .col-sm-9
       <div class="row show-grid">
         <div class="col-xs-8 col-sm-6">
-          Level 2: .col-xs-8 .col-sm-6
+          Уровень 2: .col-xs-8 .col-sm-6
         </div>
         <div class="col-xs-4 col-sm-6">
-          Level 2: .col-xs-4 .col-sm-6
+          Уровень 2: .col-xs-4 .col-sm-6
         </div>
       </div>
     </div>
@@ -395,21 +395,21 @@
 {% highlight html %}
 <div class="row">
   <div class="col-sm-9">
-    Level 1: .col-sm-9
+    Уровень 1: .col-sm-9
     <div class="row">
       <div class="col-xs-8 col-sm-6">
-        Level 2: .col-xs-8 .col-sm-6
+        Уровень 2: .col-xs-8 .col-sm-6
       </div>
       <div class="col-xs-4 col-sm-6">
-        Level 2: .col-xs-4 .col-sm-6
+        Уровень 2: .col-xs-4 .col-sm-6
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-column-ordering">Column ordering</h2>
-  <p>Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.</p>
+  <h2 id="grid-column-ordering">Порядок столбцов</h2>
+  <p>Легко изменить порядок наших встроенных столбцов сетки с помощью классов модификаторов <code>.col-md-push-*</code> и <code>.col-md-pull-*</code>.</p>
   <div class="row show-grid">
     <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
     <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
@@ -422,23 +422,23 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="grid-less">Less mixins and variables</h2>
-  <p>In addition to <a href="#grid-example-basic">prebuilt grid classes</a> for fast layouts, Bootstrap includes Less variables and mixins for quickly generating your own simple, semantic layouts.</p>
+  <h2 id="grid-less">Меньше миксинов и переменных</h2>
+  <p>Помимо <a href="#grid-example-basic">готовых классов сетки</a> для быстрых макетов, Bootstrap включает Less переменных и миксины для быстрого создания ваших собственных простых семантических макетов.</p>
 
-  <h3>Variables</h3>
-  <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
+  <h3>Переменные</h3>
+  <p>Переменные определяют количество столбцов, ширину промежутка и точку медиа-запроса, с которой должны начинаться плавающие столбцы. Мы используем их для создания предопределенных классов сетки, описанных выше, а также для пользовательских миксинов, перечисленных ниже.</p>
 {% highlight scss %}
 @grid-columns:              12;
 @grid-gutter-width:         30px;
 @grid-float-breakpoint:     768px;
 {% endhighlight %}
 
-  <h3>Mixins</h3>
-  <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+  <h3>Миксины</h3>
+  <p>Миксины используются вместе с переменными сетки для генерации семантического CSS для отдельных столбцов сетки.</p>
 {% highlight scss %}
-// Creates a wrapper for a series of columns
+// Создает оболочку для серии столбцов
 .make-row(@gutter: @grid-gutter-width) {
-  // Then clear the floated columns
+  // Затем очистите плавающие столбцы
   .clearfix();
 
   @media (min-width: @screen-sm-min) {
@@ -446,46 +446,46 @@
     margin-right: (@gutter / -2);
   }
 
-  // Negative margin nested rows out to align the content of columns
+  // Отрицательное поле вложенных строк для выравнивания содержимого столбцов
   .row {
     margin-left:  (@gutter / -2);
     margin-right: (@gutter / -2);
   }
 }
 
-// Generate the extra small columns
+// Создайте дополнительные маленькие столбцы
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Предотвращение сворачивания пустых столбцов
   min-height: 1px;
   // Inner gutter via padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Рассчитать ширину на основе количества доступных столбцов
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the small columns
+// Создайте маленькие столбцы
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Предотвращение сворачивания пустых столбцов
   min-height: 1px;
   // Inner gutter via padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Рассчитать ширину на основе количества доступных столбцов
   @media (min-width: @screen-sm-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the small column offsets
+// Создайте небольшие смещения столбцов
 .make-sm-column-offset(@columns) {
   @media (min-width: @screen-sm-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -502,23 +502,23 @@
   }
 }
 
-// Generate the medium columns
+// Создайте средние столбцы
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Предотвращение сворачивания пустых столбцов
   min-height: 1px;
   // Inner gutter via padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Рассчитать ширину на основе количества доступных столбцов
   @media (min-width: @screen-md-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the medium column offsets
+// Создайте средние смещения столбцов
 .make-md-column-offset(@columns) {
   @media (min-width: @screen-md-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -535,23 +535,23 @@
   }
 }
 
-// Generate the large columns
+// Создайте большие столбцы
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Предотвращение сворачивания пустых столбцов
   min-height: 1px;
-  // Inner gutter via padding
+  // Внутренний промежуток через поля
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Рассчитать ширину на основе количества доступных столбцов
   @media (min-width: @screen-lg-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the large column offsets
+// Создайте большие смещения столбцов
 .make-lg-column-offset(@columns) {
   @media (min-width: @screen-lg-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -569,8 +569,8 @@
 }
 {% endhighlight %}
 
-  <h3>Example usage</h3>
-  <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
+  <h3>Пример использования</h3>
+  <p>Вы можете изменить переменные на свои собственные значения или просто использовать миксины со значениями по умолчанию. Вот пример использования настроек по умолчанию для создания макета из двух столбцов с промежутком между.</p>
 {% highlight scss %}
 .wrapper {
   .make-row();

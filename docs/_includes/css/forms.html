@@ -1,190 +1,190 @@
 <div class="bs-docs-section">
-  <h1 id="forms" class="page-header">Forms</h1>
+  <h1 id="forms" class="page-header">Формы</h1>
 
-  <h2 id="forms-example">Basic example</h2>
-  <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+  <h2 id="forms-example">Базовый пример</h2>
+  <p>Отдельные элементы управления формой автоматически получают глобальный стиль. Все текстовые элементы <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> и <code>&lt;select&gt;</code> с <code>.form-control</code> по умолчанию установлены на <code>width: 100%;</code>. Оберните метки и элементы управления в <code>.form-group</code> для оптимального интервала.</p>
   <div class="bs-example" data-example-id="basic-forms">
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <label for="exampleInputEmail1">Адрес электронной почты</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Эл. адрес">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputPassword1">Пароль</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
       </div>
       <div class="form-group">
-        <label for="exampleInputFile">File input</label>
+        <label for="exampleInputFile">Ввод файла</label>
         <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
+        <p class="help-block">Пример текста справки на уровне блока здесь.</p>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Check me out
+          <input type="checkbox"> Проверить меня
         </label>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default">Отправить</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <label for="exampleInputEmail1">Адрес электронной почты</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Эл. адрес">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="exampleInputPassword1">Пароль</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
+    <label for="exampleInputFile">Ввод файла</label>
     <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
+    <p class="help-block">Пример текста справки на уровне блока здесь.</p>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Check me out
+      <input type="checkbox"> Проверить меня
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">Отправить</button>
 </form>
 {% endhighlight %}
   <div class="bs-callout bs-callout-warning" id="callout-formgroup-inputgroup">
-    <h4>Don't mix form groups with input groups</h4>
-    <p>Do not mix form groups directly with <a href="{{ site.baseurl }}/components/#input-groups">input groups</a>. Instead, nest the input group inside of the form group.</p>
+    <h4>Не смешивайте группы форм с группами ввода</h4>
+    <p>Не смешивайте группы форм напрямую с <a href="{{ site.baseurl }}/components/#input-groups">группой вводов</a>. Вместо этого вложите группу ввода внутрь группы формы.</p>
   </div>
 
 
-  <h2 id="forms-inline">Inline form</h2>
-  <p>Add <code>.form-inline</code> to your form (which doesn't have to be a <code>&lt;form&gt;</code>) for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p>
+  <h2 id="forms-inline">Инлайновая форма</h2>
+  <p>Добавьте в форму <code>.form-inline</code> (которая не обязательно должна быть <code>&lt;form&gt;</code>) для элементов управления с выравниванием по левому краю и встроенных блоков. <strong>Это применимо только к формам в области просмотра, ширина которых не менее 768 пикселей.</strong></p>
   <div class="bs-callout bs-callout-danger" id="callout-inline-form-width">
-    <h4>May require custom widths</h4>
-    <p>Inputs and selects have <code>width: 100%;</code> applied by default in Bootstrap. Within inline forms, we reset that to <code>width: auto;</code> so multiple controls can reside on the same line. Depending on your layout, additional custom widths may be required.</p>
+    <h4>Может потребоваться нестандартная ширина</h4>
+    <p>Входные и выбранные значения имеют <code>width: 100%;</code>, применяемые по умолчанию в Bootstrap. Внутри встроенных форм мы сбрасываем это значение на <code>width: auto;</code>, чтобы несколько элементов управления могли находиться в одной строке. В зависимости от вашего макета может потребоваться дополнительная нестандартная ширина.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-inline-form-labels">
-    <h4>Always add labels</h4>
-    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class. There are further alternative methods of providing a label for assistive technologies, such as the <code>aria-label</code>, <code>aria-labelledby</code> or <code>title</code> attribute. If none of these is present, screen readers may resort to using the <code>placeholder</code> attribute, if present, but note that use of <code>placeholder</code> as a replacement for other labelling methods is not advised.</p>
+    <h4>Всегда добавляйте ярлыки</h4>
+    <p>Программы чтения с экрана будут иметь проблемы с вашими формами, если вы не добавите метку для каждого ввода. Для этих встроенных форм вы можете скрыть метки с помощью класса <code>.sr-only</code>. Существуют и другие альтернативные методы предоставления метки для вспомогательных технологий, такие как атрибут <code>aria-label</code>, <code>aria-labelledby</code> или <code>title</code>. Если ничего из этого нет, программы чтения с экрана могут прибегнуть к использованию атрибута <code>placeholder</code>, если он присутствует, но обратите внимание, что использование <code>placeholder</code> в качестве замены для других методов маркировки не рекомендуется.</p>
   </div>
 
   <div class="bs-example" data-example-id="simple-form-inline">
     <form class="form-inline">
       <div class="form-group">
-        <label for="exampleInputName2">Name</label>
+        <label for="exampleInputName2">Имя</label>
         <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail2">Email</label>
+        <label for="exampleInputEmail2">Эл. адрес</label>
         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
       </div>
-      <button type="submit" class="btn btn-default">Send invitation</button>
+      <button type="submit" class="btn btn-default">Отправь приглашение</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group">
-    <label for="exampleInputName2">Name</label>
+    <label for="exampleInputName2">Имя</label>
     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail2">Email</label>
+    <label for="exampleInputEmail2">Эл. адрес</label>
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
   </div>
-  <button type="submit" class="btn btn-default">Send invitation</button>
+  <button type="submit" class="btn btn-default">Отправь приглашение</button>
 </form>
 {% endhighlight %}
 
   <div class="bs-example" data-example-id="simple-form-inline">
     <form class="form-inline">
       <div class="form-group">
-        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+        <label class="sr-only" for="exampleInputEmail3">Адрес электронной почты</label>
+        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Эл. адрес">
       </div>
       <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+        <label class="sr-only" for="exampleInputPassword3">Пароль</label>
+        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Пароль">
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Remember me
+          <input type="checkbox"> Запомнить меня
         </label>
       </div>
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">Войти</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group">
-    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+    <label class="sr-only" for="exampleInputEmail3">Адрес электронной почты</label>
+    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Эл. адрес">
   </div>
   <div class="form-group">
-    <label class="sr-only" for="exampleInputPassword3">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+    <label class="sr-only" for="exampleInputPassword3">Пароль</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Пароль">
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Remember me
+      <input type="checkbox"> Запомнить меня
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Sign in</button>
+  <button type="submit" class="btn btn-default">Войти</button>
 </form>
 {% endhighlight %}
 
   <div class="bs-example" data-example-id="form-inline-with-input-group">
     <form class="form-inline">
       <div class="form-group">
-        <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+        <label class="sr-only" for="exampleInputAmount">Сумма (в долларах)</label>
         <div class="input-group">
           <div class="input-group-addon">$</div>
-          <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+          <input type="text" class="form-control" id="exampleInputAmount" placeholder="Количество">
           <div class="input-group-addon">.00</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Transfer cash</button>
+      <button type="submit" class="btn btn-primary">Перевести наличные</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group">
-    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    <label class="sr-only" for="exampleInputAmount">Сумма (в долларах)</label>
     <div class="input-group">
       <div class="input-group-addon">$</div>
-      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Количество">
       <div class="input-group-addon">.00</div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Transfer cash</button>
+  <button type="submit" class="btn btn-primary">Перевести наличные</button>
 </form>
 {% endhighlight %}
 
-  <h2 id="forms-horizontal">Horizontal form</h2>
-  <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form (which doesn't have to be a <code>&lt;form&gt;</code>). Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
+  <h2 id="forms-horizontal">Горизонтальная форма</h2>
+  <p>Используйте предопределенные классы сетки Bootstrap для выравнивания меток и групп элементов управления формы в горизонтальном макете, добавив <code>.form-horizontal</code> к форме (которая не обязательно должна быть <code>&lt;form&gt;</code>). Это изменяет <code>.form-group</code>, чтобы вести себя как строки сетки, поэтому в <code>.row</code> нет необходимости.</p>
   <div class="bs-example" data-example-id="simple-horizontal-form">
     <form class="form-horizontal">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <label for="inputEmail3" class="col-sm-2 control-label">Эл. адрес</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Эл. адрес">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Remember me
+              <input type="checkbox"> Запомнить меня
             </label>
           </div>
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Sign in</button>
+          <button type="submit" class="btn btn-default">Войти</button>
         </div>
       </div>
     </form>
@@ -192,103 +192,104 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 control-label">Эл. адрес</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Эл. адрес">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Remember me
+          <input type="checkbox"> Запомнить меня
         </label>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Sign in</button>
+      <button type="submit" class="btn btn-default">Войти</button>
     </div>
   </div>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-controls">Supported controls</h2>
-  <p>Examples of standard form controls supported in an example form layout.</p>
+  <h2 id="forms-controls">Поддерживаемые элементы управления</h2>
+  <p>Примеры стандартных элементов управления формы, поддерживаемых в примере макета формы.</p>
 
-  <h3>Inputs</h3>
-  <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+  <h3>Вводы</h3>
+  <p>Наиболее распространенный элемент управления формой, текстовые поля ввода. Включает поддержку всех типов HTML5: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code> и <code>color</code>.</p>
   <div class="bs-callout bs-callout-danger" id="callout-input-needs-type">
-    <h4>Type declaration required</h4>
-    <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
+    <h4>Требуется декларация типа</h4>
+    <p>Входные данные будут полностью стилизованы только в том случае, если их <code>type</code> правильно объявлен.</p>
   </div>
   <div class="bs-example" data-example-id="text-form-control">
     <form>
-      <input type="text" class="form-control" placeholder="Text input">
+      <input type="text" class="form-control" placeholder="Ввод текста">
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input type="text" class="form-control" placeholder="Text input">
+<input type="text" class="form-control" placeholder="Ввод текста">
 {% endhighlight %}
   <div class="bs-callout bs-callout-info" id="callout-xref-input-group">
-    <h4>Input groups</h4>
-    <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="{{ site.baseurl }}/components/#input-groups">check out the input group component</a>.</p>
+    <h4>Группы ввода</h4>
+    <p>Чтобы добавить интегрированный текст или кнопки до и/или после любого текстового <code>&lt;input&gt;</code>, <a href="{{ site.baseurl }}/components/#input-groups">проверьте компонент группы ввода</a>.</p>
   </div>
 
-  <h3>Textarea</h3>
-  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+  <h3>Текстовое поле</h3>
+  <p>Элемент управления формы, поддерживающий несколько строк текста. При необходимости измените атрибут <code>rows</code>.</p>
   <div class="bs-example" data-example-id="textarea-form-control">
     <form>
-      <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
+      <textarea class="form-control" rows="3" placeholder="Текстовое поле"></textarea>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
 <textarea class="form-control" rows="3"></textarea>
 {% endhighlight %}
 
-  <h3>Checkboxes and radios</h3>
-  <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
-  <p>Disabled checkboxes and radios are supported, but to provide a "not-allowed" cursor on hover of the parent <code>&lt;label&gt;</code>, you'll need to add the <code>.disabled</code> class to the parent <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, or <code>.checkbox-inline</code>.</p>
+  <h3>Флажки и радио</h3>
+  <p>Флажки предназначены для выбора одного или нескольких вариантов в списке, а радиостанции - для выбора одного варианта из
+  многих.</p>
+  <p>Отключенные флажки и радиомодули поддерживаются, но для обеспечения «запрещенного» курсора при наведении курсора на родительский <code>&lt;label&gt;</code>, необходимо добавить <code>.disabled</code> в родительский класс <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code> или <code>.checkbox-inline</code>.</p>
   <h4>Default (stacked)</h4>
   <div class="bs-example" data-example-id="block-checkboxes-radios">
     <form>
       <div class="checkbox">
         <label>
           <input type="checkbox" value="">
-          Option one is this and that&mdash;be sure to include why it's great
+          Вариант первый - это и это&mdash;обязательно укажите, почему это здорово
         </label>
       </div>
       <div class="checkbox disabled">
         <label>
           <input type="checkbox" value="" disabled>
-          Option two is disabled
+          Вариант два отключен
         </label>
       </div>
       <br>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Option one is this and that&mdash;be sure to include why it's great
+          Вариант первый - это и это&mdash;обязательно укажите, почему это здорово
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
+          Вариант два может быть чем-то другим, и его выбор приведет к отмене выбора первого варианта
         </label>
       </div>
       <div class="radio disabled">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Option three is disabled
+          Вариант третий отключен
         </label>
       </div>
     </form>
@@ -297,38 +298,38 @@
 <div class="checkbox">
   <label>
     <input type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
+    Вариант первый - это и это&mdash;обязательно укажите, почему это здорово
   </label>
 </div>
 <div class="checkbox disabled">
   <label>
     <input type="checkbox" value="" disabled>
-    Option two is disabled
+    Вариант два отключен
   </label>
 </div>
 
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Option one is this and that&mdash;be sure to include why it's great
+    Вариант первый - это и это&mdash;обязательно укажите, почему это здорово
   </label>
 </div>
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Option two can be something else and selecting it will deselect option one
+    Вариант два может быть чем-то другим, и его выбор приведет к отмене выбора первого варианта
   </label>
 </div>
 <div class="radio disabled">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Option three is disabled
+    Вариант третий отключен
   </label>
 </div>
 {% endhighlight %}
 
-  <h4>Inline checkboxes and radios</h4>
-  <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p>
+  <h4>Инлайновые флажки и радио</h4>
+  <p>Используйте классы <code>.checkbox-inline</code> или <code>.radio-inline</code> в серии флажков или радиомодулей для элементов управления, которые отображаются в одной строке.</p>
   <div class="bs-example" data-example-id="inline-checkboxes-radios">
     <form>
       <label class="checkbox-inline">
@@ -376,18 +377,18 @@
 </label>
 {% endhighlight %}
 
-  <h4>Checkboxes and radios without label text</h4>
-  <p>Should you have no text within the <code>&lt;label&gt;</code>, the input is positioned as you'd expect. <strong>Currently only works on non-inline checkboxes and radios.</strong> Remember to still provide some form of label for assistive technologies (for instance, using <code>aria-label</code>).</p>
+  <h4>Флажки и радио без текста метки</h4>
+  <p>Если у вас нет текста в <code>&lt;label&gt;</code>, ввод располагается так, как вы ожидали. <strong>В настоящее время работает только с не встроенными флажками и радио.</strong> Не забудьте по-прежнему предоставить какую-либо форму метки для вспомогательных технологий (например, с помощью <code>aria-label</code>).</p>
   <div class="bs-example" data-example-id="checkboxes-radios-without-labels">
     <form>
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="blankCheckbox" value="option1" aria-label="Checkbox without label text">
+          <input type="checkbox" id="blankCheckbox" value="option1" aria-label="Флажок без текста метки">
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="Radio button without label text">
+          <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="Радиокнопка без текста метки">
         </label>
       </div>
     </form>
@@ -405,8 +406,7 @@
 </div>
 {% endhighlight %}
 
-  <h3>Selects</h3>
-  <p>Note that many native select menus—namely in Safari and Chrome—have rounded corners that cannot be modified via <code>border-radius</code> properties.</p>
+  <h3>Обратите внимание, что многие встроенные меню выбора, а именно в Safari и Chrome, имеют закругленные углы, которые нельзя изменить с помощью свойств <code>border-radius</code>.</p>
   <div class="bs-example" data-example-ids="select-form-control">
     <form>
       <select class="form-control">
@@ -428,7 +428,7 @@
 </select>
 {% endhighlight %}
 
-  <p>For <code>&lt;select&gt;</code> controls with the <code>multiple</code> attribute, multiple options are shown by default.</p>
+  <p>Для элементов управления <code>&lt;select&gt;</code> с атрибутом <code>multiple</code> по умолчанию отображается несколько параметров.</p>
 
   <div class="bs-example" data-example-ids="select-multiple-form-control">
     <form>
@@ -453,20 +453,20 @@
 {% endhighlight %}
 
 
-  <h2 id="forms-controls-static">Static control</h2>
-  <p>When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
+  <h2 id="forms-controls-static">Статический контроль</h2>
+  <p>Если вам нужно разместить простой текст рядом с меткой формы внутри формы, используйте класс <code>.form-control-static</code> в <code>&lt;p&gt;</code>.</p>
   <div class="bs-example" data-example-id="horizontal-static-form-control">
     <form class="form-horizontal">
       <div class="form-group">
-        <label class="col-sm-2 control-label">Email</label>
+        <label class="col-sm-2 control-label">Эл. адрес</label>
         <div class="col-sm-10">
           <p class="form-control-static">email@example.com</p>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+        <label for="inputPassword" class="col-sm-2 control-label">Пароль</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
         </div>
       </div>
     </form>
@@ -474,15 +474,15 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-2 control-label">Email</label>
+    <label class="col-sm-2 control-label">Эл. адрес</label>
     <div class="col-sm-10">
       <p class="form-control-static">email@example.com</p>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 control-label">Пароль</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
     </div>
   </div>
 </form>
@@ -490,86 +490,86 @@
   <div class="bs-example" data-example-id="inline-static-form-control">
     <form class="form-inline">
       <div class="form-group">
-        <label class="sr-only">Email</label>
+        <label class="sr-only">Эл. адрес</label>
         <p class="form-control-static">email@example.com</p>
       </div>
       <div class="form-group">
-        <label for="inputPassword2" class="sr-only">Password</label>
-        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        <label for="inputPassword2" class="sr-only">Пароль</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Пароль">
       </div>
-      <button type="submit" class="btn btn-default">Confirm identity</button>
+      <button type="submit" class="btn btn-default">Подтвердите личность</button>
     </form>
   </div>
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group">
-    <label class="sr-only">Email</label>
+    <label class="sr-only">Эл. адрес</label>
     <p class="form-control-static">email@example.com</p>
   </div>
   <div class="form-group">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    <label for="inputPassword2" class="sr-only">Пароль</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Пароль">
   </div>
-  <button type="submit" class="btn btn-default">Confirm identity</button>
+  <button type="submit" class="btn btn-default">Подтвердите личность</button>
 </form>
 {% endhighlight %}
 
-  <h2 id="forms-control-focus">Focus state</h2>
-  <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+  <h2 id="forms-control-focus">Состояние фокуса</h2>
+  <p>Мы удаляем стандартные стили <code>outline</code> для некоторых элементов управления формы и применяем <code>box-shadow</code> вместо них для <code>:focus</code>.</p>
   <div class="bs-example">
     <form>
-      <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
+      <input class="form-control" id="focusedInput" type="text" value="Состояние демонстративного фокуса">
     </form>
   </div>
   <div class="bs-callout bs-callout-info" id="callout-focus-demo">
-    <h4>Demo <code>:focus</code> state</h4>
-    <p>The above example input uses custom styles in our documentation to demonstrate the <code>:focus</code> state on a <code>.form-control</code>.</p>
+    <h4>Демо состояния <code>:focus</code></h4>
+    <p>В приведенном выше примере ввода используются пользовательские стили из нашей документации для демонстрации состояния <code>:focus</code> в <code>.form-control</code>.</p>
   </div>
 
 
-  <h2 id="forms-control-disabled">Disabled state</h2>
-  <p>Add the <code>disabled</code> boolean attribute on an input to prevent user interactions. Disabled inputs appear lighter and add a <code>not-allowed</code> cursor.</p>
+  <h2 id="forms-control-disabled">Отключенное состояние</h2>
+  <p>Добавьте логический атрибут <code>disabled</code> во вход, чтобы предотвратить взаимодействие с пользователем. Отключенные входы отображаются светлее и добавляют курсор <code>not-allowed</code>.</p>
   <div class="bs-example" data-example-id="text-form-control-disabled">
     <form>
-      <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+      <input class="form-control" id="disabledInput" type="text" placeholder="Здесь отключен ввод…" disabled>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Здесь отключен ввод..." disabled>
 {% endhighlight %}
 
-  <h3 id="forms-disabled-fieldsets">Disabled fieldsets</h3>
-  <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
+  <h3 id="forms-disabled-fieldsets">Отключенные наборы полей</h3>
+  <p>Добавьте атрибут <code>disabled</code> в <code>&lt;fieldset&gt;</code>, чтобы сразу отключить все элементы управления в <code>&lt;fieldset&gt;</code>.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-fieldset-disabled-pointer-events">
-    <h4>Caveat about link functionality of <code>&lt;a&gt;</code></h4>
-    <p>By default, browsers will treat all native form controls (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;button&gt;</code> elements) inside a <code>&lt;fieldset disabled&gt;</code> as disabled, preventing both keyboard and mouse interactions on them. However, if your form also includes <code>&lt;a ... class="btn btn-*"&gt;</code> elements, these will only be given a style of <code>pointer-events: none</code>. As noted in the section about <a href="#buttons-disabled">disabled state for buttons</a> (and specifically in the sub-section for anchor elements), this CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11, and won't prevent keyboard users from being able to focus or activate these links. So to be safe, use custom JavaScript to disable such links.</p>
+    <h4>Предупреждение относительно функциональности ссылок <code>&lt;a&gt;</code></h4>
+    <p>По умолчанию браузеры обрабатывают все элементы управления собственными формами (элементы (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> и <code>&lt;button&gt;</code>) внутри <code>&lt;fieldset disabled&gt;</code> как отключенный, что предотвращает взаимодействие с ними как с клавиатурой, так и с мышью. Однако, если ваша форма также включает элементы <code>&lt;a ... class="btn btn-*"&gt;</code>, им будет присвоен только стиль <code>pointer-events: none</code>. Как отмечалось в разделе о <a href="#buttons-disabled">отключенном состоянии для кнопок</a> (и особенно в подразделе для якорных элементов), это свойство CSS еще не стандартизировано и не полностью поддерживается в Opera 18 и ниже или в Internet Explorer 11 и не мешает пользователям клавиатуры фокусироваться или активировать эти ссылки. Чтобы быть в безопасности, используйте собственный JavaScript для отключения таких ссылок.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-fieldset-disabled-ie">
-    <h4>Cross-browser compatibility</h4>
-    <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+    <h4>Кроссбраузерная совместимость</h4>
+    <p>Хотя Bootstrap будет применять эти стили во всех браузерах, Internet Explorer 11 и ниже не полностью поддерживает атрибут <code>disabled</code> в <code>&lt;fieldset&gt;</code>. Используйте собственный JavaScript, чтобы отключить набор полей в этих браузерах.</p>
   </div>
 
   <div class="bs-example" data-example-id="disabled-fieldset">
     <form>
       <fieldset disabled>
         <div class="form-group">
-          <label for="disabledTextInput">Disabled input</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+          <label for="disabledTextInput">Отключенный ввод</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Отключенный ввод">
         </div>
         <div class="form-group">
-          <label for="disabledSelect">Disabled select menu</label>
+          <label for="disabledSelect">Отключенное меню выбора</label>
           <select id="disabledSelect" class="form-control">
-            <option>Disabled select</option>
+            <option>Отключенный выбор</option>
           </select>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Can't check this
+            <input type="checkbox"> Не могу это проверить
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
       </fieldset>
     </form>
   </div><!-- /.bs-example -->
@@ -577,91 +577,91 @@
 <form>
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <label for="disabledTextInput">Отключенный ввод</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Отключенный ввод">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
+      <label for="disabledSelect">Отключенное меню выбора</label>
       <select id="disabledSelect" class="form-control">
-        <option>Disabled select</option>
+        <option>Отключенный выбор</option>
       </select>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox"> Can't check this
+        <input type="checkbox"> Не могу это проверить
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Отправить</button>
   </fieldset>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-readonly">Readonly state</h2>
-  <p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.</p>
+  <h2 id="forms-control-readonly">Состояние только для чтения</h2>
+  <p>Добавьте логический атрибут <code>readonly</code> на вход, чтобы предотвратить изменение входного значения. Входы только для чтения выглядят светлее (как и Отключенный ввод), но сохраняют стандартный курсор.</p>
   <div class="bs-example" data-example-id="readonly-text-form-control">
     <form>
-      <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+      <input class="form-control" type="text" placeholder="Ввод только для чтения здесь…" readonly>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+<input class="form-control" type="text" placeholder="Ввод только для чтения здесь…" readonly>
 {% endhighlight %}
 
 
-  <h2 id="forms-help-text">Help text</h2>
-  <p>Block level help text for form controls.</p>
+  <h2 id="forms-help-text">Текст помощи</h2>
+  <p>Текст справки на уровне блока для элементов управления формы.</p>
   <div class="bs-callout bs-callout-info" id="callout-help-text-accessibility">
-    <h4>Associating help text with form controls</h4>
-    <p>Help text should be explicitly associated with the form control it relates to using the <code>aria-describedby</code> attribute. This will ensure that assistive technologies – such as screen readers – will announce this help text when the user focuses or enters the control.</p>
+    <h4>Связывание текста справки с элементами управления формой</h4>
+    <p>Текст справки должен быть явно связан с элементом управления формы, к которому он относится, с помощью атрибута <code>aria-describedby</code>. Это гарантирует, что вспомогательные технологии, такие как программы чтения с экрана, будут озвучивать этот текст справки, когда пользователь фокусируется или входит в элемент управления.</p>
   </div>
   <div class="bs-example" data-example-id="simple-help-text">
     <form>
       <div class="form-group">
-        <label for="inputHelpBlock">Input with help text</label>
+        <label for="inputHelpBlock">Ввод с текстом справки</label>
         <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
       </div>
-      <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+      <span id="helpBlock" class="help-block">Блок текста справки, который переносится на новую строку и может выходить за пределы одной строки.</span>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<label for="inputHelpBlock">Input with help text</label>
+<label for="inputHelpBlock">Ввод с текстом справки</label>
 <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
 ...
-<span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+<span id="helpBlock" class="help-block">Блок текста справки, который переносится на новую строку и может выходить за пределы одной строки.</span>
 {% endhighlight %}
 </div>
 
 
-  <h2 id="forms-control-validation">Validation states</h2>
-  <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
+  <h2 id="forms-control-validation">Состояния проверки</h2>
+  <p>Bootstrap включает стили проверки для состояний ошибки, предупреждения и успеха в элементах управления формы. Чтобы использовать, добавьте к родительскому элементу <code>.has-warning</code>, <code>.has-error</code> или <code>.has-success</code>. Все элементы <code>.control-label</code>, <code>.form-control</code> и <code>.help-block</code> в этом элементе получат стили проверки.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-form-validation-state-accessibility">
-    <h4>Conveying validation state to assistive technologies and colorblind users</h4>
-    <p>Using these validation styles to denote the state of a form control only provides a visual, color-based indication, which will not be conveyed to users of assistive technologies - such as screen readers - or to colorblind users.</p>
-    <p>Ensure that an alternative indication of state is also provided. For instance, you can include a hint about state in the form control's <code>&lt;label&gt;</code> text itself (as is the case in the following code example), include a <a href="{{ site.baseurl }}/components/#glyphicons">Glyphicon</a> (with appropriate alternative text using the <code>.sr-only</code> class - see the <a href="{{ site.baseurl }}/components/#glyphicons-examples">Glyphicon examples</a>), or by providing an additional <a href="#forms-help-text">help text</a> block. Specifically for assistive technologies, invalid form controls can also be assigned an <code>aria-invalid="true"</code> attribute.</p>
+    <h4>Передача состояния проверки вспомогательным технологиям и дальтоникам</h4>
+    <p>Использование этих стилей проверки для обозначения состояния элемента управления формы обеспечивает только визуальную цветовую индикацию, которая не будет передана пользователям вспомогательных технологий, таких как программы чтения с экрана, или пользователям с дальтонизмом.</p>
+    <p>Убедитесь, что также имеется альтернативная индикация состояния. Например, вы можете включить подсказку о состоянии в самом тексте <code>&lt;label&gt;</code> элемента управления формы (как в следующем примере кода), включая <a href="{{ site.baseurl }}/components/#glyphicons">Glyphicon</a> (с соответствующим альтернативным текстом с использованием класса <code>.sr-only</code> - смотрите <a href="{{ site.baseurl }}/components/#glyphicons-examples">Glyphicon примеры</a>), или предоставив дополнительный блок <a href="#forms-help-text">справочного текста</a>. В частности, для вспомогательных технологий недопустимым элементам управления формой также может быть назначен атрибут <code>aria-invalid="true"</code>.</p>
   </div>
 
   <div class="bs-example" data-example-id="form-validation-states">
     <form>
       <div class="form-group has-success">
-        <label class="control-label" for="inputSuccess1">Input with success</label>
+        <label class="control-label" for="inputSuccess1">Успешный ввод</label>
         <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
-        <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span id="helpBlock2" class="help-block">Блок текста справки, который переносится на новую строку и может выходить за пределы одной строки.</span>
       </div>
       <div class="form-group has-warning">
-        <label class="control-label" for="inputWarning1">Input with warning</label>
+        <label class="control-label" for="inputWarning1">Ввод с предупреждением</label>
         <input type="text" class="form-control" id="inputWarning1">
       </div>
       <div class="form-group has-error">
-        <label class="control-label" for="inputError1">Input with error</label>
+        <label class="control-label" for="inputError1">Ввод с ошибкой</label>
         <input type="text" class="form-control" id="inputError1">
       </div>
       <div class="has-success">
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxSuccess" value="option1">
-            Checkbox with success
+            Флажок с успехом
           </label>
         </div>
       </div>
@@ -669,7 +669,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxWarning" value="option1">
-            Checkbox with warning
+            Флажок с предупреждением
           </label>
         </div>
       </div>
@@ -677,7 +677,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxError" value="option1">
-            Checkbox with error
+            Флажок с ошибкой
           </label>
         </div>
       </div>
@@ -685,23 +685,23 @@
   </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="form-group has-success">
-  <label class="control-label" for="inputSuccess1">Input with success</label>
+  <label class="control-label" for="inputSuccess1">Успешный ввод</label>
   <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
-  <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+  <span id="helpBlock2" class="help-block">Блок текста справки, который переносится на новую строку и может выходить за пределы одной строки.</span>
 </div>
 <div class="form-group has-warning">
-  <label class="control-label" for="inputWarning1">Input with warning</label>
+  <label class="control-label" for="inputWarning1">Ввод с предупреждением</label>
   <input type="text" class="form-control" id="inputWarning1">
 </div>
 <div class="form-group has-error">
-  <label class="control-label" for="inputError1">Input with error</label>
+  <label class="control-label" for="inputError1">Ввод с ошибкой</label>
   <input type="text" class="form-control" id="inputError1">
 </div>
 <div class="has-success">
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxSuccess" value="option1">
-      Checkbox with success
+      Флажок с успехом
     </label>
   </div>
 </div>
@@ -709,7 +709,7 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxWarning" value="option1">
-      Checkbox with warning
+      Флажок с предупреждением
     </label>
   </div>
 </div>
@@ -717,105 +717,105 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxError" value="option1">
-      Checkbox with error
+      Флажок с ошибкой
     </label>
   </div>
 </div>
 {% endhighlight %}
 
-  <h3>With optional icons</h3>
-  <p>You can also add optional feedback icons with the addition of <code>.has-feedback</code> and the right icon.</p>
-  <p><strong class="text-danger">Feedback icons only work with textual <code>&lt;input class="form-control"&gt;</code> elements.</strong></p>
+  <h3>С дополнительными иконками</h3>
+  <p>Вы также можете добавить дополнительные значки обратной связи с добавлением <code>.has-feedback</code> и правой иконки.</p>
+  <p><strong class="text-danger">Иконки отзывов работают только с текстовыми элементами <code>&lt;input class="form-control"&gt;</code>.</strong></p>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-positioning">
-    <h4>Icons, labels, and input groups</h4>
-    <p>Manual positioning of feedback icons is required for inputs without a label and for <a href="{{ site.baseurl }}/components/#input-groups">input groups</a> with an add-on on the right. You are strongly encouraged to provide labels for all inputs for accessibility reasons. If you wish to prevent labels from being displayed, hide them with the <code>.sr-only</code> class. If you must do without labels, adjust the <code>top</code> value of the feedback icon. For input groups, adjust the <code>right</code> value to an appropriate pixel value depending on the width of your addon.</p>
+    <h4>Иконки, метки и группы ввода</h4>
+    <p>Ручное позиционирование значков обратной связи требуется для входов без ярлыка и для <a href="{{ site.baseurl }}/components/#input-groups">input groups</a> с надстройкой справа. Вам настоятельно рекомендуется поставить ярлыки для всех входных данных из соображений доступности. Если вы хотите предотвратить отображение меток, скройте их с помощью класса <code>.sr-only</code>. Если вам необходимо обойтись без ярлыков, отрегулируйте значение <code>top</code> иконки обратной связи. Для групп ввода отрегулируйте значение <code>right</code> до соответствующего значения в пикселях в зависимости от ширины вашего дополнения.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-has-feedback-icon-accessibility">
-    <h4>Conveying the icon's meaning to assistive technologies</h4>
-    <p>To ensure that assistive technologies – such as screen readers – correctly convey the meaning of an icon, additional hidden text should be included with the <code>.sr-only</code> class and explicitly associated with the form control it relates to using <code>aria-describedby</code>. Alternatively, ensure that the meaning (for instance, the fact that there is a warning for a particular text entry field) is conveyed in some other form, such as changing the text of the actual <code>&lt;label&gt;</code> associated with the form control.</p>
-    <p>Although the following examples already mention the validation state of their respective form controls in the <code>&lt;label&gt;</code> text itself, the above technique (using <code>.sr-only</code> text and <code>aria-describedby</code>) has been included for illustrative purposes.</p>
+    <h4>Передача значения значка вспомогательным технологиям</h4>
+    <p>Чтобы вспомогательные технологии, такие как программы чтения с экрана, правильно передавали значение значка, дополнительный скрытый текст должен быть включен в класс <code>.sr-only</code> и явно связан с элементом управления формой, к которому он относится <code>aria-describedby</code>. В качестве альтернативы убедитесь, что значение (например, факт наличия предупреждения для определенного поля ввода текста) передается в какой-либо другой форме, например, изменяя текст фактического <code>&lt;label&gt;</code> связанный с элементом управления формы.</p>
+    <p>Хотя в следующих примерах уже упоминается состояние проверки соответствующих элементов управления формы в самом тексте <code>&lt;label&gt;</code>, описанный выше метод (с использованием текста <code>.sr-only</code> и <code>aria-describedby</code>) был включен в иллюстративных целях.</p>
   </div>
   <div class="bs-example" data-example-id="form-validation-states-with-icons">
     <form>
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess2">Input with success</label>
+        <label class="control-label" for="inputSuccess2">Успешный ввод</label>
         <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputSuccess2Status" class="sr-only">(success)</span>
+        <span id="inputSuccess2Status" class="sr-only">(успешно)</span>
       </div>
       <div class="form-group has-warning has-feedback">
-        <label class="control-label" for="inputWarning2">Input with warning</label>
+        <label class="control-label" for="inputWarning2">Ввод с предупреждением</label>
         <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
         <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-        <span id="inputWarning2Status" class="sr-only">(warning)</span>
+        <span id="inputWarning2Status" class="sr-only">(предупреждение)</span>
       </div>
       <div class="form-group has-error has-feedback">
-        <label class="control-label" for="inputError2">Input with error</label>
+        <label class="control-label" for="inputError2">Ввод с ошибкой</label>
         <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
         <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-        <span id="inputError2Status" class="sr-only">(error)</span>
+        <span id="inputError2Status" class="sr-only">(ошибка)</span>
       </div>
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+        <label class="control-label" for="inputGroupSuccess1">Группа ввода с успехом</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
           <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
         </div>
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+        <span id="inputGroupSuccess1Status" class="sr-only">(успешно)</span>
       </div>
     </form>
   </div>
 {% highlight html %}
 <div class="form-group has-success has-feedback">
-  <label class="control-label" for="inputSuccess2">Input with success</label>
+  <label class="control-label" for="inputSuccess2">Успешный ввод</label>
   <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+  <span id="inputSuccess2Status" class="sr-only">(успешно)</span>
 </div>
 <div class="form-group has-warning has-feedback">
-  <label class="control-label" for="inputWarning2">Input with warning</label>
+  <label class="control-label" for="inputWarning2">Ввод с предупреждением</label>
   <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
   <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+  <span id="inputWarning2Status" class="sr-only">(предупреждение)</span>
 </div>
 <div class="form-group has-error has-feedback">
-  <label class="control-label" for="inputError2">Input with error</label>
+  <label class="control-label" for="inputError2">Ввод с ошибкой</label>
   <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
   <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-  <span id="inputError2Status" class="sr-only">(error)</span>
+  <span id="inputError2Status" class="sr-only">(ошибка)</span>
 </div>
 <div class="form-group has-success has-feedback">
-  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+  <label class="control-label" for="inputGroupSuccess1">Группа ввода с успехом</label>
   <div class="input-group">
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
   </div>
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+  <span id="inputGroupSuccess1Status" class="sr-only">(успешно)</span>
 </div>
 {% endhighlight %}
 
-  <h4>Optional icons in horizontal and inline forms</h4>
+  <h4>Дополнительные значки в горизонтальной и встроенной формах</h4>
   <div class="bs-example" data-example-id="horizontal-form-validation-state-with-icon">
     <form class="form-horizontal">
       <div class="form-group has-success has-feedback">
-        <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+        <label class="control-label col-sm-3" for="inputSuccess3">Успешный ввод</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
           <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-          <span id="inputSuccess3Status" class="sr-only">(success)</span>
+          <span id="inputSuccess3Status" class="sr-only">(успешно)</span>
         </div>
       </div>
       <div class="form-group has-success has-feedback">
-        <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+        <label class="control-label col-sm-3" for="inputGroupSuccess2">Группа ввода с успехом</label>
         <div class="col-sm-9">
           <div class="input-group">
             <span class="input-group-addon">@</span>
             <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
           </div>
           <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-          <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+          <span id="inputGroupSuccess2Status" class="sr-only">(успешно)</span>
         </div>
       </div>
     </form>
@@ -823,22 +823,22 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group has-success has-feedback">
-    <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+    <label class="control-label col-sm-3" for="inputSuccess3">Успешный ввод</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputSuccess3Status" class="sr-only">(success)</span>
+      <span id="inputSuccess3Status" class="sr-only">(успешно)</span>
     </div>
   </div>
   <div class="form-group has-success has-feedback">
-    <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+    <label class="control-label col-sm-3" for="inputGroupSuccess2">Группа ввода с успехом</label>
     <div class="col-sm-9">
       <div class="input-group">
         <span class="input-group-addon">@</span>
         <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
       </div>
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+      <span id="inputGroupSuccess2Status" class="sr-only">(успешно)</span>
     </div>
   </div>
 </form>
@@ -847,102 +847,102 @@
   <div class="bs-example" data-example-id="inline-form-validation-state-with-icon">
     <form class="form-inline">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess4">Input with success</label>
+        <label class="control-label" for="inputSuccess4">Успешный ввод</label>
         <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputSuccess4Status" class="sr-only">(success)</span>
+        <span id="inputSuccess4Status" class="sr-only">(успешно)</span>
       </div>
     </form>
     <br>
     <form class="form-inline">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputGroupSuccess3">Input group with success</label>
+        <label class="control-label" for="inputGroupSuccess3">Группа ввода с успехом</label>
         <div class="input-group">
           <span class="input-group-addon">@</span>
           <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
         </div>
         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-        <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+        <span id="inputGroupSuccess3Status" class="sr-only">(успешно)</span>
       </div>
     </form>
   </div>
 {% highlight html %}
 <form class="form-inline">
   <div class="form-group has-success has-feedback">
-    <label class="control-label" for="inputSuccess4">Input with success</label>
+    <label class="control-label" for="inputSuccess4">Успешный ввод</label>
     <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputSuccess4Status" class="sr-only">(success)</span>
+    <span id="inputSuccess4Status" class="sr-only">(успешно)</span>
   </div>
 </form>
 <form class="form-inline">
   <div class="form-group has-success has-feedback">
-    <label class="control-label" for="inputGroupSuccess3">Input group with success</label>
+    <label class="control-label" for="inputGroupSuccess3">Группа ввода с успехом</label>
     <div class="input-group">
       <span class="input-group-addon">@</span>
       <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
     </div>
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+    <span id="inputGroupSuccess3Status" class="sr-only">(успешно)</span>
   </div>
 </form>
 {% endhighlight %}
 
-  <h4>Optional icons with hidden <code>.sr-only</code> labels</h4>
-  <p>If you use the <code>.sr-only</code> class to hide a form control's <code>&lt;label&gt;</code> (rather than using other labelling options, such as the <code>aria-label</code> attribute), Bootstrap will automatically adjust the position of the icon once it's been added.</p>
+  <h4>Необязательные иконки со скрытыми ярлыками <code>.sr-only</code></h4>
+  <p>Если вы используете класс <code>.sr-only</code>, чтобы скрыть <code>&lt;label&gt;</code> элемента управления формы (вместо использования других параметров маркировки, таких атрибутов как <code>aria-label</code>), Bootstrap автоматически настроит положение значка после его добавления.</p>
   <div class="bs-example" data-example-id="form-validation-state-with-icon-without-label">
     <div class="form-group has-success has-feedback">
-      <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+      <label class="control-label sr-only" for="inputSuccess5">Скрытая метка</label>
       <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputSuccess5Status" class="sr-only">(success)</span>
+      <span id="inputSuccess5Status" class="sr-only">(успешно)</span>
     </div>
     <div class="form-group has-success has-feedback">
-      <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+      <label class="control-label sr-only" for="inputGroupSuccess4">Группа ввода с успехом</label>
       <div class="input-group">
         <span class="input-group-addon">@</span>
         <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
       </div>
       <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-      <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
+      <span id="inputGroupSuccess4Status" class="sr-only">(успешно)</span>
     </div>
   </div>
 {% highlight html %}
 <div class="form-group has-success has-feedback">
-  <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+  <label class="control-label sr-only" for="inputSuccess5">Скрытая метка</label>
   <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputSuccess5Status" class="sr-only">(success)</span>
+  <span id="inputSuccess5Status" class="sr-only">(успешно)</span>
 </div>
 <div class="form-group has-success has-feedback">
-  <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+  <label class="control-label sr-only" for="inputGroupSuccess4">Группа ввода с успехом</label>
   <div class="input-group">
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
   </div>
   <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-  <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
+  <span id="inputGroupSuccess4Status" class="sr-only">(успешно)</span>
 </div>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-sizes">Control sizing</h2>
-  <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
+  <h2 id="forms-control-sizes">Размеры элементов управления</h2>
+  <p>Установите высоту с помощью классов, таких как <code>.input-lg</code>, и установите ширину, используя классы столбцов сетки, такие как <code>.col-lg-*</code>.</p>
 
-  <h3>Height sizing</h3>
-  <p>Create taller or shorter form controls that match button sizes.</p>
+  <h3>Размер по высоте</h3>
+  <p>Создавайте более высокие или короткие элементы управления формы, соответствующие размеру кнопок.</p>
   <div class="bs-example bs-example-control-sizing" data-example-id="form-control-height-sizes">
     <form>
       <div class="controls">
         <input class="form-control input-lg" type="text" placeholder=".input-lg">
-        <input type="text" class="form-control" placeholder="Default input">
+        <input type="text" class="form-control" placeholder="Ввод по умолчанию">
         <input class="form-control input-sm" type="text" placeholder=".input-sm">
 
         <select class="form-control input-lg">
           <option value="">.input-lg</option>
         </select>
         <select class="form-control">
-          <option value="">Default select</option>
+          <option value="">Выбор по умолчанию</option>
         </select>
         <select class="form-control input-sm">
           <option value="">.input-sm</option>
@@ -952,7 +952,7 @@
   </div><!-- /.bs-example -->
 {% highlight html %}
 <input class="form-control input-lg" type="text" placeholder=".input-lg">
-<input class="form-control" type="text" placeholder="Default input">
+<input class="form-control" type="text" placeholder="Ввод по умолчанию">
 <input class="form-control input-sm" type="text" placeholder=".input-sm">
 
 <select class="form-control input-lg">...</select>
@@ -960,20 +960,20 @@
 <select class="form-control input-sm">...</select>
 {% endhighlight %}
 
-  <h3>Horizontal form group sizes</h3>
-  <p>Quickly size labels and form controls within <code>.form-horizontal</code> by adding <code>.form-group-lg</code> or <code>.form-group-sm</code>.</p>
+  <h3>Горизонтальные размеры групп форм</h3>
+  <p>Быстро изменяйте размеры меток и элементов управления формы в <code>.form-horizontal</code>, добавляя <code>.form-group-lg</code> или <code>.form-group-sm</code>.</p>
   <div class="bs-example" data-example-id="form-group-height-sizes">
     <form class="form-horizontal">
       <div class="form-group form-group-lg">
-        <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+        <label class="col-sm-2 control-label" for="formGroupInputLarge">Большая метка</label>
         <div class="col-sm-10">
-          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Большой ввод">
         </div>
       </div>
       <div class="form-group form-group-sm">
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+        <label class="col-sm-2 control-label" for="formGroupInputSmall">Маленькая метка</label>
         <div class="col-sm-10">
-          <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+          <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Маленький ввод">
         </div>
       </div>
     </form>
@@ -981,23 +981,23 @@
 {% highlight html %}
 <form class="form-horizontal">
   <div class="form-group form-group-lg">
-    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+    <label class="col-sm-2 control-label" for="formGroupInputLarge">Большая метка</label>
     <div class="col-sm-10">
-      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Большой ввод">
     </div>
   </div>
   <div class="form-group form-group-sm">
-    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+    <label class="col-sm-2 control-label" for="formGroupInputSmall">Маленькая метка</label>
     <div class="col-sm-10">
-      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Маленький ввод">
     </div>
   </div>
 </form>
 {% endhighlight %}
 
 
-  <h3>Column sizing</h3>
-  <p>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</p>
+  <h3>Размер колонки</h3>
+  <p>Оберните входные данные в столбцы сетки или любой настраиваемый родительский элемент, чтобы легко обеспечить желаемую ширину.</p>
   <div class="bs-example" data-example-id="form-control-column-sizing">
     <form>
       <div class="row">

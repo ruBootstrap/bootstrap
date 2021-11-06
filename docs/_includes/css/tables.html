@@ -1,36 +1,36 @@
 <div class="bs-docs-section">
-  <h1 id="tables" class="page-header">Tables</h1>
+  <h1 id="tables" class="page-header">Таблицы</h1>
 
-  <h2 id="tables-example">Basic example</h2>
-  <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+  <h2 id="tables-example">Базовый пример</h2>
+  <p>Для базового стиля&mdash;легкого заполнения и только горизонтальных разделителей&mdash;добавьте базовый класс <code>.table</code> к любому <code>&lt;table&gt;</code>. Это может показаться излишним, но, учитывая широкое использование таблиц для других плагинов, таких как календари и средства выбора даты, мы решили изолировать наши настраиваемые стили таблиц.</p>
   <div class="bs-example" data-example-id="simple-table">
     <table class="table">
-      <caption>Optional table caption.</caption>
+      <caption>Необязательный заголовок таблицы.</caption>
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Имя пользователя</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Марк</td>
+          <td>Отто</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Джейкоб</td>
+          <td>Торнтон</td>
           <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
+          <td>Ларри</td>
+          <td>Птица</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -43,39 +43,39 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-striped">Striped rows</h2>
-  <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-striped">Полосатые ряды</h2>
+  <p>Используйте <code>.table-striped</code>, чтобы добавить полосу зебры к любой строке таблицы в <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-callout bs-callout-danger" id="callout-tables-striped-ie8">
-    <h4>Cross-browser compatibility</h4>
-    <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+    <h4>Кроссбраузерная совместимость</h4>
+    <p>Стили для полосатых таблиц задаются с помощью селектора CSS <code>:nth-child</code>, который недоступен в Internet Explorer 8.</p>
   </div>
   <div class="bs-example" data-example-id="striped-table">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Имя пользователя</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Марк</td>
+          <td>Отто</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Джейкоб</td>
+          <td>Торнтон</td>
           <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
+          <td>Ларри</td>
+          <td>Птица</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -88,35 +88,35 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-bordered">Bordered table</h2>
-  <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+  <h2 id="tables-bordered">Таблицы с границами</h2>
+  <p>Добавьте <code>.table-bordered</code> для границ со всех сторон таблицы и ячеек.</p>
   <div class="bs-example" data-example-id="bordered-table">
     <table class="table table-bordered">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Имя пользователя</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Марк</td>
+          <td>Отто</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Джейкоб</td>
+          <td>Торнтон</td>
           <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
+          <td>Ларри</td>
+          <td>Птица</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -129,35 +129,35 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-hover-rows">Hover rows</h2>
-  <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-hover-rows">Строки наведения</h2>
+  <p>Добавьте <code>.table-hover</code>, чтобы включить состояние наведения курсора на строки таблицы в <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-example" data-example-id="hoverable-table">
     <table class="table table-hover">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Имя пользователя</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Марк</td>
+          <td>Отто</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Джейкоб</td>
+          <td>Торнтон</td>
           <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
+          <td>Ларри</td>
+          <td>Птица</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -170,34 +170,34 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-condensed">Condensed table</h2>
-  <p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+  <h2 id="tables-condensed">Сводная таблица</h2>
+  <p>Добавьте <code>.table-condensed</code>, чтобы сделать таблицы более компактными, уменьшив заполнение ячеек вдвое.</p>
   <div class="bs-example" data-example-id="condensed-table">
     <table class="table table-condensed">
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Имя пользователя</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Марк</td>
+          <td>Отто</td>
           <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Джейкоб</td>
+          <td>Торнтон</td>
           <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
+          <td colspan="2">Ларри Птица</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -210,8 +210,8 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-contextual-classes">Contextual classes</h2>
-  <p>Use contextual classes to color table rows or individual cells.</p>
+  <h2 id="tables-contextual-classes">Контекстные классы</h2>
+  <p>Используйте контекстные классы для раскрашивания строк таблицы или отдельных ячеек.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <colgroup>
@@ -220,8 +220,8 @@
       </colgroup>
       <thead>
         <tr>
-          <th>Class</th>
-          <th>Description</th>
+          <th>Класс</th>
+          <th>Описание</th>
         </tr>
       </thead>
       <tbody>
@@ -229,31 +229,31 @@
           <th scope="row">
             <code>.active</code>
           </th>
-          <td>Applies the hover color to a particular row or cell</td>
+          <td>Применяет цвет наведения к определенной строке или ячейке</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.success</code>
           </th>
-          <td>Indicates a successful or positive action</td>
+          <td>Указывает на успешное или положительное действие</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.info</code>
           </th>
-          <td>Indicates a neutral informative change or action</td>
+          <td>Указывает на нейтральное информативное изменение или действие</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.warning</code>
           </th>
-          <td>Indicates a warning that might need attention</td>
+          <td>Указывает на предупреждение, которое может потребовать внимания</td>
         </tr>
         <tr>
           <th scope="row">
             <code>.danger</code>
           </th>
-          <td>Indicates a dangerous or potentially negative action</td>
+          <td>Указывает на опасное или потенциально негативное действие</td>
         </tr>
       </tbody>
     </table>
@@ -263,65 +263,65 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Column heading</th>
-          <th>Column heading</th>
-          <th>Column heading</th>
+          <th>Заголовок столбца</th>
+          <th>Заголовок столбца</th>
+          <th>Заголовок столбца</th>
         </tr>
       </thead>
       <tbody>
         <tr class="active">
           <th scope="row">1</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr class="success">
           <th scope="row">3</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr class="info">
           <th scope="row">5</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr>
           <th scope="row">6</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr class="warning">
           <th scope="row">7</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr>
           <th scope="row">8</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
         <tr class="danger">
           <th scope="row">9</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
+          <td>Содержание столбца</td>
         </tr>
       </tbody>
     </table>
@@ -344,26 +344,26 @@
 </tr>
 {% endhighlight %}
   <div class="bs-callout bs-callout-warning" id="callout-tables-context-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>Using color to add meaning to a table row or individual cell only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the visible text in the relevant table row/cell), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+    <h4>Передача смысла вспомогательным технологиям</h4>
+    <p>Использование цвета для добавления смысла в строку таблицы или отдельную ячейку обеспечивает только визуальную индикацию, которая не будет передана пользователям вспомогательных технологий, таких как программы чтения с экрана. Убедитесь, что информация, обозначенная цветом, либо очевидна из самого содержимого (видимый текст в соответствующей строке / ячейке таблицы), либо включена с помощью альтернативных средств, таких как дополнительный текст, скрытый с помощью класса <code>.sr-only</code>.</p>
   </div>
 
-  <h2 id="tables-responsive">Responsive tables</h2>
-  <p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+  <h2 id="tables-responsive">Адаптивные таблицы</h2>
+  <p>Создавайте адаптивные таблицы, оборачивая любой <code>.table</code> в <code>.table-responsive</code>, чтобы они прокручивались по горизонтали на небольших устройствах (менее 768 пикселей). При просмотре на объектах шириной более 768 пикселей вы не увидите никакой разницы в этих таблицах.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow">
-    <h4>Vertical clipping/truncation</h4>
-    <p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
+    <h4>Вертикальная обрезка/усечение</h4>
+    <p>В адаптивных таблицах используется <code>overflow-y: hidden</code>, который отсекает любое содержимое, выходящее за пределы нижнего или верхнего края таблицы. В частности, это может вырезать раскрывающиеся меню и другие сторонние виджеты.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-tables-responsive-ff-fieldset">
-    <h4>Firefox and fieldsets</h4>
-    <p>Firefox has some awkward fieldset styling involving <code>width</code> that interferes with the responsive table. This cannot be overridden without a Firefox-specific hack that we <strong>don't</strong> provide in Bootstrap:</p>
+    <h4>Firefox и наборы полей</h4>
+    <p>Firefox имеет неудобный стиль набора полей, включающий <code>width</code>, который мешает адаптивной таблице. Это невозможно изменить без специального взлома Firefox, который мы <strong>не</strong> предоставляем в Bootstrap:</p>
 {% highlight css %}
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
 {% endhighlight %}
-    <p>For more information, read <a href="https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">this Stack Overflow answer</a>.</p>
+    <p>Для получения дополнительной информации прочтите <a href="https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">это ответ на Stack Overflow</a>.</p>
   </div>
 
   <div class="bs-example" data-example-id="simple-responsive-table">
@@ -372,41 +372,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
         </tbody>
       </table>
@@ -417,41 +417,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
+            <td>Ячейка таблицы</td>
           </tr>
         </tbody>
       </table>
