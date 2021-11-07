@@ -1,22 +1,20 @@
 <div class="bs-docs-section">
-  <h1 id="disable-responsive" class="page-header">Disabling responsiveness</h1>
+  <h1 id="disable-responsive" class="page-header">Отключение отзывчивости</h1>
 
-  <p class="lead">Bootstrap automatically adapts your pages for various screen sizes.
-    Here's how to disable this feature so your page works like <a href="{{ site.baseurl }}/examples/non-responsive/">this non-responsive example</a>.</p>
+  <p class="lead">Bootstrap автоматически адаптирует ваши страницы для различных размеров экрана. Вот как отключить эту функцию, чтобы ваша страница работала как <a href="{{ site.baseurl }}/examples/non-responsive/">этот неадаптивный пример</a>.</p>
 
-  <h2>Steps to disable page responsiveness</h2>
+  <h2>Действия по отключению отзывчивости страницы</h2>
   <ol>
-    <li>Omit the viewport <code>&lt;meta&gt;</code> mentioned in <a href="{{ site.baseurl }}/css/#overview-mobile">the CSS docs</a></li>
-    <li>Override the <code>width</code> on the <code>.container</code> for each grid tier with a single width, for example <code>width: 970px !important;</code> Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
-    <li>If using navbars, remove all navbar collapsing and expanding behavior.</li>
-    <li>For grid layouts, use <code>.col-xs-*</code> classes in addition to, or in place of, the medium/large ones. Don't worry, the extra-small device grid scales to all resolutions.</li>
+    <li>Опустите область просмотра <code>&lt;meta&gt;</code>, упомянутую в <a href="{{ site.baseurl }}/css/#overview-mobile">документации CSS</a></li>
+    <li>Переопределите <code>width</code> в <code>.container</code> для каждого уровня сетки с единственной шириной, например <code>width: 970px !important;</code> Убедитесь, что что это происходит после стандартного Bootstrap CSS. При желании вы можете избежать <code>!important</code> с помощью медиа-запросов или какого-нибудь селектора.</li>
+    <li>Если вы используете панели навигации, удалите все действия при сворачивании и раскрытии панели навигации.</li>
+    <li>Для макетов сетки используйте классы <code>.col-xs-*</code> в дополнение или вместо средних/больших. Не волнуйтесь, очень маленькая сетка устройства масштабируется для всех разрешений.</li>
   </ol>
-  <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be processed).
-    This disables the "mobile site" aspects of Bootstrap.</p>
+  <p>Вам по-прежнему понадобится Respond.js для IE8 (поскольку наши медиа-запросы все еще существуют и должны быть обработаны). Это отключает аспекты "мобильного сайта" в Bootstrap.</p>
 
-  <h2>Bootstrap template with responsiveness disabled</h2>
-  <p>We've applied these steps to an example. Read its source code to see the specific changes implemented.</p>
+  <h2>Шаблон начальной загрузки с отключенной отзывчивостью</h2>
+  <p>Мы применили эти шаги к примеру. Прочтите его исходный код, чтобы увидеть конкретные внесенные изменения.</p>
   <p>
-    <a href="{{ site.baseurl }}/examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
+    <a href="{{ site.baseurl }}/examples/non-responsive/" class="btn btn-primary">Посмотреть не отвечающий пример</a>
   </p>
 </div>

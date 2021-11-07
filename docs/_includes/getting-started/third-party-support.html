@@ -1,31 +1,32 @@
 <div class="bs-docs-section">
-  <h1 id="third-parties" class="page-header">Third party support</h1>
-  <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
+  <h1 id="third-parties" class="page-header">Сторонняя поддержка</h1>
+  <p class="lead">Хотя мы официально не поддерживаем сторонние плагины или надстройки, мы предлагаем несколько полезных советов, которые помогут избежать потенциальных проблем в ваших проектах.</p>
 
   <h2 id="third-box-sizing">Box-sizing</h2>
-  <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with Bootstrap due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
-  <p>Depending on the context, you may override as-needed (Option 1) or reset the box-sizing for entire regions (Option 2).</p>
+  <p>Некоторое стороннее программное обеспечение, включая Карты Google и Систему пользовательского поиска Google, конфликтует с Bootstrap из-за <code>* { box-sizing: border-box; }</code>, правило, согласно которому <code>padding</code> не влияет на окончательную вычисленную ширину элемента. Узнайте больше о <a href="https://css-tricks.com/box-sizing/">блочной модели и ее размерах на сайте CSS Tricks</a>.</p>
+  <p>В зависимости от контекста вы можете изменить размер блока по мере необходимости (вариант 1) или сбросить размер блока для целых регионов (вариант 2).</p>
 {% highlight scss %}
 /* Box-sizing resets
  *
- * Reset individual elements or override regions to avoid conflicts due to
- * global box model settings of Bootstrap. Two options, individual overrides and
- * region resets, are available as plain CSS and uncompiled Less formats.
+ * Сбросьте отдельные элементы или переопределите регионы,
+ * чтобы избежать конфликтов из-за настроек глобальной блочной модели Bootstrap.
+ * Две опции, индивидуальное переопределение и сброс области,
+ * доступны в виде простого CSS и некомпилированного формата Less.
  */
 
-/* Option 1A: Override a single element's box model via CSS */
+/* Вариант 1A: переопределить блочную модель отдельного элемента с помощью CSS */
 .element {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
-/* Option 1B: Override a single element's box model by using a Bootstrap Less mixin */
+/* Вариант 1B: переопределить блочную модель отдельного элемента с помощью примеси Bootstrap Less */
 .element {
   .box-sizing(content-box);
 }
 
-/* Option 2A: Reset an entire region via CSS */
+/* Вариант 2A: сбросить весь регион с помощью CSS */
 .reset-box-sizing,
 .reset-box-sizing *,
 .reset-box-sizing *:before,
@@ -35,7 +36,7 @@
           box-sizing: content-box;
 }
 
-/* Option 2B: Reset an entire region with a custom Less mixin */
+/* Вариант 2B: сбросить весь регион с помощью настраиваемого миксина Less */
 .reset-box-sizing {
   &,
   *,
