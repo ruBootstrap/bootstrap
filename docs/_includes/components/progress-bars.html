@@ -1,37 +1,37 @@
 <div class="bs-docs-section">
-  <h1 id="progress" class="page-header">Progress bars</h1>
+  <h1 id="progress" class="page-header">Индикаторы прогресса</h1>
 
-  <p class="lead">Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.</p>
+  <p class="lead">Предоставляйте актуальную обратную связь о ходе рабочего процесса или действия с помощью простых, но гибких индикаторов выполнения.</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-progress-animation-css3">
-    <h4>Cross-browser compatibility</h4>
-    <p>Progress bars use CSS3 transitions and animations to achieve some of their effects. These features are not supported in Internet Explorer 9 and below or older versions of Firefox. Opera 12 does not support animations.</p>
+    <h4>Кроссбраузерная совместимость</h4>
+    <p>Индикаторы выполнения используют переходы и анимацию CSS3 для достижения некоторых своих эффектов. Эти функции не поддерживаются в Internet Explorer 9 и ниже или более ранних версиях Firefox. Opera 12 не поддерживает анимацию.</p>
   </div>
 
   <div class="bs-callout bs-callout-info">
-    <h4 id="callout-progress-csp">Content Security Policy (CSP) compatibility</h4>
-    <p>If your website has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> which doesn't allow <code>style-src 'unsafe-inline'</code>, then you won't be able to use inline <code>style</code> attributes to set progress bar widths as shown in our examples below. Alternative methods for setting the widths that are compatible with strict CSPs include using a little custom JavaScript (that sets <code>element.style.width</code>) or using custom CSS classes.</p>
+    <h4 id="callout-progress-csp">Совместимость с политикой безопасности контента (CSP)</h4>
+    <p>Если на вашем веб-сайте существует <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Политика безопасности контента (CSP)</a>, запрещающая <code>style-src 'unsafe-inline'</code>, то вы не сможете использовать встроенные атрибуты <code>style</code> для установки ширины индикатора выполнения, как показано в наших примерах ниже. Альтернативные методы установки ширины, совместимые со строгими CSP, включают использование небольшого пользовательского JavaScript (который устанавливает <code>element.style.width</code>) или использование пользовательских классов CSS.</p>
   </div>
 
-  <h2 id="progress-basic">Basic example</h2>
-  <p>Default progress bar.</p>
+  <h2 id="progress-basic">Базовый пример</h2>
+  <p>Индикатор выполнения по умолчанию.</p>
   <div class="bs-example" data-example-id="simple-progress-bar">
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-        <span class="sr-only">60% Complete</span>
+        <span class="sr-only">60% Выполнено</span>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-    <span class="sr-only">60% Complete</span>
+    <span class="sr-only">60% Выполнено</span>
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="progress-label">With label</h2>
-  <p>Remove the <code>&lt;span&gt;</code> with <code>.sr-only</code> class from within the progress bar to show a visible percentage.</p>
+  <h2 id="progress-label">С меткой</h2>
+  <p>Удалите <code>&lt;span&gt;</code> с классом <code>.sr-only</code> из индикатора выполнения, чтобы показать видимый процент.</p>
   <div class="bs-example" data-example-id="progress-bar-with-label">
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -46,7 +46,7 @@
   </div>
 </div>
 {% endhighlight %}
-  <p>To ensure that the label text remains legible even for low percentages, consider adding a <code>min-width</code> to the progress bar.</p>
+  <p>Чтобы текст метки оставался разборчивым даже при небольшом процентном соотношении, рассмотрите возможность добавления <code>min-width</code> к полосе выполнения.</p>
   <div class="bs-example" data-example-id="progress-bar-at-low-percentage">
     <div class="progress">
       <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
@@ -73,141 +73,141 @@
 {% endhighlight %}
 
 
-  <h2 id="progress-alternatives">Contextual alternatives</h2>
-  <p>Progress bars use some of the same button and alert classes for consistent styles.</p>
+  <h2 id="progress-alternatives">Контекстные альтернативы</h2>
+  <p>Индикаторы выполнения используют одни и те же кнопки и классы предупреждений для согласованных стилей.</p>
   <div class="bs-example" data-example-id="contextual-progress-bar">
     <div class="progress">
       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-        <span class="sr-only">40% Complete (success)</span>
+        <span class="sr-only">40% Выполнено (успешно)</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-        <span class="sr-only">20% Complete</span>
+        <span class="sr-only">20% Выполнено</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-        <span class="sr-only">60% Complete (warning)</span>
+        <span class="sr-only">60% Выполнено (внимание)</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-        <span class="sr-only">80% Complete (danger)</span>
+        <span class="sr-only">80% Выполнено (опасность)</span>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="progress">
   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
+    <span class="sr-only">40% Выполнено (успешно)</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <span class="sr-only">20% Complete</span>
+    <span class="sr-only">20% Выполнено</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-    <span class="sr-only">60% Complete (warning)</span>
+    <span class="sr-only">60% Выполнено (внимание)</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-    <span class="sr-only">80% Complete (danger)</span>
+    <span class="sr-only">80% Выполнено (опасность)</span>
   </div>
 </div>
 {% endhighlight %}
 
   <h2 id="progress-striped">Striped</h2>
-  <p>Uses a gradient to create a striped effect. Not available in IE9 and below.</p>
+  <p>Использует градиент для создания эффекта полос. Недоступно в IE9 и ниже.</p>
   <div class="bs-example" data-example-id="striped-progress-bar">
     <div class="progress">
       <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-        <span class="sr-only">40% Complete (success)</span>
+        <span class="sr-only">40% Выполнено (успешно)</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-        <span class="sr-only">20% Complete</span>
+        <span class="sr-only">20% Выполнено</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-        <span class="sr-only">60% Complete (warning)</span>
+        <span class="sr-only">60% Выполнено (внимание)</span>
       </div>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-        <span class="sr-only">80% Complete (danger)</span>
+        <span class="sr-only">80% Выполнено (опасность)</span>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="progress">
   <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-    <span class="sr-only">40% Complete (success)</span>
+    <span class="sr-only">40% Выполнено (успешно)</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <span class="sr-only">20% Complete</span>
+    <span class="sr-only">20% Выполнено</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-    <span class="sr-only">60% Complete (warning)</span>
+    <span class="sr-only">60% Выполнено (внимание)</span>
   </div>
 </div>
 <div class="progress">
   <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-    <span class="sr-only">80% Complete (danger)</span>
+    <span class="sr-only">80% Выполнено (опасность)</span>
   </div>
 </div>
 {% endhighlight %}
 
   <h2 id="progress-animated">Animated</h2>
-  <p>Add <code>.active</code> to <code>.progress-bar-striped</code> to animate the stripes right to left. Not available in IE9 and below.</p>
+  <p>Добавьте <code>.active</code> в <code>.progress-bar-striped</code>, чтобы анимировать полосы справа налево. Недоступно в IE9 и ниже.</p>
   <div class="bs-example" data-example-id="animated-progress-bar">
     <div class="progress">
-      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"><span class="sr-only">45% Complete</span></div>
+      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"><span class="sr-only">45% Выполнено</span></div>
     </div>
-    <button type="button" class="btn btn-default bs-docs-activate-animated-progressbar" data-toggle="button" aria-pressed="false">Toggle animation</button>
+    <button type="button" class="btn btn-default bs-docs-activate-animated-progressbar" data-toggle="button" aria-pressed="false">Переключить анимацию</button>
   </div>
 {% highlight html %}
 <div class="progress">
   <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-    <span class="sr-only">45% Complete</span>
+    <span class="sr-only">45% Выполнено</span>
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="progress-stacked">Stacked</h2>
-  <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
+  <h2 id="progress-stacked">С накоплением</h2>
+  <p>Поместите несколько полос в один <code>.progress</code>, чтобы сложить их.</p>
   <div class="bs-example" data-example-id="stacked-progress-bar">
     <div class="progress">
       <div class="progress-bar progress-bar-success" style="width: 35%">
-        <span class="sr-only">35% Complete (success)</span>
+        <span class="sr-only">35% Выполнено (успешно)</span>
       </div>
       <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-        <span class="sr-only">20% Complete (warning)</span>
+        <span class="sr-only">20% Выполнено (внимание)</span>
       </div>
       <div class="progress-bar progress-bar-danger" style="width: 10%">
-        <span class="sr-only">10% Complete (danger)</span>
+        <span class="sr-only">10% Выполнено (опасность)</span>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="progress">
   <div class="progress-bar progress-bar-success" style="width: 35%">
-    <span class="sr-only">35% Complete (success)</span>
+    <span class="sr-only">35% Выполнено (успешно)</span>
   </div>
   <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
-    <span class="sr-only">20% Complete (warning)</span>
+    <span class="sr-only">20% Выполнено (внимание)</span>
   </div>
   <div class="progress-bar progress-bar-danger" style="width: 10%">
-    <span class="sr-only">10% Complete (danger)</span>
+    <span class="sr-only">10% Выполнено (опасность)</span>
   </div>
 </div>
 {% endhighlight %}

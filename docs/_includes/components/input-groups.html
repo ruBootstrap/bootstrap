@@ -1,39 +1,39 @@
 <div class="bs-docs-section">
-  <h1 id="input-groups" class="page-header">Input groups</h1>
+  <h1 id="input-groups" class="page-header">Группа ввода</h1>
 
-  <p class="lead">Extend form controls by adding text or buttons before, after, or on both sides of any text-based <code>&lt;input&gt;</code>. Use <code>.input-group</code> with an <code>.input-group-addon</code> or <code>.input-group-btn</code> to prepend or append elements to a single <code>.form-control</code>.</p>
+  <p class="lead">Расширьте элементы управления формой, добавив текст или кнопки до, после или с обеих сторон любого текстового <code>&lt;input&gt;</code>. Используйте <code>.input-group</code> с <code>.input-group-addon</code> или <code>.input-group-btn</code> для добавления или добавления элементов к одному <code>.form-control</code>.</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-inputgroup-text-input-only">
-    <h4>Textual <code>&lt;input&gt;</code>s only</h4>
-    <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p>
-    <p>Avoid using <code>&lt;textarea&gt;</code> elements here as their <code>rows</code> attribute will not be respected in some cases.</p>
+    <h4>Только текстовые <code>&lt;input&gt;</code></h4>
+    <p>Избегайте использования здесь элементов <code>&lt;select&gt;</code>, поскольку они не могут быть полностью стилизованы в браузерах WebKit.</p>
+    <p>Избегайте использования здесь элементов <code>&lt;textarea&gt;</code>, поскольку их атрибут <code>rows</code> в некоторых случаях не будет соблюдаться.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-inputgroup-container-body">
-    <h4>Tooltips &amp; popovers in input groups require special setting</h4>
-    <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
+    <h4>Всплывающие подсказки &amp; всплывающие окна в группах ввода требуют специальной настройки</h4>
+    <p>При использовании всплывающих подсказок или всплывающих окон для элементов внутри <code>.input-group</code>, вам необходимо указать параметр <code>container: 'body'</code>, чтобы избежать нежелательных побочных эффектов ( например, элемент становится шире и/или теряет закругленные углы при срабатывании всплывающей подсказки или всплывающего окна).</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-inputgroup-dont-mix">
-    <h4>Don't mix with other components</h4>
-    <p>Do not mix form groups or grid column classes directly with input groups. Instead, nest the input group inside of the form group or grid-related element.</p>
+    <h4>Не смешивайте с другими компонентами</h4>
+    <p>Не смешивайте группы форм или классы столбцов сетки напрямую с группами ввода. Вместо этого вложите группу ввода внутрь группы формы или элемента, связанного с сеткой.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-inputgroup-form-labels">
-    <h4>Always add labels</h4>
-    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.</p>
-    <p>The exact technique to be used (visible <code>&lt;label&gt;</code> elements, <code>&lt;label&gt;</code> elements hidden using the <code>.sr-only</code> class, or use of the <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code>, <code>title</code> or <code>placeholder</code> attribute) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches.</p>
+    <h4>Всегда добавляйте метки</h4>
+    <p>Программы чтения с экрана будут иметь проблемы с вашими формами, если вы не добавите метку для каждого ввода. Для этих групп ввода убедитесь, что все дополнительные метки или функции передаются вспомогательным технологиям.</p>
+    <p>Точный метод, который будет использоваться (видимые элементы <code>&lt;label&gt;</code>, элементы <code>&lt;label&gt;</code> скрытые с помощью класса <code>.sr-only</code> или использование тегов <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code>, <code>title</code> или <code>placeholder</code>), а то, какая дополнительная информация потребуется передать, будет зависеть от конкретного типа реализуемого вами интерфейсного виджета. Примеры в этом разделе представляют несколько предлагаемых подходов для конкретных случаев.</p>
   </div>
 
-  <h2 id="input-groups-basic">Basic example</h2>
-  <p>Place one add-on or button on either side of an input. You may also place one on both sides of an input.</p>
-  <p><strong class="text-danger">We do not support multiple add-ons (<code>.input-group-addon</code> or <code>.input-group-btn</code>) on a single side.</strong></p>
-  <p><strong class="text-danger">We do not support multiple form-controls in a single input group.</strong></p>
+  <h2 id="input-groups-basic">Базовый пример</h2>
+  <p>Поместите одну надстройку или кнопку с обеих сторон от входа. Вы также можете разместить по одному с обеих сторон от ввода.</p>
+  <p><strong class="text-danger">Мы не поддерживаем несколько надстроек (<code>.input-group-addon</code> или <code>.input-group-btn</code>) на одной стороне.</strong></p>
+  <p><strong class="text-danger">Мы не поддерживаем несколько элементов управления формой в одной группе ввода.</strong></p>
   <form class="bs-example bs-example-form" data-example-id="simple-input-groups">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon1">@</span>
-      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" placeholder="Имя пользователя" aria-describedby="basic-addon1">
     </div>
     <br>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+      <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-describedby="basic-addon2">
       <span class="input-group-addon" id="basic-addon2">@example.com</span>
     </div>
     <br>
@@ -43,7 +43,7 @@
       <span class="input-group-addon">.00</span>
     </div>
     <br>
-    <label for="basic-url">Your vanity URL</label>
+    <label for="basic-url">Ваш виртуальный URL</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
       <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -52,29 +52,29 @@
 {% highlight html %}
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Имя пользователя" aria-describedby="basic-addon1">
 </div>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  <input type="text" class="form-control" placeholder="Имя пользователя получателя" aria-describedby="basic-addon2">
   <span class="input-group-addon" id="basic-addon2">@example.com</span>
 </div>
 
 <div class="input-group">
   <span class="input-group-addon">$</span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <input type="text" class="form-control" aria-label="Сумма (с точностью до доллара)">
   <span class="input-group-addon">.00</span>
 </div>
 
-<label for="basic-url">Your vanity URL</label>
+<label for="basic-url">Ваш виртуальный URL</label>
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
 </div>
 {% endhighlight %}
 
-  <h2 id="input-groups-sizing">Sizing</h2>
-  <p>Add the relative form sizing classes to the <code>.input-group</code> itself and contents within will automatically resize—no need for repeating the form control size classes on each element.</p>
+  <h2 id="input-groups-sizing">Размеры</h2>
+  <p>Добавьте классы относительного изменения размеров формы в саму <code>.input-group</code>, и содержимое внутри автоматически изменит размер - нет необходимости повторять классы размеров элемента управления формы для каждого элемента.</p>
   <form class="bs-example bs-example-form" data-example-id="input-group-sizing">
     <div class="input-group input-group-lg">
       <span class="input-group-addon" id="sizing-addon1">@</span>
@@ -108,24 +108,24 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="input-groups-checkboxes-radios">Checkboxes and radio addons</h2>
-  <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
+  <h2 id="input-groups-checkboxes-radios">Флажки и радио</h2>
+  <p>Поместите любой флажок или переключатель в надстройку группы ввода вместо текста.</p>
   <form class="bs-example bs-example-form" data-example-id="input-group-with-checkbox-radio">
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
           <span class="input-group-addon">
-            <input type="checkbox" aria-label="Checkbox for following text input">
+            <input type="checkbox" aria-label="Флажок для следующего ввода текста">
           </span>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input type="text" class="form-control" aria-label="Ввод текста с флажком">
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6">
         <div class="input-group">
           <span class="input-group-addon">
-            <input type="radio" aria-label="Radio button for following text input">
+            <input type="radio" aria-label="Радиокнопка для следующего ввода текста">
           </span>
-          <input type="text" class="form-control" aria-label="Text input with radio button">
+          <input type="text" class="form-control" aria-label="Ввод текста с переключателем">
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
@@ -151,23 +151,23 @@
 </div><!-- /.row -->
 {% endhighlight %}
 
-  <h2 id="input-groups-buttons">Button addons</h2>
-  <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
+  <h2 id="input-groups-buttons">Дополнения к кнопкам</h2>
+  <p>Кнопки в группах ввода немного отличаются и требуют одного дополнительного уровня вложенности. Вместо <code>.input-group-addon</code>, вам нужно будет использовать <code>.input-group-btn</code>, чтобы обернуть кнопки. Это необходимо из-за стилей браузера по умолчанию, которые нельзя переопределить.</p>
   <form class="bs-example bs-example-form" data-example-id="input-group-with-button">
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
+            <button class="btn btn-default" type="button">Вперед!</button>
           </span>
-          <input type="text" class="form-control" placeholder="Search for...">
+          <input type="text" class="form-control" placeholder="Поиск для...">
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
+          <input type="text" class="form-control" placeholder="Поиск для...">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
+            <button class="btn btn-default" type="button">Вперед!</button>
           </span>
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
@@ -178,51 +178,51 @@
   <div class="col-lg-6">
     <div class="input-group">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" type="button">Вперед!</button>
       </span>
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" placeholder="Поиск для...">
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
   <div class="col-lg-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" placeholder="Поиск для...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" type="button">Вперед!</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
 {% endhighlight %}
 
-  <h2 id="input-groups-buttons-dropdowns">Buttons with dropdowns</h2>
+  <h2 id="input-groups-buttons-dropdowns">Кнопки с выпадающими списками</h2>
   <form class="bs-example bs-example-form" data-example-id="input-group-dropdowns">
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Действие <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Действие</a></li>
+              <li><a href="#">Другое действие</a></li>
+              <li><a href="#">Что-то еще здесь</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Отдельная ссылка</a></li>
             </ul>
           </div><!-- /btn-group -->
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <input type="text" class="form-control" aria-label="Ввод текста с помощью раскрывающейся кнопки">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Действие <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Действие</a></li>
+              <li><a href="#">Другое действие</a></li>
+              <li><a href="#">Что-то еще здесь</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Отдельная ссылка</a></li>
             </ul>
           </div><!-- /btn-group -->
         </div><!-- /input-group -->
@@ -234,13 +234,13 @@
   <div class="col-lg-6">
     <div class="input-group">
       <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Действие <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Действие</a></li>
+          <li><a href="#">Другое действие</a></li>
+          <li><a href="#">Что-то еще здесь</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Отдельная ссылка</a></li>
         </ul>
       </div><!-- /btn-group -->
       <input type="text" class="form-control" aria-label="...">
@@ -250,13 +250,13 @@
     <div class="input-group">
       <input type="text" class="form-control" aria-label="...">
       <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Действие <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Действие</a></li>
+          <li><a href="#">Другое действие</a></li>
+          <li><a href="#">Что-то еще здесь</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Отдельная ссылка</a></li>
         </ul>
       </div><!-- /btn-group -->
     </div><!-- /input-group -->
@@ -264,43 +264,43 @@
 </div><!-- /.row -->
 {% endhighlight %}
 
-  <h2 id="input-groups-buttons-segmented">Segmented buttons</h2>
+  <h2 id="input-groups-buttons-segmented">Сегментированные кнопки</h2>
   <form class="bs-example bs-example-form" data-example-id="input-group-segmented-buttons">
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default">Action</button>
+            <button type="button" class="btn btn-default">Действие</button>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
+              <span class="sr-only">Переключить раскрывающийся список</span>
             </button>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Действие</a></li>
+              <li><a href="#">Другое действие</a></li>
+              <li><a href="#">Что-то еще здесь</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+          <input type="text" class="form-control" aria-label="Ввод текста с раскрывающимся списком сегментированных кнопок">
         </div><!-- /.input-group -->
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+          <input type="text" class="form-control" aria-label="Ввод текста с раскрывающимся списком сегментированных кнопок">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default">Action</button>
+            <button type="button" class="btn btn-default">Действие</button>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
+              <span class="sr-only">Переключить раскрывающийся список</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Действие</a></li>
+              <li><a href="#">Другое действие</a></li>
+              <li><a href="#">Что-то еще здесь</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Отдельная ссылка</a></li>
             </ul>
           </div>
         </div><!-- /.input-group -->
@@ -323,8 +323,8 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="input-groups-buttons-multiple">Multiple buttons</h2>
-  <p>While you can only have one add-on per side, you can have multiple buttons inside a single <code>.input-group-btn</code>.</p>
+  <h2 id="input-groups-buttons-multiple">Несколько кнопок</h2>
+  <p>Хотя у вас может быть только одна надстройка на каждой стороне, у вас может быть несколько кнопок внутри одного <code>.input-group-btn</code>.</p>
   <form class="bs-example bs-example-form" data-example-id="input-group-multiple-buttons">
     <div class="row">
       <div class="col-lg-6">
@@ -333,15 +333,15 @@
             <button type="button" class="btn btn-default" aria-label="Bold"><span class="glyphicon glyphicon-bold"></span></button>
             <button type="button" class="btn btn-default" aria-label="Italic"><span class="glyphicon glyphicon-italic"></span></button>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+          <input type="text" class="form-control" aria-label="Ввод текста с помощью нескольких кнопок">
         </div><!-- /.input-group -->
       </div><!-- /.col-lg-6 -->
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+          <input type="text" class="form-control" aria-label="Ввод текста с помощью нескольких кнопок">
           <div class="input-group-btn">
             <button type="button" class="btn btn-default" aria-label="Help"><span class="glyphicon glyphicon-question-sign"></span></button>
-            <button type="button" class="btn btn-default">Action</button>
+            <button type="button" class="btn btn-default">Действие</button>
           </div>
         </div><!-- /.input-group -->
       </div><!-- /.col-lg-6 -->

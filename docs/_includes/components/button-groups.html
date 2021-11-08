@@ -1,53 +1,53 @@
 <div class="bs-docs-section">
-  <h1 id="btn-groups" class="page-header">Button groups</h1>
+  <h1 id="btn-groups" class="page-header">Группа кнопок</h1>
 
-  <p class="lead">Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with <a href="{{ site.baseurl }}/javascript/#buttons">our buttons plugin</a>.</p>
+  <p class="lead">Сгруппируйте серию кнопок вместе в одну строку с группой кнопок. Добавьте дополнительный переключатель JavaScript и стиль флажка с помощью <a href="{{ site.baseurl }}/javascript/#buttons">нашего плагина кнопок</a>.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-tooltips">
-    <h4>Tooltips &amp; popovers in button groups require special setting</h4>
-    <p>When using tooltips or popovers on elements within a <code>.btn-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
+    <h4>Всплывающие подсказки &amp; Всплывающие сообщения в группах кнопок требуют специальной настройки</h4>
+    <p>При использовании всплывающих подсказок или всплывающих окон для элементов внутри <code>.btn-group</code>, вам необходимо указать параметр <code>container: 'body'</code>, чтобы избежать нежелательных побочных эффектов (например, элемент становится шире и/или теряет закругленные углы при срабатывании всплывающей подсказки или всплывающего окна).</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-accessibility">
-    <h4>Ensure correct <code>role</code> and provide a label</h4>
-    <p>In order for assistive technologies – such as screen readers – to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>, while toolbars should have a <code>role="toolbar"</code>.</p>
-    <p>One exception are groups which only contain a single control (for instance the <a href="#btn-groups-justified">justified button groups</a> with <code>&lt;button&gt;</code> elements) or a dropdown.</p>
-    <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.</p>
+    <h4>Убедитесь, что <code>role</code> верна, и укажите метку</h4>
+    <p>Чтобы вспомогательные технологии, например программы чтения с экрана, передавали, что последовательность кнопок сгруппирована, необходимо указать соответствующий атрибут <code>role</code>. Для групп кнопок это будет <code>role="group"</code>, а на панелях инструментов должна быть <code>role="toolbar"</code>.</p>
+    <p>Единственным исключением являются группы, которые содержат только один элемент управления (например, <a href="#btn-groups-justified">группы кнопок с выравниванием</a> с элементами <code>&lt;button&gt;</code>) или раскрывающийся список.</p>
+    <p>Кроме того, группам и панелям инструментов следует давать явные метки, поскольку в противном случае большинство вспомогательных технологий не будут их объявлять, несмотря на наличие правильного атрибута <code>role</code>. В приведенных здесь примерах мы используем <code>aria-label</code>, но также можно использовать такие альтернативы, как <code>aria-labelledby</code>.</p>
   </div>
 
-  <h2 id="btn-groups-single">Basic example</h2>
-  <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+  <h2 id="btn-groups-single">Базовый пример</h2>
+  <p>Оберните серию кнопок с помощью <code>.btn</code> в <code>.btn-group</code>.</p>
   <div class="bs-example" data-example-id="simple-button-group">
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="btn-group" role="group" aria-label="Базовый пример">
+      <button type="button" class="btn btn-default">Левый</button>
+      <button type="button" class="btn btn-default">Средний</button>
+      <button type="button" class="btn btn-default">Правый</button>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+  <button type="button" class="btn btn-default">Левый</button>
+  <button type="button" class="btn btn-default">Средний</button>
+  <button type="button" class="btn btn-default">Правый</button>
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-toolbar">Button toolbar</h2>
-  <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</p>
+  <h2 id="btn-groups-toolbar">Панель инструментов кнопки</h2>
+  <p>Объедините наборы <code>&lt;div class="btn-group"&gt;</code> в <code>&lt;div class="btn-toolbar"&gt;</code> для более сложных компонентов.</p>
   <div class="bs-example" data-example-id="simple-button-toolbar">
-    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group" role="group" aria-label="First group">
+    <div class="btn-toolbar" role="toolbar" aria-label="Панель инструментов с группами кнопок">
+      <div class="btn-group" role="group" aria-label="Первая группа">
         <button type="button" class="btn btn-default">1</button>
         <button type="button" class="btn btn-default">2</button>
         <button type="button" class="btn btn-default">3</button>
         <button type="button" class="btn btn-default">4</button>
       </div>
-      <div class="btn-group" role="group" aria-label="Second group">
+      <div class="btn-group" role="group" aria-label="Вторая группа">
         <button type="button" class="btn btn-default">5</button>
         <button type="button" class="btn btn-default">6</button>
         <button type="button" class="btn btn-default">7</button>
       </div>
-      <div class="btn-group" role="group" aria-label="Third group">
+      <div class="btn-group" role="group" aria-label="Третья группа">
         <button type="button" class="btn btn-default">8</button>
       </div>
     </div>
@@ -60,31 +60,31 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-sizing">Sizing</h2>
-  <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including when nesting multiple groups.</p>
+  <h2 id="btn-groups-sizing">Размеры</h2>
+  <p>Вместо того, чтобы применять классы изменения размера кнопок к каждой кнопке в группе, просто добавьте <code>.btn-group-*</code> к каждой <code>.btn-group</code>, в том числе при вложении нескольких групп.</p>
   <div class="bs-example" data-example-id="button-group-sizing">
-    <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="btn-group btn-group-lg" role="group" aria-label="Большая группа кнопок">
+      <button type="button" class="btn btn-default">Левый</button>
+      <button type="button" class="btn btn-default">Средний</button>
+      <button type="button" class="btn btn-default">Правый</button>
     </div>
     <br>
-    <div class="btn-group" role="group" aria-label="Default button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="btn-group" role="group" aria-label="Группа кнопок по умолчанию">
+      <button type="button" class="btn btn-default">Левый</button>
+      <button type="button" class="btn btn-default">Средний</button>
+      <button type="button" class="btn btn-default">Правый</button>
     </div>
     <br>
-    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="btn-group btn-group-sm" role="group" aria-label="Маленькая группа кнопок">
+      <button type="button" class="btn btn-default">Левый</button>
+      <button type="button" class="btn btn-default">Средний</button>
+      <button type="button" class="btn btn-default">Правый</button>
     </div>
     <br>
-    <div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="btn-group btn-group-xs" role="group" aria-label="Очень маленькая группа кнопок">
+      <button type="button" class="btn btn-default">Левый</button>
+      <button type="button" class="btn btn-default">Средний</button>
+      <button type="button" class="btn btn-default">Правый</button>
     </div>
   </div>
 {% highlight html %}
@@ -94,21 +94,21 @@
 <div class="btn-group btn-group-xs" role="group" aria-label="...">...</div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-nested">Nesting</h2>
-  <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
+  <h2 id="btn-groups-nested">Вложенность</h2>
+  <p>Поместите <code>.btn-group</code> в другую <code>.btn-group</code>, если вы хотите, чтобы раскрывающиеся меню были смешаны с рядом кнопок.</p>
   <div class="bs-example" data-example-id="button-group-nesting">
-    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <div class="btn-group" role="group" aria-label="Группа кнопок с вложенным раскрывающимся списком">
       <button type="button" class="btn btn-default">1</button>
       <button type="button" class="btn btn-default">2</button>
 
       <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Раскрывающийся список
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
         </ul>
       </div>
     </div>
@@ -120,63 +120,63 @@
 
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
+      Раскрывающийся список
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li><a href="#">Dropdown link</a></li>
-      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Выпадающая ссылка</a></li>
+      <li><a href="#">Выпадающая ссылка</a></li>
     </ul>
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-vertical">Vertical variation</h2>
-  <p>Make a set of buttons appear vertically stacked rather than horizontally. <strong class="text-danger">Split button dropdowns are not supported here.</strong></p>
+  <h2 id="btn-groups-vertical">Вертикальный вариант</h2>
+  <p>Сделайте так, чтобы набор кнопок отображался вертикально, а не горизонтально. <strong class="text-danger">Раскрывающиеся меню с разделенными кнопками здесь не поддерживаются.</strong></p>
   <div class="bs-example" data-example-id="vertical-button-group">
-    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+    <div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+      <button type="button" class="btn btn-default">Кнопка</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Раскрывающийся список
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
         </ul>
       </div>
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Раскрывающийся список
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
         </ul>
       </div>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Раскрывающийся список
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
         </ul>
       </div>
       <div class="btn-group" role="group">
         <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Раскрывающийся список
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
+          <li><a href="#">Выпадающая ссылка</a></li>
         </ul>
       </div>
     </div>
@@ -187,41 +187,41 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="btn-groups-justified">Justified button groups</h2>
-  <p>Make a group of buttons stretch at equal sizes to span the entire width of its parent. Also works with button dropdowns within the button group.</p>
+  <h2 id="btn-groups-justified">Группы кнопок по ширине</h2>
+  <p>Заставьте группу кнопок растянуться на одинаковые размеры, чтобы охватить всю ширину ее родительского элемента. Также работает с раскрывающимися списками кнопок в группе кнопок.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-justified-dbl-border">
-    <h4>Handling borders</h4>
-    <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to Bootstrap, you may wish to remove or re-color the borders.</p>
+    <h4>Обработка границ</h4>
+    <p>Из-за специального HTML и CSS, используемых для выравнивания кнопок (а именно, <code>display: table-cell</code>), границы между ними удваиваются. В обычных группах кнопок, <code>margin-left: -1px</code> используется для наложения границ вместо их удаления. Однако, <code>margin</code> не работает с <code>display: table-cell</code>. В результате, в зависимости от ваших настроек Bootstrap, вы можете удалить или перекрасить границы.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-ie8-border">
-    <h4>IE8 and borders</h4>
-    <p>Internet Explorer 8 doesn't render borders on buttons in a justified button group, whether it's on <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements. To get around that, wrap each button in another <code>.btn-group</code>.</p>
-    <p>See <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> for more information.</p>
+    <h4>IE8 и границы</h4>
+    <p>Internet Explorer 8 не отображает границы кнопок в группе кнопок, выровненных по ширине, независимо от того, находятся ли они в элементах <code>&lt;a&gt;</code> или <code>&lt;button&gt;</code>. Чтобы обойти это, заключите каждую кнопку в другую <code>.btn-group</code>.</p>
+    <p>Смотрите <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> для получения дополнительной информации.</p>
   </div>
 
-  <h4>With <code>&lt;a&gt;</code> elements</h4>
-  <p>Just wrap a series of <code>.btn</code>s in <code>.btn-group.btn-group-justified</code>.</p>
+  <h4>С элементами <code>&lt;a&gt;</code></h4>
+  <p>Просто оберните серию файлов <code>.btn</code> в <code>.btn-group.btn-group-justified</code>.</p>
   <div class="bs-example" data-example-id="simple-justified-button-group">
-    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
-      <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
-      <a href="#" class="btn btn-default" role="button">Right</a>
+    <div class="btn-group btn-group-justified" role="group" aria-label="Группа кнопок по ширине">
+      <a href="#" class="btn btn-default" role="button">Левый</a>
+      <a href="#" class="btn btn-default" role="button">Средний</a>
+      <a href="#" class="btn btn-default" role="button">Правый</a>
     </div>
     <br>
-    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown">
-      <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
+    <div class="btn-group btn-group-justified" role="group" aria-label="Группа кнопок по ширине с вложенным раскрывающимся списком">
+      <a href="#" class="btn btn-default" role="button">Левый</a>
+      <a href="#" class="btn btn-default" role="button">Средний</a>
       <div class="btn-group" role="group">
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          Dropdown <span class="caret"></span>
+          Раскрывающийся список <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Действие</a></li>
+          <li><a href="#">Другое действие</a></li>
+          <li><a href="#">Что-то еще здесь</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Отдельная ссылка</a></li>
         </ul>
       </div>
     </div>
@@ -233,35 +233,35 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-anchor-btn">
-    <h4>Links acting as buttons</h4>
-    <p>If the <code>&lt;a&gt;</code> elements are used to act as buttons – triggering in-page functionality, rather than navigating to another document or section within the current page – they should also be given an appropriate <code>role="button"</code>.</p>
+    <h4>Ссылки действуют как кнопки</h4>
+    <p>Если элементы <code>&lt;a&gt;</code> используются в качестве кнопок, запускающих функциональные возможности на странице, а не для перехода к другому документу или разделу на текущей странице - им также должен быть присвоен соответствующий <code>role="button"</code>.</p>
   </div>
 
-  <h4>With <code>&lt;button&gt;</code> elements</h4>
-  <p>To use justified button groups with <code>&lt;button&gt;</code> elements, <strong class="text-danger">you must wrap each button in a button group</strong>. Most browsers don't properly apply our CSS for justification to <code>&lt;button&gt;</code> elements, but since we support button dropdowns, we can work around that.</p>
+  <h4>С элементами <code>&lt;button&gt;</code></h4>
+  <p>Чтобы использовать группы кнопок с выравниванием по ширине с элементами <code>&lt;button&gt;</code>, <strong class="text-danger">необходимо заключить каждую кнопку в группу кнопок</strong>. Большинство браузеров неправильно применяют наш CSS для выравнивания к элементам <code>&lt;button&gt;</code>, но, поскольку мы поддерживаем раскрывающиеся списки кнопок, мы можем обойти это.</p>
   <div class="bs-example" data-example-id="button-tag-button-group-justified">
     <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Левый</button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Средний</button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Правый</button>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Левый</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Средний</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Right</button>
+    <button type="button" class="btn btn-default">Правый</button>
   </div>
 </div>
 {% endhighlight %}

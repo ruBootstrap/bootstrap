@@ -1,122 +1,122 @@
 <div class="bs-docs-section">
-  <h1 id="panels" class="page-header">Panels</h1>
+  <h1 id="panels" class="page-header">Панели</h1>
 
-  <p class="lead">While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
+  <p class="lead">Хотя это не всегда необходимо, иногда вам нужно поместить DOM в коробку. В таких ситуациях попробуйте компонент панели.</p>
 
-  <h2 id="panels-basic">Basic example</h2>
-  <p>By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
+  <h2 id="panels-basic">Базовый пример</h2>
+  <p>По умолчанию все, что делает <code>.panel</code>, - это применяет некоторую базовую границу и отступы, чтобы содержать некоторый контент.</p>
   <div class="bs-example" data-example-id="simple-panel">
     <div class="panel panel-default">
       <div class="panel-body">
-        Basic panel example
+        Пример базовой панели
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="panel panel-default">
   <div class="panel-body">
-    Basic panel example
+    Пример базовой панели
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="panels-heading">Panel with heading</h2>
-  <p>Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a <code>.panel-title</code> class to add a pre-styled heading. However, the font sizes of <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> are overridden by <code>.panel-heading</code>.</p>
-  <p>For proper link coloring, be sure to place links in headings within <code>.panel-title</code>.</p>
+  <h2 id="panels-heading">Панель с заголовком</h2>
+  <p>С легкостью добавьте контейнер заголовка на панель с помощью <code>.panel-heading</code>. Вы также можете включить любой <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> с классом <code>.panel-title</code>, чтобы добавить предварительно стилизованный заголовок. Однако размеры шрифта <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> переопределяются <code>.panel-heading</code>.</p>
+  <p>Для правильной раскраски ссылок обязательно размещайте ссылки в заголовках внутри <code>.panel-title</code>.</p>
   <div class="bs-example" data-example-id="panel-with-heading">
     <div class="panel panel-default">
-      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-heading">Заголовок панели без заголовка</div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-heading">Заголовок панели без заголовка</div>
   <div class="panel-body">
-    Panel content
+    Контент панели
   </div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
+    <h3 class="panel-title">Заголовок панели</h3>
   </div>
   <div class="panel-body">
-    Panel content
+    Контент панели
   </div>
 </div>
 {% endhighlight %}
 
-  <h2 id="panels-footer">Panel with footer</h2>
-  <p>Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers <strong>do not</strong> inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
+  <h2 id="panels-footer">Панель с нижним колонтитулом</h2>
+  <p>Перенести кнопки или дополнительный текст в <code>.panel-footer</code>. Обратите внимание, что нижние колонтитулы панели <strong>не</strong> наследуют цвета и границы при использовании контекстных вариаций, так как они не должны находиться на переднем плане.</p>
   <div class="bs-example" data-example-id="panel-with-footer">
     <div class="panel panel-default">
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
-      <div class="panel-footer">Panel footer</div>
+      <div class="panel-footer">Нижний колонтитул панели</div>
     </div>
   </div>
 {% highlight html %}
 <div class="panel panel-default">
   <div class="panel-body">
-    Panel content
+    Контент панели
   </div>
-  <div class="panel-footer">Panel footer</div>
+  <div class="panel-footer">Нижний колонтитул панели</div>
 </div>
 {% endhighlight %}
 
-  <h2 id="panels-alternatives">Contextual alternatives</h2>
-  <p>Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p>
+  <h2 id="panels-alternatives">Контекстные альтернативы</h2>
+  <p>Как и другие компоненты, легко сделать панель более значимой для конкретного контекста, добавив любой из классов контекстного состояния.</p>
   <div class="bs-example" data-example-id="contextual-panels">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
     <div class="panel panel-warning">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
     <div class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Заголовок панели</h3>
       </div>
       <div class="panel-body">
-        Panel content
+        Контент панели
       </div>
     </div>
   </div>
@@ -128,43 +128,43 @@
 <div class="panel panel-danger">...</div>
 {% endhighlight %}
 
-  <h2 id="panels-tables">With tables</h2>
-  <p>Add any non-bordered <code>.table</code> within a panel for a seamless design. If there is a <code>.panel-body</code>, we add an extra border to the top of the table for separation.</p>
+  <h2 id="panels-tables">С таблицами</h2>
+  <p>Добавьте любой <code>.table</code> без рамки на панель для бесшовного дизайна. Если есть <code>.panel-body</code>, мы добавляем дополнительную границу в верхнюю часть таблицы для разделения.</p>
   <div class="bs-example" data-example-id="table-within-panel">
     <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
+      <!-- Содержимое панели по умолчанию -->
+      <div class="panel-heading">Заголовок панели</div>
       <div class="panel-body">
-        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Некоторое содержимое панели по умолчанию здесь. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       </div>
 
-      <!-- Table -->
+      <!-- Таблица -->
       <table class="table">
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Имя пользователя</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <td>Марк</td>
+            <td>Отто</td>
             <td>@mdo</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>Джейкоб</td>
+            <td>Торнтон</td>
             <td>@fat</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
+            <td>Ларри</td>
+            <td>Птица</td>
             <td>@twitter</td>
           </tr>
         </tbody>
@@ -173,52 +173,52 @@
   </div>
 {% highlight html %}
 <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
+  <!-- Содержимое панели по умолчанию -->
+  <div class="panel-heading">Заголовок панели</div>
   <div class="panel-body">
     <p>...</p>
   </div>
 
-  <!-- Table -->
+  <!-- Таблица -->
   <table class="table">
     ...
   </table>
 </div>
 {% endhighlight %}
 
-  <p>If there is no panel body, the component moves from panel header to table without interruption.</p>
+  <p>Если тело панели отсутствует, компонент перемещается из заголовка панели в таблицу без прерывания.</p>
   <div class="bs-example" data-example-id="panel-without-body-with-table">
     <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
+      <!-- Содержимое панели по умолчанию -->
+      <div class="panel-heading">Заголовок панели</div>
 
-      <!-- Table -->
+      <!-- Таблица -->
       <table class="table">
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Имя пользователя</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <td>Марк</td>
+            <td>Отто</td>
             <td>@mdo</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>Джейкоб</td>
+            <td>Торнтон</td>
             <td>@fat</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
+            <td>Ларри</td>
+            <td>Птица</td>
             <td>@twitter</td>
           </tr>
         </tbody>
@@ -227,10 +227,10 @@
   </div>
 {% highlight html %}
 <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
+  <!-- Содержимое панели по умолчанию -->
+  <div class="panel-heading">Заголовок панели</div>
 
-  <!-- Table -->
+  <!-- Таблица -->
   <table class="table">
     ...
   </table>
@@ -238,14 +238,14 @@
 {% endhighlight %}
 
 
-  <h2 id="panels-list-group">With list groups</h2>
-  <p>Easily include full-width <a href="#list-group">list groups</a> within any panel.</p>
+  <h2 id="panels-list-group">С группой списка</h2>
+  <p>Легко включайте полноразмерные <a href="#list-group">группы списков</a> в любую панель.</p>
   <div class="bs-example" data-example-id="panel-with-list-group">
     <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
+      <!-- Содержимое панели по умолчанию -->
+      <div class="panel-heading">Заголовок панели</div>
       <div class="panel-body">
-        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Некоторое содержимое панели по умолчанию здесь. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
       </div>
 
       <!-- List group -->
@@ -260,8 +260,8 @@
   </div>
 {% highlight html %}
 <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
+  <!-- Содержимое панели по умолчанию -->
+  <div class="panel-heading">Заголовок панели</div>
   <div class="panel-body">
     <p>...</p>
   </div>
