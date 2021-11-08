@@ -25,13 +25,13 @@
   }
 
   window.docsearch({
-    apiKey: 'c8948afa20e6437a6e829f7e87b9ac11',
-    indexName: 'bootstrap-v3',
+    apiKey: '11d7cdbc7ad186db4e2493f9c0d3aa1c',
+    indexName: 'bootstrap-su',
     inputSelector: '#search-input',
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://getbootstrap.com'
+        var liveUrl = 'https://getbootstrap.su'
 
         // When in production, return the result as is,
         // otherwise remove our url from it.
