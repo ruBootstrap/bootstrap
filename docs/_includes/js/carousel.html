@@ -1,9 +1,9 @@
 <div class="bs-docs-section">
-  <h1 id="carousel" class="page-header">Carousel <small>carousel.js</small></h1>
+  <h1 id="carousel" class="page-header">Карусель <small>carousel.js</small></h1>
 
-  <p>A slideshow component for cycling through elements, like a carousel. <strong>Nested carousels are not supported.</strong></p>
+  <p>Компонент слайд-шоу для циклического просмотра элементов, например карусели. <strong>Вложенные карусели не поддерживаются.</strong></p>
 
-  <h2 id="carousel-examples">Examples</h2>
+  <h2 id="carousel-examples">Примеры</h2>
   <div class="bs-example" data-example-id="simple-carousel">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -13,22 +13,22 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+          <img data-src="holder.js/900x500/auto/#777:#555/text:Первый слайд" alt="Первый слайд">
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+          <img data-src="holder.js/900x500/auto/#666:#444/text:Второй слайд" alt="Второй слайд">
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide">
+          <img data-src="holder.js/900x500/auto/#555:#333/text:Третий слайд" alt="Третий слайд">
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Предыдущий</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Следующий</span>
       </a>
     </div>
   </div><!-- /example -->
@@ -61,37 +61,37 @@
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Предыдущий</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Следующий</span>
   </a>
 </div>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger" id="callout-carousel-accessibility">
-    <h4>Accessibility issue</h4>
-    <p>The carousel component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.</p>
+    <h4>Проблема доступности</h4>
+    <p>Компонент карусели обычно не соответствует стандартам доступности. Если вам нужно соответствовать требованиям, рассмотрите другие варианты представления вашего контента.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
-    <h4>Transition animations not supported in Internet Explorer 8 &amp; 9</h4>
-    <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+    <h4>Анимация перехода не поддерживается в Internet Explorer 8 &amp; 9</h4>
+    <p>Bootstrap использует исключительно CSS3 для анимации, но Internet Explorer 8 &amp; 9 не поддерживают необходимые свойства CSS. Таким образом, при использовании этих браузеров анимация перехода между слайдами отсутствует. Мы намеренно решили не включать резервные варианты на основе jQuery для переходов.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-active">
-    <h4>Initial active element required</h4>
-    <p>The <code>.active</code> class needs to be added to one of the slides. Otherwise, the carousel will not be visible.</p>
+    <h4>Требуется начальный активный элемент</h4>
+    <p>Класс <code>.active</code> необходимо добавить на один из слайдов. В противном случае карусель не будет видна.</p>
   </div>
 
   <div class="bs-callout bs-callout-info" id="callout-carousel-without-glyphicons">
-    <h4>Glyphicon icons not necessary</h4>
-    <p>The <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code> classes are not necessarily needed for the controls. Bootstrap provides <code>.icon-prev</code> and <code>.icon-next</code> as plain unicode alternatives.</p>
+    <h4>Иконки Glyphicon не нужны</h4>
+    <p>Классы <code>.glyphicon .glyphicon-chevron-left</code> и <code>.glyphicon .glyphicon-chevron-right</code> не обязательно нужны для элементов управления. Bootstrap предоставляет <code>.icon-prev</code> и <code>.icon-next</code> как простые альтернативы unicode.</p>
   </div>
 
-  <h3>Optional captions</h3>
-  <p>Add captions to your slides easily with the <code>.carousel-caption</code> element within any <code>.item</code>. Place just about any optional HTML within there and it will be automatically aligned and formatted.</p>
+  <h3>Необязательные подписи</h3>
+  <p>Легко добавляйте подписи к слайдам с помощью элемента <code>.carousel-caption</code> внутри любого <code>.item</code>. Поместите туда практически любой необязательный HTML, и он будет автоматически выровнен и отформатирован.</p>
   <div class="bs-example" data-example-id="carousel-with-captions">
     <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -101,34 +101,34 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#777" alt="First slide image">
+          <img data-src="holder.js/900x500/auto/#777:#777" alt="Изображение первого слайда">
           <div class="carousel-caption">
-            <h3>First slide label</h3>
+            <h3>Метка первого слайда</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#666" alt="Second slide image">
+          <img data-src="holder.js/900x500/auto/#666:#666" alt="Изображение второго слайда">
           <div class="carousel-caption">
-            <h3>Second slide label</h3>
+            <h3>Метка второго слайда</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#555" alt="Third slide image">
+          <img data-src="holder.js/900x500/auto/#555:#555" alt="Изображение третьего слайда">
           <div class="carousel-caption">
-            <h3>Third slide label</h3>
+            <h3>Метка третьего слайда</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Предыдущий</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Следующий</span>
       </a>
     </div>
   </div><!-- /example -->
@@ -142,31 +142,31 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="carousel-usage">Usage</h2>
+  <h2 id="carousel-usage">Использование</h2>
 
-  <h3>Multiple carousels</h3>
-  <p>Carousels require the use of an <code>id</code> on the outermost container (the <code>.carousel</code>) for carousel controls to function properly. When adding multiple carousels, or when changing a carousel's <code>id</code>, be sure to update the relevant controls.</p>
+  <h3>Несколько каруселей</h3>
+  <p>Карусели требуют использования <code>id</code> в самом внешнем контейнере (<code>.carousel</code>) для правильной работы элементов управления каруселью. При добавлении нескольких каруселей или изменении <code>id</code> карусели обязательно обновите соответствующие элементы управления.</p>
 
-  <h3>Via data attributes</h3>
-  <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
-  <p>The <code>data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page load. <strong class="text-danger">It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.</strong></p>
+  <h3>Через data-атрибуты</h3>
+  <p>Используйте атрибуты данных, чтобы легко контролировать положение карусели. <code>data-slide</code> принимает ключевые слова <code>prev</code> или <code>next</code>, которые изменяют положение слайда относительно его текущего положения. В качестве альтернативы используйте <code>data-slide-to</code> для передачи необработанного индекса слайда в карусель <code>data-slide-to="2"</code>, которая сдвигает положение слайда на определенный индекс. начиная с <code>0</code>.</p>
+  <p>Атрибут <code>data-ride="carousel"</code> используется для пометки карусели как анимированной, начиная с загрузки страницы. <strong class="text-danger">Его нельзя использовать в сочетании с (избыточной и ненужной) явной инициализацией JavaScript той же карусели.</strong></p>
 
-  <h3>Via JavaScript</h3>
-  <p>Call carousel manually with:</p>
+  <h3>Через JavaScript</h3>
+  <p>Вызов карусели вручную с помощью:</p>
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
-  <h3 id="carousel-options">Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
+  <h3 id="carousel-options">Параметры</h3>
+  <p>Параметры можно передавать через data-атрибуты или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-</code>, как в <code>data-interval=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped js-options-table">
       <thead>
        <tr>
-         <th>Name</th>
-         <th>type</th>
-         <th>default</th>
-         <th>description</th>
+         <th>Наименование</th>
+         <th>Тип</th>
+         <th>По умолчанию</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
@@ -174,34 +174,34 @@ $('.carousel').carousel()
          <td>interval</td>
          <td>number</td>
          <td>5000</td>
-         <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+         <td>Время задержки между автоматическим циклическим переключением элемента. Если false, карусель не будет автоматически повторяться.</td>
        </tr>
        <tr>
          <td>pause</td>
          <td>string | null</td>
          <td>"hover"</td>
-         <td>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>null</code>, hovering over the carousel won't pause it.</td>
+         <td>Если установлено значение <code>"hover"</code>, приостанавливает цикл карусели на <code>mouseenter</code> и возобновляет цикл карусели на <code>mouseleave</code>. Если установлено значение <code>null</code>, при наведении курсора на карусель она не приостанавливается.</td>
        </tr>
        <tr>
          <td>wrap</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Whether the carousel should cycle continuously or have hard stops.</td>
+         <td>Должна ли карусель работать непрерывно или иметь жесткие остановки.</td>
        </tr>
        <tr>
          <td>keyboard</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Whether the carousel should react to keyboard events.</td>
+         <td>Должна ли карусель реагировать на события клавиатуры.</td>
        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3 id="carousel-methods">Methods</h3>
+  <h3 id="carousel-methods">Методы</h3>
 
   <h4><code>.carousel(options)</code></h4>
-  <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
+  <p>Инициализирует карусель с дополнительным параметром <code>object</code> и начинает циклический просмотр элементов.</p>
 {% highlight js %}
 $('.carousel').carousel({
   interval: 2000
@@ -209,45 +209,45 @@ $('.carousel').carousel({
 {% endhighlight %}
 
   <h4><code>.carousel('cycle')</code></h4>
-  <p>Cycles through the carousel items from left to right.</p>
+  <p>Перебирает элементы карусели слева направо.</p>
 
   <h4><code>.carousel('pause')</code></h4>
-  <p>Stops the carousel from cycling through items.</p>
+  <p>Не позволяет карусели перемещаться по элементам.</p>
 
 
   <h4><code>.carousel(number)</code></h4>
-  <p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
+  <p>Циклический переход карусели к определенному кадру (на основе 0, аналогично массиву).</p>
 
   <h4><code>.carousel('prev')</code></h4>
-  <p>Cycles to the previous item.</p>
+  <p>Переход к предыдущему элементу.</p>
 
   <h4><code>.carousel('next')</code></h4>
-  <p>Cycles to the next item.</p>
+  <p>Переход к следующему элементу.</p>
 
-  <h3 id="carousel-events">Events</h3>
-  <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
-  <p>Both events have the following additional properties:</p>
+  <h3 id="carousel-events">События</h3>
+  <p>Класс карусели Bootstrap предоставляет два события для подключения к функциональности карусели.</p>
+  <p>Оба события имеют следующие дополнительные свойства:</p>
   <ul>
-    <li><code>direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or <code>"right"</code>).</li>
-    <li><code>relatedTarget</code>: The DOM element that is being slid into place as the active item.</li>
+    <li><code>direction</code>: Направление, в котором движется карусель (<code>"left"</code> или <code>"right"</code>).</li>
+    <li><code>relatedTarget</code>: Элемент DOM, который вставляется на место как активный элемент.</li>
   </ul>
-  <p>All carousel events are fired at the carousel itself (i.e. at the <code>&lt;div class="carousel"&gt;</code>).</p>
+  <p>Все события карусели запускаются в самой карусели (т. е. в <code>&lt;div class="carousel"&gt;</code>).</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
        <tr>
-         <th>Event Type</th>
-         <th>Description</th>
+         <th>Тип события</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>slide.bs.carousel</td>
-         <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+         <td>Это событие запускается немедленно при вызове метода экземпляра <code>slide</code>.</td>
        </tr>
        <tr>
          <td>slid.bs.carousel</td>
-         <td>This event is fired when the carousel has completed its slide transition.</td>
+         <td>Это событие вызывается, когда карусель завершает переход между слайдами.</td>
        </tr>
       </tbody>
     </table>

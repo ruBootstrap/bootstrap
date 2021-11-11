@@ -1,79 +1,81 @@
 <div class="bs-docs-section">
-  <h1 id="js-overview" class="page-header">Overview</h1>
+  <h1 id="js-overview" class="page-header">Обзор</h1>
 
-  <h2 id="js-individual-compiled">Individual or compiled</h2>
-  <p>Plugins can be included individually (using Bootstrap's individual <code>*.js</code> files), or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>).</p>
+  <h2 id="js-individual-compiled">Индивидуальный или скомпилированный</h2>
+  <p>Плагины могут быть включены индивидуально (с использованием отдельных файлов Bootstrap <code>*.js</code>), или все сразу (с использованием <code>bootstrap.js</code> или минифицированный <code>bootstrap.min.js</code>).</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-not-both">
-    <h4>Using the compiled JavaScript</h4>
-    <p>Both <code>bootstrap.js</code> and <code>bootstrap.min.js</code> contain all plugins in a single file. Include only one.</p>
+    <h4>Использование скомпилированного JavaScript</h4>
+    <p>И <code>bootstrap.js</code>, и <code>bootstrap.min.js</code> содержат все плагины в одном файле. Включен только один.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-dependencies">
-    <h4>Plugin dependencies</h4>
-    <p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery must be included <strong>before</strong> the plugin files). <a href="{{ site.repo }}/blob/v3-dev/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
+    <h4>Зависимости плагинов</h4>
+    <p>Некоторые плагины и компоненты CSS зависят от других плагинов. Если вы включаете плагины по отдельности, обязательно
+    проверьте эти зависимости в документации. Также обратите внимание, что все плагины зависят от jQuery (это означает, что
+    jQuery должен быть включен <strong>до</strong> файлов плагинов). <a href="{{ site.repo }}/blob/v3-dev/bower.json">Проконсультируйтесь с нашим <code>bower.json</code></a>, чтобы узнать, какие версии jQuery поддерживаются.</p>
   </div>
 
-  <h2 id="js-data-attrs">Data attributes</h2>
-  <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
+  <h2 id="js-data-attrs">Атрибуты данных</h2>
+  <p>Вы можете использовать все плагины Bootstrap исключительно через API разметки, не написав ни одной строчки JavaScript. Это первоклассный API Bootstrap, и вы должны учитывать его в первую очередь при использовании плагина.</p>
 
-  <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:</p>
+  <p>Тем не менее, в некоторых ситуациях может потребоваться отключить эту функцию. Таким образом, мы также предоставляем возможность отключить API атрибутов данных путем отмены привязки всех событий в документе, имеющем пространство имен с помощью <code>data-api</code>. Это выглядит так:</p>
 {% highlight js %}
 $(document).off('.data-api')
 {% endhighlight %}
 
-  <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
+  <p>В качестве альтернативы, чтобы настроить таргетинг на конкретный плагин, просто включите имя плагина в качестве пространства имен вместе с пространством имен data-api следующим образом:</p>
 {% highlight js %}
 $(document).off('.alert.data-api')
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-single-data">
-    <h4>Only one plugin per element via data attributes</h4>
-    <p>Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.</p>
+    <h4>Только один плагин на элемент через атрибуты данных</h4>
+    <p>Не используйте атрибуты данных из нескольких плагинов в одном элементе. Например, кнопка не может одновременно иметь всплывающую подсказку и переключать модальное окно. Для этого используйте оборачивающий элемент.</p>
   </div>
 
-  <h2 id="js-programmatic-api">Programmatic API</h2>
-  <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+  <h2 id="js-programmatic-api">Программный API</h2>
+  <p>Мы также считаем, что вы сможете использовать все плагины Bootstrap исключительно через JavaScript API. Все общедоступные API-интерфейсы являются одиночными, объединяемыми в цепочку методами и возвращают коллекцию, на которую воздействовали.</p>
 {% highlight js %}
 $('.btn.danger').button('toggle').addClass('fat')
 {% endhighlight %}
 
-  <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
+  <p>Все методы должны принимать необязательный объект параметров, строку, нацеленную на конкретный метод, или ничего (что запускает плагин с поведением по умолчанию):</p>
 {% highlight js %}
-$('#myModal').modal()                      // initialized with defaults
-$('#myModal').modal({ keyboard: false })   // initialized with no keyboard
-$('#myModal').modal('show')                // initializes and invokes show immediately
+$('#myModal').modal()                      // инициализирует по умолчанию
+$('#myModal').modal({ keyboard: false })   // инициализирует без клавиатуры
+$('#myModal').modal('show')                // инициализирует и немедленно вызывает шоу
 {% endhighlight %}
 
-  <p>Each plugin also exposes its raw constructor on a <code>Constructor</code> property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel="popover"]').data('popover')</code>.</p>
+  <p>Каждый плагин также предоставляет свой необработанный конструктор в свойстве <code>Constructor</code>: <code>$.fn.popover.Constructor</code>. Если вы хотите получить конкретный экземпляр подключаемого модуля, извлеките его непосредственно из элемента: <code>$('[rel="popover"]').data('popover')</code>.</p>
 
-  <h4>Default settings</h4>
-  <p>You can change the default settings for a plugin by modifying the plugin's <code>Constructor.DEFAULTS</code> object:</p>
+  <h4>Настройки по умолчанию</h4>
+  <p>Вы можете изменить настройки по умолчанию для плагина, изменив его объект <code>Constructor.DEFAULTS</code>:</p>
 {% highlight js %}
-$.fn.modal.Constructor.DEFAULTS.keyboard = false // changes default for the modal plugin's `keyboard` option to false
+$.fn.modal.Constructor.DEFAULTS.keyboard = false // изменяет значение по умолчанию для опции `keyboard` модального плагина на false
 {% endhighlight %}
 
-  <h2 id="js-noconflict">No conflict</h2>
-  <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
+  <h2 id="js-noconflict">Нет конфликта</h2>
+  <p>Иногда необходимо использовать плагины Bootstrap с другими фреймворками пользовательского интерфейса. В этих обстоятельствах иногда могут возникать конфликты пространств имен. Если это произойдет, вы можете вызвать <code>.noConflict</code> в плагине, значение которого вы хотите вернуть.</p>
 {% highlight js %}
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+var bootstrapButton = $.fn.button.noConflict() // возвращает $.fn.button к ранее присвоенному значению
+$.fn.bootstrapBtn = bootstrapButton            // дает $().bootstrapBtn функциональность Bootstrap
 {% endhighlight %}
 
-  <h2 id="js-events">Events</h2>
-  <p>Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
-  <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
-  <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
+  <h2 id="js-events">События</h2>
+  <p>Bootstrap предоставляет настраиваемые события для уникальных действий большинства плагинов. Как правило, они бывают в форме инфинитива и причастия прошедшего времени, где инфинитив (например, <code>show</code>) запускается в начале события, а его форма причастия прошедшего времени (например, <code>shown</code>) запускается по завершении действия.</p>
+  <p>Начиная с 3.0.0, все события Bootstrap имеют пространство имен.</p>
+  <p>Все инфинитивные события обеспечивают функциональность <code>preventDefault</code>. Это дает возможность остановить выполнение действия до его запуска.</p>
 {% highlight js %}
 $('#myModal').on('show.bs.modal', function (e) {
-  if (!data) return e.preventDefault() // stops modal from being shown
+  if (!data) return e.preventDefault() // останавливает отображение модального окна
 })
 {% endhighlight %}
 
-  <h2 id="js-sanitizer">Sanitizer</h2>
+  <h2 id="js-sanitizer">Санитайзер</h2>
 
-  <p>Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.</p>
-  <p>The default <code>whiteList</code> value is the following:</p>
+  <p>Всплывающие подсказки и всплывающие окна используют наше встроенное средство очистки для очистки параметров, принимающих HTML.</p>
+  <p>Значение по умолчанию <code>whiteList</code> следующее:</p>
 
 {% highlight js %}
 var ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
@@ -112,7 +114,7 @@ var DefaultWhitelist = {
 }
 {% endhighlight %}
 
-  <p>If you want to add new values to this default <code>whiteList</code> you can do the following:</p>
+  <p>Если вы хотите добавить новые значения в этот <code>whiteList</code> по умолчанию, вы можете сделать следующее:</p>
 
 {% highlight js %}
 var myDefaultWhiteList = $.fn.tooltip.Constructor.DEFAULTS.whiteList
@@ -129,7 +131,7 @@ var myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultWhiteList['*'].push(myCustomRegex)
 {% endhighlight %}
 
-  <p>If you want to bypass our sanitizer because you prefer to use a dedicated library, for example <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, you should do the following:</p>
+  <p>Если вы хотите обойти наше средство очистки, потому что предпочитаете использовать специальную библиотеку, например, <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, вам следует сделать следующее:</p>
 
 {% highlight js %}
 $('#yourTooltip').tooltip({
@@ -140,22 +142,22 @@ $('#yourTooltip').tooltip({
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger" id="callout-sanitizer-no-createhtmldocument">
-    <h4>Browsers without <code>document.implementation.createHTMLDocument</code></h4>
-    <p>In case of browsers that don't support <code>document.implementation.createHTMLDocument</code>, like Internet Explorer 8, the built-in sanitize function returns the HTML as is.</p>
-    <p>If you want to perform sanitization in this case, please specify <code>sanitizeFn</code> and use an external library like <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>.</p>
+    <h4>Браузеры без <code>document.implementation.createHTMLDocument</code></h4>
+    <p>В случае браузеров, которые не поддерживают <code>document.implementation.createHTMLDocument</code>, например, Internet Explorer 8, встроенная функция очистки возвращает HTML как есть.</p>
+    <p>Если вы хотите выполнить дезинфекцию в этом случае, укажите <code>sanitizeFn</code> и используйте внешнюю библиотеку, например, <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>.</p>
   </div>
 
-  <h2 id="js-version-nums">Version numbers</h2>
-  <p>The version of each of Bootstrap's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
+  <h2 id="js-version-nums">Номера версий</h2>
+  <p>Доступ к версии каждого из подключаемых модулей jQuery Bootstrap можно получить через свойство <code>VERSION</code> конструктора подключаемого модуля. Например, для плагина всплывающей подсказки:</p>
 {% highlight js %}
 $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 {% endhighlight %}
 
-  <h2 id="js-disabled">No special fallbacks when JavaScript is disabled</h2>
-  <p>Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+  <h2 id="js-disabled">Никаких специальных резервных вариантов при отключенном JavaScript</h2>
+  <p>Плагины Bootstrap не особо изящно отключаются при отключении JavaScript. Если в этом случае вам важен опыт пользователя, используйте <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>, чтобы объяснить пользователям ситуацию (и как повторно включить JavaScript) и / или добавить свои собственные резервные варианты.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
-    <h4>Third-party libraries</h4>
-    <p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
+    <h4>Сторонние библиотеки</h4>
+    <p><strong>Bootstrap официально не поддерживает сторонние библиотеки JavaScript</strong>, такие как Prototype или jQuery UI. Несмотря на <code>.noConflict</code> и события в пространстве имен, могут возникнуть проблемы совместимости, которые необходимо исправить самостоятельно.</p>
   </div>
 </div>

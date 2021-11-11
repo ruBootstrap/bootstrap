@@ -1,28 +1,28 @@
 <div class="bs-docs-section">
-  <h1 id="buttons" class="page-header">Buttons <small>button.js</small></h1>
+  <h1 id="buttons" class="page-header">Кнопки <small>button.js</small></h1>
 
-  <p class="lead">Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
+  <p class="lead">Делайте больше с помощью кнопок. Управляйте состояниями кнопок или создавайте группы кнопок для дополнительных компонентов, таких как панели инструментов.</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-buttons-ff-autocomplete">
-    <h4>Cross-browser compatibility</h4>
-    <p><a href="https://github.com/twbs/bootstrap/issues/793">Firefox persists form control states (disabledness and checkedness) across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">Mozilla bug #654072</a>.</p>
+    <h4>Кроссбраузерная совместимость</h4>
+    <p><a href="https://github.com/twbs/bootstrap/issues/793">Firefox сохраняет состояния управления формой (отключение и проверяемость) при загрузке страницы</a>. Чтобы решить эту проблему, используйте <code>autocomplete="off"</code>. Смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">Mozilla bug #654072</a>.</p>
   </div>
 
-  <h2 id="buttons-stateful">Stateful</h2>
-  <p>Add <code>data-loading-text="Loading..."</code> to use a loading state on a button.</p>
-  <p><strong class="text-danger">This feature is deprecated since v3.3.5 and has been removed in v4.</strong></p>
+  <h2 id="buttons-stateful">С сохранением состояния</h2>
+  <p>Добавьте <code>data-loading-text="Загрузка..."</code>, чтобы использовать состояние загрузки для кнопки.</p>
+  <p><strong class="text-danger">Эта функция устарела, начиная с версии 3.3.5, и была удалена в версии 4.</strong></p>
   <div class="bs-callout bs-callout-info" id="callout-buttons-state-names">
-    <h4>Use whichever state you like!</h4>
-    <p>For the sake of this demonstration, we are using <code>data-loading-text</code> and <code>$().button('loading')</code>, but that's not the only state you can use. <a href="#buttons-methods">See more on this below in the <code>$().button(string)</code> documentation</a>.</p>
+    <h4>Используйте любое состояние!</h4>
+    <p>Для этой демонстрации мы используем <code>data-loading-text</code> и <code>$().button('loading')</code>, но это не единственное состояние вы можете использовать. <a href="#buttons-methods">Подробнее об этом смотрите ниже в документации по <code>$().button(string)</code></a>.</p>
   </div>
   <div class="bs-example">
-    <button type="button" id="loading-example-btn" data-loading-text="Loading..." class="btn btn-primary">
-      Loading state
+    <button type="button" id="loading-example-btn" data-loading-text="Загрузка..." class="btn btn-primary">
+      Состояние загрузки
     </button>
   </div><!-- /example -->
 {% highlight html %}
-<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary">
-  Loading state
+<button type="button" id="myButton" data-loading-text="Загрузка..." class="btn btn-primary">
+  Состояние загрузки
 </button>
 
 <script>
@@ -34,56 +34,56 @@
 </script>
 {% endhighlight %}
 
-  <h2 id="buttons-single-toggle">Single toggle</h2>
-  <p>Add <code>data-toggle="button"</code> to activate toggling on a single button.</p>
+  <h2 id="buttons-single-toggle">Одиночный переключатель</h2>
+  <p>Добавьте <code>data-toggle="button"</code>, чтобы активировать переключение на одной кнопке.</p>
   <div class="bs-callout bs-callout-warning" id="callout-buttons-single-pretoggled">
-    <h4>Pre-toggled buttons need <code>.active</code> and <code>aria-pressed="true"</code></h4>
-    <p>For pre-toggled buttons, you must add the <code>.active</code> class and the <code>aria-pressed="true"</code> attribute to the <code>button</code> yourself.</p>
+    <h4>Для предварительно переключенных кнопок требуются <code>.active</code> и <code>aria-pressed="true"</code></h4>
+    <p>Для кнопок с предварительным переключением необходимо самостоятельно добавить класс <code>.active</code> и атрибут <code>aria-pressed="true"</code> к <code>button</code>.</p>
   </div>
   <div class="bs-example">
     <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-      Single toggle
+      Одиночный переключатель
     </button>
   </div><!-- /example -->
 {% highlight html %}
 <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-  Single toggle
+  Одиночный переключатель
 </button>
 {% endhighlight %}
 
-  <h2 id="buttons-checkbox-radio">Checkbox / Radio</h2>
-  <p>Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.</p>
+  <h2 id="buttons-checkbox-radio">Флажок / Радио</h2>
+  <p>Добавьте <code>data-toggle="buttons"</code> в <code>.btn-group</code> , содержащую флажки или переключатели, чтобы включить переключение в соответствующих стилях.</p>
   <div class="bs-callout bs-callout-warning" id="callout-buttons-multi-preselected">
-    <h4>Preselected options need <code>.active</code></h4>
-    <p>For preselected options, you must add the <code>.active</code> class to the input's <code>label</code> yourself.</p>
+    <h4>Предварительно выбранным параметрам нужен <code>.active</code></h4>
+    <p>Для предварительно выбранных параметров вы должны сами добавить класс <code>.active</code> к <code>label</code>.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-buttons-only-click">
-    <h4>Visual checked state only updated on click</h4>
-    <p>If the checked state of a checkbox button is updated without firing a <code>click</code> event on the button (e.g. via <code>&lt;input type="reset"&gt;</code> or via setting the <code>checked</code> property of the input), you will need to toggle the <code>.active</code> class on the input's <code>label</code> yourself.</p>
+    <h4>Состояние визуальной проверки обновляется только при нажатии</h4>
+    <p>Если отмеченное состояние кнопки флажка обновляется без запуска события <code>click</code> на кнопке (например, через <code>&lt;input type="reset"&gt;</code> или через установку свойства ввода <code>checked</code>), вам нужно будет самостоятельно переключить класс <code>.active</code> на вводе <code>label</code>.</p>
   </div>
   <div class="bs-example" data-example-id="buttons-checkbox">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active">
-        <input type="checkbox" checked> Checkbox 1 (pre-checked)
+        <input type="checkbox" checked> Флажок 1 (установлен заранее)
       </label>
       <label class="btn btn-primary">
-        <input type="checkbox"> Checkbox 2
+        <input type="checkbox"> Флажок 2
       </label>
       <label class="btn btn-primary">
-        <input type="checkbox"> Checkbox 3
+        <input type="checkbox"> Флажок 3
       </label>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <div class="btn-group" data-toggle="buttons">
   <label class="btn btn-primary active">
-    <input type="checkbox" checked> Checkbox 1 (pre-checked)
+    <input type="checkbox" checked> Флажок 1 (установлен заранее)
   </label>
   <label class="btn btn-primary">
-    <input type="checkbox"> Checkbox 2
+    <input type="checkbox"> Флажок 2
   </label>
   <label class="btn btn-primary">
-    <input type="checkbox"> Checkbox 3
+    <input type="checkbox"> Флажок 3
   </label>
 </div>
 {% endhighlight %}
@@ -91,39 +91,39 @@
   <div class="bs-example" data-example-id="buttons-radio">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active">
-        <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+        <input type="radio" name="options" id="option1" checked> Радио 1 (установлен заранее)
       </label>
       <label class="btn btn-primary">
-        <input type="radio" name="options" id="option2"> Radio 2
+        <input type="radio" name="options" id="option2"> Радио 2
       </label>
       <label class="btn btn-primary">
-        <input type="radio" name="options" id="option3"> Radio 3
+        <input type="radio" name="options" id="option3"> Радио 3
       </label>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <div class="btn-group" data-toggle="buttons">
   <label class="btn btn-primary active">
-    <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+    <input type="radio" name="options" id="option1" checked> Радио 1 (установлен заранее)
   </label>
   <label class="btn btn-primary">
-    <input type="radio" name="options" id="option2"> Radio 2
+    <input type="radio" name="options" id="option2"> Радио 2
   </label>
   <label class="btn btn-primary">
-    <input type="radio" name="options" id="option3"> Radio 3
+    <input type="radio" name="options" id="option3"> Радио 3
   </label>
 </div>
 {% endhighlight %}
 
-  <h2 id="buttons-methods">Methods</h2>
+  <h2 id="buttons-methods">Методы</h2>
   <h4><code>$().button('toggle')</code></h4>
-  <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
+  <p>Переключает состояние push. Придает кнопке вид, что она была активирована.</p>
 
   <h4><code>$().button('reset')</code></h4>
-  <p>Resets button state - swaps text to original text. <strong>This method is asynchronous and returns before the resetting has actually completed.</strong></p>
+  <p>Сбрасывает состояние кнопки - заменяет текст исходным текстом. <strong>Этот метод является асинхронным и возвращается до фактического завершения сброса.</strong></p>
 
   <h4><code>$().button(string)</code></h4>
-  <p>Swaps text to any data defined text state.</p>
+  <p>Меняет текст на любое текстовое состояние, определенное данными.</p>
 
 {% highlight html %}
 <button type="button" id="myStateButton" data-complete-text="finished!" class="btn btn-primary">
@@ -132,7 +132,7 @@
 
 <script>
   $('#myStateButton').on('click', function () {
-    $(this).button('complete') // button text will be "finished!"
+    $(this).button('complete') // текст кнопки будет "готово!"
   })
 </script>
 {% endhighlight %}

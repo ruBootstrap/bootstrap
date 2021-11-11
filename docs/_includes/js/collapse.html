@@ -1,29 +1,29 @@
 <div class="bs-docs-section">
-  <h1 id="collapse" class="page-header">Collapse <small>collapse.js</small></h1>
+  <h1 id="collapse" class="page-header">Сворачивание <small>collapse.js</small></h1>
 
-  <p class="lead">Flexible plugin that utilizes a handful of classes for easy toggle behavior.</p>
+  <p class="lead">Гибкий плагин, который использует несколько классов для легкого переключения поведения.</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-collapse-dependency">
-    <h4>Plugin dependency</h4>
-    <p>Collapse requires the <a href="#transitions">transitions plugin</a> to be included in your version of Bootstrap.</p>
+    <h4>Зависимость от плагина</h4>
+    <p>Для Collapse требуется, чтобы в вашу версию Bootstrap был включен <a href="#transitions">плагин переходов</a>.</p>
   </div>
 
-  <h2 id="collapse-example">Example</h2>
-  <p>Click the buttons below to show and hide another element via class changes:</p>
+  <h2 id="collapse-example">Пример</h2>
+  <p>Нажмите кнопки ниже, чтобы показать или скрыть другой элемент с помощью изменений класса:</p>
   <ul>
-    <li><code>.collapse</code> hides content</li>
-    <li><code>.collapsing</code> is applied during transitions</li>
-    <li><code>.collapse.in</code> shows content</li>
+    <li><code>.collapse</code> скрывает содержимое</li>
+    <li><code>.collapsing</code> применяется во время переходов</li>
+    <li><code>.collapse.in</code> показывает содержимое</li>
   </ul>
-  <p>You can use a link with the <code>href</code> attribute, or a button with the <code>data-target</code> attribute. In both cases, the <code>data-toggle="collapse"</code> is required.</p>
+  <p>Вы можете использовать ссылку с атрибутом <code>href</code> или кнопку с атрибутом <code>data-target</code>.В обоих случаях требуется <code>data-toggle="collapse"</code>.</p>
 
   <div class="bs-example">
     <p>
       <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Link with href
+        Ссылка с href
       </a>
       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button with data-target
+        Кнопка с data-target
       </button>
     </p>
     <div class="collapse" id="collapseExample">
@@ -34,10 +34,10 @@
   </div>
 {% highlight html %}
 <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Link with href
+  Ссылка с href
 </a>
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Button with data-target
+  Кнопка с data-target
 </button>
 <div class="collapse" id="collapseExample">
   <div class="well">
@@ -46,8 +46,8 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="collapse-example-accordion">Accordion example</h2>
-  <p>Extend the default collapse behavior to create an accordion with the panel component.</p>
+  <h2 id="collapse-example-accordion">Пример аккордеона</h2>
+  <p>Расширить поведение сворачивания по умолчанию, чтобы создать аккордеон с компонентом панели.</p>
 
   <div class="bs-example" data-example-id="collapse-accordion">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -55,7 +55,7 @@
         <div class="panel-heading" role="tab" id="headingOne">
           <h4 class="panel-title">
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Collapsible Group Item #1
+              Сворачиваемый групповой элемент #1
             </a>
           </h4>
         </div>
@@ -69,7 +69,7 @@
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Collapsible Group Item #2
+              Сворачиваемый групповой элемент #2
             </a>
           </h4>
         </div>
@@ -83,7 +83,7 @@
         <div class="panel-heading" role="tab" id="headingThree">
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Collapsible Group Item #3
+              Сворачиваемый групповой элемент #3
             </a>
           </h4>
         </div>
@@ -101,7 +101,7 @@
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+          Сворачиваемый групповой элемент #1
         </a>
       </h4>
     </div>
@@ -115,7 +115,7 @@
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+          Сворачиваемый групповой элемент #2
         </a>
       </h4>
     </div>
@@ -129,7 +129,7 @@
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+          Сворачиваемый групповой элемент #3
         </a>
       </h4>
     </div>
@@ -142,14 +142,14 @@
 </div>
 {% endhighlight %}
 
-  <p>It's also possible to swap out <code>.panel-body</code>s with <code>.list-group</code>s.</p>
+  <p>Также можно заменить <code>.panel-body</code> на <code>.list-group</code>.</p>
 
   <div class="panel-group" role="tablist">
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
         <h4 class="panel-title">
           <a class="collapsed" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="false" aria-controls="collapseListGroup1">
-            Collapsible list group
+            Группа сворачиваемого списка
           </a>
         </h4>
       </div>
@@ -159,46 +159,46 @@
           <li class="list-group-item">One itmus ac facilin</li>
           <li class="list-group-item">Second eros</li>
         </ul>
-        <div class="panel-footer">Footer</div>
+        <div class="panel-footer">Нижний колонтитул</div>
       </div>
     </div>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-collapse-accessibility">
-    <h4>Make expand/collapse controls accessible</h4>
-    <p>Be sure to add <code>aria-expanded</code> to the control element. This attribute explicitly defines the current state of the collapsible element to screen readers and similar assistive technologies. If the collapsible element is closed by default, it should have a value of <code>aria-expanded="false"</code>. If you've set the collapsible element to be open by default using the <code>in</code> class, set <code>aria-expanded="true"</code> on the control instead. The plugin will automatically toggle this attribute based on whether or not the collapsible element has been opened or closed.</p>
-    <p>Additionally, if your control element is targeting a single collapsible element – i.e. the <code>data-target</code> attribute is pointing to an <code>id</code> selector – you may add an additional <code>aria-controls</code> attribute to the control element, containing the <code>id</code> of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.</p>
+    <h4>Сделайте доступными элементы управления разворачиванием/сворачиванием</h4>
+    <p>Не забудьте добавить <code>aria-expanded</code> к элементу управления. Этот атрибут явно определяет текущее состояние сворачиваемого элемента для программ чтения с экрана и аналогичных вспомогательных технологий. Если сворачиваемый элемент закрыт по умолчанию, он должен иметь значение <code>aria-expanded="false"</code>. Если вы установили открываемый сворачиваемый элемент по умолчанию с помощью класса <code>in</code>, установите вместо этого <code>aria-expanded="true"</code> в элементе управления. Плагин автоматически переключает этот атрибут в зависимости от того, был ли открыт или закрыт сворачиваемый элемент.</p>
+    <p>Кроме того, если ваш элемент управления нацелен на один сворачиваемый элемент, т. е. атрибут <code>data-target</code> указывает на селектор <code>id</code>, вы можете добавить дополнительный <code>aria-controls</code> к элементу управления, содержащий <code>id</code> сворачиваемого элемента. Современные программы чтения с экрана и аналогичные вспомогательные технологии используют этот атрибут, чтобы предоставить пользователям дополнительные ярлыки для перехода непосредственно к самому сворачиваемому элементу.</p>
   </div>
 
-  <h2 id="collapse-usage">Usage</h2>
-  <p>The collapse plugin utilizes a few classes to handle the heavy lifting:</p>
+  <h2 id="collapse-usage">Использование</h2>
+  <p>Плагин коллапса использует несколько классов, чтобы справиться с тяжелой работой:</p>
   <ul>
-    <li><code>.collapse</code> hides the content</li>
-    <li><code>.collapse.in</code> shows the content</li>
-    <li><code>.collapsing</code> is added when the transition starts, and removed when it finishes</li>
+    <li><code>.collapse</code> скрывает содержимое</li>
+    <li><code>.collapse.in</code> показывает содержимое</li>
+    <li><code>.collapsing</code> добавляется при запуске перехода и удаляется при его завершении</li>
   </ul>
-  <p>These classes can be found in <code>component-animations.less</code>.</p>
+  <p>Эти классы можно найти в <code>component-animations.less</code>.</p>
 
-  <h3>Via data attributes</h3>
-  <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to the element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
-  <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
+  <h3>Через data-атрибуты</h3>
+  <p>Просто добавьте <code>data-toggle="collapse"</code> и <code>data-target</code> к элементу, чтобы автоматически назначить управление сворачиваемым элементом. Атрибут <code>data-target</code> принимает селектор CSS, к которому нужно применить свертывание. Обязательно добавьте класс <code>collapse</code> к сворачиваемому элементу. Если вы хотите, чтобы он был открыт по умолчанию, добавьте дополнительный класс <code>in</code>.</p>
+  <p>Чтобы добавить управление группами в виде гармошки к сворачиваемому элементу управления, добавьте атрибут данных <code>data-parent="#selector"</code>. Обратитесь к демонстрации, чтобы увидеть это в действии.</p>
 
-  <h3>Via JavaScript</h3>
-  <p>Enable manually with:</p>
+  <h3>Через JavaScript</h3>
+  <p>Включить вручную с помощью:</p>
 {% highlight js %}
 $('.collapse').collapse()
 {% endhighlight %}
 
-  <h3 id="collapse-options">Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
+  <h3 id="collapse-options">Параметры</h3>
+  <p>Параметры можно передавать через data-атрибуты или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-</code>, как в <code>data-parent=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped js-options-table">
       <thead>
        <tr>
-         <th>Name</th>
-         <th>type</th>
-         <th>default</th>
-         <th>description</th>
+         <th>Наименование</th>
+         <th>Тип</th>
+         <th>По умолчанию</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
@@ -206,22 +206,22 @@ $('.collapse').collapse()
          <td>parent</td>
          <td>selector</td>
          <td>false</td>
-         <td>If a selector is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the <code>panel</code> class)</td>
+         <td>Если предоставлен селектор, то все сворачиваемые элементы в указанном родительском элементе будут закрыты, когда этот сворачиваемый элемент будет показан. (аналогично традиционному поведению аккордеона - это зависит от класса <code>panel</code>)</td>
        </tr>
        <tr>
          <td>toggle</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Toggles the collapsible element on invocation</td>
+         <td>Переключает сворачиваемый элемент при вызове</td>
        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3 id="collapse-methods">Methods</h3>
+  <h3 id="collapse-methods">Методы</h3>
 
   <h4><code>.collapse(options)</code></h4>
-  <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.</p>
+  <p>Активирует ваш контент как сворачиваемый элемент. Принимает необязательные параметры <code>object</code>.</p>
 {% highlight js %}
 $('#myCollapsible').collapse({
   toggle: false
@@ -229,42 +229,40 @@ $('#myCollapsible').collapse({
 {% endhighlight %}
 
   <h4><code>.collapse('toggle')</code></h4>
-  <p>Toggles a collapsible element to shown or hidden. <strong>Returns to the caller before the collapsible element has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.collapse</code> or <code>hidden.bs.collapse</code> event occurs).</p>
+  <p>Переключает сворачиваемый элемент на показанный или скрытый. <strong>Возврат к вызывающей стороне до того, как сворачиваемый элемент был фактически показан или скрыт</strong> (то есть до того как произойдет событие <code>shown.bs.collapse</code> или <code>hidden.bs.collapse</code>).</p>
 
   <h4><code>.collapse('show')</code></h4>
-  <p>Shows a collapsible element. <strong>Returns to the caller before the collapsible element has actually been shown</strong> (i.e. before the <code>shown.bs.collapse</code> event occurs).</p>
+  <p>Показывает сворачиваемый элемент. <strong>Возврат к вызывающей стороне до того, как складной элемент будет фактически показан</strong> (то есть до того как произойдет событие <code>shown.bs.collapse</code>).</p>
 
   <h4><code>.collapse('hide')</code></h4>
-  <p>Hides a collapsible element. <strong>Returns to the caller before the collapsible element has actually been hidden</strong> (i.e. before the <code>hidden.bs.collapse</code> event occurs).</p>
+  <p>Скрывает сворачиваемый элемент. <strong>Возврат к вызывающей стороне до того, как складной элемент будет фактически скрыт</strong> (то есть до того как произойдет событие <code>hidden.bs.collapse</code>).</p>
 
-  <h3 id="collapse-events">Events</h3>
-  <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+  <h3 id="collapse-events">События</h3>
+  <p>Класс коллапса Bootstrap предоставляет несколько событий для подключения к функциональности коллапса.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
        <tr>
-         <th>Event Type</th>
-         <th>Description</th>
+         <th>Тип события</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>show.bs.collapse</td>
-         <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         <td>Это событие запускается немедленно при вызове метода экземпляра <code>show</code>.</td>
        </tr>
        <tr>
          <td>shown.bs.collapse</td>
-         <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+         <td>Это событие запускается, когда элемент свертывания становится видимым для пользователя (будет ожидать завершения переходов CSS).</td>
        </tr>
        <tr>
          <td>hide.bs.collapse</td>
-         <td>
-          This event is fired immediately when the <code>hide</code> method has been called.
-         </td>
+         <td>Это событие запускается сразу после вызова метода <code>hide</code>.</td>
        </tr>
        <tr>
          <td>hidden.bs.collapse</td>
-         <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+         <td>Это событие запускается, когда элемент сворачивания был скрыт от пользователя (будет ожидать завершения переходов CSS).</td>
        </tr>
       </tbody>
     </table>
