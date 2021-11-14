@@ -2,8 +2,12 @@
 <html lang="ru">
   <head>
     {{ partial "header" . }}
+    {{ partial "gtm-head" . }}
   </head>
   {{ block "body_override" . }}<body>{{ end }}
+
+    {{ partial "gtm-body" . }}
+
     {{ partial "skippy" . }}
 
     {{ partial "docs-navbar" . }}
