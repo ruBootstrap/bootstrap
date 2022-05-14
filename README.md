@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://getbootstrap.su/">
-    <img src="https://getbootstrap.su/docs/5.1/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
+  <a href="https://getbootstrap.com/">
+    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
   </a>
 </p>
 
@@ -9,22 +9,22 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.su/docs/5.1/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.1/"><strong>[EN] Explore Bootstrap docs »</strong></a>
+  <a href="https://getbootstrap.su/docs/5.2/"><strong>[RU] Обзор документации Bootstrap »</strong></a> | <a href="https://getbootstrap.com/docs/5.2/"><strong>[EN] Explore Bootstrap docs »</strong></a>
   <br>
   <br>
-  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Сообщить об ошибке</a>
   ·
-  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Запрос функционала</a>
   ·
-  <a href="https://themes.getbootstrap.com/">Themes</a>
+  <a href="https://themes.getbootstrap.com/">Темы</a>
   ·
-  <a href="https://blog.getbootstrap.com/">Blog</a>
+  <a href="https://blog.getbootstrap.com/">Блог</a>
 </p>
 
 
 ## Bootstrap 5
 
-Наша ветка по умолчанию предназначена для разработки нашего предстоящего выпуска Bootstrap 5. Направляйтесь к [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) чтобы просмотреть readme, документацию и исходный код для Bootstrap 4.
+Наша ветка по умолчанию предназначена для разработки нашего предстоящего выпуска Bootstrap 5. Направляйтесь к [ветке `v4-dev`](https://github.com/twbs/bootstrap/tree/v4-dev) чтобы просмотреть readme, документацию и исходный код для Bootstrap 4.
 
 
 ## Оглавление
@@ -46,14 +46,15 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.1.3.zip)
+
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.2.0-beta1.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@next`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@next`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.1.3`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.2.0-beta1`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.2.0-beta1`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.0-beta1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочтите [Начальную страницу](https://getbootstrap.su/docs/5.1/getting-started/introduction/) для получения информации о содержимом фреймворка, шаблонах, примерах и многом другом.
+Прочитайте [Страницу начала работы](https://getbootstrap.com/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
 
 
 ## Статус
@@ -65,8 +66,6 @@
 [![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue)](https://atmospherejs.com/twbs/bootstrap)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap)](https://packagist.org/packages/twbs/bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/bootstrap)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap)](https://david-dm.org/twbs/bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap)](https://david-dm.org/twbs/bootstrap?type=dev)
 [![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/main)](https://coveralls.io/github/twbs/bootstrap?branch=main)
 [![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
 [![CSS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
@@ -79,57 +78,60 @@
 
 ## Что включено
 
-В загрузке Вы найдете следующие каталоги и файлы, которые логически группируют общие ресурсы и предоставляют как скомпилированные, так и минифицированные варианты. Вы увидите что-то вроде этого:
+В загрузке вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
 
-```text
-bootstrap/
-├── css/
-│   ├── bootstrap-grid.css
-│   ├── bootstrap-grid.css.map
-│   ├── bootstrap-grid.min.css
-│   ├── bootstrap-grid.min.css.map
-│   ├── bootstrap-grid.rtl.css
-│   ├── bootstrap-grid.rtl.css.map
-│   ├── bootstrap-grid.rtl.min.css
-│   ├── bootstrap-grid.rtl.min.css.map
-│   ├── bootstrap-reboot.css
-│   ├── bootstrap-reboot.css.map
-│   ├── bootstrap-reboot.min.css
-│   ├── bootstrap-reboot.min.css.map
-│   ├── bootstrap-reboot.rtl.css
-│   ├── bootstrap-reboot.rtl.css.map
-│   ├── bootstrap-reboot.rtl.min.css
-│   ├── bootstrap-reboot.rtl.min.css.map
-│   ├── bootstrap-utilities.css
-│   ├── bootstrap-utilities.css.map
-│   ├── bootstrap-utilities.min.css
-│   ├── bootstrap-utilities.min.css.map
-│   ├── bootstrap-utilities.rtl.css
-│   ├── bootstrap-utilities.rtl.css.map
-│   ├── bootstrap-utilities.rtl.min.css
-│   ├── bootstrap-utilities.rtl.min.css.map
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   ├── bootstrap.min.css.map
-│   ├── bootstrap.rtl.css
-│   ├── bootstrap.rtl.css.map
-│   ├── bootstrap.rtl.min.css
-│   └── bootstrap.rtl.min.css.map
-└── js/
-    ├── bootstrap.bundle.js
-    ├── bootstrap.bundle.js.map
-    ├── bootstrap.bundle.min.js
-    ├── bootstrap.bundle.min.js.map
-    ├── bootstrap.esm.js
-    ├── bootstrap.esm.js.map
-    ├── bootstrap.esm.min.js
-    ├── bootstrap.esm.min.js.map
-    ├── bootstrap.js
-    ├── bootstrap.js.map
-    ├── bootstrap.min.js
-    └── bootstrap.min.js.map
-```
+<details>
+  <summary>Download contents</summary>
+  ```text
+  bootstrap/
+  ├── css/
+  │   ├── bootstrap-grid.css
+  │   ├── bootstrap-grid.css.map
+  │   ├── bootstrap-grid.min.css
+  │   ├── bootstrap-grid.min.css.map
+  │   ├── bootstrap-grid.rtl.css
+  │   ├── bootstrap-grid.rtl.css.map
+  │   ├── bootstrap-grid.rtl.min.css
+  │   ├── bootstrap-grid.rtl.min.css.map
+  │   ├── bootstrap-reboot.css
+  │   ├── bootstrap-reboot.css.map
+  │   ├── bootstrap-reboot.min.css
+  │   ├── bootstrap-reboot.min.css.map
+  │   ├── bootstrap-reboot.rtl.css
+  │   ├── bootstrap-reboot.rtl.css.map
+  │   ├── bootstrap-reboot.rtl.min.css
+  │   ├── bootstrap-reboot.rtl.min.css.map
+  │   ├── bootstrap-utilities.css
+  │   ├── bootstrap-utilities.css.map
+  │   ├── bootstrap-utilities.min.css
+  │   ├── bootstrap-utilities.min.css.map
+  │   ├── bootstrap-utilities.rtl.css
+  │   ├── bootstrap-utilities.rtl.css.map
+  │   ├── bootstrap-utilities.rtl.min.css
+  │   ├── bootstrap-utilities.rtl.min.css.map
+  │   ├── bootstrap.css
+  │   ├── bootstrap.css.map
+  │   ├── bootstrap.min.css
+  │   ├── bootstrap.min.css.map
+  │   ├── bootstrap.rtl.css
+  │   ├── bootstrap.rtl.css.map
+  │   ├── bootstrap.rtl.min.css
+  │   └── bootstrap.rtl.min.css.map
+  └── js/
+      ├── bootstrap.bundle.js
+      ├── bootstrap.bundle.js.map
+      ├── bootstrap.bundle.min.js
+      ├── bootstrap.bundle.min.js.map
+      ├── bootstrap.esm.js
+      ├── bootstrap.esm.js.map
+      ├── bootstrap.esm.min.js
+      ├── bootstrap.esm.min.js.map
+      ├── bootstrap.js
+      ├── bootstrap.js.map
+      ├── bootstrap.min.js
+      └── bootstrap.min.js.map
+  ```
+</details>
 
 Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
 
@@ -205,10 +207,16 @@ bootstrap/
 ## Благодарности
 
 <a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42">
 </a>
 
 Спасибо [BrowserStack](https://www.browserstack.com/) за предоставление инфраструктуры, которая позволяет нам тестировать в реальных браузерах!
+
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+</a>
+
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
 
 ## Спонсоры
@@ -227,7 +235,7 @@ bootstrap/
 [![OC sponsor 9](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
 
 
-## Сторонники
+## Контрибьюторы
 
 Спасибо всем нашим сторонникам! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
 
@@ -236,4 +244,4 @@ bootstrap/
 
 ## Авторское право и лицензия
 
-Авторские права на код и документацию 2011–2021 гг. принадлежат [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенные под [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторские права на код и документацию 2011–2022 гг. [Авторы Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) Код, выпущенный в соответствии с [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документы выпущены под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

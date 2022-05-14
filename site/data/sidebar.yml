@@ -2,6 +2,8 @@
 # Логика создания боковой панели находится в "site/layouts/partials/docs-sidebar.html".
 
 - title: Начало работы
+  icon: book-half
+  icon_color: indigo
   slug: getting-started
   pages:
     - title: Вступление
@@ -39,6 +41,8 @@
       slug: contribute
 
 - title: Настройка
+  icon: palette2
+  icon_color: pink
   slug: customize
   pages:
     - title: Обзор
@@ -65,6 +69,8 @@
 
 - title: Макет
   slug: layout
+  icon: grid-fill
+  icon_color: teal
   pages:
     - title: Контрольные точки
       hint: Контрольные точки
@@ -92,6 +98,8 @@
       slug: css-grid
 
 - title: Контент
+  icon: file-earmark-richtext
+  icon_color: gray
   slug: content
   pages:
     - title: Reboot
@@ -111,6 +119,8 @@
       slug: figures
 
 - title: Формы
+  icon: ui-radios
+  icon_color: blue
   slug: forms
   pages:
     - title: Обзор
@@ -143,6 +153,8 @@
 
 - title: Компоненты
   slug: components
+  icon: menu-button-wide-fill
+  icon_color: cyan
   pages:
     - title: Accordion
       hint: Аккордеон
@@ -181,14 +193,12 @@
       hint: Группы списков
       slug: list-group
     - title: Modal
-      hint: Модальное окно
-      slug: modal
-    - title: Navs & tabs
-      hint: Навигация И Вкладки
-      slug: navs-tabs
     - title: Navbar
       hint: Панель навигации
       slug: navbar
+    - title: Navs & tabs
+      hint: Навигация И Вкладки
+      slug: navs-tabs
     - title: Offcanvas
       hint: Вне холста
       slug: offcanvas
@@ -218,11 +228,16 @@
       slug: tooltips
 
 - title: Помощники
+  icon: magic
+  icon_color: orange
   slug: helpers
   pages:
     - title: Clearfix
       hint: Очистка
       slug: clearfix
+    - title: Color & background
+      hint: Цвет и Фон
+      slug: color-background
     - title: Colored links
       hint: Цветные ссылки
       slug: colored-links
@@ -249,6 +264,8 @@
       slug: vertical-rule
 
 - title: Утилиты
+  icon: braces-asterisk
+  icon_color: red
   slug: utilities
   pages:
     - title: API
@@ -304,6 +321,8 @@
       slug: visibility
 
 - title: Дополнительно
+  icon: tools
+  icon_color: blue
   slug: extend
   pages:
     - title: Подход
@@ -314,6 +333,8 @@
       slug: icons
 
 - title: Инфо
+  icon: globe2
+  icon_color: indigo
   slug: about
   pages:
     - title: Обзор

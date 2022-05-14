@@ -5,11 +5,11 @@
 Отклонение может быть достигнуто с помощью атрибута `data` на кнопке **внутри {{ $name }}**, как показано ниже:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" aria-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" aria-label="Закрыть"></button>
 ```
 
 или на кнопке **за пределами {{ $name }}** с помощью `data-bs-target`, как показано ниже:
 
 ```html
-<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}" aria-label="Close"></button>
+<button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}" aria-label="Закрыть"></button>
 ```

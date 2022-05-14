@@ -1,37 +1,39 @@
-<div class="container masthead-followup px-4 px-md-3">
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-success">
-        {{ partial "icons/code.svg" (dict "width" "32" "height" "32") }}
-      </div>
-      <h2 class="display-5 fw-normal">Установка</h2>
-      <p class="lead fw-normal">
-        Установите исходные файлы Sass и JavaScript Bootstrap через npm, Composer или Meteor.
-      </p>
-      <p>Установка пакетным менеджером, не включают документацию или наши полные скрипты сборки. Вы также можете <a href="https://github.com/twbs/bootstrap-npm-starter">использовать репозиторий шаблонов npm</a>, чтобы быстро создать проект Bootstrap через npm.</p>
-      <a class="btn btn-lg btn-outline-primary mb-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Читать документацию по установке</a>
+<div class="container-xxl bd-gutter masthead-followup">
+  <div class="col-lg-7 mx-auto pb-3 mb-3 mb-md-5 text-md-center">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
+      <svg class="bi fs-1"><use xlink:href="#code"></use></svg>
     </div>
-    <div class="col-md-7 ps-md-5">
-      {{ highlight "npm install bootstrap" "sh" "" }}
-      {{ highlight (printf ("gem install bootstrap -v %s") .Site.Params.current_ruby_version) "sh" "" }}
-    </div>
-  </section>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Начинайте как&nbsp;хотите</h2>
+    <p class="lead fw-normal">
+      Приступайте к созданию с помощью Bootstrap — используйте CDN, установите его с помощью диспетчера пакетов или загрузите исходный код.
+    </p>
+    <p class="d-flex justify-content-md-start justify-content-md-center lead fw-normal">
+      <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="icon-link fw-semibold justify-content-center ps-md-4">
+        Прочитать документацию по установке
+        <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+      </a>
+    </p>
+  </div>
 
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-primary">
-        {{ partial "icons/cloud-fill.svg" (dict "width" "32" "height" "32") }}
-      </div>
-      <h2 class="display-5 fw-normal">jsDelivr</h2>
-      <p class="lead fw-normal">
-        Когда Вам нужно только включить скомпилированный CSS или JS Bootstrap, Вы можете использовать <a href="https://www.jsdelivr.com/">jsDelivr</a>.
+  <section class="row g-3 g-md-5 mb-5 pb-5 justify-content-center">
+    <div class="col-lg-6 py-lg-4 pe-lg-5">
+      <svg class="bi mb-2 fs-2 text-muted"><use xlink:href="#box-seam"></use></svg>
+      <h3 class="fw-semibold">Установка через менеджер пакетов</h3>
+      <p class="pe-lg-5">
+        Установите исходные файлы Sass и JavaScript для Bootstrap через npm, RubyGems, Composer или Meteor. Установка, управляемая пакетами, не включает документацию или наши полные сценарии сборки. Вы также можете <a href="https://github.com/twbs/bootstrap-npm-starter">использовать наш репозиторий шаблонов npm</a> для быстрого создания проекта Bootstrap с помощью npm.
       </p>
+      {{ highlight (printf ("npm install bootstrap@%s") .Site.Params.current_version) "sh" "" }}
+      {{ highlight (printf ("gem install bootstrap -v %s") .Site.Params.current_ruby_version) "sh" "" }}
       <p>
-        Посмотрите, как это работает, с помощью нашего простого <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#стартовый-шаблон">стартового шаблона</a>, или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a>, чтобы начать свой следующий проект. Вы также можете включить Popper и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#отдельный">отдельно</a>.
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">Прочтите нашу документацию по установке</a> для получения дополнительной информации и дополнительных менеджеров пакетов.
       </p>
-      <a class="btn btn-lg btn-outline-primary mb-3" href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/">Исследовать документы</a>
     </div>
-    <div class="col-md-7 ps-md-5">
+    <div class="col-lg-6 py-lg-4 ps-lg-5 border-lg-start">
+      <svg class="bi mb-2 fs-2 text-muted"><use xlink:href="#globe2"></use></svg>
+      <h3 class="fw-semibold">Подключение через CDN</h3>
+      <p class="pe-lg-5">
+        Если вам нужно включить только скомпилированный CSS или JS Bootstrap, вы можете использовать <a href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr</a>. Посмотрите его в действии с помощью нашего простого руководства <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">по быстрому запуску</a> или <a href="/docs/{{ .Site.Params.docs_version }}/examples/">просмотрите примеры</a>, чтобы начать свой следующий проект. Вы также можете включить Popper и наш JS <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">отдельно</a>.
+      </p>
       {{ highlight (printf (`<!-- Только CSS -->
 <link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">
 `) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
@@ -41,21 +43,267 @@
     </div>
   </section>
 
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white bd-bg-purple-bright">
+  <section class="col-lg-7 mb-5">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-primary-rgb);">
+      <svg class="bi fs-1"><use xlink:href="#palette2"></use></svg>
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Настройте все с помощью&nbsp;Sass</h2>
+    <p class="lead fw-normal">
+      Bootstrap использует Sass для модульной и настраиваемой архитектуры. Импортируйте только те компоненты, которые вам нужны, включите глобальные параметры, такие как градиенты и тени, и напишите свой собственный CSS с нашими переменными, картами, функциями и миксинами.
+    </p>
+    <p class="d-flex justify-content-start lead fw-normal">
+      <a href="/docs/{{ .Site.Params.docs_version }}/customize/overview/" class="icon-link fw-semibold">
+        Узнайте больше о настройке
+        <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+      </a>
+    </p>
+  </section>
+
+  <section class="row g-md-5 mb-5 pb-md-5">
+    <div class="col-lg-6">
+      <h3>Включите все Sass из Bootstrap</h3>
+      <p>Импортируйте одну таблицу стилей, и вы отправитесь в гонку со всеми функциями нашего CSS.</p>
+      {{ highlight (printf `// Переопределение переменных first
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Затем импортируйте Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+`) "scss" "" }}
+      <p>Узнайте больше о наших <a href="/docs/{{ .Site.Params.docs_version }}/customize/options/">глобальных опциях Sass</a>.</p>
+    </div>
+    <div class="col-lg-6">
+      <h3>Включите то, что вам нужно</h3>
+      <p>Самый простой способ настроить Bootstrap — включить только тот CSS, который вам нужен.</p>
+{{ highlight (printf `// Функции first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Переменные переопределяют вторую
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Обязательный импорт Bootstrap
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Дополнительные компоненты
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+`) "scss" "" }}
+      <p>Узнайте больше об <a href="/docs/{{ .Site.Params.docs_version }}/customize/sass/">использовании Bootstrap с Sass</a>.</p>
+    </div>
+  </section>
+
+  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-8 mb-5">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
+        <svg class="bi fs-1"><use xlink:href="#braces"></use></svg>
+      </div>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Создавайте и расширяйте в режиме реального времени с помощью&nbsp;переменных CSS</h2>
+      <p class="lead fw-normal">
+        Bootstrap 5 развивается с каждым выпуском, чтобы лучше использовать переменные CSS для глобальных стилей темы, отдельных компонентов и даже утилит. Мы предоставляем десятки переменных для цветов, стилей шрифтов и многого другого на уровне <code>:root</code> для использования где угодно. В компонентах и утилитах переменные CSS привязаны к соответствующему классу и могут быть легко изменены.
+      </p>
+      <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
+        <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="icon-link fw-semibold mb-3">
+          Узнайте больше о переменных CSS
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+      </p>
+    </div>
+    <div class="row gx-md-5">
+      <div class="col-lg-6 mb-3">
+        <h3 class="fw-semibold">Использование переменных CSS</h3>
+        <p>Используйте любую из наших <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">глобальных переменных <code>:root</code></a> для написания новых стилей. Переменные CSS используют синтаксис <code>var(--bs-variableName)</code> и могут наследоваться дочерними элементами.</p>
+        {{ highlight (printf `.component {
+  color: var(--bs-gray-800);
+  background-color: var(--bs-gray-100);
+  border: 1px solid var(--bs-gray-200);
+  border-radius: .25rem;
+}
+
+.component-header {
+  color: var(--bs-purple);
+}`) "scss" "" }}
+      </div>
+      <div class="col-lg-6 mb-3">
+        <h3 class="fw-semibold">Кастомизация через переменные CSS</h3>
+        <p>Переопределите глобальные, компонентные или утилитные переменные класса, чтобы настроить Bootstrap так, как вам нравится. Не нужно повторно объявлять каждое правило, просто новое значение переменной.</p>
+        {{ highlight (printf `body {
+  --bs-body-font-family: var(--bs-font-monospace);
+  --bs-body-line-height: 1.4;
+  --bs-body-bg: var(--bs-gray-100);
+}
+
+.table {
+  --bs-table-color: var(--bs-gray-600);
+  --bs-table-bg: var(--bs-gray-100);
+  --bs-table-border-color: transparent;
+}`) "scss" "" }}
+      </div>
+    </div>
+  </section>
+
+  <section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-6 mb-5 mb-md-0">
+      <div class="masthead-followup-icon d-inline-block mb-3 me-2" style="--bg-rgb: var(--bs-danger-rgb);">
+        <svg class="bi fs-1"><use xlink:href="#menu-button-wide-fill"></use></svg>
+      </div>
+      <svg class="bi me-2 fs-2 text-muted"><use xlink:href="#plus"></use></svg>
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-info-rgb);">
+        <svg class="bi fs-1"><use xlink:href="#braces-asterisk"></use></svg>
+      </div>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Компоненты, соответствующие Utility&nbsp;API</h2>
+      <p class="lead fw-normal">
+        Новое в Bootstrap 5, наши утилиты теперь генерируются нашим <a href="/docs/{{ .Site.Params.docs_version }}/utilities/api/">Utility API</a>. Мы создали его как многофункциональную карту Sass, которую можно быстро и легко настроить. Добавлять, удалять или изменять любые служебные классы еще никогда не было так просто. Сделайте утилиты отзывчивыми, добавьте варианты псевдоклассов и дайте им собственные имена.
+      </p>
+      <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
+        <a href="/docs/{{ .Site.Params.docs_version }}/utilities/api/" class="icon-link fw-semibold mb-3">
+          Узнать больше об утилитах
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+        <a href="/docs/{{ .Site.Params.docs_version }}/examples#snippets" class="icon-link fw-semibold">
+          Исследуйте настраиваемые компоненты
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+      </p>
+    </div>
+    <div class="col-lg-6">
+      <div class="p-4 border rounded-3 mb-4">
+        <h6>Быстрая настройка компонентов</h6>
+        <hr class="mb-4">
+        <ul class="nav nav-pills mb-4" id="pillNav" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Главная</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Профиль</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Контакт</button>
+          </li>
+        </ul>
+        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-white border rounded-5 shadow-sm" id="pillNav2" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Главная</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Профиль</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Контакт</button>
+          </li>
+        </ul>
+      </div>
+  {{ highlight (printf `// Создавайте и расширяйте утилиты с помощью Utility API
+
+@import "bootstrap/scss/bootstrap";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )
+  )
+);
+`) "scss" "" }}
+    </div>
+  </section>
+
+  <section class="pb-md-5 mb-5">
+    <div class="col-lg-8 mb-5">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-warning-rgb);">
+        <svg class="bi fs-1"><use xlink:href="#plugin"></use></svg>
+      </div>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Мощные подключаемые модули JavaScript без использования&nbsp;jQuery</h2>
+      <p class="lead fw-normal">
+        Легко добавляйте переключаемые скрытые элементы, модальные окна и меню вне холста, всплывающие окна и всплывающие подсказки и многое другое — и все это без jQuery. JavaScript в Bootstrap — это HTML-first, а это означает, что добавлять плагины так же просто, как добавлять атрибуты <code>data</code>. Нужно больше контроля? Включите отдельные плагины программно.
+      </p>
+      <p class="d-flex justify-content-start lead fw-normal mb-md-0">
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/" class="icon-link fw-semibold">
+          Узнайте больше о Bootstrap JavaScript
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
+      </p>
+    </div>
+    <div class="row gx-md-5">
+      <div class="col-lg-6 mb-3">
+        <h3 class="fw-semibold">API атрибутов данных</h3>
+        <p>Зачем писать больше JavaScript, если можно писать HTML? Почти все плагины Bootstrap для JavaScript имеют первоклассный API данных, позволяющий вам использовать JavaScript, просто добавляя атрибуты <code>data</code>.</p>
+        <div class="p-4 mb-3 border rounded-3">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Раскрывающийся список
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+              <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+              <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {{ highlight (printf `<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    Раскрывающийся список
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown">
+    <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+    <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+    <li><a class="dropdown-item" href="#">Элемент Раскрывающегося списка</a></li>
+  </ul>
+</div>
+`) "html" "" }}
+        <p>Узнайте больше о <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#using-bootstrap-as-a-module">нашем JavaScript в виде модулей</a> и <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#programmatic-api">использовании программного API</a>.</p>
+      </div>
+      <div class="col-lg-6 mb-3">
+        <h3 class="fw-semibold">Полный набор плагинов</h3>
+        <p>В Bootstrap есть дюжина плагинов, которые вы можете добавить в любой проект. Вставьте их все сразу или выберите только те, которые вам нужны.</p>
+        <hr class="my-4">
+        <div class="row g-3">
+          {{- range $plugin := .Site.Data.plugins -}}
+            {{- $href := printf "/docs/%s/%s" $.Site.Params.docs_version $plugin.link }}
+            <div class="col-sm-6 mb-2">
+              <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="{{ $href }}">
+                <h4 class="mb-0 fs-5 fw-semibold">{{ $plugin.name }}</h4>
+                <small class="text-muted">{{ $plugin.description }}</small>
+              </a>
+            </div>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="row g-3 g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-6">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-teal-rgb);">
         {{ partial "icons/circle-square.svg" (dict "width" "32" "height" "32") }}
       </div>
-      <h2 class="display-5 fw-normal">Иконки Bootstrap</h2>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Персонализируйте его с помощью Иконок&nbsp;Bootstrap</h2>
       <p class="lead fw-normal">
-        Впервые в истории Bootstrap есть собственная библиотека значков SVG с открытым исходным кодом, предназначенная для наилучшей работы с нашими компонентами и документацией.
+        <a href="{{ .Site.Params.icons }}">Bootstrap Icons</a> — это библиотека иконок SVG с открытым исходным кодом, содержащая более 1500 глифов, и с каждым выпуском добавляется больше. Они предназначены для работы в любом проекте, независимо от того, используете ли вы сам Bootstrap или нет. Используйте их как SVG или иконочные шрифты — оба варианта обеспечивают векторное масштабирование и простую настройку с помощью CSS.
       </p>
-      <p>
-        Иконки Bootstrap лучше всего работают с компонентами Bootstrap, но они будут работать в любом проекте. Это SVG-файлы, поэтому они легко и быстро масштабируются, могут быть реализованы несколькими способами и стилизованы с помощью CSS.
+      <p class="d-flex justify-content-start lead fw-normal mb-md-0">
+        <a href="{{ .Site.Params.icons }}" class="icon-link fw-semibold">
+          Получить иконки Bootstrap
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
       </p>
-      <a href="{{ .Site.Params.icons }}" class="btn btn-lg btn-outline-primary mb-3">Получить Bootstrap Icons</a>
     </div>
-    <div class="col-md-7 ps-md-5">
+    <div class="col-lg-6">
         <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons.png,
                                                     /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons@2x.png 2x"
                                             src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons.png"
@@ -63,21 +311,23 @@
     </div>
   </section>
 
-  <section class="row mb-5 pb-md-4 align-items-center">
-    <div class="col-md-5">
-      <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-danger">
+  <section class="row g-3 g-md-5 pb-md-5 mb-5 align-items-center">
+    <div class="col-lg-6">
+      <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
         {{ partial "icons/droplet-fill.svg" (dict "width" "32" "height" "32") }}
       </div>
-      <h2 class="display-5 fw-normal">Официальные темы</h2>
+      <h2 class="display-5 mb-3 fw-semibold lh-sm">Сделайте это своим с официальными темами Bootstrap</h2>
       <p class="lead fw-normal">
-        Поднимите Bootstrap на новый уровень с премиальными темами из <a href="{{ .Site.Params.themes }}">официальной торговой площадки Bootstrap Themes</a>.
+        Поднимите Bootstrap на новый уровень с премиальными темами с <a href="{{ .Site.Params.themes }}">официального маркетплейса тем Bootstrap</a>. Темы создаются на Bootstrap как собственные расширенные фреймворки, богатые новыми компонентами и плагинами, документацией и мощными инструментами сборки.
       </p>
-      <p>
-        Темы созданы на Bootstrap как собственные расширенные фреймворки, богатые новыми компонентами и плагинами, документацией и мощными инструментами сборки.
+      <p class="d-flex justify-content-start lead fw-normal mb-md-0">
+        <a href="{{ .Site.Params.themes }}" class="icon-link fw-semibold">
+          Обзор тем Bootstrap
+          <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
+        </a>
       </p>
-      <a href="{{ .Site.Params.themes }}" class="btn btn-lg btn-outline-primary mb-3">Обзор тем</a>
     </div>
-    <div class="col-md-7 ps-md-5">
+    <div class="col-lg-6">
         <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png,
                                                     /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes@2x.png 2x"
                                             src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png"
