@@ -18,7 +18,7 @@
   ·
   <a href="https://themes.getbootstrap.com/">Темы</a>
   ·
-  <a href="https://blog.getbootstrap.com/">Блог</a>
+  <a href="https://blog.getbootstrap.su/">Блог</a>
 </p>
 
 
@@ -54,7 +54,7 @@
 - Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.0-beta1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочитайте [Страницу начала работы](https://getbootstrap.com/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
+Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
 
 
 ## Статус
@@ -81,7 +81,7 @@
 В загрузке вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
 
 <details>
-  <summary>Download contents</summary>
+  <summary>Скачать содержимое</summary>
   ```text
   bootstrap/
   ├── css/
@@ -176,8 +176,9 @@
 
 Получайте новости о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
 
+- Присоединиться к чату [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
 - Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
-- Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/).
+- Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/) и [Не официальный блог Bootstrap](https://blog.getbootstrap.su/).
 - Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).
 - Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
@@ -188,7 +189,7 @@
 
 Для прозрачности нашего цикла выпуска и для обеспечения обратной совместимости Bootstrap поддерживается в соответствии с [руководство по Семантическому Управлению версиями](https://semver.org/). Иногда мы ошибаемся, но всегда придерживаемся этих правил.
 
-См. [Раздел Releases нашего проекта GitHub](https://github.com/twbs/bootstrap/releases) для просмотра журналов изменений для каждой версии выпуска Bootstrap. Сообщения с анонсами релизов на [официальном блоге Bootstrap](https://blog.getbootstrap.com/) содержат сводку наиболее значимых изменений, внесенных в каждый выпуск.
+Смотрите [Раздел Релизы нашего проекта GitHub](https://github.com/twbs/bootstrap/releases) для просмотра журналов изменений для каждой версии выпуска Bootstrap. Сообщения с анонсами релизов на [официальном блоге Bootstrap](https://blog.getbootstrap.com/) содержат сводку наиболее значимых изменений, внесенных в каждый выпуск.
 
 
 ## Создатели
