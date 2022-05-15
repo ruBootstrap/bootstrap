@@ -90,7 +90,7 @@
       slug: navbars
       description: "Демонстрация всех адаптивных и контейнерных опций для навигационной панели."
     - name: Панели навигации с offcanvas
-      slug: navbar-offcanvas
+      slug: navbars-offcanvas
       description: "То же, что и в примере с панелями навигации, но с нашим компонентом offcanvas."
     - name: Статичная панель навигации
       slug: navbar-static

@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Examples
-description: Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
+title: Примеры
+description: Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.
 aliases: "/examples/"
 ---
 
@@ -14,9 +14,9 @@ aliases: "/examples/"
     {{ if eq $entry.category "RTL" -}}
       <div class="bd-callout bd-callout-warning small">
         <p>
-          <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?
+          <strong>RTL все еще находится в экспериментальной стадии</strong> и будет развиваться с учетом обратной связи. Заметили что-то или хотите предложить улучшение?
         </p>
-        <p><a href="{{ $.Site.Params.repo }}/issues/new">Please open an issue.</a></p>
+        <p><a href="{{ $.Site.Params.repo }}/issues/new">Пожалуйста, откройте вопрос.</a></p>
       </div>
     {{ end -}}
   </div>
@@ -26,10 +26,10 @@ aliases: "/examples/"
       {{- $len := len $entry.examples -}}
       {{ if (eq $i 0) }}<div class="row">{{ end }}
         <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/{{ $.Site.Params.docs_version }}/examples/{{ $example.name | urlize }}/"{{ if in $example.name "RTL" }} hreflang="ar"{{ end }}>
-            <img class="img-thumbnail mb-3" srcset="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.name | urlize }}.png,
-                                                    /docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.name | urlize }}@2x.png 2x"
-                                            src="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.name | urlize }}.png"
+          <a class="d-block" href="/docs/{{ $.Site.Params.docs_version }}/examples/{{ $example.slug | urlize }}/"{{ if in $example.slug "RTL" }} hreflang="ar"{{ end }}>
+            <img class="img-thumbnail mb-3" srcset="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug | urlize }}.png,
+                                                    /docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug | urlize }}@2x.png 2x"
+                                            src="/docs/{{ $.Site.Params.docs_version }}/assets/img/examples/{{ $example.slug | urlize }}.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
