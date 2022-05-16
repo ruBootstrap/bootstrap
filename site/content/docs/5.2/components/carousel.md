@@ -305,7 +305,7 @@ toc: true
 const carousel = new bootstrap.Carousel('#myCarousel')
 ```
 
-### Параметры
+### Опции
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}

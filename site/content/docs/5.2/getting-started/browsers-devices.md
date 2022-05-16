@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Browsers and devices
-description: Learn about the browsers and devices, from modern to old, that are supported by Bootstrap, including known quirks and bugs for each.
+title: Браузеры и устройства
+description: Узнайте о браузерах и устройствах, от современных до старых, которые поддерживаются Bootstrap, включая известные особенности и ошибки для каждого из них.
 group: getting-started
 toc: true
 ---
 
-## Supported browsers
+## Поддерживаемые браузеры
 
-Bootstrap supports the **latest, stable releases** of all major browsers and platforms.
+Bootstrap поддерживает **последние стабильные выпуски** всех основных браузеров и платформ.
 
-Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
+Альтернативные браузеры, которые используют последнюю версию WebKit, Blink или Gecko, напрямую или через API веб-представления платформы, явно не поддерживаются. Однако Bootstrap должен (в большинстве случаев) правильно отображаться и работать в этих браузерах. Более конкретная информация о поддержке представлена ниже.
 
-You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc):
+Вы можете найти список поддерживаемых нами браузеров и их версии [в нашем файле `.browserslistrc`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc):
 
 ```text
 {{< rf.inline >}}
@@ -20,60 +20,60 @@ You can find our supported range of browsers and their versions [in our `.browse
 {{< /rf.inline >}}
 ```
 
-We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.
+Мы используем [Autoprefixer](https://github.com/postcss/autoprefixer) для обработки предполагаемой поддержки браузера через префиксы CSS, который использует [Browserslist](https://github.com/browserslist/browserslist) для управления этими версиями браузеров. Обратитесь к их документации, чтобы узнать, как интегрировать эти инструменты в свои проекты.
 
-### Mobile devices
+### Мобильные устройства
 
-Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+Вообще говоря, Bootstrap поддерживает последние версии браузеров по умолчанию для каждой основной платформы. Обратите внимание, что прокси-браузеры (такие как Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) не поддерживаются.
 
 {{< bs-table "table" >}}
 | | Chrome | Firefox | Safari | Android Browser &amp; WebView |
 | --- | --- | --- | --- | --- |
-| **Android** | Supported | Supported | <span class="text-muted">&mdash;</span> | v6.0+ |
-| **Windows** | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
+| **Android** | Поддерживается | Поддерживается | <span class="text-muted">&mdash;</span> | v6.0+ |
+| **Windows** | Поддерживается | Поддерживается | Поддерживается | <span class="text-muted">&mdash;</span> |
 {{< /bs-table >}}
 
-### Desktop browsers
+### Настольные браузеры
 
-Similarly, the latest versions of most desktop browsers are supported.
+Точно так же поддерживаются последние версии большинства настольных браузеров.
 
 {{< bs-table "table" >}}
 | | Chrome | Firefox | Microsoft Edge | Opera | Safari |
 | --- | --- | --- | --- | --- | --- |
-| **Mac** | Supported | Supported | Supported | Supported | Supported |
-| **Windows** | Supported | Supported | Supported | Supported | <span class="text-muted">&mdash;</span> |
+| **Mac** | Поддерживается | Поддерживается | Поддерживается | Поддерживается | Поддерживается |
+| **Windows** | Поддерживается | Поддерживается | Поддерживается | Поддерживается | <span class="text-muted">&mdash;</span> |
 {{< /bs-table >}}
 
-For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) version of Firefox.
+Для Firefox, помимо последней нормальной стабильной версии, мы также поддерживаем последнюю версию Firefox [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) version of Firefox.
 
-Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, and Firefox for Linux, though they are not officially supported.
+Неофициально Bootstrap должен выглядеть и вести себя достаточно хорошо в Chromium и Chrome для Linux и Firefox для Linux, хотя официально они не поддерживаются.
 
 ## Internet Explorer
 
-Internet Explorer is not supported. **If you require Internet Explorer support, please use Bootstrap v4.**
+Internet Explorer не поддерживается. **Если вам требуется поддержка Internet Explorer, используйте Bootstrap v4.**
 
-## Modals and dropdowns on mobile
+## Модальные окна и выпадающие списки на мобильных устройствах
 
-### Overflow and scrolling
+### Переполнение и прокрутка
 
-Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `<body>` content will begin to scroll. See [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
+Поддержка для `overflow: hidden;` в элементе `<body>` весьма ограничена в iOS и Android. С этой целью, когда Вы прокручиваете верхнюю или нижнюю часть модального окна в браузере любого из этих устройств, содержимое `<body>` начинает прокручиваться. См. [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (исправлено в Chrome v40) и [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
 
-### iOS text fields and scrolling
+### Текстовые поля iOS и прокрутка
 
-As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
+Начиная с iOS 9.2, пока модальное окно открыто, если начальное прикосновение жеста прокрутки находится в пределах текстового `<input>` или `<textarea>`, содержимое `<body>` под модальным окном будет будет прокручиваться вместо самого модального окна. См. [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
 
-### Navbar Dropdowns
+### Выпадающие меню навигационной панели
 
-The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)).
+Элемент `.dropdown-backdrop` не используется в навигационной панели iOS из-за сложности z-индекса. Таким образом, чтобы закрыть раскрывающиеся списки на панели навигации, Вы должны непосредственно щелкнуть элемент раскрывающегося списка (или [любой другой элемент, который вызовет событие щелчка в iOS](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)).
 
-## Browser zooming
+## Масштабирование в браузере
 
-Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
+При масштабировании страницы неизбежно появляются артефакты рендеринга в некоторых компонентах как в Bootstrap, так и в остальной части Интернета. В зависимости от проблемы мы можем ее исправить (сначала выполните поиск, а затем при необходимости откройте проблему). Однако мы склонны игнорировать их, поскольку они часто не имеют прямого решения, кроме хитрых обходных путей.
 
-## Validators
+## Валидаторы
 
-In order to provide the best possible experience to old and buggy browsers, Bootstrap uses [CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+Чтобы обеспечить максимальное удобство работы старых браузеров и браузеров с ошибками, Bootstrap использует [хаки браузера CSS](http://browserhacks.com/) в нескольких местах для нацеливания специального CSS на определенные версии браузера, чтобы обойти ошибки в сами браузеры. Эти хаки по понятным причинам заставляют валидаторов CSS жаловаться на их недействительность. В некоторых случаях мы также используем передовые функции CSS, которые еще не полностью стандартизированы, но используются исключительно для прогрессивного улучшения.
 
-These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
+Эти предупреждения о проверке не имеют значения на практике, поскольку не-хакерская часть нашего CSS действительно полностью проверяет, а хакерские части не мешают правильному функционированию не-хакерской части, поэтому мы сознательно игнорируем эти конкретные предупреждения.
 
-Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
+В наших HTML-документах также есть несколько тривиальных и несущественных предупреждений проверки HTML из-за того, что мы включили обходной путь для [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).

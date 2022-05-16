@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Contents
-description: Discover what's included in Bootstrap, including our precompiled and source code flavors.
+title: Содержимое
+description: Узнайте, что включено в Bootstrap, в том числе наши варианты предварительно скомпилированного и исходного кода.
 group: getting-started
 toc: true
 ---
 
-## Precompiled Bootstrap
+## Предварительно скомпилированный Bootstrap
 
-Once downloaded, unzip the compressed folder and you'll see something like this:
+После загрузки распакуйте сжатую папку, и Вы увидите что-то вроде этого:
 
-<!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
+<!-- ПРИМЕЧАНИЕ. Эта информация намеренно дублируется в README. Скопируйте все сделанные здесь изменения и в README, но не забудьте добавить папку `dist`. -->
 
 ```text
 bootstrap/
@@ -62,14 +62,14 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
+Это самая простая форма Bootstrap: предварительно скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минифицированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js`) и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
 
-## CSS files
+## Файлы CSS
 
-Bootstrap includes a handful of options for including some or all of our compiled CSS.
+Bootstrap включает несколько вариантов для включения некоторых или всего нашего скомпилированного CSS.
 
 {{< bs-table "table" >}}
-| CSS files | Layout | Content | Components | Utilities |
+| CSS файлы | Макет | Контент | Компоненты | Утилиты |
 | --- | --- | --- | --- | --- |
 | `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | Included | Included | Included | Included |
 | `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
@@ -77,20 +77,20 @@ Bootstrap includes a handful of options for including some or all of our compile
 | `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
-## JS files
+## Файлы JS
 
-Similarly, we have options for including some or all of our compiled JavaScript.
+Точно так же у нас есть варианты для включения части или всего нашего скомпилированного JavaScript.
 
 {{< bs-table "table" >}}
-| JS Files | Popper |
+| JS файлы | Popper |
 | --- | --- |
 | `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | Included |
 | `bootstrap.js`<br> `bootstrap.min.js`<br> | – |
 {{< /bs-table >}}
 
-## Bootstrap source code
+## Исходный код Bootstrap
 
-The Bootstrap source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+Загрузка исходного кода Bootstrap включает предварительно скомпилированные ресурсы CSS и JavaScript, а также исходный код Sass, JavaScript и документацию. В частности, он включает в себя следующее и многое другое:
 
 ```text
 bootstrap/
@@ -106,4 +106,4 @@ bootstrap/
 └── scss/
 ```
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.
+`scss/` и `js/` являются исходным кодом для наших CSS и JavaScript. Папка `dist/` включает все, что указано в предварительно скомпилированном разделе загрузки выше. В папке `site/docs/` находится исходный код нашей документации и использование Bootstrap в папке `examples/`. Кроме того, любой другой включенный файл обеспечивает поддержку пакетов, информацию о лицензии и разработку.

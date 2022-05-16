@@ -137,7 +137,7 @@ const collapseElementList = document.querySelectorAll('.collapse')
 const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
 ```
 
-### Параметры
+### Опции
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}

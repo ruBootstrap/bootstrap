@@ -8,27 +8,27 @@ toc: true
 
 ## Как это устроено
 
-Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Bootstrap [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
+Scrollspy переключает класс `.active` для элементов привязки (`<a>`), когда элемент с `id`, на который ссылается `href` прокручивается в поле зрения. Scrollspy лучше всего использовать вместе с Bootstrap [компонент навигации]({{< docsref "/components/navs-tabs" >}}) или [группа списка]({{< docsref "/components/list-group" >}}), но он также будет работать с любыми якорными элементами на текущей странице. Вот как это работает.
 
-- To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
+- Для запуска scrollspy требуется две вещи: навигация, группа списков или простой набор ссылок, а также прокручиваемый контейнер. Прокручиваемый контейнер может быть `<body>` или пользовательским элементом с установленными `height` и `overflow-y: scroll`.
 
-- On the scrollable container, add `data-bs-spy="scroll"` and `data-bs-target="#navId"` where `navId` is the unique `id` of the associated navigation. Be sure to also include a `tabindex="0"` to ensure keyboard access.
+- В прокручиваемом контейнере добавьте `data-bs-spy="scroll"` и `data-bs-target="#navId"`, где `navId` — это уникальный `id` соответствующей навигации. Не забудьте также включить `tabindex="0"`, чтобы обеспечить доступ с клавиатуры.
 
-- As you scroll the "spied" container, an `.active` class is added and removed from anchor links within the associated navigation. Links must have resolvable `id` targets, otherwise they're ignored. For example, a `<a href="#home">Главная</a>` must correspond to something in the DOM like `<div id="home"></div>`
+- Когда вы прокручиваете «шпионский» контейнер, класс `.active` добавляется и удаляется из якорных ссылок в соответствующей навигации. Ссылки должны иметь разрешимые цели `id`, в противном случае они игнорируются. Например, `<a href="#home">Главная</a>` должна соответствовать чему-то в DOM, например, `<div id="home"></div>`
 
-- Target elements that aren't visible will be ignored and their corresponding nav items will never receive an `.active` class.
+- Целевые элементы, которые не видны, будут игнорироваться, а соответствующие им элементы навигации никогда не получат класс `.active`.
 
-Checkout the examples below to see it in action.
+Ознакомьтесь с приведенными ниже примерами, чтобы увидеть его в действии.
 
-## Examples
+## Примеры
 
-### Navbar
+### Панель навигации
 
-Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
+Прокрутите область под панелью навигации и посмотрите, как меняется активный класс. Откройте раскрывающееся меню и посмотрите, как будут выделены элементы раскрывающегося списка.
 
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Панель навигации</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" href="#scrollspyHeading1">Первый</a>
@@ -48,22 +48,22 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     </ul>
   </nav>
   <div class="scrollspy-example bg-light p-3 rounded-2" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-    <h4 id="scrollspyHeading1">First heading</h4>
-    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-    <h4 id="scrollspyHeading2">Second heading</h4>
-    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-    <h4 id="scrollspyHeading3">Third heading</h4>
-    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-    <h4 id="scrollspyHeading4">Fourth heading</h4>
-    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-    <h4 id="scrollspyHeading5">Fifth heading</h4>
-    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading1">Первый заголовок</h4>
+    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+    <h4 id="scrollspyHeading2">Второй заголовок</h4>
+    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+    <h4 id="scrollspyHeading3">Третий заголовок</h4>
+    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+    <h4 id="scrollspyHeading4">Четвертый заголовок</h4>
+    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+    <h4 id="scrollspyHeading5">Пятый заголовок</h4>
+    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
   </div>
 </div>
 
 ```html
 <nav id="navbar-example2" class="navbar bg-light px-3">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Панель навигации</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
       <a class="nav-link" href="#scrollspyHeading1">Первый</a>
@@ -83,7 +83,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
   </ul>
 </nav>
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="scrollspyHeading1">First heading</h4>
+  <h4 id="scrollspyHeading1">Первый заголовок</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Второй заголовок</h4>
   <p>...</p>
@@ -96,7 +96,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 </div>
 ```
 
-### Nested nav
+### Вложенная навигация
 
 Отслеживание прокрутки также работает с вложенными `.nav`. Если вложенный `.nav` имеет значение `.active`, его родители также будут `.active`. Прокрутите область рядом с панелью навигации и посмотрите, как меняется активный класс.
 
@@ -122,39 +122,39 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     <div class="col-8">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
         <div id="item-1">
-          <h4>Item 1</h4>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h4>Элемент 1</h4>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-1-1">
-          <h5>Item 1-1</h5>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h5>Элемент 1-1</h5>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-1-2">
-          <h5>Item 1-2</h5>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h5>Элемент 1-2</h5>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-2">
-          <h4>Item 2</h4>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h4>Элемент 2</h4>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-3">
-          <h4>Item 3</h4>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h4>Элемент 3</h4>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-3-1">
-          <h5>Item 3-1</h5>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h5>Элемент 3-1</h5>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
         <div id="item-3-2">
-          <h5>Item 3-2</h5>
-          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-          <p>Keep in mind that the JavaScript plugin tries to pick the right element among all that may be visible. Multiple visible scrollspy targets at the same time may cause some issues.</p>
+          <h5>Элемент 3-2</h5>
+          <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+          <p>Имейте в виду, что плагин JavaScript пытается выбрать правильный элемент среди всех видимых. Несколько видимых целей scrollspy одновременно могут вызвать некоторые проблемы.</p>
         </div>
       </div>
     </div>
@@ -163,7 +163,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 
 ```html
 <nav id="navbar-example3" class="navbar bg-light flex-column align-items-stretch p-3">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Панель навигации</a>
   <nav class="nav nav-pills flex-column">
     <a class="nav-link" href="#item-1">Элемент 1</a>
     <nav class="nav nav-pills flex-column">
@@ -181,37 +181,37 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 
 <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" tabindex="0">
   <div id="item-1">
-    <h4>Item 1</h4>
+    <h4>Элемент 1</h4>
     <p>...</p>
   </div>
   <div id="item-1-1">
-    <h5>Item 1-1</h5>
+    <h5>Элемент 1-1</h5>
     <p>...</p>
   </div>
   <div id="item-1-2">
-    <h5>Item 1-2</h5>
+    <h5>Элемент 1-2</h5>
     <p>...</p>
   </div>
   <div id="item-2">
-    <h4>Item 2</h4>
+    <h4>Элемент 2</h4>
     <p>...</p>
   </div>
   <div id="item-3">
-    <h4>Item 3</h4>
+    <h4>Элемент 3</h4>
     <p>...</p>
   </div>
   <div id="item-3-1">
-    <h5>Item 3-1</h5>
+    <h5>Элемент 3-1</h5>
     <p>...</p>
   </div>
   <div id="item-3-2">
-    <h5>Item 3-2</h5>
+    <h5>Элемент 3-2</h5>
     <p>...</p>
   </div>
 </div>
 ```
 
-### List group
+### Группа списка
 
 Отслеживание прокрутки также работает с `.list-group`. Прокрутите область рядом с группой списка и посмотрите, как меняется активный класс.
 
@@ -227,14 +227,14 @@ Scroll the area below the navbar and watch the active class change. Open the dro
     </div>
     <div class="col-8">
       <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-        <h4 id="list-item-1">Item 1</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="list-item-2">Item 2</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="list-item-3">Item 3</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="list-item-4">Item 4</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+        <h4 id="list-item-1">Элемент 1</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="list-item-2">Элемент 2</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="list-item-3">Элемент 3</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="list-item-4">Элемент 4</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
       </div>
     </div>
   </div>
@@ -248,7 +248,7 @@ Scroll the area below the navbar and watch the active class change. Open the dro
   <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
 </div>
 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="list-item-1">Item 1</h4>
+  <h4 id="list-item-1">Элемент 1</h4>
   <p>...</p>
   <h4 id="list-item-2">Элемент 2</h4>
   <p>...</p>
@@ -259,33 +259,33 @@ Scroll the area below the navbar and watch the active class change. Open the dro
 </div>
 ```
 
-### Simple anchors
+### Простые якоря
 
-Scrollspy is not limited to nav components and list groups, so it will work on any `<a>` anchor elements in the current document. Scroll the area and watch the `.active` class change.
+Scrollspy не ограничивается компонентами навигации и группами списков, поэтому он будет работать с любыми якорными элементами `<a>` в текущем документе. Прокрутите область и посмотрите, как изменится класс `.active`.
 
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
       <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
-        <a class="p-1 rounded" href="#simple-list-item-1">Item 1</a>
-        <a class="p-1 rounded" href="#simple-list-item-2">Item 2</a>
-        <a class="p-1 rounded" href="#simple-list-item-3">Item 3</a>
-        <a class="p-1 rounded" href="#simple-list-item-4">Item 4</a>
-        <a class="p-1 rounded" href="#simple-list-item-5">Item 5</a>
+        <a class="p-1 rounded" href="#simple-list-item-1">Элемент 1</a>
+        <a class="p-1 rounded" href="#simple-list-item-2">Элемент 2</a>
+        <a class="p-1 rounded" href="#simple-list-item-3">Элемент 3</a>
+        <a class="p-1 rounded" href="#simple-list-item-4">Элемент 4</a>
+        <a class="p-1 rounded" href="#simple-list-item-5">Элемент 5</a>
       </div>
     </div>
     <div class="col-8">
       <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-        <h4 id="simple-list-item-1">Item 1</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="simple-list-item-2">Item 2</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="simple-list-item-3">Item 3</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="simple-list-item-4">Item 4</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-        <h4 id="simple-list-item-5">Item 5</h4>
-        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+        <h4 id="simple-list-item-1">Элемент 1</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="simple-list-item-2">Элемент 2</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="simple-list-item-3">Элемент 3</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="simple-list-item-4">Элемент 4</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+        <h4 id="simple-list-item-5">Элемент 5</h4>
+        <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
       </div>
     </div>
   </div>
@@ -293,28 +293,28 @@ Scrollspy is not limited to nav components and list groups, so it will work on a
 
 ```html
 <div id="list-example" class="d-flex flex-column">
-  <a href="#item-1">Item 1</a>
-  <a href="#item-2">Item 2</a>
-  <a href="#item-3">Item 3</a>
-  <a href="#item-4">Item 4</a>
+  <a href="#item-1">Элемент 1</a>
+  <a href="#item-2">Элемент 2</a>
+  <a href="#item-3">Элемент 3</a>
+  <a href="#item-4">Элемент 4</a>
 </div>
 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="item-1">Item 1</h4>
+  <h4 id="item-1">Элемент 1</h4>
   <p>...</p>
-  <h4 id="item-2">Item 2</h4>
+  <h4 id="item-2">Элемент 2</h4>
   <p>...</p>
-  <h4 id="item-3">Item 3</h4>
+  <h4 id="item-3">Элемент 3</h4>
   <p>...</p>
-  <h4 id="item-4">Item 4</h4>
+  <h4 id="item-4">Элемент 4</h4>
   <p>...</p>
 </div>
 ```
 
-## Usage
+## Использование
 
 ### Через атрибуты данных
 
-To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the `id` or class name of the parent element of any Bootstrap `.nav` component.
+Чтобы легко добавить поведение прокрутки в навигацию верхней панели, добавьте `data-bs-spy="scroll"` к элементу, за которым вы хотите следить (чаще всего это будет `<body>`). Затем добавьте атрибут `data-bs-target` с `id` или именем класса родительского элемента любого компонента Bootstrap `.nav`.
 
 ```html
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -336,7 +336,7 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 })
 ```
 
-### Options
+### Опции
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
@@ -345,16 +345,16 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< bs-table "table" >}}
 | Название | Тип | По умолчанию | Описание |
 | --- | --- | --- | --- |
-| `rootMargin` | string | `0px 0px -40%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) valid units, when calculating scroll position. |
-| `smoothScroll` | boolean | `false` | Enables smooth scrolling when a user clicks on a link that refers to ScrollSpy observables. |
-| `target` | string \| jQuery object \| DOM element |  | Specifies element to apply Scrollspy plugin. |
+| `rootMargin` | string | `0px 0px -40%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) допустимые единицы измерения при расчете положения прокрутки. |
+| `smoothScroll` | boolean | `false` | Включает плавную прокрутку, когда пользователь нажимает на ссылку, которая ссылается на наблюдаемые объекты ScrollSpy. |
+| `target` | string \| jQuery object \| DOM элемент |  | Указывает элемент для применения плагина Scrollspy. |
 {{< /bs-table >}}
 
 {{< callout warning >}}
-**Deprecated Options**
+**Устаревшие опции**
 
-Up until v5.1.3 we were using `offset` & `method` options, which are now deprecated and replaced by `rootMargin`.
-To keep backwards compatibility, we will continue to parse a given `offset` to `rootMargin`, but this feature will be removed in **v6**.
+Вплоть до версии 5.1.3 мы использовали параметры `offset` и `method`, которые теперь устарели и заменены на `rootMargin`.
+Чтобы сохранить обратную совместимость, мы продолжим синтаксический анализ заданного `offset` до `rootMargin`, но эта функция будет удалена в **v6**.
 {{< /callout >}}
 
 ### Методы
@@ -362,13 +362,13 @@ To keep backwards compatibility, we will continue to parse a given `offset` to `
 {{< bs-table "table" >}}
 | Метод | Описание |
 | --- | --- |
-| `refresh` | When adding or removing elements in the DOM, you'll need to call the refresh method. |
-| `dispose` | Destroys an element's scrollspy. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method to get the scrollspy instance associated with a DOM element |
-| `getOrCreateInstance` | *Static* method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn't initialized. |
+| `refresh` | При добавлении или удалении элементов в DOM вам необходимо вызвать метод обновления. |
+| `dispose` | Уничтожает scrollspy элемента. (Удаляет сохраненные данные в элементе DOM) |
+| `getInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM |
+| `getOrCreateInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM, или для создания нового экземпляра, если он не был инициализирован. |
 {{< /bs-table >}}
 
-Here's an example using the refresh method:
+Вот пример использования метода обновления:
 
 ```js
 const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]')
@@ -377,12 +377,12 @@ dataSpyList.forEach(dataSpyEl => {
 })
 ```
 
-### Events
+### События
 
 {{< bs-table "table" >}}
 | Событие | Описание |
 | --- | --- |
-| `activate.bs.scrollspy` | This event fires on the scroll element whenever an anchor is activated by the scrollspy. |
+| `activate.bs.scrollspy` | Это событие срабатывает на элементе прокрутки всякий раз, когда якорь активируется scrollspy. |
 {{< /bs-table >}}
 
 ```js

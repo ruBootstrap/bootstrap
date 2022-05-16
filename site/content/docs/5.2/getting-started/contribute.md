@@ -1,35 +1,35 @@
 ---
 layout: docs
-title: Contribute
-description: Help develop Bootstrap with our documentation build scripts and tests.
+title: Вклад
+description: Помогите разработать Bootstrap с помощью наших сценариев сборки документации и тестов.
 group: getting-started
 toc: true
 aliases: "/docs/5.2/getting-started/build-tools/"
 ---
 
-## Tooling setup
+## Настройка инструмента
 
-Bootstrap uses [npm scripts](https://docs.npmjs.com/misc/scripts/) to build the documentation and compile source files. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) houses these scripts for compiling code, running tests, and more. These aren't intended for use outside our repository and documentation.
+Bootstrap использует [сценарии npm](https://docs.npmjs.com/misc/scripts/) для создания документации и компиляции исходных файлов. Наш [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) содержит эти сценарии для компиляции кода, запуска тестов и многого другого. Они не предназначены для использования за пределами нашего репозитория и документации.
 
-To use our build system and run our documentation locally, you'll need a copy of Bootstrap's source files and Node. Follow these steps and you should be ready to rock:
+Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:
 
-1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Bootstrap's sources]({{< param "download.source" >}}) or fork [Bootstrap's repository]({{< param repo >}}).
-3. Navigate to the root `/bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
+1. [Загрузите и установите Node.js](https://nodejs.org/en/download/), который мы используем для управления нашими зависимостями.
+2. Либо [загрузите исходные коды Bootstrap]({{< param "download.source" >}}), либо сделайте "форк" [репозитория Bootstrap]({{< param repo >}}).
+3. Перейдите в корневой каталог `/bootstrap` и запустите `npm install`, чтобы установить наши локальные зависимости, перечисленные в [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
 
-When completed, you'll be able to run the various commands provided from the command line.
+По завершении Вы сможете запускать различные команды из командной строки.
 
-## Using npm scripts
+## Использование скриптов npm
 
-Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes numerous tasks for developing the project. Run `npm run` to see all the npm scripts in your terminal. **Primary tasks include:**
+Наш [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) включает множество задач для разработки проекта. Запустите `npm run`, чтобы увидеть все сценарии npm в Вашем терминале. **Основные задачи включают:**
 
 {{< bs-table >}}
-| Task | Description |
+| Задача | Описание |
 | --- | --- |
-| `npm start` | Compiles CSS and JavaScript, builds the documentation, and starts a local server. |
-| `npm run dist` | Creates the `dist/` directory with compiled files. Uses [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), and [terser](https://github.com/terser/terser). |
-| `npm test` | Runs tests locally after running `npm run dist` |
-| `npm run docs-serve` | Builds and runs the documentation locally. |
+| `npm start` | Компилирует CSS и JavaScript, создает документацию и запускает локальный сервер. |
+| `npm run dist` | Создает каталог `dist/` с скомпилированными файлами. Использует [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer) и [terser](https://github.com/terser/terser). |
+| `npm test` | Запускает тесты локально после запуска `npm run dist`. |
+| `npm run docs-serve` | Создает и запускает документацию локально. |
 {{< /bs-table >}}
 
 {{< callout info >}}
@@ -38,30 +38,30 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 
 ## Sass
 
-Bootstrap uses [Dart Sass](https://sass-lang.com/dart-sass) for compiling our Sass source files into CSS files (included in our build process), and we recommend you do the same if you're compiling Sass using your own asset pipeline. We previously used Node Sass for Bootstrap v4, but LibSass and packages built on top of it, including Node Sass, are now [deprecated](https://sass-lang.com/blog/libsass-is-deprecated).
+Bootstrap использует [Dart Sass](https://sass-lang.com/dart-sass) для компиляции наших исходных файлов Sass в файлы CSS (включенные в наш процесс сборки), и мы рекомендуем Вам сделать то же самое, если Вы компилируете Sass с использованием собственного конвейера активов. Ранее мы использовали Node Sass для Bootstrap v4, но LibSass и пакеты, созданные на его основе, включая Node Sass, теперь [устарели](https://sass-lang.com/blog/libsass-is-deprecated).
 
-Dart Sass uses a rounding precision of 10 and for efficiency reasons does not allow adjustment of this value. We don't lower this precision during further processing of our generated CSS, such as during minification, but if you chose to do so we recommend maintaining a precision of at least 6 to prevent issues with browser rounding.
+Dart Sass использует точность округления 10 и из соображений эффективности не позволяет изменять это значение. Мы не снижаем эту точность во время дальнейшей обработки нашего сгенерированного CSS, например, во время минификации, но если Вы решите это сделать, мы рекомендуем поддерживать точность не менее 6, чтобы предотвратить проблемы с округлением в браузере.
 
-## Autoprefixer
+## Автопрефиксер
 
-Bootstrap uses [Autoprefixer](https://github.com/postcss/autoprefixer) (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
+Bootstrap использует [Autoprefixer](https://github.com/postcss/autoprefixer) (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах от поставщиков, подобных тем, что есть в v3.
 
-We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) for details.
+Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) для получения дополнительной информации.
 
 ## RTLCSS
 
-Bootstrap uses [RTLCSS](https://rtlcss.com/) to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (eg. `padding-left`) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS [control](https://rtlcss.com/learn/usage-guide/control-directives/) and [value](https://rtlcss.com/learn/usage-guide/value-directives/) directives.
+Bootstrap использует [RTLCSS](https://rtlcss.com/) для обработки скомпилированного CSS и преобразования их в RTL - в основном заменяя свойства, учитывающие горизонтальное направление (например, `padding-left`), их противоположностью. Это позволяет нам писать наш CSS только один раз и вносить незначительные изменения с помощью RTLCSS директив [control](https://rtlcss.com/learn/usage-guide/control-directives/) и [value](https://rtlcss.com/learn/usage-guide/value-directives/).
 
-## Local documentation
+## Локальная документация
 
-Running our documentation locally requires the use of Hugo, which gets installed via the [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here's how to get it started:
+Для локального запуска нашей документации требуется использование Hugo, который устанавливается через пакет npm [hugo-bin](https://www.npmjs.com/package/hugo-bin). Hugo - это невероятно быстрый и достаточно расширяемый генератор статических сайтов, который предоставляет нам: базовые включения, файлы на основе Markdown, шаблоны и многое другое. Вот как это начать:
 
-1. Run through the [tooling setup](#tooling-setup) above to install all dependencies.
-2. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-3. Open `http://localhost:9001/` in your browser, and voilà.
+1. Выполните [настройку инструментов](#tooling-setup) выше, чтобы установить все зависимости.
+2. Из корневого каталога `/bootstrap`, запустите `npm run docs-serve` в командной строке.
+3. Откройте `http://localhost:9001/` в вашем браузере и вуаля.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Узнайте больше об использовании Hugo, прочитав его [документацию](https://gohugo.io/documentation/).
 
-## Troubleshooting
+## Исправление проблем
 
-Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
+Если у Вас возникнут проблемы с установкой зависимостей, удалите все предыдущие версии зависимостей (глобальные и локальные). Затем перезапустите `npm install`.

@@ -1,75 +1,75 @@
 ---
 layout: docs
-title: Text
-description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+title: Текст
+description: Документация и примеры общих текстовых утилит для управления выравниванием, обтеканием, весом и т.д.
 group: utilities
 toc: true
 ---
 
-## Text alignment
+## Выравнивание текста
 
-Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
+Легко выравнивайте текст по компонентам с помощью классов выравнивания текста. Для выравнивания влево, вправо и по центру доступны адаптивные классы, которые используют те же контрольные точки по ширине области просмотра, что и система сетки.
 
 {{< example >}}
-<p class="text-start">Start aligned text on all viewport sizes.</p>
-<p class="text-center">Center aligned text on all viewport sizes.</p>
-<p class="text-end">End aligned text on all viewport sizes.</p>
+<p class="text-start">Текст с выравниванием по левому краю для всех размеров области просмотра.</p>
+<p class="text-center">Выровненный по центру текст на всех размерах области просмотра.</p>
+<p class="text-end">Текст с выравниванием по правому краю для всех размеров области просмотра.</p>
 
-<p class="text-sm-start">Start aligned text on viewports sized SM (small) or wider.</p>
-<p class="text-md-start">Start aligned text on viewports sized MD (medium) or wider.</p>
-<p class="text-lg-start">Start aligned text on viewports sized LG (large) or wider.</p>
-<p class="text-xl-start">Start aligned text on viewports sized XL (extra-large) or wider.</p>
+<p class="text-sm-start">Выровненный по левому краю текст на размерных области просмотра SM (маленький) или шире.</p>
+<p class="text-md-start">Выровненный по левому краю текст на размерных области просмотра MD (средний) или шире.</p>
+<p class="text-lg-start">Выровненный по левому краю текст на размерных области просмотра LG (большой) или шире.</p>
+<p class="text-xl-start">Выровненный по левому краю текст на размерных области просмотра XL (очень большой) или шире.</p>
 {{< /example >}}
 
 {{< callout info >}}
-Note that we don't provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
+Обратите внимание, что мы не предоставляем служебные классы для выравнивания текста по всей ширине. Хотя эстетически выровненный по ширине текст может выглядеть более привлекательно, он делает интервалы между словами более случайными и, следовательно, труднее читать.
 {{< /callout >}}
 
-## Text wrapping and overflow
+## Перенос текста и переполнение
 
-Wrap text with a `.text-wrap` class.
+Оберните текст классом `.text-wrap`.
 
 {{< example >}}
 <div class="badge bg-primary text-wrap" style="width: 6rem;">
-  This text should wrap.
+  Этот текст следует обернуть.
 </div>
 {{< /example >}}
 
-Prevent text from wrapping with a `.text-nowrap` class.
+Запретить перенос текста с помощью класса `.text-nowrap`.
 
 {{< example >}}
 <div class="text-nowrap bg-light border" style="width: 8rem;">
-  This text should overflow the parent.
+  Этот текст должен переполнять родительский.
 </div>
 {{< /example >}}
 
-## Word break
+## Разрыв слова
 
-Prevent long strings of text from breaking your components' layout by using `.text-break` to set `word-wrap: break-word` and `word-break: break-word`. We use `word-wrap` instead of the more common `overflow-wrap` for wider browser support, and add the deprecated `word-break: break-word` to avoid issues with flex containers.
+Предотвратите разрушение макета ваших компонентов длинными строками текста, используя `.text-break` для установки `word-wrap: break-word` и `word-break: break-word`. Мы используем `word-wrap` вместо более обычного `overflow-wrap` для более широкой поддержки браузеров и добавляем устаревший `word-break: break-word`, чтобы избежать проблем с гибкими контейнерами.
 
 {{< example >}}
 <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 {{< /example >}}
 
 {{< callout warning >}}
-Note that [breaking words isn't possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
+Обратите внимание, что [разрыв слов на арабском языке невозможен](https://rtlstyling.com/posts/rtl-styling#3.-line-break), который является наиболее часто используемым языком RTL. Поэтому `.text-break` удаляется из нашего RTL-скомпилированного CSS.
 {{< /callout >}}
 
-## Text transform
+## Преобразование текста
 
-Transform text in components with text capitalization classes.
+Преобразование текста в компонентах с помощью классов капитализации текста.
 
 {{< example >}}
-<p class="text-lowercase">Lowercased text.</p>
-<p class="text-uppercase">Uppercased text.</p>
-<p class="text-capitalize">CapiTaliZed text.</p>
+<p class="text-lowercase">Текст в нижнем регистре.</p>
+<p class="text-uppercase">Текст в верхнем регистре.</p>
+<p class="text-capitalize">Заглавный текст.</p>
 {{< /example >}}
 
-Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
+Обратите внимание, как `.text-capitalize` изменяет только первую букву каждого слова, не затрагивая регистр любых других букв.
 
-## Font size
+## Размер шрифта
 
-Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`–`.h6`) apply `font-size`, `font-weight`, and `line-height`, these utilities _only_ apply `font-size`. Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases.
+Быстро изменить размер шрифта текста `font-size`. В то время как наши классы заголовков (например, `.h1`–`.h6`) применяют `font-size`, `font-weight` и `line-height`, эти утилиты применяют _только_ `font-size`. Размер этих утилит соответствует элементам заголовка HTML, поэтому по мере увеличения числа их размер уменьшается.
 
 {{< example >}}
 <p class="fs-1">.fs-1 text</p>
@@ -80,76 +80,76 @@ Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`�
 <p class="fs-6">.fs-6 text</p>
 {{< /example >}}
 
-Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
+Настройте свой доступный `font-size`, изменив карту Sass `$font-sizes`.
 
-## Font weight and italics
+## Толщина шрифта и курсив
 
-Quickly change the `font-weight` or `font-style` of text with these utilities. `font-style` utilities are abbreviated as `.fst-*` and `font-weight` utilities are abbreviated as `.fw-*`.
-
-{{< example >}}
-<p class="fw-bold">Bold text.</p>
-<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
-<p class="fw-semibold">Semibold weight text.</p>
-<p class="fw-normal">Normal weight text.</p>
-<p class="fw-light">Light weight text.</p>
-<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
-<p class="fst-italic">Italic text.</p>
-<p class="fst-normal">Text with normal font style</p>
-{{< /example >}}
-
-## Line height
-
-Change the line height with `.lh-*` utilities.
+С помощью этих утилит можно быстро изменить `font-weight` или `font-style`. Утилиты `font-style` сокращенно обозначаются как `.fst-*`, а утилиты `font-weight` сокращаются как `.fw-*`.
 
 {{< example >}}
-<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="fw-weight-bold">Жирный текст.</p>
+<p class="fw-weight-bolder">Более жирный текст (относительно родительского элемента).</p>
+<p class="fw-semibold">Полужирный текст.</p>
+<p class="fw-weight-normal">Текст с нормальной толщиной.</p>
+<p class="fw-weight-light">Текст с легкой толщиной.</p>
+<p class="fw-weight-lighter">Более легкий текст (относительно родительского элемента).</p>
+<p class="fst-italic">Курсивный текст.</p>
+<p class="fst-normal">Текст с обычным шрифтом</p>
 {{< /example >}}
 
-## Monospace
+## Высота линии
 
-Change a selection to our monospace font stack with `.font-monospace`.
+Измените высоту строки с помощью утилит `.lh-*`.
 
 {{< example >}}
-<p class="font-monospace">This is in monospace</p>
+<p class="lh-1">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настроить по мере необходимости с помощью нашего служебного API.</p>
+<p class="lh-sm">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настроить по мере необходимости с помощью нашего служебного API.</p>
+<p class="lh-base">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настроить по мере необходимости с помощью нашего служебного API.</p>
+<p class="lh-lg">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настроить по мере необходимости с помощью нашего служебного API.</p>
 {{< /example >}}
 
-## Reset color
+## Моноширинный
 
-Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
+Измените выделение на наш стек моноширинных шрифтов с помощью `.font-monospace`.
+
+{{< example >}}
+<p class="font-monospace">Это в моноширинном пространстве</p>
+{{< /example >}}
+
+## Сброс цвета
+
+Сбросить цвет текста или ссылки с помощью `.text-reset`, чтобы он унаследовал цвет от своего родителя.
 
 {{< example >}}
 <p class="text-muted">
-  Muted text with a <a href="#" class="text-reset">reset link</a>.
+  Скрытый текст со <a href="#" class="text-reset">ссылкой для сброса.</a>.
 </p>
 {{< /example >}}
 
-## Text decoration
+## Оформление текста
 
-Decorate text in components with text decoration classes.
+Украшайте текст в компонентах классами оформления текста.
 
 {{< example >}}
-<p class="text-decoration-underline">This text has a line underneath it.</p>
-<p class="text-decoration-line-through">This text has a line going through it.</p>
-<a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+<p class="text-decoration-underline">Под этим текстом есть линия.</p>
+<p class="text-decoration-line-through">В этом тексте проходит линия.</p>
+<a href="#" class="text-decoration-none">Текстовое оформление этой ссылки удалено.</a>
 {{< /example >}}
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 
-### Maps
+### Карты
 
-Font-size utilities are generated from this map, in combination with our utilities API.
+Утилиты с размером шрифта генерируются из этой карты в сочетании с нашим API утилит.
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API утилит
 
-Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты шрифта и текста указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 
 {{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

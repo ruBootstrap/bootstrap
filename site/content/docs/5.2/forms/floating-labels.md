@@ -1,116 +1,116 @@
 ---
 layout: docs
-title: Floating labels
-description: Create beautifully simple form labels that float over your input fields.
+title: Плавающие метки
+description: Создавайте красиво простые метки форм, которые плавают над полями ввода.
 group: forms
 toc: true
 ---
 
-## Example
+## Пример
 
-Wrap a pair of `<input class="form-control">` and `<label>` elements in `.form-floating` to enable floating labels with Bootstrap's textual form fields. A `placeholder` is required on each `<input>` as our method of CSS-only floating labels uses the `:placeholder-shown` pseudo-element. Also note that the `<input>` must come first so we can utilize a sibling selector (e.g., `~`).
+Оберните пару элементов `<input class="form-control">` и `<label>` в `.form-floating`, чтобы включить плавающие метки с полями текстовой формы Bootstrap. `placeholder` требуется для каждого `<input>`, поскольку наш метод плавающих меток только для CSS использует псевдоэлемент `:placeholder-shown`. Также обратите внимание, что `<input>` должен идти первым, чтобы мы могли использовать селектор-брат (например, `~`).
 
 {{< example >}}
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email address</label>
+  <label for="floatingInput">Адрес электронной почты</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-  <label for="floatingPassword">Password</label>
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+  <label for="floatingPassword">Пароль</label>
 </div>
 {{< /example >}}
 
-When there's a `value` already defined, `<label>`s will automatically adjust to their floated position.
+Когда уже определено значение `value`, `<label>` автоматически подстраиваются под свое плавающее положение.
 
 {{< example >}}
 <form class="form-floating">
   <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
-  <label for="floatingInputValue">Input with value</label>
+  <label for="floatingInputValue">Ввод со значением</label>
 </form>
 {{< /example >}}
 
-Form validation styles also work as expected.
+Стили проверки формы также работают должным образом.
 
 {{< example >}}
 <form class="form-floating">
   <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-  <label for="floatingInputInvalid">Invalid input</label>
+  <label for="floatingInputInvalid">Неверный Ввод</label>
 </form>
 {{< /example >}}
 
-## Textareas
+## Текстовые области
 
-By default, `<textarea>`s with `.form-control` will be the same height as `<input>`s.
+По умолчанию, `<textarea>` с `.form-control` будет той же высоты, что и `<input>`.
 
 {{< example >}}
 <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-  <label for="floatingTextarea">Comments</label>
+  <label for="floatingTextarea">Комментарии</label>
 </div>
 {{< /example >}}
 
-To set a custom height on your `<textarea>`, do not use the `rows` attribute. Instead, set an explicit `height` (either inline or via custom CSS).
+Чтобы установить произвольную высоту для Вашего `<textarea>`, не используйте атрибут `rows`. Вместо этого установите явную `height` (встроенную или через собственный CSS).
 
 {{< example >}}
 <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-  <label for="floatingTextarea2">Comments</label>
+  <label for="floatingTextarea2">Комментарии</label>
 </div>
 {{< /example >}}
 
-## Selects
+## Элемент выбора
 
-Other than `.form-control`, floating labels are only available on `.form-select`s. They work in the same way, but unlike `<input>`s, they'll always show the `<label>` in its floated state. **Selects with `size` and `multiple` are not supported.**
+За исключением `.form-control`, плавающие метки доступны только для `.form-select`. Они работают таким же образом, но в отличие от `<input>`, они всегда будут показывать `<label>` в плавающем состоянии. **Выборки с `size` и `multiple` не поддерживаются.**
 
 {{< example >}}
 <div class="form-floating">
   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+    <option selected>Откройте это меню выбора</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
   </select>
-  <label for="floatingSelect">Works with selects</label>
+  <label for="floatingSelect">Работает с элементом выбора</label>
 </div>
 {{< /example >}}
 
-## Readonly plaintext
+## Открытый текст только для чтения
 
-Floating labels also support `.form-control-plaintext`, which can be helpful for toggling from an editable `<input>` to a plaintext value without affecting the page layout.
+Плавающие метки также поддерживают `.form-control-plaintext`, который может быть полезен для переключения с редактируемого `<input>` на значение открытого текста, не влияя на макет страницы.
 
 {{< example >}}
 <div class="form-floating mb-3">
   <input type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="name@example.com">
-  <label for="floatingEmptyPlaintextInput">Empty input</label>
+  <label for="floatingEmptyPlaintextInput">Пустой ввод</label>
 </div>
 <div class="form-floating mb-3">
   <input type="email" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="name@example.com">
-  <label for="floatingPlaintextInput">Input with value</label>
+  <label for="floatingPlaintextInput">Ввод со значением</label>
 </div>
 {{< /example >}}
 
-## Layout
+## Макет
 
-When working with the Bootstrap grid system, be sure to place form elements within column classes.
+При работе с сеткой Bootstrap обязательно размещайте элементы формы в классах столбцов.
 
 {{< example >}}
 <div class="row g-2">
   <div class="col-md">
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-      <label for="floatingInputGrid">Email address</label>
+      <label for="floatingInputGrid">Адрес электронной почты</label>
     </div>
   </div>
   <div class="col-md">
     <div class="form-floating">
       <select class="form-select" id="floatingSelectGrid">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option selected>Откройте это меню выбора</option>
+        <option value="1">Один</option>
+        <option value="2">Два</option>
+        <option value="3">Три</option>
       </select>
-      <label for="floatingSelectGrid">Works with selects</label>
+      <label for="floatingSelect">Работает с элементом выбора</label>
     </div>
   </div>
 </div>
@@ -118,6 +118,6 @@ When working with the Bootstrap grid system, be sure to place form elements with
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

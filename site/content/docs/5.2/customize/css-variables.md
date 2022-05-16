@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: CSS variables
-description: Use Bootstrap's CSS custom properties for fast and forward-looking design and development.
+title: CSS переменные
+description: Используйте настраиваемые свойства CSS Bootstrap для быстрого и перспективного проектирования и разработки.
 group: customize
 toc: true
 ---
 
-Bootstrap includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
+Bootstrap включает множество [настраиваемых свойств (переменных) CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) в свой скомпилированный CSS для настройки в реальном времени без необходимости перекомпилировать Sass. Они обеспечивают легкий доступ к часто используемым значениям, таким как цвета нашей темы, контрольные точки и стеки основных шрифтов, при работе в инспекторе браузера, в изолированной программной среде или при общем прототипировании.
 
-**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
+**Все наши настраиваемые свойства имеют префикс `bs-`**, чтобы избежать конфликтов со сторонним CSS.
 
-## Root variables
+## Корневые переменные
 
-Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
+Вот переменные, которые мы включаем (обратите внимание, что требуется `:root`), к которым можно получить доступ везде, где загружен CSS Bootstrap. Они находятся в нашем файле `_root.scss` и включены в наши скомпилированные файлы dist.
 
 ```css
 {{< root.inline >}}
@@ -28,23 +28,23 @@ Here are the variables we include (note that the `:root` is required) that can b
 {{< /root.inline >}}
 ```
 
-## Component variables
+## Переменные компонента
 
-Bootstrap 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
+Bootstrap 5 все чаще использует пользовательские свойства в качестве локальных переменных для различных компонентов. Таким образом мы уменьшаем наш скомпилированный CSS, гарантируем, что стили не наследуются в таких местах, как вложенные таблицы, и допускаем некоторые базовые изменения стиля и расширения компонентов Bootstrap после компиляции Sass.
 
-Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}). Our [navbars also use CSS variables]({{< docsref "/components/navbar#css" >}}) as of v5.2.0. We're also using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]({{< docsref "/layout/css-grid" >}})—with more component usage coming in the future.
+Взгляните на нашу документацию по таблицам, чтобы узнать, как мы используем переменные CSS]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}). Наши [панели навигации также используют переменные CSS]({{< docsref "/components/navbar#css" >}}) начиная с версии 5.2.0. Мы также используем переменные CSS в наших сетках — в первую очередь для отступов — [новая CSS-сетка с опционом]({{< docsref "/layout/css-grid" >}}) — с более широким использованием компонентов в будущем.
 
-Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
+По возможности мы будем назначать переменные CSS на уровне базового компонента (например, `.navbar` для панели навигации и ее подкомпонентов). Это уменьшает количество предположений о том, где и как настраивать, и позволяет нашей команде легко вносить изменения в будущих обновлениях.
 
-## Prefix
+## Префикс
 
-Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that's required on every CSS variable.
+Большинство переменных CSS используют префикс, чтобы избежать конфликтов с вашей собственной кодовой базой. Этот префикс является дополнением к `--`, который требуется для каждой переменной CSS.
 
-Customize the prefix via the `$prefix` Sass variable. By default, it's set to `bs-` (note the trailing dash).
+Настройте префикс с помощью переменной Sass `$prefix`. По умолчанию установлено значение `bs-` (обратите внимание на тире в конце).
 
-## Examples
+## Примеры
 
-CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+Переменные CSS предлагают такую же гибкость, что и переменные Sass, но без необходимости компиляции перед отправкой в браузер. Например, здесь мы сбрасываем шрифт нашей страницы и стили ссылок с помощью переменных CSS.
 
 ```css
 body {
@@ -55,6 +55,6 @@ a {
 }
 ```
 
-## Grid breakpoints
+## Контрольные точки сетки
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the mean time, you can use these variables in other CSS situations, as well as in your JavaScript.
+Хотя мы включаем контрольные точки нашей сетки как переменные CSS (кроме `xs`), имейте в виду, что **переменные CSS не работают в медиа-запросах**. Это предусмотрено спецификацией CSS для переменных, но может измениться в ближайшие годы с поддержкой переменных `env()`. Ознакомьтесь с [этим ответом на Stack Overflow](https://stackoverflow.com/a/47212942) для некоторых полезных ссылок. Между тем, вы можете использовать эти переменные в других ситуациях CSS, а также в своем JavaScript.

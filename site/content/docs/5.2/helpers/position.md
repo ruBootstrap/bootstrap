@@ -1,63 +1,63 @@
 ---
 layout: docs
-title: Position
-description: Use these helpers for quickly configuring the position of an element.
+title: Положение
+description: Используйте эти помощники для быстрой настройки положения элемента.
 group: helpers
 toc: true
 ---
 
-## Fixed top
+## Фиксация вверху
 
-Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Расположите элемент в верхней части окна просмотра, от края до края. Убедитесь, что вы понимаете последствия фиксированной позиции в вашем проекте; вам может потребоваться добавить дополнительный CSS.
 
 ```html
 <div class="fixed-top">...</div>
 ```
 
-## Fixed bottom
+## Фиксация внизу
 
-Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+Поместите элемент в нижней части окна просмотра, от края до края. Убедитесь, что вы понимаете последствия фиксированной позиции в вашем проекте; вам может потребоваться добавить дополнительный CSS.
 
 ```html
 <div class="fixed-bottom">...</div>
 ```
 
-## Sticky top
+## Закреплено вверху
 
-Position an element at the top of the viewport, from edge to edge, but only after you scroll past it.
+Разместите элемент в верхней части области просмотра, от края до края, но только после того, как вы прокрутите его.
 
 ```html
 <div class="sticky-top">...</div>
 ```
 
-## Responsive sticky top
+## Отзывчиво закреплено вверху
 
-Responsive variations also exist for `.sticky-top` utility.
+Адаптивные варианты также существуют для утилиты `.sticky-top`.
 
 ```html
-<div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
-<div class="sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
-<div class="sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
-<div class="sticky-xl-top">Stick to the top on viewports sized XL (extra-large) or wider</div>
-<div class="sticky-xxl-top">Stick to the top on viewports sized XXL (extra-extra-large) or wider</div>
+<div class="sticky-sm-top">Придерживайтесь верхней части окна просмотра размером SM (маленький) или шире</div>
+<div class="sticky-md-top">Придерживайтесь верхней части окна просмотра размером MD (средний) или шире</div>
+<div class="sticky-lg-top">Придерживайтесь верхней части окна просмотра размером LG (большой) или шире</div>
+<div class="sticky-xl-top">Придерживайтесь верхней части окна просмотра размером XL (очень большой) или шире</div>
+<div class="sticky-xxl-top">Придерживайтесь верхней части окна просмотра размером XXL (огромный) или шире</div>
 ```
 
-## Sticky bottom
+## Закреплено внизу
 
-Position an element at the bottom of the viewport, from edge to edge, but only after you scroll past it.
+Поместите элемент в нижней части окна просмотра, от края до края, но только после того, как вы прокрутите его.
 
 ```html
 <div class="sticky-bottom">...</div>
 ```
 
-## Responsive sticky bottom
+## Отзывчиво закреплено внизу
 
-Responsive variations also exist for `.sticky-bottom` utility.
+Адаптивные варианты также существуют для утилиты `.sticky-bottom`.
 
 ```html
-<div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
-<div class="sticky-md-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
-<div class="sticky-lg-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
-<div class="sticky-xl-bottom">Stick to the bottom on viewports sized XL (extra-large) or wider</div>
-<div class="sticky-xxl-bottom">Stick to the bottom on viewports sized XXL (extra-extra-large) or wider</div>
+<div class="sticky-sm-bottom">Придерживайтесь нижней части окна просмотра размером SM (маленький) или шире</div>
+<div class="sticky-md-bottom">Придерживайтесь нижней части окна просмотра размером MD (средний) или шире</div>
+<div class="sticky-lg-bottom">Придерживайтесь нижней части окна просмотра размером LG (большой) или шире</div>
+<div class="sticky-xl-bottom">Придерживайтесь нижней части окна просмотра размером XL (очень большой) или шире</div>
+<div class="sticky-xxl-bottom">Придерживайтесь нижней части окна просмотра размером XXL (огромный) или шире</div>
 ```

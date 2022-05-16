@@ -1,35 +1,35 @@
 ---
 layout: docs
-title: Utility API
-description: The utility API is a Sass-based tool to generate utility classes.
+title: Служебный API
+description: Служебный API - это инструмент на основе Sass для создания служебных классов.
 group: utilities
 aliases: "/docs/5.2/utilities/"
 toc: true
 ---
 
-Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you're unfamiliar with Sass maps, read up on the [official Sass docs](https://sass-lang.com/documentation/values/maps) to get started.
+Утилиты Bootstrap создаются с помощью нашего служебного API и могут использоваться для изменения или расширения нашего набора служебных классов по умолчанию через Sass. Наш служебный API основан на серии карт и функций Sass для создания семейств классов с различными параметрами. Если Вы не знакомы с картами Sass, прочитайте [официальную документацию Sass](https://sass-lang.com/documentation/values/maps), чтобы начать работу.
 
-The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
+Карта `$utilities` содержит все наши утилиты и позже объединяется с Вашей пользовательской картой `$utilities`, если она есть. Карта утилит содержит ключевой список групп утилит, которые принимают следующие параметры:
 
 {{< bs-table "table table-utilities" >}}
-| Option | Type | Default&nbsp;value | Description |
+| Опция | Тип | Значение&nbsp;по&nbsp;умолчанию | Описание |
 | --- | --- | --- | --- |
-| [`property`](#property) | **Required** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
-| [`values`](#values) | **Required** | – | List of values, or a map if you don't want the class name to be the same as the value. If `null` is used as map key, `class` is not prepended to the class name. |
-| [`class`](#class) | Optional | null | Name of the generated class. If not provided and `property` is an array of strings, `class` will default to the first element of the `property` array. If not provided and `property` is a string, the `values` keys are used for the `class` names. |
-| [`css-var`](#css-variable-utilities) | Optional | `false` | Boolean to generate CSS variables instead of CSS rules. |
-| [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
-| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
-| [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
-| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
-| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |
-| [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
-| `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
+| [`property`](#property) | **Обязательно** | – | Имя свойства. Это может быть строка или массив строк (например, горизонтальные отступы или поля). |
+| [`values`](#values) | **Обязательно** | – | Список значений или карта, если вы не хотите, чтобы имя класса совпадало со значением. Если в качестве ключа карты используется `null`, `class` не добавляется перед именем класса. |
+| [`class`](#class) | Необязательно | null | Имя сгенерированного класса. Если не указано, а свойство `property` является массивом строк, класс `class` по умолчанию будет первым элементом массива свойств `property`. Если не указано и `property` представляет собой строку, ключи `values` используются для имен `class`. |
+| [`css-var`](#css-variable-utilities) | Необязательно | `false` | Логическое значение для генерации переменных CSS вместо правил CSS. |
+| [`css-variable-name`](#css-variable-utilities) | Необязательно | null | Пользовательское имя без префикса для переменной CSS внутри набора правил. |
+| [`local-vars`](#local-css-variables) | Необязательно | null | Карта локальных переменных CSS для генерации в дополнение к правилам CSS. |
+| [`state`](#states) | Необязательно | null | Список вариантов псевдокласса (например, `:hover` или `:focus`) для генерации. |
+| [`responsive`](#responsive) | Необязательно | `false` | Логическое значение, указывающее, должны ли создаваться отзывчивые классы. |
+| `rfs` | Необязательно | `false` | Логическое значение для включения [плавного изменения масштаба с помощью RFS]({{< docsref "/getting-started/rfs" >}}). |
+| [`print`](#print) | Необязательно | `false` | Логическое значение, указывающее, нужно ли создавать классы печати. |
+| `rtl` | Необязательно | `true` | Логическое значение, указывающее, следует ли сохранять утилиту в RTL. |
 {{< /bs-table >}}
 
-## API explained
+## Пояснение API
 
-All utility variables are added to the `$utilities` variable within our `_utilities.scss` stylesheet. Each group of utilities looks something like this:
+Все служебные переменные добавляются в переменную `$utilities` в нашей таблице стилей `_utilities.scss`. Каждая группа утилит выглядит примерно так:
 
 ```scss
 $utilities: (
@@ -46,7 +46,7 @@ $utilities: (
 );
 ```
 
-Which outputs the following:
+Что выводит следующее:
 
 ```css
 .opacity-0 { opacity: 0; }
@@ -56,9 +56,9 @@ Which outputs the following:
 .opacity-100 { opacity: 1; }
 ```
 
-### Property
+### Свойство
 
-The required `property` key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility's ruleset. When the `class` key is omitted, it also serves as the default class name. Consider the `text-decoration` utility:
+Требуемый ключ `property` должен быть установлен для любой утилиты, и он должен содержать допустимое свойство CSS. Это свойство используется в сгенерированном наборе правил утилиты. Когда ключ `class` опущен, он также служит именем класса по умолчанию. Рассмотрим утилиту `text-decoration`:
 
 ```scss
 $utilities: (
@@ -69,7 +69,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .text-decoration-none { text-decoration: none !important; }
@@ -77,17 +77,17 @@ Output:
 .text-decoration-line-through { text-decoration: line-through !important; }
 ```
 
-### Values
+### Значения
 
-Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
+Используйте ключ `values` , чтобы указать, какие значения для указанного `property` должны использоваться в сгенерированных именах классов и правилах. Может быть списком или картой (задается в утилитах или в переменной Sass).
 
-As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
+В виде списка, как в случае с [утилитами `text-decoration`]({{< docsref "/utilities/text#text-decoration" >}}):
 
 ```scss
 values: none underline line-through
 ```
 
-As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
+В виде карты, например: [утилиты `opacity`]({{< docsref "/utilities/opacity" >}}):
 
 ```scss
 values: (
@@ -99,15 +99,15 @@ values: (
 )
 ```
 
-As a Sass variable that sets the list or map, as in our [`position` utilities]({{< docsref "/utilities/position" >}}):
+В качестве переменной Sass, которая устанавливает список или карту, как в наших [утилитах `position`]({{< docsref "/utilities/position" >}}):
 
 ```scss
 values: $position-values
 ```
 
-### Class
+### Класс
 
-Use the `class` option to change the class prefix used in the compiled CSS. For example, to change from `.opacity-*` to `.o-*`:
+Используйте опцию `class`, чтобы изменить префикс класса, используемый в скомпилированном CSS. Например, чтобы изменить с `.opacity-*` на `.o-*`:
 
 ```scss
 $utilities: (
@@ -125,7 +125,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .o-0 { opacity: 0 !important; }
@@ -135,7 +135,7 @@ Output:
 .o-100 { opacity: 1 !important; }
 ```
 
-If `class: null`, generates classes for each of the `values` keys:
+Если `class: null`, генерирует классы для каждого из ключей `values`:
 
 ```scss
 $utilities: (
@@ -150,18 +150,18 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .visible { visibility: visible !important; }
 .invisible { visibility: hidden !important; }
 ```
 
-### CSS variable utilities
+### Утилиты переменных CSS
 
-Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Add an optional `css-variable-name` to set a different CSS variable name than the class name.
+Установите логическую опцию `css-var` в значение `true`, и API будет генерировать локальные переменные CSS для данного селектора вместо обычных правил `property: value`. Добавьте необязательное `css-variable-name`, чтобы задать имя переменной CSS, отличное от имени класса.
 
-Consider our `.text-opacity-*` utilities. If we add the `css-variable-name` option, we'll get a custom output.
+Рассмотрим наши утилиты `.text-opacity-*`. Если мы добавим параметр `css-variable-name`, мы получим собственный вывод.
 
 ```scss
 $utilities: (
@@ -179,7 +179,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .text-opacity-25 { --bs-text-alpha: .25; }
@@ -188,9 +188,9 @@ Output:
 .text-opacity-100 { --bs-text-alpha: 1; }
 ```
 
-### Local CSS variables
+### Локальные переменные CSS
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
+Используйте опцию `local-vars`, чтобы указать карту Sass, которая будет генерировать локальные переменные CSS в наборе правил служебного класса. Обратите внимание, что для использования этих локальных переменных CSS в сгенерированных правилах CSS может потребоваться дополнительная работа. Например, рассмотрим наши утилиты `.bg-*`:
 
 ```scss
 $utilities: (
@@ -210,7 +210,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 .bg-primary {
@@ -219,11 +219,11 @@ Output:
 }
 ```
 
-### States
+### Состояния
 
-Use the `state` option to generate pseudo-class variations. Example pseudo-classes are `:hover` and `:focus`. When a list of states are provided, classnames are created for that pseudo-class. For example, to change opacity on hover, add `state: hover` and you'll get `.opacity-hover:hover` in your compiled CSS.
+Используйте опцию `state` для генерации вариаций псевдокласса. Примеры псевдоклассов: `:hover` и `:focus`. Когда предоставляется список состояний, для этого псевдокласса создаются имена классов. Например, чтобы изменить непрозрачность при наведении указателя мыши, добавьте `state: hover`, и Вы получите `.opacity-hover: hover` в Вашем скомпилированном CSS.
 
-Need multiple pseudo-classes? Use a space-separated list of states: `state: hover focus`.
+Нужны несколько псевдоклассов? Используйте список состояний, разделенных пробелами: `state: hover focus`.
 
 ```scss
 $utilities: (
@@ -242,7 +242,7 @@ $utilities: (
 );
 ```
 
-Output:
+Что выводит следующее:
 
 ```css
 .opacity-0-hover:hover { opacity: 0 !important; }
@@ -252,9 +252,9 @@ Output:
 .opacity-100-hover:hover { opacity: 1 !important; }
 ```
 
-### Responsive
+### Адаптивность
 
-Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
+Добавьте логическое значение `responseive` для создания адаптивных утилит (например, `.opacity-md-25`) для [всех контрольных точек]({{<docsref "/layout/breakpoints">}}).
 
 ```scss
 $utilities: (
@@ -272,7 +272,7 @@ $utilities: (
 );
 ```
 
-Output:
+Что выводит следующее:
 
 ```css
 .opacity-0 { opacity: 0 !important; }
@@ -322,9 +322,9 @@ Output:
 }
 ```
 
-### Print
+### Печать
 
-Enabling the `print` option will **also** generate utility classes for print, which are only applied within the `@media print { ... }` media query.
+Включение опции `print` **также** сгенерирует служебные классы для печати, которые применяются только в медиа-запросе `@media print {...}`.
 
 ```scss
 $utilities: (
@@ -342,7 +342,7 @@ $utilities: (
 );
 ```
 
-Output:
+Что выводит следующее:
 
 ```css
 .opacity-0 { opacity: 0 !important; }
@@ -360,17 +360,17 @@ Output:
 }
 ```
 
-## Importance
+## Важность
 
-All utilities generated by the API include `!important` to ensure they override components and modifier classes as intended. You can toggle this setting globally with the `$enable-important-utilities` variable (defaults to `true`).
+Все утилиты, генерируемые API, включают `!important` , чтобы гарантировать, что они переопределяют компоненты и классы модификаторов должным образом. Вы можете переключать этот параметр глобально с помощью переменной `$enable-important-utilities` (по умолчанию `true`).
 
-## Using the API
+## Использование API
 
-Now that you're familiar with how the utilities API works, learn how to add your own custom classes and modify our default utilities.
+Теперь, когда Вы знакомы с тем, как работает API утилит, узнайте, как добавлять свои собственные классы и изменять наши утилиты по умолчанию.
 
-### Override utilities
+### Переопределение утилит
 
-Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+Переопределите существующие утилиты, используя тот же ключ. Например, если вам нужны дополнительные вспомогательные классы отзывчивого переполнения, вы можете сделать это:
 
 ```scss
 $utilities: (
@@ -382,9 +382,9 @@ $utilities: (
 );
 ```
 
-### Add utilities
+### Добавление утилит
 
-New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
+Новые утилиты могут быть добавлены к карте по умолчанию `$utilities` с помощью `map-merge`. Убедитесь, что наши необходимые файлы Sass и `_utilities.scss` сначала импортированы, а затем используйте `map-merge`, чтобы добавить Ваши дополнительные утилиты. Например, вот как добавить отзывчивую утилиту `cursor` с тремя значениями.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -407,9 +407,9 @@ $utilities: map-merge(
 );
 ```
 
-### Modify utilities
+### Изменение утилит
 
-Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
+Измените существующие утилиты в карте по умолчанию `$utilities` с помощью функций `map-get` и `map-merge`. В приведенном ниже примере мы добавляем дополнительное значение к утилитам `width`. Начните с начального `map-merge`, а затем укажите, какую утилиту Вы хотите изменить. Оттуда извлеките вложенную карту `"width"` «map-get» для доступа и изменения параметров и значений утилиты.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -435,9 +435,9 @@ $utilities: map-merge(
 );
 ```
 
-#### Enable responsive
+#### Включение адаптивности
 
-You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
+Вы можете включить адаптивные классы для существующего набора утилит, которые в настоящее время не отвечают по умолчанию. Например, чтобы сделать классы `border` адаптивными:
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -457,7 +457,7 @@ $utilities: map-merge(
 );
 ```
 
-This will now generate responsive variations of `.border` and `.border-0` for each breakpoint. Your generated CSS will look like this:
+Теперь это будет генерировать ответные варианты `.border` и `.border-0` для каждой контрольной точки. Ваш сгенерированный CSS будет выглядеть так:
 
 ```css
 .border { ... }
@@ -489,9 +489,9 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 }
 ```
 
-#### Rename utilities
+#### Переименование утилит
 
-Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
+Отсутствуют утилиты v4 или Вы привыкли к другому соглашению об именах? API утилит можно использовать для переопределения результирующего `class` данной утилиты - например, чтобы переименовать утилиты `.ms-*` в старые `.ml-*`:
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -511,9 +511,9 @@ $utilities: map-merge(
 );
 ```
 
-### Remove utilities
+### Удаление утилит
 
-Remove any of the default utilities by setting the group key to `null`. For example, to remove all our `width` utilities, create a `$utilities` `map-merge` and add `"width": null` within.
+Удалите любую из утилит по умолчанию, установив для ключа группы значение `null`. Например, чтобы удалить все наши утилиты `width`, создайте `$utilities`, `map-merge` и добавьте внутрь `"width": null`.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -531,9 +531,9 @@ $utilities: map-merge(
 );
 ```
 
-#### Remove utility in RTL
+#### Удалить утилиту в RTL
 
-Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
+Некоторые крайние случаи затрудняют [стилизацию RTL](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), например, разрывы строк на арабском языке. Таким образом, утилиты можно исключить из вывода RTL, установив для опции `rtl` значение `false`:
 
 ```scss
 $utilities: (
@@ -546,7 +546,7 @@ $utilities: (
 );
 ```
 
-Output:
+Вывод:
 
 ```css
 /* rtl:begin:remove */
@@ -557,4 +557,4 @@ Output:
 /* rtl:end:remove */
 ```
 
-This doesn't output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).
+Это ничего не выводит в RTL, благодаря [управляющей директиве RTLCSS `remove`](https://rtlcss.com/learn/usage-guide/control-directives/#remove).

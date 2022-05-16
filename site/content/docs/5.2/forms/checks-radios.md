@@ -1,143 +1,143 @@
 ---
 layout: docs
-title: Checks and radios
-description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
+title: Флажки и радио кнопки
+description: Создавайте согласованные кроссбраузерные и кросс-платформенные чекбоксы и радио переключатели с помощью нашего полностью переписанного компонента.
 group: forms
 aliases: "/docs/5.2/forms/checks/"
 toc: true
 ---
 
-## Approach
+## Подход
 
-Browser default checkboxes and radios are replaced with the help of `.form-check`, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+Флажки и радио по умолчанию в браузере заменяются с помощью `.form-check`, серии классов для обоих типов ввода, которые улучшают макет и поведение их HTML-элементов, что обеспечивает большую настройку и согласованность между браузерами. Флажки предназначены для выбора одного или нескольких вариантов в списке, в то время как радио - для выбора одного варианта из многих.
 
-Structurally, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. We use the sibling selector (`~`) for all our `<input>` states, like `:checked` or `:disabled`. When combined with the `.form-check-label` class, we can easily style the text for each item based on the `<input>`'s state.
+Структурно наши `<input>` и `<label>` являются одноуровневыми элементами в отличие от `<input>` внутри `<label>`. Это немного более подробно, так как Вы должны указать атрибуты `id` и `for`, чтобы связать `<input>` и `<label>`. Мы используем родственный селектор (`~`) для всех наших состояний `<input>`, таких как `:checked` или `:disabled`. В сочетании с классом `.form-check-label` мы можем легко стилизовать текст для каждого элемента на основе состояния `<input>`'.
 
-Our checks use custom Bootstrap icons to indicate checked or indeterminate states.
+В наших проверках используются пользовательские иконки Bootstrap для обозначения отмеченных или неопределенных состояний.
 
-## Checks
+## Флажки
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
   <label class="form-check-label" for="flexCheckDefault">
-    Default checkbox
+    Флажок по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
   <label class="form-check-label" for="flexCheckChecked">
-    Checked checkbox
+    Выбранный флажок
   </label>
 </div>
 {{< /example >}}
 
-### Indeterminate
+### Неопределенный
 
-Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+Чекбоксы могут использовать псевдокласс `:indeterminate` при ручной установке через JavaScript (нет доступного атрибута HTML для его указания).
 
 {{< example class="bd-example-indeterminate">}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
   <label class="form-check-label" for="flexCheckIndeterminate">
-    Indeterminate checkbox
+    Неопределенный флажок
   </label>
 </div>
 {{< /example >}}
 
-### Disabled
+### Отключенный
 
-Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+Добавьте атрибут `disabled`, и для связанных тегов `<label>` будет автоматически применен стиль, соответствующий более светлому цвету, чтобы помочь указать состояние ввода.
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
   <label class="form-check-label" for="flexCheckDisabled">
-    Disabled checkbox
+    Отключенный флажок
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
   <label class="form-check-label" for="flexCheckCheckedDisabled">
-    Disabled checked checkbox
+    Отключенный выбранный флажок
   </label>
 </div>
 {{< /example >}}
 
-## Radios
+## Радио
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
   <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
+    Радио по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
   <label class="form-check-label" for="flexRadioDefault2">
-    Default checked radio
+    Радио выбранное по умолчанию
   </label>
 </div>
 {{< /example >}}
 
-### Disabled
+### Отключенное
 
-Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+Добавьте атрибут `disabled`, и для связанных тегов `<label>` будет автоматически применен стиль, соответствующий более светлому цвету, чтобы помочь указать состояние ввода.
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
   <label class="form-check-label" for="flexRadioDisabled">
-    Disabled radio
+    Отключенное радио
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
   <label class="form-check-label" for="flexRadioCheckedDisabled">
-    Disabled checked radio
+    Отключенное выбранное радио
   </label>
 </div>
 {{< /example >}}
 
-## Switches
+## Переключатели
 
-A switch has the markup of a custom checkbox but uses the `.form-switch` class to render a toggle switch. Consider using `role="switch"` to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the `disabled` attribute.
+Переключатель имеет разметку настраиваемого флажка, но для визуализации переключателя использует класс `.form-switch`. Рассмотрите возможность использования `role="switch"`, чтобы более точно передать характер управления вспомогательным технологиям, которые поддерживают эту роль. В старых вспомогательных технологиях это будет просто объявлено как обычный флажок в качестве запасного варианта. Коммутаторы также поддерживают атрибут `disabled`.
 
 {{< example >}}
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Ввод флажка переключателя по умолчанию</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Выбран флажок переключателя ввода</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
-  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckDisabled">Отключено переключение флажка ввода</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Отключено переключение флажка в поле ввода</label>
 </div>
 {{< /example >}}
 
-## Default (stacked)
+## По умолчанию (сложены)
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+По умолчанию любое количество флажков и радио, которые являются ближайшими родственниками, будут располагаться вертикально и соответствующим образом разнесены с помощью `.form-check`.
 
 {{< example >}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
+    Флажок по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
   <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
+    Отключенный флажок
   </label>
 </div>
 {{< /example >}}
@@ -146,26 +146,26 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    Default radio
+    Радио по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
-    Second default radio
+    Второе радио по умолчанию
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
   <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
+    Отключенное радио
   </label>
 </div>
 {{< /example >}}
 
-## Inline
+## Строчные
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+Сгруппируйте флажки или радио в одном горизонтальном ряду, добавив `.form-check-inline` к любому `.form-check`.
 
 {{< example >}}
 <div class="form-check form-check-inline">
@@ -178,7 +178,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineCheckbox3">3 (отключенный)</label>
 </div>
 {{< /example >}}
 
@@ -193,37 +193,37 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineRadio3">3 (отключенный)</label>
 </div>
 {{< /example >}}
 
-## Reverse
+## Реверс
 
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+Поместите флажки, радио и переключатели на противоположную сторону с помощью класса-модификатора `.form-check-reverse`.
 
 {{< example >}}
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
   <label class="form-check-label" for="reverseCheck1">
-    Reverse checkbox
+    Обратный флажок
   </label>
 </div>
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
   <label class="form-check-label" for="reverseCheck2">
-    Disabled reverse checkbox
+    Отключен обратный флажок
   </label>
 </div>
 
 <div class="form-check form-switch form-check-reverse">
   <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-  <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckReverse">Вход флажка обратного переключателя</label>
 </div>
 {{< /example >}}
 
-## Without labels
+## Без меток
 
-Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
+Не используйте упаковку `.form-check` для флажков и радио, у которых нет текстовой метки. Не забудьте по-прежнему предоставить доступное имя для вспомогательных технологий (например, с помощью `aria-label`). Дополнительные сведения см. в разделе [специальные возможности обзора форм]({{< docsref "/forms/overview#доступность" >}}) .
 
 {{< example >}}
 <div>
@@ -235,67 +235,67 @@ Omit the wrapping `.form-check` for checkboxes and radios that have no label tex
 </div>
 {{< /example >}}
 
-## Toggle buttons
+## Кнопки переключения
 
-Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]({{< docsref "/components/button-group" >}}) if needed.
+Создавайте кнопочные флажки и переключатели, используя стили `.btn` вместо `.form-check-label` в элементах `<label>`. Эти переключатели можно дополнительно сгруппировать в [группу кнопок]({{< docsref "/components/button-group" >}}), если необходимо.
 
-### Checkbox toggle buttons
+### Кнопки переключения флажков
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
+<label class="btn btn-primary" for="btn-check">Одиночный переключатель</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
+<label class="btn btn-primary" for="btn-check-2">Выбранный</label>
 {{< /example >}}
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Отключен</label>
+<label class="btn btn-primary" for="btn-check-3">Отключенный</label>
 {{< /example >}}
 
 {{< callout info >}}
-Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+Визуально эти кнопки переключения флажков идентичны [кнопкам переключения плагинов кнопок]({{< docsref "/components/buttons#button-plugin" >}}).  Однако вспомогательные технологии передают их по-другому: переключатели флажков будут объявлены программами чтения с экрана как "отмеченные"/"не отмеченные" (поскольку, несмотря на их внешний вид, они по сути остаются флажками), тогда как кнопки переключения плагинов кнопок будут объявляется как "кнопка"/"кнопка нажата". Выбор между этими двумя подходами будет зависеть от типа создаваемого вами переключателя, а также от того, будет ли этот переключатель иметь смысл для пользователей, когда он будет объявлен как флажок или как фактическая кнопка.
 {{< /callout >}}
 
-### Radio toggle buttons
+### Кнопки переключения радио
 
 {{< example >}}
 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-<label class="btn btn-secondary" for="option1">Checked</label>
+<label class="btn btn-secondary" for="option1">Выбранная</label>
 
 <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-<label class="btn btn-secondary" for="option2">Radio</label>
+<label class="btn btn-secondary" for="option2">Радио</label>
 
 <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-<label class="btn btn-secondary" for="option3">Отключен</label>
+<label class="btn btn-secondary" for="option3">Отключенная</label>
 
 <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-<label class="btn btn-secondary" for="option4">Radio</label>
+<label class="btn btn-secondary" for="option4">Радио</label>
 {{< /example >}}
 
-### Outlined styles
+### Стиль контура
 
-Different variants of `.btn`, such at the various outlined styles, are supported.
+Поддерживаются различные варианты `.btn`, например, в различных выделенных стилях.
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+<label class="btn btn-outline-primary" for="btn-check-outlined">Одиночный переключатель</label><br>
 
 <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
-<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Выбранный</label><br>
 
 <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+<label class="btn btn-outline-success" for="success-outlined">Выбранный радио цвета success</label>
 
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+<label class="btn btn-outline-danger" for="danger-outlined">Радио цвета danger</label>
 {{< /example >}}
 
 ## Sass
 
-### Variables
+### Переменные
 
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}

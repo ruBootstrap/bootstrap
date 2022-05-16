@@ -1,145 +1,145 @@
 ---
 layout: docs
-title: Gutters
-description: Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid system.
+title: Промежутки
+description: Промежутки - это отступы между колонками, используемые для гибкого размещения и выравнивания содержимого в системе сетки Bootstrap.
 group: layout
 toc: true
 ---
 
-## How they work
+## Как они работают
 
-- **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content.
+- **Промежутки - это разрывы между содержимым колонок, создаваемые горизонтальным `padding`.** Мы устанавливаем `padding-right` и `padding-left` для каждой колонки и используем отрицательный `margin` для смещения этого значения в начале и конец каждой строки для выравнивания содержимого.
 
-- **Gutters start at `1.5rem` (`24px`) wide.** This allows us to match our grid to the [padding and margin spacers]({{< docsref "/utilities/spacing" >}}) scale.
+- **Промежутки начинаются с ширины `1.5rem` (`24px`).** Это позволяет нам сопоставить нашу сетку с [отступами и полями]({{< docsref "/utilities/spacing" >}}) масштабом.
 
-- **Gutters can be responsively adjusted.** Use breakpoint-specific gutter classes to modify horizontal gutters, vertical gutters, and all gutters.
+- **Промежутки можно адаптировать.** Используйте классы промежутков, специфичные для контрольные точки, для изменения горизонтальных промежутков, вертикальных промежутков и всех промежутков.
 
-## Horizontal gutters
+## Горизонтальные промежутки
 
-`.gx-*` classes can be used to control the horizontal gutter widths. The `.container` or `.container-fluid` parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-4`:
+Классы `.gx-*` могут использоваться для управления шириной горизонтального промежутка. Родительский элемент `.container` или `.container-fluid` может нуждаться в корректировке, если также используются более крупные промежутка, чтобы избежать нежелательного переполнения, с помощью соответствующей утилиты заполнения. Например, в следующем примере мы увеличили отступ с помощью `.px-4`:
 
 {{< example >}}
 <div class="container px-4">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Custom column padding</div>
+     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-An alternative solution is to add a wrapper around the `.row` with the `.overflow-hidden` class:
+Альтернативное решение - добавить оболочку вокруг `.row` с классом `.overflow-hidden`:
 
 {{< example >}}
 <div class="container overflow-hidden">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Custom column padding</div>
+     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Vertical gutters
+## Вертикальные промежутки
 
-`.gy-*` classes can be used to control the vertical gutter widths. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
+Классы `.gy-*` могут использоваться для управления шириной вертикального промежутка. Как и горизонтальные промежутки, вертикальные промежутки могут вызвать переполнение под `.row` в конце страницы. Если это происходит, Вы добавляете оболочку вокруг `.row` с классом `.overflow-hidden`:
 
 {{< example >}}
 <div class="container overflow-hidden">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Horizontal & vertical gutters
+## Горизонтальные и вертикальные промежутки
 
-`.g-*` classes can be used to control the horizontal gutter widths, for the following example we use a smaller gutter width, so there won't be a need to add the `.overflow-hidden` wrapper class.
+Классы `.g-*` могут использоваться для управления шириной горизонтального промежутка, в следующем примере мы используем меньшую ширину промежутка, поэтому нет необходимости добавлять класс-оболочку `.overflow-hidden`.
 
 {{< example >}}
 <div class="container">
   <div class="row g-2">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Row columns gutters
+## Промежутки колонок ряда
 
-Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-columns" >}}). In the following example, we use responsive row columns and responsive gutter classes.
+Классы промежутков также можно добавить в [ряд колонок]({{< docsref "/layout/grid#ряд-колонок" >}}). В следующем примере мы используем адаптивные колонки ряда и адаптивные классы промежутков.
 
 {{< example >}}
 <div class="container">
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Колонка ряда</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## No gutters
+## Нет промежутков
 
-The gutters between columns in our predefined grid classes can be removed with `.g-0`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
+Промежутки между колонками в наших предопределенных классах сетки могут быть удалены с помощью `.g-0`. Это удаляет отрицательные отступы `margin` из `.row` и горизонтальные `padding` из всех непосредственных дочерних колонок.
 
-**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid` and add `.mx-0` to the `.row` to prevent overflow.
+**Нужен сквозной дизайн?** Удалите родительский файл `.container` или `.container-fluid` и добавьте `.mx-0` к `.row`, чтобы предотвратить переполнение.
 
-In practice, here's how it looks. Note you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
+На практике это выглядит так. Обратите внимание, что Вы можете продолжать использовать это со всеми другими предопределенными классами сетки (включая ширину колонок, адаптивные уровни, изменение порядка и т.д.).
 
 {{< example class="bd-example-row" >}}
 <div class="row g-0">
@@ -148,9 +148,9 @@ In practice, here's how it looks. Note you can continue to use this with all oth
 </div>
 {{< /example >}}
 
-## Change the gutters
+## Изменения промежутков
 
-Classes are built from the `$gutters` Sass map which is inherited from the `$spacers` Sass map.
+Классы строятся из карты Sass `$gutters`, унаследованной от карты Sass `$spacers`.
 
 ```scss
 $grid-gutter-width: 1.5rem;

@@ -1,45 +1,45 @@
 ---
 layout: docs
 title: RTL
-description: Learn how to enable support for right-to-left text in Bootstrap across our layout, components, and utilities.
+description: Узнайте, как включить поддержку текста с написанием справа налево в Bootstrap для нашего макета, компонентов и утилит.
 group: getting-started
 toc: true
 ---
 
-## Get familiar
+## Разобраться
 
-We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
+Мы рекомендуем сначала познакомиться с Bootstrap, прочитав нашу [страницу введения в начало работы]({{< docsref "/getting-started/introduction" >}}). После того, как вы пройдете через это, продолжайте читать здесь, чтобы узнать, как включить RTL.
 
-You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
+Вы также можете прочитать [проект RTLCSS](https://rtlcss.com/), поскольку он поддерживает наш подход к RTL.
 
 {{< callout warning >}}
-### Experimental feature
+### Экспериментальная функция
 
-The RTL feature is still **experimental** and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new), we'd love to get your insights.
+Функция RTL все еще **экспериментальная** и, вероятно, будет развиваться в соответствии с отзывами пользователей. Заметили что-то или хотите предложить улучшение? [Открыть проблему]({{< param repo >}}/issues/new), мы будем рады узнать Ваше мнение.
 {{< /callout >}}
 
-## Required HTML
+## Обязательный HTML
 
-There are two strict requirements for enabling RTL in Bootstrap-powered pages.
+Есть два строгих требования для включения RTL на страницах с поддержкой Bootstrap.
 
-1. Set `dir="rtl"` on the `<html>` element.
-2. Add an appropriate `lang` attribute, like `lang="ar"`, on the `<html>` element.
+1. Установите `dir="rtl"` в элементе `<html>`.
+2. Добавьте соответствующий атрибут `lang`, например `lang="ar"`, в элемент `<html>`.
 
-From there, you'll need to include an RTL version of our CSS. For example, here's the stylesheet for our compiled and minified CSS with RTL enabled:
+Оттуда Вам нужно будет включить RTL-версию нашего CSS. Например, вот таблица стилей для нашего скомпилированного и миниатюрного CSS с включенным RTL:
 
 ```html
 <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 ```
 
-### Starter template
+### Стартовый шаблон
 
-You can see the above requirements reflected in this modified RTL starter template.
+Вы можете увидеть приведенные выше требования, отраженные в этом модифицированном стартовом шаблоне RTL.
 
 ```html
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
-    <!-- Required meta tags -->
+    <!-- Обязательные метатеги -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,12 +51,12 @@ You can see the above requirements reflected in this modified RTL starter templa
   <body>
     <h1>مرحبًا بالعالم!</h1>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Дополнительный JavaScript; выберите один из двух! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Вариант 1: пакет Bootstrap с Popper -->
     <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- Вариант 2: отдельные JS для Popper и Bootstrap -->
     <!--
     <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
     <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
@@ -65,35 +65,35 @@ You can see the above requirements reflected in this modified RTL starter templa
 </html>
 ```
 
-### RTL examples
+### Примеры RTL
 
-Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
+Начните с одного из нескольких [примеров RTL]({{< docsref "/examples/#rtl" >}}).
 
-## Approach
+## Подход
 
-Our approach to building RTL support into Bootstrap comes with two important decisions that impact how we write and use our CSS:
+Наш подход к созданию поддержки RTL в Bootstrap включает два важных решения, которые влияют на то, как мы пишем и используем наш CSS:
 
-1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.
+1. **Во-первых, мы решили создать его с помощью проекта [RTLCSS](https://rtlcss.com/).** Это дает нам несколько мощных функций для управления изменениями и переопределениями при переходе от LTR к RTL. Это также позволяет нам создавать две версии Bootstrap из одной кодовой базы.
 
-2. **Second, we've renamed a handful of directional classes to adopt a logical properties approach.** Most of you have already interacted with logical properties thanks to our flex utilities—they replace direction properties like `left` and `right` in favor `start` and `end`. That makes the class names and values appropriate for LTR and RTL without any overhead.
+2. **Во-вторых, мы переименовали несколько классов направлений, чтобы принять подход логических свойств.** Большинство из Вас уже взаимодействовали с логическими свойствами благодаря нашим гибким утилитам - они заменяют свойства направления, такие как `left` и `right` в пользу `start` и `end`. Это делает имена и значения классов подходящими для LTR и RTL без каких-либо накладных расходов.
 
-  For example, instead of `.ml-3` for `margin-left`, use `.ms-3`.
+  Например, вместо `.ml-3` для `margin-left` используйте `.ms-3`.
 
-Working with RTL, through our source Sass or compiled CSS, shouldn't be much different from our default LTR though.
+Однако работа с RTL через наш исходный Sass или скомпилированный CSS не должна сильно отличаться от нашего LTR по умолчанию.
 
-## Customize from source
+## Настроить из источника
 
-When it comes to [customization]({{< docsref "/customize/sass" >}}), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
+Когда дело доходит до [настройки]({{< docsref "/customize/sass" >}}), предпочтительным способом является использование переменных, карт и миксинов. Этот подход работает одинаково для RTL, даже если он подвергается постобработке из скомпилированных файлов, благодаря [как работает RTLCSS](https://rtlcss.com/learn/getting-started/why-rtlcss/).
 
-### Custom RTL values
+### Пользовательские значения RTL
 
-Using [RTLCSS value directives](https://rtlcss.com/learn/usage-guide/value-directives/), you can make a variable output a different value for RTL. For example, to decrease the weight for `$font-weight-bold` throughout the codebase, you may use the `/*rtl: {value}*/` syntax:
+Используя [директивы значений RTLCSS](https://rtlcss.com/learn/usage-guide/value-directives/), Вы можете заставить переменную выводить другое значение для RTL. Например, чтобы уменьшить вес для `$font-weight-bold` во всей кодовой базе, Вы можете использовать синтаксис `/*rtl: {value}*/`:
 
 ```scss
 $font-weight-bold: 700 #{/* rtl:600 */} !default;
 ```
 
-Which would output to the following for our default CSS and RTL CSS:
+Что приведет к следующему для наших CSS и RTL CSS по умолчанию:
 
 ```css
 /* bootstrap.css */
@@ -107,38 +107,38 @@ dt {
 }
 ```
 
-### Alternative font stack
+### Альтернативный стек шрифтов
 
-In the case you're using a custom font, be aware that not all fonts support the non-Latin alphabet. To switch from Pan-European to Arabic family, you may need to use `/*rtl:insert: {value}*/` in your font stack to modify the names of font families.
+Если Вы используете собственный шрифт, имейте в виду, что не все шрифты поддерживают нелатинский алфавит. Чтобы переключиться с панъевропейского семейства на арабское, Вам может потребоваться использовать `/*rtl:insert: {value}*/` в Вашем стеке шрифтов, чтобы изменить имена семейств шрифтов.
 
-For example, to switch from `Helvetica Neue` font for LTR to `Helvetica Neue Arabic` for RTL, your Sass code could look like this:
+Например, чтобы переключиться со шрифта `Helvetica Neue` для LTR на `Helvetica Neue Arabic` для RTL, ваш код Sass может выглядеть так:
 
 ```scss
 $font-family-sans-serif:
   Helvetica Neue #{"/* rtl:insert:Arabic */"},
-  // Cross-platform generic font family (default user interface font)
+  // Кросс-платформенное общее семейство шрифтов (шрифт пользовательского интерфейса по умолчанию)
   system-ui,
-  // Safari for macOS and iOS (San Francisco)
+  // Safari для macOS и iOS (San Francisco)
   -apple-system,
-  // Chrome < 56 for macOS (San Francisco)
+  // Chrome < 56 для macOS (Сан-Франциско)
   BlinkMacSystemFont,
   // Windows
   "Segoe UI",
   // Android
   Roboto,
-  // Basic web fallback
+  // Базовый резервный веб-сайт
   Arial,
   // Linux
   "Noto Sans",
-  // Sans serif fallback
+  // Резервный вариант без засечек
   sans-serif,
-  // Emoji fonts
+  // Emoji шрифты
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-### LTR and RTL at the same time
+### LTR и RTL одновременно
 
-Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/), this is pretty straightforward. Wrap your `@import`s with a class, and set a custom rename rule for RTLCSS:
+Нужны и LTR, и RTL на одной странице? Благодаря [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/), это довольно просто. Оберните свой `@import` классом и установите собственное правило переименования для RTLCSS:
 
 ```scss
 /* rtl:begin:options: {
@@ -160,23 +160,23 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
 /*rtl:end:options*/
 ```
 
-After running Sass then RTLCSS, each selector in your CSS files will be prepended by `.ltr`, and `.rtl` for RTL files. Now you're able to use both files on the same page, and simply use `.ltr` or `.rtl` on your components wrappers to use one or the other direction.
+После запуска Sass, а затем RTLCSS, каждый селектор в Ваших файлах CSS будет предваряться `.ltr` и `.rtl` для файлов RTL. Теперь Вы можете использовать оба файла на одной странице и просто использовать `.ltr` или `.rtl` в оболочках Ваших компонентов, чтобы использовать то или иное направление.
 
 {{< callout warning >}}
-#### Edge cases and known limitations
+#### Пограничные случаи и известные ограничения
 
-While this approach is understandable, please pay attention to the following:
+Хотя такой подход понятен, обратите внимание на следующее:
 
-1. When switching `.ltr` and `.rtl`, make sure you add `dir` and `lang` attributes accordingly.
-2. Loading both files can be a real performance bottleneck: consider some [optimization]({{< docsref "/customize/optimize" >}}), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
-3. Nesting styles this way will prevent our `form-validation-state()` mixin from working as intended, thus require you tweak it a bit by yourself. [See #31223](https://github.com/twbs/bootstrap/issues/31223).
+1. При переключении `.ltr` и `.rtl` убедитесь, что вы добавили атрибуты `dir` и `lang` соответственно.
+2. Загрузка обоих файлов может стать настоящим узким местом для производительности: подумайте о некоторой [оптимизации]({{< docsref "/customize/optimize" >}}) и, возможно, попробуйте [загрузить один из этих файлов асинхронно](https://www.filamentgroup.com/lab/load-css-simpler/).
+3. Вложение стилей таким образом предотвратит работу миксина `form-validation-state()` должным образом, поэтому Вам придется немного подправить его самостоятельно. [Смотрите #31223](https://github.com/twbs/bootstrap/issues/31223).
 {{< /callout >}}
 
-## The breadcrumb case
+## Случай хлебных крошек
 
-The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
+[Разделитель хлебных крошек]({{< docsref "/components/breadcrumb" >}}/#разделители) единственный случай, когда требуется собственная новая переменная, а именно `$breadcrumb-divider-flipped`, по умолчанию `$breadcrumb-divider`.
 
-## Additional resources
+## Дополнительные ресурсы
 
 - [RTLCSS](https://rtlcss.com/)
 - [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling)

@@ -351,7 +351,7 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 
 {{% js-dismiss "toast" %}}
 
-### Параметры
+### Опции
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}

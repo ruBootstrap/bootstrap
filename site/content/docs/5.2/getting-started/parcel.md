@@ -1,22 +1,22 @@
 ---
 layout: docs
 title: Parcel
-description: Learn how to include Bootstrap in your project using Parcel.
+description: Узнайте, как включить Bootstrap в свой проект с помощью Parcel.
 group: getting-started
 toc: true
 ---
 
-## Install Parcel
+## Установка Parcel
 
-Install [Parcel Bundler](https://parceljs.org/getting-started/webapp/).
+Установка [Parcel Bundler](https://parceljs.org/getting-started/webapp/).
 
-## Install Bootstrap
+## Установка Bootstrap
 
-[Install bootstrap]({{< docsref "/getting-started/download#npm" >}}) as a Node.js module using npm.
+[Установка bootstrap]({{< docsref "/getting-started/download#npm" >}}) как модуль Node.js с использованием npm.
 
-Bootstrap depends on [Popper](https://popper.js.org/), which is specified in the `peerDependencies` property. This means that you will have to make sure to add both of them to your `package.json` using `npm install @popperjs/core`.
+Bootstrap зависит от [Popper](https://popper.js.org/), который указан в свойстве `peerDependencies`. Это означает, что вам нужно обязательно добавить их обоих в свой `package.json`, используя `npm install @popperjs/core`.
 
-When all will be completed, your project will be structured like this:
+Когда все будет завершено, Ваш проект будет иметь такую структуру:
 
 ```text
 project-name/
@@ -33,31 +33,31 @@ project-name/
 └── package.json
 ```
 
-## Importing JavaScript
+## Импорт JavaScript
 
-Import [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}) in your app's entry point (usually `src/index.js`). You can import all our plugins in one file or separately if you require only a subset of them.
+Импортируйте [Bootstrap's JavaScript]({{< docsref "/getting-started/javascript" >}}) в точку входа Вашего приложения (обычно `src/index.js`). Вы можете импортировать все наши плагины в одном файле или по отдельности, если Вам требуется только часть из них.
 
 <!-- eslint-skip -->
 ```js
-// Import all plugins
+// Импортировать все плагины
 import * as bootstrap from 'bootstrap';
 
-// Or import only needed plugins
+// Или импортируйте только необходимые плагины
 import { Tooltip as Tooltip, Toast as Toast, Popover as Popover } from 'bootstrap';
 
-// Or import just one
+// Или импортируйте только один
 import Alert as Alert from '../node_modules/bootstrap/js/dist/alert';
 ```
 
-## Importing CSS
+## Импорт CSS
 
-To utilize the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project's bundling process.
+Чтобы использовать весь потенциал Bootstrap и настроить его в соответствии с вашими потребностями, используйте исходные файлы как часть процесса сборки вашего проекта.
 
-Create your own `scss/custom.scss` to [import Bootstrap's Sass files]({{< docsref "/customize/sass#importing" >}}) and then override the [built-in custom variables]({{< docsref "/customize/sass#variable-defaults" >}}).
+Создайте свой собственный `scss/custom.scss` для [импорта файлов Bootstrap Sass]({{< docsref "/customize/sass#importing" >}}), а затем переопределите [встроенные пользовательские переменные]({{< docsref "/customize/sass#variable-defaults" >}}).
 
-## Build app
+## Создать приложение
 
-Include `src/index.js` before the closing `</body>` tag.
+Включите `src/index.js` перед закрывающим тегом `</body>`.
 
 ```html
 <!doctype html>
@@ -72,9 +72,9 @@ Include `src/index.js` before the closing `</body>` tag.
 </html>
 ```
 
-### Edit `package.json`
+### Редактирование `package.json`
 
-Add `dev` and `build` scripts in your `package.json` file.
+Добавьте сценарии `dev` и `build` в Ваш файл `package.json`.
 
 ```json
 "scripts": {
@@ -84,17 +84,17 @@ Add `dev` and `build` scripts in your `package.json` file.
 }
 ```
 
-### Run dev script
+### Запустить сценарий разработчика (dev)
 
-Your app will be accessible at `http://127.0.0.1:1234`.
+Ваше приложение будет доступно по адресу `http://127.0.0.1:1234`.
 
 ```sh
 npm run dev
 ```
 
-### Build app files
+### Сборка файлов приложения
 
-Built files are in the `build/` folder.
+Собранные файлы находятся в папке `build/`.
 
 ```sh
 npm run build

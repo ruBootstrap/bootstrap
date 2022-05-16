@@ -7,7 +7,7 @@ toc: true
 added: "5.2"
 ---
 
-## Overview
+## Обзор
 
 {{< added-in "5.2.0" >}}
 
