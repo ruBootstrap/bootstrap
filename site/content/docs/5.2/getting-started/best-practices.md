@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: Best practices
-description: Learn about some of the best practices we've gathered from years of working on and using Bootstrap.
+title: Лучшие практики
+description: Узнайте о некоторых лучших практиках, которые мы собрали за годы работы и использования Bootstrap.
 group: getting-started
 ---
 
-We've designed and developed Bootstrap to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
+Мы разработали и разработали Bootstrap для работы в различных средах. Вот некоторые из лучших практик, которые мы собрали за годы работы и собственного использования.
 
 {{< callout info >}}
-**Heads up!** This copy is a work in progress.
+**Внимание!** Эта копия находится в стадии разработки.
 {{< /callout >}}
 
-### General outline
+### Общая схема
 
-- Working with CSS
-- Working with Sass files
-- Building new CSS components
-- Working with flexbox
-- Ask in [Slack](https://bootstrap-slack.herokuapp.com/)
+- Работа с CSS.
+- Работа с файлами Sass
+- Создание новых компонентов CSS
+- Работа с флексбоксом
+- Спросите в [Slack](https://bootstrap-slack.herokuapp.com/)

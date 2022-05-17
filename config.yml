@@ -67,9 +67,11 @@ params:
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com/"
   opencollective:       "https://opencollective.com/bootstrap"
-  blog:                 "https://blog.getbootstrap.su/"
+  blog:                 "https://blog.getbootstrap.com/"
+  blog_ru:              "https://blog.getbootstrap.su/"
   themes:               "https://themes.getbootstrap.com/"
-  icons:                "https://icons.getbootstrap.su/"
+  icons:                "https://icons.getbootstrap.com/"
+  icons_ru:             "https://icons.getbootstrap.su/"
   original_url:         "https://getbootstrap.com/"
 
   download:

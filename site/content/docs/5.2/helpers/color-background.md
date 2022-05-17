@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Color & background
-description: Set a background color with contrasting foreground color.
+title: Цвет и фон
+description: Установите цвет фона с контрастным цветом переднего плана.
 group: helpers
 toc: true
 added: "5.2"
@@ -11,42 +11,42 @@ added: "5.2"
 
 {{< added-in "5.2.0" >}}
 
-Color and background helpers combine the power of our [`.text-*` utilities]({{< docsref "/utilities/colors" >}}) and [`.bg-*` utilities]({{< docsref "/utilities/background" >}}) in one class. Using our Sass `color-contrast()` function, we automatically determine a contrasting `color` for a particular `background-color`.
+Помощники по цвету и фону сочетают в себе мощь наших [утилит `.text-*`]({{< docsref "/utilities/colors" >}}) и [утилит `.bg-*`]({{< docsref "/utilities/background" >}}) в одном классе. Используя нашу функцию Sass `color-contrast()`, мы автоматически определяем контрастный `color` для определенного `background-color`.
 
 {{< callout warning >}}
-**Heads up!** There's currently no support for a CSS-native `color-contrast` function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
+**Внимание!** В настоящее время нет поддержки нативной CSS-функции `color-contrast`, поэтому мы используем нашу собственную через Sass. Это означает, что настройка цветов нашей темы с помощью переменных CSS может вызвать проблемы с цветовым контрастом в этих утилитах.
 {{< /callout >}}
 
 {{< example >}}
 {{< text-bg.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="text-bg-{{ .name }} p-3">{{ .name | title }} with contrasting color</div>
+<div class="text-bg-{{ .name }} p-3">{{ .name | title }} с контрастным цветом</div>
 {{- end -}}
 {{< /text-bg.inline >}}
 {{< /example >}}
 
-## With components
+## С компонентами
 
-Use them in place of combined `.text-*` and `.bg-*` classes, like on [badges]({{< docsref "/components/badge#background-colors" >}}):
+Используйте их вместо комбинированных классов `.text-*` и `.bg-*`, как в [баджах]({{< docsref "/components/badge#background-colors" >}}):
 
 {{< example >}}
 <span class="badge text-bg-primary">Primary</span>
 <span class="badge text-bg-info">Info</span>
 {{< /example >}}
 
-Or on [cards]({{< docsref "/components/card#background-and-color" >}}):
+Или на [карточках]({{< docsref "/components/card#background-and-color" >}}):
 
 {{< example >}}
 <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Заголовок</div>
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Небольшой пример текста, который будет основываться на заголовке карты и составлять основную часть содержимого карточки.</p>
   </div>
 </div>
 <div class="card text-bg-info mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Заголовок</div>
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Небольшой пример текста, который будет основываться на заголовке карты и составлять основную часть содержимого карточки.</p>
   </div>
 </div>
 {{< /example >}}

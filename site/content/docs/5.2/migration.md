@@ -11,23 +11,23 @@ toc: true
 
 <hr class="mb-4">
 
-### Refreshed design
+### Обновленный дизайн
 
-Bootstrap v5.2.0 features a subtle design update for a handful of components and properties across the project, **most notably through refined `border-radius` values on buttons and form controls**. Our documentation also has been updated with a new homepage, simpler docs layout that no longer collapses sections of the sidebar, and more prominent examples of [Bootstrap Icons](https://icons.getbootstrap.com).
+В Bootstrap версии 5.2.0 представлено тонкое обновление дизайна для нескольких компонентов и свойств по всему проекту, **в первую очередь за счет уточненных значений `border-radius` на кнопках и элементах управления формы**. Наша документация также была обновлена за счет новой домашней страницы, более простого макета документов, который больше не сворачивает разделы боковой панели, и более заметных примеров [Иконок Bootstrap](https://icons.getbootstrap.su).
 
-### More CSS variables
+### Дополнительные переменные CSS
 
-**We've updated all our components to use CSS variables.** While Sass still underpins everything, each component has been updated to include CSS variables on the component base classes (e.g., `.btn`), allowing for more real-time customization of Bootstrap. In subsequent releases, we'll continue to expand our use of CSS variables into our layout, forms, helpers, and utilities. Read more about CSS variables in each component on their respective documentation pages.
+**Мы обновили все наши компоненты, чтобы использовать переменные CSS.** Хотя Sass по-прежнему лежит в основе всего, каждый компонент был обновлен, чтобы включить переменные CSS в базовые классы компонентов (например, `.btn`), что позволяет более реально временная настройка Bootstrap. В последующих выпусках мы продолжим расширять использование переменных CSS в нашем макете, формах, помощниках и утилитах. Узнайте больше о переменных CSS в каждом компоненте на соответствующих страницах документации.
 
-Our CSS variable usage will be somewhat incomplete until Bootstrap 6. While we'd love to fully implement these across the board, they do run the risk of causing breaking changes. For example, setting `$alert-border-width: var(--bs-border-width)` in our source code breaks potential Sass in your own code if you were doing `$alert-border-width * 2` for some reason.
+Наше использование переменных CSS будет несколько неполным до Bootstrap 6. Хотя мы хотели бы полностью реализовать их по всем направлениям, они рискуют вызвать критические изменения. Например, установка `$alert-border-width: var(--bs-border-width)` в нашем исходном коде нарушает потенциал Sass в вашем собственном коде, если вы делали `$alert-border-width * 2` для некоторых причин.
 
-As such, wherever possible, we will continue to push towards more CSS variables, but please recognize our implementation may be slightly limited in v5.
+Таким образом, везде, где это возможно, мы продолжим продвигать больше переменных CSS, но, пожалуйста, имейте в виду, что наша реализация может быть немного ограничена в v5.
 
-### New `_maps.scss`
+### Новый `_maps.scss`
 
-**Bootstrap v5.2.0 introduced a new Sass file with `_maps.scss`.** It pulls out several Sass maps from `_variables.scss` to fix an issue where updates to an original map were not applied to secondary maps that extend them. For example, updates to `$theme-colors` were not being applied to other theme maps that relied on `$theme-colors`, breaking key customization workflows. In short, Sass has a limitation where once a default variable or map has been _used_, it cannot be updated. _There's a similar shortcoming with CSS variables when they're used to compose other CSS variables._
+**Bootstrap v5.2.0 представил новый файл Sass с `_maps.scss`.** Он извлекает несколько карт Sass из `_variables.scss`, чтобы исправить проблему, из-за которой обновления исходной карты не применялись к вторичным картам, которые расширяют их. Например, обновления для `$theme-colors` не применялись к другим картам тем, которые основывались на `$theme-colors`, что нарушало основные рабочие процессы настройки. Короче говоря, у Sass есть ограничение: после того, как переменная или карта по умолчанию были _использованы_, их нельзя обновить. _Есть аналогичный недостаток с переменными CSS, когда они используются для составления других переменных CSS._
 
-This is why variable customizations in Bootstrap have to come after `@import "functions"`, but before `@import "variables"` and the rest of our import stack. The same applies to Sass maps—you must override the defaults before they get used. The following maps have been moved to the new `_maps.scss`:
+Вот почему настройки переменных в Bootstrap должны идти после `@import "functions"`, но перед `@import "variables"` и остальной частью нашего стека импорта. То же самое относится и к картам Sass — вы должны переопределить значения по умолчанию, прежде чем они будут использоваться. Следующие карты были перемещены в новый `_maps.scss`:
 
 - `$theme-colors-rgb`
 - `$utilities-colors`
@@ -38,7 +38,7 @@ This is why variable customizations in Bootstrap have to come after `@import "fu
 - `$negative-spacers`
 - `$gutters`
 
-Your custom Bootstrap CSS builds should now look something like this with a separate maps import.
+Ваши пользовательские сборки Bootstrap CSS теперь должны выглядеть примерно так с отдельным импортом карт.
 
 ```diff
   // Functions come first
@@ -64,59 +64,59 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
   // etc
 ```
 
-### New utilities
+### Новые утилиты
 
-- Expanded [`font-weight` utilities]({{< docsref "/utilities/text#font-weight-and-italics" >}}) to include `.fw-semibold` for semibold fonts.
-- Expanded [`border-radius` utilities]({{< docsref "/utilities/borders#sizes" >}}) to include two new sizes, `.rounded-4` and `.rounded-5`, for more options.
+- Расширены [`font-weight` utilities]({{< docsref "/utilities/text#font-weight-and-italics" >}}) для включения `.fw-semibold` для полужирных шрифтов.
+- Расширены [`border-radius` utilities]({{< docsref "/utilities/borders#sizes" >}}), чтобы включить два новых размера, `.rounded-4` и `.rounded-5`, для большего количества опций.
 
-### Additional changes
+### Дополнительные изменения
 
-- **Introduced new `$enable-container-classes` option. —** Now when opting into the experimental CSS Grid layout, `.container-*` classes will still be compiled, unless this option is set to `false`. Containers also now keep their gutter values.
+- **Введена новая опция `$enable-container-classes`. —** Теперь при выборе экспериментального макета CSS Grid классы, `.container-*` по-прежнему будут скомпилированы, если для этого параметра не установлено значение `false`. Контейнеры также теперь сохраняют свои значения промежутков.
 
-- **Offcanvas component now has [responsive variations]({{< docsref "/components/offcanvas#responsive" >}}).** The original `.offcanvas` class remains unchanged—it hides content across all viewports. To make it responsive, change that `.offcanvas` class to any `.offcanvas-{sm|md|lg|xl|xxl}` class.
+- **Компонент Offcanvas теперь имеет [отзывчивые варианты]({{< docsref "/components/offcanvas#responsive" >}}).** Исходный класс `.offcanvas` остается неизменным — он скрывает содержимое во всех окнах просмотра. Чтобы сделать его отзывчивым, измените этот класс `.offcanvas` на любой класс `.offcanvas-{sm|md|lg|xl|xxl}`.
 
-- **Thicker table dividers are now opt-in. —** We've removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, `.table-group-divider`. [See the table docs for an example.]({{< docsref "/content/tables#table-group-dividers" >}})
+- **Более толстые разделители столов теперь доступны по желанию. —** Мы удалили более толстую и трудную для переопределения границу между группами таблиц и переместили ее в необязательный класс, который вы можете применить, `.table-group-divider`. [Смотрите пример документации таблицы.]({{< docsref "/content/tables#table-group-dividers" >}})
 
-- **[Scrollspy has been rewritten](https://github.com/twbs/bootstrap/pull/33421) to use the Intersection Observer API**, which means you no longer need relative parent wrappers, deprecates `offset` config, and more. Look for your Scrollspy implementations to be more accurate and consistent in their nav highlighting.
+- **[Scrollspy был переписан](https://github.com/twbs/bootstrap/pull/33421) для использования Intersection Observer API**, что означает, что вам больше не нужны относительные родительские оболочки, устарела конфигурация `offset` и другие. Обратите внимание на то, чтобы ваши реализации Scrollspy были более точными и последовательными в подсветке навигации.
 
-- **Popovers and tooltips now use CSS variables.** Some CSS variables have been updated from their Sass counterparts to reduce the number of variables. As a result, three variables have been deprecated in this release: `$popover-arrow-color`, `$popover-arrow-outer-color`, and `$tooltip-arrow-color`.
+- **Всплывающие окна и Всплывающие подсказки теперь используют переменные CSS.** Некоторые переменные CSS были обновлены по сравнению с их аналогами Sass, чтобы уменьшить количество переменных. В результате в этом выпуске устарели три переменные: `$popover-arrow-color`, `$popover-arrow-outer-color` и `$tooltip-arrow-color`.
 
-- **Added new `.text-bg-{color}` helpers.** Instead of setting individual `.text-*` and `.bg-*` utilities, you can now use [the `.text-bg-*` helpers]({{< docsref "helpers/color-background" >}}) to set a `background-color` with contrasting foreground `color`.
+- **Добавлены новые помощники `.text-bg-{color}`.** Вместо того, чтобы устанавливать отдельные утилиты `.text-*` и `.bg-*`, теперь вы можете использовать [хелперы `.text-bg-*`]({{< docsref "helpers/color-background" >}}), чтобы установить `background-color` с контрастным `color` переднего плана.
 
-- Added `.form-check-reverse` modifier to flip the order of labels and associated checkboxes/radios.
+- Добавлен модификатор `.form-check-reverse` для изменения порядка меток и связанных с ними флажков/радио.
 
-- Added [striped columns]({{< docsref "/content/tables#striped-columns" >}}) support to tables via the new `.table-striped-columns` class.
+- Добавлена поддержка [полосатых столбцов]({{< docsref "/content/tables#striped-columns" >}}) для таблиц через новый класс `.table-striped-columns`.
 
-For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
+Полный список изменений [смотрите в проекте версии 5.2.0 на GitHub](https://github.com/twbs/bootstrap/projects/32).
 
 ## v5.1.0
 
 <hr class="mb-4">
 
-- **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
+- **Добавлена ​​экспериментальная поддержка [макета CSS Grid]({{< docsref "/layout/css-grid" >}}). —** Это находится в стадии разработки и еще не готово к использованию в производственной среде, но вы можете включить новую функцию через Sass. Чтобы включить его, отключите сетку по умолчанию, установив `$enable-grid-classes: false`, и включите сетку CSS, установив `$enable-cssgrid: true`.
 
-- **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]({{< docsref "/components/navbar#offcanvas" >}}) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
+- **Обновлены панели навигации для поддержки offcanvas. —** Добавьте [offcanvas drawers в любую панель навигации]({{< docsref "/components/navbar#offcanvas" >}}) с адаптивными классами `.navbar-expand-*` и некоторой разметкой offcanvas.
 
-- **Added new [placeholder component]({{< docsref "/components/placeholders/" >}}). —** Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.
+- **Добавлен новый [компонент-заполнитель]({{< docsref "/components/placeholders/" >}}). —** Наш новейший компонент, способ предоставления временных блоков вместо реального контента, чтобы показать, что что-то все еще загружается на вашем сайте или в приложении.
 
-- **Collapse plugin now supports [horizontal collapsing]({{< docsref "/components/collapse#horizontal" >}}). —** Add `.collapse-horizontal` to your `.collapse` to collapse the `width` instead of the `height`. Avoid browser repainting by setting a `min-height` or `height`.
+- **Плагин Collapse теперь поддерживает [горизонтальное сворачивание]({{< docsref "/components/collapse#horizontal" >}}). —** Добавьте `.collapse-horizontal` к вашему `.collapse`, чтобы свернуть `width` вместо `height`. Избегайте перерисовки браузера, устанавливая `min-height` или `height`.
 
-- **Added new stack and vertical rule helpers. —** Quickly apply multiple flexbox properties to quickly create custom layouts with [stacks]({{< docsref "/helpers/stacks/" >}}). Choose from horizontal (`.hstack`) and vertical (`.vstack`) stacks. Add vertical dividers similar to `<hr>` elements with the [new `.vr` helpers]({{< docsref "/helpers/vertical-rule/" >}}).
+- **Добавлены новые помощники стека и вертикального правила. —** Быстро применяйте несколько свойств flexbox для быстрого создания пользовательских макетов с помощью [стеков]({{< docsref "/helpers/stacks/" >}}). Выберите один из горизонтальных (`.hstack`) и вертикальных (`.vstack`) стеков. Добавьте вертикальные разделители, похожие на элементы `<hr>`, с помощью [новых помощников `.vr`]({{< docsref "/helpers/vertical-rule/" >}}).
 
-- **Added new global `:root` CSS variables. —** Added several new CSS variables to the `:root` level for controlling `<body>` styles. More are in the works, including across our utilities and components, but for now read up [CSS variables in the Customize section]({{< docsref "/customize/css-variables/" >}}).
+- **Добавлены новые глобальные CSS-переменные `:root`. —** Добавлено несколько новых переменных CSS на уровень `:root` для управления стилями `<body>`. В разработке находится больше, в том числе в отношении наших утилит и компонентов, но пока прочитайте [CSS-переменные в разделе «Кастомизация»]({{< docsref "/customize/css-variables/" >}}).
 
-- **Overhauled color and background utilities to use CSS variables, and added new [text opacity]({{< docsref "/utilities/text#opacity" >}}) and [background opacity]({{< docsref "/utilities/background#opacity" >}}) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
+- **Переработаны утилиты цвета и фона для использования переменных CSS, а также добавлены новые утилиты [непрозрачность текста]({{< docsref "/utilities/text#opacity" >}}) и [непрозрачность фона]({{< docsref "/utilities/background#opacity" >}}). —** Утилиты `.text-*` и `.bg-*` теперь создаются с переменными CSS и значениями цвета `rgba()`, что позволяет легко настраивать любую утилиту с помощью новых утилит непрозрачности.
 
-- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]({{< docsref "/examples#snippets" >}}). Includes [footers]({{< docsref "/examples/footers/" >}}), [dropdowns]({{< docsref "/examples/dropdowns/" >}}), [list groups]({{< docsref "/examples/list-groups/" >}}), and [modals]({{< docsref "/examples/modals/" >}}).
+- **Добавлены новые примеры фрагментов, демонстрирующие, как настраивать наши компоненты. —** Получите готовые к использованию настраиваемые компоненты и другие распространенные шаблоны проектирования с нашими новыми [примерами фрагментов]({{< docsref "/examples#snippets" >}}). Включает [футеры]({{< docsref "/examples/footers/" >}}), [выпадающие списки]({{< docsref "/examples/dropdowns/" >}}), [группы списков]({{< docsref "/examples/list-groups/" >}}), и [модальные окна]({{< docsref "/examples/modals/" >}}).
 
-- **Removed unused positioning styles from popovers and tooltips** as these are handled solely by Popper. `$tooltip-margin` has been deprecated and set to `null` in the process.
+- **Удалены неиспользуемые стили позиционирования из всплывающих окон и всплывающих подсказок**, так как они обрабатываются исключительно Popper. `$tooltip-margin` устарел и установлен в `null` в процессе.
 
-Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
+Хотите больше информации? [Прочитайте сообщение в блоге о версии 5.1.0.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
 
 <hr class="my-5">
 
 {{< callout info >}}
-**Hey there!** Changes to our first major release of Bootstrap 5, v5.0.0, are documented below. They don't reflect the additional changes shown above.
+**Привет!** Ниже задокументированы изменения в нашем первом крупном выпуске Bootstrap 5 v5.0.0. Они не отражают дополнительные изменения, показанные выше.
 {{< /callout >}}
 
 ## Зависимости

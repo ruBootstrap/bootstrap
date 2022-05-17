@@ -151,7 +151,7 @@ if (toastTrigger) {
 
 ### Пользовательский контент
 
-Настройте тосты, удалив подкомпоненты, настроив их с помощью [утилит]({{< docsref "/utilities/api" >}}) или добавив собственную разметку. Здесь мы создали более простой тост, удалив стандартный `.toast-header`, добавив собственный значок скрытия из [Bootstrap Icons]({{< param icons >}}) и используя некоторые [утилиты flexbox]({{< docsref "/utilities/flex" >}}) для настройки макета.
+Настройте тосты, удалив подкомпоненты, настроив их с помощью [утилит]({{< docsref "/utilities/api" >}}) или добавив собственную разметку. Здесь мы создали более простой тост, удалив стандартный `.toast-header`, добавив собственную иконку скрытия из [Bootstrap Icons]({{< param icons_ru >}}) и используя некоторые [утилиты flexbox]({{< docsref "/utilities/flex" >}}) для настройки макета.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">

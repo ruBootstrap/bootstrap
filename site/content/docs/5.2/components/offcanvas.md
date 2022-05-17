@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Вне холста
+title: Offcanvas
 description: Встраивайте в свой проект скрытые боковые панели для навигации, корзины покупок и многого другого с помощью нескольких классов и нашего плагина JavaScript.
 group: components
 toc: true

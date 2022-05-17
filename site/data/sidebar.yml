@@ -40,7 +40,7 @@
       hint: Внести вклад
       slug: contribute
 
-- title: Настройка
+- title: Кастомизация
   icon: palette2
   icon_color: pink
   slug: customize
@@ -51,8 +51,8 @@
     - title: Sass
       hint: Стили
       slug: sass
-    - title: Параметры
-      hint: Быстро настройте
+    - title: Опции
+      hint: Параметры
       slug: options
     - title: Цвет
       hint: Цветовая система
@@ -72,28 +72,28 @@
   icon: grid-fill
   icon_color: teal
   pages:
-    - title: Контрольные точки
+    - title: Breakpoints
       hint: Контрольные точки
       slug: breakpoints
-    - title: Контейнеры
+    - title: Containers
       hint: Контейнеры
       slug: containers
-    - title: Сетка
+    - title: Grid
       hint: Сетка
       slug: grid
-    - title: Колонки
+    - title: Columns
       hint: Колонки
       slug: columns
-    - title: Промежутки
+    - title: Gutters
       hint: Промежутки
       slug: gutters
-    - title: Утилиты
+    - title: Utilities
       hint: Утилиты
       slug: utilities
-    - title: Z-индекс
+    - title: Z-index
       hint: Z-индекс
       slug: z-index
-    - title: CSS-сетка
+    - title: CSS Grid
       hint: Сетка на css
       slug: css-grid
 
@@ -105,16 +105,16 @@
     - title: Reboot
       hint: Перезагрузка
       slug: reboot
-    - title: Типография
+    - title: Typography
       hint: Типографика
       slug: typography
-    - title: Изображения
+    - title: Images
       hint: Настройка изображений
       slug: images
-    - title: Таблицы
+    - title: Tables
       hint: Стили таблиц
       slug: tables
-    - title: Иллюстрации
+    - title: Figures
       hint: Связанные изображения
       slug: figures
 
@@ -135,19 +135,19 @@
     - title: Checks & radios
       hint: Переключатели и флажки
       slug: checks-radios
-    - title: Диапазон
+    - title: Range
       hint: Диапазон
       slug: range
-    - title: Группа ввода
+    - title: Input group
       hint: Группа полей ввода
       slug: input-group
-    - title: Плавающие метки
+    - title: Floating labels
       hint: Плавающие метки
       slug: floating-labels
-    - title: Макет
+    - title: Layout
       hint: Макет
       slug: layout
-    - title: Валидация
+    - title: Validation
       hint: Проверка
       slug: validation
 
