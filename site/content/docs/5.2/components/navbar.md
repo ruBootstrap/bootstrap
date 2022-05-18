@@ -37,7 +37,7 @@ toc: true
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Панель навигации</a>
+    <a class="navbar-brand" href="#">Навбар</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -292,7 +292,7 @@ toc: true
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Панель навигации с текстом</a>
+    <a class="navbar-brand" href="#">Навбар с текстом</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -309,7 +309,7 @@ toc: true
         </li>
       </ul>
       <span class="navbar-text">
-        Текст на панели навигации со встроенным элементом
+        Навбар текст с инлайновым элементом
       </span>
     </div>
   </div>
@@ -327,7 +327,7 @@ toc: true
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Панель навигации</a>
+      <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Переключатель навигации">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -356,7 +356,7 @@ toc: true
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Панель навигации</a>
+      <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Переключатель навигации">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -385,7 +385,7 @@ toc: true
 
   <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Панель навигации</a>
+      <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Переключатель навигации">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -508,7 +508,7 @@ toc: true
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Прокрутка навигационной панели</a>
+    <a class="navbar-brand" href="#">Прокрутка навбара</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -522,7 +522,7 @@ toc: true
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
+            Ссылка
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li><a class="dropdown-item" href="#">Действие</a></li>

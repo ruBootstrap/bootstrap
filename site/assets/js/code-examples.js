@@ -15,14 +15,14 @@
 (() => {
   'use strict'
   // Insert copy to clipboard button before .highlight
-  const btnTitle = 'Copy to clipboard'
-  const btnEdit = 'Edit on StackBlitz'
+  const btnTitle = 'Скопировать в буфер обмена'
+  const btnEdit = 'Редактировать на StackBlitz'
 
   const btnHtml = [
     '<div class="bd-code-snippet">',
     '   <div class="bd-clipboard">',
     '      <button type="button" class="btn-clipboard">',
-    '        <svg class="bi" width="1em" height="1em" fill="currentColor" role="img" aria-label="Copy"><use xlink:href="#clipboard"/></svg>',
+    '        <svg class="bi" width="1em" height="1em" fill="currentColor" role="img" aria-label="Копировать"><use xlink:href="#clipboard"/></svg>',
     '      </button>',
     '   </div>',
     '</div>'
@@ -62,7 +62,7 @@
     const originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
     const originalTitle = event.trigger.title
 
-    tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })
+    tooltipBtn.setContent({ '.tooltip-inner': 'Скопировано!' })
     event.trigger.addEventListener('hidden.bs.tooltip', () => {
       tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
     }, { once: true })
@@ -77,7 +77,7 @@
 
   clipboard.on('error', event => {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-    const fallbackMsg = `Press ${modifierKey}C to copy`
+    const fallbackMsg = `Нажмите ${modifierKey}C, чтобы скопировать`
     const tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
     tooltipBtn.setContent({ '.tooltip-inner': fallbackMsg })
