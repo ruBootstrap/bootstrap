@@ -193,6 +193,8 @@
       hint: Группы списков
       slug: list-group
     - title: Modal
+      hint: Модальное окно
+      slug: modal
     - title: Navbar
       hint: Панель навигации
       slug: navbar
