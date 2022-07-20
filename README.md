@@ -47,11 +47,11 @@
 Доступно несколько вариантов быстрого запуска:
 
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.2.0-beta1.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.2.0.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.2.0-beta1`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.2.0-beta1`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.0-beta1`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.2.0`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.2.0`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.0`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -78,10 +78,11 @@
 
 ## Что включено
 
-В загрузке вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
+В загружаемом файле вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
 
 <details>
   <summary>Скачать содержимое</summary>
+
   ```text
   bootstrap/
   ├── css/
@@ -219,6 +220,12 @@
 
 Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+</a>
+
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
+
 
 ## Спонсоры
 
@@ -245,4 +252,4 @@ Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previ
 
 ## Авторское право и лицензия
 
-Авторские права на код и документацию 2011–2022 гг. [Авторы Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) Код, выпущенный в соответствии с [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документы выпущены под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторские права на код и документацию 2011–2022 гг. [Авторы Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) Код, выпущенный в соответствии с [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

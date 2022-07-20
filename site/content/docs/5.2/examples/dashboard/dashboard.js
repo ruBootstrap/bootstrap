@@ -5,20 +5,20 @@
 
   feather.replace({ 'aria-hidden': 'true' })
 
-  // Графики
+  // Graphs
   const ctx = document.getElementById('myChart')
   // eslint-disable-next-line no-unused-vars
   const myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [
-        'Понедельник',
-        'Вторник',
-        'Среда',
-        'Четверг',
-        'Пятница',
-        'Суббота',
-        'Воскресенье'
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
       ],
       datasets: [{
         data: [

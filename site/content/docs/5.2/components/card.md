@@ -376,7 +376,7 @@ toc: true
 Превратите изображение в фон карты и наложите на нее текст. В зависимости от изображения Вам могут потребоваться или не потребоваться дополнительные стили или утилиты.
 
 {{< example >}}
-<div class="card bg-dark text-white">
+<div class="card text-bg-dark">
   {{< placeholder width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Изображение карточки" >}}
   <div class="card-img-overlay">
     <h5 class="card-title">Заголовок карточки</h5>

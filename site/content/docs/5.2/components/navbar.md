@@ -50,10 +50,10 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Выпадающий список
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Действие</a></li>
             <li><a class="dropdown-item" href="#">Другое действие</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -205,10 +205,10 @@ toc: true
           <a class="nav-link" href="#">Цена</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Выпадающий список ссылкой
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Действие</a></li>
             <li><a class="dropdown-item" href="#">Другое действие</a></li>
             <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -521,10 +521,10 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ссылка
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Действие</a></li>
             <li><a class="dropdown-item" href="#">Другое действие</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -668,7 +668,7 @@ toc: true
 
 ### Offcanvas
 
-Превратите расширяющуюся и сворачивающуюся панель навигации в ящик вне холста с помощью плагина offcanvas. Мы расширяем оба стиля offcanvas по умолчанию и используем наши классы `.navbar-expand-*` для создания динамической и гибкой боковой панели навигации.
+Превратите свою расширяющуюся и сворачивающуюся панель навигации в ящик вне холста с помощью [компонента вне холста]({{< docsref "/components/offcanvas" >}}). Мы расширяем стили offcanvas по умолчанию и используем наши классы `.navbar-expand-*` для создания динамической и гибкой боковой панели навигации.
 
 В приведенном ниже примере, чтобы создать панель навигации вне холста, которая всегда сворачивается во всех контрольных точках, полностью опустите класс `.navbar-expand-*`.
 
@@ -693,10 +693,10 @@ toc: true
             <a class="nav-link" href="#">Ссылка</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Выпадающий список
             </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Действие</a></li>
               <li><a class="dropdown-item" href="#">Другое действие</a></li>
               <li>
@@ -729,6 +729,52 @@ toc: true
   </div>
 </nav>
 ```
+
+При использовании offcanvas на темной панели навигации имейте в виду, что вам может потребоваться темный фон для содержимого offcanvas, чтобы текст не становился неразборчивым. В приведенном ниже примере мы добавляем `.navbar-dark` и `.bg-dark` к `.navbar`, `.text-bg-dark` к `.offcanvas`, `.dropdown-menu-dark` в `.dropdown-menu`, а `.btn-close-white` в `.btn-close` для правильной стилизации с темным фоном.
+
+{{< example >}}
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Offcanvas темная навигационная панель</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Темный offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ссылка</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Выпадающий список
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Действие</a></li>
+              <li><a class="dropdown-item" href="#">Другое действие</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+          <button class="btn btn-success" type="submit">Поиск</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+{{< /example >}}
 
 ## CSS
 

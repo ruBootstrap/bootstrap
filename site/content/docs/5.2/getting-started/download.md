@@ -59,7 +59,7 @@ toc: true
 Установите Bootstrap в приложения, работающие на Node.js, с помощью [пакета npm](https://www.npmjs.com/package/bootstrap):
 
 ```sh
-npm install bootstrap
+npm install bootstrap@{{< param "current_version" >}}
 ```
 
 `const bootstrap = require('bootstrap')` или `import bootstrap from 'bootstrap'` загрузит все плагины Bootstrap в объект `bootstrap`.
@@ -79,7 +79,7 @@ Bootstrap's `package.json` содержит некоторые дополнит�
 Установите Bootstrap в свои приложения, работающие на Node.js, с помощью [пакета yarn](https://yarnpkg.com/en/package/bootstrap):
 
 ```sh
-yarn add bootstrap
+yarn add bootstrap@{{< param "current_version" >}}
 ```
 
 ### RubyGems

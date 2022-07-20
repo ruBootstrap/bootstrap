@@ -90,6 +90,35 @@ toc: true
 </div>
 {{< /example >}}
 
+## Группы ввода
+
+Плавающие метки также поддерживают `.input-group`.
+
+{{< example >}}
+<div class="input-group mb-3">
+  <span class="input-group-text">@</span>
+  <div class="form-floating">
+    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Имя пользователя">
+    <label for="floatingInputGroup1">Имя пользователя</label>
+  </div>
+</div>
+{{< /example >}}
+
+При использовании `.input-group` и `.form-floating` вместе с проверкой формы, `-feedback` должен быть размещен вне `.form-floating`, но внутри `.input-group`. Это означает, что обратную связь нужно будет отображать с помощью javascript.
+
+{{< example >}}
+<div class="input-group has-validation">
+  <span class="input-group-text">@</span>
+  <div class="form-floating is-invalid">
+    <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Имя пользователя" required>
+    <label for="floatingInputGroup2">Имя пользователя</label>
+  </div>
+  <div class="invalid-feedback">
+    Пожалуйста, выберите имя пользователя.
+  </div>
+</div>
+{{< /example >}}
+
 ## Макет
 
 При работе с сеткой Bootstrap обязательно размещайте элементы формы в классах столбцов.

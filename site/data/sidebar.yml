@@ -27,6 +27,9 @@
     - title: Parcel
       hint: Parcel
       slug: parcel
+    - title: Vite
+      hint: Vite
+      slug: vite
     - title: Доступность
       hint: Возможности и ограничения
       slug: accessibility
@@ -243,18 +246,15 @@
     - title: Colored links
       hint: Цветные ссылки
       slug: colored-links
-    - title: Ratio
-      hint: Соотношения
-      slug: ratio
     - title: Position
       hint: Положение
       slug: position
+    - title: Ratio
+      hint: Соотношения
+      slug: ratio
     - title: Stacks
       hint: Стеки
       slug: stacks
-    - title: Visually hidden
-      hint: Визуальное скрытие
-      slug: visually-hidden
     - title: Stretched link
       hint: Растянутая ссылка
       slug: stretched-link
@@ -264,6 +264,9 @@
     - title: Vertical rule
       hint: Вертикальный разделитель
       slug: vertical-rule
+    - title: Visually hidden
+      hint: Визуальное скрытие
+      slug: visually-hidden
 
 - title: Утилиты
   icon: braces-asterisk

@@ -385,6 +385,7 @@ toc: true
 ### Панели навигации
 
 - <span class="badge bg-danger">Breaking</span> Навбарам теперь требуется контейнер внутри (чтобы значительно упростить требования к интервалам и CSS).
+- <span class="badge bg-danger">Breaking</span> Класс `.active` больше нельзя применять к элементам `.nav-item`, его необходимо применять непосредственно к элементам `.nav-link`.
 
 ### Offcanvas
 

@@ -247,53 +247,54 @@ toc: true
 {{< example >}}
 <ul class="list-group">
   <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Первый чекбокс
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">Первый чекбокс</label>
   </li>
   <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Второй чекбокс
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">Второй чекбокс</label>
   </li>
   <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Третий чекбокс
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Четвертый чекбокс
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-    Пятый чекбокс
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Третий чекбокс</label>
   </li>
 </ul>
 {{< /example >}}
 
-И если Вы хотите, чтобы `<label>` в качестве `.list-group-item` для больших областей попадания, Вы тоже могли это сделать.
+{{< example >}}
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+    <label class="form-check-label" for="firstRadio">Первое радио</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+    <label class="form-check-label" for="secondRadio">Второе радио</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+    <label class="form-check-label" for="thirdRadio">Третье радио</label>
+  </li>
+</ul>
+{{< /example >}}
+
+Вы можете использовать `.stretched-link` для `<label>`, чтобы сделать кликабельным весь элемент группы списка.
 
 {{< example >}}
-<div class="list-group">
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Первый чекбокс
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Второй чекбокс
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Третий чекбокс
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Четвертый чекбокс
-  </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-    Пятый чекбокс
-  </label>
-</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+    <label class="form-check-label stretched-link" for="firstCheckboxStretched">Первый чекбокс</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+    <label class="form-check-label stretched-link" for="secondCheckboxStretched">Второй чекбокс</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+    <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Третий чекбокс</label>
+  </li>
+</ul>
 {{< /example >}}
 
 ## CSS
@@ -512,10 +513,10 @@ const tab = bootstrap.Tab.getOrCreateInstance('#trigger') // Returns a Bootstrap
 {{< bs-table >}}
 | Тип события | Описание |
 | --- | --- |
-| `show.bs.tab` | Это событие срабатывает при показе вкладки, но до того, как будет показана новая вкладка. Используйте `event.target` и `event.relatedTarget`, чтобы настроить таргетинг на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
-| `shown.bs.tab` | Это событие срабатывает при показе вкладки после того, как вкладка была показана. Используйте `event.target` и `event.relatedTarget`, чтобы настроить таргетинг на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
 | `hide.bs.tab` | Это событие срабатывает, когда должна быть показана новая вкладка (и, следовательно, предыдущая активная вкладка должна быть скрыта). Используйте `event.target` и `event.relatedTarget`, чтобы настроить таргетинг на текущую активную вкладку и новую вкладку, которая скоро станет активной, соответственно. |
 | `hidden.bs.tab` | Это событие срабатывает после отображения новой вкладки (и, таким образом, предыдущая активная вкладка скрыта). Используйте `event.target` и `event.relatedTarget`, чтобы выбрать предыдущую активную вкладку и новую активную вкладку соответственно. |
+| `show.bs.tab` | Это событие срабатывает при показе вкладки, но до того, как будет показана новая вкладка. Используйте `event.target` и `event.relatedTarget`, чтобы настроить таргетинг на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
+| `shown.bs.tab` | Это событие срабатывает при показе вкладки после того, как вкладка была показана. Используйте `event.target` и `event.relatedTarget`, чтобы настроить таргетинг на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
 {{< /bs-table >}}
 
 ```js

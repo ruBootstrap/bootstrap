@@ -14,7 +14,7 @@ toc: true
 
 ## Доступность
 
-The [<abbr title="Инициатива веб-доступности">WAI</abbr> <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) стандарт определяет фактический виджет [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), но это характерно для меню, похожего на приложение, которое запускает действия или функции. Меню <abbr title="Доступные многофункциональные интернет-приложения">ARIA</abbr> могут содержать только пункты меню, пункты меню флажков, пункты меню радиокнопок, группы радиокнопок и подменю.
+The [<abbr title="Инициатива веб-доступности">WAI</abbr> <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) стандарт определяет фактический виджет [`role="menu"` widget](https://www.w3.org/TR/wai-aria/#menu), но это характерно для меню, похожего на приложение, которое запускает действия или функции. Меню <abbr title="Доступные многофункциональные интернет-приложения">ARIA</abbr> могут содержать только пункты меню, пункты меню флажков, пункты меню радиокнопок, группы радиокнопок и подменю.
 
 С другой стороны, выпадающие списки Bootstrap разработаны как общие и применимы к различным ситуациям и структурам разметки. Например, можно создавать выпадающие списки, содержащие дополнительные входные данные и элементы управления формой, такие как поля поиска или формы входа. По этой причине Bootstrap не ожидает (и не добавляет автоматически) какие-либо атрибуты `role` и `aria-`, необходимые для истинных меню <abbr title="Доступные многофункциональные интернет-приложения">ARIA</abbr>. Авторы должны сами включить эти более конкретные атрибуты.
 
@@ -30,10 +30,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -49,7 +49,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     Ссылка выпадающего списка
   </a>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Другое действие</a></li>
     <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -353,7 +353,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -406,10 +406,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown-center">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список по центру
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Действие два</a></li>
     <li><a class="dropdown-item" href="#">Действие три</a></li>
@@ -482,10 +482,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropup-center dropup">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropupCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список по центру
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropupCenterBtn">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
     <li><a class="dropdown-item" href="#">Действие два</a></li>
     <li><a class="dropdown-item" href="#">Действие три</a></li>
@@ -617,10 +617,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  <ul class="dropdown-menu">
     <li><button class="dropdown-item" type="button">Действие</button></li>
     <li><button class="dropdown-item" type="button">Другое действие</button></li>
     <li><button class="dropdown-item" type="button">Что-то еще здесь</button></li>
@@ -728,10 +728,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Выпадающий список
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
@@ -916,7 +916,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
       Смещение
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
       <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -927,7 +927,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
       <span class="visually-hidden">Переключатель выпадающего списка</span>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+    <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="#">Действие</a></li>
       <li><a class="dropdown-item" href="#">Другое действие</a></li>
       <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
@@ -944,10 +944,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Раскрывающийся список по умолчанию
   </button>
-  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
@@ -955,10 +955,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Кликабельно снаружи
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
@@ -966,10 +966,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Кликабельно внутри
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
@@ -977,10 +977,10 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ручное закрытие
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+  <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
     <li><a class="dropdown-item" href="#">Элемент меню</a></li>
@@ -1039,7 +1039,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
   <button id="dLabel" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Триггер выпадающего списка
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dLabel">
+  <ul class="dropdown-menu">
     ...
   </ul>
 </div>
@@ -1069,12 +1069,12 @@ const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootst
 {{< bs-table "table" >}}
 | Название | Тип | По умолчанию | Описание |
 | --- | --- | --- | --- |
+| `autoClose` | boolean, string | `true` | Настройте автоматическое закрытие раскрывающегося списка: <ul class="my-2"><li>`true` - раскрывающийся список будет закрыт, если щелкнуть снаружи или внутри раскрывающегося меню.</li><li>`false` - раскрывающийся список будет закрыт, если нажать кнопку переключения и вручную вызвать метод `hide` или `toggle`. (Также не будет закрыто нажатием клавиши <kbd>esc</kbd>)</li><li>`'inside'` - выпадающее меню будет закрыто (только) нажатием внутри выпадающего меню.</li>  <li>`'outside'` - выпадающее меню будет закрыто (только) нажатием вне выпадающего меню.</li></ul> Примечание: выпадающее меню всегда можно закрыть с помощью клавиши <kbd>ESC</kbd> |
 | `boundary` | string, element | `'scrollParent'` | Граница ограничения переполнения выпадающего меню (применяется только к модификатору preventOverflow Поппера). По умолчанию это `clippingParents`, и он может принимать ссылку HTMLElement (только через JavaScript). Для получения дополнительной информации обратитесь к [документации detectOverflow Popper](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
-| `reference` | string, element | `'toggle'` | Справочный элемент выпадающего меню. Принимает значения `'toggle'`, `'parent'`, ссылку HTMLElement или объект, предоставляющий `getBoundingClientRect`. Для получения дополнительной информации обратитесь к [документации конструктора Popper](https://popper.js.org/docs/v2/constructors/#createpopper) и [документации виртуального элемента](https://popper.js.org/docs/v2/virtual-elements/). |
 | `display` | string | `'dynamic'` | По умолчанию мы используем Popper для динамического позиционирования. Отключите это с помощью `static`. |
 | `offset` | number, string, function | `[0, 2]` | Смещение раскрывающегося списка относительно его цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: `data-bs-offset="10,20"`. Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение поппера, ссылку и прямоугольники поппера в качестве первого аргумента. Узел триггерного элемента DOM передается в качестве второго аргумента. Функция должна вернуть массив с двумя числами: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). Для получения дополнительной информации обратитесь к [документации смещения Popper](https://popper.js.org/docs/v2/modifiers/offset/#options). |
-| `autoClose` | boolean, string | `true` | Настройте автоматическое закрытие раскрывающегося списка: <ul class="my-2"><li>`true` - раскрывающийся список будет закрыт, если щелкнуть снаружи или внутри раскрывающегося меню.</li><li>`false` - раскрывающийся список будет закрыт, если нажать кнопку переключения и вручную вызвать метод `hide` или `toggle`. (Также не будет закрыто нажатием клавиши <kbd>esc</kbd>)</li><li>`'inside'` - выпадающее меню будет закрыто (только) нажатием внутри выпадающего меню.</li>  <li>`'outside'` - выпадающее меню будет закрыто (только) нажатием вне выпадающего меню.</li></ul> Примечание: выпадающее меню всегда можно закрыть с помощью клавиши <kbd>ESC</kbd> |
 | `popperConfig` | null, object, function | `null` | Чтобы изменить конфигурацию Popper по умолчанию в Bootstrap, смотрите [Конфигурация Popper](https://popper.js.org/docs/v2/constructors/#options). Когда функция используется для создания конфигурации Popper, она вызывается с объектом, который содержит конфигурацию Bootstrap по умолчанию Popper. Это поможет вам использовать и объединить настройки по умолчанию с вашей собственной конфигурацией. Функция должна возвращать объект конфигурации для Popper. |
+| `reference` | string, element | `'toggle'` | Справочный элемент выпадающего меню. Принимает значения `'toggle'`, `'parent'`, ссылку HTMLElement или объект, предоставляющий `getBoundingClientRect`. Для получения дополнительной информации обратитесь к [документации конструктора Popper](https://popper.js.org/docs/v2/constructors/#createpopper) и [документации виртуального элемента](https://popper.js.org/docs/v2/virtual-elements/). |
 {{< /bs-table >}}
 
 #### Использование функции с `popperConfig`
@@ -1094,13 +1094,13 @@ const dropdown = new bootstrap.Dropdown(element, {
 {{< bs-table >}}
 | Метод | Описание |
 | --- | --- |
-| `toggle` | Переключает раскрывающееся меню данной панели навигации или навигации с вкладками. |
-| `show` | Показывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
-| `hide` | Скрывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
-| `update` | Обновляет положение выпадающего списка элемента. |
 | `dispose` | Уничтожает раскрывающийся список элемента. (Удаляет сохраненные данные в элементе DOM) |
 | `getInstance` | Статический метод, который позволяет вам получить экземпляр раскрывающегося списка, связанный с элементом DOM, вы можете использовать его следующим образом: `bootstrap.Dropdown.getInstance(element)` |
 | `getOrCreateInstance` | Статический метод, который возвращает экземпляр раскрывающегося списка, связанный с элементом DOM, или создает новый экземпляр, если он не был инициализирован. Вы можете использовать его следующим образом: `bootstrap.Dropdown.getOrCreateInstance(element)`. |
+| `hide` | Скрывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `show` | Показывает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `toggle` | Переключает раскрывающееся меню данной панели навигации или навигации с вкладками. |
+| `update` | Обновляет положение выпадающего списка элемента. |
 {{< /bs-table >}}
 
 ### События
@@ -1110,10 +1110,10 @@ const dropdown = new bootstrap.Dropdown(element, {
 {{< bs-table >}}
 | Тип события | Описание |
 | --- | --- |
-| `show.bs.dropdown` | Срабатывает немедленно, когда вызывается метод экземпляра `show`. |
-| `shown.bs.dropdown` | Запускается, когда раскрывающийся список становится видимым для пользователя и переходы CSS завершены. |
 | `hide.bs.dropdown` | Срабатывает немедленно, когда был вызван метод экземпляра `hide`. |
 | `hidden.bs.dropdown` | Запускается, когда раскрывающийся список перестал быть скрытым от пользователя и переходы CSS завершились. |
+| `show.bs.dropdown` | Срабатывает немедленно, когда вызывается метод экземпляра `show`. |
+| `shown.bs.dropdown` | Запускается, когда раскрывающийся список становится видимым для пользователя и переходы CSS завершены. |
 {{< /bs-table >}}
 
 ```js

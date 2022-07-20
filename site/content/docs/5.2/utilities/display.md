@@ -32,20 +32,20 @@ toc: true
 - `flex`
 - `inline-flex`
 
-Отображаемые значения можно изменить, изменив переменную `$displays` и перекомпилировав SCSS.
+Отображаемые значения можно изменить, изменив `display` значения, определенные в `$utilities`, и перекомпилировав SCSS.
 
 Медиа-запросы влияют на ширину экрана с заданной контрольной точкой *или больше*. Например, `.d-lg-none` устанавливает `display: none;` на экранах `lg`, `xl` и `xxl`.
 
 ## Примеры
 
 {{< example >}}
-<div class="d-inline p-2 bg-primary text-white">d-inline</div>
-<div class="d-inline p-2 bg-dark text-white">d-inline</div>
+<div class="d-inline p-2 text-bg-primary">d-inline</div>
+<div class="d-inline p-2 text-bg-dark">d-inline</div>
 {{< /example >}}
 
 {{< example >}}
-<span class="d-block p-2 bg-primary text-white">d-block</span>
-<span class="d-block p-2 bg-dark text-white">d-block</span>
+<span class="d-block p-2 text-bg-primary">d-block</span>
+<span class="d-block p-2 text-bg-dark">d-block</span>
 {{< /example >}}
 
 ## Скрытие элементов

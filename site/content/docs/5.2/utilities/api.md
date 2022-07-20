@@ -392,7 +392,6 @@ $utilities: (
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-@import "bootstrap/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities,
@@ -405,6 +404,7 @@ $utilities: map-merge(
     )
   )
 );
+@import "bootstrap/scss/utilities/api";
 ```
 
 ### Изменение утилит
@@ -417,7 +417,6 @@ $utilities: map-merge(
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-@import "bootstrap/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities,
@@ -433,6 +432,8 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "bootstrap/scss/utilities/api";
 ```
 
 #### Включение адаптивности
@@ -445,7 +446,6 @@ $utilities: map-merge(
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-@import "bootstrap/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities, (
@@ -455,6 +455,8 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "bootstrap/scss/utilities/api";
 ```
 
 Теперь это будет генерировать ответные варианты `.border` и `.border-0` для каждой контрольной точки. Ваш сгенерированный CSS будет выглядеть так:
@@ -499,7 +501,6 @@ $utilities: map-merge(
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-@import "bootstrap/scss/utilities/api";
 
 $utilities: map-merge(
   $utilities, (
@@ -509,11 +510,13 @@ $utilities: map-merge(
     ),
   )
 );
+
+@import "bootstrap/scss/utilities/api";
 ```
 
 ### Удаление утилит
 
-Удалите любую из утилит по умолчанию, установив для ключа группы значение `null`. Например, чтобы удалить все наши утилиты `width`, создайте `$utilities`, `map-merge` и добавьте внутрь `"width": null`.
+Удалите все стандартные утилиты с помощью [Sass-функции `map-remove()`](https://sass-lang.com/documentation/modules/map#remove).
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -521,7 +524,21 @@ $utilities: map-merge(
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+
+// Удалить несколько утилит с помощью списка, разделенного запятыми
+$utilities: map-remove($utilities, "width", "float");
+
 @import "bootstrap/scss/utilities/api";
+```
+
+Вы также можете использовать [Sass функцию `map-merge()`](https://sass-lang.com/documentation/modules/map#merge) и установить для группового ключа значение `null`, чтобы удалить утилиту.
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
   $utilities,
@@ -529,6 +546,38 @@ $utilities: map-merge(
     "width": null
   )
 );
+```
+
+### Добавление, удаление, изменение
+
+Вы можете добавлять, удалять и изменять множество утилит одновременно с помощью [Sass-функции `map-merge()`](https://sass-lang.com/documentation/modules/map#merge). Вот как вы можете объединить предыдущие примеры в одну большую карту.
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    // Remove the `width` utility
+    "width": null,
+    // Make an existing utility responsive
+    "border": map-merge(
+      map-get($utilities, "border"),
+      ( responsive: true ),
+    ),
+    // Add new utilities
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )
+  )
+);
+@import "bootstrap/scss/utilities/api";
 ```
 
 #### Удалить утилиту в RTL

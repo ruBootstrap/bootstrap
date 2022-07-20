@@ -16,7 +16,7 @@ toc: true
 
 <br>
 
-1. **Создайте новый файл `index.html` в корне вашего проекта.** Включите также тег `<meta name="viewport>` для [правильного отзывчивого поведения](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) на мобильных устройствах.
+1. **Создайте новый файл `index.html` в корне вашего проекта.** Включите также тег `<meta name="viewport">` для [правильного отзывчивого поведения](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) на мобильных устройствах.
 
    ```html
    <!doctype html>

@@ -36,7 +36,7 @@ toc: true
 
 Чекбоксы могут использовать псевдокласс `:indeterminate` при ручной установке через JavaScript (нет доступного атрибута HTML для его указания).
 
-{{< example class="bd-example-indeterminate">}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
   <label class="form-check-label" for="flexCheckIndeterminate">
@@ -49,7 +49,13 @@ toc: true
 
 Добавьте атрибут `disabled`, и для связанных тегов `<label>` будет автоматически применен стиль, соответствующий более светлому цвету, чтобы помочь указать состояние ввода.
 
-{{< example >}}
+{{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
+  <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+    Отключен неопределенный флажок
+  </label>
+</div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
   <label class="form-check-label" for="flexCheckDisabled">

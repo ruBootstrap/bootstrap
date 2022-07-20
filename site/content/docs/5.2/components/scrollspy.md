@@ -16,9 +16,7 @@ Scrollspy переключает класс `.active` для элементов 
 
 - Когда вы прокручиваете «шпионский» контейнер, класс `.active` добавляется и удаляется из якорных ссылок в соответствующей навигации. Ссылки должны иметь разрешимые цели `id`, в противном случае они игнорируются. Например, `<a href="#home">Главная</a>` должна соответствовать чему-то в DOM, например, `<div id="home"></div>`
 
-- Целевые элементы, которые не видны, будут игнорироваться, а соответствующие им элементы навигации никогда не получат класс `.active`.
-
-Ознакомьтесь с приведенными ниже примерами, чтобы увидеть его в действии.
+- Целевые элементы, которые не видны, будут игнорироваться. Смотрите раздел [Невидимые элементы](#non-visible-elements) ниже.
 
 ## Примеры
 
@@ -62,7 +60,7 @@ Scrollspy переключает класс `.active` для элементов 
 </div>
 
 ```html
-<nav id="navbar-example2" class="navbar bg-light px-3">
+<nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
   <a class="navbar-brand" href="#">Панель навигации</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -82,7 +80,7 @@ Scrollspy переключает класс `.active` для элементов 
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
   <h4 id="scrollspyHeading1">Первый заголовок</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Второй заголовок</h4>
@@ -162,51 +160,56 @@ Scrollspy переключает класс `.active` для элементов 
 </div>
 
 ```html
-<nav id="navbar-example3" class="navbar bg-light flex-column align-items-stretch p-3">
-  <a class="navbar-brand" href="#">Панель навигации</a>
-  <nav class="nav nav-pills flex-column">
-    <a class="nav-link" href="#item-1">Элемент 1</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
+<div class="row">
+  <div class="col-4">
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#item-1">Элемент 1</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
+        </nav>
+        <a class="nav-link" href="#item-2">Элемент 2</a>
+        <a class="nav-link" href="#item-3">Элемент 3</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
+        </nav>
+      </nav>
     </nav>
-    <a class="nav-link" href="#item-2">Элемент 2</a>
-    <a class="nav-link" href="#item-3">Элемент 3</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
-    </nav>
-  </nav>
-</nav>
+  </div>
 
-<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" tabindex="0">
-  <div id="item-1">
-    <h4>Элемент 1</h4>
-    <p>...</p>
-  </div>
-  <div id="item-1-1">
-    <h5>Элемент 1-1</h5>
-    <p>...</p>
-  </div>
-  <div id="item-1-2">
-    <h5>Элемент 1-2</h5>
-    <p>...</p>
-  </div>
-  <div id="item-2">
-    <h4>Элемент 2</h4>
-    <p>...</p>
-  </div>
-  <div id="item-3">
-    <h4>Элемент 3</h4>
-    <p>...</p>
-  </div>
-  <div id="item-3-1">
-    <h5>Элемент 3-1</h5>
-    <p>...</p>
-  </div>
-  <div id="item-3-2">
-    <h5>Элемент 3-2</h5>
-    <p>...</p>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+      <div id="item-1">
+        <h4>Элемент 1</h4>
+        <p>...</p>
+      </div>
+      <div id="item-1-1">
+        <h5>Элемент 1-1</h5>
+        <p>...</p>
+      </div>
+      <div id="item-1-2">
+        <h5>Элемент 1-2</h5>
+        <p>...</p>
+      </div>
+      <div id="item-2">
+        <h4>Элемент 2</h4>
+        <p>...</p>
+      </div>
+      <div id="item-3">
+        <h4>Элемент 3</h4>
+        <p>...</p>
+      </div>
+      <div id="item-3-1">
+        <h5>Элемент 3-1</h5>
+        <p>...</p>
+      </div>
+      <div id="item-3-2">
+        <h5>Элемент 3-2</h5>
+        <p>...</p>
+      </div>
+    </div>
   </div>
 </div>
 ```
@@ -241,21 +244,27 @@ Scrollspy переключает класс `.active` для элементов 
 </div>
 
 ```html
-<div id="list-example" class="list-group">
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Элемент 1</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-2">Элемент 2</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-3">Элемент 3</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
-</div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="list-item-1">Элемент 1</h4>
-  <p>...</p>
-  <h4 id="list-item-2">Элемент 2</h4>
-  <p>...</p>
-  <h4 id="list-item-3">Элемент 3</h4>
-  <p>...</p>
-  <h4 id="list-item-4">Элемент 4</h4>
-  <p>...</p>
+<div class="row">
+  <div class="col-4">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Элемент 1</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Элемент 2</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Элемент 3</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="list-item-1">Элемент 1</h4>
+      <p>...</p>
+      <h4 id="list-item-2">Элемент 2</h4>
+      <p>...</p>
+      <h4 id="list-item-3">Элемент 3</h4>
+      <p>...</p>
+      <h4 id="list-item-4">Элемент 4</h4>
+      <p>...</p>
+    </div>
+  </div>
 </div>
 ```
 
@@ -292,22 +301,45 @@ Scrollspy не ограничивается компонентами навиг�
 </div>
 
 ```html
-<div id="list-example" class="d-flex flex-column">
-  <a href="#item-1">Элемент 1</a>
-  <a href="#item-2">Элемент 2</a>
-  <a href="#item-3">Элемент 3</a>
-  <a href="#item-4">Элемент 4</a>
+<div class="row">
+  <div class="col-4">
+    <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+      <a class="p-1 rounded" href="#simple-list-item-1">Элемент 1</a>
+      <a class="p-1 rounded" href="#simple-list-item-2">Элемент 2</a>
+      <a class="p-1 rounded" href="#simple-list-item-3">Элемент 3</a>
+      <a class="p-1 rounded" href="#simple-list-item-4">Элемент 4</a>
+      <a class="p-1 rounded" href="#simple-list-item-5">Элемент 5</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h4 id="simple-list-item-1">Элемент 1</h4>
+      <p>...</p>
+      <h4 id="simple-list-item-2">Элемент 2</h4>
+      <p>...</p>
+      <h4 id="simple-list-item-3">Элемент 3</h4>
+      <p>...</p>
+      <h4 id="simple-list-item-4">Элемент 4</h4>
+      <p>...</p>
+      <h4 id="simple-list-item-5">Элемент 5</h4>
+      <p>...</p>
+    </div>
+  </div>
 </div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-  <h4 id="item-1">Элемент 1</h4>
-  <p>...</p>
-  <h4 id="item-2">Элемент 2</h4>
-  <p>...</p>
-  <h4 id="item-3">Элемент 3</h4>
-  <p>...</p>
-  <h4 id="item-4">Элемент 4</h4>
-  <p>...</p>
-</div>
+```
+
+## Невидимые элементы
+
+Невидимые целевые элементы будут игнорироваться, а соответствующие им элементы навигации не получат класс `.active`. Экземпляры Scrollspy, инициализированные в невидимой оболочке, будут игнорировать все целевые элементы. Используйте метод `refresh` для проверки наблюдаемых элементов, как только оболочка станет видимой.
+
+```js
+document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+  el.addEventListener('shown.bs.tab', () => {
+    const target = el.getAttribute('data-bs-target')
+    const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+    bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+  })
+})
 ```
 
 ## Использование
@@ -362,10 +394,10 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< bs-table "table" >}}
 | Метод | Описание |
 | --- | --- |
-| `refresh` | При добавлении или удалении элементов в DOM вам необходимо вызвать метод обновления. |
 | `dispose` | Уничтожает scrollspy элемента. (Удаляет сохраненные данные в элементе DOM) |
 | `getInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM |
 | `getOrCreateInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM, или для создания нового экземпляра, если он не был инициализирован. |
+| `refresh` | При добавлении или удалении элементов в DOM вам необходимо вызвать метод обновления. |
 {{< /bs-table >}}
 
 Вот пример использования метода обновления:

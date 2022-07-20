@@ -248,7 +248,7 @@ To fix [issues with border radii](https://github.com/twbs/bootstrap/issues/25110
 <form class="was-validated">
   <div class="mb-3">
     <label for="validationTextarea" class="form-label">Текстовое поле</label>
-    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Обязательный пример текстового поля" required></textarea>
+    <textarea class="form-control" id="validationTextarea" placeholder="Обязательный пример текстового поля" required></textarea>
     <div class="invalid-feedback">
       Пожалуйста, введите сообщение в текстовое поле.
     </div>
