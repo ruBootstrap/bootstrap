@@ -71,6 +71,7 @@ params:
   themes:               "https://themes.getbootstrap.com/"
   icons:                "https://icons.getbootstrap.com/"
   icons_ru:             "https://icons.getbootstrap.su/"
+  cheatsheet_ru:        "https://cheatsheet.getbootstrap.su/"
   swag:                 "https://cottonbureau.com/people/bootstrap"
 
   download:
