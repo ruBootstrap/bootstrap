@@ -116,7 +116,7 @@
     "WCAG",
     "zindex"
   ],
-  "language": "en-US",
+  "language": "en-US,ru-RU",
   "files": [
     "**/*.md"
   ],

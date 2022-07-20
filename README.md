@@ -218,14 +218,7 @@
   <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
 </a>
 
-Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
-
-<a href="https://www.netlify.com/">
-  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
-</a>
-
-Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
-
+Спасибо [Netlify](https://www.netlify.com/) за предоставленные нам версии превью деплоя!
 
 ## Спонсоры
 
