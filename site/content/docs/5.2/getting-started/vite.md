@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Bootstrap & Vite"
-description: The official guide for how to include and bundle Bootstrap's CSS and JavaScript in your project using Vite.
+title: "Bootstrap и Vite"
+description: Официальное руководство о том, как включить CSS и JavaScript Bootstrap в свой проект с помощью Vite.
 group: getting-started
 toc: true
 ---
@@ -9,49 +9,49 @@ toc: true
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) for live editing.
+**Хотите перейти к концу?** Загрузите исходный код и рабочую демонстрацию для этого руководства из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/vite). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) для редактирования в реальном времени.
 {{< /callout >}}
 
-## Setup
+## Установка
 
-We're building a Vite project with Bootstrap from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+Мы создаем проект Vite с Bootstrap с нуля, поэтому есть некоторые предварительные условия и предварительные шаги, прежде чем мы действительно сможем начать. Это руководство требует, чтобы у вас был установлен Node.js и вы немного знакомы с терминалом.
 
-1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
+1. **Создайте папку проекта и установите npm.** Мы создадим папку `my-project` и инициализируем npm с аргументом `-y`, чтобы он не задавал нам все интерактивные вопросы.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Install Vite.** Unlike our Webpack guide, there’s only a single build tool dependency here. We use `--save-dev` to signal that this dependency is only for development use and not for production.
+2. **Установите Vite.** В отличие от нашего руководства по Webpack, здесь есть только одна зависимость от инструмента сборки. Мы используем `--save-dev`, чтобы указать, что эта зависимость предназначена только для разработки, а не для продакшена.
 
    ```sh
    npm i --save-dev vite
    ```
 
-3. **Install Bootstrap.** Now we can install Bootstrap. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Установите Bootstrap.** Теперь мы можем установить Bootstrap. Мы также установим Popper, так как наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки зависят от его позиционирования. Если вы не планируете использовать эти компоненты, вы можете опустить здесь Popper.
 
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
-4. **Install additional dependency.** In addition to Vite and Bootstrap, we need another dependency (Sass) to properly import and bundle Bootstrap's CSS.
+4. **Установите дополнительные зависимости.** В дополнение к Vite и Bootstrap нам нужна еще одна зависимость (Sass), чтобы правильно импортировать и связывать CSS Bootstrap.
 
    ```sh
    npm i --save-dev sass
    ```
 
-Now that we have all the necessary dependencies installed and setup, we can get to work creating the project files and importing Bootstrap.
+Теперь, когда у нас установлены и настроены все необходимые зависимости, мы можем приступить к созданию файлов проекта и импорту Bootstrap.
 
-## Project structure
+## Структура проекта
 
-We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` folder, stylesheet, and JavaScript file to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
+Мы уже создали папку `my-project` и инициализировали npm. Теперь мы также создадим нашу папку `src`, таблицу стилей и файл JavaScript, чтобы завершить структуру проекта. Запустите следующее из `my-project` или вручную создайте структуру папок и файлов, показанную ниже.
 
 ```sh
 mkdir {src,src/js,src/scss}
 touch src/index.html src/js/main.js src/scss/styles.scss vite.config.js
 ```
 
-When you're done, your complete project should look like this:
+Когда вы закончите, ваш полный проект должен выглядеть так:
 
 ```text
 my-project/
@@ -66,13 +66,13 @@ my-project/
 └── vite.config.js
 ```
 
-At this point, everything is in the right place, but Vite won't work because we haven't filled in our `vite.config.js` yet.
+На данный момент все в порядке, но Vite не будет работать, потому что мы еще не заполнили наш `vite.config.js`.
 
-## Configure Vite
+## Конфигурация Vite
 
-With dependencies installed and our project folder ready for us to start coding, we can now configure Vite and run our project locally.
+С установленными зависимостями и готовой папкой проекта для начала написания кода мы теперь можем настроить Vite и запустить наш проект локально.
 
-1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite were to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
+1. **Откройте `vite.config.js` в вашем редакторе.** Поскольку он пуст, нам нужно добавить в него шаблонную конфигурацию, чтобы мы могли запустить наш сервер. Эта часть конфигурации говорит Vite, что нужно искать JavaScript нашего проекта и как должен вести себя сервер разработки (извлечение из папки `src` с горячей перезагрузкой).
 
    <!-- eslint-skip -->
    ```js
@@ -87,7 +87,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-2. **Next we fill in `src/index.html`.** This is the HTML page Vite will load in the browser to utilize the bundled CSS and JS we'll add to it in later steps.
+2. **Далее мы заполняем `src/index.html`.** Это HTML-страница, которую Vite загрузит в браузер, чтобы использовать связанные CSS и JS, которые мы добавим к ней на последующих этапах.
 
    ```html
    <!doctype html>
@@ -107,9 +107,9 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Bootstrap styling here with the `div class="container"` and `<button>` so that we see when Bootstrap's CSS is loaded by Vite.
+   Мы добавили сюда немного стилей Bootstrap с помощью `div class="container"` и `<button>`, чтобы видеть, когда CSS Bootstrap загружается Vite.
 
-3. **Now we need an npm script to run Vite.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Vite dev server.
+3. **Теперь нам нужен скрипт npm для запуска Vite.** Откройте `package.json` и добавьте сценарий `start`, показанный ниже (у вас уже должен быть тестовый сценарий). Мы будем использовать этот скрипт для запуска нашего локального сервера разработки Vite.
 
    ```json
    {
@@ -122,7 +122,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-4. **And finally, we can start Vite.** From the `my-project` folder in your terminal, run that newly added npm script:
+4. **И, наконец, мы можем запустить Vite.** Из папки `my-project` в вашем терминале запустите только что добавленный скрипт npm:
 
    ```sh
    npm start
@@ -130,11 +130,11 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server.png" alt="Vite dev server running">
 
-In the next and final section to this guide, we’ll import all of Bootstrap’s CSS and JavaScript.
+В следующем и последнем разделе этого руководства мы импортируем весь CSS и JavaScript Bootstrap.
 
-## Import Bootstrap
+## Импорт Bootstrap
 
-1. **Set up Bootstrap's Sass import in `vite.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `resolve` section—we use this to add an alias to our source files inside `node_modules` to keep imports as simple as possible.
+1. **Настройте импорт Sass для Bootstrap в `vite.config.js`.** Ваш файл конфигурации готов и должен соответствовать приведенному ниже фрагменту. Единственная новая часть здесь — это раздел `resolve` — мы используем его, чтобы добавить псевдоним к нашим исходным файлам внутри `node_modules`, чтобы максимально упростить импорт.
 
    <!-- eslint-skip -->
    ```js
@@ -154,43 +154,43 @@ In the next and final section to this guide, we’ll import all of Bootstrap’s
    }
    ```
 
-2. **Now, let's import Bootstrap's CSS.** Add the following to `src/scss/styles.scss` to import all of Bootstrap's source Sass.
+2. **Теперь давайте импортируем Bootstrap CSS.** Добавьте следующее в `src/scss/styles.scss`, чтобы импортировать весь исходный код Bootstrap Sass.
 
    ```scss
    // Import all of Bootstrap's CSS
    @import "~bootstrap/scss/bootstrap";
    ```
 
-   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
+   *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*
 
-3. **Next we load the CSS and import Bootstrap's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Bootstrap's JS. Popper will be imported automatically through Bootstrap.
+3. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать все JS из Bootstrap. Поппер будет автоматически импортирован через Bootstrap.
 
    <!-- eslint-skip -->
    ```js
-   // Import our custom CSS
+   // Импортируйте наш пользовательский CSS
    import '../scss/styles.scss'
 
-   // Import all of Bootstrap's JS
+   // Импортируйте весь JS Bootstrap
    import * as bootstrap from 'bootstrap'
    ```
 
-   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
+   Вы также можете импортировать плагины JavaScript по отдельности, если это необходимо, чтобы уменьшить размеры пакетов:
 
    <!-- eslint-skip -->
    ```js
    import Alert from 'bootstrap/js/dist/alert';
 
-   // or, specify which plugins you need:
+   // или укажите, какие плагины вам нужны:
    import { Tooltip, Toast, Popover } from 'bootstrap';
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
+   *[Прочитайте нашу документацию по JavaScript]({{< docsref "/getting-started/javascript/" >}}) для получения дополнительной информации о том, как использовать плагины Bootstrap.*
 
-4. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this.
+4. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так.
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
 
-   Now you can start adding any Bootstrap components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap's CSS and JS that you need.
+   Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Vite](https://github.com/twbs/examples/tree/main/vite), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать свою сборку, импортируя только части CSS и JS Bootstrap, которые вам нужны.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

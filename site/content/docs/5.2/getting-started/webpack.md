@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Bootstrap & Webpack"
-description: The official guide for how to include and bundle Bootstrap's CSS and JavaScript in your project using Webpack.
+title: "Bootstrap и Webpack"
+description: Официальное руководство по включению и объединению CSS и JavaScript Bootstrap в ваш проект с помощью Webpack.
 group: getting-started
 toc: true
 ---
@@ -9,50 +9,50 @@ toc: true
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+**Хотите перейти к концу?** Загрузите исходный код и рабочую демонстрацию для этого руководства из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/webpack). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) для редактирования в реальном времени.
 {{< /callout >}}
 
-## Setup
+## Установка
 
-We're building a Webpack project with Bootstrap from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+Мы создаем проект Webpack с Bootstrap с нуля, поэтому есть некоторые предварительные условия и предварительные шаги, прежде чем мы действительно сможем начать. Это руководство требует, чтобы у вас был установлен Node.js и вы немного знакомы с терминалом.
 
-1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
+1. **Создайте папку проекта и установите npm.** Мы создадим папку `my-project` и инициализируем npm с аргументом `-y`, чтобы он не задавал нам все интерактивные вопросы.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Install Webpack.** Next we need to install our Webpack development dependencies: `webpack` for the core of Webpack, `webpack-cli` so we can run Webpack commands from the terminal, and `webpack-dev-server` so we can run a local development server. We use `--save-dev` to signal that these dependencies are only for development use and not for production.
+2. **Установите Webpack.** Затем нам нужно установить наши зависимости для разработки Webpack: `webpack` для ядра Webpack, `webpack-cli`, чтобы мы могли запускать команды Webpack из терминала, и `webpack-dev-server`, чтобы мы могли запускать локальный сервер разработки. . Мы используем `--save-dev`, чтобы указать, что эти зависимости предназначены только для использования в разработке, а не для производства.
 
    ```sh
    npm i --save-dev webpack webpack-cli webpack-dev-server
    ```
 
-3. **Install Bootstrap.** Now we can install Bootstrap. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Установите Bootstrap.** Теперь мы можем установить Bootstrap. Мы также установим Popper, так как наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки зависят от его позиционирования. Если вы не планируете использовать эти компоненты, вы можете опустить здесь Popper.
 
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
 
-4. **Install additional dependencies.** In addition to Webpack and Bootstrap, we need a few more dependencies to properly import and bundle Bootstrap's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
+4. **Установите дополнительные зависимости.** В дополнение к Webpack и Bootstrap нам нужно еще несколько зависимостей, чтобы правильно импортировать и связывать CSS и JS Bootstrap с Webpack. К ним относятся Sass, некоторые загрузчики и Autoprefixer.
 
    ```sh
    npm i --save-dev autoprefixer css-loader postcss-loader sass sass-loader style-loader
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Bootstrap.
+Теперь, когда у нас установлены все необходимые зависимости, мы можем приступить к созданию файлов проекта и импорту Bootstrap.
 
-## Project structure
+## Структура проекта
 
-We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` and `dist` folders to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
+Мы уже создали папку `my-project` и инициализировали npm. Теперь мы также создадим наши папки `src` и `dist`, чтобы завершить структуру проекта. Запустите следующее из `my-project` или вручную создайте структуру папок и файлов, показанную ниже.
 
 ```sh
 mkdir {dist,src,src/js,src/scss}
 touch dist/index.html src/js/main.js src/scss/styles.scss webpack.config.js
 ```
 
-When you're done, your complete project should look like this:
+Когда вы закончите, ваш полный проект должен выглядеть так:
 
 ```text
 my-project/
@@ -68,13 +68,13 @@ my-project/
 └── webpack.config.js
 ```
 
-At this point, everything is in the right place, but Webpack won't work because we haven't filled in our `webpack.config.js` yet.
+На данный момент все в порядке, но Webpack не будет работать, потому что мы еще не заполнили наш `webpack.config.js`.
 
-## Configure Webpack
+## Кофигурация Webpack
 
-With dependencies installed and our project folder ready for us to start coding, we can now configure Webpack and run our project locally.
+С установленными зависимостями и готовой папкой проекта для начала написания кода мы теперь можем настроить Webpack и запустить наш проект локально.
 
-1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack were to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
+1. **Откройте `webpack.config.js` в вашем редакторе.** Поскольку он пуст, нам нужно добавить в него шаблонную конфигурацию, чтобы мы могли запустить наш сервер. Эта часть конфигурации сообщает Webpack, что нужно искать JavaScript нашего проекта, куда выводить скомпилированный код (`dist`) и как должен вести себя сервер разработки (извлечение из папки `dist` с горячей перезагрузкой).
 
    ```js
    const path = require('path')
@@ -93,7 +93,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-2. **Next we fill in our `dist/index.html`.** This is the HTML page Webpack will load in the browser to utilize the bundled CSS and JS we'll add to it in later steps. Before we can do that, we have to give it something to render and include the `output` JS from the previous step.
+2. **Далее мы заполняем наш `dist/index.html`.** Это HTML-страница, которую Webpack загрузит в браузер, чтобы использовать связанные CSS и JS, которые мы добавим к ней на последующих этапах. Прежде чем мы сможем это сделать, мы должны дать ему что-то для рендеринга и включить `output` JS из предыдущего шага.
 
    ```html
    <!doctype html>
@@ -113,9 +113,9 @@ With dependencies installed and our project folder ready for us to start coding,
    </html>
    ```
 
-   We're including a little bit of Bootstrap styling here with the `div class="container"` and `<button>` so that we see when Bootstrap's CSS is loaded by Webpack.
+   Мы добавили сюда немного стилей Bootstrap с помощью `div class="container"` и `<button>`, чтобы мы видели, когда CSS Bootstrap загружается Webpack.
 
-3. **Now we need an npm script to run Webpack.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Webpack dev server.
+3. **Теперь нам нужен скрипт npm для запуска Webpack.** Откройте `package.json` и добавьте сценарий `start`, показанный ниже (у вас уже должен быть тестовый сценарий). Мы будем использовать этот скрипт для запуска нашего локального сервера разработки Webpack.
 
    ```json
    {
@@ -128,7 +128,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-4. **And finally, we can start Webpack.** From the `my-project` folder in your terminal, run that newly added npm script:
+4. **И, наконец, мы можем запустить Webpack.** Из папки `my-project` в вашем терминале запустите только что добавленный скрипт npm:
 
    ```sh
    npm start
@@ -136,13 +136,13 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server.png" alt="Webpack dev server running">
 
-In the next and final section to this guide, we'll set up the Webpack loaders and import all of Bootstrap's CSS and JavaScript.
+В следующем и последнем разделе этого руководства мы настроим загрузчики Webpack и импортируем весь CSS и JavaScript Bootstrap.
 
-## Import Bootstrap
+## Импорт Bootstrap
 
-Importing Bootstrap into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
+Для импорта Bootstrap в Webpack требуются загрузчики, которые мы установили в первом разделе. Мы установили их с помощью npm, но теперь необходимо настроить Webpack для их использования.
 
-1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
+1. **Настройте загрузчики в `webpack.config.js`.** Ваш файл конфигурации готов и должен соответствовать приведенному ниже фрагменту. Единственная новая часть здесь — раздел `module`.
 
    ```js
    const path = require('path')
@@ -189,45 +189,45 @@ Importing Bootstrap into Webpack requires the loaders we installed in the first 
    }
    ```
 
-   Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
+   Вот краткий обзор того, зачем нам нужны все эти загрузчики. `style-loader` вставляет CSS в элемент `<style>` в `<head>` HTML-страницы, `css-loader` помогает использовать `@import` и `url()`, `postcss-loader` требуется для Autoprefixer, а `sass-loader` позволяет нам использовать Sass.
 
-2. **Now, let's import Bootstrap's CSS.** Add the following to `src/scss/styles.scss` to import all of Bootstrap's source Sass.
+2. **Теперь давайте импортируем Bootstrap CSS.** Добавьте следующее в `src/scss/styles.scss`, чтобы импортировать весь исходный код Bootstrap Sass.
 
    ```scss
    // Import all of Bootstrap's CSS
    @import "~bootstrap/scss/bootstrap";
    ```
 
-   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
+   *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*
 
-3. **Next we load the CSS and import Bootstrap's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Bootstrap's JS. Popper will be imported automatically through Bootstrap.
+3. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать все JS из Bootstrap. Поппер будет автоматически импортирован через Bootstrap.
 
    <!-- eslint-skip -->
    ```js
-   // Import our custom CSS
+   // Импортируйте наш пользовательский CSS
    import '../scss/styles.scss'
 
-   // Import all of Bootstrap's JS
+   // Импортируйте весь JS Bootstrap
    import * as bootstrap from 'bootstrap'
    ```
 
-   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
+   Вы также можете импортировать плагины JavaScript по отдельности, если это необходимо, чтобы уменьшить размеры пакетов:
 
    <!-- eslint-skip -->
    ```js
    import Alert from 'bootstrap/js/dist/alert'
 
-   // or, specify which plugins you need:
+   // или укажите, какие плагины вам нужны:
    import { Tooltip, Toast, Popover } from 'bootstrap'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
+   *[Прочитайте нашу документацию по JavaScript]({{< docsref "/getting-started/javascript/" >}}) для получения дополнительной информации о том, как использовать плагины Bootstrap.*
 
-4. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this.
+4. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так.
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
 
-   Now you can start adding any Bootstrap components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap's CSS and JS that you need.
+   Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Webpack](https://github.com/twbs/examples/tree/main/webpack), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать сборку, импортируя только части CSS Bootstrap. и JS, которые вам нужны.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}
