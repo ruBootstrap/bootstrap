@@ -1,6 +1,6 @@
-- group: v4.x
+- group: v4.x [EN]
   baseurl: "https://getbootstrap.com/docs/4.6/"
-  description: "Текущий основной выпуск и его дополнительные версии. Последнее обновление было v4.6.1."
+  description: "Текущий основной выпуск и его дополнительные версии. Последнее обновление было v4.6.2."
   versions:
     - v: "4.0"
     - v: "4.1"
@@ -12,17 +12,18 @@
 
 - group: v4.x [RU]
   baseurl: "https://getbootstrap.su/docs/4.6/"
-  description: "Перевод текущей основной версии. Последнее обновление было v4.6.1."
+  description: "Перевод текущей основной версии. Последнее обновление было v4.6.2."
   versions:
     - v: "4.5"
     - v: "4.6"
 
-- group: v5.x
+- group: v5.x [EN]
   baseurl: "https://getbootstrap.com/docs"
   description: "Наш следующий крупный релиз."
   versions:
     - v: "5.0"
     - v: "5.1"
+    - v: "5.2"
 
 - group: v5.x [RU]
   baseurl: "https://getbootstrap.su/docs"
@@ -30,3 +31,4 @@
   versions:
     - v: "5.0"
     - v: "5.1"
+    - v: "5.2"

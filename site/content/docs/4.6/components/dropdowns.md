@@ -16,7 +16,7 @@ toc: true
 
 ## Доступность
 
-[<abbr title="Инициатива обеспечения доступности Интернета">WAI</abbr> <abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) стандарт определяет фактический [виджет `role="menu"`](https://www.w3.org/WAI/PF/aria/roles#menu), но это характерно для меню, похожего на приложение, которое запускает действия или функции. Меню <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr> могут содержать только пункты меню, пункты меню флажков, пункты меню радиокнопок, группы радиокнопок и подменю.
+[<abbr title="Инициатива по доступности Интернета">WAI</abbr> <abbr title="Доступные многофункциональные интернет-приложения">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) стандарт определяет фактический [виджет `role="menu"`](https://www.w3.org/TR/wai-aria/#menu), но это относится к меню, похожему на приложение, которое запускает действия или функции. Меню <abbr title="Доступные многофункциональные интернет-приложения">ARIA</abbr> могут содержать только элементы меню, элементы меню с флажками, элементы меню с переключателями, группы переключателей и подменю.
 
 С другой стороны, выпадающие списки Bootstrap разработаны как общие и применимы к различным ситуациям и структурам разметки. Например, можно создавать раскрывающиеся списки, содержащие дополнительные входные данные и элементы управления формой, такие как поля поиска или формы входа. По этой причине Bootstrap не ожидает (и не добавляет автоматически) какие-либо атрибуты `role` и `aria-`, необходимые для истинных <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>. Авторы должны сами включить эти более конкретные атрибуты.
 
@@ -32,10 +32,10 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu">
     <a class="dropdown-item" href="#">Действие</a>
     <a class="dropdown-item" href="#">Другое действие</a>
     <a class="dropdown-item" href="#">Что-то еще здесь</a>
@@ -47,11 +47,11 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
     Ссылка выпадающего списка
   </a>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <div class="dropdown-menu">
     <a class="dropdown-item" href="#">Действие</a>
     <a class="dropdown-item" href="#">Другое действие</a>
     <a class="dropdown-item" href="#">Что-то еще здесь</a>
@@ -488,7 +488,7 @@ toc: true
     </div>
   </div>
   <div class="btn-group">
-    <div class="btn-group dropleft" role="group">
+    <div class="btn-group dropleft">
       <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
         <span class="sr-only">Переключатель выпадающего влево</span>
       </button>
@@ -519,7 +519,7 @@ toc: true
 
 <!-- Раздельная кнопка выпадающая влево -->
 <div class="btn-group">
-  <div class="btn-group dropleft" role="group">
+  <div class="btn-group dropleft">
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
       <span class="sr-only">Переключатель выпадающего влево</span>
     </button>
@@ -539,10 +539,10 @@ toc: true
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
     Выпадающий вниз
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  <div class="dropdown-menu">
     <button class="dropdown-item" type="button">Действие</button>
     <button class="dropdown-item" type="button">Другое действие</button>
     <button class="dropdown-item" type="button">Что-то еще здесь</button>
@@ -745,10 +745,10 @@ toc: true
 {{< example >}}
 <div class="d-flex">
   <div class="dropdown mr-1">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
       Смещение
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+    <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
       <a class="dropdown-item" href="#">Что-то еще здесь</a>
@@ -756,10 +756,10 @@ toc: true
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-secondary">Справка</button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false" data-reference="parent">
       <span class="sr-only">Переключатель выпадающего списка</span>
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+    <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Действие</a>
       <a class="dropdown-item" href="#">Другое действие</a>
       <a class="dropdown-item" href="#">Что-то еще здесь</a>
@@ -784,10 +784,10 @@ toc: true
 
 ```html
 <div class="dropdown">
-  <button id="dLabel" type="button" data-toggle="dropdown" aria-expanded="false">
+  <button type="button" data-toggle="dropdown" aria-expanded="false">
     Триггер выпадающего списка
   </button>
-  <div class="dropdown-menu" aria-labelledby="dLabel">
+  <div class="dropdown-menu">
     ...
   </div>
 </div>

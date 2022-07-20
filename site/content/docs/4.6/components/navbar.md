@@ -50,10 +50,10 @@ toc: true
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Выпадающий список
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Действие</a>
           <a class="dropdown-item" href="#">Другое действие</a>
           <div class="dropdown-divider"></div>
@@ -181,10 +181,10 @@ toc: true
         <a class="nav-link" href="#">Цены</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Ссылка выпадающий список
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Действие</a>
           <a class="dropdown-item" href="#">Другое действие</a>
           <a class="dropdown-item" href="#">Что-то еще здесь</a>
@@ -461,10 +461,10 @@ When the container is within your navbar, its horizontal padding is removed at b
         <a class="nav-link" href="#">Ссылка</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Link
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+        <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Действие</a></li>
           <li><a class="dropdown-item" href="#">Другое действие</a></li>
           <li><hr class="dropdown-divider"></li>

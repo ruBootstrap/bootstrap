@@ -243,7 +243,7 @@ toc: true
 
 Если Вы используете навигацию для предоставления панели навигации, обязательно добавьте `role="navigation"` к наиболее логичному родительскому контейнеру `<ul>` или оберните элемент `<nav>` вокруг всей навигации. Не добавляйте роль к самому `<ul>`, так как это помешает ассистивным технологиям объявить ее реальным списком.
 
-Обратите внимание, что панели навигации, даже если они визуально стилизованы как вкладки с классом `.nav-tabs`, **не** должны иметь атрибуты `role="tablist"`, `role="tab"` или `role="tabpanel"`. Они подходят только для интерфейсов с динамическими вкладками, как описано в [<abbr title="Инициатива веб-доступности">WAI</abbr> <abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr> Авторские практики](https://www.w3.org/TR/wai-aria-practices/#tabpanel). См. [поведение JavaScript](#поведение-javascript) для динамических интерфейсов с вкладками в этом разделе в качестве примера.
+Обратите внимание, что панели навигации, даже если они визуально оформлены как вкладки с классом `.nav-tabs`, **не** должны иметь атрибуты `role="tablist"`, `role="tab"` или `role="tabpanel"`. Они подходят только для динамических интерфейсов с вкладками, как описано в [шаблоне вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). Смотрите [поведение JavaScript](#javascript-behavior) для динамических интерфейсов с вкладками в этом разделе в качестве примера.
 
 ## Использование выпадающих списков
 
@@ -307,31 +307,33 @@ toc: true
 
 Если Вы создаете наш JavaScript из исходного кода, он [требуется `util.js`]({{< docsref "/getting-started/javascript#util" >}}).
 
-Динамические интерфейсы с вкладками, как описано в [<abbr title="Инициатива веб-доступности">WAI</abbr> <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr> Авторские практики](https://www.w3.org/TR/wai-aria-practices/#tabpanel), требуют `role="tablist"`, `role="tab"`, `role="tabpanel"` и дополнительные атрибуты `aria-` по порядку для передачи их структуры, функций и текущего состояния пользователям вспомогательных технологий (например, программ чтения с экрана).
+Динамические интерфейсы с вкладками, как описано в [шаблоне вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), требуют `role="tablist"`, `role="tab"`, `role="tabpanel"` и дополнительные атрибуты `aria-`, чтобы передать их структуру, функциональность и текущее состояние пользователям вспомогательных технологий (таких как программы чтения с экрана). Мы рекомендуем использовать элементы `<button>` для вкладок, так как это элементы управления, которые запускают динамическое изменение, а не ссылки, ведущие на новую страницу или место.
 
-Обратите внимание, что динамические интерфейсы с вкладками должны <em>не</em> содержать выпадающее меню, поскольку это вызывает проблемы как с удобством использования, так и с доступностью. С точки зрения удобства использования тот факт, что элемент триггера отображаемой в данный момент вкладки не виден сразу (поскольку он находится внутри закрытого раскрывающегося меню), может вызвать путаницу. С точки зрения доступности в настоящее время нет разумного способа сопоставить этот вид конструкции со стандартным шаблоном WAI ARIA, а это означает, что ее нельзя легко сделать понятной для пользователей вспомогательных технологий.
+{{< callout danger >}}
+Обратите внимание, что подключаемый модуль JavaScript для вкладок **не** поддерживает интерфейсы с вкладками, которые содержат раскрывающиеся меню, поскольку они вызывают проблемы как с удобством использования, так и с доступностью. С точки зрения удобства использования тот факт, что элемент триггера текущей отображаемой вкладки не виден сразу (поскольку он находится внутри закрытого раскрывающегося меню), может вызвать путаницу. С точки зрения доступности в настоящее время нет разумного способа сопоставить такую конструкцию со стандартным шаблоном WAI ARIA, а это означает, что ее нелегко сделать понятной для пользователей вспомогательных технологий.
+{{< /callout >}}
 
 <div class="bd-example bd-example-tabs">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
+      <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Профиль</a>
+      <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Контакт</a>
+      <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Контакт</button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к домашней вкладке. Поднимет вас на много миль вверх, так высоко, потому что у нее есть эта международная улыбка. В моей постели незнакомец, в голове стук. О, нет. В другой жизни я бы заставил тебя остаться. Потому что я, я способен на все. Готовлюсь к моей решающей битве. Использовался, чтобы украсть спиртное у ваших родителей и забраться на крышу. Тон, загар в форме и готово, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Наверное, я забыл, что у меня есть выбор.</p>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <p>Placeholder content for the tab panel. This one relates to the profile tab. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке профиля. У тебя лучшая архитектура. Штампы в паспорте, она космополитка. Прекрасно, свежо, свирепо, мы засекли. Никогда не планировал, что однажды я потеряю тебя. Она съедает твое сердце. Твой поцелуй космический, каждое движение волшебное. Я имею в виду тех, я имею в виду, что она та самая. Приветствую вас, дорогие, давайте отправимся в путешествие. Просто владейте ночью, как 4 июля! Но ты предпочитаешь напиться.</p>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <p>Placeholder content for the tab panel. This one relates to the contact tab. Her love is like a drug. All my girls vintage Chanel baby. Got a motel and built a fort out of sheets. 'Cause she's the muse and the artist. (This is how we do) So you wanna play with magic. So just be sure before you give it all to me. I'm walking, I'm walking on air (tonight). Skip the talk, heard it all, time to walk the walk. Catch her if you can. Stinging like a bee I earned my stripes.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке контактов. Ее любовь подобна наркотику. Все мои девочки винтажные Chanel baby. Получил мотель и построил форт из листов. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать все это мне. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться. Поймай ее, если сможешь. Ужалив, как пчела, я заслужил свои нашивки.</p>
     </div>
   </div>
 </div>
@@ -339,13 +341,13 @@ toc: true
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Профиль</a>
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Контакт</a>
+    <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Контакт</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -360,20 +362,20 @@ toc: true
 <div class="bd-example bd-example-tabs">
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Главная</a>
-      <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</a>
-      <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</a>
+      <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
+      <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
+      <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к домашней вкладке. Поднимет вас на много миль вверх, так высоко, потому что у нее есть эта международная улыбка. В моей постели незнакомец, в голове стук. О, нет. В другой жизни я бы заставил тебя остаться. Потому что я, я способен на все. Готовлюсь к моей решающей битве. Использовался, чтобы украсть спиртное у ваших родителей и забраться на крышу. Тон, загар в форме и готово, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Наверное, я забыл, что у меня есть выбор.</p>
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-      <p>Placeholder content for the tab panel. This one relates to the profile tab. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке профиля. У тебя лучшая архитектура. Штампы в паспорте, она космополитка. Прекрасно, свежо, свирепо, мы засекли. Никогда не планировал, что однажды я потеряю тебя. Она съедает твое сердце. Твой поцелуй космический, каждое движение волшебное. Я имею в виду тех, я имею в виду, что она та самая. Приветствую вас, дорогие, давайте отправимся в путешествие. Просто владейте ночью, как 4 июля! Но ты предпочитаешь напиться.</p>
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <p>Placeholder content for the tab panel. This one relates to the contact tab. Her love is like a drug. All my girls vintage Chanel baby. Got a motel and built a fort out of sheets. 'Cause she's the muse and the artist. (This is how we do) So you wanna play with magic. So just be sure before you give it all to me. I'm walking, I'm walking on air (tonight). Skip the talk, heard it all, time to walk the walk. Catch her if you can. Stinging like a bee I earned my stripes.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке контактов. Ее любовь подобна наркотику. Все мои девочки винтажные Chanel baby. Получил мотель и построил форт из листов. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать все это мне. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться. Поймай ее, если сможешь. Ужалив, как пчела, я заслужил свои нашивки.</p>
     </div>
   </div>
 </div>
@@ -381,9 +383,9 @@ toc: true
 ```html
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Главная</a>
-    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</a>
-    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</a>
+    <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
+    <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
@@ -398,24 +400,24 @@ toc: true
 <div class="bd-example bd-example-tabs">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Главная</a>
+      <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</a>
+      <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</a>
+      <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
     </li>
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-      <p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к домашней вкладке. Поднимет вас на много миль вверх, так высоко, потому что у нее есть эта международная улыбка. В моей постели незнакомец, в голове стук. О, нет. В другой жизни я бы заставил тебя остаться. Потому что я, я способен на все. Готовлюсь к моей решающей битве. Использовался, чтобы украсть спиртное у ваших родителей и забраться на крышу. Тон, загар в форме и готово, включите его, потому что он становится тяжелым. Ее любовь подобна наркотику. Наверное, я забыл, что у меня есть выбор.</p>
     </div>
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-      <p>Placeholder content for the tab panel. This one relates to the profile tab. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке профиля. У тебя лучшая архитектура. Штампы в паспорте, она космополитка. Прекрасно, свежо, свирепо, мы засекли. Никогда не планировал, что однажды я потеряю тебя. Она съедает твое сердце. Твой поцелуй космический, каждое движение волшебное. Я имею в виду тех, я имею в виду, что она та самая. Приветствую вас, дорогие, давайте отправимся в путешествие. Просто владейте ночью, как 4 июля! Но ты предпочитаешь напиться.</p>
     </div>
     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <p>Placeholder content for the tab panel. This one relates to the contact tab. Her love is like a drug. All my girls vintage Chanel baby. Got a motel and built a fort out of sheets. 'Cause she's the muse and the artist. (This is how we do) So you wanna play with magic. So just be sure before you give it all to me. I'm walking, I'm walking on air (tonight). Skip the talk, heard it all, time to walk the walk. Catch her if you can. Stinging like a bee I earned my stripes.</p>
+      <p>Содержимое заполнителя для панели вкладок. Это относится к вкладке контактов. Ее любовь подобна наркотику. Все мои девочки винтажные Chanel baby. Получил мотель и построил форт из листов. Потому что она муза и художник. (Вот как мы это делаем) Итак, вы хотите поиграть с магией. Так что будь уверен, прежде чем отдать все это мне. Я иду, я иду по воздуху (сегодня вечером). Пропусти разговор, все слышал, пора прогуляться. Поймай ее, если сможешь. Ужалив, как пчела, я заслужил свои нашивки.</p>
     </div>
   </div>
 </div>
@@ -423,13 +425,13 @@ toc: true
 ```html
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Главная</a>
+    <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</a>
+    <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</a>
+    <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -445,10 +447,10 @@ toc: true
   <div class="row">
     <div class="col-3">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</a>
-        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</a>
-        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</a>
-        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</a>
+        <button class="nav-link active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</button>
+        <button class="nav-link" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
+        <button class="nav-link" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</button>
+        <button class="nav-link" id="v-pills-settings-tab" data-toggle="pill" data-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</button>
       </div>
     </div>
     <div class="col-9">
@@ -474,10 +476,10 @@ toc: true
 <div class="row">
   <div class="col-3">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</a>
+      <button class="nav-link active" id="v-pills-home-tab" data-toggle="pill" data-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</button>
+      <button class="nav-link" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
+      <button class="nav-link" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</button>
+      <button class="nav-link" id="v-pills-settings-tab" data-toggle="pill" data-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</button>
     </div>
   </div>
   <div class="col-9">
@@ -499,16 +501,16 @@ toc: true
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Профиль</a>
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Сообщения</a>
+    <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Сообщения</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
+    <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Настройки</button>
   </li>
 </ul>
 
@@ -526,7 +528,7 @@ toc: true
 Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
 
 ```js
-$('#myTab a').on('click', function (event) {
+$('#myTab button').on('click', function (event) {
   event.preventDefault()
   $(this).tab('show')
 })
@@ -535,10 +537,10 @@ $('#myTab a').on('click', function (event) {
 Вы можете активировать отдельные вкладки несколькими способами:
 
 ```js
-$('#myTab a[href="#profile"]').tab('show') // Выбрать вкладку по названию
-$('#myTab li:first-child a').tab('show') // Выбрать первую вкладку
-$('#myTab li:last-child a').tab('show') // Выбрать последнюю вкладку
-$('#myTab li:nth-child(3) a').tab('show') // Выбрать третью вкладку
+$('#myTab button[data-target="#profile"]').tab('show') // Выбрать вкладку по названию
+$('#myTab li:first-child button').tab('show') // Выбрать первую вкладку
+$('#myTab li:last-child button').tab('show') // Выбрать последнюю вкладку
+$('#myTab li:nth-child(3) button').tab('show') // Выбрать третью вкладку
 ```
 
 ### Эффект затухания
@@ -562,21 +564,21 @@ $('#myTab li:nth-child(3) a').tab('show') // Выбрать третью вкл�
 
 #### $().tab
 
-Активирует элемент вкладки и контейнер содержимого. Вкладка должна иметь либо `data-target`, либо `href`, нацеленный на узел контейнера в DOM.
+Активирует элемент вкладки и контейнер содержимого. Вкладка должна иметь либо `data-target`, либо, если используется ссылка, атрибут `href`, указывающий на узел-контейнер в DOM.
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Профиль</a>
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Сообщения</a>
+    <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Сообщения</button>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
+    <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Настройки</button>
   </li>
 </ul>
 
@@ -589,7 +591,7 @@ $('#myTab li:nth-child(3) a').tab('show') // Выбрать третью вкл�
 
 <script>
   $(function () {
-    $('#myTab li:last-child a').tab('show')
+    $('#myTab li:last-child button').tab('show')
   })
 </script>
 ```
@@ -645,7 +647,7 @@ $('#someTab').tab('show')
 </table>
 
 ```js
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
+$('button[data-toggle="tab"]').on('shown.bs.tab', function (event) {
   event.target // недавно активированная вкладка
   event.relatedTarget // предыдущая активная вкладка
 })

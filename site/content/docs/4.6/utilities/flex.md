@@ -606,6 +606,7 @@ Flexbox может делать несколько замечательных в
 - `.align-content{{ .abbr }}-start`
 - `.align-content{{ .abbr }}-end`
 - `.align-content{{ .abbr }}-center`
+- `.align-content{{ .abbr }}-between`
 - `.align-content{{ .abbr }}-around`
 - `.align-content{{ .abbr }}-stretch`
 {{- end -}}

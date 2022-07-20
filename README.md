@@ -39,11 +39,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.6.1.zip)
+- [Скачать последнюю версию.](https://github.com/twbs/bootstrap/archive/v4.6.2.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
 - Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.6.1`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.1`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.6.2`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.6/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -57,8 +57,6 @@
 [![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue)](https://atmospherejs.com/twbs/bootstrap)
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap)](https://packagist.org/packages/twbs/bootstrap)
 [![NuGet](https://img.shields.io/nuget/vpre/bootstrap)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
-[![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap)](https://david-dm.org/twbs/bootstrap?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap)](https://david-dm.org/twbs/bootstrap?type=dev)
 [![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/v4-dev)](https://coveralls.io/github/twbs/bootstrap?branch=v4-dev)
 [![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap.min.css)
 [![JS gzip size](https://img.badgesize.io/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/v4-dev/dist/js/bootstrap.min.js)
@@ -68,7 +66,9 @@
 
 ## Что включено
 
-В загрузке Вы найдете следующие каталоги и файлы, которые логически группируют общие ресурсы и предоставляют как скомпилированные, так и минифицированные варианты. Вы увидите что-то вроде этого:
+В загрузке вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
+
+<details><summary>Скачать содержимое</summary>
 
 ```text
 bootstrap/
@@ -96,6 +96,7 @@ bootstrap/
         ├── bootstrap.min.js
         └── bootstrap.min.js.map
 ```
+</details>
 
 Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/), но не [jQuery](https://jquery.com/).
 
@@ -191,4 +192,4 @@ bootstrap/
 
 ## Авторское право и лицензия
 
-Авторское право на код и документацию 2011–2021 гг. принадлежит [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенное под [Лицензия MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторское право на код и документацию 2011–2022 гг. принадлежит [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors) и [Twitter, Inc.](https://twitter.com) выпущенное под [Лицензия MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена по лицензии [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

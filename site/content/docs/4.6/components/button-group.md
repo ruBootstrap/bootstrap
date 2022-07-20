@@ -123,10 +123,10 @@ toc: true
   <button type="button" class="btn btn-secondary">2</button>
 
   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Выпадающий список
     </button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       <a class="dropdown-item" href="#">Выпадающая ссылка</a>
     </div>
@@ -155,10 +155,10 @@ toc: true
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+      <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
@@ -166,28 +166,28 @@ toc: true
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <button type="button" class="btn btn-secondary">Кнопка</button>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
+      <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
+      <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
     </div>
     <div class="btn-group" role="group">
-      <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Выпадающий список
       </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
+      <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
         <a class="dropdown-item" href="#">Выпадающая ссылка</a>
       </div>
