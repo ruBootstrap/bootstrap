@@ -353,7 +353,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< example >}}
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Кнопка выпадающего списка
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
