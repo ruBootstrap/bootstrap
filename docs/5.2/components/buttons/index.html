@@ -704,11 +704,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="отключенное-состояние">Отключенное состояние <a class="anchor-link" href="#%d0%be%d1%82%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%bd%d0%be%d0%b5-%d1%81%d0%be%d1%81%d1%82%d0%be%d1%8f%d0%bd%d0%b8%d0%b5" aria-label="Link to this section: Отключенное состояние"></a></h2>
-<ul>
-<li><code>&lt;a&gt;</code> не поддерживают атрибут <code>disabled</code>, поэтому Вы должны добавить класс <code>.disabled</code>, чтобы он визуально выглядел отключенным.</li>
-<li>Включены некоторые удобные для будущего стили для отключения всех <code>pointer-events</code> на кнопках привязки.</li>
-<li>Отключенные кнопки должны включать атрибут <code>aria-disabled=&quot;true&quot;</code>, чтобы указать состояние элемента для вспомогательных технологий.</li>
-</ul>
+<p>Чтобы кнопки выглядели неактивными, добавьте логический атрибут <code>disabled</code> к любому элементу <code>&lt;button&gt;</code>. К отключенным кнопкам применяются <code>pointer-events: none</code>, что предотвращает срабатывание состояний наведения и активного состояния.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <button type="button" class="btn btn-primary" disabled>Основная кнопка</button>
 <button type="button" class="btn btn-secondary" disabled>Кнопка</button>
@@ -729,11 +725,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-primary&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Основная кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-outline-secondary&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<div class="bd-callout bd-callout-warning">
-<h5 id="предупреждение-о-функциональности-ссылок">Предупреждение о функциональности ссылок <a class="anchor-link" href="#%d0%bf%d1%80%d0%b5%d0%b4%d1%83%d0%bf%d1%80%d0%b5%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%be-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d1%81%d1%81%d1%8b%d0%bb%d0%be%d0%ba" aria-label="Link to this section: Предупреждение о функциональности ссылок"></a></h5>
-<p>Класс <code>.disabled</code> использует <code>pointer-events: none</code>, чтобы попытаться отключить функциональность ссылок для <code>&lt;a&gt;</code>, но это свойство CSS еще не стандартизировано. Кроме того, даже в браузерах, которые поддерживают <code>pointer-events: none</code>, навигация с помощью клавиатуры остается неизменной, а это означает, что зрячие пользователи клавиатуры и пользователи вспомогательных технологий по-прежнему смогут активировать эти ссылки. Чтобы быть в безопасности, в дополнение к <code>aria-disabled=&quot;true&quot;</code>, также добавьте атрибут <code>tabindex=&quot;-1&quot;</code> в эти ссылки, чтобы они не получали фокус клавиатуры, и используйте собственный JavaScript, чтобы полностью отключить их функциональность .
-</div>
-
+<p>Отключенные кнопки, использующие элемент <code>&lt;a&gt;</code>, ведут себя немного иначе:</p>
 <ul>
 <li><code>&lt;a&gt;</code> не поддерживают атрибут <code>disabled</code>, поэтому вы должны добавить класс <code>.disabled</code>, чтобы он визуально выглядел отключенным.</li>
 <li>Включены некоторые удобные для будущего стили для отключения всех <code>pointer-events</code> на кнопках привязки.</li>
