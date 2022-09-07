@@ -46,12 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.2.0.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.2.1.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.2.0`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.2.0`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.0`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.2.1`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.2.1`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.2.1`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -59,7 +58,6 @@
 
 ## Статус
 
-[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
 [![Build Status](https://img.shields.io/github/workflow/status/twbs/bootstrap/JS%20Tests/main?label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amain)
 [![npm version](https://img.shields.io/npm/v/bootstrap)](https://www.npmjs.com/package/bootstrap)
 [![Gem version](https://img.shields.io/gem/v/bootstrap)](https://rubygems.org/gems/bootstrap)
@@ -139,14 +137,14 @@
 
 ## Ошибки и запросы улучшений
 
-Есть ошибка или запрос функции? Пожалуйста, сначала прочтите [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) и поищите существующие и закрытые проблемы. Если Ваша проблема еще не решена или идея не создана, [пожалуйста, откройте новый выпуск](https://github.com/twbs/bootstrap/issues/new).
+Есть ошибка или запрос функции? Пожалуйста, сначала прочтите [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) и поищите существующие и закрытые проблемы. Если Ваша проблема еще не решена или идея не создана, [пожалуйста, откройте новый выпуск](https://github.com/twbs/bootstrap/issues/new/choose).
 
 
 ## Документация
 
 Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.ru/) и размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документацию также можно запускать локально.
 
-Поиск по документации поддерживается [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
+Поиск по документации поддерживается [Algolia's DocSearch](https://docsearch.algolia.com/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
 
 ### Запуск документации локально
 
@@ -180,7 +178,7 @@
 - Присоединиться к чату [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
 - Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/) и [Не официальный блог Bootstrap](https://blog.getbootstrap.su/).
-- Присоединиться к [официальной комнате Slack](https://bootstrap-slack.herokuapp.com/).
+- Спрашивайте и изучайте [наши обсуждения на GitHub](https://github.com/twbs/bootstrap/discussions).
 - Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
 - Разработчикам следует использовать ключевое слово `bootstrap` в пакетах, которые изменяют или расширяют функциональность Bootstrap при распространении через [npm](https://www.npmjs.com/browse/keyword/bootstrap) или аналогичные механизмы доставки для максимальной узнаваемости.

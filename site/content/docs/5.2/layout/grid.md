@@ -420,6 +420,7 @@ toc: true
 ```scss
 $grid-columns:      12;
 $grid-gutter-width: 1.5rem;
+$grid-row-columns:  6;
 ```
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
@@ -499,11 +500,12 @@ $grid-gutter-width: 1.5rem;
 
 ### Колонки и промежутки
 
-Количество колонок сетки можно изменить с помощью переменных Sass. `$grid-columns` используется для генерации ширины (в процентах) каждого отдельного колонки, в то время как `$grid-gutter-width` устанавливает ширину промежутков между колонкими.
+Количество колонок сетки можно изменить с помощью переменных Sass. `$grid-columns` используется для создания ширины (в процентах) каждого отдельного столбца, а `$grid-gutter-width` устанавливает ширину промежутков между столбцами. `$grid-row-columns` используется для установки максимального количества столбцов `.row-cols-*`, любое число сверх этого ограничения игнорируется.
 
 ```scss
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
 ```
 
 ### Уровни сетки

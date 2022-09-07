@@ -223,8 +223,8 @@ bootstrap.Modal.Default.keyboard = false
 {{< bs-table "table" >}}
 | Статическое свойство | Описание |
 | --- | --- |
-| `NAME`  | Возвращает имя плагина. (Например: `bootstrap.Tooltip.NAME`) |
-| `VERSION`  | Доступ к версии каждого плагина Bootstrap можно получить через свойство `VERSION` конструктора плагина (Например: `bootstrap.Tooltip.VERSION`) |
+| `NAME` | Возвращает имя плагина. (Например: `bootstrap.Tooltip.NAME`) |
+| `VERSION` | Доступ к версии каждого плагина Bootstrap можно получить через свойство `VERSION` конструктора плагина (Например: `bootstrap.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Санитайзер

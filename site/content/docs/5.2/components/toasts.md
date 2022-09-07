@@ -360,9 +360,9 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 {{< bs-table "table" >}}
 | Название | Тип | По умолчанию | Описание |
 | --- | --- | --- | --- |
-| `animation` | boolean | `true` | Примените CSS-переход затухания к тосту |
-| `autohide` | boolean | `true`  | Автоматически скрывать тост после задержки |
-| `delay` | number | `5000` | Задержка в миллисекундах перед тем, как скрыть всплывающее уведомление |
+| `animation` | boolean | `true` | Примените CSS-переход затухания к тосту. |
+| `autohide` | boolean | `true`  | Автоматически скрывать тост после задержки. |
+| `delay` | number | `5000` | Задержка в миллисекундах перед тем, как скрыть всплывающее уведомление. |
 {{< /bs-table >}}
 
 ### Методы
@@ -375,8 +375,8 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 | Метод | Описание |
 | --- | --- |
 | `dispose` | Скрывает тост элемента. Ваше всплывающее уведомление останется в DOM, но больше не будет отображаться. |
-| `getInstance` | *Статический* метод, позволяющий получить экземпляр scrollspy, связанный с элементом DOM. <br> Например: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)` Возвращает экземпляр всплывающего уведомления|
-| `getOrCreateInstance` | *Статический* метод, который позволяет вам получить экземпляр scrollspy, связанный с элементом DOM, или создать новый, если он не был инициализирован. <br>`const myToastEl = document.getElementById('myToastEl')`  `const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)` Возвращает экземпляр всплывающего уведомления Bootstrap |
+| `getInstance` | *Статический* метод, позволяющий получить экземпляр тоста, связанный с элементом DOM. <br> Например: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)` Возвращает экземпляр всплывающего уведомления|
+| `getOrCreateInstance` | *Статический* метод, который позволяет вам получить экземпляр тоста, связанный с элементом DOM, или создать новый, если он не был инициализирован. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)` Возвращает экземпляр всплывающего уведомления Bootstrap |
 | `hide` | Скрывает тост элемента. **Возвращается к вызывающей стороне до того, как всплывающее уведомление будет фактически скрыто** (т. е. до того, как произойдет событие `hidden.bs.toast`). Вы должны вручную вызывать этот метод, если вы установили для `autohide` значение `false`. |
 | `isShown` | Возвращает логическое значение в соответствии с состоянием видимости всплывающего уведомления. |
 | `show` | Показывает тост элемента. **Возвращается к вызывающей стороне до того, как всплывающее уведомление действительно будет показано** (т. е. до того, как произойдет событие `shown.bs.toast`). Вы должны вручную вызвать этот метод, вместо этого ваш тост не будет отображаться. |

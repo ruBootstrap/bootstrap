@@ -377,9 +377,10 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< bs-table "table" >}}
 | Название | Тип | По умолчанию | Описание |
 | --- | --- | --- | --- |
-| `rootMargin` | string | `0px 0px -40%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) допустимые единицы измерения при расчете положения прокрутки. |
+| `rootMargin` | string | `0px 0px -25%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) допустимые единицы измерения при расчете положения прокрутки. |
 | `smoothScroll` | boolean | `false` | Включает плавную прокрутку, когда пользователь нажимает на ссылку, которая ссылается на наблюдаемые объекты ScrollSpy. |
 | `target` | string \| jQuery object \| DOM элемент |  | Указывает элемент для применения плагина Scrollspy. |
+| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) допустимый ввод при вычислении положения прокрутки. |
 {{< /bs-table >}}
 
 {{< callout warning >}}
@@ -394,8 +395,8 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< bs-table "table" >}}
 | Метод | Описание |
 | --- | --- |
-| `dispose` | Уничтожает scrollspy элемента. (Удаляет сохраненные данные в элементе DOM) |
-| `getInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM |
+| `dispose` | Уничтожает scrollspy элемента. (Удаляет сохраненные данные в элементе DOM). |
+| `getInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM. |
 | `getOrCreateInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM, или для создания нового экземпляра, если он не был инициализирован. |
 | `refresh` | При добавлении или удалении элементов в DOM вам необходимо вызвать метод обновления. |
 {{< /bs-table >}}

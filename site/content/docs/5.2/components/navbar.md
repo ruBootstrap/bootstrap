@@ -107,7 +107,7 @@ toc: true
 <nav class="navbar bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
     </a>
   </div>
 </nav>
@@ -121,7 +121,7 @@ toc: true
 <nav class="navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       Bootstrap
     </a>
   </div>
@@ -790,11 +790,19 @@ toc: true
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
+Настройку с помощью переменных CSS можно увидеть в классе `.navbar-dark`, где мы переопределяем определенные значения, не добавляя дубликаты селекторов CSS.
+
+{{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
+
 ### Переменные Sass
+
+Переменные для всех навигационных панелей:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+Переменные для [темной панели навигации](#color-schemes):
+
+{{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
 ### Цикл Sass
 

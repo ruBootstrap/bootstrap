@@ -17,4 +17,4 @@ group: getting-started
 - Работа с файлами Sass
 - Создание новых компонентов CSS
 - Работа с флексбоксом
-- Спросите в [Slack](https://bootstrap-slack.herokuapp.com/)
+- Спросите в [наших обсуждениях на GitHub](https://github.com/twbs/bootstrap/discussions)

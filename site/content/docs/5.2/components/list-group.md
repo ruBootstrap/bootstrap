@@ -442,62 +442,26 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Методы
 
-#### constructor
+{{< callout danger >}}
+{{< partial "callout-danger-async-methods.md" >}}
+{{< /callout >}}
 
-Активирует элемент элемента списка и контейнер содержимого. Вкладка должна иметь либо `data-bs-target` либо `href`, нацеленный на узел контейнера в DOM.
+Активирует ваш контент как элемент вкладки.
 
-```html
-<div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Главная</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Профиль</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Сообщения</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Настройки</a>
-</div>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab a:last-child')
-  const firstTab = new bootstrap.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Выбирает указанный элемент списка и показывает связанную с ним панель. Любой другой элемент списка, который был ранее выбран, становится невыделенным, а связанная с ним панель скрывается. **Возврат к вызывающему абоненту до того, как панель вкладок будет отображена** (например, до того, как произойдет событие `shown.bs.tab`).
+Вы можете создать экземпляр вкладки с помощью конструктора, например:
 
 ```js
-const tab = new bootstrap.Tab('#someListItem')
-
-tab.show()
+const bsTab = new bootstrap.Tab('#myTab')
 ```
 
-#### dispose
-
-Уничтожает вкладку элемента.
-
-#### getInstance
-
-*Статический* метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.
-
-```js
-const tab = bootstrap.Tab.getInstance('#trigger') // Returns a Bootstrap tab instance
-```
-
-#### getOrCreateInstance
-
-*Статический* метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.
-
-```js
-const tab = bootstrap.Tab.getOrCreateInstance('#trigger') // Returns a Bootstrap tab instance
-```
+{{< bs-table >}}
+| Метод | Описание |
+| --- | --- |
+| `dispose` | Уничтожает вкладку элемента. |
+| `getInstance` | Статический метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, вы можете использовать его следующим образом: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Статический метод, который возвращает экземпляр вкладки, связанный с элементом DOM, или создает новый, если он не был инициализирован. Вы можете использовать его так: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Выбирает данную вкладку и показывает связанную с ней панель. Любая другая ранее выбранная вкладка становится невыбранной, а связанная с ней панель скрывается. **Возвращается к вызывающей стороне до фактического отображения панели вкладок** (т. е. до возникновения события `shown.bs.tab`). |
+{{< /bs-table >}}
 
 ### События
 
@@ -508,7 +472,7 @@ const tab = bootstrap.Tab.getOrCreateInstance('#trigger') // Returns a Bootstrap
 3. `hidden.bs.tab` (на предыдущей активной вкладке такая же, как для события `hide.bs.tab`)
 4. `shown.bs.tab` (на только что активированной вкладке, такой же, как для события `show.bs.tab`)
 
-Если ни одна вкладка еще не была активной, события `hide.bs.tab` и `hidden.bs.tab` не запускаются.
+Если ни одна вкладка еще не была активной, то события `hide.bs.tab` и `hidden.bs.tab` не будут запущены.
 
 {{< bs-table >}}
 | Тип события | Описание |

@@ -626,71 +626,22 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-#### constructor
+Активирует ваш контент как элемент вкладки.
 
-Активирует элемент вкладки и контейнер содержимого. Вкладка должна иметь либо `data-bs-target`, либо, если используется ссылка, атрибут `href` нацеленный на узел контейнера в DOM.
-
-```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Сообщения</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Настройки</button>
-  </li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...</div>
-</div>
-
-<script>
-  const firstTabEl = document.querySelector('#myTab li:last-child button')
-  const firstTab = new bootstrap.Tab(firstTabEl)
-
-  firstTab.show()
-</script>
-```
-
-#### show
-
-Выбирает данную вкладку и показывает связанную с ней панель. Любая другая вкладка, которая была выбрана ранее, становится невыделенной, а связанная с ней панель скрывается. **Возврат к вызывающему абоненту до того, как панель вкладок будет отображена** (то есть до того, как произойдет событие `shown.bs.tab`).
+Вы можете создать экземпляр вкладки с помощью конструктора, например:
 
 ```js
-const someTabTriggerEl = document.querySelector('#someTabTrigger')
-const tab = new bootstrap.Tab(someTabTriggerEl)
-
-tab.show()
+const bsTab = new bootstrap.Tab('#myTab')
 ```
 
-#### dispose
-
-Уничтожает вкладку элемента.
-
-#### getInstance
-
-*Статический* метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM.
-
-```js
-const tab = bootstrap.Tab.getInstance('#trigger') // Returns a Bootstrap tab instance
-```
-
-#### getOrCreateInstance
-
-*Статический* метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, или создать новый, если он не был инициализирован.
-
-```js
-const tab = bootstrap.Tab.getOrCreateInstance('#trigger') // Returns a Bootstrap tab instance
-```
+{{< bs-table >}}
+| Метод | Описание |
+| --- | --- |
+| `dispose` | Уничтожает вкладку элемента. |
+| `getInstance` | Статический метод, который позволяет вам получить экземпляр вкладки, связанный с элементом DOM, вы можете использовать его следующим образом: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Статический метод, который возвращает экземпляр вкладки, связанный с элементом DOM, или создает новый, если он не был инициализирован. Вы можете использовать его так: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Выбирает данную вкладку и показывает связанную с ней панель. Любая другая ранее выбранная вкладка становится невыбранной, а связанная с ней панель скрывается. **Возвращается к вызывающей стороне до фактического отображения панели вкладок** (т. е. до возникновения события `shown.bs.tab`). |
+{{< /bs-table >}}
 
 ### События
 

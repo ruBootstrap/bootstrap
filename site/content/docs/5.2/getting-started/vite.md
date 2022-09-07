@@ -4,6 +4,7 @@ title: "Bootstrap и Vite"
 description: Официальное руководство о том, как включить CSS и JavaScript Bootstrap в свой проект с помощью Vite.
 group: getting-started
 toc: true
+thumbnail: guides/bootstrap-vite@2x.png
 ---
 
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="2000" height="1000" alt="">

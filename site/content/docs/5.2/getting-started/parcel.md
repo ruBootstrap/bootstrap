@@ -4,6 +4,7 @@ title: "Bootstrap и Parcel"
 description: Официальное руководство о том, как включить CSS и JavaScript Bootstrap в свой проект с помощью Parcel.
 group: getting-started
 toc: true
+thumbnail: guides/bootstrap-parcel@2x.png
 ---
 
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="2000" height="1000" alt="">

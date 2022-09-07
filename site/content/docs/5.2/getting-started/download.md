@@ -68,7 +68,7 @@ npm install bootstrap@{{< param "current_version" >}}
 Bootstrap's `package.json` содержит некоторые дополнительные метаданные под следующими ключами:
 
 - `sass` - путь к основному исходному файлу [Sass](https://sass-lang.com/) Bootstrap
-- `style` - путь к неминифицированному CSS Bootstrap, который был предварительно скомпилирован с использованием настроек по умолчанию (без настройки)
+- `style` - путь к неминифицированному CSS Bootstrap, который был скомпилирован с использованием настроек по умолчанию (без настройки)
 
 {{< callout info >}}
 {{< partial "callout-info-npm-starter.md" >}}

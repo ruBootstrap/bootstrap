@@ -186,10 +186,10 @@ const bsButton = new bootstrap.Button('#myButton')
 {{< bs-table "table" >}}
 | Метод | Описание |
 | --- | --- |
-| `dispose` | Уничтожает кнопку элемента. (Удаляет сохраненные данные в элементе DOM) |
-| `getInstance` | Статический метод, который позволяет вам получить экземпляр кнопки, связанный с элементом DOM, вы можете использовать его следующим образом: `bootstrap.Button.getInstance(element)`|
-| `getOrCreateInstance` | Статический метод, который возвращает экземпляр кнопки, связанный с элементом DOM, или создает новый, если он не был инициализирован. Вы можете использовать его следующим образом: `bootstrap.Button.getOrCreateInstance(element)` |
-| `toggle` | Переключает состояние нажатия. Дает кнопке вид, что она была активирована. |
+| `dispose` | Destroys an element's button. (Removes stored data on the DOM element). |
+| `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `bootstrap.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Button.getOrCreateInstance(element)`. |
+| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 {{< /bs-table >}}
 
 Например, чтобы переключить все кнопки

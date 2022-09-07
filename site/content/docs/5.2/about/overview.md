@@ -26,4 +26,4 @@ Bootstrap был создан в Twitter в середине 2010 года [@mdo
 
 ## Принять участие
 
-Примите участие в разработке Bootstrap, [открыв вопрос]({{< param repo >}}/issues/new) или отправив pull request. Прочтите наше [руководство по содействию]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md), чтобы узнать, как мы разрабатываем.
+Примите участие в разработке Bootstrap, [открыв вопрос]({{< param repo >}}/issues/new/choose) или отправив pull request. Прочтите наше [руководство по содействию]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md), чтобы узнать, как мы разрабатываем.
