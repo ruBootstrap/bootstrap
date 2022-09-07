@@ -31,23 +31,21 @@
 <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Offcanvas">
 <meta name="twitter:description" content="Встраивайте в свой проект скрытые боковые панели для навигации, корзины покупок и многого другого с помощью нескольких классов и нашего плагина JavaScript.">
-<meta name="twitter:image" content="https://getbootstrap.su/docs/5.2/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="/docs/5.2/assets/brand/bootstrap-social.png">
 
-<!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.su/docs/5.2/components/offcanvas/">
 <meta property="og:title" content="Offcanvas">
 <meta property="og:description" content="Встраивайте в свой проект скрытые боковые панели для навигации, корзины покупок и многого другого с помощью нескольких классов и нашего плагина JavaScript.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap.su/docs/5.2/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
+<meta property="og:image" content="/docs/5.2/assets/brand/bootstrap-social.png">
 
 
     
@@ -150,6 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top">
   <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+    <div class="bd-navbar-toggle">
       <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -157,14 +156,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <span class="d-none fs-6 pe-1">Просмотр</span>
       </button>
+    </div>
 
     <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Bootstrap">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
-    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
-      <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
-    </button>
+    <div class="d-flex">
+      
+        <div class="bd-search" id="docsearch" data-bd-docs-version="5.2"></div>
+      
+
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
+      </button>
+    </div>
 
     <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
       <div class="offcanvas-header px-4 pb-0">
@@ -197,12 +203,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <hr class="d-lg-none text-white-50">
 
-        
-        <div class="bd-search" id="docsearch" data-bd-docs-version="5.2"></div>
-
-        <hr class="d-lg-none text-white-50">
-        
-
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="https://t.me/getbootstrap_ru" target="_blank" rel="noopener">
@@ -222,12 +222,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg" viewBox="0 0 512 416.32" role="img"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"/></svg>
               <small class="d-lg-none ms-2">Twitter</small>
-            </a>
-          </li>
-          <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg" viewBox="0 0 512 512" role="img"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
-              <small class="d-lg-none ms-2">Slack</small>
             </a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
@@ -517,13 +511,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="#компоненты-offcanvas">Компоненты Offcanvas</a></li>
         <li><a href="#живая-демонстрация">Живая демонстрация</a></li>
-        <li><a href="#темный-offcanvas">Темный offcanvas</a></li>
         <li><a href="#прокрутка-body">Прокрутка Body</a></li>
         <li><a href="#прокрутка-тела-и-подложка">Прокрутка тела и подложка</a></li>
         <li><a href="#статический-фон">Статический фон</a></li>
       </ul>
     </li>
-    <li><a href="#отзывчивый">Отзывчивый</a></li>
+    <li><a href="#темный-offcanvas">Темный offcanvas</a></li>
+    <li><a href="#отзывчивость">Отзывчивость</a></li>
     <li><a href="#размещение">Размещение</a></li>
     <li><a href="#доступность">Доступность</a></li>
     <li><a href="#css">CSS</a>
@@ -676,38 +670,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="темный-offcanvas">Темный offcanvas <a class="anchor-link" href="#%d1%82%d0%b5%d0%bc%d0%bd%d1%8b%d0%b9-offcanvas" aria-label="Link to this section: Темный offcanvas"></a></h3>
-<p>Измените внешний вид offcanvases с помощью утилит, чтобы они лучше соответствовали различным контекстам, таким как темные панели навигации. Здесь мы добавляем <code>.text-bg-dark</code> к <code>.offcanvas</code> и <code>.btn-close-white</code> к <code>.btn-close</code> для правильной стилизации с темным offcanvas. Если у вас есть раскрывающиеся списки, рассмотрите возможность добавления <code>.dropdown-menu-dark</code> в <code>.dropdown-menu</code>.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
-<div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Place offcanvas content here.</p>
-  </div>
-</div>
-</div><div class="d-flex align-items-center highlight-toolbar bg-light ps-3 pe-2 py-1">
-        <small class="font-monospace text-muted text-uppercase">html</small>
-        <div class="d-flex ms-auto">
-          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
-            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
-          </button>
-          <button type="button" class="btn-clipboard mt-0 me-0" title="Скопировать в буфер обмена">
-            <svg class="bi" role="img" aria-label="Копировать"><use xlink:href="#clipboard"/></svg>
-          </button>
-        </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas offcanvas-start show text-bg-dark&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasDark&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;offcanvasDarkLabel&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-header&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-title&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasDarkLabel&#34;</span><span class="p">&gt;</span>Offcanvas<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvasDark&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-body&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Place offcanvas content here.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
-
 <h3 id="прокрутка-body">Прокрутка Body <a class="anchor-link" href="#%d0%bf%d1%80%d0%be%d0%ba%d1%80%d1%83%d1%82%d0%ba%d0%b0-body" aria-label="Link to this section: Прокрутка Body"></a></h3>
 <p>Прокрутка элемента <code>&lt;body&gt;</code> отключена, когда видимы offcanvas и его фон. Используйте атрибут <code>data-bs-scroll</code>, чтобы включить прокрутку <code>&lt;body&gt;</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
@@ -824,8 +786,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="отзывчивый">Отзывчивый <a class="anchor-link" href="#%d0%be%d1%82%d0%b7%d1%8b%d0%b2%d1%87%d0%b8%d0%b2%d1%8b%d0%b9" aria-label="Link to this section: Отзывчивый"></a></h2>
-<p><small class="d-inline-flex px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 rounded-2">Добавлено в версии 5.2.0</small></p>
+<h2 id="темный-offcanvas">Темный offcanvas <a class="anchor-link" href="#%d1%82%d0%b5%d0%bc%d0%bd%d1%8b%d0%b9-offcanvas" aria-label="Link to this section: Темный offcanvas"></a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2">Добавлено в версии 5.2.0</small>
+
+<p>Измените внешний вид offcanvases с помощью утилит, чтобы они лучше соответствовали различным контекстам, таким как темные панели навигации. Здесь мы добавляем <code>.text-bg-dark</code> к <code>.offcanvas</code> и <code>.btn-close-white</code> к <code>.btn-close</code> для правильной стилизации с темным offcanvas. Если у вас есть раскрывающиеся списки, рассмотрите возможность добавления <code>.dropdown-menu-dark</code> в <code>.dropdown-menu</code>.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
+<div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label="Закрыть"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Разместите контент offcanvas здесь.</p>
+  </div>
+</div>
+</div><div class="d-flex align-items-center highlight-toolbar bg-light ps-3 pe-2 py-1">
+        <small class="font-monospace text-muted text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" role="img" aria-label="Try it"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Скопировать в буфер обмена">
+            <svg class="bi" role="img" aria-label="Копировать"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas offcanvas-start show text-bg-dark&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasDark&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;offcanvasDarkLabel&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-title&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;offcanvasDarkLabel&#34;</span><span class="p">&gt;</span>Offcanvas<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvasDark&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Закрыть&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;offcanvas-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Разместите контент offcanvas здесь.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+
+<h2 id="отзывчивость">Отзывчивость <a class="anchor-link" href="#%d0%be%d1%82%d0%b7%d1%8b%d0%b2%d1%87%d0%b8%d0%b2%d0%be%d1%81%d1%82%d1%8c" aria-label="Link to this section: Отзывчивость"></a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2">Добавлено в версии 5.2.0</small>
+
 <p>Отзывчивые классы offcanvas скрывают содержимое за пределами области просмотра от указанной контрольной точке и ниже. Выше этой контрольной точки содержимое внутри будет вести себя как обычно. Например, <code>.offcanvas-lg</code> hides content in an offcanvas below the <code>lg</code> breakpoint, but shows the content above the <code>lg</code> breakpoint.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Переключатель offcanvas</button>
@@ -989,9 +986,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Так как панель offcanvas концептуально является модальным диалогом, не забудьте добавить <code>aria-labelledby=&quot;...&quot;</code> — ссылку на заголовок offcanvas - в <code>.offcanvas</code>. Обратите внимание, что Вам не нужно добавлять <code>role=&quot;dialog&quot;</code>, поскольку мы уже добавляем его через JavaScript.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="переменные">Переменные <a class="anchor-link" href="#%d0%bf%d0%b5%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5" aria-label="Link to this section: Переменные"></a></h3>
-<p><small class="d-inline-flex px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 rounded-2">Добавлено в версии 5.2.0</small></p>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success bg-success bg-opacity-10 border border-success border-opacity-10 rounded-2">Добавлено в версии 5.2.0</small>
+
 <p>Как часть развивающегося подхода Bootstrap к переменным CSS, offcanvas теперь использует локальные переменные CSS в <code>.offcanvas</code> для расширенной настройки в реальном времени. Значения переменных CSS задаются через Sass, поэтому настройка Sass по-прежнему поддерживается.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$offcanvas-horizontal-width</span><span class="si">}</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-zindex</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$zindex-offcanvas</span><span class="si">}</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$offcanvas-horizontal-width</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-height</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$offcanvas-vertical-height</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$offcanvas-padding-x</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--#{$prefix}offcanvas-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$offcanvas-padding-y</span><span class="si">}</span><span class="p">;</span>
@@ -1067,13 +1066,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td><code>keyboard</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>Закрывает offcanvas при нажатии клавиши выхода</td>
+<td>Закрывает offcanvas при нажатии клавиши выхода.</td>
 </tr>
 <tr>
 <td><code>scroll</code></td>
 <td>boolean</td>
 <td><code>false</code></td>
-<td>Разрешает прокрутку тела, когда открыт offcanvas</td>
+<td>Разрешает прокрутку тела, когда открыт offcanvas.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1103,7 +1102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td><em>Статический</em> метод, который позволяет вам получить экземпляр offcanvas, связанный с элементом DOM, или создать новый, если он не был инициализирован</td>
+<td><em>Статический</em> метод, который позволяет вам получить экземпляр offcanvas, связанный с элементом DOM, или создать новый, если он не был инициализирован.</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
@@ -1174,7 +1173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="list-unstyled small text-muted">
           <li class="mb-2">Разработан и построен с любовью в мире <a href="/docs/5.2/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия v5.2.0.</li>
+          <li class="mb-2">Текущая версия v5.2.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1217,7 +1216,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Обсуждения</a></li>
           <li class="mb-2"><a href="https://github.com/sponsors/twbs">Корпоративные спонсоры</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
           <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
         </ul>
       </div>
@@ -1253,10 +1251,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.2.0\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.2.1\/dist\/css\/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.su/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/bootstrap@5\.2\.0\/dist\/js\/bootstrap\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/bootstrap@5\.2\.1\/dist\/js\/bootstrap\.bundle\.min\.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
 
