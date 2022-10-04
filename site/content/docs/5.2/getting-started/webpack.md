@@ -254,7 +254,7 @@ Then instantiate and use the plugin in the Webpack configuration:
 @@ -1,8 +1,10 @@
 +const miniCssExtractPlugin = require('mini-css-extract-plugin')
  const path = require('path')
- 
+
  module.exports = {
    mode: 'development',
    entry: './src/js/main.js',

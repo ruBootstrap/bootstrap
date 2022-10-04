@@ -677,7 +677,7 @@ body_class: "bg-light"
         {{- range (index $.Site.Data "theme-colors") }}
         <div class="alert alert-{{ .name }} alert-dismissible fade show" role="alert">
           Простое {{ .name }} оповещение с <a href="#" class="alert-link">примером ссылки</a>. Нажмите, если хотите.
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
         </div>{{ end -}}
         {{< /alerts.inline >}}
         {{< /example >}}
@@ -1507,7 +1507,7 @@ body_class: "bg-light"
             {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
             <strong class="me-auto">Bootstrap</strong>
             <small class="text-muted">11 минут назад</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
           </div>
           <div class="toast-body">
             Привет мир! Это тост-сообщение.
@@ -1539,7 +1539,7 @@ body_class: "bg-light"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -1556,7 +1556,7 @@ body_class: "bg-light"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLiveLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -1573,7 +1573,7 @@ body_class: "bg-light"
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -1592,7 +1592,7 @@ body_class: "bg-light"
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Полноэкранный модальное окно</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Полноэкранное модальное окно</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">

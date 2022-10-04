@@ -78,6 +78,10 @@ myModal.addEventListener('shown.bs.modal', () => {
 </div>
 ```
 
+{{< callout info >}}
+В приведенном выше статическом примере мы используем `<h5>`, чтобы избежать проблем с иерархией заголовков на странице документации. Однако структурно модальное диалоговое окно представляет собой отдельный документ/контекст, поэтому `.modal-title` в идеале должен быть `<h1>`. При необходимости вы можете использовать [утилиты размера шрифта]({{< docsref "/utilities/text#font-size" >}}) для управления внешним видом заголовка. Все следующие живые примеры используют этот подход.
+{{< /callout >}}
+
 ### Живая демонстрация
 
 Переключите рабочую модальную демонстрацию, нажав кнопку ниже. Он будет скользить вниз и исчезать из верхней части страницы.
@@ -86,7 +90,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLiveLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -117,7 +121,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -140,7 +144,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLiveLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -171,7 +175,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -194,7 +198,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLongTitle">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body" style="min-height: 1500px">
@@ -220,7 +224,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -249,7 +253,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 </div>
 ```
 
-### Центрование по вертикали
+### Центрирование по вертикали
 
 Добавьте `.modal-dialog-centered` к `.modal-dialog` для вертикального центрирования модального окна.
 
@@ -257,7 +261,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -275,7 +279,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -320,15 +324,15 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalPopoversLabel">Заголовок модального окна</h5>
+        <h1 class="modal-title fs-5" id="exampleModalPopoversLabel">Заголовок модального окна</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-        <h5>Поповер в модальном окне</h5>
-        <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+        <h2 class="fs-5">Поповер в модальном окне</h2>
+        <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">кнопка</a> вызывает всплывающее окно при нажатии.</p>
         <hr>
-        <h5>Подсказки в модальном окне</h5>
-        <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
+        <h2 class="fs-5">Подсказки в модальном окне</h2>
+        <p><a href="#" data-bs-toggle="tooltip" title="Тултип" data-bs-container="#exampleModalPopovers">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Тултип" data-bs-container="#exampleModalPopovers">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -346,11 +350,11 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 ```html
 <div class="modal-body">
-  <h5>Поповер в модальном окне</h5>
-  <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+  <h2 class="fs-5">Popover in a modal</h2>
+  <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Popover body content is set in this attribute.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
   <hr>
-  <h5>Подсказки в модальном окне</h5>
-  <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Tooltip">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
+  <h2 class="fs-5">Подсказки в модальном окне</h2>
+  <p><a href="#" data-bs-toggle="tooltip" title="Тултип">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Тултип">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
 </div>
 ```
 
@@ -362,7 +366,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="gridModalLabel">Сетки в модальных окнах</h5>
+        <h1 class="modal-title fs-5" id="gridModalLabel">Сетки в модальных окнах</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -453,7 +457,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Новое сообщение</h5>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Новое сообщение</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -503,7 +507,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel">Модалка 1</h5>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Модалка 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -519,7 +523,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel2">Модалка 2</h5>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Модалка 2</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -593,7 +597,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalXlLabel">Очень большое модальное окно</h5>
+        <h1 class="modal-title fs-4" id="exampleModalXlLabel">Очень большое модальное окно</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -607,7 +611,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalLgLabel">Большое модальное окно</h5>
+        <h1 class="modal-title fs-4" id="exampleModalLgLabel">Большое модальное окно</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -621,7 +625,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalSmLabel">Маленькое модальное окно</h5>
+        <h1 class="modal-title fs-4" id="exampleModalSmLabel">Маленькое модальное окно</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -666,7 +670,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Полноэкранное модальное окно</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Полноэкранное модальное окно</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -683,7 +687,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen-sm-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenSmLabel">Полноэкранный меньше sm</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenSmLabel">Полноэкранный меньше sm</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -700,7 +704,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen-md-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenMdLabel">Полноэкранный меньше md</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenMdLabel">Полноэкранный меньше md</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -717,7 +721,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen-lg-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLgLabel">Полноэкранный меньше lg</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLgLabel">Полноэкранный меньше lg</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -734,7 +738,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen-xl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenXlLabel">Полноэкранный меньше xl</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenXlLabel">Полноэкранный меньше xl</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
@@ -751,7 +755,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   <div class="modal-dialog modal-fullscreen-xxl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenXxlLabel">Полноэкранный меньше xxl</h5>
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenXxlLabel">Полноэкранный меньше xxl</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">

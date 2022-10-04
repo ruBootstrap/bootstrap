@@ -706,7 +706,7 @@ toc: true
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
           <button class="btn btn-outline-success" type="submit">Поиск</button>
         </form>
@@ -766,7 +766,7 @@ toc: true
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
           <button class="btn btn-success" type="submit">Поиск</button>
         </form>
