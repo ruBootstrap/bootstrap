@@ -96,17 +96,44 @@ toc: true
 
 ## Разрыв
 
-При использовании `display: grid` Вы можете использовать утилиты `gap` в родительском контейнере сетки. Это может сэкономить на добавлении утилит полей к отдельным элементам сетки (дочерним элементам контейнера `display: grid`). Утилиты Разрыва реагируют по умолчанию и генерируются через наш API утилит на основе Sass карты `$spacers`.
+При использовании `display: grid` или `display: flex`, вы можете использовать утилиты `gap` для родительского элемента. Это может сэкономить на необходимости добавлять утилиты маржи к отдельным дочерним элементам сетки или гибкого контейнера. Утилиты Gap по умолчанию реагируют и генерируются с помощью нашего API утилит на основе карты Sass `$spacers`.
 
-{{< example html >}}
-<div class="d-grid gap-3">
-  <div class="p-2 bg-light border">Элемент сетки 1</div>
-  <div class="p-2 bg-light border">Элемент сетки 2</div>
-  <div class="p-2 bg-light border">Элемент сетки 3</div>
+{{< example >}}
+<div class="grid gap-3" >
+  <div class="p-2 bg-light border g-col-6">Элемент грида 1</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 2</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 3</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 4</div>
 </div>
 {{< /example >}}
 
 Поддержка включает в себя адаптивные параметры для всех контрольных точек сетки Bootstrap, а также шесть размеров из карты `$spacers` (`0`–`5`). Не существует класса утилиты `.gap-auto`, поскольку он фактически совпадает с `.gap-0`.
+
+### row-gap
+
+`row-gap` устанавливает расстояние по вертикали между дочерними элементами в указанном контейнере.
+
+{{< example >}}
+<div class="grid gap-0 row-gap-3" >
+  <div class="p-2 bg-light border g-col-6">Элемент грида 1</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 2</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 3</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 4</div>
+</div>
+{{< /example >}}
+
+### column-gap
+
+`column-gap` устанавливает горизонтальное расстояние между дочерними элементами в указанном контейнере.
+
+{{< example >}}
+<div class="grid gap-0 column-gap-3" >
+  <div class="p-2 bg-light border g-col-6">Элемент грида 1</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 2</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 3</div>
+  <div class="p-2 bg-light border g-col-6">Элемент грида 4</div>
+</div>
+{{< /example >}}
 
 ## Sass
 

@@ -176,7 +176,7 @@ $font-family-sans-serif:
 
 {{< example >}}
 Чтобы сменить каталог, введите <kbd>cd</kbd>, а затем имя каталога.<br>
-Для редактирования настроек нажмите <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+Для редактирования настроек нажмите <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
 
 ## Пример вывода
@@ -363,7 +363,7 @@ $font-family-sans-serif:
 </form>
 
 {{< callout warning >}}
-{{< partial "callout-warning-input-support.md" >}}
+{{< partial "callouts/warning-input-support.md" >}}
 {{< /callout >}}
 
 ### Указатели на кнопках

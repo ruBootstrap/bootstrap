@@ -21,7 +21,7 @@ Bootstrap включает несколько предопределенных �
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Отключение переноса текста

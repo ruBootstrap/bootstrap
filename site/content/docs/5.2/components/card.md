@@ -207,7 +207,7 @@ toc: true
 
 {{< example >}}
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Особое обращение с заголовком</h5>
@@ -233,7 +233,7 @@ toc: true
 Воспользуйтесь нашей горсткой [доступных утилит для определения размера]({{< docsref "/utilities/sizing" >}}), чтобы быстро установить ширину карты.
 
 {{< example >}}
-<div class="card w-75">
+<div class="card w-75 mb-3">
   <div class="card-body">
     <h5 class="card-title">Заголовок карточки</h5>
     <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
@@ -269,7 +269,7 @@ toc: true
 Вы можете быстро изменить выравнивание текста любой карточки - целиком или в отдельных частях - с помощью наших [классов выравнивания текста]({{< docsref "/utilities/text#text-alignment" >}}).
 
 {{< example >}}
-<div class="card" style="width: 18rem;">
+<div class="card mb-3" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Особое обращение с заголовком</h5>
     <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
@@ -277,7 +277,7 @@ toc: true
   </div>
 </div>
 
-<div class="card text-center" style="width: 18rem;">
+<div class="card text-center mb-3" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Особое обращение с заголовком</h5>
     <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
@@ -436,7 +436,7 @@ toc: true
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ### Граница

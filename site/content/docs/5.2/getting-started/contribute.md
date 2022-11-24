@@ -14,7 +14,7 @@ Bootstrap использует [сценарии npm](https://docs.npmjs.com/mis
 Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к игре:
 
 1. [Загрузите и установите Node.js](https://nodejs.org/en/download/), который мы используем для управления нашими зависимостями.
-2. Либо [загрузите исходные коды Bootstrap]({{< param "download.source" >}}), либо сделайте "форк" [репозитория Bootstrap]({{< param repo >}}).
+2. Либо [загрузите исходные коды Bootstrap]({{< param "download.source" >}}), либо сделайте "форк" и клонируйте [репозиторий Bootstrap]({{< param repo >}}).
 3. Перейдите в корневой каталог `/bootstrap` и запустите `npm install`, чтобы установить наши локальные зависимости, перечисленные в [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
 
 По завершении Вы сможете запускать различные команды из командной строки.
@@ -33,7 +33,7 @@ Bootstrap использует [сценарии npm](https://docs.npmjs.com/mis
 {{< /bs-table >}}
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ## Sass

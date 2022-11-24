@@ -21,10 +21,13 @@ toc: true
   <span class="input-group-text" id="basic-addon2">@example.com</span>
 </div>
 
-<label for="basic-url" class="form-label">Ваш URL-адрес</label>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+<div class="mb-3">
+  <label for="basic-url" class="form-label">Ваш URL-адрес</label>
+  <div class="input-group">
+    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+  <div class="form-text">Пример текста справки выходит за пределы группы ввода.</div>
 </div>
 
 <div class="input-group mb-3">

@@ -297,6 +297,9 @@
     - title: Interactions
       hint: Взаимодействия
       slug: interactions
+    - title: Object fit
+      hint: Соответствие объекта
+      slug: object-fit
     - title: Opacity
       hint: Непрозрачность
       slug: opacity
@@ -324,6 +327,9 @@
     - title: Visibility
       hint: Видимость
       slug: visibility
+    - title: Z-index
+      hint: Z-индекс
+      slug: z-index
 
 - title: Дополнительно
   icon: tools

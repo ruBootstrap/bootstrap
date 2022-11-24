@@ -19,7 +19,7 @@ toc: true
 - **Новое в версии 5.2.0:** Навигационные панели могут быть оформлены с помощью переменных CSS, которые привязаны к базовому классу `.navbar`. `.navbar-light` устарел, а `.navbar-dark` был переписан для переопределения переменных CSS вместо добавления дополнительных стилей.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Поддерживаемый контент

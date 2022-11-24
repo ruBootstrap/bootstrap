@@ -623,7 +623,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ### Методы
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Активирует ваш контент как элемент вкладки.

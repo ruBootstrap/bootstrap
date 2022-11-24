@@ -27,7 +27,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 ```
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 Продолжайте читать, чтобы увидеть демонстрации и инструкции по использованию.
@@ -329,7 +329,7 @@ myModal.addEventListener('shown.bs.modal', () => {
       </div>
       <div class="modal-body">
         <h2 class="fs-5">Поповер в модальном окне</h2>
-        <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+        <p>Эта <button class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Содержимое тела всплывающего окна задается в этом атрибуте." data-bs-container="#exampleModalPopovers">кнопка</button> вызывает всплывающее окно при нажатии.</p>
         <hr>
         <h2 class="fs-5">Подсказки в модальном окне</h2>
         <p><a href="#" data-bs-toggle="tooltip" title="Тултип" data-bs-container="#exampleModalPopovers">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Тултип" data-bs-container="#exampleModalPopovers">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
@@ -350,8 +350,8 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 ```html
 <div class="modal-body">
-  <h2 class="fs-5">Popover in a modal</h2>
-  <p>Эта <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Popover body content is set in this attribute.">кнопка</a> вызывает всплывающее окно при нажатии.</p>
+  <h2 class="fs-5">Поповер в модальном окне</h2>
+  <p>Эта <button class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Содержимое тела всплывающего окна задается в этом атрибуте.">кнопка</button> вызывает всплывающее окно при нажатии.</p>
   <hr>
   <h2 class="fs-5">Подсказки в модальном окне</h2>
   <p><a href="#" data-bs-toggle="tooltip" title="Тултип">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Тултип">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
@@ -535,7 +535,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
     </div>
   </div>
 </div>
-<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Открыть первое модальное окно</a>
+<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Открыть первое модальное окно</button>
 {{< /example >}}
 
 ### Изменение анимации
@@ -839,7 +839,7 @@ const myModalAlternative = new bootstrap.Modal('#myModal', options)
 ### Методы
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 #### Варианты прохождения

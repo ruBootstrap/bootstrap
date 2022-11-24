@@ -117,7 +117,7 @@ $body-color: #111;
 При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.
 
 {{< callout info >}}
-{{< partial "callout-info-npm-starter.md" >}}
+{{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
 ## Карты и циклы

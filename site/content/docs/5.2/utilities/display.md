@@ -64,8 +64,8 @@ toc: true
 | Скрыто только на sm | `.d-sm-none .d-md-block` |
 | Скрыто только на md | `.d-md-none .d-lg-block` |
 | Скрыто только на lg | `.d-lg-none .d-xl-block` |
-| Скрыто только на xl | `.d-xl-none` |
-| Скрыто только на xxl | `.d-xxl-none .d-xxl-block` |
+| Скрыто только на xl | `.d-xl-none .d-xxl-block` |
+| Скрыто только на xxl | `.d-xxl-none` |
 | Видно на всех | `.d-block` |
 | Видно только на xs | `.d-block .d-sm-none` |
 | Видно только на sm | `.d-none .d-sm-block .d-md-none` |

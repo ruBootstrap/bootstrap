@@ -16,7 +16,7 @@ toc: true
 - Всплывающие сообщения будут автоматически скрываться, если Вы не укажете `autohide: false`.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Примеры
@@ -368,7 +368,7 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 ### Методы
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}

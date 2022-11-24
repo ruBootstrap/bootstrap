@@ -35,6 +35,7 @@ thumbnail: guides/bootstrap-vite@2x.png
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
+
 4. **Установите дополнительные зависимости.** В дополнение к Vite и Bootstrap нам нужна еще одна зависимость (Sass), чтобы правильно импортировать и связывать CSS Bootstrap.
 
    ```sh

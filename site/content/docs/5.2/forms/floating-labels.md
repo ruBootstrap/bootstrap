@@ -45,7 +45,7 @@ toc: true
 
 {{< example >}}
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+  <textarea class="form-control" placeholder="Оставьте комментарий здесь" id="floatingTextarea"></textarea>
   <label for="floatingTextarea">Комментарии</label>
 </div>
 {{< /example >}}
@@ -54,7 +54,7 @@ toc: true
 
 {{< example >}}
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea class="form-control" placeholder="Оставьте комментарий здесь" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Комментарии</label>
 </div>
 {{< /example >}}
@@ -75,7 +75,35 @@ toc: true
 </div>
 {{< /example >}}
 
-## Открытый текст только для чтения
+## Отключенные
+
+Добавьте логический атрибут `disabled` для ввода, текстовой области или выбора, чтобы придать ему серый вид, удалить события указателя и предотвратить фокусировку.
+
+{{< example >}}
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled>
+  <label for="floatingInputDisabled">Адрес эл. почты</label>
+</div>
+<div class="form-floating mb-3">
+  <textarea class="form-control" placeholder="Оставьте комментарий здесь" id="floatingTextareaDisabled" disabled></textarea>
+  <label for="floatingTextareaDisabled">Комментарии</label>
+</div>
+<div class="form-floating mb-3">
+  <textarea class="form-control" placeholder="Оставьте комментарий здесь" id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
+  <label for="floatingTextarea2Disabled">Комментарии</label>
+</div>
+<div class="form-floating">
+  <select class="form-select" id="floatingSelectDisabled" aria-label="Плавающая метка отключена, выберите пример" disabled>
+    <option selected>Откройте это меню выбора</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
+  </select>
+  <label for="floatingSelectDisabled">Работает с меню выбора</label>
+</div>
+{{< /example >}}
+
+## Обычный текст, доступный для чтения
 
 Плавающие метки также поддерживают `.form-control-plaintext`, который может быть полезен для переключения с редактируемого `<input>` на значение открытого текста, не влияя на макет страницы.
 

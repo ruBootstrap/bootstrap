@@ -9,8 +9,6 @@ added: "5.2"
 
 ## Обзор
 
-{{< added-in "5.2.0" >}}
-
 Помощники по цвету и фону сочетают в себе мощь наших [утилит `.text-*`]({{< docsref "/utilities/colors" >}}) и [утилит `.bg-*`]({{< docsref "/utilities/background" >}}) в одном классе. Используя нашу функцию Sass `color-contrast()`, мы автоматически определяем контрастный `color` для определенного `background-color`.
 
 {{< callout warning >}}

@@ -13,7 +13,7 @@ Bootstrap «спиннеры» можно использовать для ото
 Для удобства здесь каждый загрузчик включает в себя `role="status"` и вложенный `<span class="visually-hidden">Загрузка...</span>`.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Спиннер с границей
@@ -204,9 +204,7 @@ Bootstrap «спиннеры» можно использовать для ото
 {{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
 
 [color]:   {{< docsref "/utilities/colors" >}}
-[display]: {{< docsref "/utilities/display" >}}
 [flex]:    {{< docsref "/utilities/flex" >}}
 [float]:   {{< docsref "/utilities/float" >}}
 [margin]:  {{< docsref "/utilities/spacing" >}}
-[sizing]:  {{< docsref "/utilities/sizing" >}}
 [text]:    {{< docsref "/utilities/text" >}}

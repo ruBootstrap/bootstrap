@@ -183,7 +183,7 @@ toc: true
 {{< /example >}}
 
 {{< callout info >}}
-{{< partial "callout-warning-color-assistive-technologies.md" >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
 ## Со значками
@@ -443,7 +443,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ### Методы
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 Активирует ваш контент как элемент вкладки.

@@ -14,7 +14,7 @@ toc: true
 Аккордеон использует [collapse]({{< docsref "/components/collapse" >}}) внутри, чтобы сделать его складным. Чтобы визуализировать расширенный аккордеон, добавьте класс `.open` d `.accordion`.
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Пример

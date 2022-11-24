@@ -27,11 +27,11 @@ toc: true
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-info-sanitizer.md" >}}
+{{< partial "callouts/info-sanitizer.md" >}}
 {{< /callout >}}
 
 {{< callout info >}}
-{{< partial "callout-info-prefersreducedmotion.md" >}}
+{{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
 ## Примеры
@@ -54,7 +54,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 {{< /example >}}
 
 {{< callout warning >}}
-{{< partial "callout-warning-data-bs-title-vs-title.md" >}}
+{{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
 {{< /callout >}}
 
 ### Пользовательские всплывающие подсказки
@@ -251,7 +251,7 @@ const tooltip = new bootstrap.Tooltip(element, {
 ### Методы
 
 {{< callout danger >}}
-{{< partial "callout-danger-async-methods.md" >}}
+{{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}

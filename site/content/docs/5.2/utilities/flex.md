@@ -363,21 +363,20 @@ Flexbox может делать довольно удивительные вещ
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-wrap">
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
+    <div class="p-2">Флекс элемент 1</div>
+    <div class="p-2">Флекс элемент 2</div>
+    <div class="p-2">Флекс элемент 3</div>
+    <div class="p-2">Флекс элемент 4</div>
+    <div class="p-2">Флекс элемент 5</div>
+    <div class="p-2">Флекс элемент 6</div>
+    <div class="p-2">Флекс элемент 7</div>
+    <div class="p-2">Флекс элемент 8</div>
+    <div class="p-2">Флекс элемент 9</div>
+    <div class="p-2">Флекс элемент 10</div>
+    <div class="p-2">Флекс элемент 11</div>
+    <div class="p-2">Флекс элемент 12</div>
+    <div class="p-2">Флекс элемент 13</div>
+    <div class="p-2">Флекс элемент 14</div>
   </div>
 </div>
 
@@ -389,21 +388,20 @@ Flexbox может делать довольно удивительные вещ
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-wrap-reverse">
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
-    <div class="p-2">Флекс элемент</div>
+    <div class="p-2">Флекс элемент 1</div>
+    <div class="p-2">Флекс элемент 2</div>
+    <div class="p-2">Флекс элемент 3</div>
+    <div class="p-2">Флекс элемент 4</div>
+    <div class="p-2">Флекс элемент 5</div>
+    <div class="p-2">Флекс элемент 6</div>
+    <div class="p-2">Флекс элемент 7</div>
+    <div class="p-2">Флекс элемент 8</div>
+    <div class="p-2">Флекс элемент 9</div>
+    <div class="p-2">Флекс элемент 10</div>
+    <div class="p-2">Флекс элемент 11</div>
+    <div class="p-2">Флекс элемент 12</div>
+    <div class="p-2">Флекс элемент 13</div>
+    <div class="p-2">Флекс элемент 14</div>
   </div>
 </div>
 
@@ -464,7 +462,7 @@ Flexbox может делать довольно удивительные вещ
 
 ## Выравнивание контента
 
-Используйте утилиты `align-content` на контейнерах flexbox для выравнивания элементов Флекс *вместе* по поперечной оси. Выберите `start` (по умолчанию для браузера), `end`, `center`, `between`, `around` или `stretch`. Чтобы продемонстрировать эти утилиты, мы ввели в действие `flex-wrap: wrap` и увеличили количество элементов Флекс.
+Используйте утилиты `align-content` на контейнерах flexbox для выравнивания элементов Флекс _вместе_ по поперечной оси. Выберите `start` (по умолчанию для браузера), `end`, `center`, `between`, `around` или `stretch`. Чтобы продемонстрировать эти утилиты, мы ввели в действие `flex-wrap: wrap` и увеличили количество элементов Флекс.
 
 **Внимание!** Это свойство не влияет на отдельные строки элементов Флекс.
 
