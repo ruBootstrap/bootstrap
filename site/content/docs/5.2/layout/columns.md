@@ -24,6 +24,8 @@ toc: true
 
 ### Вертикальное выравнивание
 
+Change the vertical alignment with any of the responsive `align-items-*` classes.
+
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container">
   <div class="row align-items-start">
@@ -37,6 +39,11 @@ toc: true
       Одна из трех колонок
     </div>
   </div>
+</div>
+{{< /example >}}
+
+{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+<div class="container text-center">
   <div class="row align-items-center">
     <div class="col">
       Одна из трех колонок
@@ -48,6 +55,11 @@ toc: true
       Одна из трех колонок
     </div>
   </div>
+</div>
+{{< /example >}}
+
+{{< example class="bd-example-row bd-example-row-flex-cols" >}}
+<div class="container text-center">
   <div class="row align-items-end">
     <div class="col">
       Одна из трех колонок
@@ -61,6 +73,8 @@ toc: true
   </div>
 </div>
 {{< /example >}}
+
+Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container">
@@ -187,7 +201,7 @@ toc: true
 
 ### Класса порядка
 
-Используйте классы `.order-` для управления **визуальным порядком** Вашего контента. Эти классы отзывчивы, поэтому Вы можете установить `order` по контрольной точке (например, `.order-1.order-md-2`). Включает поддержку от `1` до `5` на всех шести уровнях сетки.
+Используйте классы `.order-` для управления **визуальным порядком** вашего контента. Эти классы являются адаптивными, поэтому вы можете установить `order` с помощью контрольной точки (например, `order` с помощью контрольной точки (например, `.order-1.order-md-2`). Включает поддержку от `1` до `5` на всех шести уровнях сетки. Если вам нужно больше классов `.order-*`, вы можете изменить номер по умолчанию с помощью переменной Sass.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -287,12 +301,13 @@ toc: true
 
 Классы `.col-*` также могут использоваться вне `.row`, чтобы дать элементу определенную ширину. Когда классы колонок используются как непрямые дочерние элементы строки, отступы опускаются.
 
-{{< example >}}
-<div class="col-3 bg-light p-3 border">
-  .col-3: ширина равна 25%
+{{< example class="bd-example-row" >}}
+<div class="col-3 p-3 mb-2">
+  .col-3: width of 25%
 </div>
-<div class="col-sm-9 bg-light p-3 border">
-  .col-sm-9: ширина равна 75% выше контрольной точки sm
+
+<div class="col-sm-9 p-3">
+  .col-sm-9: width of 75% above sm breakpoint
 </div>
 {{< /example >}}
 

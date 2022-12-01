@@ -14,6 +14,10 @@ Bootstrap включает множество [настраиваемых сво
 
 Вот переменные, которые мы включаем (обратите внимание, что требуется `:root`), к которым можно получить доступ везде, где загружен CSS Bootstrap. Они находятся в нашем файле `_root.scss` и включены в наши скомпилированные файлы dist.
 
+### Default
+
+These CSS variables are available everywhere, regardless of color mode.
+
 ```css
 {{< root.inline >}}
 {{- $css := readFile "dist/css/bootstrap.css" -}}

@@ -8,6 +8,8 @@ toc: true
 
 ## Пример
 
+Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+
 {{< example >}}
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
@@ -133,11 +135,17 @@ toc: true
 </datalist>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Переменные
 
-`$input-*` используется большинством элементов управления формы (но не кнопками).
+Элементы управления формы используют небольшое количество переменных CSS для поддержки пользовательского стиля в цветовых режимах.
+
+{{< scss-docs name="form-control-vars" file="scss/_root.scss" >}}
+
+### Sass переменные
+
+`$input-*` используется в большинстве наших элементов управления формой (но не в кнопках).
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 

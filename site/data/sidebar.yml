@@ -60,6 +60,9 @@
     - title: Цвет
       hint: Цветовая система
       slug: color
+    - title: Цветовые режимы
+      hint: Цветовые режимы
+      slug: color-modes
     - title: Компоненты
       hint: Адаптивные компоненты
       slug: components

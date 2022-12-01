@@ -10,6 +10,10 @@ toc: true
 
 Оповещения доступны для любой длины текста, а также для дополнительной кнопки закрытия. Для правильной стилизации используйте один из восьми **обязательных** контекстных классов (например, `.alert-success`). Для встроенного отключения используйте [подключаемый модуль JavaScript предупреждений](#отклонение).
 
+{{< callout info >}}
+**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+{{< /callout >}}
+
 {{< example >}}
 {{< alerts.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
@@ -176,6 +180,8 @@ if (alertTrigger) {
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
 ### Миксины Sass
+
+{{< deprecated-in "5.3.0" >}}
 
 Используется в сочетании с `$theme-colors` для создания классов контекстных модификаторов для наших предупреждений.
 

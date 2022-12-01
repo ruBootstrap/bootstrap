@@ -57,8 +57,9 @@ your-project/
 
 // 2. Включите сюда любые переопределения переменных по умолчанию
 
-// 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+// 3. Включите остальные требуемые таблицы стилей Bootstrap (включая любые отдельные таблицы стилей цветового режима)
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 // 4. Включите сюда любые переопределения карт по умолчанию
 
@@ -104,6 +105,7 @@ $body-color: #111;
 
 // Обязательные
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
@@ -166,6 +168,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Обязательные
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
@@ -302,7 +305,7 @@ $border-width: 0;
 
 ### Цветовые схемы
 
-Доступен сокращенный миксин для медиа-запроса `prefers-color-scheme` с поддержкой `light`, `dark` и пользовательских цветовых схем.
+Доступен сокращенный миксин для медиа-запроса `prefers-color-scheme` с поддержкой `light`, `dark` и пользовательских цветовых схем. Смотрите [документацию по цветовым режимам]({{< docsref "/customize/color-modes" >}}) для получения информации о нашем миксине цветового режима.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 

@@ -27,7 +27,7 @@ toc: true
 
 Тосты настолько гибкие, насколько Вам нужно, и требуют очень небольшой разметки. Как минимум, мы требуем, чтобы Ваш "всплывающий" контент содержал один элемент, и настоятельно рекомендуем кнопку «закрыть».
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
@@ -121,7 +121,7 @@ if (toastTrigger) {
 
 Вы можете складывать всплывающие сообщения, завернув их в контейнер для тостов, который по вертикали добавит некоторого расстояния.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast-container position-static">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
@@ -153,7 +153,7 @@ if (toastTrigger) {
 
 Настройте тосты, удалив подкомпоненты, настроив их с помощью [утилит]({{< docsref "/utilities/api" >}}) или добавив собственную разметку. Здесь мы создали более простой тост, удалив стандартный `.toast-header`, добавив собственную иконку скрытия из [Bootstrap Icons]({{< param icons_ru >}}) и используя некоторые [утилиты flexbox]({{< docsref "/utilities/flex" >}}) для настройки макета.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body">
@@ -166,7 +166,7 @@ if (toastTrigger) {
 
 Кроме того, Вы также можете добавить в тосты дополнительные элементы управления и компоненты.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
     Привет мир! Это тост-сообщение.
@@ -182,7 +182,7 @@ if (toastTrigger) {
 
 Основываясь на приведенном выше примере, вы можете создавать различные цветовые схемы всплывающих уведомлений с помощью утилит [цвета]({{< docsref "/utilities/colors" >}}) и [фона]({{< docsref "/utilities/background" >}}). Здесь мы добавили `.text-bg-primary` к `.toast`, а затем добавили `.btn-close-white` к нашей кнопке закрытия. Для четкого края мы удаляем границу по умолчанию с помощью `.border-0`.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body">
@@ -215,7 +215,7 @@ if (toastTrigger) {
     </select>
   </div>
 </form>
-<div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+<div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">
   <div class="toast-container p-3" id="toastPlacement">
     <div class="toast">
       <div class="toast-header">
@@ -233,7 +233,7 @@ if (toastTrigger) {
 
 Для систем, которые генерируют больше уведомлений, рассмотрите возможность использования элемента упаковки, чтобы их можно было легко складывать.
 
-{{< example class="bg-dark bd-example-toasts p-0" >}}
+{{< example class="bd-example-toasts p-0" >}}
 <div aria-live="polite" aria-atomic="true" class="position-relative">
   <!-- Позиционируйте его: -->
   <!-- - `.toast-container` для промежутка между тостами -->
@@ -271,8 +271,8 @@ if (toastTrigger) {
 
 Вы также можете поработать с утилитами flexbox для выравнивания тостов по горизонтали и/или вертикали.
 
-{{< example class="bg-dark bd-example-toasts d-flex" >}}
-<!-- Контейнер Flexbox для выравнивания тостов -->
+{{< example class="bd-example-toasts d-flex" >}}
+<!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
   <!-- Затем положите тосты внутрь -->
@@ -308,7 +308,7 @@ if (toastTrigger) {
 
 При использовании `autohide: false` Вы должны добавить кнопку закрытия, чтобы пользователи могли закрыть всплывающее сообщение.
 
-{{< example class="bg-light" >}}
+{{< example >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}

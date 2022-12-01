@@ -25,7 +25,7 @@ Scrollspy переключает класс `.active` для элементов 
 Прокрутите область под панелью навигации и посмотрите, как меняется активный класс. Откройте раскрывающееся меню и посмотрите, как будут выделены элементы раскрывающегося списка.
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 rounded-2">
     <a class="navbar-brand" href="#">Панель навигации</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -45,22 +45,22 @@ Scrollspy переключает класс `.active` для элементов 
       </li>
     </ul>
   </nav>
-  <div class="scrollspy-example bg-light p-3 rounded-2" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-    <h4 id="scrollspyHeading1">Первый заголовок</h4>
-    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
-    <h4 id="scrollspyHeading2">Второй заголовок</h4>
-    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
-    <h4 id="scrollspyHeading3">Третий заголовок</h4>
-    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
-    <h4 id="scrollspyHeading4">Четвертый заголовок</h4>
-    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
-    <h4 id="scrollspyHeading5">Пятый заголовок</h4>
-    <p>Это некоторый заполнитель для страницы scrollspy. Обратите внимание, что при прокрутке страницы соответствующая навигационная ссылка выделяется. Это повторяется во всем примере компонента. Мы продолжаем добавлять сюда еще несколько примеров, чтобы подчеркнуть прокрутку и выделение.</p>
+  <div class="scrollspy-example bg-body-tertiary p-3 rounded-2" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <h4 id="scrollspyHeading1">First heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading2">Second heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading3">Third heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading4">Fourth heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+    <h4 id="scrollspyHeading5">Fifth heading</h4>
+    <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
   </div>
 </div>
 
 ```html
-<nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
   <a class="navbar-brand" href="#">Панель навигации</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -80,7 +80,7 @@ Scrollspy переключает класс `.active` для элементов 
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
   <h4 id="scrollspyHeading1">Первый заголовок</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Второй заголовок</h4>

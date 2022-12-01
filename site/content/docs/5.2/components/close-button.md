@@ -22,13 +22,19 @@ toc: true
 <button type="button" class="btn-close" disabled aria-label="Закрыть"></button>
 {{< /example >}}
 
-## Белый вариант
+## Темный вариант
 
-Измените значение по умолчанию `.btn-close` на белый с классом `.btn-close-white`. Этот класс использует свойство `filter` для инвертирования `background-image`.
+{{< callout info >}}
+**Внимание!** Начиная с версии 5.3.0, класс `.btn-close-white` устарел. Вместо этого используйте `data-bs-theme="dark"`, чтобы изменить цветовой режим кнопки закрытия.
+{{< /callout >}}
+
+Добавьте `data-bs-theme="dark"` к `.btn-close` или к его родительскому элементу, чтобы инвертировать кнопку закрытия. Это использует свойство `filter` для инвертирования `background-image` без переопределения его значения.
 
 {{< example class="bg-dark" >}}
-<button type="button" class="btn-close btn-close-white" aria-label="Закрыть"></button>
-<button type="button" class="btn-close btn-close-white" disabled aria-label="Закрыть"></button>
+<div data-bs-theme="dark">
+  <button type="button" class="btn-close" aria-label="Закрыть"></button>
+  <button type="button" class="btn-close" disabled aria-label="Закрыть"></button>
+</div>
 {{< /example >}}
 
 ## Sass

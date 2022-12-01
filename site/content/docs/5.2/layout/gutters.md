@@ -18,14 +18,14 @@ toc: true
 
 Классы `.gx-*` могут использоваться для управления шириной горизонтального промежутка. Родительский элемент `.container` или `.container-fluid` может нуждаться в корректировке, если также используются более крупные промежутка, чтобы избежать нежелательного переполнения, с помощью соответствующей утилиты заполнения. Например, в следующем примере мы увеличили отступ с помощью `.px-4`:
 
-{{< example >}}
+{{< example class="bd-example-cols" >}}
 <div class="container px-4 text-center">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+     <div class="p-3">Custom column padding</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -33,14 +33,14 @@ toc: true
 
 Альтернативное решение - добавить оболочку вокруг `.row` с классом `.overflow-hidden`:
 
-{{< example >}}
+{{< example class="bd-example-cols" >}}
 <div class="container overflow-hidden text-center">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+     <div class="p-3">Custom column padding</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -50,20 +50,20 @@ toc: true
 
 Классы `.gy-*` можно использовать для управления шириной вертикального поля внутри строки, когда столбцы переносятся на новые строки. Как и горизонтальные промежутки, вертикальные промежутки могут вызвать переполнение ниже `.row` в конце страницы. Если это происходит, вы добавляете оболочку вокруг `.row` с классом `.overflow-hidden`:
 
-{{< example >}}
+{{< example class="bd-example-cols" >}}
 <div class="container overflow-hidden text-center">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -73,20 +73,20 @@ toc: true
 
 Классы `.g-*` могут использоваться для управления шириной горизонтального промежутка, в следующем примере мы используем меньшую ширину промежутка, поэтому нет необходимости добавлять класс-оболочку `.overflow-hidden`.
 
-{{< example >}}
+{{< example class="bd-example-cols" >}}
 <div class="container text-center">
   <div class="row g-2">
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Пользовательские внутренние отступы колонок</div>
+      <div class="p-3">Custom column padding</div>
     </div>
   </div>
 </div>
@@ -96,38 +96,38 @@ toc: true
 
 Классы промежутков также можно добавить в [ряд колонок]({{< docsref "/layout/grid#ряд-колонок" >}}). В следующем примере мы используем адаптивные колонки ряда и адаптивные классы промежутков.
 
-{{< example >}}
+{{< example class="bd-example-cols" >}}
 <div class="container text-center">
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Колонка ряда</div>
+      <div class="p-3">Row column</div>
     </div>
   </div>
 </div>

@@ -18,6 +18,10 @@ toc: true
 
 Используйте контекстные классы для раскрашивания таблиц, строк таблицы или отдельных ячеек.
 
+{{< callout info >}}
+**Heads up!** Because of the more complicated CSS used to generate our table variants, they most likely won't see color mode adaptive styling until v6.
+{{< /callout >}}
+
 <div class="bd-example">
   <table class="table">
     <thead>

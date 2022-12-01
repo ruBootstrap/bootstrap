@@ -27,7 +27,7 @@ Offcanvas — это компонент боковой панели, котор�
 
 Ниже приведен пример offcanvas, который отображается по умолчанию (через `.show` на `.offcanvas`). Offcanvas включает поддержку заголовка с кнопкой закрытия и дополнительный класс тела для некоторого начального заполнения. Мы рекомендуем по возможности включать заголовки offcanvas с действиями по отклонению или предоставлять явное действие по отклонению.
 
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+{{< example class="bd-example-offcanvas p-0 bg-body-tertiary overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
@@ -143,7 +143,7 @@ Offcanvas — это компонент боковой панели, котор�
 
 Измените внешний вид offcanvases с помощью утилит, чтобы они лучше соответствовали различным контекстам, таким как темные панели навигации. Здесь мы добавляем `.text-bg-dark` к `.offcanvas` и `.btn-close-white` к `.btn-close` для правильной стилизации с темным offcanvas. Если у вас есть раскрывающиеся списки, рассмотрите возможность добавления `.dropdown-menu-dark` в `.dropdown-menu`.
 
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
+{{< example class="bd-example-offcanvas p-0 bg-body-secondary overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasDarkLabel">Offcanvas</h5>

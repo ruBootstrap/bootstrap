@@ -8,28 +8,24 @@ toc: true
 
 ## Как это устроено
 
-Карусель - это слайд-шоу для циклического просмотра серии контента, созданного с помощью преобразований CSS 3D и небольшого количества JavaScript. Он работает с серией изображений, текста или пользовательской разметки. Он также включает поддержку предыдущих/следующих элементов управления и индикаторов.
+- Карусель — это слайд-шоу для циклического просмотра серии контента, созданного с помощью 3D-преобразований CSS и небольшого количества JavaScript. Он работает с серией изображений, текста или пользовательской разметки. Он также включает поддержку предыдущих/следующих элементов управления и индикаторов.
 
-В браузерах, где поддерживается [API видимости страницы](https://www.w3.org/TR/page-visibility/), карусель не будет скользить, когда веб-страница не видна пользователю (например, когда браузер вкладка неактивна, окно браузера свернуто и т.д.).
+- Из соображений производительности **карусели необходимо инициализировать вручную** с помощью [метода конструктора карусели](#methods). Без инициализации некоторые прослушиватели событий (в частности, события, требующие поддержки касания/перелистывания) не будут зарегистрированы до тех пор, пока пользователь явно не активирует элемент управления или индикатор.
+
+  Единственным исключением являются [автовоспроизводящиеся карусели](#autoplaying-carousels) с атрибутом `data-bs-ride="carousel"`, так как они автоматически инициализируются при загрузке страницы. Если вы используете карусели с автоматическим воспроизведением с атрибутом данных, **не инициализируйте те же карусели явно с помощью метода конструктора.**
+
+- Вложенные карусели не поддерживаются. Вы также должны знать, что карусели в целом часто могут вызывать проблемы с удобством использования и доступностью.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-Имейте в виду, что вложенные карусели не поддерживаются, а карусели обычно не соответствуют общедоступным стандартам.
+## Основные примеры
 
-## Пример
-
-Карусели не нормализуют автоматически размеры слайдов. Таким образом, Вам может потребоваться использовать дополнительные утилиты или настраиваемые стили для соответствующего размера содержимого. Хотя карусели поддерживают элементы управления и индикаторы предыдущий/следующий, они явно не требуются. Добавляйте и настраивайте по своему усмотрению.
-
-**Класс `.active` необходимо добавить к одному из слайдов**, иначе карусель не будет видна. Также не забудьте установить уникальный идентификатор `id` в `.carousel` для дополнительных элементов управления, особенно если Вы используете несколько каруселей на одной странице. Элементы управления и индикатора должны иметь атрибут `data-bs-target` (или `href` для ссылок), который соответствует идентификатору `id` элемента `.carousel`.
-
-### Только слайды
-
-Вот карусель только со слайдами. Обратите внимание на наличие `.d-block` и `.w-100` на изображениях карусели, чтобы предотвратить выравнивание изображений по умолчанию в браузере.
+Вот базовый пример карусели с тремя слайдами. Обратите внимание на предыдущий/следующий элементы управления. Мы рекомендуем использовать элементы `<button>`, но вы также можете использовать элементы `<a>` с `role="button"`.
 
 {{< example >}}
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
@@ -41,43 +37,27 @@ toc: true
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
     </div>
   </div>
-</div>
-{{< /example >}}
-
-### С элементами управления
-
-Добавление предыдущего и следующего элементов управления. Мы рекомендуем использовать элементы `<button>`, но Вы также можете использовать элементы `<a>` с `role="button"`.
-
-{{< example >}}
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Второй слайд" >}}
-    </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Третий слайд" >}}
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Предыдущий</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </button>
 </div>
 {{< /example >}}
 
-### С индикаторами
+Карусели не нормализуют автоматически размеры слайдов. Таким образом, вам может потребоваться использовать дополнительные утилиты или пользовательские стили для соответствующего размера содержимого. Хотя карусели поддерживают элементы управления и индикаторы «предыдущий/следующий», они явно не требуются. Добавляйте и настраивайте по своему усмотрению.
 
-Вы также можете добавить индикаторы в карусель вместе с элементами управления.
+**Вы должны добавить класс `.active` к одному из слайдов**, иначе карусель не будет видна. Также не забудьте установить уникальный `id` в файле `.carousel` для дополнительных элементов управления, особенно если вы используете несколько каруселей на одной странице. Элементы управления и индикаторы должны иметь атрибут `data-bs-target` (или `href` для ссылок), который соответствует `id` элемента `.carousel`.
+
+### Индикаторы
+
+Вы можете добавить индикаторы в карусель вместе с предыдущими/следующими элементами управления. Индикаторы позволяют пользователям переходить непосредственно к определенному слайду.
 
 {{< example >}}
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+<div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -105,12 +85,12 @@ toc: true
 </div>
 {{< /example >}}
 
-### С подписями
+### Подписи
 
-Легко добавляйте подписи к слайдам с помощью элемента `.carousel-caption` внутри любого `.carousel-item`. Их можно легко скрыть в меньших окнах просмотра, как показано ниже, с помощью дополнительных [утилит отображения]({{< docsref "/utilities/display" >}}). Сначала мы скрываем их с помощью `.d-none` и возвращаем их на устройства среднего размера с помощью `.d-md-block`.
+Вы можете добавлять подписи к своим слайдам с помощью элемента `.carousel-caption` в любом `.carousel-item`. Их можно легко скрыть на небольших окнах просмотра, как показано ниже, с помощью необязательных [утилит отображения]({{< docsref "/utilities/display" >}}). Сначала мы скрываем их с помощью `.d-none`, а возвращаем на устройства среднего размера с помощью `.d-md-block`.
 
 {{< example >}}
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+<div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -155,7 +135,7 @@ toc: true
 Добавьте `.carousel-fade` в свою карусель, чтобы анимировать слайды с плавным переходом вместо слайда. В зависимости от содержимого вашей карусели (например, слайды, содержащие только текст), вы можете добавить `.bg-body` или какой-нибудь пользовательский CSS к `.carousel-item` для правильного плавного перехода.
 
 {{< example >}}
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
   <div class="carousel-inner">
     <div class="carousel-item active">
       {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="Первый слайд" >}}
@@ -172,6 +152,66 @@ toc: true
     <span class="visually-hidden">Предыдущий</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+{{< /example >}}
+
+## Автовоспроизведение каруселей
+
+Вы можете настроить автовоспроизведение ваших каруселей при загрузке страницы, установив для опции `ride` значение `carousel`. Автовоспроизводящиеся карусели автоматически останавливаются при наведении курсора мыши. Это поведение можно контролировать с помощью опции `pause`. В браузерах, поддерживающих [Page Visibility API](https://www.w3.org/TR/page-visibility/), карусель перестанет зацикливаться, когда веб-страница не видна пользователю (например, когда вкладка браузера неактивен или когда окно браузера свернуто).
+
+{{< callout info >}}
+Из соображений доступности мы рекомендуем избегать использования каруселей с автоматическим воспроизведением. Если на вашей странице есть карусель с автоматическим воспроизведением, мы рекомендуем добавить дополнительную кнопку или элемент управления, чтобы явным образом приостановить или остановить карусель.
+
+Смотрите [WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide).
+{{< /callout >}}
+
+{{< example >}}
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+{{< /example >}}
+
+Если для параметра `ride` установлено значение `true`, а не `carousel`, карусель не будет автоматически запускаться при загрузке страницы. Вместо этого он запустится только после первого взаимодействия с пользователем.
+
+{{< example >}}
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Следующий</span>
   </button>
@@ -206,9 +246,29 @@ toc: true
 </div>
 {{< /example >}}
 
-### Отключить сенсорный свайпинг
+### Автовоспроизведение каруселей без элементов управления
 
-Карусели поддерживают смахивание влево/вправо на устройствах с сенсорным экраном для перемещения между слайдами. Это можно отключить с помощью атрибута `data-bs-touch`. Пример ниже также не включает атрибут `data-bs-ride`, поэтому он не воспроизводится автоматически.
+Вот карусель только со слайдами. Обратите внимание на наличие `.d-block` и `.w-100` на изображениях карусели, чтобы предотвратить выравнивание изображений браузера по умолчанию.
+
+{{< example >}}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    </div>
+    <div class="carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    </div>
+  </div>
+</div>
+{{< /example >}}
+
+## Отключить сенсорное пролистывание
+
+Карусели поддерживают смахивание влево/вправо на устройствах с сенсорным экраном для перемещения между слайдами. Это можно отключить, установив для параметра `touch` значение `false`.
 
 {{< example >}}
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
@@ -236,10 +296,14 @@ toc: true
 
 ## Темный вариант
 
-Добавьте `.carousel-dark` к `.carousel` для более темных элементов управления, индикаторов и подписей. Элементы управления были инвертированы по сравнению с их белой заливкой по умолчанию с помощью свойства CSS `filter`. Заголовки и элементы управления имеют дополнительные переменные Sass, которые настраивают `color` и `background-color`.
+{{< deprecated-in "5.3.0" >}}
+
+Добавьте `.carousel-dark` к `.carousel` для более темных элементов управления, индикаторов и подписей. Элементы управления инвертируются по сравнению с их белой заливкой по умолчанию с помощью CSS-свойства `filter`. Заголовки и элементы управления имеют дополнительные переменные Sass, которые настраивают `color` и `background-color`.
+
+{{< callout-deprecated-dark-variants "carousel" >}}
 
 {{< example >}}
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -301,8 +365,6 @@ toc: true
 
 Используйте атрибуты данных, чтобы легко контролировать положение карусели. `data-bs-slide` принимает ключевые слова `prev` или `next`, которые изменяют положение слайда относительно его текущего положения. В качестве альтернативы, используйте `data-bs-slide-to`, чтобы передать необработанный индекс слайда в карусель `data-bs-slide-to="2"`, который сдвигает положение слайда на конкретный индекс, начинающийся с `0`.
 
-Атрибут `data-bs-ride="carousel"` используется для пометки карусели как анимированной, начиная с загрузки страницы. Если Вы не используете `data-bs-ride="carousel"` для инициализации карусели, Вам придется инициализировать ее самостоятельно. **Его нельзя использовать в сочетании с (избыточной и ненужной) явной инициализацией JavaScript той же карусели.**
-
 ### Через JavaScript
 
 Вызов карусели вручную с помощью:
@@ -334,22 +396,23 @@ const carousel = new bootstrap.Carousel('#myCarousel')
 {{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
-Вы можете создать экземпляр карусели с помощью конструктора карусели, например, для инициализации с дополнительными параметрами и начала циклического перебора элементов:
+Вы можете создать экземпляр карусели с помощью конструктора карусели и передать любые дополнительные параметры. Например, чтобы вручную инициализировать карусель с автоматическим воспроизведением (при условии, что вы не используете атрибут `data-bs-ride="carousel"` в самой разметке) с определенным интервалом и с отключенной поддержкой сенсорного ввода, вы можете использовать:
 
 ```js
 const myCarouselElement = document.querySelector('#myCarousel')
+
 const carousel = new bootstrap.Carousel(myCarouselElement, {
   interval: 2000,
-  wrap: false
+  touch: false
 })
 ```
 
 {{< bs-table >}}
 | Метод | Описание |
 | --- | --- |
-| `cycle` | Перебирает элементы карусели слева направо. |
+| `cycle` | Начинает циклически перемещаться по элементам карусели слева направо. |
 | `dispose` | Уничтожает карусель элемента. (Удаляет сохраненные данные в элементе DOM). |
-| `getInstance` | Статический метод, который позволяет вам получить экземпляр карусели, связанный с элементом DOM, вы можете использовать его следующим образом: `bootstrap.Carousel.getInstance(element)`. |
+| `getInstance` | Статический метод, который позволяет вам получить экземпляр карусели, связанный с элементом DOM. Вы можете использовать его следующим образом: `bootstrap.Carousel.getInstance(element)`. |
 | `getOrCreateInstance` | Статический метод, который возвращает экземпляр карусели, связанный с элементом DOM, или создает новый, если он не был инициализирован. Вы можете использовать его так: `bootstrap.Carousel.getOrCreateInstance(element)`. |
 | `next` | Переход к следующему элементу. **Возвращается к вызывающей стороне до того, как будет показан следующий элемент** (например, до того, как произойдет событие `slid.bs.carousel`). |
 | `nextWhenVisible` | Не переключайте карусель на следующую, если страница не видна или карусель или ее родитель не видны. **Возвращается к вызывающему абоненту до того, как целевой элемент будет показан**. |

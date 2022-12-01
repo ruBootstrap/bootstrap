@@ -66,7 +66,7 @@ toc: true
 
 Добавьте `.accordion-flush`, чтобы удалить `background-color` по умолчанию, некоторые границы и некоторые закругленные углы, чтобы отображать аккордеоны от края до края с их родительским контейнером.
 
-{{< example class="bg-light" >}}
+{{< example class="bg-body-secondary" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">

@@ -6,40 +6,62 @@ group: components
 toc: true
 ---
 
-## Как это устроено
+{{< callout info >}}
+**Новая разметка в версии v5.3.0 —** Мы отказались от предыдущей структуры HTML для индикаторов выполнения и заменили ее более доступной. Предыдущая структура будет продолжать работать до v6. [Посмотрите, что изменилось, в нашем руководстве по миграции.]({{< docsref "/migration#improved-markup-for-progress-bars" >}})
+{{< /callout >}}
+
+## Как это работает
 
 Компоненты Progress состоят из двух HTML-элементов, CSS для установки ширины и нескольких атрибутов. Мы не используем [элемент HTML5 `<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), гарантируя, что Вы можете складывать индикаторы выполнения, анимировать их, и поместите на них текстовые метки.
 
-- Мы используем `.progress` как оболочку, чтобы указать максимальное значение индикатора выполнения.
-- Мы используем внутренний `.progress-bar`, чтобы указать прогресс на данный момент.
-- Для `.progress-bar` требуется встроенный стиль, служебный класс или пользовательский CSS для установки их ширины.
-- `.progress-bar` также требует некоторых атрибутов` role` и `aria`, чтобы сделать его доступным, включая доступное имя (используя `aria-label`, `aria-labelledby` или подобное).
+- Мы используем `.progress` в качестве оболочки, чтобы указать максимальное значение индикатора выполнения.
+- Оболочке `.progress` также требуются атрибуты `role="progress"` и `aria`, чтобы сделать ее доступной, включая доступное имя (используя `aria-label`, `aria-labelledby` или подобное).
+- Мы используем внутренний `.progress-bar` исключительно для визуальной панели и метки.
+- `.progress-bar` требует встроенного стиля, служебного класса или пользовательского CSS для установки его ширины.
+- Мы предоставляем специальный класс `.progress-stacked` для создания нескольких индикаторов выполнения.
 
 Сложите все это вместе, и вы получите следующие примеры.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Базовый пример" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 0%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%" aria-label="Базовый пример" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 50%" aria-label="Базовый пример" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 50%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 75%" aria-label="Базовый пример" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 75%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 100%" aria-label="Базовый пример" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 100%"></div>
 </div>
 {{< /example >}}
 
-Bootstrap предоставляет несколько [утилит для установки ширины]({{< docsref "/utilities/sizing" >}}). В зависимости от Ваших потребностей они могут помочь в быстрой настройке хода выполнения.
+## Размер бара
+
+### Ширина
+
+Bootstrap предоставляет несколько [утилит для установки ширины]({{< docsref "/utilities/sizing" >}}). В зависимости от ваших потребностей, это может помочь быстро настроить ширину `.progress-bar`.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar w-75" role="progressbar" aria-label="Базовый пример" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar w-75"></div>
+</div>
+{{< /example >}}
+
+### Высота
+
+Вы только устанавливаете значение `height` в контейнере `.progress`, поэтому, если вы измените это значение, внутренний `.progress-bar` автоматически изменит размер соответственно.
+
+{{< example >}}
+<div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress-bar" style="width: 25%"></div>
 </div>
 {{< /example >}}
 
@@ -48,21 +70,8 @@ Bootstrap предоставляет несколько [утилит для у�
 Добавляйте метки к индикаторам выполнения, помещая текст в `.progress-bar`.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Пример с меткой" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-</div>
-{{< /example >}}
-
-## Высота
-
-Мы устанавливаем значение `height` только для `.progress`, поэтому, если Вы измените это значение, внутренний `.progress-bar` автоматически изменит размер соответственно.
-
-{{< example >}}
-<div class="progress" style="height: 1px;">
-  <div class="progress-bar" role="progressbar" aria-label="Пример высоты 1пиксель" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress" style="height: 20px;">
-  <div class="progress-bar" role="progressbar" aria-label="Пример высоты 20пикселей" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%">25%</div>
 </div>
 {{< /example >}}
 
@@ -71,17 +80,17 @@ Bootstrap предоставляет несколько [утилит для у�
 Используйте фоновые служебные классы, чтобы изменить внешний вид отдельных индикаторов выполнения.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-success" style="width: 25%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-info" style="width: 50%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-warning" style="width: 75%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-danger" style="width: 100%"></div>
 </div>
 {{< /example >}}
 
@@ -91,13 +100,19 @@ Bootstrap предоставляет несколько [утилит для у�
 
 ## Мультибар
 
-При необходимости включите несколько индикаторов выполнения в компонент прогресса.
+Вы можете включить несколько компонентов прогресса в контейнер с `.progress-stacked`, чтобы создать один сложенный индикатор выполнения. Обратите внимание, что в этом случае стиль для установки визуальной ширины индикатора выполнения *должен* применяться к элементам `.progress`, а не `.progress-bar`.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Segment one" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" aria-label="Segment two" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-info" role="progressbar" aria-label="Segment three" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress-stacked">
+  <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+    <div class="progress-bar"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+    <div class="progress-bar bg-success"></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <div class="progress-bar bg-info"></div>
+  </div>
 </div>
 {{< /example >}}
 
@@ -106,20 +121,20 @@ Bootstrap предоставляет несколько [утилит для у�
 Добавьте `.progress-bar-striped` к любому `.progress-bar`, чтобы применить полосу через градиент CSS к цвету фона индикатора выполнения.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-label="Warning striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
 </div>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
 </div>
 {{< /example >}}
 
@@ -128,8 +143,8 @@ Bootstrap предоставляет несколько [утилит для у�
 Полосатый градиент также можно анимировать. Добавьте `.progress-bar-animated` в `.progress-bar`, чтобы анимировать полосы справа налево с помощью анимации CSS3.
 
 {{< example >}}
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
 </div>
 {{< /example >}}
 

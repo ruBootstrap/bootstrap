@@ -10,12 +10,12 @@ toc: true
 
 Утилиты ширины и высоты генерируются из служебного API в `_utilities.scss`. По умолчанию включает поддержку `25%`, `50%`, `75%`, `100%` и `auto`. Измените эти значения, если Вам нужно создать здесь разные утилиты.
 
-{{< example >}}
-<div class="w-25 p-3" style="background-color: #eee;">Ширина 25%</div>
-<div class="w-50 p-3" style="background-color: #eee;">Ширина 50%</div>
-<div class="w-75 p-3" style="background-color: #eee;">Ширина 75%</div>
-<div class="w-100 p-3" style="background-color: #eee;">Ширина 100%</div>
-<div class="w-auto p-3" style="background-color: #eee;">Ширина авто</div>
+{{< example class="bd-example-flex" >}}
+<div class="w-25 p-3">Ширина 25%</div>
+<div class="w-50 p-3">Ширина 50%</div>
+<div class="w-75 p-3">Ширина 75%</div>
+<div class="w-100 p-3">Ширина 100%</div>
+<div class="w-auto p-3">Ширина auto</div>
 {{< /example >}}
 
 {{< example >}}

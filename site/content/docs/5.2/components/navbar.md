@@ -35,7 +35,7 @@ toc: true
 Вот пример всех подкомпонентов, включенных в адаптивную светлую навигационную панель, которая автоматически сворачивается в контрольной точке `lg` (большая).
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Навбар</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
@@ -73,7 +73,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-В этом примере используются клссы утилит [фона]({{< docsref "/utilities/background" >}}) (`bg-light`) и [интервала]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`).
+В этом примере используются классы утилит [фон]({{< docsref "/utilities/background" >}}) (`bg-body-tertiary`) и [отступы]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`).
 
 ### Бренд
 
@@ -85,14 +85,14 @@ toc: true
 
 {{< example >}}
 <!-- As a link -->
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
   </div>
 </nav>
 
 <!-- As a heading -->
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">Панель навигации</span>
   </div>
@@ -104,7 +104,7 @@ toc: true
 Вы можете заменить текст внутри `.navbar-brand` на `<img>`.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
@@ -118,7 +118,7 @@ toc: true
 Вы также можете использовать некоторые дополнительные утилиты для одновременного добавления изображения и текста. Обратите внимание на добавление `.d-inline-block` и `.align-text-top` в `<img>`.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -137,7 +137,7 @@ toc: true
 Обратите внимание, что Вам также следует добавить атрибут `aria-current` в активный `.nav-link`.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
@@ -166,7 +166,7 @@ toc: true
 А поскольку мы используем классы для нашей навигации, Вы можете полностью отказаться от подхода на основе списков, если хотите.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
@@ -187,7 +187,7 @@ toc: true
 Вы также можете использовать раскрывающиеся списки на панели навигации. Для размещения раскрывающихся меню требуется элемент оболочки, поэтому обязательно используйте отдельные и вложенные элементы для `.nav-item` и `.nav-link`, как показано ниже.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
@@ -225,7 +225,7 @@ toc: true
 Разместите различные элементы управления и компоненты формы на панели навигации:
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
@@ -238,7 +238,7 @@ toc: true
 Непосредственные дочерние элементы в `.navbar` используют гибкий макет и по умолчанию будут использовать `justify-content: space-between`. При необходимости используйте дополнительные [флекс утилиты]({{< docsref "/utilities/flex" >}}) для настройки этого поведения.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand">Панель навигации</a>
     <form class="d-flex" role="search">
@@ -252,7 +252,7 @@ toc: true
 Группы ввода тоже работают. Если Ваша панель навигации представляет собой всю форму или в основном форму, Вы можете использовать элемент `<form>` в качестве контейнера и сохранить некоторый HTML.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <form class="container-fluid">
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>
@@ -265,7 +265,7 @@ toc: true
 В составе этих форм навигационной панели также поддерживаются различные кнопки. Это также отличное напоминание о том, что утилиты вертикального выравнивания можно использовать для выравнивания элементов разного размера.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <form class="container-fluid justify-content-start">
     <button class="btn btn-outline-success me-2" type="button">Главная кнопка</button>
     <button class="btn btn-sm btn-outline-secondary" type="button">Меньшая кнопка</button>
@@ -278,7 +278,7 @@ toc: true
 Панели навигации могут содержать фрагменты текста с помощью `.navbar-text`. Этот класс регулирует вертикальное выравнивание и горизонтальный интервал для строк текста.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <span class="navbar-text">
       Текст на панели навигации со встроенным элементом
@@ -290,7 +290,7 @@ toc: true
 При необходимости смешивайте и сочетайте с другими компонентами и утилитами.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Навбар с текстом</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Переключатель навигации">
@@ -319,13 +319,17 @@ toc: true
 ## Цветовые схемы
 
 {{< callout warning >}}
-**Новое в версии 5.2.0:** Темы панели навигации теперь основаны на переменных CSS, а `.navbar-light` устарел. Переменные CSS применяются к `.navbar`, по умолчанию это "светлый" внешний вид, и их можно переопределить с помощью `.navbar-dark`.
+**Новые темные панели навигации в v5.3.0 —** Мы отказались от `.navbar-dark` в пользу нового `data-bs-theme="dark"`. Добавьте `data-bs-theme="dark"` в `.navbar`, чтобы включить цветовой режим для конкретного компонента. [Подробнее о наших цветовых режимах.]({{< docsref "/customize/color-modes" >}})
+
+---
+
+**Новое в v5.2.0  —** Тематика панели навигации теперь поддерживается переменными CSS, а `.navbar-light` устарел. Переменные CSS применяются к `.navbar`, по умолчанию это "light" внешний вид, и их можно переопределить с помощью `.navbar-dark`.
 {{< /callout >}}
 
 Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `.navbar-dark` для темных цветов фона. Затем настройте с помощью утилит `.bg-*`.
 
 <div class="bd-example">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg bg-body-secondary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Переключатель навигации">
@@ -354,7 +358,7 @@ toc: true
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Переключатель навигации">
@@ -383,7 +387,7 @@ toc: true
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;" data-bs-theme="light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Переключатель навигации">
@@ -414,12 +418,12 @@ toc: true
 </div>
 
 ```html
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Контент навигационной панели -->
+<nav class="navbar bg-dark" data-bs-theme="dark">
+  <!-- Navbar content -->
 </nav>
 
-<nav class="navbar navbar-dark bg-primary">
-  <!-- Контент навигационной панели -->
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
 </nav>
 
 <nav class="navbar" style="background-color: #e3f2fd;">
@@ -433,7 +437,7 @@ toc: true
 
 {{< example >}}
 <div class="container">
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Панель навигации</a>
     </div>
@@ -444,7 +448,7 @@ toc: true
 Используйте любой из адаптивных контейнеров, чтобы изменить ширину представления содержимого на панели навигации.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-md">
     <a class="navbar-brand" href="#">Панель навигации</a>
   </div>
@@ -458,7 +462,7 @@ toc: true
 Фиксированные панели навигации используют `position: fixed`, что означает, что они взяты из обычного потока DOM и могут потребовать специального CSS (например, `padding-top` на `<body>`), чтобы предотвратить перекрытие с другими элементами.
 
 {{< example >}}
-<nav class="navbar bg-light">
+<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">По умолчанию</a>
   </div>
@@ -466,7 +470,7 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar fixed-top bg-light">
+<nav class="navbar fixed-top bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Фиксированный вверху</a>
   </div>
@@ -474,7 +478,7 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar fixed-bottom bg-light">
+<nav class="navbar fixed-bottom bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Фиксированный внизу</a>
   </div>
@@ -482,7 +486,7 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar sticky-top bg-light">
+<nav class="navbar sticky-top bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Приклеен к верху</a>
   </div>
@@ -490,7 +494,7 @@ toc: true
 {{< /example >}}
 
 {{< example >}}
-<nav class="navbar sticky-bottom bg-light">
+<nav class="navbar sticky-bottom bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Приклеен к низу</a>
   </div>
@@ -506,7 +510,7 @@ toc: true
 Вот пример навигационной панели, использующей `.navbar-nav-scroll` с `style="--bs-scroll-height: 100px;"`, с некоторыми дополнительными утилитами полей для оптимального интервала.
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Прокрутка навбара</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Переключатель навигации">
@@ -557,7 +561,7 @@ toc: true
 Без `.navbar-brand` в самой низкой контрольной точке:
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
@@ -587,7 +591,7 @@ toc: true
 С названием бренда слева и переключателем справа:
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Переключатель навигации">
@@ -617,7 +621,7 @@ toc: true
 С переключателем слева и названием бренда справа:
 
 {{< example >}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
@@ -673,7 +677,7 @@ toc: true
 В приведенном ниже примере, чтобы создать панель навигации вне холста, которая всегда сворачивается во всех контрольных точках, полностью опустите класс `.navbar-expand-*`.
 
 {{< example >}}
-<nav class="navbar bg-light fixed-top">
+<nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Навигационная панель Offcanvas</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -719,7 +723,7 @@ toc: true
 Чтобы создать панель навигации вне холста, которая расширяется в обычную панель навигации в определенной контрольной точке, такой как `lg`, используйте `.navbar-expand-lg`.
 
 ```html
-<nav class="navbar navbar-expand-lg bg-light fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <a class="navbar-brand" href="#">Offcanvas navbar</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
     <span class="navbar-toggler-icon"></span>

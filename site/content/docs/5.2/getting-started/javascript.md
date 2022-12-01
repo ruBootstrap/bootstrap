@@ -126,8 +126,7 @@ myModal.addEventListener('show.bs.modal', event => {
 
 ```js
 const myModalEl = document.querySelector('#myModal')
-
-const modal = new bootstrap.Modal(myModalEl) // инициализирован со значениями по умолчанию
+const modal = new bootstrap.Modal(myModalEl) // initialized with defaults
 
 const configObject = { keyboard: false }
 const modal1 = new bootstrap.Modal(myModalEl, configObject) // инициализируется без клавиатуры
@@ -303,11 +302,17 @@ const tooltip = new bootstrap.Tooltip(yourTooltipEl, {
 **Вам не нужен jQuery в Bootstrap 5**, но все же можно использовать наши компоненты с jQuery. Если Bootstrap обнаружит `jQuery` в объекте `window`, он добавит все наши компоненты в систему плагинов jQuery. Это позволяет сделать следующее:
 
 ```js
-$('[data-bs-toggle="tooltip"]').tooltip() // чтобы включить всплывающие подсказки, с конфигурацией по умолчанию
+// to enable tooltips with the default configuration
+$('[data-bs-toggle="tooltip"]').tooltip()
 
-$('[data-bs-toggle="tooltip"]').tooltip({ boundary: 'clippingParents', customClass: 'myClass' }) // для инициализации всплывающих подсказок с заданной конфигурацией
+// to initialize tooltips with given configuration
+$('[data-bs-toggle="tooltip"]').tooltip({
+  boundary: 'clippingParents',
+  customClass: 'myClass'
+})
 
-$('#myTooltip').tooltip('show') // для запуска метода `show`
+// to trigger the `show` method
+$('#myTooltip').tooltip('show')
 ```
 
 То же самое касается и других наших компонентов.

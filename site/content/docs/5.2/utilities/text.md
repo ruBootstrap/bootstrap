@@ -38,7 +38,7 @@ toc: true
 Запретить перенос текста с помощью класса `.text-nowrap`.
 
 {{< example >}}
-<div class="text-nowrap bg-light border" style="width: 8rem;">
+<div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
   Этот текст должен переполнять родительский.
 </div>
 {{< /example >}}

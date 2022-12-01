@@ -19,9 +19,9 @@ added: "5.1"
 
 {{< example >}}
 <div class="vstack gap-3">
-  <div class="bg-light border">Первый элемент</div>
-  <div class="bg-light border">Второй элемент</div>
-  <div class="bg-light border">Третий элемент</div>
+  <div class="bg-body-tertiary border">First item</div>
+  <div class="bg-body-tertiary border">Second item</div>
+  <div class="bg-body-tertiary border">Third item</div>
 </div>
 {{< /example >}}
 
@@ -31,9 +31,9 @@ added: "5.1"
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">Первый элемент</div>
-  <div class="bg-light border">Второй элемент</div>
-  <div class="bg-light border">Третий элемент</div>
+  <div class="bg-body-tertiary border">First item</div>
+  <div class="bg-body-tertiary border">Second item</div>
+  <div class="bg-body-tertiary border">Third item</div>
 </div>
 {{< /example >}}
 
@@ -41,9 +41,9 @@ added: "5.1"
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">Первый элемент</div>
-  <div class="bg-light border ms-auto">Второй элемент</div>
-  <div class="bg-light border">Третий элемент</div>
+  <div class="bg-body-tertiary border">First item</div>
+  <div class="bg-body-tertiary border ms-auto">Second item</div>
+  <div class="bg-body-tertiary border">Third item</div>
 </div>
 {{< /example >}}
 
@@ -51,10 +51,10 @@ added: "5.1"
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">Первый элемент</div>
-  <div class="bg-light border ms-auto">Второй элемент</div>
+  <div class="bg-body-tertiary border">First item</div>
+  <div class="bg-body-tertiary border ms-auto">Second item</div>
   <div class="vr"></div>
-  <div class="bg-light border">Третий элемент</div>
+  <div class="bg-body-tertiary border">Third item</div>
 </div>
 {{< /example >}}
 

@@ -42,6 +42,7 @@ toc: true
 {{< border.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <span class="border border-{{ .name }}"></span>
+<span class="border border-{{ .name }}-subtle"></span>
 {{- end -}}
 {{< /border.inline >}}
 <span class="border border-white"></span>
