@@ -23,10 +23,6 @@ toc: true
 Получил все это? Отлично, давайте посмотрим, как они работают, на нескольких примерах.
 
 {{< callout info >}}
-{{< partial "callout-info-sanitizer.md" >}}
-{{< /callout >}}
-
-{{< callout info >}}
 {{< partial "callouts/info-sanitizer.md" >}}
 {{< /callout >}}
 
