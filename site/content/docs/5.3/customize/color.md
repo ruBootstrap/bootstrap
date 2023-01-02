@@ -1,35 +1,35 @@
 ---
 layout: docs
 title: Цвет
-description: Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.
+Описание: Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.
 group: customize
 toc: true
 ---
 
-## Colors
+## Цвета
 
 {{< added-in "5.3.0" >}}
 
-Bootstrap's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
+В версии 5.3.0 цветовая палитра Bootstrap продолжает расширяться и становится более нюансированной. Мы добавили новые переменные для `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` и `{color}-text` для нашего цвета темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов или служебные классы) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный. Эти новые переменные глобально установлены в `:root` и адаптированы для нашего нового темного цветового режима, в то время как исходные цвета темы остаются неизменными.
 
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
+Цвета, оканчивающиеся на `-rgb`, предоставляют значения `red, green, blue` для использования в цветовых режимах `rgb()` и `rgba()`. Например, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
 {{< callout warning>}}
-**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
+**Внимание!** Существует некоторая потенциальная путаница с нашими новыми вторичными и третичными цветами и нашим существующим вторичным цветом темы, а также с нашими светлыми и темными цветами темы. Ожидайте, что это будет исправлено в v6.
 {{< /callout >}}
 
 <table class="table table-swatches">
   <thead>
     <tr>
-      <th style="width: 340px;">Description</th>
-      <th style="width: 200px;" class="ps-0">Swatch</th>
-      <th>Variables</th>
+      <th style="width: 340px;">Описание</th>
+      <th style="width: 200px;" class="ps-0">Образец</th>
+      <th>Переменные</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Body —** Default foreground (color) and background, including components.{{< /markdown >}}
+        {{< markdown >}}**Body —** Передний план (цвет) и фон по умолчанию, включая компоненты.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
@@ -48,7 +48,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Secondary —** Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.{{< /markdown >}}
+        {{< markdown >}}**Secondary —** Используйте опцию `color` для более светлого текста. Используйте опцию `bg` для разделителей и для указания отключенных состояний компонентов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
@@ -67,7 +67,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Tertiary —** Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.{{< /markdown >}}
+        {{< markdown >}}**Tertiary —** Используйте опцию `color` для еще более светлого текста. Используйте опцию `bg` , чтобы стилизовать фоны для состояний hover, accents и wells.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
@@ -86,7 +86,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        {{< markdown >}}**Emphasis —** For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
+        {{< markdown >}}**Emphasis —** Для более контрастного текста. Не применимо для фона.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
@@ -97,7 +97,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        {{< markdown >}}**Border —** For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.{{< /markdown >}}
+        {{< markdown >}}**Border —** Для границ компонентов, разделителей и правил. Используйте `--bs-border-color-translucent` для смешивания с фоном со значением `rgba()`.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
@@ -108,7 +108,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
+        {{< markdown >}}**Primary —** Цвет основной темы, используемый для гиперссылок, стилей фокуса, активных состояний компонентов и форм.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-primary">Primary</div>
@@ -143,7 +143,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
+        {{< markdown >}}**Success —** Цвет темы, используемый для положительных или успешных действий и информации.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-success">Success</div>
@@ -178,7 +178,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Danger —** Theme color used for errors and dangerous actions.{{< /markdown >}}
+        {{< markdown >}}**Danger —** Цвет темы, используемый для ошибок и опасных действий.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-danger">Danger</div>
@@ -213,7 +213,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Warning —** Theme color used for non-destructive warning messages.{{< /markdown >}}
+        {{< markdown >}}**Warning —** Цвет темы, используемый для неразрушающих предупреждающих сообщений.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-warning">Warning</div>
@@ -248,7 +248,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Info —** Theme color used for neutral and informative content.{{< /markdown >}}
+        {{< markdown >}}**Info —** Цвет темы, используемый для нейтрального и информативного контента.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-info">Info</div>
@@ -283,7 +283,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Light —** Additional theme option for less contrasting colors.{{< /markdown >}}
+        {{< markdown >}}**Light —** Дополнительная опция темы для менее контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-light border">Light</div>
@@ -318,7 +318,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Dark —** Additional theme option for higher contrasting colors.{{< /markdown >}}
+        {{< markdown >}}**Dark —** Дополнительная опция темы для более контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-dark border">Dark</div>
@@ -354,17 +354,17 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </tbody>
 </table>
 
-### Using the new colors
+### Использование новых цветов
 
-These new colors are accessible via CSS variables and utility classes—like `--bs-primary-bg-subtle` and `.bg-primary-subtle`—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color's associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.
+Эти новые цвета доступны через переменные CSS и служебные классы, такие как `--bs-primary-bg-subtle` и `.bg-primary-subtle`, что позволяет вам создавать собственные правила CSS с помощью переменных или быстро применять их. стили через классы. Утилиты построены с переменными CSS, связанными с цветом, и, поскольку мы настраиваем эти переменные CSS для темного режима, они также адаптируются к цветовому режиму по умолчанию.
 
 {{< example >}}
 <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-  Example element with utilities
+  Пример элемента с утилитами
 </div>
 {{< /example >}}
 
-### Theme colors
+### Цвета темы
 
 Мы используем подмножество всех цветов, чтобы создать меньшую цветовую палитру для создания цветовых схем, также доступных в виде переменных Sass и карты Sass в файле `scss/_variables.scss`.
 

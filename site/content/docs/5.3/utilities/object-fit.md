@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-## How it works
+## Как это устроено
 
 Change the value of the [`object-fit` property](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) with our responsive `object-fit` utility classes. This property tells the content to fill the parent container in a variety of ways, such as preserving the aspect ratio or stretching to take up as much space as possible.
 
