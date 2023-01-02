@@ -16,9 +16,6 @@
     <loc>https://getbootstrap.su/docs/5.3/helpers/clearfix/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/customize/color-modes/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/customize/css-variables/</loc>
   </url>
   <url>
@@ -46,10 +43,10 @@
     <loc>https://getbootstrap.su/docs/5.3/customize/sass/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/utilities/z-index/</loc>
+    <loc>https://getbootstrap.su/docs/5.3/layout/z-index/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/layout/z-index/</loc>
+    <loc>https://getbootstrap.su/docs/5.3/utilities/z-index/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/components/accordion/</loc>
@@ -371,6 +368,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/helpers/colored-links/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/customize/color-modes/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/blog/</loc>

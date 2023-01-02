@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.">
+<meta name="description" content="Мощный, расширяемый и многофункциональный интерфейсный инструментарий. Создавайте и настраивайте с помощью Sass, используйте готовую систему сеток и компоненты и воплощайте проекты в жизнь с помощью мощных плагинов JavaScript.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
 <meta name="generator" content="Hugo 0.108.0">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Цвет">
-<meta name="twitter:description" content="Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.">
+<meta name="twitter:description" content="Мощный, расширяемый и многофункциональный интерфейсный инструментарий. Создавайте и настраивайте с помощью Sass, используйте готовую систему сеток и компоненты и воплощайте проекты в жизнь с помощью мощных плагинов JavaScript.">
 <meta name="twitter:image" content="/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.su/docs/5.3/customize/color/">
 <meta property="og:title" content="Цвет">
-<meta property="og:description" content="Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.">
+<meta property="og:description" content="Мощный, расширяемый и многофункциональный интерфейсный инструментарий. Создавайте и настраивайте с помощью Sass, используйте готовую систему сеток и компоненты и воплощайте проекты в жизнь с помощью мощных плагинов JavaScript.">
 <meta property="og:type" content="article">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
@@ -548,7 +548,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <h1 class="bd-title mb-0" id="content">Цвет</h1>
         </div>
-        <p class="bd-lead">Bootstrap поддерживается обширной цветовой системой, которая определяет наши стили и компоненты. Это дает возможность более полной настройки и расширения для любого проекта.</p>
+        <p class="bd-lead"></p>
         
       </div>
 
@@ -563,10 +563,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#colors">Colors</a>
+    <li><a href="#цвета">Цвета</a>
       <ul>
-        <li><a href="#using-the-new-colors">Using the new colors</a></li>
-        <li><a href="#theme-colors">Theme colors</a></li>
+        <li><a href="#использование-новых-цветов">Использование новых цветов</a></li>
+        <li><a href="#цвета-темы">Цвета темы</a></li>
         <li><a href="#все-цвета">Все цвета</a></li>
         <li><a href="#примечания-к-sass">Примечания к Sass</a></li>
       </ul>
@@ -586,27 +586,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="colors">Colors <a class="anchor-link" href="#colors" aria-label="Link to this section: Colors"></a></h2>
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Добавлено в версии5.3.0</small>
+        <h2 id="цвета">Цвета <a class="anchor-link" href="#%d1%86%d0%b2%d0%b5%d1%82%d0%b0" aria-label="Link to this section: Цвета"></a></h2>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Добавлено в версии 5.3.0</small>
 
-<p>Bootstrap&rsquo;s color palette has continued to expand and become more nuanced in v5.3.0. We&rsquo;ve added new variables for <code>secondary</code> and <code>tertiary</code> text and background colors, plus <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code>, and <code>{color}-text</code> for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on <code>:root</code> and are adapted for our new dark color mode while our original theme colors remain unchanged.</p>
-<p>Colors ending in <code>-rgb</code> provide the <code>red, green, blue</code> values for use in <code>rgb()</code> and <code>rgba()</code> color modes. For example, <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>.</p>
+<p>В версии 5.3.0 цветовая палитра Bootstrap продолжает расширяться и становится более нюансированной. Мы добавили новые переменные для <code>secondary</code> и <code>tertiary</code> цвета текста и фона, а также <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code> и <code>{color}-text</code> для нашего цвета темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов или служебные классы) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный. Эти новые переменные глобально установлены в <code>:root</code> и адаптированы для нашего нового темного цветового режима, в то время как исходные цвета темы остаются неизменными.</p>
+<p>Цвета, оканчивающиеся на <code>-rgb</code>, предоставляют значения <code>red, green, blue</code> для использования в цветовых режимах <code>rgb()</code> и <code>rgba()</code>. Например, <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>.</p>
 <div class="bd-callout bd-callout-warning">
-<strong>Heads up!</strong> There&rsquo;s some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
+<strong>Внимание!</strong> Существует некоторая потенциальная путаница с нашими новыми вторичными и третичными цветами и нашим существующим вторичным цветом темы, а также с нашими светлыми и темными цветами темы. Ожидайте, что это будет исправлено в v6.
 </div>
 
 <table class="table table-swatches">
   <thead>
     <tr>
-      <th style="width: 340px;">Description</th>
-      <th style="width: 200px;" class="ps-0">Swatch</th>
-      <th>Variables</th>
+      <th style="width: 340px;">Описание</th>
+      <th style="width: 200px;" class="ps-0">Образец</th>
+      <th>Переменные</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
-        <strong>Body —</strong> Default foreground (color) and background, including components.
+        <strong>Body —</strong> Передний план (цвет) и фон по умолчанию, включая компоненты.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
@@ -625,7 +625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="2">
-        <strong>Secondary —</strong> Use the <code>color</code> option for lighter text. Use the <code>bg</code> option for dividers and to indicate disabled component states.
+        <strong>Secondary —</strong> Используйте опцию <code>color</code> для более светлого текста. Используйте опцию <code>bg</code> для разделителей и для указания отключенных состояний компонентов.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
@@ -644,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="2">
-        <strong>Tertiary —</strong> Use the <code>color</code> option for even lighter text. Use the <code>bg</code> option to style backgrounds for hover states, accents, and wells.
+        <strong>Tertiary —</strong> Используйте опцию <code>color</code> для еще более светлого текста. Используйте опцию <code>bg</code> , чтобы стилизовать фоны для состояний hover, accents и wells.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
@@ -663,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td>
-        <strong>Emphasis —</strong> For higher contrast text. Not applicable for backgrounds.
+        <strong>Emphasis —</strong> Для более контрастного текста. Не применимо для фона.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
@@ -674,7 +674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td>
-        <strong>Border —</strong> For component borders, dividers, and rules. Use <code>--bs-border-color-translucent</code> to blend with backgrounds with an <code>rgba()</code> value.
+        <strong>Border —</strong> Для границ компонентов, разделителей и правил. Используйте <code>--bs-border-color-translucent</code> для смешивания с фоном со значением <code>rgba()</code>.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
@@ -685,7 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Primary —</strong> Main theme color, used for hyperlinks, focus styles, and component and form active states.
+        <strong>Primary —</strong> Цвет основной темы, используемый для гиперссылок, стилей фокуса, активных состояний компонентов и форм.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-primary">Primary</div>
@@ -720,7 +720,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Success —</strong> Theme color used for positive or successful actions and information.
+        <strong>Success —</strong> Цвет темы, используемый для положительных или успешных действий и информации.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-success">Success</div>
@@ -755,7 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Danger —</strong> Theme color used for errors and dangerous actions.
+        <strong>Danger —</strong> Цвет темы, используемый для ошибок и опасных действий.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-danger">Danger</div>
@@ -790,7 +790,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Warning —</strong> Theme color used for non-destructive warning messages.
+        <strong>Warning —</strong> Цвет темы, используемый для неразрушающих предупреждающих сообщений.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-warning">Warning</div>
@@ -825,7 +825,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Info —</strong> Theme color used for neutral and informative content.
+        <strong>Info —</strong> Цвет темы, используемый для нейтрального и информативного контента.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-info">Info</div>
@@ -860,7 +860,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Light —</strong> Additional theme option for less contrasting colors.
+        <strong>Light —</strong> Дополнительная опция темы для менее контрастных цветов.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-light border">Light</div>
@@ -895,7 +895,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td rowspan="4">
-        <strong>Dark —</strong> Additional theme option for higher contrasting colors.
+        <strong>Dark —</strong> Дополнительная опция темы для более контрастных цветов.
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-dark border">Dark</div>
@@ -930,11 +930,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
   </tbody>
 </table>
-<h3 id="using-the-new-colors">Using the new colors <a class="anchor-link" href="#using-the-new-colors" aria-label="Link to this section: Using the new colors"></a></h3>
-<p>These new colors are accessible via CSS variables and utility classes—like <code>--bs-primary-bg-subtle</code> and <code>.bg-primary-subtle</code>—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color&rsquo;s associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.</p>
+<h3 id="использование-новых-цветов">Использование новых цветов <a class="anchor-link" href="#%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%bd%d0%be%d0%b2%d1%8b%d1%85-%d1%86%d0%b2%d0%b5%d1%82%d0%be%d0%b2" aria-label="Link to this section: Использование новых цветов"></a></h3>
+<p>Эти новые цвета доступны через переменные CSS и служебные классы, такие как <code>--bs-primary-bg-subtle</code> и <code>.bg-primary-subtle</code>, что позволяет вам создавать собственные правила CSS с помощью переменных или быстро применять их. стили через классы. Утилиты построены с переменными CSS, связанными с цветом, и, поскольку мы настраиваем эти переменные CSS для темного режима, они также адаптируются к цветовому режиму по умолчанию.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
 <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-  Example element with utilities
+  Пример элемента с утилитами
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1">
         <small class="font-monospace text-muted text-uppercase">html</small>
@@ -947,10 +947,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Example element with utilities
+</span></span><span class="line"><span class="cl">  Пример элемента с утилитами
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="theme-colors">Theme colors <a class="anchor-link" href="#theme-colors" aria-label="Link to this section: Theme colors"></a></h3>
+<h3 id="цвета-темы">Цвета темы <a class="anchor-link" href="#%d1%86%d0%b2%d0%b5%d1%82%d0%b0-%d1%82%d0%b5%d0%bc%d1%8b" aria-label="Link to this section: Цвета темы"></a></h3>
 <p>Мы используем подмножество всех цветов, чтобы создать меньшую цветовую палитру для создания цветовых схем, также доступных в виде переменных Sass и карты Sass в файле <code>scss/_variables.scss</code>.</p>
 <div class="row">
   
@@ -1338,7 +1338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Утилиты <a href="/docs/5.3/utilities/colors/">Цвета</a> и <a href="/docs/5.3/utilities/background/">фона</a> также доступны для установки <code>color</code> и <code>background-color</code> с использованием значений цвета <code>500</code>.</p>
 <h2 id="генерация-утилит">Генерация утилит <a class="anchor-link" href="#%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d1%83%d1%82%d0%b8%d0%bb%d0%b8%d1%82" aria-label="Link to this section: Генерация утилит"></a></h2>
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Добавлено в версии5.1.0</small>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Добавлено в версии 5.1.0</small>
 
 <p>Bootstrap не включает утилиты <code>color</code> и <code>background-color</code> для каждой цветовой переменной, но вы можете создать их самостоятельно с помощью нашего <a href="/docs/5.3/utilities/api/">служебного API</a> и нашего расширенного Карты Sass добавлены в v5.1.0.</p>
 <ol>
