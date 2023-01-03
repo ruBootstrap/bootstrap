@@ -25,9 +25,6 @@
     <loc>https://getbootstrap.su/docs/5.3/getting-started/javascript/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/utilities/object-fit/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/components/offcanvas/</loc>
   </url>
   <url>
@@ -293,6 +290,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/getting-started/contents/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/utilities/object-fit/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/helpers/ratio/</loc>

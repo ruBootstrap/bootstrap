@@ -565,19 +565,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul>
     <li><a href="#v530">v5.3.0</a>
       <ul>
-        <li><a href="#color-modes">Color modes!</a></li>
-        <li><a href="#css-variables">CSS variables</a></li>
-        <li><a href="#components">Components</a>
+        <li><a href="#цветовые-режимы">Цветовые режимы!</a></li>
+        <li><a href="#css-переменные">CSS переменные</a></li>
+        <li><a href="#компоненты">Компоненты</a>
           <ul>
             <li><a href="#alert">Alert</a></li>
             <li><a href="#list-group">List group</a></li>
-            <li><a href="#close-button">Close button</a></li>
-            <li><a href="#navbar">Navbar</a></li>
+            <li><a href="#кнопка-закрытия">Кнопка закрытия</a></li>
+            <li><a href="#панель-навигации">Панель навигации</a></li>
           </ul>
         </li>
-        <li><a href="#progress-bars">Progress bars</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#utilities">Utilities</a></li>
+        <li><a href="#прогресс-бары">Прогресс-бары</a></li>
+        <li><a href="#формы">Формы</a></li>
+        <li><a href="#утилиты">Утилиты</a></li>
       </ul>
     </li>
     <li><a href="#v520">v5.2.0</a>
@@ -598,8 +598,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="#обновления-сетки">Обновления сетки</a></li>
     <li><a href="#контент-перезагрузка-и-т-д">Контент, перезагрузка и т. д</a></li>
     <li><a href="#rtl">RTL</a></li>
-    <li><a href="#формы">Формы</a></li>
-    <li><a href="#компоненты">Компоненты</a>
+    <li><a href="#формы-1">Формы</a></li>
+    <li><a href="#компоненты-1">Компоненты</a>
       <ul>
         <li><a href="#аккордеон">Аккордеон</a></li>
         <li><a href="#оповещения">Оповещения</a></li>
@@ -608,7 +608,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#кнопки">Кнопки</a></li>
         <li><a href="#карточка">Карточка</a></li>
         <li><a href="#карусель">Карусель</a></li>
-        <li><a href="#кнопка-закрытия">Кнопка закрытия</a></li>
+        <li><a href="#кнопка-закрытия-1">Кнопка закрытия</a></li>
         <li><a href="#сворачиваемое">Сворачиваемое</a></li>
         <li><a href="#выпадающие-списки">Выпадающие списки</a></li>
         <li><a href="#джамботрон">Джамботрон</a></li>
@@ -623,7 +623,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#тултипы">Тултипы</a></li>
       </ul>
     </li>
-    <li><a href="#утилиты">Утилиты</a></li>
+    <li><a href="#утилиты-1">Утилиты</a></li>
     <li><a href="#помощники">Помощники</a></li>
     <li><a href="#javascript">JavaScript</a></li>
   </ul>
@@ -637,21 +637,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <h2 id="v530">v5.3.0 <a class="anchor-link" href="#v530" aria-label="Link to this section: v5.3.0"></a></h2>
 <hr class="mb-4">
-<h3 id="color-modes">Color modes! <a class="anchor-link" href="#color-modes" aria-label="Link to this section: Color modes!"></a></h3>
-<p>Learn more by reading the new <a href="/docs/5.3/customize/color-modes/">color modes documentation</a>.</p>
+<h3 id="цветовые-режимы">Цветовые режимы! <a class="anchor-link" href="#%d1%86%d0%b2%d0%b5%d1%82%d0%be%d0%b2%d1%8b%d0%b5-%d1%80%d0%b5%d0%b6%d0%b8%d0%bc%d1%8b" aria-label="Link to this section: Цветовые режимы!"></a></h3>
+<p>Узнайте больше, прочитав новую <a href="/docs/5.3/customize/color-modes/">документацию по цветовым режимам</a>.</p>
 <ul>
 <li>
-<p><strong>Global support for light (default) and dark color modes.</strong> Set color mode globally on the <code>:root</code> element, on groups of elements and components with a wrapper class, or directly on components, with <code>data-bs-theme=&quot;light|dark&quot;</code>. Also included is a new <code>color-mode()</code> mixin that can output a ruleset with the <code>data-bs-theme</code> selector or a media query, depending on your preference.</p>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span>  Color modes replace dark variants for components, so  <code>.btn-close-white</code>, <code>.carousel-dark</code>, <code>.dropdown-menu-dark</code>, and <code>.navbar-dark</code> are deprecated.</p>
+<p><strong>Глобальная поддержка светлых (по умолчанию) и темных цветовых режимов.</strong> Установите цветовой режим глобально для элемента <code>:root</code>, для групп элементов и компонентов с помощью класса-оболочки или непосредственно для компонентов с помощью <code>data-bs-theme=&quot;light|dark&quot;</code>. Также включен новый миксин <code>color-mode()</code>, который может выводить набор правил с селектором <code>data-bs-theme</code> или медиа-запросом, в зависимости от ваших предпочтений.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span>  Цветовые режимы заменяют темные варианты компонентов, поэтому <code>.btn-close-white</code>, <code>.carousel-dark</code>, <code>.dropdown-menu-dark</code> и <code>.navbar-dark</code> устарели.</p>
 </li>
 <li>
-<p><strong>New extended color system.</strong> We&rsquo;ve added new theme colors (but not in <code>$theme-colors)</code>) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for <code>color</code> and <code>background-color</code>. These new colors are available as Sass variables, CSS variables, and utilities.</p>
+<p><strong>Новая расширенная цветовая система.</strong> Мы добавили новые цвета темы (но не в <code>$theme-colors)</code>) для более детализированной общесистемной цветовой палитры с новыми вторичными, третичными и акцентными цветами для <code>color</code> и <code>background-color</code>. Эти новые цвета доступны в виде переменных Sass, переменных CSS и утилит.</p>
 </li>
 <li>
-<p>We&rsquo;ve also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.</p>
+<p>Мы также расширили переменные цвета нашей темы Sass, переменные CSS и утилиты, чтобы включить выделение текста, тонкие цвета фона и тонкие цвета границ. Они доступны в виде переменных Sass, переменных CSS и утилит.</p>
 </li>
 <li>
-<p>Adds new <code>_variables-dark.scss</code> stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing <code>_variables.scss</code> file in your import stack.</p>
+<p>Добавляет новую таблицу стилей <code>_variables-dark.scss</code> для размещения специальных переопределений темного режима. Эта таблица стилей должна быть импортирована сразу после существующего файла <code>_variables.scss</code> в вашем стеке импорта.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gh">diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
 </span></span></span><span class="line"><span class="cl"><span class="gh">index 8f8296def..449d70487 100644
 </span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- a/scss/bootstrap.scss
@@ -666,60 +666,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"> @import &#34;utilities&#34;;
 </span></span></code></pre></div></li>
 </ul>
-<h3 id="css-variables">CSS variables <a class="anchor-link" href="#css-variables" aria-label="Link to this section: CSS variables"></a></h3>
+<h3 id="css-переменные">CSS переменные <a class="anchor-link" href="#css-%d0%bf%d0%b5%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5" aria-label="Link to this section: CSS переменные"></a></h3>
 <ul>
 <li>
-<p>Restores CSS variables for breakpoints, though we don&rsquo;t use them in our media queries as they&rsquo;re not supported. However, these can be useful in JS-specific contexts.</p>
+<p>Восстанавливает переменные CSS для контрольных точек, хотя мы не используем их в наших медиа-запросах, поскольку они не поддерживаются. Однако они могут быть полезны в контекстах, специфичных для JS.</p>
 </li>
 <li>
-<p>Per the color modes update, we&rsquo;ve added new utilities for new Sass CSS variables <code>secondary</code> and <code>tertiary</code> text and background colors, plus <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code>, and <code>{color}-text</code> for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.</p>
+<p>В соответствии с обновлением цветовых режимов мы добавили новые утилиты для новых CSS-переменных Sass <code>secondary</code> и <code>tertiary</code> цвета текста и фона, а также <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code> иd <code>{color}-text</code> для цветов нашей темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный.</p>
 </li>
 <li>
-<p>Adds additional variables for alerts, <code>.btn-close</code>, and <code>.offcanvas</code>.</p>
+<p>Добавляет дополнительные переменные для предупреждений, <code>.btn-close</code> и <code>.offcanvas</code>.</p>
 </li>
 <li>
-<p>The <code>--bs-heading-color</code> variable is back with an update and dark mode support. First, we now check for a <code>null</code> value on the associated Sass variable, <code>$headings-color</code>, before trying to output the CSS variable, so by default it&rsquo;s not present in our compiled CSS. Second, we use the CSS variable with a fallback value, <code>inherit</code>, allowing the original behavior to persist, but also allowing for overrides.</p>
+<p>Переменная <code>--bs-heading-color</code> вернулась с обновлением и поддержкой темного режима. Во-первых, теперь мы проверяем значение <code>null</code> в связанной переменной Sass, <code>$headings-color</code>, прежде чем пытаться вывести переменную CSS, поэтому по умолчанию ее нет в нашем скомпилированном CSS. Во-вторых, мы используем переменную CSS с резервным значением <code>inherit</code>, что позволяет сохранить исходное поведение, но также позволяет переопределять его.</p>
 </li>
 <li>
-<p>Converts links to use CSS variables for styling <code>color</code>, but not <code>text-decoration</code>. Colors are now set with <code>--bs-link-color-rgb</code> and <code>--bs-link-opacity</code> as <code>rgba()</code> color, allowing you to customize the translucency with ease. The <code>a:hover</code> pseudo-class now overrides <code>--bs-link-color-rgb</code> instead of explicitly setting the <code>color</code> property.</p>
+<p>Преобразует ссылки для использования переменных CSS для стилизации <code>color</code>, но не <code>text-decoration</code>. Цвета теперь задаются с помощью <code>--bs-link-color-rgb</code> и <code>--bs-link-opacity</code> в качестве цвета <code>rgba()</code>, что позволяет легко настраивать прозрачность. Псевдокласс <code>a:hover</code> теперь переопределяет <code>--bs-link-color-rgb</code> вместо явной установки свойства <code>color</code>.</p>
 </li>
 <li>
-<p><code>--bs-border-width</code> is now being used in more components for greater control over default global styling.</p>
+<p><code>--bs-border-width</code> теперь используется в большем количестве компонентов для большего контроля над глобальным стилем по умолчанию.</p>
 </li>
 <li>
-<p>Adds new root CSS variables for our <code>box-shadow</code>s, including <code>--bs-box-shadow</code>, <code>--bs-box-shadow-sm</code>, <code>--bs-box-shadow-lg</code>, and <code>--bs-box-shadow-inset</code>.</p>
+<p>Добавляет новые корневые переменные CSS для наших <code>box-shadow</code>, включая <code>--bs-box-shadow</code>, <code>--bs-box-shadow-sm</code>, <code>--bs-box-shadow-lg</code> и <code>--bs-box-shadow-inset</code>.</p>
 </li>
 </ul>
-<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
+<h3 id="компоненты">Компоненты <a class="anchor-link" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d1%8b" aria-label="Link to this section: Компоненты"></a></h3>
 <h4 id="alert">Alert <a class="anchor-link" href="#alert" aria-label="Link to this section: Alert"></a></h4>
 <ul>
 <li>
-<p>Alert variants are now styled via CSS variables.</p>
+<p>Варианты предупреждений теперь определяются с помощью переменных CSS.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.alert-variant()</code> mixin is now deprecated. We now <a href="/docs/5.3/components/alerts/#sass-loop">use the Sass loop</a> directly to modify the component&rsquo;s default CSS variables for each variant.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>.alert-variant()</code> больше не рекомендуется. Теперь мы <a href="/docs/5.3/components/alerts/#sass-loop">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
 </li>
 </ul>
 <h4 id="list-group">List group <a class="anchor-link" href="#list-group" aria-label="Link to this section: List group"></a></h4>
 <ul>
 <li>
-<p>List group item variants are now styled via CSS variables.</p>
+<p>Варианты элементов группы списка теперь определяются с помощью переменных CSS.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.list-group-variant()</code> mixin is now deprecated. We now <a href="/docs/5.3/components/list-group/#sass-loop">use the Sass loop</a> directly to modify the component&rsquo;s default CSS variables for each variant.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>.list-group-variant()</code> больше не рекомендуется. Теперь мы <a href="/docs/5.3/components/list-group/#sass-loop">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
 </li>
 </ul>
-<h4 id="close-button">Close button <a class="anchor-link" href="#close-button" aria-label="Link to this section: Close button"></a></h4>
+<h4 id="кнопка-закрытия">Кнопка закрытия <a class="anchor-link" href="#%d0%ba%d0%bd%d0%be%d0%bf%d0%ba%d0%b0-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f" aria-label="Link to this section: Кнопка закрытия"></a></h4>
 <ul>
-<li><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.btn-close-white</code> class has been deprecated and replaced with <code>data-bs-theme=&quot;dark&quot;</code> on the close button or any parent element. <a href="/docs/5.3/components/close-button/#dark-variant">See the docs for an example.</a></li>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Класс <code>.btn-close-white</code> устарел и заменен на <code>data-bs-theme=&quot;dark&quot;</code> на кнопке закрытия или любом родительском элементе. <a href="/docs/5.3/components/close-button/#dark-variant">Смотрите пример в документации.</a></li>
 </ul>
-<h4 id="navbar">Navbar <a class="anchor-link" href="#navbar" aria-label="Link to this section: Navbar"></a></h4>
+<h4 id="панель-навигации">Панель навигации <a class="anchor-link" href="#%d0%bf%d0%b0%d0%bd%d0%b5%d0%bb%d1%8c-%d0%bd%d0%b0%d0%b2%d0%b8%d0%b3%d0%b0%d1%86%d0%b8%d0%b8" aria-label="Link to this section: Панель навигации"></a></h4>
 <ul>
-<li><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.navbar-dark</code> class has been deprecated and replaced with <code>data-bs-theme=&quot;dark&quot;</code> on the navbar or any parent element. <a href="/docs/5.3/components/navbar/#color-schemes">See the docs for updated examples.</a></li>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Класс <code>.navbar-dark</code> устарел и заменен на <code>data-bs-theme=&quot;dark&quot;</code> на навбаре или любом родительском элементе. <a href="/docs/5.3/components/navbar/#color-schemes">Смотрите документацию для обновленных примеров.</a></li>
 </ul>
-<h3 id="progress-bars">Progress bars <a class="anchor-link" href="#progress-bars" aria-label="Link to this section: Progress bars"></a></h3>
-<p>The markup for <a href="/docs/5.3/components/progress/">progress bars</a> has been updated in v5.3.0. Due to the placement of <code>role</code> and various <code>aria-</code> attributes on the inner <code>.progress-bar</code> element, <strong>some screen readers were not announcing zero value progress bars</strong>. Now, <code>role=&quot;progressbar&quot;</code> and the relevant <code>aria-*</code> attributes are on the outer <code>.progress</code> element, leaving the <code>.progress-bar</code> purely for the visual presentation of the bar and optional label.</p>
-<p>While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.</p>
+<h3 id="прогресс-бары">Прогресс-бары <a class="anchor-link" href="#%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b5%d1%81%d1%81-%d0%b1%d0%b0%d1%80%d1%8b" aria-label="Link to this section: Прогресс-бары"></a></h3>
+<p>Разметка для <a href="/docs/5.3/components/progress/">индикаторов выполнения</a> была обновлена в версии 5.3.0. Из-за размещения атрибута <code>role</code> и различных атрибутов <code>aria-</code> во внутреннем элементе <code>.progress-bar</code>, <strong>некоторые программы чтения с экрана не отображали индикаторы выполнения с нулевым значением</strong>. Теперь, <code>role=&quot;progressbar&quot;</code> и соответствующие атрибуты <code>aria-*</code> находятся во внешнем элементе <code>.progress</code>, оставляя <code>.progress-bar</code> исключительно для визуального представления полосы и необязательной метки.</p>
+<p>Хотя мы рекомендуем принять новую разметку для улучшения совместимости со всеми программами чтения с экрана, обратите внимание, что устаревшая структура индикатора выполнения будет продолжать работать, как и раньше.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Previous markup --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -729,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>We&rsquo;ve also introduced a new <code>.progress-stacked</code> class to more logically wrap <a href="/docs/5.3/components/progress/#multiple-bars">multiple progress bars</a> into a single stacked progress bar.</p>
+</span></span></code></pre></div><p>Мы также представили новый класс <code>.progress-stacked</code> для более логического объединения <a href="/docs/5.3/components/progress/#multiple-bars">нескольких индикаторов выполнения</a> в один сложенный индикатор выполнения.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Previous markup --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Segment one&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 15%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;15&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -749,41 +749,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-info&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="forms">Forms <a class="anchor-link" href="#forms" aria-label="Link to this section: Forms"></a></h3>
+</span></span></code></pre></div><h3 id="формы">Формы <a class="anchor-link" href="#%d1%84%d0%be%d1%80%d0%bc%d1%8b" aria-label="Link to this section: Формы"></a></h3>
 <ul>
 <li>
-<p><code>.form-control</code> is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.</p>
+<p><code>.form-control</code> теперь использует переменные CSS для поддержки цветовых режимов. Это включает в себя добавление двух новых корневых переменных CSS для фона управления формой по умолчанию и отключенного фона.</p>
 </li>
 <li>
-<p><code>.form-check</code> and <code>.form-switch</code> components are now built with CSS variables for setting the <code>background-image</code>. The usage here differs from other components in that the various focus, active, etc states for each component aren&rsquo;t set on the base class. Instead, the states override one variable (e.g., <code>--bs-form-switch-bg</code>).</p>
+<p>Компоненты <code>.form-check</code> и <code>.form-switch</code> теперь создаются с переменными CSS для установки <code>background-image</code>. Использование здесь отличается от других компонентов тем, что различные состояния фокуса, активности и т. д. для каждого компонента не устанавливаются в базовом классе. Вместо этого состояния переопределяют одну переменную (например, <code>--bs-form-switch-bg</code>).</p>
 </li>
 <li>
-<p>Floating form labels now have a <code>background-color</code> to fix support for <code>&lt;textarea&gt;</code> elements. Additional changes have been made to also support disabled states and more.</p>
+<p>Плавающие метки формы теперь имеют <code>background-color</code> для исправления поддержки элементов <code>&lt;textarea&gt;</code>. Были внесены дополнительные изменения, чтобы также поддерживать отключенные состояния и многое другое.</p>
 </li>
 <li>
-<p>Fixed display of date and time inputs in WebKit based browsers.</p>
+<p>Исправлено отображение ввода даты и времени в браузерах на основе WebKit.</p>
 </li>
 </ul>
-<h3 id="utilities">Utilities <a class="anchor-link" href="#utilities" aria-label="Link to this section: Utilities"></a></h3>
+<h3 id="утилиты">Утилиты <a class="anchor-link" href="#%d1%83%d1%82%d0%b8%d0%bb%d0%b8%d1%82%d1%8b" aria-label="Link to this section: Утилиты"></a></h3>
 <ul>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> <code>.text-muted</code> will be be replaced by <code>.text-body-secondary</code> in v6.</p>
-<p>With the addition of the expanded theme colors and variables, the <code>.text-muted</code> variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new <code>--bs-secondary-color</code> CSS variable to better support color modes. It will be removed in v6.0.0.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> <code>.text-muted</code> будет заменен на <code>.text-body-secondary</code> в 6 версии.</p>
+<p>С добавлением расширенных цветов и переменных темы переменные и утилита <code>.text-muted</code> устарели в версии 5.3.0. Его значение по умолчанию также было переназначено новой переменной CSS <code>--bs-secondary-color</code> для лучшей поддержки цветовых режимов. Он будет удален в версии 6.0.0.</p>
 </li>
 <li>
-<p>Adds new <code>.overflow-x</code>, <code>.overflow-y</code>, and several <code>.object-fit-*</code> utilities. <em>The object-fit property is used to specify how an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> should be resized to fit its container, giving us a responsive alternative to using <code>background-image</code> for a resizable fill/fit image.</em></p>
+<p>Добавлены новые утилиты <code>.overflow-x</code>, <code>.overflow-y</code> и несколько утилит <code>.object-fit-*</code>. <em>Свойство object-fit используется для указания того, как следует изменять размер <code>&lt;img&gt;</code> или <code>&lt;video&gt;</code> , чтобы они соответствовали его контейнеру, что дает нам гибкую альтернативу использованию <code>background-image</code> для изменяемого размера заливки/подгонки изображения.</em></p>
 </li>
 <li>
-<p>Adds new <code>.fw-medium</code> utility.</p>
+<p>Добавлены новые утилиты <code>.fw-medium</code>.</p>
 </li>
 <li>
-<p>Added new <a href="/docs/5.3/utilities/z-index/"><code>.z-*</code> utilities</a> for <code>z-index</code>.</p>
+<p>Добавлены новые <a href="/docs/5.3/utilities/z-index/">утилиты <code>.z-*</code></a> для <code>z-index</code>.</p>
 </li>
 <li>
-<p><a href="/docs/5.3/utilities/shadows/">Box shadow utilities</a> (and Sass variables) have been updated for dark mode. They now use <code>--bs-body-color-rgb</code> to generate the <code>rgba()</code> color values, allowing them to easily adapt to color modes based on the specified foreground color.</p>
+<p><a href="/docs/5.3/utilities/shadows/">Утилиты тени коробки</a> (и переменные Sass) были обновлены для темного режима. Теперь они используют <code>--bs-body-color-rgb</code> для генерации значений цвета <code>rgba()</code>, что позволяет им легко адаптироваться к цветовым режимам на основе указанного цвета переднего плана.</p>
 </li>
 </ul>
-<p>For a complete list of changes, <a href="https://github.com/twbs/bootstrap/projects/">see the v5.3.0 project on GitHub</a>.</p>
+<p>Полный список изменений <a href="https://github.com/twbs/bootstrap/projects/">смотрите в проекте версии 5.3.0 на GitHub</a>.</p>
 <h2 id="v520">v5.2.0 <a class="anchor-link" href="#v520" aria-label="Link to this section: v5.2.0"></a></h2>
 <hr class="mb-4">
 <h3 id="обновленный-дизайн">Обновленный дизайн <a class="anchor-link" href="#%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd" aria-label="Link to this section: Обновленный дизайн"></a></h3>
@@ -1081,7 +1081,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <ul>
 <li>Переменные, утилиты и миксины, зависящие от горизонтального направления, были переименованы для использования логических свойств, подобных тем, которые присутствуют в макетах flexbox, например, <code>start</code> и <code>end</code> вместо <code>left</code> и <code>right</code>.</li>
 </ul>
-<h2 id="формы">Формы <a class="anchor-link" href="#%d1%84%d0%be%d1%80%d0%bc%d1%8b" aria-label="Link to this section: Формы"></a></h2>
+<h2 id="формы-1">Формы <a class="anchor-link" href="#%d1%84%d0%be%d1%80%d0%bc%d1%8b-1" aria-label="Link to this section: Формы"></a></h2>
 <ul>
 <li>
 <p><strong>Добавлены новые плавающие формы!</strong> Мы продвинули пример с плавающими метками до полностью поддерживаемых компонентов формы. <a href="/docs/5.3/forms/floating-labels/">Смотрите новую страницу «Плавающие метки».</a></p>
@@ -1124,7 +1124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 </ul>
 <hr class="my-5">
-<h2 id="компоненты">Компоненты <a class="anchor-link" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d1%8b" aria-label="Link to this section: Компоненты"></a></h2>
+<h2 id="компоненты-1">Компоненты <a class="anchor-link" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d1%8b-1" aria-label="Link to this section: Компоненты"></a></h2>
 <ul>
 <li>Унифицированные значения <code>padding</code> для предупреждений, хлебных крошек, карточек, раскрывающихся списков, групп списков, модальных окон, всплывающих окон и всплывающих подсказок должны основываться на нашей переменной <code>$spacer</code>. <a href="https://github.com/twbs/bootstrap/pull/30564">Смотрите #30564</a>.</li>
 </ul>
@@ -1204,7 +1204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Шевронные иконки для элементов управления каруселью заменены новыми SVG из <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.</p>
 </li>
 </ul>
-<h3 id="кнопка-закрытия">Кнопка закрытия <a class="anchor-link" href="#%d0%ba%d0%bd%d0%be%d0%bf%d0%ba%d0%b0-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f" aria-label="Link to this section: Кнопка закрытия"></a></h3>
+<h3 id="кнопка-закрытия-1">Кнопка закрытия <a class="anchor-link" href="#%d0%ba%d0%bd%d0%be%d0%bf%d0%ba%d0%b0-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-1" aria-label="Link to this section: Кнопка закрытия"></a></h3>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> <code>.close</code> переименован в <code>.btn-close</code> для менее общего названия.</p>
@@ -1319,7 +1319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><span class="badge bg-danger">Breaking</span> Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
 </li>
 </ul>
-<h2 id="утилиты">Утилиты <a class="anchor-link" href="#%d1%83%d1%82%d0%b8%d0%bb%d0%b8%d1%82%d1%8b" aria-label="Link to this section: Утилиты"></a></h2>
+<h2 id="утилиты-1">Утилиты <a class="anchor-link" href="#%d1%83%d1%82%d0%b8%d0%bb%d0%b8%d1%82%d1%8b-1" aria-label="Link to this section: Утилиты"></a></h2>
 <ul>
 <li>
 <p><span class="badge bg-danger">Breaking</span> Переименовано несколько утилит для использования логических имен свойств вместо прямых имен с добавлением поддержки RTL:</p>
