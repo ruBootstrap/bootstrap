@@ -11,19 +11,19 @@ toc: true
 
 <hr class="mb-4">
 
-### Color modes!
+### Цветовые режимы!
 
-Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+Узнайте больше, прочитав новую [документацию по цветовым режимам]({{< docsref "/customize/color-modes" >}}).
 
-- **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
+- **Глобальная поддержка светлых (по умолчанию) и темных цветовых режимов.** Установите цветовой режим глобально для элемента `:root`, для групп элементов и компонентов с помощью класса-оболочки или непосредственно для компонентов с помощью `data-bs-theme="light|dark"`. Также включен новый миксин `color-mode()`, который может выводить набор правил с селектором `data-bs-theme` или медиа-запросом, в зависимости от ваших предпочтений.
 
-  <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span>  Color modes replace dark variants for components, so  `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark`, and `.navbar-dark` are deprecated.
+  <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span>  Цветовые режимы заменяют темные варианты компонентов, поэтому `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` и `.navbar-dark` устарели.
 
-- **New extended color system.** We've added new theme colors (but not in `$theme-colors)`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+- **Новая расширенная цветовая система.** Мы добавили новые цвета темы (но не в `$theme-colors)`) для более детализированной общесистемной цветовой палитры с новыми вторичными, третичными и акцентными цветами для `color` и `background-color`. Эти новые цвета доступны в виде переменных Sass, переменных CSS и утилит.
 
-- We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
+- Мы также расширили переменные цвета нашей темы Sass, переменные CSS и утилиты, чтобы включить выделение текста, тонкие цвета фона и тонкие цвета границ. Они доступны в виде переменных Sass, переменных CSS и утилит.
 
-- Adds new `_variables-dark.scss` stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing `_variables.scss` file in your import stack.
+- Добавляет новую таблицу стилей `_variables-dark.scss` для размещения специальных переопределений темного режима. Эта таблица стилей должна быть импортирована сразу после существующего файла `_variables.scss` в вашем стеке импорта.
 
   ```diff
   diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
@@ -40,49 +40,49 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
    @import "utilities";
   ```
 
-### CSS variables
+### CSS переменные
 
-- Restores CSS variables for breakpoints, though we don't use them in our media queries as they're not supported. However, these can be useful in JS-specific contexts.
+- Восстанавливает переменные CSS для контрольных точек, хотя мы не используем их в наших медиа-запросах, поскольку они не поддерживаются. Однако они могут быть полезны в контекстах, специфичных для JS.
 
-- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+- В соответствии с обновлением цветовых режимов мы добавили новые утилиты для новых CSS-переменных Sass `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` иd `{color}-text` для цветов нашей темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный.
 
-- Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
+- Добавляет дополнительные переменные для предупреждений, `.btn-close` и `.offcanvas`.
 
-- The `--bs-heading-color` variable is back with an update and dark mode support. First, we now check for a `null` value on the associated Sass variable, `$headings-color`, before trying to output the CSS variable, so by default it's not present in our compiled CSS. Second, we use the CSS variable with a fallback value, `inherit`, allowing the original behavior to persist, but also allowing for overrides.
+- Переменная `--bs-heading-color` вернулась с обновлением и поддержкой темного режима. Во-первых, теперь мы проверяем значение `null` в связанной переменной Sass, `$headings-color`, прежде чем пытаться вывести переменную CSS, поэтому по умолчанию ее нет в нашем скомпилированном CSS. Во-вторых, мы используем переменную CSS с резервным значением `inherit`, что позволяет сохранить исходное поведение, но также позволяет переопределять его.
 
-- Converts links to use CSS variables for styling `color`, but not `text-decoration`. Colors are now set with `--bs-link-color-rgb` and `--bs-link-opacity` as `rgba()` color, allowing you to customize the translucency with ease. The `a:hover` pseudo-class now overrides `--bs-link-color-rgb` instead of explicitly setting the `color` property.
+- Преобразует ссылки для использования переменных CSS для стилизации `color`, но не `text-decoration`. Цвета теперь задаются с помощью `--bs-link-color-rgb` и `--bs-link-opacity` в качестве цвета `rgba()`, что позволяет легко настраивать прозрачность. Псевдокласс `a:hover` теперь переопределяет `--bs-link-color-rgb` вместо явной установки свойства `color`.
 
-- `--bs-border-width` is now being used in more components for greater control over default global styling.
+- `--bs-border-width` теперь используется в большем количестве компонентов для большего контроля над глобальным стилем по умолчанию.
 
-- Adds new root CSS variables for our `box-shadow`s, including `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, and `--bs-box-shadow-inset`.
+- Добавляет новые корневые переменные CSS для наших `box-shadow`, включая `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg` и `--bs-box-shadow-inset`.
 
-### Components
+### Компоненты
 
 #### Alert
 
-- Alert variants are now styled via CSS variables.
+- Варианты предупреждений теперь определяются с помощью переменных CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.alert-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/alerts#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.alert-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/alerts#sass-loop" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
 
 #### List group
 
-- List group item variants are now styled via CSS variables.
+- Варианты элементов группы списка теперь определяются с помощью переменных CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.list-group-variant()` mixin is now deprecated. We now [use the Sass loop]({{< docsref "/components/list-group#sass-loop" >}}) directly to modify the component's default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.list-group-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/list-group#sass-loop" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
 
-#### Close button
+#### Кнопка закрытия
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.btn-close-white` class has been deprecated and replaced with `data-bs-theme="dark"` on the close button or any parent element. [See the docs for an example.]({{< docsref "/components/close-button#dark-variant" >}})
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Класс `.btn-close-white` устарел и заменен на `data-bs-theme="dark"` на кнопке закрытия или любом родительском элементе. [Смотрите пример в документации.]({{< docsref "/components/close-button#dark-variant" >}})
 
-#### Navbar
+#### Панель навигации
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.navbar-dark` class has been deprecated and replaced with `data-bs-theme="dark"` on the navbar or any parent element. [See the docs for updated examples.]({{< docsref "/components/navbar#color-schemes" >}})
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Класс `.navbar-dark` устарел и заменен на `data-bs-theme="dark"` на навбаре или любом родительском элементе. [Смотрите документацию для обновленных примеров.]({{< docsref "/components/navbar#color-schemes" >}})
 
-### Progress bars
+### Прогресс-бары
 
-The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
+Разметка для [индикаторов выполнения]({{< docsref "/components/progress" >}}) была обновлена в версии 5.3.0. Из-за размещения атрибута `role` и различных атрибутов `aria-` во внутреннем элементе `.progress-bar`, **некоторые программы чтения с экрана не отображали индикаторы выполнения с нулевым значением**. Теперь, `role="progressbar"` и соответствующие атрибуты `aria-*` находятся во внешнем элементе `.progress`, оставляя `.progress-bar` исключительно для визуального представления полосы и необязательной метки.
 
-While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
+Хотя мы рекомендуем принять новую разметку для улучшения совместимости со всеми программами чтения с экрана, обратите внимание, что устаревшая структура индикатора выполнения будет продолжать работать, как и раньше.
 
 ```html
 <!-- Previous markup -->
@@ -96,7 +96,7 @@ While we recommend adopting the new markup for improved compatibility with all s
 </div>
 ```
 
-We've also introduced a new `.progress-stacked` class to more logically wrap [multiple progress bars]({{< docsref "/components/progress#multiple-bars" >}}) into a single stacked progress bar.
+Мы также представили новый класс `.progress-stacked` для более логического объединения [нескольких индикаторов выполнения]({{< docsref "/components/progress#multiple-bars" >}}) в один сложенный индикатор выполнения.
 
 ```html
 <!-- Previous markup -->
@@ -120,31 +120,31 @@ We've also introduced a new `.progress-stacked` class to more logically wrap [mu
 </div>
 ```
 
-### Forms
+### Формы
 
-- `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
+- `.form-control` теперь использует переменные CSS для поддержки цветовых режимов. Это включает в себя добавление двух новых корневых переменных CSS для фона управления формой по умолчанию и отключенного фона.
 
-- `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
+- Компоненты `.form-check` и `.form-switch` теперь создаются с переменными CSS для установки `background-image`. Использование здесь отличается от других компонентов тем, что различные состояния фокуса, активности и т. д. для каждого компонента не устанавливаются в базовом классе. Вместо этого состояния переопределяют одну переменную (например, `--bs-form-switch-bg`).
 
-- Floating form labels now have a `background-color` to fix support for `<textarea>` elements. Additional changes have been made to also support disabled states and more.
+- Плавающие метки формы теперь имеют `background-color` для исправления поддержки элементов `<textarea>`. Были внесены дополнительные изменения, чтобы также поддерживать отключенные состояния и многое другое.
 
-- Fixed display of date and time inputs in WebKit based browsers.
+- Исправлено отображение ввода даты и времени в браузерах на основе WebKit.
 
-### Utilities
+### Утилиты
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> `.text-muted` will be be replaced by `.text-body-secondary` in v6.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> `.text-muted` будет заменен на `.text-body-secondary` в 6 версии.
 
-  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  С добавлением расширенных цветов и переменных темы переменные и утилита `.text-muted` устарели в версии 5.3.0. Его значение по умолчанию также было переназначено новой переменной CSS `--bs-secondary-color` для лучшей поддержки цветовых режимов. Он будет удален в версии 6.0.0.
 
-- Adds new `.overflow-x`, `.overflow-y`, and several `.object-fit-*` utilities. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
+- Добавлены новые утилиты `.overflow-x`, `.overflow-y` и несколько утилит `.object-fit-*`. _Свойство object-fit используется для указания того, как следует изменять размер `<img>` или `<video>` , чтобы они соответствовали его контейнеру, что дает нам гибкую альтернативу использованию `background-image` для изменяемого размера заливки/подгонки изображения._
 
-- Adds new `.fw-medium` utility.
+- Добавлены новые утилиты `.fw-medium`.
 
-- Added new [`.z-*` utilities]({{< docsref "/utilities/z-index" >}}) for `z-index`.
+- Добавлены новые [утилиты `.z-*`]({{< docsref "/utilities/z-index" >}}) для `z-index`.
 
-- [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+- [Утилиты тени коробки]({{< docsref "/utilities/shadows" >}}) (и переменные Sass) были обновлены для темного режима. Теперь они используют `--bs-body-color-rgb` для генерации значений цвета `rgba()`, что позволяет им легко адаптироваться к цветовым режимам на основе указанного цвета переднего плана.
 
-For a complete list of changes, [see the v5.3.0 project on GitHub](https://github.com/twbs/bootstrap/projects/).
+Полный список изменений [смотрите в проекте версии 5.3.0 на GitHub](https://github.com/twbs/bootstrap/projects/).
 
 ## v5.2.0
 
