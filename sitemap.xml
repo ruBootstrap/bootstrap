@@ -163,9 +163,6 @@
     <loc>https://getbootstrap.su/docs/5.3/layout/breakpoints/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/about/license/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/getting-started/best-practices/</loc>
   </url>
   <url>
@@ -371,6 +368,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/customize/color-modes/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/about/license/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/blog/</loc>
