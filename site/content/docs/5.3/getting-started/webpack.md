@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Bootstrap и Webpack"
+title: Bootstrap и Webpack
 description: Официальное руководство по включению и объединению CSS и JavaScript Bootstrap в ваш проект с помощью Webpack.
 group: getting-started
 toc: true
@@ -24,10 +24,10 @@ thumbnail: guides/bootstrap-webpack@2x.png
    npm init -y
    ```
 
-2. **Установите Webpack.** Затем нам нужно установить наши зависимости для разработки Webpack: `webpack` для ядра Webpack, `webpack-cli`, чтобы мы могли запускать команды Webpack из терминала, и `webpack-dev-server`, чтобы мы могли запускать локальный сервер разработки. . Мы используем `--save-dev`, чтобы указать, что эти зависимости предназначены только для использования в разработке, а не для производства.
+2. **Установите Webpack.** Далее нам нужно установить наши зависимости для разработки Webpack: `webpack` для ядра Webpack, `webpack-cli`, чтобы мы могли запускать команды Webpack из терминала, и `webpack-dev-server` чтобы мы могли запустить локальный сервер разработки. Кроме того, мы установим `html-webpack-plugin`, чтобы иметь возможность хранить наш `index.html` в каталоге `src` вместо каталога `dist` по умолчанию. Мы используем `--save-dev`, чтобы указать, что эти зависимости предназначены только для использования в разработке, а не для производства.
 
    ```sh
-   npm i --save-dev webpack webpack-cli webpack-dev-server
+   npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin
    ```
 
 3. **Установите Bootstrap.** Теперь мы можем установить Bootstrap. Мы также установим Popper, так как наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки зависят от его позиционирования. Если вы не планируете использовать эти компоненты, вы можете опустить здесь Popper.
@@ -49,21 +49,20 @@ thumbnail: guides/bootstrap-webpack@2x.png
 Мы уже создали папку `my-project` и инициализировали npm. Теперь мы также создадим наши папки `src` и `dist`, чтобы завершить структуру проекта. Запустите следующее из `my-project` или вручную создайте структуру папок и файлов, показанную ниже.
 
 ```sh
-mkdir {dist,src,src/js,src/scss}
-touch dist/index.html src/js/main.js src/scss/styles.scss webpack.config.js
+mkdir {src,src/js,src/scss}
+touch src/index.html src/js/main.js src/scss/styles.scss webpack.config.js
 ```
 
 Когда вы закончите, ваш полный проект должен выглядеть так:
 
 ```text
 my-project/
-├── dist/
-│   └── index.html
 ├── src/
 │   ├── js/
 │   │   └── main.js
-│   └── scss/
-│       └── styles.scss
+│   ├── scss/
+│   │   └── styles.scss
+│   └── index.html
 ├── package-lock.json
 ├── package.json
 └── webpack.config.js
@@ -78,9 +77,13 @@ my-project/
 1. **Откройте `webpack.config.js` в вашем редакторе.** Поскольку он пуст, нам нужно добавить в него шаблонную конфигурацию, чтобы мы могли запустить наш сервер. Эта часть конфигурации сообщает Webpack, что нужно искать JavaScript нашего проекта, куда выводить скомпилированный код (`dist`) и как должен вести себя сервер разработки (извлечение из папки `dist` с горячей перезагрузкой).
 
    ```js
+   'use strict'
+
    const path = require('path')
+   const HtmlWebpackPlugin = require('html-webpack-plugin')
 
    module.exports = {
+     mode: 'development',
      entry: './src/js/main.js',
      output: {
        filename: 'main.js',
@@ -90,7 +93,10 @@ my-project/
        static: path.resolve(__dirname, 'dist'),
        port: 8080,
        hot: true
-     }
+     },
+     plugins: [
+       new HtmlWebpackPlugin({ template: './src/index.html' })
+     ]
    }
    ```
 
@@ -116,13 +122,14 @@ my-project/
 
    Мы добавили сюда немного стилей Bootstrap с помощью `div class="container"` и `<button>`, чтобы мы видели, когда CSS Bootstrap загружается Webpack.
 
-3. **Теперь нам нужен скрипт npm для запуска Webpack.** Откройте `package.json` и добавьте сценарий `start`, показанный ниже (у вас уже должен быть тестовый сценарий). Мы будем использовать этот скрипт для запуска нашего локального сервера разработки Webpack.
+3. **Теперь нам нужен скрипт npm для запуска Webpack.** Откройте `package.json` и добавьте сценарий `start`, показанный ниже (у вас уже должен быть тестовый сценарий). Мы будем использовать этот скрипт для запуска нашего локального сервера разработки Webpack. Вы также можете добавить скрипт `build`, показанный ниже, для сборки вашего проекта.
 
    ```json
    {
      // ...
      "scripts": {
-       "start": "webpack serve --mode development",
+       "start": "webpack serve",
+       "build": "webpack build",
        "test": "echo \"Error: no test specified\" && exit 1"
      },
      // ...
@@ -146,9 +153,14 @@ my-project/
 1. **Настройте загрузчики в `webpack.config.js`.** Ваш файл конфигурации готов и должен соответствовать приведенному ниже фрагменту. Единственная новая часть здесь — раздел `module`.
 
    ```js
+   'use strict'
+
    const path = require('path')
+   const autoprefixer = require('autoprefixer')
+   const HtmlWebpackPlugin = require('html-webpack-plugin')
 
    module.exports = {
+     mode: 'development',
      entry: './src/js/main.js',
      output: {
        filename: 'main.js',
@@ -159,28 +171,35 @@ my-project/
        port: 8080,
        hot: true
      },
+     plugins: [
+       new HtmlWebpackPlugin({ template: './src/index.html' })
+     ],
      module: {
        rules: [
          {
            test: /\.(scss)$/,
            use: [
              {
+               // Adds CSS to the DOM by injecting a `<style>` tag
                loader: 'style-loader'
              },
              {
+               // Interprets `@import` and `url()` like `import/require()` and will resolve them
                loader: 'css-loader'
              },
              {
+               // Loader for webpack to process CSS with PostCSS
                loader: 'postcss-loader',
                options: {
                  postcssOptions: {
                    plugins: () => [
-                     require('autoprefixer')
+                     autoprefixer
                    ]
                  }
                }
              },
              {
+               // Loads a SASS/SCSS file and compiles it to CSS
                loader: 'sass-loader'
              }
            ]
@@ -196,7 +215,7 @@ my-project/
 
    ```scss
    // Import all of Bootstrap's CSS
-   @import "~bootstrap/scss/bootstrap";
+   @import "bootstrap/scss/bootstrap";
    ```
 
    *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*
@@ -249,20 +268,27 @@ npm install --save-dev mini-css-extract-plugin
 Then instantiate and use the plugin in the Webpack configuration:
 
 ```diff
---- a/webpack/webpack.config.js
-+++ b/webpack/webpack.config.js
-@@ -1,8 +1,10 @@
-+const miniCssExtractPlugin = require('mini-css-extract-plugin')
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -3,6 +3,7 @@
  const path = require('path')
+ const autoprefixer = require('autoprefixer')
+ const HtmlWebpackPlugin = require('html-webpack-plugin')
++const miniCssExtractPlugin = require('mini-css-extract-plugin')
 
  module.exports = {
    mode: 'development',
-   entry: './src/js/main.js',
-+  plugins: [new miniCssExtractPlugin()],
-   output: {
-     filename: "main.js",
-     path: path.resolve(__dirname, "dist"),
-@@ -18,8 +20,8 @@ module.exports = {
+@@ -17,7 +18,8 @@ module.exports = {
+     hot: true
+   },
+   plugins: [
+-    new HtmlWebpackPlugin({ template: './src/index.html' })
++    new HtmlWebpackPlugin({ template: './src/index.html' }),
++    new miniCssExtractPlugin()
+   ],
+   module: {
+     rules: [
+@@ -25,8 +27,8 @@ module.exports = {
          test: /\.(scss)$/,
          use: [
            {
@@ -298,7 +324,7 @@ Configure Webpack to extract inline SVG files like this:
 ```diff
 --- a/webpack/webpack.config.js
 +++ b/webpack/webpack.config.js
-@@ -16,6 +16,14 @@ module.exports = {
+@@ -23,6 +23,14 @@ module.exports = {
    },
    module: {
      rules: [

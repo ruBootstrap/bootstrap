@@ -66,7 +66,7 @@ group: helpers
     <p class="card-text">
       <a href="#" class="stretched-link text-danger" style="position: relative;">Растянутая ссылка здесь не будет работать, потому что к ссылке добавляется <code>position: relative</code></a>
     </p>
-    <p class="card-text bg-light" style="transform: rotate(0);">
+    <p class="card-text bg-body-tertiary" style="transform: rotate(0);">
       Эта <a href="#" class="text-warning stretched-link">растянутая ссылка</a> будет распространяться только на тег <code>p</code>, поскольку к ней применяется преобразование.
     </p>
   </div>

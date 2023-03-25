@@ -18,25 +18,27 @@ toc: true
 <div class="w-auto p-3">Ширина auto</div>
 {{< /example >}}
 
-{{< example >}}
-<div style="height: 100px; background-color: rgba(255,0,0,0.1);">
-  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Высота 25%</div>
-  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Высота 50%</div>
-  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Высота 75%</div>
-  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Высота 100%</div>
-  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Высота авто</div>
+{{< example class="bd-example-flex" >}}
+<div style="height: 100px;">
+  <div class="h-25 d-inline-block" style="width: 120px;">Высота 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px;">Высота 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px;">Высота 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px;">Высота 100%</div>
+  <div class="h-auto d-inline-block" style="width: 120px;">Высота авто</div>
 </div>
 {{< /example >}}
 
 Вы также можете использовать утилиты `max-width: 100%;` и `max-height: 100%;` при необходимости.
 
-{{< example >}}
-{{< placeholder width="100%" height="100" class="mw-100" text="Максимальная ширина 100%" >}}
+{{< example class="bd-example-flex" >}}
+<div style="width: 50%; height: 100px;">
+  <div class="mw-100" style="width: 200%;">Максимальная ширина 100%</div>
+</div>
 {{< /example >}}
 
-{{< example >}}
-<div style="height: 100px; background-color: rgba(255,0,0,.1);">
-  <div class="mh-100" style="width: 100px; height: 200px; background-color: rgba(0,0,255,.1);">Максимальная высота 100%</div>
+{{< example class="bd-example-flex" >}}
+<div style="height: 100px;">
+  <div class="mh-100" style="width: 100px; height: 200px;">Максимальная высота 100%</div>
 </div>
 {{< /example >}}
 

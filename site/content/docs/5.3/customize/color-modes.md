@@ -11,7 +11,7 @@ added: "5.3"
 
 **Bootstrap теперь поддерживает цветовые режимы, начиная с темного режима!** В версии 5.3.0 вы можете реализовать собственный переключатель цветового режима (см. ниже пример из документации Bootstrap) и применять различные цветовые режимы по своему усмотрению. Мы поддерживаем светлый режим (по умолчанию), а теперь и темный режим. Цветовые режимы можно переключать глобально для элемента `<html>` или для определенных компонентов и элементов благодаря атрибуту `data-bs-theme`.
 
-Кроме того, вы также можете переключиться на реализацию медиа-запроса благодаря нашему миксину цветового режима — смотрите [подробности в разделе об использовании](#sass-usage). Однако обратите внимание — это лишает вас возможности изменять темы для каждого компонента, как показано ниже.
+Кроме того, вы также можете переключиться на реализацию медиа-запроса благодаря нашему миксину цветового режима — смотрите [подробности в разделе об использовании](#building-with-sass). Однако обратите внимание — это лишает вас возможности изменять темы для каждого компонента, как показано ниже.
 
 ## Пример
 
@@ -62,73 +62,6 @@ added: "5.3"
 
 - Мы используем пользовательский `_variables-dark.scss`, чтобы включить эти общие глобальные переопределения переменных CSS для темного режима. Этот файл не требуется для ваших собственных пользовательских цветовых режимов, но он необходим для нашего темного режима по двум причинам. Во-первых, лучше иметь одно место для сброса глобальных цветов. Во-вторых, некоторые переменные Sass пришлось переопределить для фоновых изображений, встроенных в наш CSS для аккордеонов, компонентов форм и многого другого.
 
-## Вложенные цветовые режимы
-
-Используйте `data-bs-theme` для вложенного элемента, чтобы изменить цветовой режим для группы элементов или компонентов. В приведенном ниже примере у нас есть внешний темный режим с вложенным светлым режимом. Вы заметите, что компоненты естественным образом адаптируют свой внешний вид, но вам может понадобиться добавить некоторые утилиты, чтобы использовать стили, характерные для каждого цветового режима.
-
-Например, несмотря на использование `data-bs-theme="dark"` для случайного `<div>`, `<div>` не имеет `background-color`, поскольку он установлен для `<body>`. Таким образом, если вы хотите, чтобы `color` и `background-color` адаптировались, вам нужно добавить `.text-body` и `.bg-body`.
-
-{{< example class="p-0" >}}
-<div data-bs-theme="dark" class="p-3 text-body bg-body">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Цветовые режимы</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Темный</li>
-    </ol>
-  </nav>
-
-  <p>Это должно всегда отображаться в <strong>темной</strong> теме.</p>
-
-  <div class="progress mb-4">
-    <div class="progress-bar" role="progressbar" aria-label="Простой пример" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
-
-  <div class="dropdown mb-4">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark2" data-bs-toggle="dropdown" aria-expanded="false">
-      Темный раскрывающийся список
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark2">
-      <li><a class="dropdown-item active" href="#">Действие</a></li>
-      <li><a class="dropdown-item" href="#">Действие</a></li>
-      <li><a class="dropdown-item" href="#">Другое действие</a></li>
-      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-    </ul>
-  </div>
-
-  <div data-bs-theme="light" class="p-3 text-body bg-body rounded">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Цветовые режимы</a></li>
-        <li class="breadcrumb-item"><a href="#">Темный</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Light</li>
-      </ol>
-    </nav>
-
-    <p>Это должно всегда отображаться в <strong>темной</strong> теме.</p>
-
-    <div class="progress mb-4">
-      <div class="progress-bar" role="progressbar" aria-label="Простой пример" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight2" data-bs-toggle="dropdown" aria-expanded="false">
-        Light dropdown
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight2">
-        <li><a class="dropdown-item active" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Действие</a></li>
-        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Отделенная ссылка</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-{{< /example >}}
-
 ## Применение
 
 ### Включить темный режим
@@ -166,7 +99,7 @@ $color-mode-type: data;
 
 @include color-mode(dark) {
   .element {
-    color: var(--bs-primary-text);
+    color: var(--bs-primary-text-emphasis);
     background-color: var(--bs-primary-bg-subtle);
   }
 }
@@ -176,7 +109,7 @@ Outputs to:
 
 ```css
 [data-bs-theme=dark] .element {
-  color: var(--bs-primary-text);
+  color: var(--bs-primary-text-emphasis);
   background-color: var(--bs-primary-bg-subtle);
 }
 ```
@@ -188,7 +121,7 @@ $color-mode-type: media-query;
 
 @include color-mode(dark) {
   .element {
-    color: var(--bs-primary-text);
+    color: var(--bs-primary-text-emphasis);
     background-color: var(--bs-primary-bg-subtle);
   }
 }
@@ -199,7 +132,7 @@ Outputs to:
 ```css
 @media (prefers-color-scheme: dark) {
   .element {
-    color: var(--bs-primary-text);
+    color: var(--bs-primary-text-emphasis);
     background-color: var(--bs-primary-bg-subtle);
   }
 }
@@ -256,7 +189,7 @@ Outputs to:
 
 ### Переменные
 
-Десятки переменных CSS корневого уровня повторяются как переопределения для темного режима. Они привязаны к селектору цветового режима, который по умолчанию имеет значение `data-bs-theme`, но [можно настроить](#sass-usage) для использования медиа-запроса `prefers-color-scheme`. Используйте эти переменные в качестве ориентира для создания собственных новых цветовых режимов.
+Десятки переменных CSS корневого уровня повторяются как переопределения для темного режима. Они привязаны к селектору цветового режима, который по умолчанию имеет значение `data-bs-theme`, но [можно настроить](#building-with-sass) для использования медиа-запроса `prefers-color-scheme`. Используйте эти переменные в качестве ориентира для создания собственных новых цветовых режимов.
 
 {{< scss-docs name="root-dark-mode-vars" file="scss/_root.scss" >}}
 
@@ -268,6 +201,6 @@ Outputs to:
 
 ### Sass миксины
 
-Стили для темного режима и любые пользовательские цветовые режимы, которые вы создаете, могут быть соответствующим образом привязаны к селектору атрибута `data-bs-theme` или медиа-запросу с помощью настраиваемого миксина `color-mode()`. Подробнее смотрите в разделе [Использование Sass](#sass-usage).
+Стили для темного режима и любые пользовательские цветовые режимы, которые вы создаете, могут быть соответствующим образом привязаны к селектору атрибута `data-bs-theme` или медиа-запросу с помощью настраиваемого миксина `color-mode()`. Подробнее смотрите в разделе [Использование Sass](#building-with-sass).
 
 {{< scss-docs name="color-mode-mixin" file="scss/mixins/_color-mode.scss" >}}

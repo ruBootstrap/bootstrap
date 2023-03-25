@@ -26,8 +26,8 @@ toc: true
 </figure>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="figure-variables" file="scss/_variables.scss" >}}

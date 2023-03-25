@@ -6,9 +6,17 @@ group: utilities
 toc: true
 ---
 
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
+
 ## Цвета
 
 Раскрашивайте текст с помощью цветных утилит. Если Вы хотите раскрасить ссылки, Вы можете использовать [вспомогательные классы `.link-*`]({{< docsref "/helpers/colored-links" >}}), которые имеют состояния `:hover` и `:focus`.
+
+{{< callout info >}}
+Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
+{{< /callout >}}
 
 {{< example >}}
 {{< colors.inline >}}
@@ -17,9 +25,8 @@ toc: true
 <p class="text-{{ .name }}-emphasis">.text-{{ .name }}-emphasis</p>
 {{- end -}}
 {{< /colors.inline >}}
-<p class="text-body">.text-body</p>
-<p class="text-muted">.text-muted</p>
 
+<p class="text-body">.text-body</p>
 <p class="text-body-emphasis">.text-body-emphasis</p>
 <p class="text-body-secondary">.text-body-secondary</p>
 <p class="text-body-tertiary">.text-body-tertiary</p>
@@ -35,11 +42,7 @@ toc: true
 {{< /callout >}}
 
 {{< callout warning >}}
-**Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also has been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
-{{< /callout >}}
-
-{{< callout info >}}
-{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+**Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
 {{< /callout >}}
 
 ## Непрозрачность
@@ -83,11 +86,11 @@ toc: true
 
 Иногда контекстные классы не могут быть применены из-за специфики другого селектора. В некоторых случаях достаточным обходным путем является обертывание содержимого Вашего элемента в `<div>` или более семантический элемент с желаемым классом.
 
-## Sass
+## CSS
 
 В дополнение к следующей функциональности Sass, рассмотрите возможность чтения о наших включенных [настраиваемых свойствах CSS]({{< docsref "/customize/css-variables" >}}) (также известных как переменные CSS) для цветов и многого другого.
 
-### Переменные
+### Sass переменные
 
 Большинство утилит `color` генерируются цветами нашей темы, переназначенными из переменных нашей общей цветовой палитры.
 
@@ -99,7 +102,15 @@ toc: true
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Карта
+{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
+
+Переменные для установки цветов в утилитах `.text-*-emphasis` в светлом и темном режимах:
+
+{{< scss-docs name="theme-text-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-text-dark-variables" file="scss/_variables-dark.scss" >}}
+
+### Sass карта
 
 Затем цвета темы помещаются в карту Sass, чтобы мы могли перебирать их, чтобы сгенерировать наши утилиты, модификаторы компонентов и многое другое.
 
@@ -113,11 +124,17 @@ toc: true
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
 
-И цветовая непрозрачность основывается на этой собственной карте, которая используется API утилит:
+Непрозрачность цвета основана на собственной карте, которая используется API-интерфейсом утилит:
 
 {{< scss-docs name="utilities-text-colors" file="scss/_maps.scss" >}}
 
-### API утилит
+Адаптивные цвета текста цветового режима также доступны в виде карты Sass:
+
+{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-text-dark-map" file="scss/_maps.scss" >}}
+
+### Утилиты API
 
 Утилиты цвета объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

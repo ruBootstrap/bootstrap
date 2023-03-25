@@ -42,8 +42,8 @@ toc: true
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="form-range-variables" file="scss/_variables.scss" >}}

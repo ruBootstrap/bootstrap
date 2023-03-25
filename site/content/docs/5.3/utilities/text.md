@@ -87,13 +87,14 @@ toc: true
 С помощью этих утилит можно быстро изменить `font-weight` или `font-style`. Утилиты `font-style` сокращенно обозначаются как `.fst-*`, а утилиты `font-weight` сокращаются как `.fw-*`.
 
 {{< example >}}
-<p class="fw-weight-bold">Жирный текст.</p>
-<p class="fw-weight-bolder">Более жирный текст (относительно родительского элемента).</p>
-<p class="fw-semibold">Полужирный текст.</p>
-<p class="fw-weight-normal">Текст с нормальной толщиной.</p>
-<p class="fw-weight-light">Текст с легкой толщиной.</p>
-<p class="fw-weight-lighter">Более легкий текст (относительно родительского элемента).</p>
-<p class="fst-italic">Курсивный текст.</p>
+<p class="fw-bold">Текст жирным шрифтом.</p>
+<p class="fw-bolder">Текст жирнее (по сравнению с родительским элементом).</p>
+<p class="fw-semibold">Текст, выделенный полужирным шрифтом.</p>
+<p class="fw-medium">Текст среднего размера.</p>
+<p class="fw-normal">Текст нормального размера.</p>
+<p class="fw-light">Облегченный текст.</p>
+<p class="fw-lighter">Облегченный текст (относительно родительского элемента).</p>
+<p class="fst-italic">Курсив.</p>
 <p class="fst-normal">Текст с обычным шрифтом</p>
 {{< /example >}}
 
@@ -121,8 +122,8 @@ toc: true
 Сбросить цвет текста или ссылки с помощью `.text-reset`, чтобы он унаследовал цвет от своего родителя.
 
 {{< example >}}
-<p class="text-muted">
-  Скрытый текст со <a href="#" class="text-reset">ссылкой для сброса.</a>.
+<p class="text-body-secondary">
+  Скрытый текст со <a href="#" class="text-reset">ссылкой для сброса</a>.
 </p>
 {{< /example >}}
 
@@ -136,19 +137,23 @@ toc: true
 <a href="#" class="text-decoration-none">Текстовое оформление этой ссылки удалено.</a>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
+
+Переменные Sass, связанные с типом и шрифтом по умолчанию:
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 
-### Карты
+### Sass карта
 
 Утилиты с размером шрифта генерируются из этой карты в сочетании с нашим API утилит.
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
-### API утилит
+{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
+
+## Утилиты API
 
 Утилиты шрифта и текста указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

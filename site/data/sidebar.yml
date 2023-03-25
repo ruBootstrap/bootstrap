@@ -249,6 +249,12 @@
     - title: Colored links
       hint: Цветные ссылки
       slug: colored-links
+    - title: Focus ring
+      hint: Кольцо фокусировки
+      slug: focus-ring
+    - title: Icon link
+      hint: Ссылка-иконка
+      slug: icon-link
     - title: Position
       hint: Положение
       slug: position
@@ -300,6 +306,9 @@
     - title: Interactions
       hint: Взаимодействия
       slug: interactions
+    - title: Link
+      hint: Ссылка
+      slug: link
     - title: Object fit
       hint: Соответствие объекта
       slug: object-fit

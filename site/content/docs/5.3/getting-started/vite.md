@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Bootstrap и Vite"
+title: Bootstrap и Vite
 description: Официальное руководство о том, как включить CSS и JavaScript Bootstrap в свой проект с помощью Vite.
 group: getting-started
 toc: true
@@ -82,6 +82,9 @@ my-project/
 
    export default {
      root: path.resolve(__dirname, 'src'),
+     build: {
+       outDir: '../dist'
+     },
      server: {
        port: 8080,
        hot: true
@@ -98,13 +101,13 @@ my-project/
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>Bootstrap w/ Vite</title>
+       <script type="module" src="./js/main.js"></script>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
          <h1>Hello, Bootstrap and Vite!</h1>
          <button class="btn btn-primary">Primary button</button>
        </div>
-       <script type="module" src="./js/main.js"></script>
      </body>
    </html>
    ```
@@ -136,36 +139,16 @@ my-project/
 
 ## Импорт Bootstrap
 
-1. **Настройте импорт Sass для Bootstrap в `vite.config.js`.** Ваш файл конфигурации готов и должен соответствовать приведенному ниже фрагменту. Единственная новая часть здесь — это раздел `resolve` — мы используем его, чтобы добавить псевдоним к нашим исходным файлам внутри `node_modules`, чтобы максимально упростить импорт.
-
-   <!-- eslint-skip -->
-   ```js
-   const path = require('path')
-
-   export default {
-     root: path.resolve(__dirname, 'src'),
-     resolve: {
-       alias: {
-         '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-       }
-     },
-     server: {
-       port: 8080,
-       hot: true
-     }
-   }
-   ```
-
-2. **Теперь давайте импортируем Bootstrap CSS.** Добавьте следующее в `src/scss/styles.scss`, чтобы импортировать весь исходный код Bootstrap Sass.
+1. **Импортируйте CSS Bootstrap.** Добавьте следующее в `src/scss/styles.scss`, чтобы импортировать весь исходный код Bootstrap Sass.
 
    ```scss
    // Import all of Bootstrap's CSS
-   @import "~bootstrap/scss/bootstrap";
+   @import "bootstrap/scss/bootstrap";
    ```
 
    *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*
 
-3. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать все JS из Bootstrap. Поппер будет автоматически импортирован через Bootstrap.
+2. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать все JS из Bootstrap. Popper будет автоматически импортирован через Bootstrap.
 
    <!-- eslint-skip -->
    ```js
@@ -188,7 +171,7 @@ my-project/
 
    *[Прочитайте нашу документацию по JavaScript]({{< docsref "/getting-started/javascript/" >}}) для получения дополнительной информации о том, как использовать плагины Bootstrap.*
 
-4. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так.
+3. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так.
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
 

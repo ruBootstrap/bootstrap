@@ -10,7 +10,7 @@ toc: true
 
 {{< added-in "5.3.0" >}}
 
-В версии 5.3.0 цветовая палитра Bootstrap продолжает расширяться и становится более нюансированной. Мы добавили новые переменные для `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` и `{color}-text` для нашего цвета темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов или служебные классы) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный. Эти новые переменные глобально установлены в `:root` и адаптированы для нашего нового темного цветового режима, в то время как исходные цвета темы остаются неизменными.
+В версии 5.3.0 цветовая палитра Bootstrap продолжает расширяться и становится более нюансированной. Мы добавили новые переменные для `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` и `{color}-text-emphasis` для нашего цвета темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов или служебные классы) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный. Эти новые переменные глобально установлены в `:root` и адаптированы для нашего нового темного цветового режима, в то время как исходные цвета темы остаются неизменными.
 
 Цвета, оканчивающиеся на `-rgb`, предоставляют значения `red, green, blue` для использования в цветовых режимах `rgb()` и `rgba()`. Например, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
@@ -111,7 +111,7 @@ toc: true
         {{< markdown >}}**Primary —** Цвет основной темы, используемый для гиперссылок, стилей фокуса, активных состояний компонентов и форм.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-primary">Primary</div>
+        <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary`<br>`--bs-primary-rgb`{{< /markdown >}}
@@ -119,7 +119,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-primary-bg-subtle); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-primary-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}
@@ -127,7 +127,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-primary-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}
@@ -135,10 +135,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-primary-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ toc: true
         {{< markdown >}}**Success —** Цвет темы, используемый для положительных или успешных действий и информации.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-success">Success</div>
+        <div class="p-3 rounded-2 bg-success">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success`<br>`--bs-success-rgb`{{< /markdown >}}
@@ -154,7 +154,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-success-bg-subtle); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-success-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
@@ -162,7 +162,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-success-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
@@ -170,10 +170,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-success-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ toc: true
         {{< markdown >}}**Danger —** Цвет темы, используемый для ошибок и опасных действий.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-danger">Danger</div>
+        <div class="p-3 rounded-2 bg-danger">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger`<br>`--bs-danger-rgb`{{< /markdown >}}
@@ -189,7 +189,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-danger-bg-subtle); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-danger-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}
@@ -197,7 +197,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-danger-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}
@@ -205,10 +205,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-danger-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-danger-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -216,7 +216,7 @@ toc: true
         {{< markdown >}}**Warning —** Цвет темы, используемый для неразрушающих предупреждающих сообщений.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-warning">Warning</div>
+        <div class="p-3 rounded-2 bg-warning">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning`<br>`--bs-warning-rgb`{{< /markdown >}}
@@ -224,7 +224,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-warning-bg-subtle); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-warning-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}
@@ -232,7 +232,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-warning-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning-border-subtle`{{< /markdown >}}
@@ -240,10 +240,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-warning-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-warning-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -251,7 +251,7 @@ toc: true
         {{< markdown >}}**Info —** Цвет темы, используемый для нейтрального и информативного контента.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-info">Info</div>
+        <div class="p-3 rounded-2 bg-info">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info`<br>`--bs-info-rgb`{{< /markdown >}}
@@ -259,7 +259,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-info-bg-subtle); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-info-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}
@@ -267,7 +267,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-info-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}
@@ -275,10 +275,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-info-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-info-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-info-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-info-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -286,7 +286,7 @@ toc: true
         {{< markdown >}}**Light —** Дополнительная опция темы для менее контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-light border">Light</div>
+        <div class="p-3 rounded-2 bg-light">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light`<br>`--bs-light-rgb`{{< /markdown >}}
@@ -294,7 +294,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-light-bg-subtle); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-light-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}
@@ -302,7 +302,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-light-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}
@@ -310,10 +310,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-light-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-light-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-light-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-light-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -321,7 +321,7 @@ toc: true
         {{< markdown >}}**Dark —** Дополнительная опция темы для более контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
-        <div class="p-3 rounded-2 text-bg-dark border">Dark</div>
+        <div class="p-3 rounded-2 bg-dark">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark`<br>`--bs-dark-rgb`{{< /markdown >}}
@@ -329,7 +329,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-dark-bg-subtle); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle</div>
+        <div class="p-3 rounded-2" style="background-color: var(--bs-dark-bg-subtle)">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}
@@ -337,7 +337,7 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Border subtle</div>
+        <div class="p-3 rounded-2" style="border: 5px var(--bs-dark-border-subtle) solid">&nbsp;</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark-border-subtle`{{< /markdown >}}
@@ -345,10 +345,10 @@ toc: true
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-dark-text); color: var(--bs-body-bg);">Text</div>
+        <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text-emphasis)">Text</div>
       </td>
       <td>
-        {{< markdown >}}`--bs-dark-text`{{< /markdown >}}
+        {{< markdown >}}`--bs-dark-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
   </tbody>
@@ -480,6 +480,7 @@ Bootstrap не включает утилиты `color` и `background-color` д�
 ```scss
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";

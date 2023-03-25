@@ -139,9 +139,13 @@ Offcanvas — это компонент боковой панели, котор�
 
 ## Темный offcanvas
 
-{{< added-in "5.2.0" >}}
+{{< deprecated-in "5.3.0" >}} {{< added-in "5.2.0" >}}
 
 Измените внешний вид offcanvases с помощью утилит, чтобы они лучше соответствовали различным контекстам, таким как темные панели навигации. Здесь мы добавляем `.text-bg-dark` к `.offcanvas` и `.btn-close-white` к `.btn-close` для правильной стилизации с темным offcanvas. Если у вас есть раскрывающиеся списки, рассмотрите возможность добавления `.dropdown-menu-dark` в `.dropdown-menu`.
+
+{{< callout warning >}}
+Heads up! Dark variants for components were deprecated in v5.3.0 with the introduction of color modes. Instead of manually adding classes mentioned above, set `data-bs-theme="dark"` on the root element, a parent wrapper, or the component itself.
+{{< /callout >}}
 
 {{< example class="bd-example-offcanvas p-0 bg-body-secondary overflow-hidden" >}}
 <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">

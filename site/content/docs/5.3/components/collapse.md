@@ -100,9 +100,9 @@ toc: true
 
 Обратите внимание, что текущая реализация Bootstrap не распространяется на различные *дополнительные* взаимодействия с клавиатурой, описанные в [ARIA Authoring Practices Guide аккордеонный шаблон](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - Вам нужно будет включить их самостоятельно в собственный JavaScript.
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
 

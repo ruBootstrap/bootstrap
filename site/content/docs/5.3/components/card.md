@@ -53,7 +53,7 @@ toc: true
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Заголовок карточки</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Подзаголовок карточки</h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Подзаголовок карточки</h6>
     <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
     <a href="#" class="card-link">Ссылка карточки</a>
     <a href="#" class="card-link">Другая ссылка</a>
@@ -191,7 +191,7 @@ toc: true
     <p class="card-text">С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
     <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
   </div>
-  <div class="card-footer text-muted">
+  <div class="card-footer text-body-secondary">
     2 дня спустя
   </div>
 </div>
@@ -358,14 +358,14 @@ toc: true
   <div class="card-body">
     <h5 class="card-title">Заголовок карточки</h5>
     <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
-    <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+    <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Заголовок карточки</h5>
     <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
-    <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+    <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
   </div>
   {{< placeholder width="100%" height="180" class="card-img-bottom" text="Заглушка изображения" >}}
 </div>
@@ -403,8 +403,8 @@ toc: true
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Заголовок карточки</h5>
-        <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
-        <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+        <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+        <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
       </div>
     </div>
   </div>
@@ -487,7 +487,7 @@ toc: true
     <div class="card-body">
       <h5 class="card-title">Заголовок карточки</h5>
       <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
-      <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+      <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
     </div>
   </div>
   <div class="card">
@@ -495,7 +495,7 @@ toc: true
     <div class="card-body">
       <h5 class="card-title">Заголовок карточки</h5>
       <p class="card-text">Эта подсказка имеет вспомогательный текст ниже, как естественный ввод к дополнительному контенту.</p>
-      <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+      <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
     </div>
   </div>
   <div class="card">
@@ -503,7 +503,7 @@ toc: true
     <div class="card-body">
       <h5 class="card-title">Заголовок карточки</h5>
       <p class="card-text">Это более широкая карта С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Эта карточка имеет даже более длинный контент, чем первая, чтобы показать действие одинаковой высоты.</p>
-      <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+      <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин. назад</small></p>
     </div>
   </div>
 </div>
@@ -520,7 +520,7 @@ toc: true
       <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Последнее обновление 3 мин. назад</small>
+      <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
     </div>
   </div>
   <div class="card">
@@ -530,7 +530,7 @@ toc: true
       <p class="card-text">Под этой карточкой есть вспомогательный текст, который является естественным введением к дополнительному содержанию.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Последнее обновление 3 мин. назад</small>
+      <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
     </div>
   </div>
   <div class="card">
@@ -540,7 +540,7 @@ toc: true
       <p class="card-text">Это более широкая карта С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Эта карточка имеет даже более длинный контент, чем первая, чтобы показать действие одинаковой высоты.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Последнее обновление 3 мин. назад</small>
+      <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
     </div>
   </div>
 </div>
@@ -689,7 +689,7 @@ toc: true
         <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Последнее обновление 3 мин. назад</small>
+        <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
       </div>
     </div>
   </div>
@@ -701,7 +701,7 @@ toc: true
         <p class="card-text">Под этой карточкой есть вспомогательный текст, который является естественным введением к дополнительному содержанию.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Последнее обновление 3 мин. назад</small>
+        <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
       </div>
     </div>
   </div>
@@ -713,7 +713,7 @@ toc: true
         <p class="card-text">Это более широкая карта С вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Эта карточка имеет даже более длинный контент, чем первая, чтобы показать действие одинаковой высоты.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Последнее обновление 3 мин. назад</small>
+        <small class="text-body-secondary">Последнее обновление 3 мин. назад</small>
       </div>
     </div>
   </div>
@@ -734,6 +734,6 @@ toc: true
 
 {{< scss-docs name="card-css-vars" file="scss/_card.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="card-variables" file="scss/_variables.scss" >}}

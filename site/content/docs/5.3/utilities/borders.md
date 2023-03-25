@@ -36,7 +36,11 @@ toc: true
 
 ## Цвет
 
-Измените цвет границы с помощью утилит, созданных на основе цветов нашей темы.
+{{< callout info >}}
+Утилиты границ, такие как `.border-*`, сгенерированные из нашей исходной карты `$theme-colors`, еще не реагируют на цветовые режимы, однако любая утилита будет `.border-*-subtle`. Это будет решено в v6.
+{{< /callout >}}
+
+Измените цвет границы с помощью утилит, построенных на цветах нашей темы.
 
 {{< example class="bd-example-border-utils" >}}
 {{< border.inline >}}
@@ -45,6 +49,7 @@ toc: true
 <span class="border border-{{ .name }}-subtle"></span>
 {{- end -}}
 {{< /border.inline >}}
+<span class="border border-black"></span>
 <span class="border border-white"></span>
 {{< /example >}}
 
@@ -162,7 +167,21 @@ toc: true
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-### Sass Миксины
+Переменные для установки `border-color` в утилитах `.border-*-subtle` в светлом и темном режимах:
+
+{{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
+
+### Sass карта
+
+Адаптивные цвета границ цветового режима также доступны в виде карты Sass:
+
+{{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-border-subtle-dark-map" file="scss/_maps.scss" >}}
+
+### Sass миксины
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 

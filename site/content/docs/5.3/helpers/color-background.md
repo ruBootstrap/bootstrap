@@ -23,6 +23,10 @@ added: "5.2"
 {{< /text-bg.inline >}}
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
+
 ## С компонентами
 
 Используйте их вместо комбинированных классов `.text-*` и `.bg-*`, как в [баджах]({{< docsref "/components/badge#background-colors" >}}):

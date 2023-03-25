@@ -57,7 +57,7 @@ Bootstrap предоставляет несколько [утилит для у�
 Вы только устанавливаете значение `height` в контейнере `.progress`, поэтому, если вы измените это значение, внутренний `.progress-bar` автоматически изменит размер соответственно.
 
 {{< example >}}
-<div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
   <div class="progress-bar" style="width: 25%"></div>
 </div>
 <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
@@ -75,6 +75,14 @@ Bootstrap предоставляет несколько [утилит для у�
 </div>
 {{< /example >}}
 
+Обратите внимание, что по умолчанию содержимое внутри `.progress-bar` контролируется `overflow: hidden`, поэтому оно не выходит за пределы полосы. Если ваш индикатор выполнения короче, чем его метка, содержимое будет ограничено и может стать нечитаемым. Чтобы изменить это поведение, вы можете использовать `.overflow-visible` из [утилит переполнения]({{< docsref "/utilities/overflow" >}}), но не забудьте также определить явный [цвет текста]({{< docsref "/utilities/colors#colors" >}}) , чтобы текст оставался читабельным. Однако имейте в виду, что в настоящее время этот подход не учитывает [цветовые режимы]({{< docsref "/customize/color-modes" >}}).
+
+{{< example >}}
+<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar overflow-visible text-dark" style="width: 10%">Длинный текст метки для индикатора выполнения, установленный на темный цвет</div>
+</div>
+{{< /example >}}
+
 ## Фоны
 
 Используйте фоновые служебные классы, чтобы изменить внешний вид отдельных индикаторов выполнения.
@@ -86,10 +94,10 @@ Bootstrap предоставляет несколько [утилит для у�
 <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar bg-info" style="width: 50%"></div>
 </div>
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+<div class="progress" role="progressbar" aria-label="Пример предупреждения" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar bg-warning" style="width: 75%"></div>
 </div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+<div class="progress" role="progressbar" aria-label="Пример опасности" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar bg-danger" style="width: 100%"></div>
 </div>
 {{< /example >}}
@@ -97,6 +105,31 @@ Bootstrap предоставляет несколько [утилит для у�
 {{< callout info >}}
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
+
+Если вы добавляете метки к индикаторам выполнения с настраиваемым цветом фона, не забудьте также установить соответствующий [цвет текста]({{< docsref "/utilities/colors#colors" >}}), чтобы метки оставались читаемыми и иметь достаточную контрастность.
+
+{{< example >}}
+<div class="progress" role="progressbar" aria-label="Пример успеха" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-success" style="width: 25%">25%</div>
+</div>
+<div class="progress" role="progressbar" aria-label="Пример информации" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+</div>
+<div class="progress" role="progressbar" aria-label="Пример предупреждения" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+</div>
+<div class="progress" role="progressbar" aria-label="Пример опасности" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+</div>
+{{< /example >}}
+
+Кроме того, вы можете использовать новые комбинированные вспомогательные классы [цвет и фон]({{< docsref "/helpers/color-background" >}}).
+
+{{< example >}}
+<div class="progress" role="progressbar" aria-label="Пример предупреждения" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+</div>
+{{< /example >}}
 
 ## Мультибар
 
@@ -158,7 +191,7 @@ Bootstrap предоставляет несколько [утилит для у�
 
 {{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
 

@@ -230,18 +230,18 @@ toc: true
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Заголовок элемента группы списка</h5>
-      <small class="text-muted">3 дня назад</small>
+      <small class="text-body-secondary">3 дня назад</small>
     </div>
     <p class="mb-1">Некоторый заполнитель в абзаце.</p>
-    <small class="text-muted">И какой-то приглушенный мелкий шрифт.</small>
+    <small class="text-body-secondary">И какой-то приглушенный мелкий шрифт.</small>
   </a>
   <a href="#" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Заголовок элемента группы списка</h5>
-      <small class="text-muted">3 дня назад</small>
+      <small class="text-body-secondary">3 дня назад</small>
     </div>
     <p class="mb-1">Некоторый заполнитель в абзаце.</p>
-    <small class="text-muted">И какой-то приглушенный мелкий шрифт.</small>
+    <small class="text-body-secondary">И какой-то приглушенный мелкий шрифт.</small>
   </a>
 </div>
 {{< /example >}}
@@ -313,13 +313,15 @@ toc: true
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 
 ### Sass миксины
 
-Используется в сочетании с `$theme-colors` для создания [классов контекстных вариантов](#variants) для элементов `.list-group-item`.
+{{< deprecated-in "5.3.0" >}}
+
+Используется в сочетании с `$theme-colors` для создания [классов контекстных вариантов](#variants) для `.list-group-item`.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 

@@ -824,13 +824,13 @@ toc: true
 {{< /tables.inline >}}
 {{< /highlight >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="table-variables" file="scss/_variables.scss" >}}
 
-### Цикл
+### Sass цикл
 
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 

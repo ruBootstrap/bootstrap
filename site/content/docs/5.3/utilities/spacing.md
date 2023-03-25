@@ -71,13 +71,13 @@ toc: true
 Кроме того, Bootstrap также включает класс `.mx-auto` для горизонтального центрирования содержимого уровня блока фиксированной ширины, то есть содержимого, имеющего набор `display: block` и `width`, путем установки горизонтальных полей на `auto`.
 
 <div class="bd-example">
-  <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
+  <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
     Центрированный элемент
   </div>
 </div>
 
 ```html
-<div class="mx-auto" style="width: 200px;">
+<div class="mx-auto p-2" style="width: 200px;">
   Центрированный элемент
 </div>
 ```

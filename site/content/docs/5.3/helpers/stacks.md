@@ -17,11 +17,11 @@ added: "5.1"
 
 Используйте `.vstack` для создания вертикальных макетов. По умолчанию сложенные элементы имеют полную ширину. Используйте утилиты `.gap-*` для добавления пробелов между элементами.
 
-{{< example >}}
+{{< example class="bd-example-flex" >}}
 <div class="vstack gap-3">
-  <div class="bg-body-tertiary border">First item</div>
-  <div class="bg-body-tertiary border">Second item</div>
-  <div class="bg-body-tertiary border">Third item</div>
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
+  <div class="p-2">Third item</div>
 </div>
 {{< /example >}}
 
@@ -29,32 +29,32 @@ added: "5.1"
 
 Используйте `.hstack` для горизонтальных макетов. Сложенные элементы по умолчанию центрируются по вертикали и занимают только необходимую ширину. Используйте утилиты `.gap-*` для добавления пробелов между элементами.
 
-{{< example >}}
+{{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="bg-body-tertiary border">First item</div>
-  <div class="bg-body-tertiary border">Second item</div>
-  <div class="bg-body-tertiary border">Third item</div>
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
+  <div class="p-2">Third item</div>
 </div>
 {{< /example >}}
 
 Использование утилит с горизонтальным полем, таких как `.ms-auto` в качестве разделителей:
 
-{{< example >}}
+{{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="bg-body-tertiary border">First item</div>
-  <div class="bg-body-tertiary border ms-auto">Second item</div>
-  <div class="bg-body-tertiary border">Third item</div>
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
+  <div class="p-2">Third item</div>
 </div>
 {{< /example >}}
 
 И с [вертикальными правилами]({{< docsref "/helpers/vertical-rule" >}}):
 
-{{< example >}}
+{{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="bg-body-tertiary border">First item</div>
-  <div class="bg-body-tertiary border ms-auto">Second item</div>
+  <div class="p-2">First item</div>
+  <div class="p-2">Second item</div>
   <div class="vr"></div>
-  <div class="bg-body-tertiary border">Third item</div>
+  <div class="p-2">Third item</div>
 </div>
 {{< /example >}}
 
@@ -80,6 +80,6 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
 {{< scss-docs name="stacks" file="scss/helpers/_stacks.scss" >}}

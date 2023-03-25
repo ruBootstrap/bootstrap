@@ -269,6 +269,10 @@ $font-family-sans-serif:
 
 Эти и другие изменения показаны ниже.
 
+{{< callout warning >}}
+{{< partial "callouts/warning-input-support.md" >}}
+{{< /callout >}}
+
 <form class="bd-example">
   <fieldset>
     <legend>Пример легенды</legend>
@@ -391,10 +395,6 @@ $font-family-sans-serif:
   </fieldset>
 </form>
 
-{{< callout warning >}}
-{{< partial "callouts/warning-input-support.md" >}}
-{{< /callout >}}
-
 ### Указатели на кнопках
 
 Reboot включает усовершенствование для `role="button"` , позволяющее изменить курсор по умолчанию на `pointer`. Добавьте этот атрибут к элементам, чтобы указать, что элементы интерактивны. Эта роль не обязательна для элементов `<button>`, у которых есть собственное изменение `cursor`.
@@ -411,8 +411,8 @@ Reboot включает усовершенствование для `role="butto
 
 <div class="bd-example">
   <address>
-    <strong>Twitter, Inc.</strong><br>
-    1355 Market St, Suite 900<br>
+    <strong>ACME Corporation</strong><br>
+    1123 Fictional St,<br>
     San Francisco, CA 94103<br>
     <abbr title="Phone">P:</abbr> (123) 456-7890
   </address>
@@ -466,11 +466,8 @@ HTML5 добавляет [новый глобальный атрибут с им
 <input type="text" hidden>
 ```
 
-{{< callout warning >}}
-
-##### Несовместимость jQuery
-
-`[hidden]` несовместим с методами jQuery `$(...).hide()` и `$(...).show()`. Поэтому в настоящее время мы не особо поддерживаем `[hidden]` по сравнению с другими методами управления элементами `display`.
+{{< callout info >}}
+Поскольку `[hidden]` не совместим с методами jQuery `$(...).hide()` и `$(...).show()`, мы специально не одобряем `[hidden]` другие методы управления `display` элементов.
 {{< /callout >}}
 
 Чтобы просто переключить видимость элемента, то есть его `display` не изменяется, и элемент все еще может влиять на поток документа, используйте [класс `.invisible`]({{< docsref "/utilities/visibility" >}}) вместо этого.

@@ -127,7 +127,7 @@ extra_js:
     <label for="validationDefaultUsername" class="form-label">Имя пользователя</label>
     <div class="input-group">
       <span class="input-group-text" id="inputGroupPrepend2">@</span>
-      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
     </div>
   </div>
   <div class="col-md-6">
@@ -351,19 +351,33 @@ extra_js:
 </form>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Переменные
 
+{{< added-in "5.3.0" >}}
+
+As part of Bootstrap's evolving CSS variables approach, forms now use local CSS variables for validation for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="root-form-validation-variables" file="scss/_root.scss" >}}
+
+These variables are also color mode adaptive, meaning they change color while in dark mode.
+
+### Sass переменные
+
 {{< scss-docs name="form-feedback-variables" file="scss/_variables.scss" >}}
 
-### Миксины
+{{< scss-docs name="form-validation-colors" file="scss/_variables.scss" >}}
 
-Два миксина объединяются вместе с помощью нашего [цикла](#цикл), чтобы сгенерировать наши стили обратной связи для проверки формы.
+{{< scss-docs name="form-validation-colors-dark" file="scss/_variables-dark.scss" >}}
+
+### Sass миксины
+
+Два миксина объединяются с помощью нашего [цикла](#loop), для создания наших стилей обратной связи при проверке формы.
 
 {{< scss-docs name="form-validation-mixins" file="scss/mixins/_forms.scss" >}}
 
-### Карта
+### Sass map
 
 Это карта валидации Sass из `_variables.scss`. Переопределите или расширьте это, чтобы создать другие или дополнительные состояния.
 
@@ -371,7 +385,7 @@ extra_js:
 
 Карты `$form-validation-states` могут содержать три необязательных параметра для переопределения всплывающих подсказок и стилей фокуса.
 
-### Цикл
+### Sass цикл
 
 Используется для перебора значений карты `$form-validation-states` для генерации наших стилей проверки. Любые изменения в приведенной выше карте Sass будут отражены в Вашем скомпилированном CSS через этот цикл.
 

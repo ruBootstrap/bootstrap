@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Bootstrap и Parcel"
+title: Bootstrap и Parcel
 description: Официальное руководство о том, как включить CSS и JavaScript Bootstrap в свой проект с помощью Parcel.
 group: getting-started
 toc: true
@@ -123,7 +123,7 @@ my-project/
 
    ```scss
    // Импортировать весь Bootstrap CSS
-   @import "~bootstrap/scss/bootstrap";
+   @import "bootstrap/scss/bootstrap";
    ```
 
    *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*

@@ -90,11 +90,11 @@ toc: true
 ```js
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
-if (toastTrigger) {
-  toastTrigger.addEventListener('click', () => {
-    const toast = new bootstrap.Toast(toastLiveExample)
 
-    toast.show()
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
   })
 }
 ```
@@ -108,7 +108,7 @@ if (toastTrigger) {
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Bootstrap</strong>
-    <small class="text-muted">11 мин. назад</small>
+    <small class="text-body-secondary">11 мин. назад</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
   </div>
   <div class="toast-body">
@@ -127,7 +127,7 @@ if (toastTrigger) {
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
-      <small class="text-muted">прямо сейчас</small>
+      <small class="text-body-secondary">прямо сейчас</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
@@ -139,7 +139,7 @@ if (toastTrigger) {
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
-      <small class="text-muted">2 секунды назад</small>
+      <small class="text-body-secondary">2 секунды назад</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
     <div class="toast-body">
@@ -246,7 +246,7 @@ if (toastTrigger) {
       <div class="toast-header">
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Bootstrap</strong>
-        <small class="text-muted">just now</small>
+        <small class="text-body-secondary">прямо сейчас</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
       <div class="toast-body">
@@ -258,7 +258,7 @@ if (toastTrigger) {
       <div class="toast-header">
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Bootstrap</strong>
-        <small class="text-muted">2 секунды назад</small>
+        <small class="text-body-secondary">2 секунды назад</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
       <div class="toast-body">
@@ -334,7 +334,7 @@ if (toastTrigger) {
 
 {{< scss-docs name="toast-css-vars" file="scss/_toasts.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 

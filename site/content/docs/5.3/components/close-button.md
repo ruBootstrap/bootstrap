@@ -24,7 +24,9 @@ toc: true
 
 ## Темный вариант
 
-{{< callout info >}}
+{{< deprecated-in "5.3.0" >}}
+
+{{< callout warning >}}
 **Внимание!** Начиная с версии 5.3.0, класс `.btn-close-white` устарел. Вместо этого используйте `data-bs-theme="dark"`, чтобы изменить цветовой режим кнопки закрытия.
 {{< /callout >}}
 
@@ -37,8 +39,16 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
 ### Переменные
+
+{{< added-in "5.3.0" >}}
+
+As part of Bootstrap's evolving CSS variables approach, close button now uses local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+
+{{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
+
+### Sass переменные
 
 {{< scss-docs name="close-variables" file="scss/_variables.scss" >}}

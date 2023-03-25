@@ -2,8 +2,8 @@ name: CSS
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -35,3 +35,6 @@ jobs:
 
       - name: Build CSS
         run: npm run css
+
+      - name: Run CSS tests
+        run: npm run css-test

@@ -18,12 +18,8 @@ toc: true
 </div>
 {{< /example >}}
 
-{{< callout warning >}}
-##### Убедитесь, что `role` правильная, и укажите метку
-
-Для того, чтобы вспомогательные технологии (например, программы чтения с экрана) передавали, что последовательность кнопок сгруппирована, необходимо предоставить соответствующий атрибут `role`. Для групп кнопок это будет `role="group"`, в то время как панели инструментов должны иметь `role="toolbar"`.
-
-Кроме того, группам и панелям инструментов следует давать явные метки, поскольку в противном случае большинство вспомогательных технологий не будут их объявлять, несмотря на наличие правильного атрибута роли. В приведенных здесь примерах мы используем `aria-label`, но также можно использовать такие альтернативы, как `aria-labelledby`.
+{{< callout info >}}
+Для групп кнопок требуется соответствующий атрибут `role` и явная метка, чтобы вспомогательные технологии, такие как программы чтения с экрана, идентифицировали кнопки как сгруппированные и сообщали о них. Используйте `role="group"` для групп кнопок или `role="toolbar"` для панелей инструментов кнопок. Затем используйте `aria-label` или `aria-labelledby`, чтобы пометить их.
 {{< /callout >}}
 
 Эти классы также могут быть добавлены к группам ссылок в качестве альтернативы навигационным компонентам [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}).
@@ -145,21 +141,21 @@ toc: true
 
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Группа больших кнопок">
-  <button type="button" class="btn btn-outline-dark">Левая</button>
-  <button type="button" class="btn btn-outline-dark">Средняя</button>
-  <button type="button" class="btn btn-outline-dark">Правая</button>
+  <button type="button" class="btn btn-outline-primary">Левая</button>
+  <button type="button" class="btn btn-outline-primary">Средняя</button>
+  <button type="button" class="btn btn-outline-primary">Правая</button>
 </div>
 <br>
 <div class="btn-group" role="group" aria-label="Группа кнопок по умолчанию">
-  <button type="button" class="btn btn-outline-dark">Левая</button>
-  <button type="button" class="btn btn-outline-dark">Средняя</button>
-  <button type="button" class="btn btn-outline-dark">Правая</button>
+  <button type="button" class="btn btn-outline-primary">Левая</button>
+  <button type="button" class="btn btn-outline-primary">Средняя</button>
+  <button type="button" class="btn btn-outline-primary">Правая</button>
 </div>
 <br>
-<div class="btn-group btn-group-sm" role="group" aria-label="Маленькая группа кнопок">
-  <button type="button" class="btn btn-outline-dark">Левая</button>
-  <button type="button" class="btn btn-outline-dark">Средняя</button>
-  <button type="button" class="btn btn-outline-dark">Правая</button>
+<div class="btn-group btn-group-sm" role="group" aria-label="Группа маленьких кнопок">
+  <button type="button" class="btn btn-outline-primary">Левая</button>
+  <button type="button" class="btn btn-outline-primary">Средняя</button>
+  <button type="button" class="btn btn-outline-primary">Правая</button>
 </div>
 {{< /example >}}
 
@@ -189,18 +185,18 @@ toc: true
 Сделайте так, чтобы набор кнопок выглядел вертикально сложенными, а не горизонтально. **Раскрывающиеся меню с разделенными кнопками здесь не поддерживаются.**
 
 {{< example >}}
-<div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
-  <button type="button" class="btn btn-dark">Кнопка</button>
-  <button type="button" class="btn btn-dark">Кнопка</button>
-  <button type="button" class="btn btn-dark">Кнопка</button>
-  <button type="button" class="btn btn-dark">Кнопка</button>
-  <button type="button" class="btn btn-dark">Кнопка</button>
-  <button type="button" class="btn btn-dark">Кнопка</button>
+<div class="btn-group-vertical" role="group" aria-label="Группа вертикальных кнопок">
+  <button type="button" class="btn btn-primary">Кнопка</button>
+  <button type="button" class="btn btn-primary">Кнопка</button>
+  <button type="button" class="btn btn-primary">Кнопка</button>
+  <button type="button" class="btn btn-primary">Кнопка</button>
+  <button type="button" class="btn btn-primary">Кнопка</button>
+  <button type="button" class="btn btn-primary">Кнопка</button>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="btn-group-vertical" role="group" aria-label="Вертикальная группа кнопок">
+<div class="btn-group-vertical" role="group" aria-label="Группа вертикальных кнопок">
   <button type="button" class="btn btn-primary">Кнопка</button>
   <button type="button" class="btn btn-primary">Кнопка</button>
   <div class="btn-group" role="group">

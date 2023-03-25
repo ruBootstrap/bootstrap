@@ -21,7 +21,7 @@ Bootstrap включает множество [настраиваемых сво
 ```css
 {{< root.inline >}}
 {{- $css := readFile "dist/css/bootstrap.css" -}}
-{{- $match := findRE ":root {([^}]*)}" $css 1 -}}
+{{- $match := findRE `:root,\n\[data-bs-theme=light\] {([^}]*)}` $css 1 -}}
 
 {{- if (eq (len $match) 0) -}}
 {{- errorf "Got no matches for :root in %q!" $.Page.Path -}}
@@ -29,6 +29,21 @@ Bootstrap включает множество [настраиваемых сво
 
 {{- index $match 0 -}}
 
+{{< /root.inline >}}
+```
+
+### Темный режим
+
+Эти переменные привязаны к нашему встроенному темному режиму.
+
+```css
+{{< root.inline >}}
+{{- $css := readFile "dist/css/bootstrap.css" -}}
+{{- $match := findRE `\[data-bs-theme=dark\] {([^}]*)}` $css 1 -}}
+{{- if (eq (len $match) 0) -}}
+{{- errorf "Got no matches for [data-bs-theme=dark] in %q!" $.Page.Path -}}
+{{- end -}}
+{{- index $match 0 -}}
 {{< /root.inline >}}
 ```
 
@@ -58,6 +73,20 @@ a {
   color: var(--bs-blue);
 }
 ```
+
+## Переменные фокуса
+
+{{< added-in "5.3.0" >}}
+
+Bootstrap предоставляет настраиваемые стили `:focus`, используя комбинацию переменных Sass и CSS, которые можно дополнительно добавлять к определенным компонентам и элементам. Мы пока не переопределяем глобально все стили `:focus`.
+
+В нашем Sass мы устанавливаем значения по умолчанию, которые можно настроить перед компиляцией.
+
+{{< scss-docs name="focus-ring-variables" file="scss/_variables.scss" >}}
+
+Затем эти переменные переназначаются на переменные CSS уровня `:root`, которые можно настраивать в режиме реального времени, в том числе с параметрами смещения `x` и `y` (которые по умолчанию имеют резервное значение `0`).
+
+{{< scss-docs name="root-focus-variables" file="scss/_root.scss" >}}
 
 ## Контрольные точки сетки
 

@@ -173,8 +173,8 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

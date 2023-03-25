@@ -167,6 +167,27 @@ toc: true
 </ul>
 {{< /example >}}
 
+### Подчеркивание
+
+Возьмите тот же HTML, но вместо этого используйте `.nav-underline`:
+
+{{< example >}}
+<ul class="nav nav-underline">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Активная</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Ссылка</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Ссылка</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Отключенная</a>
+  </li>
+</ul>
+{{< /example >}}
+
 ### Заполнение и выравнивание
 
 Заставьте содержимое Вашего `.nav` расширить всю доступную ширину одним из двух классов модификаторов. Чтобы пропорционально заполнить все доступное пространство Вашим `.nav-item`, используйте `.nav-fill`. Обратите внимание, что все горизонтальное пространство занято, но не все элементы навигации имеют одинаковую ширину.
@@ -325,7 +346,13 @@ toc: true
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
 
-### Переменные Sass
+{{< added-in "5.3.0" >}}
+
+В классе модификатора `.nav-underline`:
+
+{{< scss-docs name="nav-underline-css-vars" file="scss/_nav.scss" >}}
+
+### Sass переменные
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
 

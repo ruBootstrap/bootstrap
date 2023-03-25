@@ -76,8 +76,8 @@ toc: true
 </select>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="form-select-variables" file="scss/_variables.scss" >}}

@@ -300,9 +300,9 @@ toc: true
 <label class="btn btn-outline-danger" for="danger-outlined">Радио цвета danger</label>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 Variables for checks:
 

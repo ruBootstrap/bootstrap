@@ -16,11 +16,11 @@ added: "5.3"
 {{< /callout >}}
 
 {{< example class="bd-example-zindex-levels position-relative" >}}
-<div class="z-3 position-absolute p-5 rounded-3"></div>
-<div class="z-2 position-absolute p-5 rounded-3"></div>
-<div class="z-1 position-absolute p-5 rounded-3"></div>
-<div class="z-0 position-absolute p-5 rounded-3"></div>
-<div class="z-n1 position-absolute p-5 rounded-3"></div>
+<div class="z-3 position-absolute p-5 rounded-3"><span>z-3</span></div>
+<div class="z-2 position-absolute p-5 rounded-3"><span>z-2</span></div>
+<div class="z-1 position-absolute p-5 rounded-3"><span>z-1</span></div>
+<div class="z-0 position-absolute p-5 rounded-3"><span>z-0</span></div>
+<div class="z-n1 position-absolute p-5 rounded-3"><span>z-n1</span></div>
 {{< /example >}}
 
 ## Наложения
@@ -42,3 +42,9 @@ added: "5.3"
 Настройте эту карту Sass, чтобы изменить доступные значения и сгенерированные утилиты.
 
 {{< scss-docs name="zindex-levels-map" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-zindex" file="scss/_utilities.scss" >}}

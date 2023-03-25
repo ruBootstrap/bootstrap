@@ -31,6 +31,42 @@ Form controls are styled with a mix of Sass and CSS variables, allowing them to 
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label="Пример .form-control-sm">
 {{< /example >}}
 
+## Текст формы
+
+Текст формы блочного или встроенного уровня может быть создан с помощью `.form-text`.
+
+{{< callout warning >}}
+Текст формы должен быть явно связан с элементом управления формой, к которому он относится, с использованием атрибута `aria-labelledby` (для обязательной информации, такой как формат данных) или `aria-describedby` (для дополнительной информации). Это гарантирует, что вспомогательные технологии, такие как программы чтения с экрана, будут объявлять этот текст формы, когда пользователь фокусируется или вводит элемент управления.
+{{< /callout >}}
+
+Текст формы ниже полей ввода может быть оформлен с помощью `.form-text`. Если будет использоваться элемент блочного уровня, добавляется верхнее поле для легкого отступа от входных данных выше.
+
+{{< example >}}
+<label for="inputPassword5" class="form-label">Пароль</label>
+<input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text">
+  Ваш пароль должен состоять из 8-20 символов, содержать буквы и цифры и не должен содержать пробелов, специальных символов или эмодзи.
+</div>
+{{< /example >}}
+
+Встроенный текст может использовать любой типичный встроенный элемент HTML (будь то `<span>`, `<small>` или что-то еще) только с классом `.form-text`.
+
+{{< example >}}
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Пароль</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Должно быть 8-20 символов.
+    </span>
+  </div>
+</div>
+{{< /example >}}
+
 ## Отключенный
 
 Добавьте логический атрибут `disabled` для ввода, чтобы придать ему серый вид, удалить события указателя и предотвратить фокусировку.
@@ -136,12 +172,6 @@ Form controls are styled with a mix of Sass and CSS variables, allowing them to 
 {{< /example >}}
 
 ## CSS
-
-### Переменные
-
-Элементы управления формы используют небольшое количество переменных CSS для поддержки пользовательского стиля в цветовых режимах.
-
-{{< scss-docs name="form-control-vars" file="scss/_root.scss" >}}
 
 ### Sass переменные
 

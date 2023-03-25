@@ -25,9 +25,9 @@ toc: true
   <label for="basic-url" class="form-label">Ваш URL-адрес</label>
   <div class="input-group">
     <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
   </div>
-  <div class="form-text">Пример текста справки выходит за пределы группы ввода.</div>
+  <div class="form-text" id="basic-addon4">Пример текста справки выходит за пределы группы ввода.</div>
 </div>
 
 <div class="input-group mb-3">
@@ -312,8 +312,8 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

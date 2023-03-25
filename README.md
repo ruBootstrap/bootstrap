@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.0-alpha1.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.0-alpha2.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.0-alpha1`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.0-alpha1`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.0-alpha1`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.0-alpha2`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.0-alpha2`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.0-alpha2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -72,7 +72,6 @@
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap?logo=opencollective&logoColor=fff)](#backers)
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap?logo=opencollective&logoColor=fff)](#sponsors)
-![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/twbs/bootstrap)
 
 
 ## Что включено
@@ -145,7 +144,7 @@
 
 Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.ru/) и размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документацию также можно запускать локально.
 
-Поиск по документации поддерживается [Algolia's DocSearch](https://docsearch.algolia.com/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
+Поиск документации осуществляется с помощью [Algolia's DocSearch](https://docsearch.algolia.com/).
 
 ### Запуск документации локально
 
@@ -244,4 +243,4 @@
 
 ## Авторское право и лицензия
 
-Авторские права на код и документацию, 2011–2022 гг., принадлежат [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors). Код выпущен под [лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторские права на код и документацию, 2011–2023 гг., принадлежат [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors). Код выпущен под [лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

@@ -376,7 +376,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Панель навигации</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Переключить навигацию">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
@@ -400,8 +400,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ## Направления
 
 {{< callout info >}}
-#### RTL
-При использовании Bootstrap в RTL направления отражаются, то есть `.dropstart` будет отображаться с правой стороны.
+**Направления переворачиваются в режиме RTL.** Таким образом, `.dropstart` появится справа.
 {{< /callout >}}
 
 ### По центру
@@ -842,7 +841,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 Поместите произвольный текст в выпадающее меню с текстом и используйте [утилиты отступов]({{< docsref "/utilities/spacing" >}}). Обратите внимание, что Вам, вероятно, потребуются дополнительные стили размеров, чтобы ограничить ширину меню.
 
 {{< example >}}
-<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+<div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
   <p>
     Пример текста, который свободно перемещается в выпадающем меню.
   </p>
@@ -1012,7 +1011,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 Переменные для всех выпадающих списков:
 
@@ -1026,7 +1025,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 {{< scss-docs name="caret-variables" file="scss/_variables.scss" >}}
 
-### Миксины
+### Sass миксины
 
 Миксины используются для генерации курсоров на основе CSS и могут быть найдены в `scss/mixins/_caret.scss`.
 
@@ -1057,18 +1056,16 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 
 ### Через JavaScript
 
-Вызов выпадающих списков через JavaScript:
+{{< callout warning >}}
+Выпадающие списки должны иметь `data-bs-toggle="dropdown"` в своем элементе триггера, независимо от того, вызываете ли вы раскрывающийся список через JavaScript или используете data-api.
+{{< /callout >}}
+
+Вызовите раскрывающиеся списки через JavaScript:
 
 ```js
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
 ```
-
-{{< callout info >}}
-##### `data-bs-toggle="dropdown"` по-прежнему требуется
-
-Независимо от того, вызываете ли вы выпадающий список через JavaScript или вместо этого используете data-api, в элементе триггера выпадающего списка всегда должен присутствовать `data-bs-toggle="dropdown"`.
-{{< /callout >}}
 
 ### Опции
 

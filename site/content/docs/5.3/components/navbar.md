@@ -326,7 +326,7 @@ toc: true
 **Новое в v5.2.0  —** Тематика панели навигации теперь поддерживается переменными CSS, а `.navbar-light` устарел. Переменные CSS применяются к `.navbar`, по умолчанию это "light" внешний вид, и их можно переопределить с помощью `.navbar-dark`.
 {{< /callout >}}
 
-Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `.navbar-dark` для темных цветов фона. Затем настройте с помощью утилит `.bg-*`.
+Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `data-bs-theme="dark"` к родительскому элементу `.navbar` для темных цветов фона. Затем настройте с помощью утилит `.bg-*`.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg bg-body-secondary" data-bs-theme="dark">
@@ -656,7 +656,7 @@ toc: true
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <h5 class="text-white h4">Свернутый контент</h5>
-    <span class="text-muted">Переключаемый через бренд навигационной панели.</span>
+    <span class="text-body-secondary">Переключаемый через бренд навигационной панели.</span>
   </div>
 </div>
 <nav class="navbar navbar-dark bg-dark">
@@ -680,7 +680,7 @@ toc: true
 <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Навигационная панель Offcanvas</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Переключить навигацию">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -725,7 +725,7 @@ toc: true
 ```html
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <a class="navbar-brand" href="#">Offcanvas navbar</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Переключить навигацию">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
@@ -740,13 +740,13 @@ toc: true
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Offcanvas темная навигационная панель</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Переключить навигацию">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Темный offcanvas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -798,7 +798,7 @@ toc: true
 
 {{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 Переменные для всех навигационных панелей:
 
@@ -808,7 +808,7 @@ toc: true
 
 {{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
-### Цикл Sass
+### Sass цикл
 
 [Классы адаптивного навбара развертывания/свертывания](#responsive-behaviors) (например, `.navbar-expand-lg`) объединяются с картой `$breakpoints` и генерируются с помощью цикла в `scss/_navbar.scss`.
 

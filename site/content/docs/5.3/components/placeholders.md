@@ -38,7 +38,7 @@ added: "5.1"
       <span class="placeholder col-6"></span>
       <span class="placeholder col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a class="btn btn-primary disabled placeholder col-6"></a>
   </div>
 </div>
 </div>
@@ -67,7 +67,7 @@ added: "5.1"
       <span class="placeholder col-6"></span>
       <span class="placeholder col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a class="btn btn-primary disabled placeholder col-6"></a>
   </div>
 </div>
 ```
@@ -83,7 +83,7 @@ added: "5.1"
   <span class="placeholder col-6"></span>
 </p>
 
-<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
+<a class="btn btn-primary disabled placeholder col-4"></a>
 {{< /example >}}
 
 {{< callout info >}}
@@ -138,8 +138,8 @@ added: "5.1"
 </p>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="placeholders" file="scss/_variables.scss" >}}

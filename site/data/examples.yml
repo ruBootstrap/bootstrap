@@ -1,3 +1,39 @@
+- category: Starters
+  slug: starters
+  external: true
+  description: "Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
+  examples:
+    - name: CDN starter
+      slug: cdn-starter
+      description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
+      url: /examples/tree/main/starter
+    - name: Sass & JS
+      slug: sass-js
+      description: "Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
+      url: /examples/tree/main/sass-js
+    - name: Sass & ESM JS
+      slug: sass-js-esm
+      description: "Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
+      url: /examples/tree/main/sass-js-esm
+    - name: Webpack
+      slug: webpack
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
+      url: /examples/tree/main/webpack
+      htmlIndexLocation: src
+    - name: Parcel
+      slug: parcel
+      description: "Import and bundle Bootstrap's source Sass and JavaScript via Parcel."
+      url: /examples/tree/main/parcel
+      htmlIndexLocation: src
+    - name: Vite
+      slug: vite
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vite."
+      url: /examples/tree/main/vite
+      htmlIndexLocation: src
+    - name: Bootstrap Icons
+      slug: bootstrap-icons
+      description: "Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font."
+      url: /examples/tree/main/icons-font
 - category: Фрагменты
   slug: snippets
   description: "Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с настраиваемым CSS и т.д."
@@ -26,6 +62,18 @@
     - name: Модалки
       slug: modals
       description: "Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов."
+    - name: Badges
+      slug: badges
+      description: "Make badges work with custom inner HTML and new looks."
+    - name: Breadcrumbs
+      slug: breadcrumbs
+      description: "Integrate custom icons and create stepper components."
+    - name: Buttons
+      slug: buttons
+      description: "Create custom buttons for just about any use case with utilities."
+    - name: Jumbotrons
+      slug: jumbotrons
+      description: "Create modernized versions of the classic Bootstrap component."
 
 - category: Пользовательские компоненты
   slug: custom-components

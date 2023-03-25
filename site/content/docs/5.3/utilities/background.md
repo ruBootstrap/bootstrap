@@ -6,9 +6,17 @@ group: utilities
 toc: true
 ---
 
+{{< callout info >}}
+{{< partial "callouts/warning-color-assistive-technologies.md" >}}
+{{< /callout >}}
+
 ## Фоновый цвет
 
 Подобно классам цвета контекстного текста, установите фон элемента для любого контекстного класса. Фоновые утилиты **не устанавливают `color`**, поэтому в некоторых случаях Вы захотите использовать `.text-*` [утилиты цвета]({{< docsref "/utilities/colors" >}}).
+
+{{< callout info >}}
+Background utilities like `.bg-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.bg-*-subtle` utility will. This will be resolved in v6.
+{{< /callout >}}
 
 {{< example >}}
 {{< colors.inline >}}
@@ -79,11 +87,11 @@ Or, choose from any of the `.bg-opacity` utilities:
 <div class="bg-success p-2 text-dark bg-opacity-10">Это успешный фон с непрозрачностью 10%</div>
 {{< /example >}}
 
-## Sass
+## CSS
 
 В дополнение к следующей функциональности Sass, рассмотрите возможность чтения о наших включенных [настраиваемых свойствах CSS]({{< docsref "/customize/css-variables" >}}) (также известных как переменные CSS) для цветов и многого другого.
 
-### Переменные
+### Sass переменные
 
 Большинство утилит `background-color` генерируются цветами нашей темы, переназначенными из переменных нашей общей цветовой палитры.
 
@@ -97,7 +105,13 @@ Or, choose from any of the `.bg-opacity` utilities:
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Карта
+Переменные для установки `background-color` в утилитах `.bg-*-subtle` в светлом и темном режимах:
+
+{{< scss-docs name="theme-bg-subtle-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-bg-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
+
+### Sass карта
 
 Затем цвета темы помещаются в карту Sass, чтобы мы могли перебирать их, чтобы сгенерировать наши утилиты, модификаторы компонентов и многое другое.
 
@@ -111,11 +125,17 @@ Or, choose from any of the `.bg-opacity` utilities:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
 
-И непрозрачность цвета фона основывается на этом с их собственной картой, которая используется API утилит:
+Непрозрачность цвета фона основана на собственной карте, которая используется API-интерфейсом утилит:
 
 {{< scss-docs name="utilities-bg-colors" file="scss/_maps.scss" >}}
 
-### Миксины
+Цвета фона цветового режима также доступны в виде карты Sass:
+
+{{< scss-docs name="theme-bg-subtle-map" file="scss/_maps.scss" >}}
+
+{{< scss-docs name="theme-bg-subtle-dark-map" file="scss/_maps.scss" >}}
+
+### Sass миксины
 
 **Никакие миксины не используются для создания наших фоновых утилит**, но у нас есть некоторые дополнительные миксины для других ситуаций, когда Вы хотите создать свои собственные градиенты.
 
@@ -123,7 +143,7 @@ Or, choose from any of the `.bg-opacity` utilities:
 
 {{< scss-docs name="gradient-mixins" file="scss/mixins/_gradients.scss" >}}
 
-### Утилиты API
+## Утилиты API
 
 Фоновые утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать утилиты API.]({{< docsref "/utilities/api#using-the-api" >}})
 

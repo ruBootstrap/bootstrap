@@ -23,11 +23,11 @@ toc: true
 Добавьте класс `object-fit-{value}` в [заменяемый элемент](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="120" class="object-fit-contain border rounded" text="Object fit contain" markup="img" >}}
-{{< placeholder width="140" height="120" class="object-fit-cover border rounded" text="Object fit cover" markup="img" >}}
-{{< placeholder width="140" height="120" class="object-fit-fill border rounded" text="Object fit fill" markup="img" >}}
-{{< placeholder width="140" height="120" class="object-fit-scale border rounded" text="Object fit scale down" markup="img" >}}
-{{< placeholder width="140" height="120" class="object-fit-none border rounded" text="Object fit none" markup="img" >}}
+{{< placeholder width="140" height="120" class="object-fit-contain border rounded" text="Object fit contain" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="120" class="object-fit-cover border rounded" text="Object fit cover" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="120" class="object-fit-fill border rounded" text="Object fit fill" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="120" class="object-fit-scale border rounded" text="Object fit scale down" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="120" class="object-fit-none border rounded" text="Object fit none" markup="img" color="#868e96" background="#dee2e6" >}}
 {{< /example >}}
 
 ## Адаптивность
@@ -35,11 +35,11 @@ toc: true
 Адаптивные варианты также существуют для каждого значения `object-fit` с использованием формата `.object-fit-{breakpoint}-{value}`, для следующих сокращений контрольных точек: `sm`, `md`, `lg`, `xl` и `xxl`. Классы можно комбинировать для получения различных эффектов по вашему желанию.
 
 {{< example class="d-flex overflow-auto" >}}
-{{< placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain on sm" markup="img" >}}
-{{< placeholder width="140" height="80" class="object-fit-md-contain border rounded" text="Contain on md" markup="img" >}}
-{{< placeholder width="140" height="80" class="object-fit-lg-contain border rounded" text="Contain on lg" markup="img" >}}
-{{< placeholder width="140" height="80" class="object-fit-xl-contain border rounded" text="Contain on xl" markup="img" >}}
-{{< placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain on xxl" markup="img" >}}
+{{< placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain on sm" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="80" class="object-fit-md-contain border rounded" text="Contain on md" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="80" class="object-fit-lg-contain border rounded" text="Contain on lg" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="80" class="object-fit-xl-contain border rounded" text="Contain on xl" markup="img" color="#868e96" background="#dee2e6" >}}
+{{< placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain on xxl" markup="img" color="#868e96" background="#dee2e6" >}}
 {{< /example >}}
 
 ## Видео

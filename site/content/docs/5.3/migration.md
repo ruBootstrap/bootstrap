@@ -7,7 +7,85 @@ aliases: "/migration/"
 toc: true
 ---
 
-## v5.3.0
+## v5.3.0-alpha2
+
+If you're migrating from our previous alpha release of v5.3.0, please reviewing the changes listed below.
+
+### CSS variables
+
+- Removed several duplicate and unused root CSS variables.
+
+### Color modes
+
+- Dark mode colors are now derived from our theme colors (e.g., `$primary`) in Sass, rather than color specific tints or shades (e.g., `$blue-300`). This allows for a more automated dark mode when customizing the default theme colors.
+
+- Added Sass maps for generating theme colors for dark mode text, subtle background, and subtle border.
+
+- [Snippet examples]({{< docsref "/examples#snippets" >}}) are now ready for dark mode with updated markup and reduced custom styles.
+
+- Added `color-scheme: dark` to dark mode CSS to change OS level controls like scrollbars
+
+- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+
+- Dropped recently added form control background CSS variables and reassigned the Sass variables to use CSS variables instead. This simplifies the styling across color modes and avoids an issue where form controls in dark mode wouldn't update properly.
+
+- Our `box-shadow`s will once again always stay dark instead of inverting to white when in dark mode.
+
+- Improved HTML and JavaScript for our color mode toggle script. The selector for changing the active SVG has been improved, and the markup made more accessible with ARIA attributes.
+
+- Improved docs code syntax colors and more across light and dark modes.
+
+### Typography
+
+- We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+
+### Components
+
+- Cards now have a `color` set on them to improve rendering across color modes.
+
+- Added new `.nav-underline` variant for our navigation with a simpler bottom border under the active nav link. [See the docs for an example.]({{< docsref "/components/navs-tabs#underline" >}})
+
+- Navs now have new `:focus-visible` styles that better match our custom button focus styles.
+
+### Helpers
+
+- Added new `.icon-link` helper to quickly place and align Bootstrap Icons alongside a textual link. Icon links support our new link utilities, too.
+
+- Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring.
+
+### Utilities
+
+- Renamed Sass and CSS variables `${color}-text` to `${color}-text-emphasis` to match their associated utilities.
+
+- Added new `.link-body-emphasis` helper alongside our [colored links]({{< docsref "/helpers/colored-links" >}}). This creates a colored link using our color mode responsive emphasis color.
+
+- Added new link utilities for link color opacity, underline offset, underline color, and underline opacity. [Explore the new links utilities.]({{< docsref "/utilities/link" >}})
+
+- CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+
+- Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
+
+- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+
+### Docs
+
+- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
+
+- Improved included JavaScript for live Toast demo.
+
+- Added `twbs/examples` repo contents to the top of the Examples page.
+
+### Tooling
+
+- Added SCSS testing via True to help test our utilities API and other customizations.
+
+- Replaced instances of our bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
+
+<hr class="mb-4">
+
+For a complete list of changes, [see the v5.3.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
+
+## v5.3.0-alpha1
 
 <hr class="mb-4">
 
@@ -19,7 +97,7 @@ toc: true
 
   <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span>  Цветовые режимы заменяют темные варианты компонентов, поэтому `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` и `.navbar-dark` устарели.
 
-- **Новая расширенная цветовая система.** Мы добавили новые цвета темы (но не в `$theme-colors)`) для более детализированной общесистемной цветовой палитры с новыми вторичными, третичными и акцентными цветами для `color` и `background-color`. Эти новые цвета доступны в виде переменных Sass, переменных CSS и утилит.
+- **Новая расширенная цветовая система.** Мы добавили новые цвета темы (но не в `$theme-colors`) для более детализированной общесистемной цветовой палитры с новыми вторичными, третичными и акцентными цветами для `color` и `background-color`. Эти новые цвета доступны в виде переменных Sass, переменных CSS и утилит.
 
 - Мы также расширили переменные цвета нашей темы Sass, переменные CSS и утилиты, чтобы включить выделение текста, тонкие цвета фона и тонкие цвета границ. Они доступны в виде переменных Sass, переменных CSS и утилит.
 
@@ -44,7 +122,7 @@ toc: true
 
 - Восстанавливает переменные CSS для контрольных точек, хотя мы не используем их в наших медиа-запросах, поскольку они не поддерживаются. Однако они могут быть полезны в контекстах, специфичных для JS.
 
-- В соответствии с обновлением цветовых режимов мы добавили новые утилиты для новых CSS-переменных Sass `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` иd `{color}-text` для цветов нашей темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный.
+- В соответствии с обновлением цветовых режимов мы добавили новые утилиты для новых CSS-переменных Sass `secondary` и `tertiary` цвета текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` иd `{color}-text-emphasis` для цветов нашей темы. Эти новые цвета доступны через переменные Sass и CSS (но не наши карты цветов) с явной целью упростить настройку нескольких цветовых режимов, таких как светлый и темный.
 
 - Добавляет дополнительные переменные для предупреждений, `.btn-close` и `.offcanvas`.
 
@@ -69,6 +147,10 @@ toc: true
 - Варианты элементов группы списка теперь определяются с помощью переменных CSS.
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.list-group-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/list-group#sass-loop" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
+
+#### Выпадающие списки
+
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Класс `.dropdown-menu-dark` устарел и заменен на `data-bs-theme="dark"` в раскрывающемся списке или любом родительском элементе. [Смотрите пример в документации.]({{< docsref "/components/dropdowns#dark-dropdowns" >}})
 
 #### Кнопка закрытия
 
@@ -573,7 +655,7 @@ toc: true
   - Переименованы `.rounded-left` и `.rounded-right` в `.rounded-start` и `.rounded-end`.
   - Переименованы `.ml-*` и `.mr-*` в `.ms-*` и `.me-*`.
   - Переименованы `.pl-*` и `.pr-*` в `.ps-*` и `.pe-*`.
-  - Переименованы `.text-left` и `.text-right` в `.text-start` и `.text-end`.
+  - Переименованы `.text-*-left` и `.text-*-right` в `.text-*-start` и `.text-*-end`.
 
 - <span class="badge bg-danger">Breaking</span> По умолчанию отрицательные поля отключены.
 

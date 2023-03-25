@@ -488,7 +488,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
   const button = event.relatedTarget
   // Извлекает информацию из атрибутов data-bs-*
   const recipient = button.getAttribute('data-bs-whatever')
-  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // При необходимости вы можете инициировать запрос Ajax здесь,
   // а затем выполнить обновление в обратном вызове.
   //
   // Обновляет содержимое модального окна.
@@ -574,7 +574,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
 | Размер | Класс | Максимальная ширина модального окна
 | --- | --- | --- |
 | Маленький | `.modal-sm` | `300px` |
-| По умолчанию | <span class="text-muted">Нет</span> | `500px` |
+| По умолчанию | <span class="text-body-secondary">Нет</span> | `500px` |
 | Большой | `.modal-lg` | `800px` |
 | Очень большой | `.modal-xl` | `1140px` |
 {{< /bs-table >}}
@@ -780,11 +780,11 @@ exampleModal.addEventListener('show.bs.modal', event => {
 
 {{< scss-docs name="modal-backdrop-css-vars" file="scss/_modal.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
-### Цикл
+### Sass цикл
 
 [Адаптивные полноэкранные модальные окна](#fullscreen-modal) генерируются с помощью карты `$breakpoints` и цикла в `scss/_modal.scss`.
 
