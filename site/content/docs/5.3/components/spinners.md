@@ -191,7 +191,7 @@ Bootstrap «спиннеры» можно использовать для ото
 
 {{< scss-docs name="spinner-border-sm-css-vars" file="scss/_spinners.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
 

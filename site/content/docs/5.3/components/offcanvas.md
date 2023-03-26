@@ -257,7 +257,7 @@ Heads up! Dark variants for components were deprecated in v5.3.0 with the introd
 
 {{< scss-docs name="offcanvas-css-vars" file="scss/_offcanvas.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
 

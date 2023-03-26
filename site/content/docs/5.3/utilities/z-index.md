@@ -43,7 +43,7 @@ added: "5.3"
 
 {{< scss-docs name="zindex-levels-map" file="scss/_variables.scss" >}}
 
-### Utilities API
+### Утилиты API
 
 Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

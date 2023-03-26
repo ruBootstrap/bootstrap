@@ -168,10 +168,10 @@ toc: true
 
 {{< scss-docs name="pagination-css-vars" file="scss/_pagination.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
 
-### Миксины Sass
+### Sass миксины
 
 {{< scss-docs name="pagination-mixin" file="scss/mixins/_pagination.scss" >}}

@@ -175,11 +175,11 @@ if (alertTrigger) {
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
-### Миксины Sass
+### Sass миксины
 
 {{< deprecated-in "5.3.0" >}}
 
