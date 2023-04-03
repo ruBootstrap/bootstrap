@@ -9,81 +9,81 @@ toc: true
 
 ## v5.3.0-alpha2
 
-If you're migrating from our previous alpha release of v5.3.0, please reviewing the changes listed below.
+Если вы переходите с нашего предыдущего альфа-выпуска версии 5.3.0, ознакомьтесь с изменениями, перечисленными ниже.
 
-### CSS variables
+### CSS переменные
 
-- Removed several duplicate and unused root CSS variables.
+- Удалено несколько повторяющихся и неиспользуемых корневых переменных CSS.
 
-### Color modes
+### Цветовые режимы
 
-- Dark mode colors are now derived from our theme colors (e.g., `$primary`) in Sass, rather than color specific tints or shades (e.g., `$blue-300`). This allows for a more automated dark mode when customizing the default theme colors.
+- Цвета темного режима теперь получаются из цветов нашей темы (например, `$primary`) в Sass, а не из цветовых оттенков или оттенков (например, `$blue-300`). Это позволяет использовать более автоматизированный темный режим при настройке цветов темы по умолчанию.
 
-- Added Sass maps for generating theme colors for dark mode text, subtle background, and subtle border.
+- Добавлены карты Sass для создания цветов темы для текста в темном режиме, тонкого фона и тонкой границы.
 
-- [Snippet examples]({{< docsref "/examples#snippets" >}}) are now ready for dark mode with updated markup and reduced custom styles.
+- [Примеры снипетов]({{< docsref "/examples#snippets" >}}) теперь готовы для темного режима с обновленной разметкой и уменьшенными пользовательскими стилями.
 
-- Added `color-scheme: dark` to dark mode CSS to change OS level controls like scrollbars
+- Добавлена `color-scheme: dark` в CSS темного режима для изменения элементов управления уровня ОС, таких как полосы прокрутки.
 
-- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+- Состояния проверки формы `border-color` и текста `color` теперь реагируют на темный режим благодаря новым переменным Sass и CSS.
 
-- Dropped recently added form control background CSS variables and reassigned the Sass variables to use CSS variables instead. This simplifies the styling across color modes and avoids an issue where form controls in dark mode wouldn't update properly.
+- Отброшены недавно добавленные переменные CSS фона управления формой и переназначены переменные Sass для использования вместо них переменных CSS. Это упрощает стилизацию в цветовых режимах и позволяет избежать проблемы, из-за которой элементы управления формы в темном режиме не обновляются должным образом.
 
-- Our `box-shadow`s will once again always stay dark instead of inverting to white when in dark mode.
+- Наши `box-shadow` снова всегда будут оставаться темными, а не инвертироваться в белый цвет в темном режиме.
 
-- Improved HTML and JavaScript for our color mode toggle script. The selector for changing the active SVG has been improved, and the markup made more accessible with ARIA attributes.
+- Улучшен HTML и JavaScript для нашего сценария переключения цветового режима. Улучшен селектор для изменения активного SVG, а разметка стала более доступной благодаря атрибутам ARIA.
 
-- Improved docs code syntax colors and more across light and dark modes.
+- Улучшены цвета синтаксиса кода документов и многое другое в светлом и темном режимах.
 
-### Typography
+### Типография
 
-- We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+- Мы больше не устанавливаем цвет для `$headings-color-dark` или `--bs-heading-color` для темного режима. Чтобы избежать некоторых проблем, связанных с тем, что заголовки внутри компонентов отображаются неправильным цветом, мы установили для переменной Sass значение `null` и добавили проверку `null`, как мы используем в светлом режиме по умолчанию.
 
-### Components
+### Компоненты
 
-- Cards now have a `color` set on them to improve rendering across color modes.
+- Карточки теперь имеют `color`, установленный на них, чтобы улучшить рендеринг в цветовых режимах.
 
-- Added new `.nav-underline` variant for our navigation with a simpler bottom border under the active nav link. [See the docs for an example.]({{< docsref "/components/navs-tabs#underline" >}})
+- Добавлен новый вариант `.nav-underline` для нашей навигации с более простой нижней границей под активной навигационной ссылкой. [Смотрите пример в документации.]({{< docsref "/components/navs-tabs#underline" >}})
 
-- Navs now have new `:focus-visible` styles that better match our custom button focus styles.
+- Навигация теперь имеет новые стили `:focus-visible`, которые лучше соответствуют нашим пользовательским стилям фокуса кнопок.
 
-### Helpers
+### Помощники
 
-- Added new `.icon-link` helper to quickly place and align Bootstrap Icons alongside a textual link. Icon links support our new link utilities, too.
+- Добавлен новый помощник `.icon-link` для быстрого размещения и выравнивания значков Bootstrap рядом с текстовой ссылкой. Ссылки на значки также поддерживают наши новые утилиты ссылок.
 
-- Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring.
+- Добавлен новый помощник кольца фокусировки для удаления контура по умолчанию `outline` и установки пользовательского кольца фокусировки `box-shadow`.
 
-### Utilities
+### Утилиты
 
-- Renamed Sass and CSS variables `${color}-text` to `${color}-text-emphasis` to match their associated utilities.
+- Переименованные переменные Sass и CSS `${color}-text` в `${color}-text-emphasis`, чтобы соответствовать связанным с ними утилитам.
 
-- Added new `.link-body-emphasis` helper alongside our [colored links]({{< docsref "/helpers/colored-links" >}}). This creates a colored link using our color mode responsive emphasis color.
+- Добавлен новый помощник `.link-body-emphasis` вместе с нашими [цветными ссылками]({{< docsref "/helpers/colored-links" >}}). Это создает цветную ссылку, используя наш цветовой режим, реагирующий на цвет акцента.
 
-- Added new link utilities for link color opacity, underline offset, underline color, and underline opacity. [Explore the new links utilities.]({{< docsref "/utilities/link" >}})
+- Добавлены новые утилиты ссылок для непрозрачности цвета ссылки, смещения подчеркивания, цвета подчеркивания и непрозрачности подчеркивания. [Изучите новые утилиты ссылок.]({{< docsref "/utilities/link" >}})
 
-- CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+- Утилиты `border-width`, основанные на CSS переменных, были возвращены для прямой установки своего свойства (как это было сделано до версии 5.2.0). Это позволяет избежать проблем наследования между вложенными элементами, включая таблицы.
 
-- Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
+- Добавлена новая утилита `.border-black`, чтобы соответствовать нашим утилитам `.text-black` и `.bg-black`.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Устарела утилита `.text-muted` и Sass переменная `$text-muted`. Он был заменен на `.text-body-secondary` и `$body-secondary-color`.
 
-### Docs
+### Документация
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
+- Примеры теперь отображаются с соответствующим светлым или темным цветовым режимом в соответствии с настройкой в нашей документации. Каждый пример имеет индивидуальный выбор цветового режима.
 
-- Improved included JavaScript for live Toast demo.
+- Улучшен встроенный JavaScript для демо-версии Toast.
 
-- Added `twbs/examples` repo contents to the top of the Examples page.
+- В начало страницы примеров добавлено содержимое репозитория `twbs/examples`.
 
-### Tooling
+### Инструменты
 
-- Added SCSS testing via True to help test our utilities API and other customizations.
+- Добавлено тестирование SCSS через True, чтобы помочь протестировать API наших утилит и другие настройки.
 
-- Replaced instances of our bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
+- Экземпляры нашего проекта bootstrap-npm-starter заменены более новыми и полными [репозиторий twbs/examples](https://github.com/twbs/examples).
 
 <hr class="mb-4">
 
-For a complete list of changes, [see the v5.3.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
+Полный список изменений [смотрите в проекте v5.3.0-alpha2 на GitHub](https://github.com/orgs/twbs/projects/13).
 
 ## v5.3.0-alpha1
 

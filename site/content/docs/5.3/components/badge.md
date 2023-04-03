@@ -98,6 +98,6 @@ toc: true
 
 {{< scss-docs name="badge-css-vars" file="scss/_badge.scss" >}}
 
-### Переменные Sass
+### Sass переменные
 
 {{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}
