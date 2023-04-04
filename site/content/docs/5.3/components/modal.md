@@ -481,24 +481,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 </div>
 {{< /example >}}
 
-```js
-const exampleModal = document.getElementById('exampleModal')
-exampleModal.addEventListener('show.bs.modal', event => {
-  // Кнопка, которая активировала модальное окно
-  const button = event.relatedTarget
-  // Извлекает информацию из атрибутов data-bs-*
-  const recipient = button.getAttribute('data-bs-whatever')
-  // При необходимости вы можете инициировать запрос Ajax здесь,
-  // а затем выполнить обновление в обратном вызове.
-  //
-  // Обновляет содержимое модального окна.
-  const modalTitle = exampleModal.querySelector('.modal-title')
-  const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-  modalTitle.textContent = `New message to ${recipient}`
-  modalBodyInput.value = recipient
-})
-```
+{{< js-docs name="varying-modal-content" file="site/assets/js/snippets.js" >}}
 
 ### Переключение между модальными окнами
 
@@ -641,7 +624,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
 
 {{< bs-table >}}
 | Класс | Доступность |
-| --- | --- | --- |
+| --- | --- |
 | `.modal-fullscreen` | Всегда |
 | `.modal-fullscreen-sm-down` | `576px` |
 | `.modal-fullscreen-md-down` | `768px` |

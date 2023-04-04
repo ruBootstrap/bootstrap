@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.0-alpha2.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.0-alpha3.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.0-alpha2`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.0-alpha2`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.0-alpha2`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.0-alpha3`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.0-alpha3`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.0-alpha3`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -58,7 +58,7 @@
 
 ## Статус
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/twbs/bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions?query=workflow%3AJS+Tests+branch%3Amain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/twbs/bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
 [![npm version](https://img.shields.io/npm/v/bootstrap?logo=npm&logoColor=fff)](https://www.npmjs.com/package/bootstrap)
 [![Gem version](https://img.shields.io/gem/v/bootstrap?logo=rubygems&logoColor=fff)](https://rubygems.org/gems/bootstrap)
 [![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue?logo=meteor&logoColor=fff)](https://atmospherejs.com/twbs/bootstrap)

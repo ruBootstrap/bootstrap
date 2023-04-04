@@ -87,17 +87,7 @@ toc: true
 
 Мы используем следующий код JavaScript для запуска нашей демонстрации тостов:
 
-```js
-const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
-
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
-}
-```
+{{< js-docs name="live-toast" file="site/assets/js/snippets.js" >}}
 
 ### Полупрозрачный
 

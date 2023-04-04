@@ -31,6 +31,7 @@ toc: true
 
 Мы предоставляем версию Bootstrap, построенную как `ESM` (`bootstrap.esm.js` и `bootstrap.esm.min.js`), которая позволяет Вам использовать Bootstrap в качестве модуля в Вашем браузере, если Ваши [целевые браузеры поддерживают его](https://caniuse.com/es6-module).
 
+<!-- eslint-skip -->
 ```html
 <script type="module">
   import { Toast } from 'bootstrap.esm.min.js'
@@ -55,6 +56,7 @@ Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relativ
 
 Чтобы исправить это, вы можете использовать `importmap` для преобразования произвольных имен модулей в полные пути. Если ваши [целевые браузеры](https://caniuse.com/?search=importmap) не поддерживают `importmap`, вам нужно будет использовать проект [es-module-shims](https://github.com/guybedford/es-module-shims). Вот как это работает для Bootstrap и Popper:
 
+<!-- eslint-skip -->
 ```html
 <!doctype html>
 <html lang="en">
@@ -232,42 +234,7 @@ bootstrap.Modal.Default.keyboard = false
 
 Значение по умолчанию для `allowList` следующее:
 
-```js
-const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
-const DefaultAllowlist = {
-  // Глобальные атрибуты разрешены для любого указанного ниже элемента.
-  '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
-  a: ['target', 'href', 'title', 'rel'],
-  area: [],
-  b: [],
-  br: [],
-  col: [],
-  code: [],
-  div: [],
-  em: [],
-  hr: [],
-  h1: [],
-  h2: [],
-  h3: [],
-  h4: [],
-  h5: [],
-  h6: [],
-  i: [],
-  img: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
-  li: [],
-  ol: [],
-  p: [],
-  pre: [],
-  s: [],
-  small: [],
-  span: [],
-  sub: [],
-  sup: [],
-  strong: [],
-  u: [],
-  ul: []
-}
-```
+{{< js-docs name="allow-list" file="js/src/util/sanitizer.js" >}}
 
 Если вы хотите добавить новые значения в этот `allowList` по умолчанию, вы можете сделать следующее:
 

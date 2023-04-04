@@ -26,6 +26,7 @@ toc: true
 - `inline-block`
 - `block`
 - `grid`
+- `inline-grid`
 - `table`
 - `table-cell`
 - `table-row`
@@ -89,6 +90,7 @@ toc: true
 - `.d-print-inline-block`
 - `.d-print-block`
 - `.d-print-grid`
+- `.d-print-inline-grid`
 - `.d-print-table`
 - `.d-print-table-row`
 - `.d-print-table-cell`
