@@ -1,68 +1,68 @@
 ---
 layout: docs
-title: Focus ring
-description: Utility classes that allows you to add and modify custom focus ring styles to elements and components.
+title: Кольцо фокусировки
+description: Вспомогательные классы, позволяющие добавлять и изменять пользовательские стили кольца фокусировки для элементов и компонентов.
 group: helpers
 toc: true
 added: "5.3"
 ---
 
-The `.focus-ring` helper removes the default `outline` on `:focus`, replacing it with a `box-shadow` that can be more broadly customized. The new shadow is made up of a series of CSS variables, inherited from the `:root` level, that can be modified for any element or component.
+Помощник `.focus-ring` удаляет `outline` по умолчанию для `:focus`, заменяя его `box-shadow`, который можно настроить более широко. Новая тень состоит из ряда переменных CSS, унаследованных от уровня `:root`, которые можно изменить для любого элемента или компонента.
 
-## Example
+## Пример
 
-Click directly on the link below to see the focus ring in action, or into the example below and then press <kbd>Tab</kbd>.
+Нажмите непосредственно на ссылку ниже, чтобы увидеть кольцо фокусировки в действии, или в примере ниже, а затем нажмите <kbd>Tab</kbd>.
 
 {{< example >}}
 <a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
-  Custom focus ring
+  Специальное кольцо фокусировки
 </a>
 {{< /example >}}
 
-## Customize
+## Кастомизация
 
-Modify the styling of a focus ring with our CSS variables, Sass variables, utilities, or custom styles.
+Измените стиль кольца фокусировки с помощью наших переменных CSS, переменных Sass, утилит или пользовательских стилей.
 
-### CSS variables
+### CSS переменные
 
-Modify the `--bs-focus-ring-*` CSS variables as needed to change the default appearance.
+При необходимости измените переменные CSS `--bs-focus-ring-*`, чтобы изменить внешний вид по умолчанию.
 
 {{< example >}}
 <a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .25)">
-  Green focus ring
+  Зеленое кольцо фокусировки
 </a>
 {{< /example >}}
 
-`.focus-ring` sets styles via global CSS variables that can be overridden on any parent element, as shown above. These variables are generated from their Sass variable counterparts.
+`.focus-ring` устанавливает стили через глобальные переменные CSS, которые можно переопределить для любого родительского элемента, как показано выше. Эти переменные генерируются из их аналогов переменных Sass.
 
 {{< scss-docs name="root-focus-variables" file="scss/_root.scss" >}}
 
-By default, there is no `--bs-focus-ring-x`, `--bs-focus-ring-y`, or `--bs-focus-ring-blur`, but we provide CSS variables with fallbacks to initial `0` values. Modify them to change the default appearance.
+По умолчанию нет `--bs-focus-ring-x`, `--bs-focus-ring-y` или `--bs-focus-ring-blur`, но мы предоставляем переменные CSS с запасными вариантами. к начальным значениям `0`. Измените их, чтобы изменить внешний вид по умолчанию.
 
 {{< example >}}
 <a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-x: 10px; --bs-focus-ring-y: 10px; --bs-focus-ring-blur: 4px">
-  Blurry offset focus ring
+  Размытое смещенное кольцо фокусировки
 </a>
 {{< /example >}}
 
 ### Sass
 
-Customize the focus ring Sass variables to modify all usage of the focus ring styles across your Bootstrap-powered project.
+Настройте переменные кольца фокусировки Sass, чтобы изменить все использование стилей кольца фокусировки в вашем проекте на базе Bootstrap.
 
 {{< scss-docs name="focus-ring-variables" file="scss/_variables.scss" >}}
 
-### Utilities
+### Утилиты
 
-In addition to `.focus-ring`, we have several `.focus-ring-*` utilities to modify the helper class defaults. Modify the color with any of our [theme colors]({{< docsref "/customize/color#theme-colors" >}}). Note that the light and dark variants may not be visible on all background colors given current color mode support.
+Помимо `.focus-ring`, у нас есть несколько утилит `.focus-ring-*` для изменения значений по умолчанию вспомогательного класса. Измените цвет с помощью любого из наших [цветов темы]({{< docsref "/customize/color#theme-colors" >}}). Обратите внимание, что светлые и темные варианты могут быть видны не на всех цветах фона, учитывая текущую поддержку цветового режима.
 
 {{< example >}}
 {{< focus-ring.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<p><a href="#" class="d-inline-flex focus-ring focus-ring-{{ .name }} py-1 px-2 text-decoration-none border rounded-2">{{ title .name }} focus</a></p>
+<p><a href="#" class="d-inline-flex focus-ring focus-ring-{{ .name }} py-1 px-2 text-decoration-none border rounded-2">{{ title .name }} фокус</a></p>
 {{- end -}}
 {{< /focus-ring.inline >}}
 {{< /example >}}
 
-Focus ring utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты кольца фокусировки объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-focus-ring" file="scss/_utilities.scss" >}}

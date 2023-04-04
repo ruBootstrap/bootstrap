@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: Link
-description: Link utilities are used to stylize your anchors to adjust their color, opacity, underline offset, underline color, and more.
+title: Ссылка
+description: Утилиты ссылок используются для стилизации ваших якорей, чтобы настроить их цвет, непрозрачность, смещение подчеркивания, цвет подчеркивания и многое другое.
 group: utilities
 toc: true
 added: 5.3
 ---
 
-## Link opacity
+## Непрозрачность ссылки
 
-Change the alpha opacity of the link `rgba()` color value with utilities. Please be aware that changes to a color's opacity can lead to links with [*insufficient* contrast]({{< docsref "getting-started/accessibility#color-contrast" >}}).
+Измените альфа-прозрачность значения цвета ссылки `rgba()` с помощью утилит. Имейте в виду, что изменения непрозрачности цвета могут привести к ссылкам с [*недостаточной* контрастностью]({{< docsref "getting-started/accessibility#color-contrast" >}}).
 
 {{< example >}}
 <p><a class="link-opacity-10" href="#">Link opacity 10</a></p>
@@ -19,21 +19,21 @@ Change the alpha opacity of the link `rgba()` color value with utilities. Please
 <p><a class="link-opacity-100" href="#">Link opacity 100</a></p>
 {{< /example >}}
 
-You can even change the opacity level on hover.
+Вы даже можете изменить уровень непрозрачности при наведении.
 
 {{< example >}}
-<p><a class="link-opacity-10-hover" href="#">Link hover opacity 10</a></p>
-<p><a class="link-opacity-25-hover" href="#">Link hover opacity 25</a></p>
-<p><a class="link-opacity-50-hover" href="#">Link hover opacity 50</a></p>
-<p><a class="link-opacity-75-hover" href="#">Link hover opacity 75</a></p>
-<p><a class="link-opacity-100-hover" href="#">Link hover opacity 100</a></p>
+<p><a class="link-opacity-10-hover" href="#">Непрозрачность при наведении ссылки 10</a></p>
+<p><a class="link-opacity-25-hover" href="#">Непрозрачность при наведении ссылки 25</a></p>
+<p><a class="link-opacity-50-hover" href="#">Непрозрачность при наведении ссылки 50</a></p>
+<p><a class="link-opacity-75-hover" href="#">Непрозрачность при наведении ссылки 75</a></p>
+<p><a class="link-opacity-100-hover" href="#">Непрозрачность при наведении ссылки 100</a></p>
 {{< /example >}}
 
-## Link underlines
+## Подчеркивание ссылки
 
-### Underline color
+### Цвет подчеркивания
 
-Change the underline's color independent of the link text color.
+Измените цвет подчеркивания независимо от цвета текста ссылки.
 
 {{< example >}}
 {{< link-underline-colors.inline >}}
@@ -43,43 +43,43 @@ Change the underline's color independent of the link text color.
 {{< /link-underline-colors.inline >}}
 {{< /example >}}
 
-### Underline offset
+### Смещение подчеркивания
 
-Change the underline's distance from your text. Offset is set in `em` units to automatically scale with the element's current `font-size`.
-
-{{< example >}}
-<p><a href="#">Default link</a></p>
-<p><a class="link-offset-1" href="#">Offset 1 link</a></p>
-<p><a class="link-offset-2" href="#">Offset 2 link</a></p>
-<p><a class="link-offset-3" href="#">Offset 3 link</a></p>
-{{< /example >}}
-
-### Underline opacity
-
-Change the underline's opacity. Requires adding `.link-underline` to first set an `rgba()` color we use to then modify the alpha opacity.
+Измените расстояние подчеркивания от вашего текста. Смещение задается в единицах `em` для автоматического масштабирования с текущим размером шрифта элемента `font-size`.
 
 {{< example >}}
-<p><a class="link-offset-2 link-underline link-underline-opacity-0" href="#">Underline opacity 0</a></p>
-<p><a class="link-offset-2 link-underline link-underline-opacity-10" href="#">Underline opacity 10</a></p>
-<p><a class="link-offset-2 link-underline link-underline-opacity-25" href="#">Underline opacity 25</a></p>
-<p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Underline opacity 50</a></p>
-<p><a class="link-offset-2 link-underline link-underline-opacity-75" href="#">Underline opacity 75</a></p>
-<p><a class="link-offset-2 link-underline link-underline-opacity-100" href="#">Underline opacity 100</a></p>
+<p><a href="#">Ссылка по умолчанию</a></p>
+<p><a class="link-offset-1" href="#">Смещение 1 ссылки</a></p>
+<p><a class="link-offset-2" href="#">Смещение 2 ссылки</a></p>
+<p><a class="link-offset-3" href="#">Смещение 3 ссылки</a></p>
 {{< /example >}}
 
-### Hover variants
+### Непрозрачность подчеркивания
 
-Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-underline-opacity` utilities include `:hover` variants by default. Mix and match to create unique link styles.
+Измените непрозрачность подчеркивания. Требуется добавить `.link-underline`, чтобы сначала установить цвет `rgba()`, который мы используем, чтобы затем изменить непрозрачность альфа-канала.
+
+{{< example >}}
+<p><a class="link-offset-2 link-underline link-underline-opacity-0" href="#">Непрозрачность подчеркивания 0</a></p>
+<p><a class="link-offset-2 link-underline link-underline-opacity-10" href="#">Непрозрачность подчеркивания 10</a></p>
+<p><a class="link-offset-2 link-underline link-underline-opacity-25" href="#">Непрозрачность подчеркивания 25</a></p>
+<p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Непрозрачность подчеркивания 50</a></p>
+<p><a class="link-offset-2 link-underline link-underline-opacity-75" href="#">Непрозрачность подчеркивания 75</a></p>
+<p><a class="link-offset-2 link-underline link-underline-opacity-100" href="#">Непрозрачность подчеркивания 100</a></p>
+{{< /example >}}
+
+### Варианты наведения
+
+Как и утилиты `.link-opacity-*-hover`, утилиты `.link-offset` и `.link-underline-opacity` по умолчанию включают варианты `:hover`. Смешивайте и сочетайте, чтобы создавать уникальные стили ссылок.
 
 {{< example >}}
 <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
-  Underline opacity 0
+  Непрозрачность подчеркивания 0
 </a>
 {{< /example >}}
 
-## Colored links
+## Цветные ссылки
 
-[Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
+[Вспомогательные функции для цветных ссылок]({{< docsref "/helpers/colored-links/" >}}) были обновлены для работы с нашими утилитами для работы со ссылками. Используйте новые утилиты для изменения непрозрачности ссылки, непрозрачности подчеркивания и смещения подчеркивания.
 
 {{< example >}}
 {{< colored-links.inline >}}
@@ -96,10 +96,10 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 
 ## Sass
 
-In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
+В дополнение к следующим функциям Sass, рассмотрите возможность прочитать о наших включенных [пользовательских свойствах CSS]({{< docsref "/customize/css-variables" >}}) (также известных как переменные CSS) для цветов и многого другого.
 
 ### Утилиты API
 
-Link utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Утилиты ссылок объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-links" file="scss/_utilities.scss" >}}
