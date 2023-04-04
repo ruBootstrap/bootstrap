@@ -8,7 +8,7 @@ toc: true
 
 ## Пример
 
-Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+Элементы управления формы оформлены с использованием сочетания переменных Sass и CSS, что позволяет им адаптироваться к цветовым режимам и поддерживать любой метод настройки.
 
 {{< example >}}
 <div class="mb-3">

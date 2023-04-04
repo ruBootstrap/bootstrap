@@ -304,10 +304,10 @@ toc: true
 
 ### Sass переменные
 
-Variables for checks:
+Переменные для флажков:
 
 {{< scss-docs name="form-check-variables" file="scss/_variables.scss" >}}
 
-Variables for switches:
+Переменные для свичей:
 
 {{< scss-docs name="form-switch-variables" file="scss/_variables.scss" >}}

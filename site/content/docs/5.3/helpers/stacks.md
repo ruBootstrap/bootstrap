@@ -19,9 +19,9 @@ added: "5.1"
 
 {{< example class="bd-example-flex" >}}
 <div class="vstack gap-3">
-  <div class="p-2">First item</div>
-  <div class="p-2">Second item</div>
-  <div class="p-2">Third item</div>
+  <div class="p-2">Первый элемент</div>
+  <div class="p-2">Второй элемент</div>
+  <div class="p-2">Третий элемент</div>
 </div>
 {{< /example >}}
 
@@ -31,9 +31,9 @@ added: "5.1"
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="p-2">First item</div>
-  <div class="p-2">Second item</div>
-  <div class="p-2">Third item</div>
+  <div class="p-2">Первый элемент</div>
+  <div class="p-2">Второй элемент</div>
+  <div class="p-2">Третий элемент</div>
 </div>
 {{< /example >}}
 
@@ -41,9 +41,9 @@ added: "5.1"
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="p-2">First item</div>
-  <div class="p-2">Second item</div>
-  <div class="p-2">Third item</div>
+  <div class="p-2">Первый элемент</div>
+  <div class="p-2">Второй элемент</div>
+  <div class="p-2">Третий элемент</div>
 </div>
 {{< /example >}}
 
@@ -51,10 +51,10 @@ added: "5.1"
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="p-2">First item</div>
-  <div class="p-2">Second item</div>
+  <div class="p-2">Первый элемент</div>
+  <div class="p-2">Второй элемент</div>
   <div class="vr"></div>
-  <div class="p-2">Third item</div>
+  <div class="p-2">Третий элемент</div>
 </div>
 {{< /example >}}
 

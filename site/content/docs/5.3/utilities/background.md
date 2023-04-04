@@ -15,7 +15,7 @@ toc: true
 Подобно классам цвета контекстного текста, установите фон элемента для любого контекстного класса. Фоновые утилиты **не устанавливают `color`**, поэтому в некоторых случаях Вы захотите использовать `.text-*` [утилиты цвета]({{< docsref "/utilities/colors" >}}).
 
 {{< callout info >}}
-Background utilities like `.bg-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.bg-*-subtle` utility will. This will be resolved in v6.
+Фоновые утилиты, такие как `.bg-*`, сгенерированные из нашей исходной карты Sass `$theme-colors`, еще не реагируют на цветовые режимы, однако любая утилита `.bg-*-subtle` будет. Это будет решено в 6 версии.
 {{< /callout >}}
 
 {{< example >}}
@@ -77,7 +77,7 @@ Background utilities like `.bg-*` that generated from our original `$theme-color
 <div class="bg-success p-2" style="--bs-bg-opacity: .5;">Это успешный фон с непрозрачностью 50%</div>
 {{< /example >}}
 
-Or, choose from any of the `.bg-opacity` utilities:
+Или выберите любую из утилит `.bg-opacity`:
 
 {{< example >}}
 <div class="bg-success p-2 text-white">Это фон успеха по умолчанию</div>

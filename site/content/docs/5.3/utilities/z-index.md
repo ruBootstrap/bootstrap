@@ -45,6 +45,6 @@ added: "5.3"
 
 ### Утилиты API
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Позиционные утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит]({{< docsref "/utilities/api#using-the-api" >}}).
 
 {{< scss-docs name="utils-zindex" file="scss/_utilities.scss" >}}

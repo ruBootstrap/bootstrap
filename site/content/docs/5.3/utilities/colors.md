@@ -15,7 +15,7 @@ toc: true
 Раскрашивайте текст с помощью цветных утилит. Если Вы хотите раскрасить ссылки, Вы можете использовать [вспомогательные классы `.link-*`]({{< docsref "/helpers/colored-links" >}}), которые имеют состояния `:hover` и `:focus`.
 
 {{< callout info >}}
-Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
+Цветовые утилиты, такие как `.text-*` , сгенерированные из нашей исходной карты Sass `$theme-colors`, еще не реагируют на цветовые режимы, однако любая утилита `.text-*-emphasis` будет. Это будет решено в 6 версии.
 {{< /callout >}}
 
 {{< example >}}
@@ -42,7 +42,7 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 {{< /callout >}}
 
 {{< callout warning >}}
-**Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+**Устарело:** С добавлением расширенных цветов и переменных темы утилита `.text-muted` устарела, начиная с версии 5.3.0. Его значение по умолчанию также было переназначено новой переменной CSS `--bs-secondary-color` для лучшей поддержки цветовых режимов. Он будет удален в версии 6.0.0.
 {{< /callout >}}
 
 ## Непрозрачность

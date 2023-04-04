@@ -11,7 +11,7 @@ toc: true
 Оповещения доступны для любой длины текста, а также для дополнительной кнопки закрытия. Для правильной стилизации используйте один из восьми **обязательных** контекстных классов (например, `.alert-success`). Для встроенного отключения используйте [подключаемый модуль JavaScript предупреждений](#отклонение).
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [the Sass loop](#sass-loop).
+**Внимание!** Начиная с версии 5.3.0, Sass миксин `alert-variant()` устарел. У вариантов предупреждений теперь переменные CSS переопределены в [цикле Sass](#sass-loop).
 {{< /callout >}}
 
 {{< example >}}

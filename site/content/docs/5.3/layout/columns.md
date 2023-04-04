@@ -24,7 +24,7 @@ toc: true
 
 ### Вертикальное выравнивание
 
-Change the vertical alignment with any of the responsive `align-items-*` classes.
+Измените вертикальное выравнивание с помощью любого адаптивного класса `align-items-*`.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container">
@@ -74,7 +74,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 </div>
 {{< /example >}}
 
-Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
+Или измените выравнивание каждого столбца по отдельности с помощью любого из адаптивных классов `.align-self-*`.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container">
@@ -94,7 +94,7 @@ Or, change the alignment of each column individually with any of the responsive 
 
 ### Горизонтальное выравнивание
 
-Change the horizontal alignment with any of the responsive `justify-content-*` classes.
+Измените горизонтальное выравнивание с помощью любого адаптивного класса `justify-content-*`.
 
 {{< example class="bd-example-row" >}}
 <div class="container">

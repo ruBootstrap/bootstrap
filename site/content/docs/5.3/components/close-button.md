@@ -45,7 +45,7 @@ toc: true
 
 {{< added-in "5.3.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, close button now uses local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Как часть развивающегося подхода Bootstrap к переменным CSS, кнопка закрытия теперь использует локальные переменные CSS в `.btn-close` для расширенной настройки в реальном времени. Значения переменных CSS задаются через Sass, поэтому настройка Sass по-прежнему поддерживается.
 
 {{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 

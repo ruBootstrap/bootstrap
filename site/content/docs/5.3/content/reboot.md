@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Reboot
+title: Перезагрузка
 description: Перезагрузка - это набор изменений CSS для конкретных элементов в одном файле, запускает Bootstrap, чтобы обеспечить элегантную, последовательную и простую основу для построения.
 group: content
 aliases: "/docs/5.3/content/"
@@ -85,7 +85,7 @@ $font-family-sans-serif:
 У всех элементов заголовков — `<h1>`—`<h6>` удалено `margin-top`, а `margin-bottom: .5rem` установлено, а `line-height` ужесточено. Хотя заголовки наследуют свой `color` по умолчанию, вы также можете переопределить его с помощью дополнительной переменной CSS `--bs-heading-color`.
 
 {{< bs-table "table" >}}
-| Heading | Example |
+| Заголовок | Пример |
 | --- | --- |
 | `<h1></h1>` | <span class="h1">h1. Заголовок Bootstrap</span> |
 | `<h2></h2>` | <span class="h2">h2. Заголовок Bootstrap</span> |

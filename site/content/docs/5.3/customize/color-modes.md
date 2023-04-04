@@ -105,7 +105,7 @@ $color-mode-type: data;
 }
 ```
 
-Outputs to:
+Вывод в:
 
 ```css
 [data-bs-theme=dark] .element {
@@ -114,7 +114,7 @@ Outputs to:
 }
 ```
 
-And when setting to `media-query`:
+И при настройке на `media-query`:
 
 ```scss
 $color-mode-type: media-query;
@@ -127,7 +127,7 @@ $color-mode-type: media-query;
 }
 ```
 
-Outputs to:
+Вывод в:
 
 ```css
 @media (prefers-color-scheme: dark) {

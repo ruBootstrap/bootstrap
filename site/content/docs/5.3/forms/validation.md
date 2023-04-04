@@ -357,11 +357,11 @@ extra_js:
 
 {{< added-in "5.3.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, forms now use local CSS variables for validation for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+В рамках развивающегося подхода Bootstrap к переменным CSS формы теперь используют локальные переменные CSS для проверки для расширенной настройки в реальном времени. Значения переменных CSS задаются через Sass, поэтому настройка Sass по-прежнему поддерживается.
 
 {{< scss-docs name="root-form-validation-variables" file="scss/_root.scss" >}}
 
-These variables are also color mode adaptive, meaning they change color while in dark mode.
+Эти переменные также адаптируются к цветовому режиму, то есть они меняют цвет в темном режиме.
 
 ### Sass переменные
 

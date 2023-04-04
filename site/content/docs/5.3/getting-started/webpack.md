@@ -248,23 +248,23 @@ my-project/
 
    Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Webpack](https://github.com/twbs/examples/tree/main/webpack), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать сборку, импортируя только части CSS Bootstrap. и JS, которые вам нужны.
 
-## Production optimizations
+## Оптимизация продакшена
 
-Depending on your setup, you may want to implement some additional security and speed optimizations useful for running the project in production. Note that these optimizations are not applied on [the Webpack example project](https://github.com/twbs/examples/tree/main/webpack) and are up to you to implement.
+В зависимости от вашей настройки вы можете захотеть реализовать некоторые дополнительные оптимизации безопасности и скорости, полезные для запуска проекта в производственной среде. Обратите внимание, что эти оптимизации не применяются к [примеру проекта Webpack](https://github.com/twbs/examples/tree/main/webpack) и их реализация зависит от вас.
 
-### Extracting CSS
+### Извлечение CSS
 
-The `style-loader` we configured above conveniently emits CSS into the bundle so that manually loading a CSS file in `dist/index.html` isn't necessary. This approach may not work with a strict Content Security Policy, however, and it may become a bottleneck in your application due to the large bundle size.
+`style-loader`, который мы настроили выше, удобно передает CSS в пакет, так что вручную загружать файл CSS в `dist/index.html` не нужно. Однако этот подход может не работать со строгой политикой безопасности контента и может стать узким местом в вашем приложении из-за большого размера пакета.
 
-To separate the CSS so that we can load it directly from `dist/index.html`, use the `mini-css-extract-loader` Webpack plugin.
+Чтобы отделить CSS, чтобы мы могли загрузить его непосредственно из `dist/index.html`, используйте подключаемый модуль Webpack `mini-css-extract-loader`.
 
-First, install the plugin:
+Сначала установите плагин:
 
 ```sh
 npm install --save-dev mini-css-extract-plugin
 ```
 
-Then instantiate and use the plugin in the Webpack configuration:
+Затем создайте и используйте плагин в конфигурации Webpack:
 
 ```diff
 --- a/webpack.config.js
@@ -299,7 +299,7 @@ Then instantiate and use the plugin in the Webpack configuration:
            {
 ```
 
-After running `npm run build` again, there will be a new file `dist/main.css`, which will contain all of the CSS imported by `src/js/main.js`. If you view `dist/index.html` in your browser now, the style will be missing, as it is now in `dist/main.css`. You can include the generated CSS in `dist/index.html` like this:
+После повторного запуска `npm run build` появится новый файл `dist/main.css`, который будет содержать весь CSS, импортированный `src/js/main.js`. Если вы сейчас просмотрите `dist/index.html` в своем браузере, стиль будет отсутствовать, так как теперь он находится в `dist/main.css`. Вы можете включить сгенерированный CSS в `dist/index.html` следующим образом:
 
 ```diff
 --- a/dist/index.html
@@ -314,11 +314,11 @@ After running `npm run build` again, there will be a new file `dist/main.css`, w
    <body>
 ```
 
-### Extracting SVG files
+### Извлечение файлов SVG
 
-Bootstrap's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
+Bootstrap CSS включает несколько ссылок на файлы SVG через встроенные URI `data:`. Если вы определите политику безопасности контента для своего проекта, которая блокирует URI `data:` для изображений, то эти файлы SVG не будут загружаться. Вы можете обойти эту проблему, извлекая встроенные файлы SVG с помощью функции модулей ресурсов Webpack.
 
-Configure Webpack to extract inline SVG files like this:
+Настройте Webpack для извлечения встроенных файлов SVG следующим образом:
 
 ```diff
 --- a/webpack.config.js
@@ -340,7 +340,7 @@ Configure Webpack to extract inline SVG files like this:
          use: [
 ```
 
-After running `npm run build` again, you'll find the SVG files extracted into `dist/icons` and properly referenced from CSS.
+После повторного запуска `npm run build` вы обнаружите, что файлы SVG извлечены в `dist/icons` и правильно указаны в CSS.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}
