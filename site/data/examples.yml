@@ -1,38 +1,38 @@
-- category: Starters
+- category: Стартовые наборы
   slug: starters
   external: true
-  description: "Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
+  description: "Функциональные примеры использования Bootstrap в распространенных средах JS, таких как Webpack, Parcel, Vite и других, которые вы можете редактировать в StackBlitz."
   examples:
-    - name: CDN starter
+    - name: Стартер CDN
       slug: cdn-starter
-      description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
+      description: "Мгновенно включайте скомпилированные CSS и JavaScript Bootstrap через CDN jsDelivr."
       url: /examples/tree/main/starter
-    - name: Sass & JS
+    - name: Sass и JS
       slug: sass-js
-      description: "Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
+      description: "Используйте npm для импорта и компиляции Bootstrap Sass с Autoprefixer и Stylelint, а также наш встроенный JavaScript."
       url: /examples/tree/main/sass-js
-    - name: Sass & ESM JS
+    - name: Sass и ESM JS
       slug: sass-js-esm
-      description: "Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
+      description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Autoprefixer и Stylelint, а также скомпилируйте исходный код JavaScript с прокладкой ESM."
       url: /examples/tree/main/sass-js-esm
     - name: Webpack
       slug: webpack
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Webpack."
       url: /examples/tree/main/webpack
       htmlIndexLocation: src
     - name: Parcel
       slug: parcel
-      description: "Import and bundle Bootstrap's source Sass and JavaScript via Parcel."
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Parcel."
       url: /examples/tree/main/parcel
       htmlIndexLocation: src
     - name: Vite
       slug: vite
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vite."
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Vite."
       url: /examples/tree/main/vite
       htmlIndexLocation: src
-    - name: Bootstrap Icons
+    - name: Bootstrap Иконки
       slug: bootstrap-icons
-      description: "Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font."
+      description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons."
       url: /examples/tree/main/icons-font
 - category: Фрагменты
   slug: snippets
@@ -62,18 +62,18 @@
     - name: Модалки
       slug: modals
       description: "Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов."
-    - name: Badges
+    - name: Значки
       slug: badges
-      description: "Make badges work with custom inner HTML and new looks."
-    - name: Breadcrumbs
+      description: "Заставьте значки работать с пользовательским внутренним HTML и новым внешним видом."
+    - name: Хлебные крошки
       slug: breadcrumbs
-      description: "Integrate custom icons and create stepper components."
-    - name: Buttons
+      description: "Интегрируйте пользовательские иконки и создавайте степперные компоненты."
+    - name: Кнопки
       slug: buttons
-      description: "Create custom buttons for just about any use case with utilities."
-    - name: Jumbotrons
+      description: "Создавайте настраиваемые кнопки практически для любого варианта использования с помощью утилит."
+    - name: Джамботроны
       slug: jumbotrons
-      description: "Create modernized versions of the classic Bootstrap component."
+      description: "Создавайте модернизированные версии классического компонента Bootstrap."
 
 - category: Пользовательские компоненты
   slug: custom-components
