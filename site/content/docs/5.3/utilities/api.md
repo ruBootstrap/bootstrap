@@ -589,7 +589,7 @@ $utilities: map-merge(
 
 #### Удалить утилиту в RTL
 
-Некоторые крайние случаи затрудняют [стилизацию RTL](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), например, разрывы строк на арабском языке. Таким образом, утилиты можно исключить из вывода RTL, установив для опции `rtl` значение `false`:
+Некоторые крайние случаи затрудняют [стилизацию RTL](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), например, переносы строк на арабском языке. Таким образом, утилиты можно исключить из вывода RTL, установив для опции `rtl` значение `false`:
 
 ```scss
 $utilities: (
