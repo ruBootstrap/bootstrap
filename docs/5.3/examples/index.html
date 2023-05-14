@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.111.3">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.3">
@@ -36,16 +36,16 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Примеры">
 <meta name="twitter:description" content="Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.">
-<meta name="twitter:image" content="/docs/5.3/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.su/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.su/docs/5.3/examples/">
 <meta property="og:title" content="Примеры">
 <meta property="og:description" content="Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://getbootstrap.su/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1000">
-<meta property="og:image:height" content="500">
-<meta property="og:image" content="/docs/5.3/assets/brand/bootstrap-social.png">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1000">
 
 
     
@@ -73,8 +73,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="arrow-right-short" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+  <symbol id="arrow-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
   </symbol>
   <symbol id="book-half" viewBox="0 0 16 16">
     <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="d-flex">
       
 
-      <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Переключить навигацию">
         <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
       </button>
     </div>
@@ -278,27 +278,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     type="button"
                     aria-expanded="false"
                     data-bs-toggle="dropdown"
-                    data-bs-display="static">
+                    data-bs-display="static"
+                    aria-label="Toggle theme (auto)">
               <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-              <span class="d-lg-none ms-2">Toggle theme</span>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
@@ -322,11 +323,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="bd-lead">Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.</p>
           
           <div class="d-flex flex-column flex-md-row gap-3">
-            <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.0-alpha1/bootstrap-5.3.0-alpha1-examples.zip" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+            <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.0-alpha3/bootstrap-5.3.0-alpha3-examples.zip" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
               <svg class="bi me-2" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
               Скачать примеры
             </a>
-            <a href="https://github.com/twbs/bootstrap/archive/v5.3.0-alpha1.zip" class="btn btn-lg bd-btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+            <a href="https://github.com/twbs/bootstrap/archive/v5.3.0-alpha3.zip" class="btn btn-lg bd-btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
               Скачать исходный код
             </a>
           </div>
@@ -342,570 +343,907 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="bd-content order-1 py-5" id="content">
     <div class="container-xxl bd-gutter">
       
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="%D1%84%D1%80%D0%B0%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D1%8B">Фрагменты</h2>
-    <p>Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с настраиваемым CSS и т.д.</p>
+<div class="bd-content">
+  <h2 id="%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%8B">Стартовые наборы</h2>
+  <p>Функциональные примеры использования Bootstrap в распространенных средах JS, таких как Webpack, Parcel, Vite и других, которые вы можете редактировать в StackBlitz.</p>
+  <div class="row">
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/starter/" target="_blank" rel="noopener">
+                Стартер CDN
+              </a>
+            </h3>
+            <p class="text-body-secondary">Мгновенно включайте скомпилированные CSS и JavaScript Bootstrap через CDN jsDelivr.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/starter?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js/" target="_blank" rel="noopener">
+                Sass и JS
+              </a>
+            </h3>
+            <p class="text-body-secondary">Используйте npm для импорта и компиляции Bootstrap Sass с Autoprefixer и Stylelint, а также наш встроенный JavaScript.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/sass-js-esm/" target="_blank" rel="noopener">
+                Sass и ESM JS
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импортируйте и скомпилируйте Sass Bootstrap с помощью Autoprefixer и Stylelint, а также скомпилируйте исходный код JavaScript с прокладкой ESM.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">
+                Webpack
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Webpack.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=src%2Findex.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/parcel/" target="_blank" rel="noopener">
+                Parcel
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Parcel.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=src%2Findex.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vite/" target="_blank" rel="noopener">
+                Vite
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Vite.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vite?file=src%2Findex.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/icons-font/" target="_blank" rel="noopener">
+                Bootstrap Иконки
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/icons-font?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
     </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/headers/">
+  </div>
+<div class="bd-content">
+  <h2 id="%D1%84%D1%80%D0%B0%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D1%8B">Фрагменты</h2>
+  <p>Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с настраиваемым CSS и т.д.</p>
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/headers/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/headers.png,
                                                     /docs/5.3/assets/img/examples/headers@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/headers.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Заголовки</h3>
+            <h3 class="h5 mb-1">
+              Заголовки
+            </h3>
           </a>
-          <p class="text-muted">Отобразите свой брендинг, навигацию, поиск и многое другое с помощью этих компонентов заголовка.</p>
+          <p class="text-body-secondary">Отобразите свой брендинг, навигацию, поиск и многое другое с помощью этих компонентов заголовка.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/heroes/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/heroes/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/heroes.png,
                                                     /docs/5.3/assets/img/examples/heroes@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/heroes.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Герои</h3>
+            <h3 class="h5 mb-1">
+              Герои
+            </h3>
           </a>
-          <p class="text-muted">Создайте сцену на своей домашней странице с помощью героев с четкими призывами к действию.</p>
+          <p class="text-body-secondary">Создайте сцену на своей домашней странице с помощью героев с четкими призывами к действию.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/features/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/features/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/features.png,
                                                     /docs/5.3/assets/img/examples/features@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/features.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Функции</h3>
+            <h3 class="h5 mb-1">
+              Функции
+            </h3>
           </a>
-          <p class="text-muted">Объясните особенности, преимущества или другие детали Вашего маркетингового контента.</p>
+          <p class="text-body-secondary">Объясните особенности, преимущества или другие детали Вашего маркетингового контента.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/sidebars/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/sidebars/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/sidebars.png,
                                                     /docs/5.3/assets/img/examples/sidebars@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/sidebars.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Боковые панели</h3>
+            <h3 class="h5 mb-1">
+              Боковые панели
+            </h3>
           </a>
-          <p class="text-muted">Общие шаблоны навигации идеально подходят для макетов вне холста или нескольких столбцов.</p>
+          <p class="text-body-secondary">Общие шаблоны навигации идеально подходят для макетов вне холста или нескольких столбцов.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/footers/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/footers/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/footers.png,
                                                     /docs/5.3/assets/img/examples/footers@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/footers.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Футеры</h3>
+            <h3 class="h5 mb-1">
+              Футеры
+            </h3>
           </a>
-          <p class="text-muted">Завершите каждую страницу потрясающим нижним колонтитулом, большим или маленьким.</p>
+          <p class="text-body-secondary">Завершите каждую страницу потрясающим нижним колонтитулом, большим или маленьким.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/dropdowns/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/dropdowns/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/dropdowns.png,
                                                     /docs/5.3/assets/img/examples/dropdowns@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/dropdowns.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Выпадающие списки</h3>
+            <h3 class="h5 mb-1">
+              Выпадающие списки
+            </h3>
           </a>
-          <p class="text-muted">Расширьте свои раскрывающиеся списки с помощью фильтров, иконок, настраиваемых стилей и многого другого.</p>
+          <p class="text-body-secondary">Расширьте свои раскрывающиеся списки с помощью фильтров, иконок, настраиваемых стилей и многого другого.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/list-groups/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/list-groups/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/list-groups.png,
                                                     /docs/5.3/assets/img/examples/list-groups@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/list-groups.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Список групп</h3>
+            <h3 class="h5 mb-1">
+              Список групп
+            </h3>
           </a>
-          <p class="text-muted">Расширяйте группы списков с помощью утилит и настраиваемых стилей для любого контента.</p>
+          <p class="text-body-secondary">Расширяйте группы списков с помощью утилит и настраиваемых стилей для любого контента.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/modals/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/modals/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/modals.png,
                                                     /docs/5.3/assets/img/examples/modals@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/modals.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Модалки</h3>
+            <h3 class="h5 mb-1">
+              Модалки
+            </h3>
           </a>
-          <p class="text-muted">Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов.</p>
+          <p class="text-body-secondary">Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов.</p>
         </div>
-      </div>
+      
+    
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/badges/">
+            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/badges.png,
+                                                    /docs/5.3/assets/img/examples/badges@2x.png 2x"
+                                            src="/docs/5.3/assets/img/examples/badges.png"
+                                            alt=""
+                                            width="480" height="300"
+                                            loading="lazy">
+            <h3 class="h5 mb-1">
+              Значки
+            </h3>
+          </a>
+          <p class="text-body-secondary">Заставьте значки работать с пользовательским внутренним HTML и новым внешним видом.</p>
+        </div>
+      
+    
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/breadcrumbs/">
+            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/breadcrumbs.png,
+                                                    /docs/5.3/assets/img/examples/breadcrumbs@2x.png 2x"
+                                            src="/docs/5.3/assets/img/examples/breadcrumbs.png"
+                                            alt=""
+                                            width="480" height="300"
+                                            loading="lazy">
+            <h3 class="h5 mb-1">
+              Хлебные крошки
+            </h3>
+          </a>
+          <p class="text-body-secondary">Интегрируйте пользовательские иконки и создавайте степперные компоненты.</p>
+        </div>
+      
+    
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/buttons/">
+            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/buttons.png,
+                                                    /docs/5.3/assets/img/examples/buttons@2x.png 2x"
+                                            src="/docs/5.3/assets/img/examples/buttons.png"
+                                            alt=""
+                                            width="480" height="300"
+                                            loading="lazy">
+            <h3 class="h5 mb-1">
+              Кнопки
+            </h3>
+          </a>
+          <p class="text-body-secondary">Создавайте настраиваемые кнопки практически для любого варианта использования с помощью утилит.</p>
+        </div>
+      
+    
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/jumbotrons/">
+            <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/jumbotrons.png,
+                                                    /docs/5.3/assets/img/examples/jumbotrons@2x.png 2x"
+                                            src="/docs/5.3/assets/img/examples/jumbotrons.png"
+                                            alt=""
+                                            width="480" height="300"
+                                            loading="lazy">
+            <h3 class="h5 mb-1">
+              Джамботроны
+            </h3>
+          </a>
+          <p class="text-body-secondary">Создавайте модернизированные версии классического компонента Bootstrap.</p>
+        </div>
+      
     </div>
-</div>
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B">Пользовательские компоненты</h2>
-    <p>Совершенно новые компоненты и шаблоны, которые помогут людям быстро начать работу с Bootstrap и продемонстрируют передовой опыт добавления в платформу.</p>
-    </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/album/">
+  </div>
+<div class="bd-content">
+  <h2 id="%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B">Пользовательские компоненты</h2>
+  <p>Совершенно новые компоненты и шаблоны, которые помогут людям быстро начать работу с Bootstrap и продемонстрируют передовой опыт добавления в платформу.</p>
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/album/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/album.png,
                                                     /docs/5.3/assets/img/examples/album@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/album.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Альбом</h3>
+            <h3 class="h5 mb-1">
+              Альбом
+            </h3>
           </a>
-          <p class="text-muted">Простой одностраничный шаблон для фотогалереи, портфолио и т.д.</p>
+          <p class="text-body-secondary">Простой одностраничный шаблон для фотогалереи, портфолио и т.д.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/pricing/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/pricing/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/pricing.png,
                                                     /docs/5.3/assets/img/examples/pricing@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/pricing.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Ценообразование</h3>
+            <h3 class="h5 mb-1">
+              Ценообразование
+            </h3>
           </a>
-          <p class="text-muted">Пример страницы с ценами, созданной с помощью карточек, с настраиваемым верхним и нижним колонтитулами.</p>
+          <p class="text-body-secondary">Пример страницы с ценами, созданной с помощью карточек, с настраиваемым верхним и нижним колонтитулами.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/checkout/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/checkout/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/checkout.png,
                                                     /docs/5.3/assets/img/examples/checkout@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/checkout.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Оформление заказа</h3>
+            <h3 class="h5 mb-1">
+              Оформление заказа
+            </h3>
           </a>
-          <p class="text-muted">Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки.</p>
+          <p class="text-body-secondary">Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/product/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/product/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/product.png,
                                                     /docs/5.3/assets/img/examples/product@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/product.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Продукт</h3>
+            <h3 class="h5 mb-1">
+              Продукт
+            </h3>
           </a>
-          <p class="text-muted">Экономичная маркетинговая страница, ориентированная на продукт, с обширной сеткой и изображениями.</p>
+          <p class="text-body-secondary">Экономичная маркетинговая страница, ориентированная на продукт, с обширной сеткой и изображениями.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/cover/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/cover/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/cover.png,
                                                     /docs/5.3/assets/img/examples/cover@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/cover.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Обложка</h3>
+            <h3 class="h5 mb-1">
+              Обложка
+            </h3>
           </a>
-          <p class="text-muted">Одностраничный шаблон для создания простых и красивых домашних страниц.</p>
+          <p class="text-body-secondary">Одностраничный шаблон для создания простых и красивых домашних страниц.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/carousel/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/carousel/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/carousel.png,
                                                     /docs/5.3/assets/img/examples/carousel@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/carousel.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Карусель</h3>
+            <h3 class="h5 mb-1">
+              Карусель
+            </h3>
           </a>
-          <p class="text-muted">Настройте панель навигации и карусель, а затем добавьте новые компоненты.</p>
+          <p class="text-body-secondary">Настройте панель навигации и карусель, а затем добавьте новые компоненты.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/blog/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/blog/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/blog.png,
                                                     /docs/5.3/assets/img/examples/blog@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/blog.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Блог</h3>
+            <h3 class="h5 mb-1">
+              Блог
+            </h3>
           </a>
-          <p class="text-muted">Журнал как шаблон блога с заголовком, навигацией, избранным контентом.</p>
+          <p class="text-body-secondary">Журнал как шаблон блога с заголовком, навигацией, избранным контентом.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/dashboard/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/dashboard/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/dashboard.png,
                                                     /docs/5.3/assets/img/examples/dashboard@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/dashboard.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Панель</h3>
+            <h3 class="h5 mb-1">
+              Панель
+            </h3>
           </a>
-          <p class="text-muted">Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью.</p>
+          <p class="text-body-secondary">Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/sign-in/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/sign-in/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/sign-in.png,
                                                     /docs/5.3/assets/img/examples/sign-in@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/sign-in.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Форма входа</h3>
+            <h3 class="h5 mb-1">
+              Форма входа
+            </h3>
           </a>
-          <p class="text-muted">Индивидуальный макет и дизайн формы для простой формы входа.</p>
+          <p class="text-body-secondary">Индивидуальный макет и дизайн формы для простой формы входа.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/sticky-footer/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/sticky-footer/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/sticky-footer.png,
                                                     /docs/5.3/assets/img/examples/sticky-footer@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/sticky-footer.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Закрепленный футер</h3>
+            <h3 class="h5 mb-1">
+              Закрепленный футер
+            </h3>
           </a>
-          <p class="text-muted">Прикрепленный нижний колонтитул к нижней части области просмотра, когда содержимое страницы мало.</p>
+          <p class="text-body-secondary">Прикрепленный нижний колонтитул к нижней части области просмотра, когда содержимое страницы мало.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/sticky-footer-navbar/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/sticky-footer-navbar/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/sticky-footer-navbar.png,
                                                     /docs/5.3/assets/img/examples/sticky-footer-navbar@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/sticky-footer-navbar.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Закрепленный футер и панель навигации</h3>
+            <h3 class="h5 mb-1">
+              Закрепленный футер и панель навигации
+            </h3>
           </a>
-          <p class="text-muted">Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации.</p>
+          <p class="text-body-secondary">Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/jumbotron/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/jumbotron/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/jumbotron.png,
                                                     /docs/5.3/assets/img/examples/jumbotron@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/jumbotron.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Джамботрон</h3>
+            <h3 class="h5 mb-1">
+              Джамботрон
+            </h3>
           </a>
-          <p class="text-muted">Используйте утилиты для воссоздания и улучшения jumbotron Bootstrap 4.</p>
+          <p class="text-body-secondary">Используйте утилиты для воссоздания и улучшения jumbotron Bootstrap 4.</p>
         </div>
-      </div>
+      
     </div>
-</div>
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA">Фреймворк</h2>
-    <p>Примеры, которые сосредоточены на реализации использования встроенных компонентов, предоставляемых Bootstrap.</p>
-    </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/starter-template/">
+  </div>
+<div class="bd-content">
+  <h2 id="%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA">Фреймворк</h2>
+  <p>Примеры, которые сосредоточены на реализации использования встроенных компонентов, предоставляемых Bootstrap.</p>
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/starter-template/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/starter-template.png,
                                                     /docs/5.3/assets/img/examples/starter-template@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/starter-template.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Стартовый шаблон</h3>
+            <h3 class="h5 mb-1">
+              Стартовый шаблон
+            </h3>
           </a>
-          <p class="text-muted">Ничего, кроме простоты: скомпилированный CSS и JavaScript.</p>
+          <p class="text-body-secondary">Ничего, кроме простоты: скомпилированный CSS и JavaScript.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/grid/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/grid/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/grid.png,
                                                     /docs/5.3/assets/img/examples/grid@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/grid.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Сетка</h3>
+            <h3 class="h5 mb-1">
+              Сетка
+            </h3>
           </a>
-          <p class="text-muted">Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д.</p>
+          <p class="text-body-secondary">Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/cheatsheet/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/cheatsheet/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/cheatsheet.png,
                                                     /docs/5.3/assets/img/examples/cheatsheet@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/cheatsheet.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Шпаргалка</h3>
+            <h3 class="h5 mb-1">
+              Шпаргалка
+            </h3>
           </a>
-          <p class="text-muted">Шпаргалка Bootstrap компонентов.</p>
+          <p class="text-body-secondary">Шпаргалка Bootstrap компонентов.</p>
         </div>
-      </div>
+      
     </div>
-</div>
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D0%B8-%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%B8">Панели навигации</h2>
-    <p>Взять компонент панели навигации по умолчанию и показать, как его можно перемещать, размещать и расширять.</p>
-    </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/navbars/">
+  </div>
+<div class="bd-content">
+  <h2 id="%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D0%B8-%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%B8">Панели навигации</h2>
+  <p>Взять компонент панели навигации по умолчанию и показать, как его можно перемещать, размещать и расширять.</p>
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/navbars/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbars.png,
                                                     /docs/5.3/assets/img/examples/navbars@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/navbars.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Панели навигации</h3>
+            <h3 class="h5 mb-1">
+              Панели навигации
+            </h3>
           </a>
-          <p class="text-muted">Демонстрация всех адаптивных и контейнерных опций для навигационной панели.</p>
+          <p class="text-body-secondary">Демонстрация всех адаптивных и контейнерных опций для навигационной панели.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/navbars-offcanvas/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/navbars-offcanvas/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbars-offcanvas.png,
                                                     /docs/5.3/assets/img/examples/navbars-offcanvas@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/navbars-offcanvas.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Панели навигации с offcanvas</h3>
+            <h3 class="h5 mb-1">
+              Панели навигации с offcanvas
+            </h3>
           </a>
-          <p class="text-muted">То же, что и в примере с панелями навигации, но с нашим компонентом offcanvas.</p>
+          <p class="text-body-secondary">То же, что и в примере с панелями навигации, но с нашим компонентом offcanvas.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/navbar-static/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/navbar-static/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbar-static.png,
                                                     /docs/5.3/assets/img/examples/navbar-static@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/navbar-static.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Статичная панель навигации</h3>
+            <h3 class="h5 mb-1">
+              Статичная панель навигации
+            </h3>
           </a>
-          <p class="text-muted">Пример статической верхней панели навигации с одним дополнительным контентом.</p>
+          <p class="text-body-secondary">Пример статической верхней панели навигации с одним дополнительным контентом.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/navbar-fixed/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/navbar-fixed/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbar-fixed.png,
                                                     /docs/5.3/assets/img/examples/navbar-fixed@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/navbar-fixed.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Фиксированная панель навигации</h3>
+            <h3 class="h5 mb-1">
+              Фиксированная панель навигации
+            </h3>
           </a>
-          <p class="text-muted">Пример единой панели навигации с фиксированной верхней панелью навигации и некоторым дополнительным контентом.</p>
+          <p class="text-body-secondary">Пример единой панели навигации с фиксированной верхней панелью навигации и некоторым дополнительным контентом.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/navbar-bottom/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/navbar-bottom/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/navbar-bottom.png,
                                                     /docs/5.3/assets/img/examples/navbar-bottom@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/navbar-bottom.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Нижняя панель навигации</h3>
+            <h3 class="h5 mb-1">
+              Нижняя панель навигации
+            </h3>
           </a>
-          <p class="text-muted">Пример единой панели навигации с нижней панелью навигации и дополнительным контентом.</p>
+          <p class="text-body-secondary">Пример единой панели навигации с нижней панелью навигации и дополнительным контентом.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/offcanvas-navbar/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/offcanvas-navbar/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/offcanvas-navbar.png,
                                                     /docs/5.3/assets/img/examples/offcanvas-navbar@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/offcanvas-navbar.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Панель навигации вне холста</h3>
+            <h3 class="h5 mb-1">
+              Панель навигации вне холста
+            </h3>
           </a>
-          <p class="text-muted">Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста).</p>
+          <p class="text-body-secondary">Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста).</p>
         </div>
-      </div>
+      
     </div>
-</div>
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="rtl">RTL</h2>
-    <p>Посмотрите, как работает RTL-версия Bootstrap с этими модифицированными примерами пользовательских компонентов.</p>
-    <div class="bd-callout bd-callout-warning small">
-        <p>
-          <strong>RTL все еще находится в экспериментальной стадии</strong> и будет развиваться с учетом обратной связи. Заметили что-то или хотите предложить улучшение?
-        </p>
-        <p><a href="https://github.com/twbs/bootstrap/issues/new/choose">Пожалуйста, откройте вопрос.</a></p>
-      </div>
+  </div>
+<div class="bd-content">
+  <h2 id="rtl">RTL</h2>
+  <p>Посмотрите, как работает RTL-версия Bootstrap с этими модифицированными примерами пользовательских компонентов.</p>
+  <div class="bd-callout bd-callout-warning small">
+      <p>
+        <strong>RTL все еще находится в экспериментальной стадии</strong> и будет развиваться с учетом обратной связи. Заметили что-то или хотите предложить улучшение?
+      </p>
+      <p><a href="https://github.com/twbs/bootstrap/issues/new/choose">Пожалуйста, откройте issue.</a></p>
     </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/cheatsheet-rtl/">
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/cheatsheet-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/cheatsheet-rtl.png,
                                                     /docs/5.3/assets/img/examples/cheatsheet-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/cheatsheet-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Шпаргалка RTL</h3>
+            <h3 class="h5 mb-1">
+              Шпаргалка RTL
+            </h3>
           </a>
-          <p class="text-muted">Шпаргалка Bootstrap компонентов, RTL.</p>
+          <p class="text-body-secondary">Шпаргалка Bootstrap компонентов, RTL.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/album-rtl/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/album-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/album-rtl.png,
                                                     /docs/5.3/assets/img/examples/album-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/album-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Альбом RTL</h3>
+            <h3 class="h5 mb-1">
+              Альбом RTL
+            </h3>
           </a>
-          <p class="text-muted">Простой одностраничный шаблон для фотогалерей, портфолио и т.д.</p>
+          <p class="text-body-secondary">Простой одностраничный шаблон для фотогалерей, портфолио и т.д.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/checkout-rtl/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/checkout-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/checkout-rtl.png,
                                                     /docs/5.3/assets/img/examples/checkout-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/checkout-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Оформление заказа RTL</h3>
+            <h3 class="h5 mb-1">
+              Оформление заказа RTL
+            </h3>
           </a>
-          <p class="text-muted">Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки.</p>
+          <p class="text-body-secondary">Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/carousel-rtl/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/carousel-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/carousel-rtl.png,
                                                     /docs/5.3/assets/img/examples/carousel-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/carousel-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Карусель RTL</h3>
+            <h3 class="h5 mb-1">
+              Карусель RTL
+            </h3>
           </a>
-          <p class="text-muted">Настройте панель навигации и карусель, а затем добавьте новые компоненты.</p>
+          <p class="text-body-secondary">Настройте панель навигации и карусель, а затем добавьте новые компоненты.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/blog-rtl/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/blog-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/blog-rtl.png,
                                                     /docs/5.3/assets/img/examples/blog-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/blog-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Блог RTL</h3>
+            <h3 class="h5 mb-1">
+              Блог RTL
+            </h3>
           </a>
-          <p class="text-muted">Журнал как шаблон блога с заголовком, навигацией, избранным контентом.</p>
+          <p class="text-body-secondary">Журнал как шаблон блога с заголовком, навигацией, избранным контентом.</p>
         </div>
       
     
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/dashboard-rtl/">
+  
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/dashboard-rtl/" hreflang="ar">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/dashboard-rtl.png,
                                                     /docs/5.3/assets/img/examples/dashboard-rtl@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/dashboard-rtl.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Панель RTL</h3>
+            <h3 class="h5 mb-1">
+              Панель RTL
+            </h3>
           </a>
-          <p class="text-muted">Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью.</p>
+          <p class="text-body-secondary">Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью.</p>
         </div>
-      </div>
+      
     </div>
-</div>
-<div class="row g-lg-5 mb-5">
-  <div class="bd-content col-lg-3">
-    <h2 id="%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8">Интеграции</h2>
-    <p>Интеграции с внешними библиотеками.</p>
-    </div>
-
-  <div class="col-lg-9">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-          <a class="d-block" href="/docs/5.3/examples/masonry/">
+  </div>
+<div class="bd-content">
+  <h2 id="%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B8">Интеграции</h2>
+  <p>Интеграции с внешними библиотеками.</p>
+  <div class="row">
+      
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a class="d-block link-offset-1" href="/docs/5.3/examples/masonry/">
             <img class="img-thumbnail mb-3" srcset="/docs/5.3/assets/img/examples/masonry.png,
                                                     /docs/5.3/assets/img/examples/masonry@2x.png 2x"
                                             src="/docs/5.3/assets/img/examples/masonry.png"
                                             alt=""
                                             width="480" height="300"
                                             loading="lazy">
-            <h3 class="h5 mb-1">Masonry</h3>
+            <h3 class="h5 mb-1">
+              Masonry
+            </h3>
           </a>
-          <p class="text-muted">Объедините возможности сетки Bootstrap и макета Masonry.</p>
+          <p class="text-body-secondary">Объедините возможности сетки Bootstrap и макета Masonry.</p>
         </div>
-      </div>
+      
     </div>
-</div>
+  </div>
 
 
 
@@ -939,14 +1277,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
     <div class="row">
       <div class="col-lg-3 mb-3">
-        <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" aria-label="Bootstrap">
+        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
           <span class="fs-5">Bootstrap</span>
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2">Разработано и создано со всей любовью <a href="/docs/5.3/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия 5.3.0-alpha1.</li>
+          <li class="mb-2">Текущая версия 5.3.0-alpha3.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -978,7 +1316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
           <li class="mb-2"><a href="https://github.com/twbs/icons">Иконки</a></li>
           <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/examples/">Examples repo</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">

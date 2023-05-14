@@ -28,9 +28,6 @@
     <loc>https://getbootstrap.su/docs/5.3/components/offcanvas/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/content/reboot/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/getting-started/rfs/</loc>
   </url>
   <url>
@@ -109,6 +106,9 @@
     <loc>https://getbootstrap.su/docs/5.3/components/list-group/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.3/examples/jumbotrons/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.3/forms/range/</loc>
   </url>
   <url>
@@ -124,7 +124,13 @@
     <loc>https://getbootstrap.su/docs/5.3/components/badge/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.3/examples/badges/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.3/content/images/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/helpers/icon-link/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/extend/icons/</loc>
@@ -148,7 +154,13 @@
     <loc>https://getbootstrap.su/docs/5.3/components/buttons/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.3/examples/buttons/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.3/layout/columns/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/helpers/focus-ring/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/about/team/</loc>
@@ -206,6 +218,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/about/translations/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/content/reboot/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/utilities/overflow/</loc>
@@ -301,6 +316,9 @@
     <loc>https://getbootstrap.su/docs/5.3/examples/list-groups/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.su/docs/5.3/utilities/link/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/starter-template/</loc>
   </url>
   <url>
@@ -353,6 +371,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/components/breadcrumb/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/examples/breadcrumbs/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/customize/color/</loc>
