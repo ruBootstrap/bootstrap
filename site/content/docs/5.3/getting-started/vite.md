@@ -86,8 +86,7 @@ my-project/
        outDir: '../dist'
      },
      server: {
-       port: 8080,
-       hot: true
+       port: 8080
      }
    }
    ```

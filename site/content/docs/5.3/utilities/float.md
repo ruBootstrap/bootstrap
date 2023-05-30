@@ -39,9 +39,9 @@ toc: true
 {{< /float.inline >}}
 {{< /markdown >}}
 
-## Sass
+## CSS
 
-### API утилит
+### Sass API утилиты
 
 Утилиты флоат объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

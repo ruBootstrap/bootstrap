@@ -153,7 +153,7 @@ toc: true
 
 {{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
 
-## Утилиты API
+### Sass API утилиты
 
 Утилиты шрифта и текста указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

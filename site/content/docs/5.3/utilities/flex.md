@@ -655,9 +655,9 @@ And say you want to vertically center the content next to the image:
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### API утилит
+### Sass API утилиты
 
 Утилиты флексбокс объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

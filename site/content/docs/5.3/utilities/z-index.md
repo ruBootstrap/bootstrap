@@ -37,13 +37,13 @@ added: "5.3"
 
 ## CSS
 
-### Sass карта
+### Sass карты
 
 Настройте эту карту Sass, чтобы изменить доступные значения и сгенерированные утилиты.
 
 {{< scss-docs name="zindex-levels-map" file="scss/_variables.scss" >}}
 
-### Утилиты API
+### Sass API утилиты
 
 Позиционные утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит]({{< docsref "/utilities/api#using-the-api" >}}).
 

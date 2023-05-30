@@ -90,9 +90,9 @@ toc: true
 
 Используя переменные Sass, Вы можете настроить утилиты переполнения, изменив переменную `$overflows` в `_variables.scss`.
 
-## Sass
+## CSS
 
-### Утилиты API
+### Sass API утилиты
 
 Утилиты переполнения объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

@@ -96,7 +96,7 @@ gem 'bootstrap', '~> {{< param current_ruby_version >}}'
 gem install bootstrap -v {{< param current_ruby_version >}}
 ```
 
-[Смотрите gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) для получения дополнительной информации.
+[Смотрите gem's README](https://github.com/twbs/bootstrap-rubygem/blob/main/README.md) для получения дополнительной информации.
 
 ### Composer
 

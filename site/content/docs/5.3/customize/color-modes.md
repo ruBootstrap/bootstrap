@@ -7,6 +7,10 @@ toc: true
 added: "5.3"
 ---
 
+{{< callout >}}
+**Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
+{{< /callout >}}
+
 ## Темный режим
 
 **Bootstrap теперь поддерживает цветовые режимы, начиная с темного режима!** В версии 5.3.0 вы можете реализовать собственный переключатель цветового режима (см. ниже пример из документации Bootstrap) и применять различные цветовые режимы по своему усмотрению. Мы поддерживаем светлый режим (по умолчанию), а теперь и темный режим. Цветовые режимы можно переключать глобально для элемента `<html>` или для определенных компонентов и элементов благодаря атрибуту `data-bs-theme`.
@@ -177,13 +181,61 @@ $color-mode-type: media-query;
 
 Чтобы разрешить посетителям или пользователям переключать цветовые режимы, вам необходимо создать элемент переключения для управления атрибутом `data-bs-theme` в корневом элементе `<html>`. В нашей документации мы создали переключатель, который изначально зависит от текущего системного цветового режима пользователя, но предоставляет возможность переопределить его и выбрать определенный цветовой режим.
 
-Вот посмотрите на JavaScript, на котором он работает. Не стесняйтесь проверять нашу собственную панель навигации документации, чтобы увидеть, как она реализована с использованием HTML и CSS из наших собственных компонентов. Обратите внимание: если вы решите использовать медиа-запросы для своих цветовых режимов, возможно, потребуется изменить или удалить ваш JavaScript, если вы предпочитаете неявный контроль.
+Вот посмотрите на JavaScript, на котором он работает. Не стесняйтесь проверять нашу собственную панель навигации документации, чтобы увидеть, как она реализована с использованием HTML и CSS из наших собственных компонентов. Рекомендуется включить JavaScript в верхней части страницы, чтобы уменьшить потенциальное мерцание экрана во время перезагрузки вашего сайта. Обратите внимание: если вы решите использовать медиа-запросы для своих цветовых режимов, возможно, потребуется изменить или удалить ваш JavaScript, если вы предпочитаете неявный контроль.
 
 {{< example lang="js" show_preview="false" >}}
 {{< js.inline >}}
 {{- readFile (path.Join "site/static/docs" .Site.Params.docs_version "assets/js/color-modes.js") -}}
 {{< /js.inline >}}
 {{< /example >}}
+
+## Adding theme colors
+
+Adding a new color in `$theme-colors` is not enough for some of our components like [alerts]({{< docsref "/components/alerts" >}}) and [list groups]({{< docsref "/components/list-group" >}}). New colors must also be defined in `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` for light theme; but also in `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` for dark theme.
+
+This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we'll revisit this setup to reduce the duplication.
+
+```scss
+// Required
+@import "functions";
+@import "variables";
+@import "variables-dark";
+
+// Add a custom color to $theme-colors
+$custom-colors: (
+  "custom-color": #712cf9
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "maps";
+@import "mixins";
+@import "utilities";
+
+// Add a custom color to new theme maps
+
+// Light mode
+$custom-colors-text: ("custom-color": #712cf9);
+$custom-colors-bg-subtle: ("custom-color": #e1d2fe);
+$custom-colors-border-subtle: ("custom-color": #bfa1fc);
+
+$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
+$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
+
+// Dark mode
+$custom-colors-text-dark: ("custom-color": #e1d2f2);
+$custom-colors-bg-subtle-dark: ("custom-color": #8951fa);
+$custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
+
+$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
+$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
+$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
+
+// Remainder of Bootstrap imports
+@import "root";
+@import "reboot";
+// etc
+```
 
 ## CSS
 

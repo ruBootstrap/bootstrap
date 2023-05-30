@@ -326,10 +326,10 @@ toc: true
 **Новое в v5.2.0  —** Тематика панели навигации теперь поддерживается переменными CSS, а `.navbar-light` устарел. Переменные CSS применяются к `.navbar`, по умолчанию это "light" внешний вид, и их можно переопределить с помощью `.navbar-dark`.
 {{< /callout >}}
 
-Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `data-bs-theme="dark"` к родительскому элементу `.navbar` для темных цветов фона. Затем настройте с помощью утилит `.bg-*`.
+Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `data-bs-theme="dark"` к родительскому элементу `.navbar` для темных цветов фона. Затем настройте с помощью `.bg-*` и дополнительных утилит.
 
 <div class="bd-example">
-  <nav class="navbar navbar-expand-lg bg-body-secondary" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Переключатель навигации">
@@ -418,7 +418,7 @@ toc: true
 </div>
 
 ```html
-<nav class="navbar bg-dark" data-bs-theme="dark">
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
   <!-- Navbar content -->
 </nav>
 
@@ -653,9 +653,9 @@ toc: true
 Иногда Вы хотите использовать плагин свертывания для запуска элемента контейнера для содержимого, структурно расположенного за пределами `.navbar`. Поскольку наш плагин работает с сопоставлением `id` и `data-bs-target`, это легко сделать!
 
 {{< example >}}
-<div class="collapse" id="navbarToggleExternalContent">
+<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
   <div class="bg-dark p-4">
-    <h5 class="text-white h4">Свернутый контент</h5>
+    <h5 class="text-body-emphasis h4">Свернутый контент</h5>
     <span class="text-body-secondary">Переключаемый через бренд навигационной панели.</span>
   </div>
 </div>
@@ -808,7 +808,7 @@ toc: true
 
 {{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
-### Sass цикл
+### Sass циклы
 
 [Классы адаптивного навбара развертывания/свертывания](#responsive-behaviors) (например, `.navbar-expand-lg`) объединяются с картой `$breakpoints` и генерируются с помощью цикла в `scss/_navbar.scss`.
 

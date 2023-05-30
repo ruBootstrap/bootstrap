@@ -11,6 +11,10 @@ toc: true
 
 Если вы переходите с наших предыдущих альфа-версий версии 5.3.0, ознакомьтесь с их изменениями в дополнение к этому разделу.
 
+### Помощники
+
+- [Цветные ссылки]({{< docsref "/helpers/colored-links" >}}) снова имеют `!important`, поэтому они лучше работают с нашими недавно добавленными утилитами ссылок.
+
 ### Утилиты
 
 - Добавлена новая `.d-inline-grid` [утилита отображения]({{< docsref "/utilities/display" >}}).
@@ -148,13 +152,13 @@ toc: true
 
 - Варианты предупреждений теперь определяются с помощью переменных CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.alert-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/alerts#sass-loop" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.alert-variant()` теперь устарел. Теперь мы [используем цикл Sass]({{< docsref "/components/alerts#sass-loops" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
 
 #### List group
 
 - Варианты элементов группы списка теперь определяются с помощью переменных CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.list-group-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/list-group#sass-loop" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин `.list-group-variant()` больше не рекомендуется. Теперь мы [используем цикл Sass]({{< docsref "/components/list-group#sass-loops" >}}) напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.
 
 #### Выпадающие списки
 

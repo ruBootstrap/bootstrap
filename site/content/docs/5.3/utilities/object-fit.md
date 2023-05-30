@@ -54,7 +54,9 @@ toc: true
 <video src="..." class="object-fit-none" autoplay></video>
 ```
 
-## Утилиты API
+## CSS
+
+### Sass API утилиты
 
 Утилиты соответствия объекта объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать утилиты API.]({{< docsref "/utilities/api#using-the-api" >}})
 

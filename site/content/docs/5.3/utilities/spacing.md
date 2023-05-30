@@ -135,15 +135,15 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Карты
+### Sass карты
 
 Утилиты Spacing объявляются через карту Sass, а затем генерируются с помощью нашего API утилит.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
-### Утилиты API
+### Sass API утилиты
 
 Утилиты интервалов объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

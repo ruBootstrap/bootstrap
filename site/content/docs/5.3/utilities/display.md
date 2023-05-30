@@ -105,9 +105,9 @@ toc: true
 <div class="d-none d-lg-block d-print-block">Скрыть до большого размера на экране, но всегда показывать на печати</div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### API утилит
+### Sass API утилиты
 
 Утилиты отображения объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

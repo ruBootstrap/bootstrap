@@ -134,7 +134,7 @@ toc: true
 
 {{< scss-docs name="theme-text-dark-map" file="scss/_maps.scss" >}}
 
-### Утилиты API
+### Sass API утилиты
 
 Утилиты цвета объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

@@ -93,8 +93,8 @@ toc: true
   Письма <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">непрочитанные сообщения</span></span>
 </button>
 
-<div class="position-relative py-2 px-4 text-bg-dark border border-dark rounded-pill">
-  Маркер <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-dark)" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+<div class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
+  Маркер <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
 </div>
 
 <button type="button" class="btn btn-primary position-relative">
@@ -115,15 +115,15 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Карты
+### Sass карты
 
 Значения полезности позиции по умолчанию объявляются в карте Sass, а затем используются для создания наших утилит.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
-### Утилиты API
+### Sass API утилиты
 
 Утилиты положения объявлены в нашем API утилит в файле `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

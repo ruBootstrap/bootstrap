@@ -24,7 +24,9 @@ added: "5.1"
 <div class="opacity-25">...</div>
 ```
 
-### API утилит
+## CSS
+
+### Sass API утилиты
 
 Утилиты непрозрачности объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит]({{< docsref "/utilities/api#using-the-api" >}})
 

@@ -19,7 +19,10 @@ toc: true
 Лучшей альтернативой для тех, кто использует этот тип фреймворков, является использование специфичного для фреймворка пакета **вместо** Bootstrap JavaScript. Вот некоторые из самых популярных вариантов:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) | [RU BootstrapVue](https://bootstrap-vue.ru/) (в настоящее время поддерживает только Vue 2 и Bootstrap 4)
+  {{< callout >}}
+  **Попробуйте сами!** Загрузите исходный код и рабочую демонстрацию для использования Bootstrap с React, Next.js и React Bootstrap из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/react-nextjs). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx).
+  {{< /callout >}}
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (в настоящее время поддерживает только Vue 2 и Bootstrap 4)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
 ## Использование Bootstrap как модуля

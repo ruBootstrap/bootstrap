@@ -17,13 +17,13 @@ toc: true
 <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Большая тень</div>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### Переменные
+### Sass переменные
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
-### API утилит
+### Sass API утилиты
 
 Утилиты теней объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

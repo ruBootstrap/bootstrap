@@ -94,11 +94,11 @@ added: 5.3
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Sass
+## CSS
 
 В дополнение к следующим функциям Sass, рассмотрите возможность прочитать о наших включенных [пользовательских свойствах CSS]({{< docsref "/customize/css-variables" >}}) (также известных как переменные CSS) для цветов и многого другого.
 
-### Утилиты API
+### Sass API утилиты
 
 Утилиты ссылок объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#using-the-api" >}})
 

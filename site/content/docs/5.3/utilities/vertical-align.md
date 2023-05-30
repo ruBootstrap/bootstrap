@@ -39,9 +39,9 @@ group: utilities
 </table>
 {{< /example >}}
 
-## Sass
+## CSS
 
-### API утилит
+### Sass API утилиты
 
 Утилиты вертикального выравнивания указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

@@ -143,7 +143,7 @@ toc: true
 
 {{< scss-docs name="gradient-mixins" file="scss/mixins/_gradients.scss" >}}
 
-## Утилиты API
+### Sass API утилиты
 
 Фоновые утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать утилиты API.]({{< docsref "/utilities/api#using-the-api" >}})
 

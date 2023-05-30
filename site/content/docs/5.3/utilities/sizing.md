@@ -53,9 +53,9 @@ toc: true
 <div class="vh-100">Высота 100vh</div>
 ```
 
-## Sass
+## CSS
 
-### API утилит
+### Sass API утилиты
 
 Утилиты размера указаны в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]({{< docsref "/utilities/api#использование-api" >}})
 

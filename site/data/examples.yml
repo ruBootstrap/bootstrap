@@ -15,28 +15,41 @@
       slug: sass-js-esm
       description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Autoprefixer и Stylelint, а также скомпилируйте исходный код JavaScript с прокладкой ESM."
       url: /examples/tree/main/sass-js-esm
-    - name: Webpack
-      slug: webpack
-      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Webpack."
-      url: /examples/tree/main/webpack
-      htmlIndexLocation: src
-    - name: Parcel
-      slug: parcel
-      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Parcel."
-      url: /examples/tree/main/parcel
-      htmlIndexLocation: src
-    - name: Vite
-      slug: vite
-      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Vite."
-      url: /examples/tree/main/vite
-      htmlIndexLocation: src
-    - name: Bootstrap Иконки
-      slug: bootstrap-icons
+    - name: Цветовые режимы Bootstrap
+      slug: bootstrap-color-modes
+      description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint и цветовых режимов Bootstrap."
+      url: /examples/tree/main/color-modes
+    - name: Иконки Bootstrap
       description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons."
       url: /examples/tree/main/icons-font
+    - name: Parcel
+      slug: parcel
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript через Parcel."
+      url: /examples/tree/main/parcel
+      indexPath: src/index.html
+      indexPath: src/index.html
+    - name: React
+      slug: react
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с React, Next.js и React Bootstrap."
+      url: /examples/tree/main/react-nextjs
+      indexPath: src/pages/index.tsx
+    - name: Vite
+      slug: vite
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vite."
+      url: /examples/tree/main/vite
+    - name: Vue
+      slug: vue
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vue и Vite."
+      url: /examples/tree/main/vue
+    - name: Webpack
+      slug: webpack
+      description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Webpack."
+      url: /examples/tree/main/webpack
+      indexPath: src/index.html
+
 - category: Фрагменты
   slug: snippets
-  description: "Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с настраиваемым CSS и т.д."
+  description: "Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с пользовательским CSS и т. д."
   examples:
     - name: Заголовки
       slug: headers
