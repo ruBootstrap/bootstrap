@@ -36,14 +36,14 @@ toc: true
 Текст формы блочного или встроенного уровня может быть создан с помощью `.form-text`.
 
 {{< callout warning >}}
-Текст формы должен быть явно связан с элементом управления формой, к которому он относится, с использованием атрибута `aria-labelledby` (для обязательной информации, такой как формат данных) или `aria-describedby` (для дополнительной информации). Это гарантирует, что вспомогательные технологии, такие как программы чтения с экрана, будут объявлять этот текст формы, когда пользователь фокусируется или вводит элемент управления.
+Текст формы должен быть явно связан с элементом управления формой, к которому он относится, с помощью атрибута `aria-describedby`. Это гарантирует, что вспомогательные технологии, такие как программы чтения с экрана, будут объявлять этот текст формы, когда пользователь фокусируется или вводит элемент управления.
 {{< /callout >}}
 
 Текст формы ниже полей ввода может быть оформлен с помощью `.form-text`. Если будет использоваться элемент блочного уровня, добавляется верхнее поле для легкого отступа от входных данных выше.
 
 {{< example >}}
 <label for="inputPassword5" class="form-label">Пароль</label>
-<input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <div id="passwordHelpBlock" class="form-text">
   Ваш пароль должен состоять из 8-20 символов, содержать буквы и цифры и не должен содержать пробелов, специальных символов или эмодзи.
 </div>
@@ -57,7 +57,7 @@ toc: true
     <label for="inputPassword6" class="col-form-label">Пароль</label>
   </div>
   <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
   </div>
   <div class="col-auto">
     <span id="passwordHelpInline" class="form-text">

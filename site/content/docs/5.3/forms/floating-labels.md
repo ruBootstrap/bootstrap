@@ -89,7 +89,7 @@ toc: true
   <label for="floatingTextareaDisabled">Комментарии</label>
 </div>
 <div class="form-floating mb-3">
-  <textarea class="form-control" placeholder="Оставьте комментарий здесь" id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" disabled>Отключено текстовое поле с некоторым текстом внутри</textarea>
   <label for="floatingTextarea2Disabled">Комментарии</label>
 </div>
 <div class="form-floating">

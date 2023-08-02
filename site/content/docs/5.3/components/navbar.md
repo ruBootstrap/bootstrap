@@ -61,7 +61,7 @@ toc: true
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+          <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -155,7 +155,7 @@ toc: true
           <a class="nav-link" href="#">Цена</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+          <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
     </div>
@@ -177,7 +177,7 @@ toc: true
         <a class="nav-link active" aria-current="page" href="#">Главная</a>
         <a class="nav-link" href="#">Рекомендуемые</a>
         <a class="nav-link" href="#">Цена</a>
-        <a class="nav-link disabled">Отключенная</a>
+        <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
       </div>
     </div>
   </div>
@@ -329,7 +329,7 @@ toc: true
 Темы панели навигации стали проще, чем когда-либо, благодаря сочетанию переменных Sass и CSS в Bootstrap. По умолчанию используется наша «светлая панель навигации» для использования со светлыми цветами фона, но вы также можете применить `data-bs-theme="dark"` к родительскому элементу `.navbar` для темных цветов фона. Затем настройте с помощью `.bg-*` и дополнительных утилит.
 
 <div class="bd-example">
-  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Навбар</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Переключатель навигации">
@@ -418,7 +418,7 @@ toc: true
 </div>
 
 ```html
-<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <!-- Navbar content -->
 </nav>
 
@@ -536,7 +536,7 @@ toc: true
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+          <a class="nav-link disabled" aria-disabled="true">Ссылка</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -576,7 +576,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+          <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -606,7 +606,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+          <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -636,7 +636,7 @@ toc: true
           <a class="nav-link" href="#">Ссылка</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+          <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

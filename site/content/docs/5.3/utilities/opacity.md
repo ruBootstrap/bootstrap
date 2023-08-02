@@ -15,6 +15,7 @@ added: "5.1"
   <div class="opacity-75 p-3 m-2 bg-primary text-light fw-bold rounded">75%</div>
   <div class="opacity-50 p-3 m-2 bg-primary text-light fw-bold rounded">50%</div>
   <div class="opacity-25 p-3 m-2 bg-primary text-light fw-bold rounded">25%</div>
+  <div class="opacity-0 p-3 m-2 bg-primary text-light fw-bold rounded">0%</div>
 </div>
 
 ```html
@@ -22,6 +23,7 @@ added: "5.1"
 <div class="opacity-75">...</div>
 <div class="opacity-50">...</div>
 <div class="opacity-25">...</div>
+<div class="opacity-0">...</div>
 ```
 
 ## CSS

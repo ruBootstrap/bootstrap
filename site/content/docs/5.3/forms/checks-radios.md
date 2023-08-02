@@ -250,16 +250,23 @@ toc: true
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 <label class="btn btn-primary" for="btn-check">Одиночный переключатель</label>
-{{< /example >}}
 
-{{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
 <label class="btn btn-primary" for="btn-check-2">Выбранный</label>
+
+<input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+<label class="btn btn-primary" for="btn-check-3">Отключенный</label>
 {{< /example >}}
 
 {{< example >}}
-<input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Отключенный</label>
+<input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+<label class="btn" for="btn-check-4">Одиночный переключатель</label>
+
+<input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+<label class="btn" for="btn-check-5">Выбранный</label>
+
+<input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
+<label class="btn" for="btn-check-6">Отключенный</label>
 {{< /example >}}
 
 {{< callout info >}}
@@ -282,7 +289,21 @@ toc: true
 <label class="btn btn-secondary" for="option4">Радио</label>
 {{< /example >}}
 
-### Стиль контура
+{{< example >}}
+<input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+<label class="btn" for="option5">Checked</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+<label class="btn" for="option6">Radio</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+<label class="btn" for="option7">Disabled</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+<label class="btn" for="option8">Radio</label>
+{{< /example >}}
+
+### Контурные стили
 
 Поддерживаются различные варианты `.btn`, например, в различных выделенных стилях.
 

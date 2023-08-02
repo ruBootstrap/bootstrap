@@ -492,10 +492,10 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> **Объединенные собственные и настраиваемые элементы формы.** Флажки, радио, выборки и другие входные данные, которые имели собственные и настраиваемые классы в версии 4, были объединены. Теперь почти все наши элементы формы полностью настраиваемые, для большинства из них не требуется настраиваемый HTML.
   - `.custom-control.custom-checkbox` теперь называется `.form-check`.
-  - `.custom-control.custom-custom-radio` теперь называется `.form-check`.
+  - `.custom-control.custom-radio` теперь называется `.form-check`.
   - `.custom-control.custom-switch` теперь называется `.form-check.form-switch`.
   - `.custom-select` теперь называется `.form-select`.
-  - `.custom-file` и `.form-file` были заменены пользовательскими стилями поверх `.form-control`.
+  - `.custom-file` и `.form-control-file` были заменены пользовательскими стилями поверх `.form-control`.
   - `.custom-range` теперь называется `.form-range`.
   - Удалены нативные `.form-control-file` и `.form-control-range`.
 

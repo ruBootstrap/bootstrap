@@ -26,14 +26,14 @@ toc: true
 Вы также можете выбрать маленький или большой пользовательский элемент выбора, чтобы соответствовать нашим текстовым полям аналогичного размера.
 
 {{< example >}}
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg пример">
+<select class="form-select form-select-lg mb-3" aria-label="Пример большого выбора">
   <option selected>Откройте это меню выбора</option>
   <option value="1">Один</option>
   <option value="2">Два</option>
   <option value="3">Три</option>
 </select>
 
-<select class="form-select form-select-sm" aria-label=".form-select-sm пример">
+<select class="form-select form-select-sm" aria-label="Пример небольшого выбора">
   <option selected>Откройте это меню выбора</option>
   <option value="1">Один</option>
   <option value="2">Два</option>
@@ -44,7 +44,7 @@ toc: true
 Также поддерживается атрибут `multiple`:
 
 {{< example >}}
-<select class="form-select" multiple aria-label="пример множественного выбора">
+<select class="form-select" multiple aria-label="Пример множественного выбора">
   <option selected>Откройте это меню выбора</option>
   <option value="1">Один</option>
   <option value="2">Два</option>
@@ -55,7 +55,7 @@ toc: true
 Как и атрибут `size`:
 
 {{< example >}}
-<select class="form-select" size="3" aria-label="пример элемента выбора размером равному 3">
+<select class="form-select" size="3" aria-label="Размер 3 выберите пример">
   <option selected>Откройте это меню выбора</option>
   <option value="1">Один</option>
   <option value="2">Два</option>
@@ -68,7 +68,7 @@ toc: true
 Добавьте логический атрибут `disabled` для выбора, чтобы придать ему серый вид и удалить события указателя.
 
 {{< example >}}
-<select class="form-select" aria-label="Disabled select example" disabled>
+<select class="form-select" aria-label="Отключенный пример выбора" disabled>
   <option selected>Откройте это меню выбора</option>
   <option value="1">Один</option>
   <option value="2">Два</option>

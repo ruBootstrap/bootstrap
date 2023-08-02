@@ -119,9 +119,7 @@ Bootstrap предоставляет настраиваемые события �
 const myModal = document.querySelector('#myModal')
 
 myModal.addEventListener('show.bs.modal', event => {
-  if (!data) {
-    return event.preventDefault() // останавливает показ модального окна
-  }
+  return event.preventDefault() // останавливает показ модального окна
 })
 ```
 

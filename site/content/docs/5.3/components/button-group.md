@@ -190,8 +190,6 @@ toc: true
   <button type="button" class="btn btn-primary">Кнопка</button>
   <button type="button" class="btn btn-primary">Кнопка</button>
   <button type="button" class="btn btn-primary">Кнопка</button>
-  <button type="button" class="btn btn-primary">Кнопка</button>
-  <button type="button" class="btn btn-primary">Кнопка</button>
 </div>
 {{< /example >}}
 
@@ -208,9 +206,7 @@ toc: true
       <li><a class="dropdown-item" href="#">Выпадающая ссылка</a></li>
     </ul>
   </div>
-  <button type="button" class="btn btn-primary">Кнопка</button>
-  <button type="button" class="btn btn-primary">Кнопка</button>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropstart" role="group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающая кнопка
     </button>
@@ -219,7 +215,7 @@ toc: true
       <li><a class="dropdown-item" href="#">Выпадающая ссылка</a></li>
     </ul>
   </div>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropend" role="group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающая кнопка
     </button>
@@ -228,7 +224,7 @@ toc: true
       <li><a class="dropdown-item" href="#">Выпадающая ссылка</a></li>
     </ul>
   </div>
-  <div class="btn-group" role="group">
+  <div class="btn-group dropup" role="group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающая кнопка
     </button>

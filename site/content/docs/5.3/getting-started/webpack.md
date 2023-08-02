@@ -191,7 +191,7 @@ my-project/
                loader: 'postcss-loader',
                options: {
                  postcssOptions: {
-                   plugins: () => [
+                   plugins: [
                      autoprefixer
                    ]
                  }

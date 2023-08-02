@@ -25,7 +25,7 @@ toc: true
 Как правило, мы рекомендуем использовать `<button>` с атрибутом `data-bs-target`. Хотя это не рекомендуется с семантической точки зрения, Вы также можете использовать `<a>` с атрибутом `href` (и `role="button"`). В обоих случаях требуется `data-bs-toggle="collapse"`.
 
 {{< example >}}
-<p>
+<p class="d-inline-flex gap-1">
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Ссылка с href
   </a>
@@ -69,7 +69,7 @@ toc: true
 И наоборот, несколько элементов `<button>` или `<a>` могут отображать и скрывать один и тот же элемент, если каждый из них ссылается на него с помощью своего атрибута `data-bs-target` или `href`.
 
 {{< example >}}
-<p>
+<p class="d-inline-flex gap-1">
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Переключить первый элемент</a>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Переключить второй элемент</button>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Переключить оба элемента</button>

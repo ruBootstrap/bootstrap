@@ -62,7 +62,7 @@ toc: true
   <a href="#" class="list-group-item list-group-item-action">Второй элемент ссылка</a>
   <a href="#" class="list-group-item list-group-item-action">Третий элемент ссылка</a>
   <a href="#" class="list-group-item list-group-item-action">Четвертый элемент ссылка</a>
-  <a class="list-group-item list-group-item-action disabled">Отключенный элемент ссылка</a>
+  <a class="list-group-item list-group-item-action disabled" aria-disabled="true">Отключенный элемент ссылка</a>
 </div>
 {{< /example >}}
 

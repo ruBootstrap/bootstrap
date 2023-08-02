@@ -14,23 +14,25 @@ toc: true
 
 ```text
 your-project/
-├── scss
+├── scss/
 │   └── custom.scss
 └── node_modules/
-    └── bootstrap
-        ├── js
-        └── scss
+│   └── bootstrap/
+│       ├── js/
+│       └── scss/
+└── index.html
 ```
 
 Если вы загрузили наши исходные файлы и не используете менеджер пакетов, вы можете вручную создать что-то похожее на эту структуру, сохраняя исходные файлы Bootstrap отдельно от ваших собственных.
 
 ```text
 your-project/
-├── scss
+├── scss/
 │   └── custom.scss
-└── bootstrap/
-    ├── js
-    └── scss
+├── bootstrap/
+│   ├── js/
+│   └── scss/
+└── index.html
 ```
 
 ## Импорт
@@ -84,6 +86,45 @@ your-project/
 ```
 
 С этой настройкой, Вы можете приступить к изменению любых переменных и карт Sass в Вашем `custom.scss`. Вы также можете начать добавлять части Bootstrap в разделе `// Optional` по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла `bootstrap.scss` в качестве отправной точки.
+
+## Compiling
+
+In order to use your custom Sass code as CSS in the browser, you need a Sass compiler. Sass ships as a CLI package, but you can also compile it with other build tools like [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/), or with a GUI applications. Some IDEs also have Sass compilers built in or as downloadable extensions.
+
+We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
+
+```shell
+# Install Sass globally
+npm install -g sass
+
+# Watch your custom Sass for changes and compile it to CSS
+sass --watch ./scss/custom.scss ./css/custom.css
+```
+
+Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+
+{{< callout info >}}
+**Using Bootstrap with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). We also have production-ready demos in [our examples repository on GitHub](https://github.com/twbs/examples).
+{{< /callout >}}
+
+## Including
+
+Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you'll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you've changed it.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Bootstrap</title>
+    <link href="/css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
+</html>
+```
 
 ## Значения переменных по умолчанию
 

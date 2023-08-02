@@ -96,8 +96,8 @@ Bootstrap «спиннеры» можно использовать для ото
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <strong>Загрузка...</strong>
-  <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  <strong role="status">Загрузка...</strong>
+  <div class="spinner-border ms-auto" aria-hidden="true"></div>
 </div>
 {{< /example >}}
 
@@ -151,23 +151,23 @@ Bootstrap «спиннеры» можно использовать для ото
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Загрузка...</span>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Загрузка...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  Загрузка...
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span role="status">Загрузка...</span>
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Загрузка...</span>
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+  <span class="visually-hidden" role="status">Загрузка...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
-  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  Загрузка...
+  <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+  <span role="status">Загрузка...</span>
 </button>
 {{< /example >}}
 

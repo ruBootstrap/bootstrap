@@ -31,7 +31,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -43,7 +43,7 @@ toc: true
   <a class="nav-link active" aria-current="page" href="#">Активная</a>
   <a class="nav-link" href="#">Ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled">Отключенная</a>
+  <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -53,7 +53,7 @@ toc: true
 
 ### Горизонтальное выравнивание
 
-Измените горизонтальное выравнивание Вашей навигации с помощью [утилит flexbox]({{< docsref "/layout/grid#horizontal-alignment" >}}). По умолчанию элементы навигации выравниваются по левому краю, но Вы можете легко изменить их на выравнивание по центру или по правому краю.
+Измените горизонтальное выравнивание вашей навигации с помощью [утилит flexbox]({{< docsref "/utilities/flex#justify-content" >}}). По умолчанию навигация выровнена по левому краю, но вы можете легко изменить ее на центральную или правую.
 
 Выравнивание по центру с помощью `.justify-content-center`:
 
@@ -69,7 +69,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -88,7 +88,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -109,7 +109,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -121,7 +121,7 @@ toc: true
   <a class="nav-link active" aria-current="page" href="#">Активная</a>
   <a class="nav-link" href="#">Ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled">Отключенная</a>
+  <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -141,7 +141,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -162,7 +162,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -183,14 +183,14 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
 
 ### Заполнение и выравнивание
 
-Заставьте содержимое Вашего `.nav` расширить всю доступную ширину одним из двух классов модификаторов. Чтобы пропорционально заполнить все доступное пространство Вашим `.nav-item`, используйте `.nav-fill`. Обратите внимание, что все горизонтальное пространство занято, но не все элементы навигации имеют одинаковую ширину.
+Принудительно расширяйте содержимое `.nav` на всю доступную ширину с помощью одного из двух классов модификаторов. Чтобы пропорционально заполнить все доступное пространство файлами `.nav-item`, используйте `.nav-fill`. Обратите внимание, что все горизонтальное пространство занято, но не все элементы навигации имеют одинаковую ширину.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -204,7 +204,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -216,7 +216,7 @@ toc: true
   <a class="nav-link active" aria-current="page" href="#">Активная</a>
   <a class="nav-link" href="#">На много длиннее ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled">Отключенная</a>
+  <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -234,7 +234,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -246,7 +246,7 @@ toc: true
   <a class="nav-link active" aria-current="page" href="#">Активная</a>
   <a class="nav-link" href="#">На много длиннее ссылка</a>
   <a class="nav-link" href="#">Ссылка</a>
-  <a class="nav-link disabled">Отключенная</a>
+  <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
 </nav>
 
 {{< /example >}}
@@ -260,7 +260,7 @@ toc: true
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Активная</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Длинная ссылка навигации</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Ссылка</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled">Отключенная</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Отключенная</a>
 </nav>
 {{< /example >}}
 
@@ -295,7 +295,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -321,7 +321,7 @@ toc: true
     <a class="nav-link" href="#">Ссылка</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Отключенная</a>
+    <a class="nav-link disabled" aria-disabled="true">Отключенная</a>
   </li>
 </ul>
 {{< /example >}}
@@ -568,7 +568,7 @@ toc: true
 
 Динамические интерфейсы с вкладками, как описано в [Шаблон вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), требуют `role="tablist"`, `role="tab"`, `role="tabpanel"` и дополнительные `aria-` атрибуты, чтобы передать их структуру, функциональность и текущее состояние пользователям вспомогательных технологий (таких как программы чтения с экрана). Мы рекомендуем использовать элементы `<button>` для вкладок, так как это элементы управления, которые запускают динамическое изменение, а не ссылки, ведущие на новую страницу или место.
 
-В соответствии с шаблоном ARIA Авторская практика, только текущая активная вкладка получает фокус клавиатуры. Когда подключаемый модуль JavaScript инициализируется, он устанавливает `tabindex="-1"` для всех неактивных элементов управления вкладками. Как только текущая активная вкладка получает фокус, клавиши курсора активируют предыдущую/следующую вкладку, а плагин меняет [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) соответственно. Однако обратите внимание, что подключаемый модуль JavaScript не делает различий между горизонтальными и вертикальными списками вкладок, когда дело доходит до взаимодействия с клавишами курсора: независимо от ориентации списка вкладок, оба курсора, направленные вверх *и* влево, переходят на предыдущую вкладку, а курсор вниз *и* правый курсор перейти на следующую вкладку.
+В соответствии с шаблоном ARIA Authoring Practices, только текущая активная вкладка получает фокус клавиатуры. Когда подключаемый модуль JavaScript инициализируется, он устанавливает `tabindex="-1"` для всех неактивных элементов управления вкладками. Как только текущая активная вкладка получает фокус, клавиши управления курсором активируют предыдущую/следующую вкладку. Клавиши <kbd>Home</kbd> и <kbd>End</kbd> активируют первую и последнюю вкладки соответственно. Плагин соответствующим образом изменит [перемещающийся `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/). Однако обратите внимание, что подключаемый модуль JavaScript не делает различий между горизонтальными и вертикальными списками вкладок, когда дело доходит до взаимодействия с клавишами курсора: независимо от ориентации списка вкладок, оба курсора, направленные вверх *и* влево, переходят на предыдущую вкладку, а курсор вниз *и* правый курсор перейти на следующую вкладку.
 
 {{< callout warning >}}
 В целом, чтобы упростить навигацию с помощью клавиатуры, рекомендуется также делать фокусируемыми сами панели вкладок, если только первый элемент, содержащий значимое содержимое внутри панели вкладок, уже не находится в фокусе. Плагин JavaScript не пытается справиться с этим аспектом — там, где это уместно, вам нужно будет явно сделать ваши панели вкладок доступными для фокуса, добавив `tabindex="0"` в вашу разметку.

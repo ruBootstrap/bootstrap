@@ -129,7 +129,7 @@ Bootstrap включает в себя несколько вариантов к�
 
 ## Блочные кнопки
 
-Создавайте гибкие стопки полноразмерных «блочных кнопок», как в Bootstrap 4, с помощью наших утилит display и gap. Используя утилиты вместо классов, специфичных для кнопок, мы получаем гораздо больший контроль над интервалом, выравниванием и поведением.
+Создавайте адаптивные стеки полноразмерных «кнопок блокировки», подобных тем, что используются в Bootstrap 4, с помощью наших утилит display и gap. Используя утилиты вместо классов, специфичных для кнопок, мы имеем гораздо больший контроль над интервалами, выравниванием и поведением отклика.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -156,7 +156,7 @@ Bootstrap включает в себя несколько вариантов к�
 </div>
 {{< /example >}}
 
-Дополнительные утилиты можно использовать для регулировки выравнивания кнопок по горизонтали. Здесь мы взяли наш предыдущий отзывчивый пример и добавили несколько утилит гибкости и утилиту поля для кнопки, чтобы выровнять кнопки по правому краю, когда они больше не сложены.
+Дополнительные утилиты можно использовать для настройки выравнивания кнопок в горизонтальном положении. Здесь мы взяли наш предыдущий адаптивный пример и добавили несколько утилит flex и утилиту margin на кнопку, чтобы выравнивать кнопки по правому краю, когда они больше не сложены.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -178,15 +178,29 @@ Bootstrap включает в себя несколько вариантов к�
 Добавьте `data-bs-toggle="button"` для переключения состояния `active`. Если Вы предварительно переключаете кнопку, Вы должны вручную добавить класс `.active` **и** `aria-pressed="true"` чтобы гарантировать, что это будет правильно передано вспомогательным технологиям.
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-bs-toggle="button">Кнопка-переключатель</button>
-<button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Активная кнопка-переключатель</button>
-<button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Отключенная кнопка-переключатель</button>
+<p class="d-inline-flex gap-1">
+  <button type="button" class="btn" data-bs-toggle="button">Кнопка-переключатель</button>
+  <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Активная кнопка-переключатель</button>
+  <button type="button" class="btn" disabled data-bs-toggle="button">Отключенная кнопка-переключатель</button>
+</p>
+<p class="d-inline-flex gap-1">
+  <button type="button" class="btn btn-primary" data-bs-toggle="button">Кнопка-переключатель</button>
+  <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Активная кнопка-переключатель</button>
+  <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Отключенная кнопка-переключатель</button>
+</p>
 {{< /example >}}
 
 {{< example >}}
-<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Ссылка-переключатель</a>
-<a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Активная ссылка-переключатель</a>
-<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Отключенная ссылка-переключатель</a>
+<p class="d-inline-flex gap-1">
+  <a href="#" class="btn" role="button" data-bs-toggle="button">Toggle link</a>
+  <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+  <a class="btn disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+</p>
+<p class="d-inline-flex gap-1">
+  <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+  <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+  <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+</p>
 {{< /example >}}
 
 ### Методы
@@ -200,9 +214,9 @@ const bsButton = new bootstrap.Button('#myButton')
 {{< bs-table "table" >}}
 | Метод | Описание |
 | --- | --- |
-| `dispose` | Destroys an element's button. (Removes stored data on the DOM element). |
-| `getInstance` | Static method which allows you to get the button instance associated to a DOM element, you can use it like this: `bootstrap.Button.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a button instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Button.getOrCreateInstance(element)`. |
+| `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `bootstrap.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn't initialized. You can use it like this: `bootstrap.Button.getOrCreateInstance(element)`. |
 | `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 {{< /bs-table >}}
 
