@@ -12,16 +12,16 @@ toc: true
 
 <div class="bd-example d-md-flex">
   <div class="overflow-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
+    Это пример использования <code>.overflow-auto</code> для элемента с заданными размерами ширины и высоты. По дизайну этот контент будет прокручиваться вертикально.
   </div>
   <div class="overflow-hidden p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
+    Это пример использования <code>.overflow-hidden</code> для элемента с заданными размерами ширины и высоты.
   </div>
   <div class="overflow-visible p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-visible</code> on an element with set width and height dimensions.
+    Это пример использования <code>.overflow-visible</code> для элемента с заданными размерами ширины и высоты.
   </div>
   <div class="overflow-scroll p-3 bg-body-tertiary" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-scroll</code> on an element with set width and height dimensions.
+    Это пример использования <code>.overflow-scroll</code> для элемента с заданными размерами ширины и высоты.
   </div>
 </div>
 
@@ -38,20 +38,20 @@ toc: true
 
 <div class="bd-example d-md-flex">
   <div class="overflow-x-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px; white-space: nowrap;">
-    <div><code>.overflow-x-auto</code> example on an element</div>
-    <div> with set width and height dimensions.</div>
+    <div>Пример <code>.overflow-x-auto</code> для элемента</div>
+    <div> с заданными размерами ширины и высоты.</div>
   </div>
   <div class="overflow-x-hidden p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
-    <div><code>.overflow-x-hidden</code> example</div>
-    <div>on an element with set width and height dimensions.</div>
+    <div>Пример <code>.overflow-x-hidden</code> example</div>
+    <div>для элемента с заданными размерами ширины и высоты.</div>
   </div>
   <div class="overflow-x-visible p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
-    <div><code>.overflow-x-visible</code> example </div>
-    <div>on an element with set width and height dimensions.</div>
+    <div>Пример <code>.overflow-x-visible</code> example </div>
+    <div>для элемента с заданными размерами ширины и высоты.</div>
   </div>
   <div class="overflow-x-scroll p-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;white-space: nowrap;">
-    <div><code>.overflow-x-scroll</code> example on an element</div>
-    <div> with set width and height dimensions.</div>
+    <div>Пример <code>.overflow-x-scroll</code> для элемента</div>
+    <div> с заданными размерами ширины и высоты.</div>
   </div>
 </div>
 
@@ -68,16 +68,16 @@ toc: true
 
 <div class="bd-example d-md-flex">
   <div class="overflow-y-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">
-    <code>.overflow-y-auto</code> example on an element with set width and height dimensions.
+    Пример <code>.overflow-y-auto</code> для элемента с заданными размерами ширины и высоты.
   </div>
   <div class="overflow-y-hidden p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">
-    <code>.overflow-y-hidden</code> example on an element with set width and height dimensions.
+    Пример <code>.overflow-y-hidden</code> для элемента с заданными размерами ширины и высоты.
   </div>
   <div class="overflow-y-visible p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">
-    <code>.overflow-y-visible</code> example on an element with set width and height dimensions.
+    Пример <code>.overflow-y-visible</code> для элемента с заданными размерами ширины и высоты.
   </div>
   <div class="overflow-y-scroll p-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">
-    <code>.overflow-y-scroll</code> example on an element with set width and height dimensions.
+    Пример <code>.overflow-y-scroll</code> для элемента с заданными размерами ширины и высоты.
   </div>
 </div>
 

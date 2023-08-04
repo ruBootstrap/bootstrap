@@ -189,11 +189,11 @@ $color-mode-type: media-query;
 {{< /js.inline >}}
 {{< /example >}}
 
-## Adding theme colors
+## Добавление цветов темы
 
-Adding a new color in `$theme-colors` is not enough for some of our components like [alerts]({{< docsref "/components/alerts" >}}) and [list groups]({{< docsref "/components/list-group" >}}). New colors must also be defined in `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` for light theme; but also in `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` for dark theme.
+Добавления нового цвета в `$theme-colors` недостаточно для некоторых наших компонентов, таких как [alerts]({{< docsref "/components/alerts" >}}) и [list groups]({{< docsref "/components/list-group" >}}). Новые цвета также должны быть определены в `$theme-colors-text`, `$theme-colors-bg-subtle` и `$theme-colors-border-subtle` для светлой темы; но также и в `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark` и `$theme-colors-border-subtle-dark` для темной темы.
 
-This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we'll revisit this setup to reduce the duplication.
+Это ручной процесс, потому что Sass не может генерировать свои собственные переменные Sass из существующей переменной или карты. В будущих версиях Bootstrap мы вернемся к этой настройке, чтобы уменьшить дублирование.
 
 ```scss
 // Required

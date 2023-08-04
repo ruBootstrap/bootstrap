@@ -21,7 +21,7 @@ added: "5.1"
   <div class="card-body">
     <h5 class="card-title">Заголовок карточки</h5>
     <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
   </div>
 </div>
 

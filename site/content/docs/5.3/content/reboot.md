@@ -108,20 +108,20 @@ $font-family-sans-serif:
 Ссылки имеют `color` по умолчанию и подчеркивание. Хотя ссылки изменяются при `:hover`, они не меняются в зависимости от того, посещал ли кто-то ссылку `:visited`. Они также не получают никаких специальных стилей `:focus`.
 
 {{< example >}}
-<a href="#">This is an example link</a>
+<a href="#">Это ссылка для примера</a>
 {{< /example >}}
 
 Начиная с версии 5.3.x, `color` ссылки задается с помощью `rgba()` и новых переменных CSS `-rgb`, что позволяет легко настраивать непрозрачность цвета ссылки. Измените непрозрачность цвета ссылки с помощью переменной CSS `--bs-link-opacity`:
 
 {{< example >}}
-<a href="#" style="--bs-link-opacity: .5">This is an example link</a>
+<a href="#" style="--bs-link-opacity: .5">Это ссылка для примера</a>
 {{< /example >}}
 
 
 Ссылки-заполнители — те, у которых нет `href`, — нацелены на более конкретный селектор, а их `color` и `text-decoration` сбрасываются до значений по умолчанию.
 
 {{< example >}}
-<a>This is a placeholder link</a>
+<a>Это ссылка-заполнитель</a>
 {{< /example >}}
 
 ## Горизонтальные правила
@@ -163,13 +163,13 @@ $font-family-sans-serif:
 
 <div class="bd-example">
   <dl>
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining terms.</dd>
-    <dt>Term</dt>
-    <dd>Definition for the term.</dd>
-    <dd>A second definition for the same term.</dd>
-    <dt>Another term</dt>
-    <dd>Definition for this other term.</dd>
+    <dt>Списки описаний</dt>
+    <dd>Список описаний идеально подходит для определения терминов.</dd>
+    <dt>Срок</dt>
+    <dd>Определение термина.</dd>
+    <dd>Второе определение того же термина.</dd>
+    <dt>Другой термин</dt>
+    <dd>Определение этого другого термина.</dd>
   </dl>
 </div>
 

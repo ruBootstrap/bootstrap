@@ -87,11 +87,11 @@ your-project/
 
 С этой настройкой, Вы можете приступить к изменению любых переменных и карт Sass в Вашем `custom.scss`. Вы также можете начать добавлять части Bootstrap в разделе `// Optional` по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла `bootstrap.scss` в качестве отправной точки.
 
-## Compiling
+## Компиляция
 
-In order to use your custom Sass code as CSS in the browser, you need a Sass compiler. Sass ships as a CLI package, but you can also compile it with other build tools like [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/), or with a GUI applications. Some IDEs also have Sass compilers built in or as downloadable extensions.
+Чтобы использовать ваш пользовательский код Sass в качестве CSS в браузере, вам нужен компилятор Sass. Sass поставляется в виде пакета CLI, но вы также можете скомпилировать его с помощью других инструментов сборки, таких как [Gulp](https://gulpjs.com/) или [Webpack](https://webpack.js.org/), или с помощью приложения с графическим интерфейсом. Некоторые IDE также имеют встроенные компиляторы Sass или загружаемые расширения.
 
-We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
+Нам нравится использовать CLI для компиляции нашего Sass, но вы можете использовать любой метод, который вы предпочитаете. Из командной строки выполните следующее:
 
 ```shell
 # Install Sass globally
@@ -101,15 +101,15 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+Узнайте больше о своих вариантах на [sass-lang.com/install](https://sass-lang.com/install) и [компиляции с помощью VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
 
 {{< callout info >}}
-**Using Bootstrap with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). We also have production-ready demos in [our examples repository on GitHub](https://github.com/twbs/examples).
+**Используете Bootstrap с другим инструментом сборки?** Рекомендуем прочитать наши руководства по компиляции с помощью [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}) или [Vite]({{< docsref "/getting-started/vite" >}}). У нас также есть готовые демонстрации в [нашем репозитории примеров на GitHub](https://github.com/twbs/examples).
 {{< /callout >}}
 
-## Including
+## Включение
 
-Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you'll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you've changed it.
+Как только ваш CSS скомпилирован, вы можете включить его в свои файлы HTML. Внутри вашего `index.html` вы захотите включить скомпилированный файл CSS. Обязательно обновите путь к скомпилированному файлу CSS, если вы его изменили.
 
 ```html
 <!doctype html>
@@ -258,12 +258,6 @@ Bootstrap предполагает наличие определенных кл�
 .custom-element-2 {
   color: shade-color($danger, 30%);
 }
-```
-
-.custom-element-2 {
-  color: shade-color($danger, 30%);
-}
-
 ```
 
 ### Цветовой контраст

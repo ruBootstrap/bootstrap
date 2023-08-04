@@ -192,14 +192,14 @@ Bootstrap включает в себя несколько вариантов к�
 
 {{< example >}}
 <p class="d-inline-flex gap-1">
-  <a href="#" class="btn" role="button" data-bs-toggle="button">Toggle link</a>
-  <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-  <a class="btn disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+  <a href="#" class="btn" role="button" data-bs-toggle="button">Ссылка переключения</a>
+  <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">Активная ссылка для переключения</a>
+  <a class="btn disabled" aria-disabled="true" role="button" data-bs-toggle="button">Отключенная ссылка переключения</a>
 </p>
 <p class="d-inline-flex gap-1">
-  <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
-  <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-  <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+  <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Ссылка переключения</a>
+  <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Активная ссылка для переключения</a>
+  <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Отключенная ссылка переключения</a>
 </p>
 {{< /example >}}
 

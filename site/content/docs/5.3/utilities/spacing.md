@@ -100,10 +100,10 @@ toc: true
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Элемент сетки 1</div>
+  <div class="p-2 g-col-6">Элемент сетки 2</div>
+  <div class="p-2 g-col-6">Элемент сетки 3</div>
+  <div class="p-2 g-col-6">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 
@@ -115,10 +115,10 @@ toc: true
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-0 row-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Элемент сетки 1</div>
+  <div class="p-2 g-col-6">Элемент сетки 2</div>
+  <div class="p-2 g-col-6">Элемент сетки 3</div>
+  <div class="p-2 g-col-6">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 
@@ -128,10 +128,10 @@ toc: true
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-0 column-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Элемент сетки 1</div>
+  <div class="p-2 g-col-6">Элемент сетки 2</div>
+  <div class="p-2 g-col-6">Элемент сетки 3</div>
+  <div class="p-2 g-col-6">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 

@@ -37,17 +37,17 @@ added: "5.1"
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
-  <div class="p-2">First item</div>
-  <div class="p-2 ms-auto">Second item</div>
+  <div class="p-2">Первый элемент</div>
+  <div class="p-2 ms-auto">Второй элемент</div>
   <div class="vr"></div>
-  <div class="p-2">Third item</div>
+  <div class="p-2">Третий элемент</div>
 </div>
 {{< /example >}}
 
 ## CSS
 
-### Sass variables
+### Sass переменные
 
-Customize the vertical rule Sass variable to change its width.
+Настройте переменную вертикального правила Sass, чтобы изменить ее ширину.
 
 {{< scss-docs name="vr-variables" file="scss/_variables.scss" >}}
