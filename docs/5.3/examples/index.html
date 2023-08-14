@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.116.1">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.3">
@@ -16,7 +16,7 @@
 
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
@@ -72,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="arrow-right" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
   </symbol>
@@ -157,14 +157,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="navbar navbar-expand-lg bd-navbar sticky-top">
   <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
-      <div class="d-lg-none" style="width: 1.5rem;"></div>
+      <div class="d-lg-none" style="width: 4.25rem;"></div>
 
     <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Bootstrap">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
     </a>
 
     <div class="d-flex">
-      
+      <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div>
 
       <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Переключить навигацию">
         <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
@@ -323,11 +323,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="bd-lead">Быстро начните проект с любым из наших примеров, начиная от использования частей фреймворка и заканчивая пользовательскими компонентами и макетами.</p>
           
           <div class="d-flex flex-column flex-md-row gap-3">
-            <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.0-alpha3/bootstrap-5.3.0-alpha3-examples.zip" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
+            <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.1/bootstrap-5.3.1-examples.zip" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
               <svg class="bi me-2" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
               Скачать примеры
             </a>
-            <a href="https://github.com/twbs/bootstrap/archive/v5.3.0-alpha3.zip" class="btn btn-lg bd-btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
+            <a href="https://github.com/twbs/bootstrap/archive/v5.3.1.zip" class="btn btn-lg bd-btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">
               Скачать исходный код
             </a>
           </div>
@@ -415,13 +415,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">
-                Webpack
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/color-modes/" target="_blank" rel="noopener">
+                Цветовые режимы Bootstrap
               </a>
             </h3>
-            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Webpack.</p>
+            <p class="text-body-secondary">Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint и цветовых режимов Bootstrap.</p>
             <p>
-              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=src%2Findex.html" target="_blank" rel="noopener">
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/icons-font/" target="_blank" rel="noopener">
+                Иконки Bootstrap
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/icons-font?file=index.html" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Редактировать в StackBlitz
               </a>
@@ -440,9 +461,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Parcel
               </a>
             </h3>
-            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Parcel.</p>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript через Parcel.</p>
             <p>
               <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=src%2Findex.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/react-nextjs/" target="_blank" rel="noopener">
+                React
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с React, Next.js и React Bootstrap.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Редактировать в StackBlitz
               </a>
@@ -461,9 +503,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Vite
               </a>
             </h3>
-            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с помощью Vite.</p>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vite.</p>
             <p>
-              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vite?file=src%2Findex.html" target="_blank" rel="noopener">
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Редактировать в StackBlitz
               </a>
@@ -478,13 +520,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
           <div>
             <h3 class="h5 mb-1">
-              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/icons-font/" target="_blank" rel="noopener">
-                Bootstrap Иконки
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/vue/" target="_blank" rel="noopener">
+                Vue
               </a>
             </h3>
-            <p class="text-body-secondary">Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons.</p>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vue и Vite.</p>
             <p>
-              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/icons-font?file=index.html" target="_blank" rel="noopener">
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/vue?file=index.html" target="_blank" rel="noopener">
+                <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
+                Редактировать в StackBlitz
+              </a>
+            </p>
+          </div>
+        </div>
+      
+    
+  
+      
+        <div class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
+          <svg class="bi fs-5 flex-shrink-0 mt-1"><use xlink:href="#box-seam"></use></svg>
+          <div>
+            <h3 class="h5 mb-1">
+              <a class="d-block link-offset-1" href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">
+                Webpack
+              </a>
+            </h3>
+            <p class="text-body-secondary">Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Webpack.</p>
+            <p>
+              <a class="icon-link small link-secondary link-offset-1" href="https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=src%2Findex.html" target="_blank" rel="noopener">
                 <svg class="bi flex-shrink-0"><use xlink:href="#lightning-charge-fill"></use></svg>
                 Редактировать в StackBlitz
               </a>
@@ -496,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 <div class="bd-content">
   <h2 id="%D1%84%D1%80%D0%B0%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D1%8B">Фрагменты</h2>
-  <p>Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с настраиваемым CSS и т.д.</p>
+  <p>Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с пользовательским CSS и т. д.</p>
   <div class="row">
       
         <div class="col-sm-6 col-md-3 mb-3">
@@ -1284,7 +1347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="list-unstyled small">
           <li class="mb-2">Разработано и создано со всей любовью <a href="/docs/5.3/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия 5.3.0-alpha3.</li>
+          <li class="mb-2">Текущая версия 5.3.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1296,7 +1359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="mb-2"><a href="https://icons.getbootstrap.su/">Иконки</a></li>
           <li class="mb-2"><a href="https://themes.getbootstrap.com/">Темы</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.su/">Блог</a></li>
-          <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap">Swag Store</a></li>
+          <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
@@ -1312,22 +1375,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-6 col-lg-2 mb-3">
         <h5>Проекты</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/icons">Иконки</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/examples/">Examples repo</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Иконки</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Репозиторий примеров</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
         <h5>Сообщество</h5>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="https://t.me/getbootstrap_ru"><b>Чат в телеграмм</b></a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Вопросы</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Обсуждения</a></li>
-          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Корпоративные спонсоры</a></li>
-          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Вопросы</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Обсуждения</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Корпоративные спонсоры</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
         </ul>
       </div>
     </div>
@@ -1336,6 +1399,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 
 

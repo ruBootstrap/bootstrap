@@ -25,9 +25,6 @@
     <loc>https://getbootstrap.su/docs/5.3/getting-started/javascript/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/components/offcanvas/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/getting-started/rfs/</loc>
   </url>
   <url>
@@ -44,6 +41,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/components/accordion/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/components/offcanvas/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/sidebars/</loc>

@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.116.1">
     <title>Шаблон карусели · Bootstrap v5.3</title>
 
     <link rel="canonical" href="https://getbootstrap.su/docs/5.3/examples/carousel/">
 
     
 
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
@@ -106,7 +106,7 @@
     <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
       </symbol>
@@ -174,7 +174,7 @@
             <a class="nav-link" href="#">Ссылка</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Отключен</a>
+            <a class="nav-link disabled" aria-disabled="true">Отключен</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -188,7 +188,7 @@
 
 <main>
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
@@ -200,7 +200,7 @@
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Пример заголовка.</h1>
-            <p>Некоторое репрезентативное содержимое-заполнитель для первого слайда карусели.</p>
+            <p class="opacity-75">Некоторое репрезентативное содержимое-заполнитель для первого слайда карусели.</p>
             <p><a class="btn btn-lg btn-primary" href="#">Зарегистрироваться Сегодня</a></p>
           </div>
         </div>
@@ -317,10 +317,7 @@
     <p>&copy; 2017–2023 Компания. &middot; <a href="#">Конфиденциальность</a> &middot; <a href="#">Условия</a></p>
   </footer>
 </main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-      
-  </body>
+    </body>
 </html>

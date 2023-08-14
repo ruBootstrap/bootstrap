@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Используйте наши исходные файлы Sass, чтобы воспользоваться преимуществами переменных, карт, примесей и функций, которые помогут Вам быстрее создавать и настраивать свой проект.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.116.1">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.3">
@@ -72,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="arrow-right" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
   </symbol>
@@ -172,9 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 
     <div class="d-flex">
-      
-        <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div>
-      
+      <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div>
 
       <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Переключить навигацию">
         <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg>
@@ -546,7 +544,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.0-alpha3/site/content/docs/5.3/customize/sass.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.1/site/content/docs/5.3/customize/sass.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
               На GitHub
             </a>
           </div>
@@ -569,6 +567,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul>
     <li><a href="#файловая-структура">Файловая структура</a></li>
     <li><a href="#импорт">Импорт</a></li>
+    <li><a href="#компиляция">Компиляция</a></li>
+    <li><a href="#включение">Включение</a></li>
     <li><a href="#значения-переменных-по-умолчанию">Значения переменных по умолчанию</a></li>
     <li><a href="#карты-и-циклы">Карты и циклы</a>
       <ul>
@@ -581,6 +581,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="#функции">Функции</a>
       <ul>
         <li><a href="#цвета">Цвета</a></li>
+        <li><a href="#цветовой-контраст">Цветовой контраст</a></li>
         <li><a href="#escape-svg">Escape SVG</a></li>
         <li><a href="#функции-сложения-и-вычитания">Функции сложения и вычитания</a></li>
       </ul>
@@ -603,19 +604,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="файловая-структура">Файловая структура <a class="anchor-link" href="#%d1%84%d0%b0%d0%b9%d0%bb%d0%be%d0%b2%d0%b0%d1%8f-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0" aria-label="Link to this section: Файловая структура"></a></h2>
 <p>По возможности избегайте изменения файлов ядра Bootstrap. Для Sass это означает создание собственной таблицы стилей, которая импортирует Bootstrap, чтобы вы могли изменять и расширять ее. Предполагая, что вы используете менеджер пакетов, такой как npm, у вас будет файловая структура, которая выглядит следующим образом:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
-</span></span><span class="line"><span class="cl">├── scss
+</span></span><span class="line"><span class="cl">├── scss/
 </span></span><span class="line"><span class="cl">│   └── custom.scss
 </span></span><span class="line"><span class="cl">└── node_modules/
-</span></span><span class="line"><span class="cl">    └── bootstrap
-</span></span><span class="line"><span class="cl">        ├── js
-</span></span><span class="line"><span class="cl">        └── scss
+</span></span><span class="line"><span class="cl">│   └── bootstrap/
+</span></span><span class="line"><span class="cl">│       ├── js/
+</span></span><span class="line"><span class="cl">│       └── scss/
+</span></span><span class="line"><span class="cl">└── index.html
 </span></span></code></pre></div><p>Если вы загрузили наши исходные файлы и не используете менеджер пакетов, вы можете вручную создать что-то похожее на эту структуру, сохраняя исходные файлы Bootstrap отдельно от ваших собственных.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
-</span></span><span class="line"><span class="cl">├── scss
+</span></span><span class="line"><span class="cl">├── scss/
 </span></span><span class="line"><span class="cl">│   └── custom.scss
-</span></span><span class="line"><span class="cl">└── bootstrap/
-</span></span><span class="line"><span class="cl">    ├── js
-</span></span><span class="line"><span class="cl">    └── scss
+</span></span><span class="line"><span class="cl">├── bootstrap/
+</span></span><span class="line"><span class="cl">│   ├── js/
+</span></span><span class="line"><span class="cl">│   └── scss/
+</span></span><span class="line"><span class="cl">└── index.html
 </span></span></code></pre></div><h2 id="импорт">Импорт <a class="anchor-link" href="#%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82" aria-label="Link to this section: Импорт"></a></h2>
 <p>В свой <code>custom.scss</code> Вы импортируете исходные файлы Sass для Bootstrap. У Вас есть два варианта: включить весь Bootstrap или выбрать нужные Вам части. Мы поощряем последнее, но имейте в виду, что между нашими компонентами есть некоторые требования и зависимости. Вам также необходимо будет включить некоторый JavaScript для наших плагинов.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Custom.scss
@@ -659,7 +662,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// 8. Добавьте сюда дополнительный пользовательский код
 </span></span></span></code></pre></div><p>С этой настройкой, Вы можете приступить к изменению любых переменных и карт Sass в Вашем <code>custom.scss</code>. Вы также можете начать добавлять части Bootstrap в разделе <code>// Optional</code> по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла <code>bootstrap.scss</code> в качестве отправной точки.</p>
-<h2 id="значения-переменных-по-умолчанию">Значения переменных по умолчанию <a class="anchor-link" href="#%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%bf%d0%b5%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d1%85-%d0%bf%d0%be-%d1%83%d0%bc%d0%be%d0%bb%d1%87%d0%b0%d0%bd%d0%b8%d1%8e" aria-label="Link to this section: Значения переменных по умолчанию"></a></h2>
+<h2 id="компиляция">Компиляция <a class="anchor-link" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%b8%d0%bb%d1%8f%d1%86%d0%b8%d1%8f" aria-label="Link to this section: Компиляция"></a></h2>
+<p>Чтобы использовать ваш пользовательский код Sass в качестве CSS в браузере, вам нужен компилятор Sass. Sass поставляется в виде пакета CLI, но вы также можете скомпилировать его с помощью других инструментов сборки, таких как <a href="https://gulpjs.com/">Gulp</a> или <a href="https://webpack.js.org/">Webpack</a>, или с помощью приложения с графическим интерфейсом. Некоторые IDE также имеют встроенные компиляторы Sass или загружаемые расширения.</p>
+<p>Нам нравится использовать CLI для компиляции нашего Sass, но вы можете использовать любой метод, который вы предпочитаете. Из командной строки выполните следующее:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Install Sass globally</span>
+</span></span><span class="line"><span class="cl">npm install -g sass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Watch your custom Sass for changes and compile it to CSS</span>
+</span></span><span class="line"><span class="cl">sass --watch ./scss/custom.scss ./css/custom.css
+</span></span></code></pre></div><p>Узнайте больше о своих вариантах на <a href="https://sass-lang.com/install">sass-lang.com/install</a> и <a href="https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css">компиляции с помощью VS Code</a>.</p>
+<div class="bd-callout bd-callout-info">
+<strong>Используете Bootstrap с другим инструментом сборки?</strong> Рекомендуем прочитать наши руководства по компиляции с помощью <a href="/docs/5.3/getting-started/webpack/">Webpack</a>, <a href="/docs/5.3/getting-started/parcel/">Parcel</a> или <a href="/docs/5.3/getting-started/vite/">Vite</a>. У нас также есть готовые демонстрации в <a href="https://github.com/twbs/examples">нашем репозитории примеров на GitHub</a>.
+</div>
+
+<h2 id="включение">Включение <a class="anchor-link" href="#%d0%b2%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5" aria-label="Link to this section: Включение"></a></h2>
+<p>Как только ваш CSS скомпилирован, вы можете включить его в свои файлы HTML. Внутри вашего <code>index.html</code> вы захотите включить скомпилированный файл CSS. Обязательно обновите путь к скомпилированному файлу CSS, если вы его изменили.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Custom Bootstrap<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/custom.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="значения-переменных-по-умолчанию">Значения переменных по умолчанию <a class="anchor-link" href="#%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%bf%d0%b5%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d1%85-%d0%bf%d0%be-%d1%83%d0%bc%d0%be%d0%bb%d1%87%d0%b0%d0%bd%d0%b8%d1%8e" aria-label="Link to this section: Значения переменных по умолчанию"></a></h2>
 <p>Каждая переменная Sass в Bootstrap включает флаг <code>!default</code> позволяющий переопределить значение переменной по умолчанию в Вашем собственном Sass без изменения исходного кода Bootstrap. Скопируйте и вставьте переменные по мере необходимости, измените их значения и удалите флаг <code>!default</code>. Если переменная уже была назначена, она не будет повторно назначена значениями по умолчанию в Bootstrap.</p>
 <p>Вы найдете полный список переменных Bootstrap в <code>scss/_variables.scss</code>. Некоторые переменные имеют значение <code>null</code>, эти переменные не выводят свойство, если они не переопределены в Вашей конфигурации.</p>
 <p>Переопределения переменных должны происходить после импорта наших функций, но до остального импорта.</p>
@@ -738,9 +768,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Вы можете осветлить или затемнить цвета с помощью функций Bootstrap <code>tint-color()</code> и <code>shade-color()</code>. Эти функции будут смешивать цвета с черным или белым, в отличие от собственных функций Sass <code>lighten()</code> и <code>darken()</code>, которые изменяют яркость на фиксированную величину, что часто не приводит к желаемому эффекту.</p>
-<div class="bd-example-snippet bd-code-snippet bd-scss-docs">
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
-      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.0-alpha3/scss/_functions.scss">scss/_functions.scss</a>
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.1/scss/_functions.scss">scss/_functions.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -769,25 +799,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl"><span class="nc">.custom-element-2</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>.custom-element-2 {
-color: shade-color($danger, 30%);
-}</p>
-<pre tabindex="0"><code>
-### Цветовой контраст
-
-Чтобы соответствовать [Руководству по обеспечению доступности веб-контента (WCAG)](https://www.w3.org/TR/WCAG/) требованиям к контрастности, авторы **должны** обеспечить минимальный [цветовой контраст текста 4.5:1 ](https://www.w3.org/TR/WCAG/#contrast-minimum) и минимальный [цветовой контраст не текста 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast), за очень немногими исключениями.
-
-Чтобы помочь в этом, мы включили в Bootstrap функцию `color-contrast`. Он использует [алгоритм коэффициента контрастности WCAG](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) для вычисления пороговых значений контрастности на основе [относительной яркости](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) в цветовом пространстве `sRGB` для автоматического возврата светлого (`#fff`), темного (`#212529`) или черного (`#000`) контрастного цвета на основе на указанный базовый цвет. Эта функция особенно полезна для примесей или циклов, когда вы создаете несколько классов.
-
-Например, чтобы сгенерировать образцы цвета из нашей карты `$theme-colors`:
-
-```scss
-@each $color, $value in $theme-colors {
-  .swatch-#{$color} {
-    color: color-contrast($value);
-  }
-}
-</code></pre><p>Его также можно использовать для одноразового использования контраста:</p>
+</span></span></code></pre></div><h3 id="цветовой-контраст">Цветовой контраст <a class="anchor-link" href="#%d1%86%d0%b2%d0%b5%d1%82%d0%be%d0%b2%d0%be%d0%b9-%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%b0%d1%81%d1%82" aria-label="Link to this section: Цветовой контраст"></a></h3>
+<p>Чтобы соответствовать <a href="https://www.w3.org/TR/WCAG/">Руководству по обеспечению доступности веб-контента (WCAG)</a> требованиям к контрастности, авторы <strong>должны</strong> обеспечить минимальный <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">цветовой контраст текста 4.5:1 </a> и минимальный <a href="https://www.w3.org/TR/WCAG/#non-text-contrast">цветовой контраст не текста 3:1</a>, за очень немногими исключениями.</p>
+<p>Чтобы помочь в этом, мы включили в Bootstrap функцию <code>color-contrast</code>. Он использует <a href="https://www.w3.org/TR/WCAG/#dfn-contrast-ratio">алгоритм коэффициента контрастности WCAG</a> для вычисления пороговых значений контрастности на основе <a href="https://www.w3.org/TR/WCAG/#dfn-relative-luminance">относительной яркости</a> в цветовом пространстве <code>sRGB</code> для автоматического возврата светлого (<code>#fff</code>), темного (<code>#212529</code>) или черного (<code>#000</code>) контрастного цвета на основе на указанный базовый цвет. Эта функция особенно полезна для примесей или циклов, когда вы создаете несколько классов.</p>
+<p>Например, чтобы сгенерировать образцы цвета из нашей карты <code>$theme-colors</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Его также можно использовать для одноразового использования контраста:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// вернет `color: #fff`
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
@@ -829,9 +850,9 @@ color: shade-color($danger, 30%);
 <p>В нашем каталоге <code>scss/mixins/</code> есть множество миксинов, которые являются основными частями Bootstrap, а также могут использоваться в вашем собственном проекте.</p>
 <h3 id="цветовые-схемы">Цветовые схемы <a class="anchor-link" href="#%d1%86%d0%b2%d0%b5%d1%82%d0%be%d0%b2%d1%8b%d0%b5-%d1%81%d1%85%d0%b5%d0%bc%d1%8b" aria-label="Link to this section: Цветовые схемы"></a></h3>
 <p>Доступен сокращенный миксин для медиа-запроса <code>prefers-color-scheme</code> с поддержкой <code>light</code>, <code>dark</code> и пользовательских цветовых схем. Смотрите <a href="/docs/5.3/customize/color-modes/">документацию по цветовым режимам</a> для получения информации о нашем миксине цветового режима.</p>
-<div class="bd-example-snippet bd-code-snippet bd-scss-docs">
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
-      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.0-alpha3/scss/mixins/_color-scheme.scss">scss/mixins/_color-scheme.scss</a>
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.1/scss/mixins/_color-scheme.scss">scss/mixins/_color-scheme.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -869,7 +890,7 @@ color: shade-color($danger, 30%);
         <ul class="list-unstyled small">
           <li class="mb-2">Разработано и создано со всей любовью <a href="/docs/5.3/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия 5.3.0-alpha3.</li>
+          <li class="mb-2">Текущая версия 5.3.1.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -881,7 +902,7 @@ color: shade-color($danger, 30%);
           <li class="mb-2"><a href="https://icons.getbootstrap.su/">Иконки</a></li>
           <li class="mb-2"><a href="https://themes.getbootstrap.com/">Темы</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.su/">Блог</a></li>
-          <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap">Swag Store</a></li>
+          <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
@@ -897,22 +918,22 @@ color: shade-color($danger, 30%);
       <div class="col-6 col-lg-2 mb-3">
         <h5>Проекты</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/icons">Иконки</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/examples/">Examples repo</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Иконки</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Репозиторий примеров</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
         <h5>Сообщество</h5>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="https://t.me/getbootstrap_ru"><b>Чат в телеграмм</b></a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Вопросы</a></li>
-          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Обсуждения</a></li>
-          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Корпоративные спонсоры</a></li>
-          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Вопросы</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Обсуждения</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Корпоративные спонсоры</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
         </ul>
       </div>
     </div>
@@ -923,6 +944,7 @@ color: shade-color($danger, 30%);
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
 
 <script src="/docs/5.3/assets/js/docs.min.js"></script>
@@ -947,10 +969,10 @@ color: shade-color($danger, 30%);
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.0-alpha3\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/css\/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.su/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
-    <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/bootstrap@5\.3\.0\-alpha3\/dist\/js\/bootstrap\.bundle\.min\.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
 
@@ -960,7 +982,7 @@ ${htmlSnippet.replace(/^/gm, '    ')}
   </body>
 </html>`
 
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance\.\n\/\/ In a real project please adapt this content to your needs\.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/\*!\n \* JavaScript for Bootstrap\u0027s docs \(https:\/\/getbootstrap\.com\/\)\n \* Copyright 2011\-2023 The Bootstrap Authors\n \* Licensed under the Creative Commons Attribution 3\.0 Unported License\.\n \* For details, see https:\/\/creativecommons\.org\/licenses\/by\/3\.0\/\.\n \*\/\n\n\/\* global bootstrap: false \*\/\n\n\(\(\) =\u003e \{\n  \u0027use strict\u0027\n\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Tooltips\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document\.querySelectorAll\(\u0027\[data\-bs\-toggle=\u0022tooltip\u0022\]\u0027\)\n    \.forEach\(tooltip =\u003e \{\n      new bootstrap\.Tooltip\(tooltip\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Popovers\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document\.querySelectorAll\(\u0027\[data\-bs\-toggle=\u0022popover\u0022\]\u0027\)\n    \.forEach\(popover =\u003e \{\n      new bootstrap\.Popover\(popover\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Toasts\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document\.getElementById\(\u0027toastPlacement\u0027\)\n  if \(toastPlacement\) \{\n    document\.getElementById\(\u0027selectToastPlacement\u0027\)\.addEventListener\(\u0027change\u0027, function \(\) \{\n      if \(!toastPlacement\.dataset\.originalClass\) \{\n        toastPlacement\.dataset\.originalClass = toastPlacement\.className\n      \}\n\n      toastPlacement\.className = `\$\{toastPlacement\.dataset\.originalClass\} \$\{this\.value\}`\n    \}\)\n  \}\n\n  \/\/ Instantiate all toasts in docs pages only\n  document\.querySelectorAll\(\u0027\.bd\-example \.toast\u0027\)\n    \.forEach\(toastNode =\u003e \{\n      const toast = new bootstrap\.Toast\(toastNode, \{\n        autohide: false\n      \}\)\n\n      toast\.show\(\)\n    \}\)\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js\-docs\-start live\-toast\n  const toastTrigger = document\.getElementById\(\u0027liveToastBtn\u0027\)\n  const toastLiveExample = document\.getElementById\(\u0027liveToast\u0027\)\n\n  if \(toastTrigger\) \{\n    const toastBootstrap = bootstrap\.Toast\.getOrCreateInstance\(toastLiveExample\)\n    toastTrigger\.addEventListener\(\u0027click\u0027, \(\) =\u003e \{\n      toastBootstrap\.show\(\)\n    \}\)\n  \}\n  \/\/ js\-docs\-end live\-toast\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Alerts\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js\-docs\-start live\-alert\n  const alertPlaceholder = document\.getElementById\(\u0027liveAlertPlaceholder\u0027\)\n  const appendAlert = \(message, type\) =\u003e \{\n    const wrapper = document\.createElement\(\u0027div\u0027\)\n    wrapper\.innerHTML = \[\n      `\u003cdiv class=\u0022alert alert\-\$\{type\} alert\-dismissible\u0022 role=\u0022alert\u0022\u003e`,\n      `   \u003cdiv\u003e\$\{message\}\u003c\/div\u003e`,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn\-close\u0022 data\-bs\-dismiss=\u0022alert\u0022 aria\-label=\u0022Close\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    \]\.join\(\u0027\u0027\)\n\n    alertPlaceholder\.append\(wrapper\)\n  \}\n\n  const alertTrigger = document\.getElementById\(\u0027liveAlertBtn\u0027\)\n  if \(alertTrigger\) \{\n    alertTrigger\.addEventListener\(\u0027click\u0027, \(\) =\u003e \{\n      appendAlert\(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027\)\n    \}\)\n  \}\n  \/\/ js\-docs\-end live\-alert\n\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Carousels\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Instantiate all non\-autoplaying carousels in docs or StackBlitz\n  document\.querySelectorAll\(\u0027\.carousel:not\(\[data\-bs\-ride=\u0022carousel\u0022\]\)\u0027\)\n    \.forEach\(carousel =\u003e \{\n      bootstrap\.Carousel\.getOrCreateInstance\(carousel\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Checks \u0026 Radios\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document\.querySelectorAll\(\u0027\.bd\-example\-indeterminate \[type=\u0022checkbox\u0022\]\u0027\)\n    \.forEach\(checkbox =\u003e \{\n      if \(checkbox\.id\.includes\(\u0027Indeterminate\u0027\)\) \{\n        checkbox\.indeterminate = true\n      \}\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Links\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Disable empty links in docs examples only\n  document\.querySelectorAll\(\u0027\.bd\-content \[href=\u0022#\u0022\]\u0027\)\n    \.forEach\(link =\u003e \{\n      link\.addEventListener\(\u0027click\u0027, event =\u003e \{\n        event\.preventDefault\(\)\n      \}\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Modal\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js\-docs\-start varying\-modal\-content\n  const exampleModal = document\.getElementById\(\u0027exampleModal\u0027\)\n  if \(exampleModal\) \{\n    exampleModal\.addEventListener\(\u0027show\.bs\.modal\u0027, event =\u003e \{\n      \/\/ Button that triggered the modal\n      const button = event\.relatedTarget\n      \/\/ Extract info from data\-bs\-\* attributes\n      const recipient = button\.getAttribute\(\u0027data\-bs\-whatever\u0027\)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback\.\n\n      \/\/ Update the modal\u0027s content\.\n      const modalTitle = exampleModal\.querySelector\(\u0027\.modal\-title\u0027\)\n      const modalBodyInput = exampleModal\.querySelector\(\u0027\.modal\-body input\u0027\)\n\n      modalTitle\.textContent = `New message to \$\{recipient\}`\n      modalBodyInput\.value = recipient\n    \}\)\n  \}\n  \/\/ js\-docs\-end varying\-modal\-content\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Offcanvas\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document\.querySelectorAll\(\u0027\.bd\-example\-offcanvas \.offcanvas\u0027\)\n  if \(myOffcanvas\) \{\n    myOffcanvas\.forEach\(offcanvas =\u003e \{\n      offcanvas\.addEventListener\(\u0027show\.bs\.offcanvas\u0027, event =\u003e \{\n        event\.preventDefault\(\)\n      \}, false\)\n    \}\)\n  \}\n\}\)\(\)\n' : null
+    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2023 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global bootstrap: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new bootstrap.Tooltip(tooltip)\n    })\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new bootstrap.Popover(popover)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document.getElementById(\u0027toastPlacement\u0027)\n  if (toastPlacement) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!toastPlacement.dataset.originalClass) {\n        toastPlacement.dataset.originalClass = toastPlacement.className\n      }\n\n      toastPlacement.className = \u0060${toastPlacement.dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new bootstrap.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  const toastTrigger = document.getElementById(\u0027liveToastBtn\u0027)\n  const toastLiveExample = document.getElementById(\u0027liveToast\u0027)\n\n  if (toastTrigger) {\n    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)\n    toastTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      toastBootstrap.show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js-docs-start live-alert\n  const alertPlaceholder = document.getElementById(\u0027liveAlertPlaceholder\u0027)\n  const appendAlert = (message, type) =\u003e {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0060   \u003cdiv\u003e${message}\u003c\/div\u003e\u0060,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 aria-label=\u0022Close\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    alertPlaceholder.append(wrapper)\n  }\n\n  const alertTrigger = document.getElementById(\u0027liveAlertBtn\u0027)\n  if (alertTrigger) {\n    alertTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      bootstrap.Carousel.getOrCreateInstance(carousel)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js-docs-start varying-modal-content\n  const exampleModal = document.getElementById(\u0027exampleModal\u0027)\n  if (exampleModal) {\n    exampleModal.addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = exampleModal.querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = exampleModal.querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n  if (myOffcanvas) {\n    myOffcanvas.forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  }\n})()\n' : null
     const project = {
       files: {
         'index.html': markup,

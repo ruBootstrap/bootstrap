@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="generator" content="Hugo 0.116.1">
     <title>Шаблон блога · Bootstrap v5.3</title>
 
     <link rel="canonical" href="https://getbootstrap.su/docs/5.3/examples/blog/">
 
     
 
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
@@ -108,7 +108,7 @@
     <link href="blog.css" rel="stylesheet">
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
       </symbol>
@@ -160,14 +160,27 @@
     </div>
 
     
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+</svg>
+
 <div class="container">
-  <header class="blog-header lh-1 py-3">
+  <header class="border-bottom lh-1 py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
         <a class="link-secondary" href="#">Подписка</a>
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis" href="#">Большой</a>
+        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Большой</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="#" aria-label="Поиск">
@@ -178,30 +191,30 @@
     </div>
   </header>
 
-  <div class="nav-scroller py-1 mb-2">
-    <nav class="nav d-flex justify-content-between">
-      <a class="p-2 link-secondary" href="#">Мир</a>
-      <a class="p-2 link-secondary" href="#">США</a>
-      <a class="p-2 link-secondary" href="#">Технологии</a>
-      <a class="p-2 link-secondary" href="#">Дизайн</a>
-      <a class="p-2 link-secondary" href="#">Культура</a>
-      <a class="p-2 link-secondary" href="#">Бизнес</a>
-      <a class="p-2 link-secondary" href="#">Политика</a>
-      <a class="p-2 link-secondary" href="#">Мнение</a>
-      <a class="p-2 link-secondary" href="#">Наука</a>
-      <a class="p-2 link-secondary" href="#">Здоровье</a>
-      <a class="p-2 link-secondary" href="#">Стиль</a>
-      <a class="p-2 link-secondary" href="#">Путешествовать</a>
+  <div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+      <a class="nav-item nav-link link-body-emphasis active" href="#">Мир</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">США</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Технологии</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Дизайн</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Культура</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Бизнес</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Политика</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Мнение</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Наука</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Здоровье</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Стиль</a>
+      <a class="nav-item nav-link link-body-emphasis" href="#">Путешествовать</a>
     </nav>
   </div>
 </div>
 
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
       <h1 class="display-4 fst-italic">Заголовок более подробного сообщения в блоге</h1>
       <p class="lead my-3">Множественные строки текста, которые образуют ленту, быстро и эффективно информируют новых читателей о том, что наиболее интересно в содержании этого сообщения.</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Продолжить чтение...</a></p>
+      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Продолжить чтение...</a></p>
     </div>
   </div>
 
@@ -209,11 +222,14 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">Мир</strong>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Мир</strong>
           <h3 class="mb-0">Рекомендуемый пост</h3>
           <div class="mb-1 text-body-secondary">12 Ноября</div>
           <p class="card-text mb-auto">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
-          <a href="#" class="stretched-link">Продолжить чтение</a>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Продолжить чтение
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Эскиз</text></svg>
@@ -223,11 +239,14 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Дизайн</strong>
+          <strong class="d-inline-block mb-2 text-success-emphasis">Дизайн</strong>
           <h3 class="mb-0">Заголовок поста</h3>
           <div class="mb-1 text-body-secondary">11 Ноября</div>
           <p class="mb-auto">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту.</p>
-          <a href="#" class="stretched-link">Продолжить чтение</a>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Продолжить чтение
+            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+          </a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Эскиз" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Эскиз</text></svg>
@@ -243,7 +262,7 @@
       </h3>
 
       <article class="blog-post">
-        <h2 class="blog-post-title mb-1">Пример сообщения в блоге</h2>
+        <h2 class="display-5 link-body-emphasis mb-1">Пример сообщения в блоге</h2>
         <p class="blog-post-meta">1 января 2021 года <a href="#">Марк</a></p>
 
         <p>В этом сообщении блога показано несколько различных типов контента, которые поддерживаются и стилизованы с помощью Bootstrap. Как и ожидалось, поддерживаются базовая типографика, списки, таблицы, изображения, код и многое другое.</p>
@@ -297,7 +316,7 @@
       </article>
 
       <article class="blog-post">
-        <h2 class="blog-post-title mb-1">Другой пост в блоге</h2>
+        <h2 class="display-5 link-body-emphasis mb-1">Другой пост в блоге</h2>
         <p class="blog-post-meta">23 декабря 2020 г. <a href="#">Джейкоб</a></p>
 
         <p>Это дополнительный контент-заполнитель абзаца. Он был написан, чтобы заполнить доступное пространство и показать, как более длинный фрагмент текста влияет на окружающий контент. Мы будем повторять это часто, чтобы демонстрация продолжалась, так что ищите точно такую же строку текста.</p>
@@ -345,7 +364,7 @@
       </article>
 
       <article class="blog-post">
-        <h2 class="blog-post-title mb-1">Новая особенность</h2>
+        <h2 class="display-5 link-body-emphasis mb-1">Новая функция</h2>
         <p class="blog-post-meta">14 декабря 2020 г. <a href="#">Крис</a></p>
 
         <p>Это дополнительный контент-заполнитель абзаца. Он был написан, чтобы заполнить доступное пространство и показать, как более длинный фрагмент текста влияет на окружающий контент. Мы будем повторять это часто, чтобы демонстрация продолжалась, так что ищите точно такую же строку текста.</p>
@@ -359,7 +378,7 @@
 
       <nav class="blog-pagination" aria-label="Pagination">
         <a class="btn btn-outline-primary rounded-pill" href="#">Старее</a>
-        <a class="btn btn-outline-secondary rounded-pill disabled">Новее</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Новее</a>
       </nav>
 
     </div>
@@ -369,6 +388,39 @@
         <div class="p-4 mb-3 bg-body-tertiary rounded">
           <h4 class="fst-italic">О нас</h4>
           <p class="mb-0">Настройте этот раздел, чтобы рассказать вашим посетителям немного о вашей публикации, авторах, контенте или о чем-то еще. Все зависит от вас.</p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2023</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2023</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2023</small>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="p-4">
@@ -403,14 +455,13 @@
 
 </main>
 
-<footer class="blog-footer">
-  <p>Шаблон блога, созданный для <a href="https://getbootstrap.su/">Bootstrap</a> от <a href="https://twitter.com/mdo">@mdo</a>.</p>
-  <p>
+<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+  <p>Шаблон блога, созданный для <a href="https://getbootstrap.com/">Bootstrap</a> от <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p class="mb-0">
     <a href="#">Вернуться наверх</a>
   </p>
 </footer>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-
-    
-  </body>
+    </body>
 </html>
