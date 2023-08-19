@@ -8,7 +8,7 @@ added: "5.3"
 ---
 
 {{< callout >}}
-**Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
+**Попробуйте сами!** Загрузите исходный код и рабочую демонстрацию для использования Bootstrap со Stylelint, а также цветовые режимы из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/color-modes). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
 {{< /callout >}}
 
 ## Темный режим
