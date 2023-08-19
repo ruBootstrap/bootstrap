@@ -400,9 +400,6 @@
     <loc>https://getbootstrap.su/docs/5.3/examples/carousel/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.su/docs/5.3/examples/navbars/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/cover/</loc>
   </url>
   <url>
@@ -410,6 +407,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/navbars-offcanvas/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.su/docs/5.3/examples/navbars/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.su/docs/5.3/examples/offcanvas-navbar/</loc>
