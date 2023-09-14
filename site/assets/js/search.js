@@ -14,12 +14,12 @@
   const siteDocsVersion = searchElement.getAttribute('data-bd-docs-version')
 
   window.docsearch({
-    apiKey: '11d7cdbc7ad186db4e2493f9c0d3aa1c',
+    apiKey: '85e2c3e948b475df32ddec8efca7a370',
     indexName: 'bootstrap-su',
-    appId: 'BH4D9OD16A',
+    appId: 'QOQX56WW73',
     container: searchElement,
     searchParameters: {
-      facetFilters: [`version:${siteDocsVersion}`]
+      facetFilters: [`version:${siteDocsVersion}`, 'language:ru']
     },
     transformItems(items) {
       return items.map(item => {
