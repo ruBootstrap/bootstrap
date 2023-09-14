@@ -22,7 +22,8 @@ toc: true
   {{< callout >}}
   **Попробуйте сами!** Загрузите исходный код и рабочую демонстрацию для использования Bootstrap с React, Next.js и React Bootstrap из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/react-nextjs). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx).
   {{< /callout >}}
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) (в настоящее время поддерживает только Vue 2 и Bootstrap 4)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (Bootstrap 4)
+- Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, в настоящее время в альфа-версии)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
 ## Использование Bootstrap как модуля

@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.1.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.2.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.1`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.1`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.1`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.2`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.2`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -69,7 +69,6 @@
 [![CSS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
 [![JS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
 [![JS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap?logo=opencollective&logoColor=fff)](#backers)
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap?logo=opencollective&logoColor=fff)](#sponsors)
 
@@ -178,6 +177,7 @@
 - Присоединиться к чату [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
 - Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/) и [Не официальный блог Bootstrap](https://blog.getbootstrap.su/).
+- - Обсуждайте, задавайте вопросы и многое другое в [сообществе Discord](https://discord.gg/bZUvakRU3M) или [Bootstrap subreddit](https://reddit.com/r/bootstrap).
 - Спрашивайте и изучайте [наши обсуждения на GitHub](https://github.com/twbs/bootstrap/discussions).
 - Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
