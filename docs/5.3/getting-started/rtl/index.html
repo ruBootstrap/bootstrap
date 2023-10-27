@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Узнайте, как включить поддержку текста с написанием справа налево в Bootstrap для нашего макета, компонентов и утилит.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.116.1">
+<meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.3">
 
 <title>RTL · Bootstrap v5.3</title>
 
-<link rel="canonical" href="https://getbootstrap.su/docs/5.3/getting-started/rtl/"><link rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin>
+<link rel="canonical" href="https://getbootstrap.su/docs/5.3/getting-started/rtl/"><link rel="preconnect" href="https://QOQX56WW73-dsn.algolia.net" crossorigin>
 
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
@@ -544,7 +544,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.1/site/content/docs/5.3/getting-started/rtl.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.2/site/content/docs/5.3/getting-started/rtl.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
               На GitHub
             </a>
           </div>
@@ -605,7 +605,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Добавьте соответствующий атрибут <code>lang</code>, например <code>lang=&quot;ar&quot;</code>, в элемент <code>&lt;html&gt;</code>.</li>
 </ol>
 <p>Оттуда Вам нужно будет включить RTL-версию нашего CSS. Например, вот таблица стилей для нашего скомпилированного и миниатюрного CSS с включенным RTL:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="стартовый-шаблон">Стартовый шаблон <a class="anchor-link" href="#%d1%81%d1%82%d0%b0%d1%80%d1%82%d0%be%d0%b2%d1%8b%d0%b9-%d1%88%d0%b0%d0%b1%d0%bb%d0%be%d0%bd" aria-label="Link to this section: Стартовый шаблон"></a></h3>
 <p>Вы можете увидеть приведенные выше требования, отраженные в этом модифицированном стартовом шаблоне RTL.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
@@ -616,7 +616,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>مرحبًا بالعالم!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -626,12 +626,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Дополнительный JavaScript; выберите один из двух! --&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Вариант 1: пакет Bootstrap с Popper --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Вариант 2: отдельные JS для Popper и Bootstrap --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
 </span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34; integrity=&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
 </span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -741,7 +741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="list-unstyled small">
           <li class="mb-2">Разработано и создано со всей любовью <a href="/docs/5.3/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия 5.3.1.</li>
+          <li class="mb-2">Текущая версия 5.3.2.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -820,10 +820,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.2\/dist\/css\/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.su/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.2\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
 
