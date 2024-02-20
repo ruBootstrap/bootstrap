@@ -18,341 +18,343 @@ toc: true
 **Внимание!** Существует некоторая потенциальная путаница с нашими новыми вторичными и третичными цветами и нашим существующим вторичным цветом темы, а также с нашими светлыми и темными цветами темы. Ожидайте, что это будет исправлено в v6.
 {{< /callout >}}
 
-<table class="table table-swatches">
-  <thead>
-    <tr>
-      <th style="width: 340px;">Описание</th>
-      <th style="width: 200px;" class="ps-0">Образец</th>
-      <th>Переменные</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Body —** Передний план (цвет) и фон по умолчанию, включая компоненты.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-body-color`<br>`--bs-body-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2 border" style="background-color: var(--bs-body-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-body-bg`<br>`--bs-body-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Secondary —** Используйте опцию `color` для более светлого текста. Используйте опцию `bg` для разделителей и для указания отключенных состояний компонентов.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-secondary-color`<br>`--bs-secondary-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2 border" style="background-color: var(--bs-secondary-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-secondary-bg`<br>`--bs-secondary-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">
-        {{< markdown >}}**Tertiary —** Используйте опцию `color` для еще более светлого текста. Используйте опцию `bg` , чтобы стилизовать фоны для состояний hover, accents и wells.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-tertiary-color`<br>`--bs-tertiary-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2 border" style="background-color: var(--bs-tertiary-bg);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-tertiary-bg`<br>`--bs-tertiary-bg-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}**Emphasis —** Для более контрастного текста. Не применимо для фона.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-emphasis-color`<br>`--bs-emphasis-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{< markdown >}}**Border —** Для границ компонентов, разделителей и правил. Используйте `--bs-border-color-translucent` для смешивания с фоном со значением `rgba()`.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-border-color`<br>`--bs-border-color-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Primary —** Цвет основной темы, используемый для гиперссылок, стилей фокуса, активных состояний компонентов и форм.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary`<br>`--bs-primary-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-primary-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-primary-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Success —** Цвет темы, используемый для положительных или успешных действий и информации.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-success">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success`<br>`--bs-success-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-success-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-success-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Danger —** Цвет темы, используемый для ошибок и опасных действий.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-danger">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger`<br>`--bs-danger-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-danger-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-danger-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-danger-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Warning —** Цвет темы, используемый для неразрушающих предупреждающих сообщений.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-warning">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning`<br>`--bs-warning-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-warning-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-warning-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-warning-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Info —** Цвет темы, используемый для нейтрального и информативного контента.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-info">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info`<br>`--bs-info-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-info-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-info-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-info-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-info-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Light —** Дополнительная опция темы для менее контрастных цветов.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-light">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light`<br>`--bs-light-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-light-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-light-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-light-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-light-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Dark —** Дополнительная опция темы для более контрастных цветов.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-dark">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark`<br>`--bs-dark-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-dark-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-dark-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-dark-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-swatches">
+    <thead>
+      <tr>
+        <th style="width: 340px;">Описание</th>
+        <th style="width: 200px;" class="ps-0">Образец</th>
+        <th>Переменные</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">
+          {{< markdown >}}**Body —** Передний план (цвет) и фон по умолчанию, включая компоненты.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-body-color`<br>`--bs-body-color-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2 border" style="background-color: var(--bs-body-bg);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-body-bg`<br>`--bs-body-bg-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          {{< markdown >}}**Secondary —** Используйте опцию `color` для более светлого текста. Используйте опцию `bg` для разделителей и для обозначения отключенных состояний компонентов.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-secondary-color`<br>`--bs-secondary-color-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2 border" style="background-color: var(--bs-secondary-bg);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-secondary-bg`<br>`--bs-secondary-bg-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          {{< markdown >}}**Tertiary —** Используйте опцию `color`, чтобы сделать текст еще светлее. Используйте опцию `bg` для оформления фона для состояний наведения, акцентов и велсов.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-tertiary-color`<br>`--bs-tertiary-color-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2 border" style="background-color: var(--bs-tertiary-bg);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-tertiary-bg`<br>`--bs-tertiary-bg-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}**Emphasis —** Для более контрастного текста. Не применимо для фонов.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-emphasis-color`<br>`--bs-emphasis-color-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{< markdown >}}**Border —** Для границ компонентов, разделителей и правил. Используйте `--bs-border-color-translucent` для смешивания с фоном со значением `rgba()`.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-border-color`<br>`--bs-border-color-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Primary —** Цвет основной темы, используемый для гиперссылок, стилей фокуса, а также активных состояний компонентов и форм.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-primary`<br>`--bs-primary-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-primary-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-primary-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-primary-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Success —** Цвет темы используется для позитивных или успешных действий и информации.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-success">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-success`<br>`--bs-success-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-success-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-success-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Danger —** Цвет темы, используемый для ошибок и опасных действий.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-danger">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-danger`<br>`--bs-danger-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-danger-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-danger-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-danger-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-danger-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Warning —** Цвет темы, используемый для неразрушающих предупреждающих сообщений.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-warning">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-warning`<br>`--bs-warning-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-warning-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-warning-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-warning-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-warning-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-warning-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Info —** Цвет темы используется для нейтрального и информативного контента.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-info">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-info`<br>`--bs-info-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-info-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-info-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-info-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-info-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Light —** Дополнительный вариант темы для менее контрастных цветов.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-light">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-light`<br>`--bs-light-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-light-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-light-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-light-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-light-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          {{< markdown >}}**Dark —** Дополнительный вариант темы для более контрастных цветов.{{< /markdown >}}
+        </td>
+        <td class="ps-0">
+          <div class="p-3 rounded-2 bg-dark">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-dark`<br>`--bs-dark-rgb`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="background-color: var(--bs-dark-bg-subtle)">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="p-3 rounded-2" style="border: 5px var(--bs-dark-border-subtle) solid">&nbsp;</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-dark-border-subtle`{{< /markdown >}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="py-3 fw-bold h5" style="color: var(--bs-dark-text-emphasis)">Text</div>
+        </td>
+        <td>
+          {{< markdown >}}`--bs-dark-text-emphasis`{{< /markdown >}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Использование новых цветов
 

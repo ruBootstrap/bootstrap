@@ -13,12 +13,12 @@ toc: true
 ### Заголовки
 
 {{< example >}}
-<h1>Пример заголовока <span class="badge bg-secondary">Новый</span></h1>
-<h2>Пример заголовока <span class="badge bg-secondary">Новый</span></h2>
-<h3>Пример заголовока <span class="badge bg-secondary">Новый</span></h3>
-<h4>Пример заголовока <span class="badge bg-secondary">Новый</span></h4>
-<h5>Пример заголовока <span class="badge bg-secondary">Новый</span></h5>
-<h6>Пример заголовока <span class="badge bg-secondary">Новый</span></h6>
+<h1>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h1>
+<h2>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h2>
+<h3>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h3>
+<h4>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h4>
+<h5>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h5>
+<h6>Пример заголовка <span class="badge text-bg-secondary">Новый</span></h6>
 {{< /example >}}
 
 ### Кнопки

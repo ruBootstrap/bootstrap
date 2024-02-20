@@ -305,7 +305,7 @@ toc: true
 
 ### Контурные стили
 
-Поддерживаются различные варианты `.btn`, например, в различных выделенных стилях.
+Поддерживаются различные варианты `.btn`, такие как различные стили.
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">

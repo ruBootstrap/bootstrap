@@ -22,12 +22,11 @@ toc: true
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="p-3 mb-2 bg-{{ .name }}{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }}">.bg-{{ .name }}</div>
-<div class="p-3 mb-2 bg-{{ .name }}-subtle text-emphasis-{{ .name }}">.bg-{{ .name }}-subtle</div>
+<div class="p-3 mb-2 bg-{{ .name }}-subtle text-{{ .name }}-emphasis">.bg-{{ .name }}-subtle</div>
 {{- end -}}
 {{< /colors.inline >}}
-<p class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</p>
-<p class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</p>
-
+<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
 <div class="p-3 mb-2 bg-body text-body">.bg-body</div>
 <div class="p-3 mb-2 bg-black text-white">.bg-black</div>
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>

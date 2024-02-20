@@ -11,7 +11,7 @@ toc: true
 
 ## Как это устроено
 
-Аккордеон использует [collapse]({{< docsref "/components/collapse" >}}) внутри, чтобы сделать его складным. Чтобы визуализировать расширенный аккордеон, добавьте класс `.open` d `.accordion`.
+Аккордеон использует внутри [collapse]({{< docsref "/components/collapse" >}}), чтобы сделать его раскрывающимся.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
@@ -20,6 +20,10 @@ toc: true
 ## Пример
 
 Кликните аккордеоны ниже, чтобы развернуть/свернуть содержимое аккордеона.
+
+Чтобы отобразить аккордеон, развернутый по умолчанию:
+- добавьте класс `.show` в элемент `.accordion-collapse`.
+- удалите класс `.collapsed` из элемента `.accordion-button` и установите для его атрибута `aria-expanded` значение `true`.
 
 {{< example >}}
 <div class="accordion" id="accordionExample">

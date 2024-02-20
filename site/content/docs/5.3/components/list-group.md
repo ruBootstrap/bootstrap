@@ -117,21 +117,21 @@ toc: true
       <div class="fw-bold">Подзаголовок</div>
       Контент для элемента списка
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Подзаголовок</div>
       Контент для элемента списка
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Подзаголовок</div>
       Контент для элемента списка
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
 </ol>
 {{< /example >}}
@@ -200,15 +200,15 @@ toc: true
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Элемент списка
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Второй элемент списка
-    <span class="badge bg-primary rounded-pill">2</span>
+    <span class="badge text-bg-primary rounded-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Третий элемент списка
-    <span class="badge bg-primary rounded-pill">1</span>
+    <span class="badge text-bg-primary rounded-pill">1</span>
   </li>
 </ul>
 {{< /example >}}
@@ -320,8 +320,6 @@ toc: true
 ### Sass миксины
 
 {{< deprecated-in "5.3.0" >}}
-
-Используется в сочетании с `$theme-colors` для создания [классов контекстных вариантов](#variants) для `.list-group-item`.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 

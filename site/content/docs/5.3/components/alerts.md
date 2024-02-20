@@ -162,13 +162,11 @@ toc: true
 
 {{< deprecated-in "5.3.0" >}}
 
-Используется в сочетании с `$theme-colors` для создания классов контекстных модификаторов для наших предупреждений.
-
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
 ### Sass циклы
 
-Цикл, который генерирует классы модификаторов с помощью миксина `alert-variant()`.
+Цикл, генерирующий классы-модификаторы с переопределением переменных CSS.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 

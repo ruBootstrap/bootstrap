@@ -218,7 +218,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   </button>
 </div>
 
-Вы также можете создать прокручиваемое модальное окно, которое позволяет прокручивать модальное тело, добавляя `.modal-dialog-scrollable` к `.modal-dialog`.
+Вы также можете создать прокручиваемое модальное окно, которое позволяет прокручивать тело модального окна, добавив `.modal-dialog-scrollable` к `.modal-dialog`.
 
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">

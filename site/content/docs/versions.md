@@ -16,7 +16,7 @@ description: Приложение с размещенной документац
         <a class="list-group-item list-group-item-action py-2 text-primary{{ if (eq $version $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}" href="{{ $release.baseurl }}/{{ $version }}/">
           {{ $version }}
           {{ if (eq $version $.Site.Params.docs_version) -}}
-          <span class="badge bg-primary">Последняя</span>
+          <span class="badge text-bg-primary">Последняя</span>
           {{- end }}
         </a>
       {{ if (eq (add $i 1) $len) }}</div>{{ end }}
