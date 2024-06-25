@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Отслеживайте и просматривайте изменения в исходных файлах, документации и компонентах Bootstrap, чтобы помочь Вам перейти с v4 на v5.">
 <meta name="author" content="Марк Отто, Джейкоб Торнтон и контрибьюторы Bootstrap">
-<meta name="generator" content="Hugo 0.118.2">
+<meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ru">
 <meta name="docsearch:version" content="5.3">
@@ -294,21 +294,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
@@ -544,7 +544,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.2/site/content/docs/5.3/migration.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/ruBootstrap/bootstrap/blob/v5.3.3/site/content/docs/5.3/migration.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">
               На GitHub
             </a>
           </div>
@@ -837,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Варианты предупреждений теперь определяются с помощью переменных CSS.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>.alert-variant()</code> теперь устарел. Теперь мы <a href="/docs/5.3/components/alerts/#sass-loops">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>alert-variant()</code> теперь устарел. Теперь мы <a href="/docs/5.3/components/alerts/#sass-loops">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
 </li>
 </ul>
 <h4 id="list-group">List group <a class="anchor-link" href="#list-group" aria-label="Link to this section: List group"></a></h4>
@@ -846,7 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Варианты элементов группы списка теперь определяются с помощью переменных CSS.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>.list-group-variant()</code> больше не рекомендуется. Теперь мы <a href="/docs/5.3/components/list-group/#sass-loops">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Устарело</span> Миксин <code>list-group-item-variant()</code> больше не рекомендуется. Теперь мы <a href="/docs/5.3/components/list-group/#sass-loops">используем цикл Sass</a> напрямую для изменения переменных CSS компонента по умолчанию для каждого варианта.</p>
 </li>
 </ul>
 <h4 id="выпадающие-списки">Выпадающие списки <a class="anchor-link" href="#%d0%b2%d1%8b%d0%bf%d0%b0%d0%b4%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%b8" aria-label="Link to this section: Выпадающие списки"></a></h4>
@@ -1077,36 +1077,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Мы отказались от слияния карт Sass по умолчанию, чтобы упростить удаление избыточных значений. Имейте в виду, что теперь вам нужно определить все значения в картах Sass, например <code>$theme-colors</code>. Узнайте, как работать с <a href="/docs/5.3/customize/sass/#maps-and-loops">картами Sass</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Переименована функция <code>color-yiq()</code> и связанные переменные переименованы в <code>color-contrast()</code>, поскольку она больше не связана с цветовым пространством YIQ. <a href="https://github.com/twbs/bootstrap/pull/30168/">Смотрите #30168.</a></p>
+<p><span class="badge text-bg-danger">Breaking</span> Переименована функция <code>color-yiq()</code> и связанные переменные переименованы в <code>color-contrast()</code>, поскольку она больше не связана с цветовым пространством YIQ. <a href="https://github.com/twbs/bootstrap/pull/30168/">Смотрите #30168.</a></p>
 <ul>
 <li><code>$yiq-contrasted-threshold</code> переименован в <code>$min-contrast-ratio</code>.</li>
 <li><code>$yiq-text-dark</code> и <code>$yiq-text-light</code> соответственно переименованы в <code>$color-contrast-dark</code> и <code>$color-contrast-light</code>.</li>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Параметры миксинов медиа-запросов изменены для более логичного подхода.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Параметры миксинов медиа-запросов изменены для более логичного подхода.</p>
 <ul>
 <li><code>media-breakpoint-down()</code> использует саму контрольную точку вместо следующей контрольной точки (например, <code>media-breakpoint-down(lg)</code> вместо <code>media-breakpoint-down(md)</code> цели области просмотра меньше, чем <code>lg</code>).</li>
-<li>Точно так же второй параметр в <code>media-breakpoint-between()</code> также использует саму контрольную точку вместо следующей контрольной точки (например, <code>media-between(sm, lg)</code> вместо <code>media-breakpoint-between(sm, md)</code> цели области просмотра между <code>sm</code> и <code>lg</code>).</li>
+<li>Точно так же второй параметр в <code>media-breakpoint-between()</code> также использует саму контрольную точку вместо следующей контрольной точки (например, <code>media-breakpoint-between(sm, lg)</code> вместо <code>media-breakpoint-between(sm, md)</code> цели области просмотра между <code>sm</code> и <code>lg</code>).</li>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалены стили печати и переменная <code>$enable-print-styles</code>. Классы отображения печати все еще существуют. <a href="https://github.com/twbs/bootstrap/pull/28339">Смотрите #28339</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалены стили печати и переменная <code>$enable-print-styles</code>. Классы отображения печати все еще существуют. <a href="https://github.com/twbs/bootstrap/pull/28339">Смотрите #28339</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Отказ от функций <code>color()</code>, <code>theme-color()</code> и <code>gray()</code> в пользу переменных. <a href="https://github.com/twbs/bootstrap/pull/29083">Смотрите #29083</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Отказ от функций <code>color()</code>, <code>theme-color()</code> и <code>gray()</code> в пользу переменных. <a href="https://github.com/twbs/bootstrap/pull/29083">Смотрите #29083</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Функция <code>theme-color-level()</code> переименована в <code>color-level()</code> и теперь принимает любой цвет, который вы хотите, вместо только <code>$theme-color</code> цвета. <a href="https://github.com/twbs/bootstrap/pull/29083">Смотрите #29083</a> <strong>Остерегайтесь:</strong> <code>color-level()</code> позже был удален в <code>v5.0.0-alpha3</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Функция <code>theme-color-level()</code> переименована в <code>color-level()</code> и теперь принимает любой цвет, который вы хотите, вместо только <code>$theme-color</code> цвета. <a href="https://github.com/twbs/bootstrap/pull/29083">Смотрите #29083</a> <strong>Остерегайтесь:</strong> <code>color-level()</code> позже был удален в <code>v5.0.0-alpha3</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Переименованы <code>$enable-prefers-reduced-motion-media-query</code> и <code>$enable-pointer-cursor-for-buttons</code> в <code>$enable-reduced-motion</code> и <code>$enable-button-pointers</code> для краткости.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Переименованы <code>$enable-prefers-reduced-motion-media-query</code> и <code>$enable-pointer-cursor-for-buttons</code> в <code>$enable-reduced-motion</code> и <code>$enable-button-pointers</code> для краткости.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удален миксин <code>bg-gradient-variant()</code>. Используйте класс <code>.bg-gradient</code> для добавления градиентов к элементам вместо сгенерированных классов <code>.bg-gradient-*</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удален миксин <code>bg-gradient-variant()</code>. Используйте класс <code>.bg-gradient</code> для добавления градиентов к элементам вместо сгенерированных классов <code>.bg-gradient-*</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Удалены ранее устаревшие миксины:</strong></p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Удалены ранее устаревшие миксины:</strong></p>
 <ul>
 <li><code>hover</code>, <code>hover-focus</code>, <code>plain-hover-focus</code> и <code>hover-focus-active</code></li>
 <li><code>float()</code></li>
@@ -1119,7 +1119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Функция <code>scale-color()</code> переименована в <code>shift-color()</code>, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Функция <code>scale-color()</code> переименована в <code>shift-color()</code>, чтобы избежать столкновения с собственной функцией масштабирования цвета Sass.</p>
 </li>
 <li>
 <p>Примеси <code>box-shadow</code> теперь допускают <code>null</code> значения и отбрасывают <code>none</code> из нескольких аргументов. <a href="https://github.com/twbs/bootstrap/pull/30394">Смотрите #30394</a>.</p>
@@ -1152,20 +1152,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong>Улучшенные промежутки.</strong> Промежутки теперь устанавливаются в ремах, и они уже, чем v4 (<code>1.5rem</code>, или примерно <code>24px</code>, по сравнению с <code>30px</code>). Это выравнивает промежутки нашей сеточной системы с нашими утилитами интервала.</p>
 <ul>
 <li>Добавлен новый <a href="/docs/5.3/layout/gutters/">класс gutter</a> (<code>.g-*</code>, <code>.gx-*</code> и <code>.gy-*</code>) для управления горизонтальным / вертикальные промежутки, горизонтальные промежутки и вертикальные промежутки.</li>
-<li><span class="badge bg-danger">Breaking</span> <code>.no-gutters</code> переименован в <code>.g-0</code>, чтобы соответствовать новым утилитам промежутков.</li>
+<li><span class="badge text-bg-danger">Breaking</span> <code>.no-gutters</code> переименован в <code>.g-0</code>, чтобы соответствовать новым утилитам промежутков.</li>
 </ul>
 </li>
 <li>
 <p>К столбцам больше не применяется <code>position: relative</code>, поэтому вам, возможно, придется добавить <code>.position-relative</code> к некоторым элементам, чтобы восстановить это поведение.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалили несколько классов <code>.order-*</code>, которые часто не использовались. Теперь из коробки мы предоставляем только от <code>.order-1</code> до <code>.order-5</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалили несколько классов <code>.order-*</code>, которые часто не использовались. Теперь из коробки мы предоставляем только от <code>.order-1</code> до <code>.order-5</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Отказ от компонента <code>.media</code>, так как его можно легко воспроизвести с помощью утилит. <a href="https://github.com/twbs/bootstrap/pull/28265">Смотрите #28265</a> и <a href="/docs/5.3/utilities/flex/#media-object">страница гибких утилит для примера</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Отказ от компонента <code>.media</code>, так как его можно легко воспроизвести с помощью утилит. <a href="https://github.com/twbs/bootstrap/pull/28265">Смотрите #28265</a> и <a href="/docs/5.3/utilities/flex/#media-object">страница гибких утилит для примера</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>bootstrap-grid.css</code> теперь применяет к столбцу только <code>box-sizing: border-box</code> вместо сброса глобального размера поля. Таким образом, наши стили сетки можно использовать в большем количестве мест без помех.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <code>bootstrap-grid.css</code> теперь применяет к столбцу только <code>box-sizing: border-box</code> вместо сброса глобального размера поля. Таким образом, наши стили сетки можно использовать в большем количестве мест без помех.</p>
 </li>
 <li>
 <p><code>$enable-grid-classes</code> больше не отключает создание контейнерных классов. <a href="https://github.com/twbs/bootstrap/pull/29146">Смотрите #29146.</a></p>
@@ -1180,7 +1180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong><a href="/docs/5.3/getting-started/rfs/">RFS</a> теперь включен по умолчанию.</strong> Заголовки, использующие миксин <code>font-size()</code>, автоматически изменят свой <code>font-size</code> масштабировать вместе с окном просмотра. <em>Эта функция ранее была включена в v4.</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Переработана типография дисплея, заменив переменные <code>$display-*</code> на карту Sass <code>$display-font-sizes</code>. Также удалены отдельные переменные <code>$display-*-weight</code> для одного <code>$display-font-weight</code> и скорректированы <code>font-size</code>s.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Переработана типография дисплея, заменив переменные <code>$display-*</code> на карту Sass <code>$display-font-sizes</code>. Также удалены отдельные переменные <code>$display-*-weight</code> для одного <code>$display-font-weight</code> и скорректированы <code>font-size</code>s.</p>
 </li>
 <li>
 <p>Добавлены два новых размера заголовков <code>.display-*</code>, <code>.display-5</code> и <code>.display-6</code>.</p>
@@ -1192,28 +1192,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong>Переработанные таблицы</strong>, чтобы обновить их стили и перестроить их с помощью переменных CSS для большего контроля над стилями.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Вложенные таблицы больше не наследуют стили.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Вложенные таблицы больше не наследуют стили.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> и <code>.thead-dark</code> удаляются в пользу классов-вариантов <code>.table-*</code>, которые могут использоваться для всех элементов таблицы (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> и <code>td</code>).</p>
+<p><span class="badge text-bg-danger">Breaking</span> <code>.thead-light</code> и <code>.thead-dark</code> удаляются в пользу классов-вариантов <code>.table-*</code>, которые могут использоваться для всех элементов таблицы (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> и <code>td</code>).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Примесь <code>table-row-variant()</code> переименована в <code>table-variant()</code> и принимает только 2 параметра: <code>$color</code> (название цвета) и <code>$value</code> (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Примесь <code>table-row-variant()</code> переименована в <code>table-variant()</code> и принимает только 2 параметра: <code>$color</code> (название цвета) и <code>$value</code> (цветовой код). Цвет границы и цвета акцента вычисляются автоматически на основе переменных фактора таблицы.</p>
 </li>
 <li>
 <p>Разделены переменные заполнения ячеек таблицы на <code>-y</code> и <code>-x</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удален класс <code>.pre-scrollable</code>. <a href="https://github.com/twbs/bootstrap/pull/29135">Смотрите #29135</a></p>
+<p><span class="badge text-bg-danger">Breaking</span> Удален класс <code>.pre-scrollable</code>. <a href="https://github.com/twbs/bootstrap/pull/29135">Смотрите #29135</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Утилиты <code>.text-*</code> больше не добавляют к ссылкам состояния наведения и фокуса. Вместо этого можно использовать вспомогательные классы <code>.link-*</code>. <a href="https://github.com/twbs/bootstrap/pull/29267">Смотрите #29267</a></p>
+<p><span class="badge text-bg-danger">Breaking</span> Утилиты <code>.text-*</code> больше не добавляют к ссылкам состояния наведения и фокуса. Вместо этого можно использовать вспомогательные классы <code>.link-*</code>. <a href="https://github.com/twbs/bootstrap/pull/29267">Смотрите #29267</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удален класс <code>.text-justify</code>. <a href="https://github.com/twbs/bootstrap/pull/29793">Смотрите #29793</a></p>
+<p><span class="badge text-bg-danger">Breaking</span> Удален класс <code>.text-justify</code>. <a href="https://github.com/twbs/bootstrap/pull/29793">Смотрите #29793</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> элементы <del><code>&lt;hr&gt;</code> теперь используют <code>height</code> вместо <code>border</code>, чтобы лучше поддерживать атрибут <code>size</code>. Это также позволяет использовать утилиты заполнения для создания более толстых разделителей (например, <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</del></p>
+<p><span class="badge text-bg-danger">Breaking</span> элементы <del><code>&lt;hr&gt;</code> теперь используют <code>height</code> вместо <code>border</code>, чтобы лучше поддерживать атрибут <code>size</code>. Это также позволяет использовать утилиты заполнения для создания более толстых разделителей (например, <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</del></p>
 </li>
 <li>
 <p>Сбросить по умолчанию горизонтальный <code>padding-left</code> для элементов <code>&lt;ul&gt;</code> и <code>&lt;ol&gt;</code> с <code>40px</code> по умолчанию браузера на <code>2rem</code>.</p>
@@ -1232,7 +1232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong>Добавлены новые плавающие формы!</strong> Мы продвинули пример с плавающими метками до полностью поддерживаемых компонентов формы. <a href="/docs/5.3/forms/floating-labels/">Смотрите новую страницу «Плавающие метки».</a></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Объединенные собственные и настраиваемые элементы формы.</strong> Флажки, радио, выборки и другие входные данные, которые имели собственные и настраиваемые классы в версии 4, были объединены. Теперь почти все наши элементы формы полностью настраиваемые, для большинства из них не требуется настраиваемый HTML.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Объединенные собственные и настраиваемые элементы формы.</strong> Флажки, радио, выборки и другие входные данные, которые имели собственные и настраиваемые классы в версии 4, были объединены. Теперь почти все наши элементы формы полностью настраиваемые, для большинства из них не требуется настраиваемый HTML.</p>
 <ul>
 <li><code>.custom-control.custom-checkbox</code> теперь называется <code>.form-check</code>.</li>
 <li><code>.custom-control.custom-radio</code> теперь называется <code>.form-check</code>.</li>
@@ -1244,19 +1244,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалены <code>.input-group-append</code> и <code>.input-group-prepend</code>. Теперь вы можете просто добавить кнопки и <code>.input-group-text</code> в качестве прямых потомков групп ввода.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалены <code>.input-group-append</code> и <code>.input-group-prepend</code>. Теперь вы можете просто добавить кнопки и <code>.input-group-text</code> в качестве прямых потомков групп ввода.</p>
 </li>
 <li>
 <p>Давний <a href="https://github.com/twbs/bootstrap/issues/25110">Отсутствующий радиус границы в группе ввода с ошибкой обратной связи с проверкой</a>, наконец, исправлен путем добавления дополнительного класса <code>.has-validation</code> во входные группы с проверкой.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Исключены классы макета, специфичные для формы, для нашей системы сеток.</strong> Используйте нашу сетку и утилиты вместо <code>.form-group</code>, <code>.form-row</code> или <code>.form-inline</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Исключены классы макета, специфичные для формы, для нашей системы сеток.</strong> Используйте нашу сетку и утилиты вместо <code>.form-group</code>, <code>.form-row</code> или <code>.form-inline</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Метки форм теперь требуют <code>.form-label</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Метки форм теперь требуют <code>.form-label</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.form-text</code> больше не устанавливает <code>display</code>, позволяя вам создавать встроенный или блокировать текст справки по вашему желанию, просто изменяя элемент HTML.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <code>.form-text</code> больше не устанавливает <code>display</code>, позволяя вам создавать встроенный или блокировать текст справки по вашему желанию, просто изменяя элемент HTML.</p>
 </li>
 <li>
 <p>Иконки валидации больше не применяются к элементам <code>&lt;select&gt;</code> с параметром <code>multiple</code>.</p>
@@ -1289,13 +1289,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="значки">Значки <a class="anchor-link" href="#%d0%b7%d0%bd%d0%b0%d1%87%d0%ba%d0%b8" aria-label="Link to this section: Значки"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалены все классы цвета <code>.badge-*</code> для фоновых утилит (например, используйте <code>.bg-primary</code> вместо <code>.badge-primary</code>).</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалены все классы цвета <code>.badge-*</code> для фоновых утилит (например, используйте <code>.bg-primary</code> вместо <code>.badge-primary</code>).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалено <code>.badge-pill</code>используйте вместо нее утилиту <code>.rounded-pill</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалено <code>.badge-pill</code>используйте вместо нее утилиту <code>.rounded-pill</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалены стили наведения и фокуса для элементов <code>&lt;a&gt;</code> и <code>&lt;button&gt;</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалены стили наведения и фокуса для элементов <code>&lt;a&gt;</code> и <code>&lt;button&gt;</code>.</p>
 </li>
 <li>
 <p>Увеличено заполнение по умолчанию для значков с <code>.25em</code>/<code>.5em</code> до <code>.35em</code>/<code>.65em</code>.</p>
@@ -1313,10 +1313,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="кнопки">Кнопки <a class="anchor-link" href="#%d0%ba%d0%bd%d0%be%d0%bf%d0%ba%d0%b8" aria-label="Link to this section: Кнопки"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong><a href="/docs/5.3/forms/checks-radios/#toggle-buttons">Кнопки переключения</a>, с флажками или радио, больше не требуют JavaScript и имеют новую разметку.</strong> Нам больше не нужен элемент-оболочка, добавьте <code>.btn-check</code> в <code>&lt;input&gt;</code>, и соедините его с любыми классами <code>.btn</code> в <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы».</em></p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong><a href="/docs/5.3/forms/checks-radios/#toggle-buttons">Кнопки переключения</a>, с флажками или радио, больше не требуют JavaScript и имеют новую разметку.</strong> Нам больше не нужен элемент-оболочка, добавьте <code>.btn-check</code> в <code>&lt;input&gt;</code>, и соедините его с любыми классами <code>.btn</code> в <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Смотрите #30650</a>. <em>Документация по этому поводу перемещена со страницы «Кнопки» в новый раздел «Формы».</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Удален <code>.btn-block</code> для утилит.</strong> Вместо используйте <code>.btn-block</code> в <code>.btn</code>, оберните ваши кнопки с <code>.d-grid</code> и <code>.gap-*</code> утилитами для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. <a href="/docs/5.3/components/buttons/#block-buttons">Прочтите документацию для некоторых примеров.</a></p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Удален <code>.btn-block</code> для утилит.</strong> Вместо используйте <code>.btn-block</code> в <code>.btn</code>, оберните ваши кнопки с <code>.d-grid</code> и <code>.gap-*</code> утилитами для размещения их по мере необходимости. Переключитесь на отзывчивые классы, чтобы получить еще больший контроль над ними. <a href="/docs/5.3/components/buttons/#block-buttons">Прочтите документацию для некоторых примеров.</a></p>
 </li>
 <li>
 <p>Обновлены миксины <code>button-variant()</code> и <code>button-outline-variant()</code> для поддержки дополнительных параметров.</p>
@@ -1331,13 +1331,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="карточка">Карточка <a class="anchor-link" href="#%d0%ba%d0%b0%d1%80%d1%82%d0%be%d1%87%d0%ba%d0%b0" aria-label="Link to this section: Карточка"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Отказались от <code>.card-deck</code> в пользу нашей сетки. Оберните ваши карты в классы колонок и добавьте родительский контейнер <code>.row-cols-*</code>, чтобы воссоздать колоды карт (но с большим контролем над выравниванием).</p>
+<p><span class="badge text-bg-danger">Breaking</span> Отказались от <code>.card-deck</code> в пользу нашей сетки. Оберните ваши карты в классы колонок и добавьте родительский контейнер <code>.row-cols-*</code>, чтобы воссоздать колоды карт (но с большим контролем над выравниванием).</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Отказались от <code>.card-columns</code> в пользу Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Смотрите #28922</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Отказались от <code>.card-columns</code> в пользу Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Смотрите #28922</a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Заменен аккордеон на основе <code>.card</code> на <a href="/docs/5.3/components/accordion/">новый компонент Accordion</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Заменен аккордеон на основе <code>.card</code> на <a href="/docs/5.3/components/accordion/">новый компонент Accordion</a>.</p>
 </li>
 </ul>
 <h4 id="карусель">Карусель <a class="anchor-link" href="#%d0%ba%d0%b0%d1%80%d1%83%d1%81%d0%b5%d0%bb%d1%8c" aria-label="Link to this section: Карусель"></a></h4>
@@ -1352,7 +1352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="кнопка-закрытия-1">Кнопка закрытия <a class="anchor-link" href="#%d0%ba%d0%bd%d0%be%d0%bf%d0%ba%d0%b0-%d0%b7%d0%b0%d0%ba%d1%80%d1%8b%d1%82%d0%b8%d1%8f-1" aria-label="Link to this section: Кнопка закрытия"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.close</code> переименован в <code>.btn-close</code> для менее общего названия.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <code>.close</code> переименован в <code>.btn-close</code> для менее общего названия.</p>
 </li>
 <li>
 <p>Кнопки закрытия теперь используют <code>background-image</code> (встроенный SVG) вместо <code>&amp;times;</code> в HTML, что позволяет упростить настройку без необходимости касаться вашей разметки.</p>
@@ -1377,13 +1377,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Затемнен разделитель раскрывающегося списка для улучшения контраста.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Все события для раскрывающегося списка теперь запускаются на кнопке-переключателе раскрывающегося списка, а затем всплывают до родительского элемента.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Все события для раскрывающегося списка теперь запускаются на кнопке-переключателе раскрывающегося списка, а затем всплывают до родительского элемента.</p>
 </li>
 <li>
 <p>Выпадающие меню теперь имеют атрибут <code>data-bs-popper=&quot;static&quot;</code>, установленный, когда положение раскрывающегося списка является статическим или раскрывающийся список находится на панели навигации. Это добавлено нашим JavaScript и помогает нам использовать настраиваемые стили положения, не мешая позиционированию Popper.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Исключена опция <code>flip</code> для плагина раскрывающегося списка в пользу собственной конфигурации Popper. Теперь вы можете отключить поведение переворачивания, передав пустой массив для параметра <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> в <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> модификатор.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Исключена опция <code>flip</code> для плагина раскрывающегося списка в пользу собственной конфигурации Popper. Теперь вы можете отключить поведение переворачивания, передав пустой массив для параметра <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> в <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> модификатор.</p>
 </li>
 <li>
 <p>На раскрывающиеся меню теперь можно щелкнуть с помощью новой опции <code>autoClose</code> для обработки <a href="/docs/5.3/components/dropdowns/#auto-close-behavior">поведения автоматического закрытия</a>. Вы можете использовать этот параметр, чтобы принять щелчок внутри или за пределами раскрывающегося меню, чтобы сделать его интерактивным.</p>
@@ -1394,7 +1394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 <h4 id="джамботрон">Джамботрон <a class="anchor-link" href="#%d0%b4%d0%b6%d0%b0%d0%bc%d0%b1%d0%be%d1%82%d1%80%d0%be%d0%bd" aria-label="Link to this section: Джамботрон"></a></h4>
 <ul>
-<li><span class="badge bg-danger">Breaking</span> Убрали компонент jumbotron, так как его можно повторить с помощью утилит. <a href="/docs/5.3/examples/jumbotron/">Смотрите наш новый пример Jumbotron для демонстрации.</a></li>
+<li><span class="badge text-bg-danger">Breaking</span> Убрали компонент jumbotron, так как его можно повторить с помощью утилит. <a href="/docs/5.3/examples/jumbotron/">Смотрите наш новый пример Jumbotron для демонстрации.</a></li>
 </ul>
 <h4 id="группа-списка">Группа списка <a class="anchor-link" href="#%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b0-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%b0" aria-label="Link to this section: Группа списка"></a></h4>
 <ul>
@@ -1406,8 +1406,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 <h4 id="панели-навигации">Панели навигации <a class="anchor-link" href="#%d0%bf%d0%b0%d0%bd%d0%b5%d0%bb%d0%b8-%d0%bd%d0%b0%d0%b2%d0%b8%d0%b3%d0%b0%d1%86%d0%b8%d0%b8" aria-label="Link to this section: Панели навигации"></a></h4>
 <ul>
-<li><span class="badge bg-danger">Breaking</span> Навбарам теперь требуется контейнер внутри (чтобы значительно упростить требования к интервалам и CSS).</li>
-<li><span class="badge bg-danger">Breaking</span> Класс <code>.active</code> больше нельзя применять к элементам <code>.nav-item</code>, его необходимо применять непосредственно к элементам <code>.nav-link</code>.</li>
+<li><span class="badge text-bg-danger">Breaking</span> Навбарам теперь требуется контейнер внутри (чтобы значительно упростить требования к интервалам и CSS).</li>
+<li><span class="badge text-bg-danger">Breaking</span> Класс <code>.active</code> больше нельзя применять к элементам <code>.nav-item</code>, его необходимо применять непосредственно к элементам <code>.nav-link</code>.</li>
 </ul>
 <h4 id="offcanvas">Offcanvas <a class="anchor-link" href="#offcanvas" aria-label="Link to this section: Offcanvas"></a></h4>
 <ul>
@@ -1425,7 +1425,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="поповеры">Поповеры <a class="anchor-link" href="#%d0%bf%d0%be%d0%bf%d0%be%d0%b2%d0%b5%d1%80%d1%8b" aria-label="Link to this section: Поповеры"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающего окна по умолчанию <code>.arrow</code> переименован в <code>.popover-arrow</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> В нашем шаблоне всплывающего окна по умолчанию <code>.arrow</code> переименован в <code>.popover-arrow</code>.</p>
 </li>
 <li>
 <p>Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
@@ -1455,19 +1455,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h4 id="тултипы">Тултипы <a class="anchor-link" href="#%d1%82%d1%83%d0%bb%d1%82%d0%b8%d0%bf%d1%8b" aria-label="Link to this section: Тултипы"></a></h4>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> В нашем шаблоне всплывающей подсказки по умолчанию <code>.arrow</code> переименован в <code>.tooltip-arrow</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> В нашем шаблоне всплывающей подсказки по умолчанию <code>.arrow</code> переименован в <code>.tooltip-arrow</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Значение по умолчанию для <code>fallbackPlacements</code> изменено на <code>['top', 'right', 'bottom', 'left']</code> для лучшего размещения элементов.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Значение по умолчанию для <code>fallbackPlacements</code> изменено на <code>['top', 'right', 'bottom', 'left']</code> для лучшего размещения элементов.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Параметр <code>whiteList</code> переименован в <code>allowList</code>.</p>
 </li>
 </ul>
 <h3 id="утилиты-3">Утилиты <a class="anchor-link" href="#%d1%83%d1%82%d0%b8%d0%bb%d0%b8%d1%82%d1%8b-3" aria-label="Link to this section: Утилиты"></a></h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Переименовано несколько утилит для использования логических имен свойств вместо прямых имен с добавлением поддержки RTL:</p>
+<p><span class="badge text-bg-danger">Breaking</span> Переименовано несколько утилит для использования логических имен свойств вместо прямых имен с добавлением поддержки RTL:</p>
 <ul>
 <li>Переименованы <code>.float-left</code> и <code>.float-right</code> в <code>.float-start</code> и <code>.float-end</code>.</li>
 <li>Переименованы <code>.border-left</code> и <code>.border-right</code> в <code>.border-start</code> и <code>.border-end</code>.</li>
@@ -1478,7 +1478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> По умолчанию отрицательные поля отключены.</p>
+<p><span class="badge text-bg-danger">Breaking</span> По умолчанию отрицательные поля отключены.</p>
 </li>
 <li>
 <p>Добавлен новый класс <code>.bg-body</code> для быстрой установки фона <code>&lt;body&gt;</code> для дополнительных элементов.</p>
@@ -1493,25 +1493,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Добавлены новые <a href="/docs/5.3/utilities/borders/#border-width">утилиты <code>border-width</code></a>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <code>.text-monospace</code> переименован в <code>.font-monospace</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <code>.text-monospace</code> переименован в <code>.font-monospace</code>.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удален <code>.text-hide</code>, так как это устаревший метод скрытия текста, который больше не следует использовать.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удален <code>.text-hide</code>, так как это устаревший метод скрытия текста, который больше не следует использовать.</p>
 </li>
 <li>
 <p>Добавлены утилиты <code>.fs-*</code> для утилит <code>font-size</code> (с включенным RFS). Они используют тот же масштаб, что и заголовки HTML по умолчанию (1-6, от большого к маленькому), и могут быть изменены с помощью карты Sass.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Утилиты <code>.font-weight-*</code> переименованы в <code>.fw-*</code> для краткости и единообразия.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Утилиты <code>.font-weight-*</code> переименованы в <code>.fw-*</code> для краткости и единообразия.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Утилита <code>.font-italic</code> переименована в <code>.fst-italic</code> для краткости и согласованности с новой утилитой <code>.fst-normal</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Утилита <code>.font-italic</code> переименована в <code>.fst-italic</code> для краткости и согласованности с новой утилитой <code>.fst-normal</code>.</p>
 </li>
 <li>
 <p>Добавлен <code>.d-grid</code> для отображения утилит и новые утилиты <code>gap</code> (<code>.gap</code>) для макетов CSS Grid и flexbox.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Удалены <code>.rounded-sm</code> и <code>rounded-lg</code>, а также введена новая шкала классов от <code>.rounded-0</code> до <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Смотрите #31687</a>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Удалены <code>.rounded-sm</code> и <code>rounded-lg</code>, а также введена новая шкала классов от <code>.rounded-0</code> до <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Смотрите #31687</a>.</p>
 </li>
 <li>
 <p>Добавлены новые утилиты <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> и <code>.lh-lg</code>. Смотреть <a href="/docs/5.3/utilities/text/#line-height">здесь</a>.</p>
@@ -1526,7 +1526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 id="помощники-2">Помощники <a class="anchor-link" href="#%d0%bf%d0%be%d0%bc%d0%be%d1%89%d0%bd%d0%b8%d0%ba%d0%b8-2" aria-label="Link to this section: Помощники"></a></h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Адаптивные помощники по внедрению были переименованы в <a href="/docs/5.3/helpers/ratio/">ratio helpers</a></strong> с новыми именами классов и улучшенным поведением, а также полезной переменной CSS.</p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Адаптивные помощники по внедрению были переименованы в <a href="/docs/5.3/helpers/ratio/">ratio helpers</a></strong> с новыми именами классов и улучшенным поведением, а также полезной переменной CSS.</p>
 <ul>
 <li>Классы были переименованы, чтобы изменить соотношение сторон <code>by</code> на <code>x</code>. Например, <code>.ratio-16by9</code> теперь <code>.ratio-16x9</code>.</li>
 <li>Мы отказались от селектора <code>.embed-responsive-item</code> и группы элементов в пользу более простого селектора <code>.ratio &gt; *</code>. Класс больше не нужен, и помощник по соотношению теперь работает с любым элементом HTML.</li>
@@ -1535,7 +1535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>Классы программ чтения с экрана теперь <a href="/docs/5.3/helpers/visually-hidden/">классы &ldquo;визуально скрытые&rdquo;</a>.</strong></p>
+<p><span class="badge text-bg-danger">Breaking</span> <strong>Классы программ чтения с экрана теперь <a href="/docs/5.3/helpers/visually-hidden/">классы &ldquo;визуально скрытые&rdquo;</a>.</strong></p>
 <ul>
 <li>Изменен файл Sass с <code>scss/helpers/_screenreaders.scss</code> на <code>scss/helpers/_visually-hidden.scss</code></li>
 <li><code>.sr-only</code> и <code>.sr-only-focusable</code> переименованы в <code>.visually-hidden</code> и <code>.visually-hidden-focusable</code></li>
@@ -1552,7 +1552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><strong>Отказ от зависимости jQuery</strong> и переписаны плагины на обычный JavaScript.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и вашего собственного кода. Например, мы используем <code>data-bs-toggle</code> вместо <code>data-toggle</code>.</p>
+<p><span class="badge text-bg-danger">Breaking</span> Атрибуты данных для всех плагинов JavaScript теперь имеют пространство имен, чтобы помочь отличить функциональность Bootstrap от стороннего кода и вашего собственного кода. Например, мы используем <code>data-bs-toggle</code> вместо <code>data-toggle</code>.</p>
 </li>
 <li>
 <p><strong>Все плагины теперь могут принимать селектор CSS в качестве первого аргумента.</strong> Вы можете передать элемент DOM или любой допустимый селектор CSS, чтобы создать новый экземпляр плагина:</p>
@@ -1586,7 +1586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="list-unstyled small">
           <li class="mb-2">Разработано и создано со всей любовью <a href="/docs/5.3/about/team/">командой Bootstrap</a> с помощью <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших участников</a>.</li>
           <li class="mb-2">Код под лицензией <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, документация <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-          <li class="mb-2">Текущая версия 5.3.2.</li>
+          <li class="mb-2">Текущая версия 5.3.3.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1665,20 +1665,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.2\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.3\/dist\/css\/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.su/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.2\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.3\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
 
-    <!-- Example Code -->
+    \x3C!-- Example Code -->
 ${htmlSnippet.replace(/^/gm, '    ')}
-    <!-- End Example Code -->
+    \x3C!-- End Example Code -->
   </body>
 </html>`
 
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2023 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global bootstrap: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new bootstrap.Tooltip(tooltip)\n    })\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new bootstrap.Popover(popover)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document.getElementById(\u0027toastPlacement\u0027)\n  if (toastPlacement) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!toastPlacement.dataset.originalClass) {\n        toastPlacement.dataset.originalClass = toastPlacement.className\n      }\n\n      toastPlacement.className = \u0060${toastPlacement.dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new bootstrap.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  const toastTrigger = document.getElementById(\u0027liveToastBtn\u0027)\n  const toastLiveExample = document.getElementById(\u0027liveToast\u0027)\n\n  if (toastTrigger) {\n    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)\n    toastTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      toastBootstrap.show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js-docs-start live-alert\n  const alertPlaceholder = document.getElementById(\u0027liveAlertPlaceholder\u0027)\n  const appendAlert = (message, type) =\u003e {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0060   \u003cdiv\u003e${message}\u003c\/div\u003e\u0060,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 aria-label=\u0022Закрыть\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    alertPlaceholder.append(wrapper)\n  }\n\n  const alertTrigger = document.getElementById(\u0027liveAlertBtn\u0027)\n  if (alertTrigger) {\n    alertTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      bootstrap.Carousel.getOrCreateInstance(carousel)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js-docs-start varying-modal-content\n  const exampleModal = document.getElementById(\u0027exampleModal\u0027)\n  if (exampleModal) {\n    exampleModal.addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = exampleModal.querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = exampleModal.querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n  if (myOffcanvas) {\n    myOffcanvas.forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  }\n})()\n' : null
+    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global bootstrap: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new bootstrap.Tooltip(tooltip)\n    })\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new bootstrap.Popover(popover)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document.getElementById(\u0027toastPlacement\u0027)\n  if (toastPlacement) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!toastPlacement.dataset.originalClass) {\n        toastPlacement.dataset.originalClass = toastPlacement.className\n      }\n\n      toastPlacement.className = \u0060${toastPlacement.dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new bootstrap.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  const toastTrigger = document.getElementById(\u0027liveToastBtn\u0027)\n  const toastLiveExample = document.getElementById(\u0027liveToast\u0027)\n\n  if (toastTrigger) {\n    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)\n    toastTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      toastBootstrap.show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js-docs-start live-alert\n  const alertPlaceholder = document.getElementById(\u0027liveAlertPlaceholder\u0027)\n  const appendAlert = (message, type) =\u003e {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0060   \u003cdiv\u003e${message}\u003c\/div\u003e\u0060,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 aria-label=\u0022Закрыть\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    alertPlaceholder.append(wrapper)\n  }\n\n  const alertTrigger = document.getElementById(\u0027liveAlertBtn\u0027)\n  if (alertTrigger) {\n    alertTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      bootstrap.Carousel.getOrCreateInstance(carousel)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js-docs-start varying-modal-content\n  const exampleModal = document.getElementById(\u0027exampleModal\u0027)\n  if (exampleModal) {\n    exampleModal.addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = exampleModal.querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = exampleModal.querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n  if (myOffcanvas) {\n    myOffcanvas.forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  }\n})()\n' : null
     const project = {
       files: {
         'index.html': markup,
