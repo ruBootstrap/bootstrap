@@ -5,9 +5,9 @@
   {{ if eq $entry.category "RTL" -}}
     <div class="bd-callout bd-callout-warning small">
       <p>
-        <strong>RTL is still experimental</strong> and will evolve with feedback. Spotted something or have an improvement to suggest?
+        <strong>RTL все еще экспериментальный</strong> и будет развиваться с учетом отзывов. Заметили что-то или хотите предложить улучшение?
       </p>
-      <p><a href="{{ urls.JoinPath $.Site.Params.repo "issues/new/choose" }}">Please open an issue.</a></p>
+      <p><a href="{{ urls.JoinPath $.Site.Params.repo "issues/new/choose" }}">Пожалуйста, откройте вопрос.</a></p>
     </div>
   {{ end -}}
   {{ range $i, $example := $entry.examples -}}
@@ -28,7 +28,7 @@
               {{- $stackBlitzUrl := printf "%s%s%s" (urls.JoinPath "https://stackblitz.com/github/twbs" $example.url) "?file=" ($indexPath | urlquery) }}
               <a class="icon-link small link-secondary link-offset-1" href="{{ $stackBlitzUrl }}" target="_blank" rel="noopener" aria-labelledby="edit-{{ $i }} starter-{{ $i }}">
                 <svg class="bi flex-shrink-0" aria-hidden="true"><use xlink:href="#lightning-charge-fill"></use></svg>
-                <span id="edit-{{ $i }}">Edit in StackBlitz</span>
+                <span id="edit-{{ $i }}">Редактировать в StackBlitz</span>
               </a>
             </p>
           </div>

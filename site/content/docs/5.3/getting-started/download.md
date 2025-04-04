@@ -101,7 +101,7 @@ yarn add bootstrap@{{< param "current_version" >}}
 ```
 
 {{< callout warning >}}
-**Yarn 2+ (aka Yarn Berry) doesn't support the `node_modules` directory by default**: using our [Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
+**Yarn 2+ (он же Yarn Berry) по умолчанию не поддерживает каталог `node_modules`: для использования нашего [примера Sass & JS](https://github.com/twbs/examples/tree/main/sass-js) требуются некоторые корректировки:
 
 ```sh
 yarn config set nodeLinker node-modules # Use the node_modules linker
