@@ -7,7 +7,7 @@ aliases: "/docs/5.3/utilities/"
 toc: true
 ---
 
-Утилиты Bootstrap создаются с помощью нашего служебного API и могут использоваться для изменения или расширения нашего набора служебных классов по умолчанию через Sass. Наш служебный API основан на серии карт и функций Sass для создания семейств классов с различными параметрами. Если Вы не знакомы с картами Sass, прочитайте [официальную документацию Sass](https://sass-lang.com/documentation/values/maps), чтобы начать работу.
+Утилиты Bootstrap генерируются с помощью нашего API утилит и могут использоваться для изменения или расширения нашего стандартного набора классов утилит через Sass. Наш API утилит основан на серии карт Sass и функций для генерации семейств классов с различными опциями. Если вы не знакомы с картами Sass, прочитайте [официальную документацию Sass](https://sass-lang.com/documentation/values/maps/), чтобы начать.
 
 Карта `$utilities` содержит все наши утилиты и позже объединяется с Вашей пользовательской картой `$utilities`, если она есть. Карта утилит содержит ключевой список групп утилит, которые принимают следующие параметры:
 
@@ -451,7 +451,8 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "border": map-merge(
       map-get($utilities, "border"),
       ( responsive: true ),
@@ -507,7 +508,8 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "margin-start": map-merge(
       map-get($utilities, "margin-start"),
       ( class: ml ),
@@ -520,7 +522,7 @@ $utilities: map-merge(
 
 ### Удаление утилит
 
-Удалите все стандартные утилиты с помощью [Sass-функции `map-remove()`](https://sass-lang.com/documentation/modules/map#remove).
+Удалите все стандартные утилиты с помощью [Sass-функции `map-remove()`](https://sass-lang.com/documentation/modules/map/#remove).
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -536,7 +538,7 @@ $utilities: map-remove($utilities, "width", "float");
 @import "bootstrap/scss/utilities/api";
 ```
 
-Вы также можете использовать [Sass функцию `map-merge()`](https://sass-lang.com/documentation/modules/map#merge) и установить для группового ключа значение `null`, чтобы удалить утилиту.
+Вы также можете использовать [Sass функцию `map-merge()`](https://sass-lang.com/documentation/modules/map/#merge) и установить групповой ключ на `null`, чтобы удалить утилиту.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -556,7 +558,7 @@ $utilities: map-merge(
 
 ### Добавление, удаление, изменение
 
-Вы можете добавлять, удалять и изменять множество утилит одновременно с помощью [Sass-функции `map-merge()`](https://sass-lang.com/documentation/modules/map#merge). Вот как вы можете объединить предыдущие примеры в одну большую карту.
+Вы можете добавлять, удалять и изменять множество утилит одновременно с помощью [Sass-функции `map-merge()`](https://sass-lang.com/documentation/modules/map/#merge). Вот как можно объединить предыдущие примеры в одну большую карту.
 
 ```scss
 @import "bootstrap/scss/functions";

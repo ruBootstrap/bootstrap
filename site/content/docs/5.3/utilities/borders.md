@@ -123,26 +123,26 @@ toc: true
 Добавьте классы к элементу, чтобы легко скруглить его углы.
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded" title="Пример закругленного изображения" >}}
-{{< placeholder width="75" height="75" class="rounded-top" title="Пример закругленного изображения сверху" >}}
-{{< placeholder width="75" height="75" class="rounded-end" title="Пример закругленного изображения справа" >}}
-{{< placeholder width="75" height="75" class="rounded-bottom" title="Пример закругленного изображения снизу" >}}
-{{< placeholder width="75" height="75" class="rounded-start" title="Пример закругленного изображения слева" >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Полностью круглое изображение" >}}
-{{< placeholder width="150" height="75" class="rounded-pill" title="Закругленное изображение таблетки" >}}
+{{< placeholder width="75" height="75" class="rounded" title="Пример скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-top" title="Пример скругленного сверху изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-end" title="Пример скругленного справа изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-bottom" title="Пример скругленного снизу изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-start" title="Пример скругленного слева изображения" >}}
 {{< /example >}}
 
 ### Размеры
 
-Используйте классы масштабирования для больших или меньших закругленных углов. Размеры варьируются от `0` до `5` и могут быть настроены путем изменения API утилит.
+Используйте классы масштабирования для больших или меньших скругленных углов. Размеры варьируются от `0` до `5`, включая `circle` и `pill`, и могут быть настроены путем изменения API утилит.
 
 {{< example class="bd-example-rounded-utils" >}}
-{{< placeholder width="75" height="75" class="rounded-0" title="Пример изображения без закруглений" >}}
-{{< placeholder width="75" height="75" class="rounded-1" title="Пример маленького закругленного изображения" >}}
-{{< placeholder width="75" height="75" class="rounded-2" title="Пример закругленного изображения по умолчанию" >}}
-{{< placeholder width="75" height="75" class="rounded-3" title="Пример большого закругленного изображения" >}}
-{{< placeholder width="75" height="75" class="rounded-4" title="Пример увеличенного округлого изображения" >}}
-{{< placeholder width="75" height="75" class="rounded-5" title="Пример очень большого округлого изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-0" title="Пример не скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-1" title="Пример маленького скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-2" title="Пример скругленного изображения по умолчанию" >}}
+{{< placeholder width="75" height="75" class="rounded-3" title="Пример большого скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-4" title="Пример большего скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-5" title="Пример очень большого скругленного изображения" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Полностью круглое изображение" >}}
+{{< placeholder width="150" height="75" class="rounded-pill" title="Изображение круглой таблетки" >}}
 {{< /example >}}
 
 {{< example class="bd-example-rounded-utils" >}}

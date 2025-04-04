@@ -74,7 +74,7 @@ _Помощь в этом разделе нужна, рассмотрите во
 
 Хотя минимизация и использование сжатия может показаться достаточным, создание неблокирующих файлов для ваших файлов также является большим шагом к тому, чтобы ваш сайт был хорошо оптимизирован и достаточно быстрым.
 
-Если вы используете плагин [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) в Google Chrome, возможно, вы наткнулись на FCP. Метрика [The First Contentful Paint](https://web.dev/fcp/) измеряет время с момента начала загрузки страницы до того, как на экране отобразится какая-либо часть содержимого страницы.
+Если вы используете плагин [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) в Google Chrome, вы могли столкнуться с FCP. Метрика [The First Contentful Paint](https://web.dev/articles/fcp) измеряет время с момента начала загрузки страницы до момента отображения любой части ее содержимого на экране.
 
 Вы можете улучшить FCP, отложив некритичный JavaScript или CSS. Что это обозначает? Просто JavaScript или таблицы стилей, которые не обязательно должны присутствовать при первом отрисовке вашей страницы, должны быть помечены атрибутами `async` или `defer`.
 
@@ -82,8 +82,8 @@ _Помощь в этом разделе нужна, рассмотрите во
 
 Если Вы хотите узнать об этом больше, об этом уже есть много отличных статей:
 
-- <https://web.dev/render-blocking-resources/>
-- <https://web.dev/defer-non-critical-css/>
+- <https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/>
+- <https://web.dev/articles/defer-non-critical-css>
 
 ## Всегда используйте HTTPS
 

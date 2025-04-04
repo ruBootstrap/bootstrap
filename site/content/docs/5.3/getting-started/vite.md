@@ -5,13 +5,20 @@ description: Официальное руководство о том, как в�
 group: getting-started
 toc: true
 thumbnail: guides/bootstrap-vite@2x.png
+added:
+  show_badge: false
+  version: "5.2"
 ---
 
-<img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="2000" height="1000" alt="">
+<img class="d-block mx-auto mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="800" height="400" alt="">
 
 {{< callout >}}
 **Хотите перейти к концу?** Загрузите исходный код и рабочую демонстрацию для этого руководства из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/vite). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) для редактирования в реальном времени.
 {{< /callout >}}
+
+## Что такое Vite?
+
+[Vite](https://vite.dev/) — это современный инструмент сборки фронтенда, разработанный для скорости и простоты. Он обеспечивает эффективный и оптимизированный опыт разработки, особенно для современных фреймворков JavaScript.
 
 ## Установка
 
@@ -132,7 +139,7 @@ my-project/
    npm start
    ```
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server.png" alt="Vite dev server running">
+   ![Vite dev server running](/assets/img/guides/vite-dev-server.png)
 
 В следующем и последнем разделе этого руководства мы импортируем весь CSS и JavaScript Bootstrap.
 
@@ -172,7 +179,7 @@ my-project/
 
 3. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так:
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
+   ![Vite dev server running with Bootstrap](/assets/img/guides/vite-dev-server-bootstrap.png)
 
    Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Vite](https://github.com/twbs/examples/tree/main/vite), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать свою сборку, импортируя только части CSS и JS Bootstrap, которые вам нужны.
 

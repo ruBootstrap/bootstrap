@@ -62,7 +62,7 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-Это самая простая форма Bootstrap: скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минифицированные CSS и JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Связанные файлы JS (`bootstrap.bundle.js`) и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
+Это самая базовая форма Bootstrap: скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://web.dev/articles/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика определенных браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минимизированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/docs/v2/).
 
 ### Файлы CSS
 

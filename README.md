@@ -46,11 +46,11 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.3.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.4.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.3`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.3`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.3`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.4`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.4`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.4`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -131,7 +131,7 @@
   ```
 </details>
 
-Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/).
+Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://web.dev/articles/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/docs/v2/).
 
 
 ## Ошибки и запросы улучшений
@@ -175,9 +175,9 @@
 Получайте новости о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
 
 - Присоединиться к чату [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
-- Следите за [@getbootstrap в Twitter](https://twitter.com/getbootstrap).
+- Следите за [@getbootstrap в Twitter](https://x.com/getbootstrap).
 - Читайте и подписывайтесь на [Официальный блог Bootstrap](https://blog.getbootstrap.com/) и [Не официальный блог Bootstrap](https://blog.getbootstrap.su/).
-- - Обсуждайте, задавайте вопросы и многое другое в [сообществе Discord](https://discord.gg/bZUvakRU3M) или [Bootstrap subreddit](https://reddit.com/r/bootstrap).
+- Обсуждайте, задавайте вопросы и многое другое в [сообществе Discord](https://discord.gg/bZUvakRU3M) или [Bootstrap subreddit](https://reddit.com/r/bootstrap).
 - Спрашивайте и изучайте [наши обсуждения на GitHub](https://github.com/twbs/bootstrap/discussions).
 - Общайтесь с другими Bootstrappers в IRC. На сервере `irc.libera.chat`, в канале `#bootstrap`.
 - Справку по реализации можно найти на сайте Stack Overflow (с тегом [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
@@ -195,12 +195,12 @@
 
 **Mark Otto**
 
-- <https://twitter.com/mdo>
+- <https://x.com/mdo>
 - <https://github.com/mdo>
 
 **Jacob Thornton**
 
-- <https://twitter.com/fat>
+- <https://x.com/fat>
 - <https://github.com/fat>
 
 
@@ -243,4 +243,4 @@
 
 ## Авторское право и лицензия
 
-Авторские права на код и документацию принадлежат [авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors). Код выпущен по [Лицензии MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена под лицензией [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+Авторские права на код и документацию 2011-2025 принадлежат [Авторам Bootstrap](https://github.com/twbs/bootstrap/graphs/contributors). Код выпущен под [Лицензией MIT](https://github.com/twbs/bootstrap/blob/main/LICENSE). Документация выпущена под [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

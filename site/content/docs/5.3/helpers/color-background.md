@@ -4,7 +4,8 @@ title: Цвет и фон
 description: Установите цвет фона с контрастным цветом переднего плана.
 group: helpers
 toc: true
-added: "5.2"
+added:
+  version: "5.2"
 ---
 
 ## Обзор

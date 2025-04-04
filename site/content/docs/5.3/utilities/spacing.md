@@ -99,11 +99,11 @@ toc: true
 При использовании `display: grid` или `display: flex`, вы можете использовать утилиты `gap` для родительского элемента. Это может сэкономить на необходимости добавлять утилиты margin к отдельным дочерним элементам сетки или гибкого контейнера. Утилиты Gap по умолчанию реагируют и генерируются с помощью нашего API утилит на основе карты Sass `$spacers`.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-3">
-  <div class="p-2 g-col-6">Элемент сетки 1</div>
-  <div class="p-2 g-col-6">Элемент сетки 2</div>
-  <div class="p-2 g-col-6">Элемент сетки 3</div>
-  <div class="p-2 g-col-6">Элемент сетки 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-3">
+  <div class="p-2">Элемент сетки 1</div>
+  <div class="p-2">Элемент сетки 2</div>
+  <div class="p-2">Элемент сетки 3</div>
+  <div class="p-2">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 
@@ -114,11 +114,11 @@ toc: true
 `row-gap` устанавливает расстояние по вертикали между дочерними элементами в указанном контейнере.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-0 row-gap-3">
-  <div class="p-2 g-col-6">Элемент сетки 1</div>
-  <div class="p-2 g-col-6">Элемент сетки 2</div>
-  <div class="p-2 g-col-6">Элемент сетки 3</div>
-  <div class="p-2 g-col-6">Элемент сетки 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 row-gap-3">
+  <div class="p-2">Элемент сетки 1</div>
+  <div class="p-2">Элемент сетки 2</div>
+  <div class="p-2">Элемент сетки 3</div>
+  <div class="p-2">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 
@@ -127,11 +127,11 @@ toc: true
 `column-gap` устанавливает горизонтальное расстояние между дочерними элементами в указанном контейнере.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-0 column-gap-3">
-  <div class="p-2 g-col-6">Элемент сетки 1</div>
-  <div class="p-2 g-col-6">Элемент сетки 2</div>
-  <div class="p-2 g-col-6">Элемент сетки 3</div>
-  <div class="p-2 g-col-6">Элемент сетки 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 column-gap-3">
+  <div class="p-2">Элемент сетки 1</div>
+  <div class="p-2">Элемент сетки 2</div>
+  <div class="p-2">Элемент сетки 3</div>
+  <div class="p-2">Элемент сетки 4</div>
 </div>
 {{< /example >}}
 

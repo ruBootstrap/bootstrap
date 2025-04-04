@@ -4,6 +4,8 @@ title: Соответствие объекта
 description: Используйте утилиты подгонки объекта, чтобы изменить содержимое [заменяемого элемента](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element), например `<img>` или `<video>` следует изменить размер, чтобы он соответствовал своему контейнеру.
 group: utilities
 toc: true
+added:
+  version: "5.3"
 ---
 
 ## Как это устроено

@@ -195,8 +195,6 @@ toc: true
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Группа вертикальных кнопок">
-  <button type="button" class="btn btn-primary">Кнопка</button>
-  <button type="button" class="btn btn-primary">Кнопка</button>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающая кнопка
@@ -206,6 +204,8 @@ toc: true
       <li><a class="dropdown-item" href="#">Выпадающая ссылка</a></li>
     </ul>
   </div>
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-primary">Button</button>
   <div class="btn-group dropstart" role="group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       Выпадающая кнопка

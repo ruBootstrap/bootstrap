@@ -89,7 +89,7 @@ your-project/
 
 ## Компиляция
 
-Чтобы использовать ваш пользовательский код Sass в качестве CSS в браузере, вам нужен компилятор Sass. Sass поставляется в виде пакета CLI, но вы также можете скомпилировать его с помощью других инструментов сборки, таких как [Gulp](https://gulpjs.com/) или [Webpack](https://webpack.js.org/), или с помощью приложения с графическим интерфейсом. Некоторые IDE также имеют встроенные компиляторы Sass или загружаемые расширения.
+Чтобы использовать ваш пользовательский код Sass как CSS в браузере, вам нужен компилятор Sass. Sass поставляется как пакет CLI, но вы также можете скомпилировать его с другими инструментами сборки, такими как [Gulp](https://gulpjs.com/) или [Webpack](https://webpack.js.org/), или с приложениями GUI. Некоторые IDE также имеют встроенные компиляторы Sass или как загружаемые расширения.
 
 Нам нравится использовать CLI для компиляции нашего Sass, но вы можете использовать любой метод, который вы предпочитаете. Из командной строки выполните следующее:
 
@@ -101,7 +101,7 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-Узнайте больше о своих вариантах на [sass-lang.com/install](https://sass-lang.com/install) и [компиляции с помощью VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+Узнайте больше о вариантах на [sass-lang.com/install](https://sass-lang.com/install/) и [компиляции с помощью VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
 
 {{< callout info >}}
 **Используете Bootstrap с другим инструментом сборки?** Рекомендуем прочитать наши руководства по компиляции с помощью [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}) или [Vite]({{< docsref "/getting-started/vite" >}}). У нас также есть готовые демонстрации в [нашем репозитории примеров на GitHub](https://github.com/twbs/examples).

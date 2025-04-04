@@ -87,7 +87,7 @@ toc: true
 
 Мы используем следующий код JavaScript для запуска нашей демонстрации тостов:
 
-{{< js-docs name="live-toast" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="live-toast" file="site/assets/js/partials/snippets.js" >}}
 
 ### Полупрозрачный
 

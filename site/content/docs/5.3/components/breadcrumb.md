@@ -46,7 +46,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-При изменении через Sass функция [quote](https://sass-lang.com/documentation/modules/string#quote) требуется для генерации кавычек вокруг строки. Например, используя `>` в качестве разделителя, Вы можете использовать это:
+При изменении через Sass функция [quote](https://sass-lang.com/documentation/modules/string/#quote) необходима для генерации кавычек вокруг строки. Например, используя `>` в качестве разделителя, Вы можете использовать это:
 
 ```scss
 $breadcrumb-divider: quote(">");

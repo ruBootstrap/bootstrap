@@ -8,9 +8,9 @@ toc: true
 
 ## Обзор
 
-Выпадающие списки - это переключаемые контекстные наложения для отображения списков ссылок и многого другого. Они сделаны интерактивными с помощью включенного плагина JavaScript для выпадающего меню Bootstrap. Они переключаются щелчком, а не при наведении курсора; это [намеренное дизайнерское решение](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Выпадающие списки — это переключаемые, контекстные наложения для отображения списков ссылок и многого другого. Они сделаны интерактивными с помощью включенного плагина JavaScript Bootstrap dropdown. Они переключаются щелчком, а не наведением; это [преднамеренное решение дизайна](https://markdotto.com/blog/bootstrap-explained-dropdowns/).
 
-Выпадающие списки созданы на основе сторонней библиотеки, [Popper](https://popper.js.org/), которая обеспечивает динамическое позиционирование и обнаружение области просмотра. Не забудьте включить [popper.min.js]({{< param "cdn.popper" >}}) перед загрузочным JavaScript или используйте `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, который содержит Popper.js. Popper.js не используется для размещения выпадающих списков на панели навигации, хотя динамическое позиционирование не требуется.
+Выпадающие списки построены на сторонней библиотеке [Popper](https://popper.js.org/docs/v2/), которая обеспечивает динамическое позиционирование и обнаружение области просмотра. Обязательно включите [popper.min.js]({{< param "cdn.popper" >}}) перед JavaScript Bootstrap или используйте `bootstrap.bundle.min.js` / `bootstrap.bundle.js`, которые содержат Popper. Popper не используется для позиционирования раскрывающихся списков в навигационных панелях, поскольку динамическое позиционирование не требуется.
 
 ## Доступность
 
@@ -126,7 +126,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 <!-- Пример отдельной кнопки danger -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Действие
+    Danger
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Действие</a></li>
@@ -228,7 +228,7 @@ The [<abbr title="Инициатива веб-доступности">WAI</abbr>
 ```html
 <!-- Пример отдельной кнопки danger -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger">Действие</button>
+  <button type="button" class="btn btn-danger">Danger</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Переключатель выпадающего списка</span>
   </button>

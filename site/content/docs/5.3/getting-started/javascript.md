@@ -24,7 +24,7 @@ toc: true
   {{< /callout >}}
 - Vue: [BootstrapVue](https://bootstrap-vue.org/) (Bootstrap 4)
 - Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, в настоящее время в альфа-версии)
-- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
+- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/) или [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
 
 ## Использование Bootstrap как модуля
 
@@ -96,7 +96,7 @@ Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relativ
 
 Некоторые плагины и компоненты CSS зависят от других плагинов. Если вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации.
 
-Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от [Popper](https://popper.js.org/).
+Наши раскрывающиеся списки, всплывающие окна и подсказки также зависят от [Popper](https://popper.js.org/docs/v2/).
 
 ## Атрибуты данных
 

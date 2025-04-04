@@ -19,14 +19,14 @@ toc: true
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+  <label class="form-check-label" for="checkDefault">
     Флажок по умолчанию
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-  <label class="form-check-label" for="flexCheckChecked">
+  <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
+  <label class="form-check-label" for="checkChecked">
     Выбранный флажок
   </label>
 </div>
@@ -38,8 +38,8 @@ toc: true
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-  <label class="form-check-label" for="flexCheckIndeterminate">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
+  <label class="form-check-label" for="checkIndeterminate">
     Неопределенный флажок
   </label>
 </div>
@@ -51,20 +51,20 @@ toc: true
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
-  <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
+  <label class="form-check-label" for="checkIndeterminateDisabled">
     Отключен неопределенный флажок
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
-  <label class="form-check-label" for="flexCheckDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
+  <label class="form-check-label" for="checkDisabled">
     Отключенный флажок
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexCheckCheckedDisabled">
+  <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="checkCheckedDisabled">
     Отключенный выбранный флажок
   </label>
 </div>
@@ -74,14 +74,14 @@ toc: true
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+  <label class="form-check-label" for="radioDefault1">
     Радио по умолчанию
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="form-check-label" for="flexRadioDefault2">
+  <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+  <label class="form-check-label" for="radioDefault2">
     Радио выбранное по умолчанию
   </label>
 </div>
@@ -93,14 +93,14 @@ toc: true
 
 {{< example >}}
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
-  <label class="form-check-label" for="flexRadioDisabled">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="radioDisabled" disabled>
+  <label class="form-check-label" for="radioDisabled">
     Отключенное радио
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexRadioCheckedDisabled">
+  <input class="form-check-input" type="radio" name="radioDisabled" id="radioCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="radioCheckedDisabled">
     Отключенное выбранное радио
   </label>
 </div>
@@ -112,20 +112,20 @@ toc: true
 
 {{< example >}}
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Ввод флажка переключателя по умолчанию</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label" for="switchCheckDefault">Ввод флажка переключателя по умолчанию</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-  <label class="form-check-label" for="flexSwitchCheckChecked">Выбран флажок переключателя ввода</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+  <label class="form-check-label" for="switchCheckChecked">Выбран флажок переключателя ввода</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
-  <label class="form-check-label" for="flexSwitchCheckDisabled">Отключено переключение флажка ввода</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDisabled" disabled>
+  <label class="form-check-label" for="switchCheckDisabled">Отключено переключение флажка ввода</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
-  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Отключено переключение флажка в поле ввода</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="switchCheckCheckedDisabled">Отключено переключение флажка в поле ввода</label>
 </div>
 {{< /example >}}
 
@@ -222,8 +222,8 @@ toc: true
 </div>
 
 <div class="form-check form-switch form-check-reverse">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-  <label class="form-check-label" for="flexSwitchCheckReverse">Вход флажка обратного переключателя</label>
+  <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+  <label class="form-check-label" for="switchCheckReverse">Вход флажка обратного переключателя</label>
 </div>
 {{< /example >}}
 

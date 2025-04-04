@@ -7,11 +7,15 @@ toc: true
 thumbnail: guides/bootstrap-parcel@2x.png
 ---
 
-<img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="2000" height="1000" alt="">
+<img class="d-block mx-auto mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="800" height="400" alt="">
 
 {{< callout >}}
 **Хотите перейти к концу?** Загрузите исходный код и рабочую демонстрацию для этого руководства из [репозитория twbs/examples](https://github.com/twbs/examples/tree/main/parcel). Вы также можете [открыть пример в StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html), но не запускать его, потому что Parcel в настоящее время там не поддерживается.
 {{< /callout >}}
+
+## Что такое Parcel?
+
+[Parcel](https://parceljs.org/) — это упаковщик веб-приложений, разработанный для упрощения процесса разработки с настройкой без настройки из коробки. Он предлагает функции, имеющиеся в более продвинутых упаковщиках, при этом фокусируясь на простоте использования, что делает его идеальным для разработчиков, ищущих быстрый старт.
 
 ## Установка
 
@@ -111,7 +115,7 @@ my-project/
    npm start
    ```
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server.png" alt="Parcel dev server running">
+   ![Parcel dev server running](/assets/img/guides/parcel-dev-server.png)
 
 В следующем и последнем разделе этого руководства мы импортируем весь CSS и JavaScript Bootstrap.
 
@@ -150,7 +154,7 @@ my-project/
 
 3. **И готово! 🎉** С полностью загруженным исходным кодом Bootstrap Sass и JS ваш локальный сервер разработки теперь должен выглядеть так:
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-bootstrap.png" alt="Parcel dev server running with Bootstrap">
+   ![Parcel dev server running with Bootstrap](/assets/img/guides/parcel-dev-server-bootstrap.png)
 
    Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Parcel](https://github.com/twbs/examples/tree/main/parcel), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать сборку, импортируя только части CSS и JS Bootstrap, которые вам нужны.
 

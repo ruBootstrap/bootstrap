@@ -15,7 +15,7 @@ toc: true
 
 Сюда не входят документация, исходные файлы или любые дополнительные зависимости JavaScript, такие как Popper.
 
-<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Скачать</a>
+<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary">Скачать</a>
 
 ## Исходные файлы
 
@@ -26,13 +26,13 @@ toc: true
 
 Если вам потребуется наш полный набор [инструментов сборки]({{< docsref "/getting-started/contribute#tooling-setup" >}}), они включены для разработки Bootstrap и его документации, но, скорее всего, они не подходят для ваши собственные цели.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Начало работы', 'Скачать', 'Скачать исходники');">Скачать исходный код</a>
+<a href="{{< param "download.source" >}}" class="btn btn-bd-primary">Скачать исходный код</a>
 
 ## Примеры
 
 Если Вы хотите скачать и изучить наши [примеры]({{< docsref "/examples" >}}), Вы можете скачать уже созданные примеры:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Начало работы', 'Скачать', 'Скачать примеры');">Скачать Примеры</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary">Скачать Примеры</a>
 
 ## CDN через jsDelivr
 
@@ -100,9 +100,20 @@ Bootstrap's `package.json` содержит некоторые дополнит�
 yarn add bootstrap@{{< param "current_version" >}}
 ```
 
+{{< callout warning >}}
+**Yarn 2+ (aka Yarn Berry) doesn't support the `node_modules` directory by default**: using our [Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
+
+```sh
+yarn config set nodeLinker node-modules # Use the node_modules linker
+touch yarn.lock # Create an empty yarn.lock file
+yarn install # Install the dependencies
+yarn start # Start the project
+```
+{{< /callout >}}
+
 ### RubyGems
 
-Установите Bootstrap в свои приложения Ruby, используя [Bundler](https://bundler.io/) (**рекомендуется**) и [RubyGems](https://rubygems.org/), добавив следующую строку в свой [`Gemfile`](https://bundler.io/gemfile.html):
+Установите Bootstrap в свои приложения Ruby с помощью [Bundler](https://bundler.io/) (**рекомендуется**) и [RubyGems](https://rubygems.org/), добавив следующую строку в свой [`Gemfile`](https://bundler.io/guides/gemfile.html):
 
 ```ruby
 gem 'bootstrap', '~> {{< param current_ruby_version >}}'
@@ -126,7 +137,7 @@ composer require twbs/bootstrap:{{< param current_version >}}
 
 ### NuGet
 
-Если вы разрабатываете в .NET Framework, вы также можете установить и управлять Bootstrap [CSS](https://www.nuget.org/packages/bootstrap/) или [Sass](https://www.nuget.org/packages/bootstrap.sass/) и JavaScript с помощью [NuGet](https://www.nuget.org/). В более новых проектах следует использовать [libman](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/) или другой метод, поскольку NuGet предназначен для скомпилированного кода, а не для внешних ресурсов.
+Если вы разрабатываете в .NET Framework, вы также можете установить и управлять Bootstrap [CSS](https://www.nuget.org/packages/bootstrap/) или [Sass](https://www.nuget.org/packages/bootstrap.sass/) и JavaScript с помощью [NuGet](https://www.nuget.org/). Более новые проекты должны использовать [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) или другой метод, поскольку NuGet предназначен для скомпилированного кода, а не для frontend-активов.
 
 ```powershell
 Install-Package bootstrap
