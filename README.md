@@ -46,11 +46,12 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.4.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.5.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.4`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.4`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.4`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.5`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.5`
+- Установить с помощью [Bun](https://bun.sh/): `bun add bootstrap@v5.3.5`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.5`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.

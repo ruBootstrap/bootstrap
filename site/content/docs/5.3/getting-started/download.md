@@ -111,6 +111,14 @@ yarn start # Start the project
 ```
 {{< /callout >}}
 
+### Bun
+
+Install Bootstrap in your Bun or Node.js powered apps with [the Bun CLI](https://bun.sh/):
+
+```sh
+bun add bootstrap@{{< param "current_version" >}}
+```
+
 ### RubyGems
 
 Установите Bootstrap в свои приложения Ruby с помощью [Bundler](https://bundler.io/) (**рекомендуется**) и [RubyGems](https://rubygems.org/), добавив следующую строку в свой [`Gemfile`](https://bundler.io/guides/gemfile.html):
