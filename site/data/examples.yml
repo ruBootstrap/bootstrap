@@ -1,198 +1,191 @@
 - category: Стартовые наборы
-  slug: starters
   external: true
   description: "Функциональные примеры использования Bootstrap в распространенных средах JS, таких как Webpack, Parcel, Vite и других, которые вы можете редактировать в StackBlitz."
   examples:
-    - name: Стартер CDN
-      slug: cdn-starter
+    - name: CDN starter
+      translate: Стартер CDN
       description: "Мгновенно включайте скомпилированные CSS и JavaScript Bootstrap через CDN jsDelivr."
       url: /examples/tree/main/starter
-    - name: Sass и JS
-      slug: sass-js
+    - name: Sass & JS
+      translate: Sass и JS
       description: "Используйте npm для импорта и компиляции Bootstrap Sass с Autoprefixer и Stylelint, а также наш встроенный JavaScript."
       url: /examples/tree/main/sass-js
-    - name: Sass и ESM JS
-      slug: sass-js-esm
+    - name: Sass & ESM JS
+      translate: Sass и ESM JS
       description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Autoprefixer и Stylelint, а также скомпилируйте исходный код JavaScript с прокладкой ESM."
       url: /examples/tree/main/sass-js-esm
-    - name: Цветовые режимы Bootstrap
-      slug: bootstrap-color-modes
+    - name: Bootstrap color modes
+      translate: Цветовые режимы Bootstrap
       description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint и цветовых режимов Bootstrap."
       url: /examples/tree/main/color-modes
-    - name: Иконки Bootstrap
+    - name: Bootstrap Icons
+      translate: Иконки Bootstrap
       description: "Импортируйте и скомпилируйте Sass Bootstrap с помощью Stylelint, PurgeCSS и веб-шрифта Bootstrap Icons."
       url: /examples/tree/main/icons-font
     - name: Parcel
-      slug: parcel
+      translate: Parcel
       description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript через Parcel."
       url: /examples/tree/main/parcel
       indexPath: src/index.html
-      indexPath: src/index.html
     - name: React
-      slug: react
+      translate: React
       description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с React, Next.js и React Bootstrap."
       url: /examples/tree/main/react-nextjs
       indexPath: src/pages/index.tsx
     - name: Vite
-      slug: vite
+      translate: Vite
       description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vite."
       url: /examples/tree/main/vite
     - name: Vue
-      slug: vue
+      translate: Vue
       description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Vue и Vite."
       url: /examples/tree/main/vue
     - name: Webpack
-      slug: webpack
+      translate: Webpack
       description: "Импорт и объединение исходного кода Bootstrap Sass и JavaScript с Webpack."
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
 - category: Фрагменты
-  slug: snippets
   description: "Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с пользовательским CSS и т. д."
   examples:
-    - name: Заголовки
-      slug: headers
+    - name: Headers
+      translate: Заголовки
       description: "Отобразите свой брендинг, навигацию, поиск и многое другое с помощью этих компонентов заголовка."
-    - name: Герои
-      slug: heroes
+    - name: Heroes
+      translate: Герои
       description: "Создайте сцену на своей домашней странице с помощью героев с четкими призывами к действию."
-    - name: Функции
-      slug: features
+    - name: Features
+      translate: Функции
       description: "Объясните особенности, преимущества или другие детали Вашего маркетингового контента."
-    - name: Боковые панели
-      slug: sidebars
+    - name: Sidebars
+      translate: Боковые панели
       description: "Общие шаблоны навигации идеально подходят для макетов вне холста или нескольких столбцов."
-    - name: Футеры
-      slug: footers
+    - name: Footers
+      translate: Футеры
       description: "Завершите каждую страницу потрясающим нижним колонтитулом, большим или маленьким."
-    - name: Выпадающие списки
-      slug: dropdowns
+    - name: Dropdowns
+      translate: Выпадающие списки
       description: "Расширьте свои раскрывающиеся списки с помощью фильтров, иконок, настраиваемых стилей и многого другого."
-    - name: Список групп
-      slug: list-groups
+    - name: List groups
+      translate: Список групп
       description: "Расширяйте группы списков с помощью утилит и настраиваемых стилей для любого контента."
-    - name: Модалки
-      slug: modals
+    - name: Modals
+      translate: Модалки
       description: "Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов."
-    - name: Значки
-      slug: badges
+    - name: Badges
+      translate: Значки
       description: "Заставьте значки работать с пользовательским внутренним HTML и новым внешним видом."
-    - name: Хлебные крошки
-      slug: breadcrumbs
+    - name: Breadcrumbs
+      translate: Хлебные крошки
       description: "Интегрируйте пользовательские иконки и создавайте степперные компоненты."
-    - name: Кнопки
-      slug: buttons
+    - name: Buttons
+      translate: Кнопки
       description: "Создавайте настраиваемые кнопки практически для любого варианта использования с помощью утилит."
-    - name: Джамботроны
-      slug: jumbotrons
+    - name: Jumbotrons
+      translate: Джамботроны
       description: "Создавайте модернизированные версии классического компонента Bootstrap."
 
 - category: Пользовательские компоненты
-  slug: custom-components
   description: "Совершенно новые компоненты и шаблоны, которые помогут людям быстро начать работу с Bootstrap и продемонстрируют передовой опыт добавления в платформу."
   examples:
-    - name: Альбом
-      slug: album
+    - name: Album
+      translate: Альбом
       description: "Простой одностраничный шаблон для фотогалереи, портфолио и т.д."
-    - name: Ценообразование
-      slug: pricing
+    - name: Pricing
+      translate: Ценообразование
       description: "Пример страницы с ценами, созданной с помощью карточек, с настраиваемым верхним и нижним колонтитулами."
-    - name: Оформление заказа
-      slug: checkout
+    - name: Checkout
+      translate: Оформление заказа
       description: "Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки."
-    - name: Продукт
-      slug: product
+    - name: Product
+      translate: Продукт
       description: "Экономичная маркетинговая страница, ориентированная на продукт, с обширной сеткой и изображениями."
-    - name: Обложка
-      slug: cover
+    - name: Cover
+      translate: Обложка
       description: "Одностраничный шаблон для создания простых и красивых домашних страниц."
-    - name: Карусель
-      slug: carousel
+    - name: Carousel
+      translate: Карусель
       description: "Настройте панель навигации и карусель, а затем добавьте новые компоненты."
-    - name: Блог
-      slug: blog
+    - name: Blog
+      translate: Блог
       description: "Журнал как шаблон блога с заголовком, навигацией, избранным контентом."
-    - name: Панель
-      slug: dashboard
+    - name: Dashboard
+      translate: Панель
       description: "Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью."
-    - name: Форма входа
-      slug: sign-in
+    - name: Sign-in
+      translate: Форма входа
       description: "Индивидуальный макет и дизайн формы для простой формы входа."
-    - name: Закрепленный футер
-      slug: sticky-footer
+    - name: Sticky footer
+      translate: Закрепленный футер
       description: "Прикрепленный нижний колонтитул к нижней части области просмотра, когда содержимое страницы мало."
-    - name: Закрепленный футер и панель навигации
-      slug: sticky-footer-navbar
+    - name: Sticky footer navbar
+      translate: Закрепленный футер и панель навигации
       description: "Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации."
-    - name: Джамботрон
-      slug: jumbotron
+    - name: Jumbotron
+      translate: Джамботрон
       description: "Используйте утилиты для воссоздания и улучшения jumbotron Bootstrap 4."
 
 - category: Фреймворк
-  slug: framework
   description: "Примеры, которые сосредоточены на реализации использования встроенных компонентов, предоставляемых Bootstrap."
   examples:
-    - name: Стартовый шаблон
-      slug: starter-template
+    - name: "Starter template"
+      translate: Стартовый шаблон
       description: "Ничего, кроме простоты: скомпилированный CSS и JavaScript."
-    - name: Сетка
-      slug: grid
+    - name: Grid
+      translate: Сетка
       description: "Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д."
-    - name: Шпаргалка
-      slug: cheatsheet
+    - name: Cheatsheet
+      translate: Шпаргалка
       description: "Шпаргалка Bootstrap компонентов."
+    - name: Cheatsheet RTL
+      translate: Шпаргалка RTL
+      description: "Шпаргалка Bootstrap компонентов, RTL."
 
 - category: Панели навигации
-  slug: navbars
   description: "Взять компонент панели навигации по умолчанию и показать, как его можно перемещать, размещать и расширять."
   examples:
-    - name: Панели навигации
-      slug: navbars
+    - name: Navbars
+      translate: Панели навигации
       description: "Демонстрация всех адаптивных и контейнерных опций для навигационной панели."
-    - name: Панели навигации с offcanvas
-      slug: navbars-offcanvas
+    - name: Navbars offcanvas
+      translate: Панели навигации с offcanvas
       description: "То же, что и в примере с панелями навигации, но с нашим компонентом offcanvas."
-    - name: Статичная панель навигации
-      slug: navbar-static
+    - name: Navbar static
+      translate: Статичная панель навигации
       description: "Пример статической верхней панели навигации с одним дополнительным контентом."
-    - name: Фиксированная панель навигации
-      slug: navbar-fixed
+    - name: Navbar fixed
+      translate: Фиксированная панель навигации
       description: "Пример единой панели навигации с фиксированной верхней панелью навигации и некоторым дополнительным контентом."
-    - name: Нижняя панель навигации
-      slug: navbar-bottom
+    - name: Navbar bottom
+      translate: Нижняя панель навигации
       description: "Пример единой панели навигации с нижней панелью навигации и дополнительным контентом."
-    - name: Панель навигации вне холста
-      slug: offcanvas-navbar
+    - name: Offcanvas navbar
+      translate: Панель навигации вне холста
       description: "Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста)."
 
 - category: RTL
-  slug: rtl
   description: "Посмотрите, как работает RTL-версия Bootstrap с этими модифицированными примерами пользовательских компонентов."
   examples:
-    - name: Шпаргалка RTL
-      slug: cheatsheet-rtl
-      description: "Шпаргалка Bootstrap компонентов, RTL."
-    - name: Альбом RTL
-      slug: album-rtl
+    - name: Album RTL
+      translate: Альбом RTL
       description: "Простой одностраничный шаблон для фотогалерей, портфолио и т.д."
-    - name: Оформление заказа RTL
-      slug: checkout-rtl
+    - name: Checkout RTL
+      translate: Оформление заказа RTL
       description: "Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки."
-    - name: Карусель RTL
-      slug: carousel-rtl
+    - name: Carousel RTL
+      translate: Карусель RTL
       description: "Настройте панель навигации и карусель, а затем добавьте новые компоненты."
-    - name: Блог RTL
-      slug: blog-rtl
+    - name: Blog RTL
+      translate: Блог RTL
       description: "Журнал как шаблон блога с заголовком, навигацией, избранным контентом."
-    - name: Панель RTL
-      slug: dashboard-rtl
+    - name: Dashboard RTL
+      translate: Панель RTL
       description: "Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью."
 
 - category: Интеграции
-  slug: integrations
   description: "Интеграции с внешними библиотеками."
   examples:
-    - name: Masonry
-      slug: masonry
+    - name: "Masonry"
+      translate: Masonry
       description: "Объедините возможности сетки Bootstrap и макета Masonry."

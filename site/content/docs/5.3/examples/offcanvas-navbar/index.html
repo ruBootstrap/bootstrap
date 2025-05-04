@@ -1,6 +1,6 @@
 ---
 layout: examples
-title: Шаблон панели навигации Offcanvas Offcanvas
+title: Offcanvas navbar template
 extra_css:
   - "offcanvas-navbar.css"
 extra_js:
@@ -10,39 +10,39 @@ body_class: "bg-body-tertiary"
 aliases: "/docs/5.3/examples/offcanvas/"
 ---
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Главная навигация">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Панель навигации Offcanvas</a>
-    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Переключить навигацию">
+    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Панель</a>
+          <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Уведомления</a>
+          <a class="nav-link" href="#">Notifications</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Профиль</a>
+          <a class="nav-link" href="#">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Сменить аккаунт</a>
+          <a class="nav-link" href="#">Switch account</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Настройки</a>
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Действие</a></li>
-            <li><a class="dropdown-item" href="#">Другое действие</a></li>
-            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-        <button class="btn btn-outline-success" type="submit">Поиск</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -50,18 +50,18 @@ aliases: "/docs/5.3/examples/offcanvas/"
 
 <div class="nav-scroller bg-body shadow-sm">
   <nav class="nav" aria-label="Secondary navigation">
-    <a class="nav-link active" aria-current="page" href="#">Панель</a>
+    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
     <a class="nav-link" href="#">
-      Друзья
+      Friends
       <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
     </a>
-    <a class="nav-link" href="#">Обзор</a>
-    <a class="nav-link" href="#">Предложения</a>
-    <a class="nav-link" href="#">Ссылка</a>
-    <a class="nav-link" href="#">Ссылка</a>
-    <a class="nav-link" href="#">Ссылка</a>
-    <a class="nav-link" href="#">Ссылка</a>
-    <a class="nav-link" href="#">Ссылка</a>
+    <a class="nav-link" href="#">Explore</a>
+    <a class="nav-link" href="#">Suggestions</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
   </nav>
 </div>
 
@@ -70,46 +70,46 @@ aliases: "/docs/5.3/examples/offcanvas/"
     <img class="me-3" src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
     <div class="lh-1">
       <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
-      <small>С 2011 года</small>
+      <small>Since 2011</small>
     </div>
   </div>
 
   <div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h6 class="border-bottom pb-2 mb-0">Недавние обновления</h6>
+    <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
     <div class="d-flex text-body-secondary pt-3">
       {{< placeholder width="32" height="32" background="#007bff" color="#007bff" class="flex-shrink-0 me-2 rounded" >}}
       <p class="pb-3 mb-0 small lh-sm border-bottom">
         <strong class="d-block text-gray-dark">@username</strong>
-        Некоторый репрезентативный контент-заполнитель с некоторой информацией об этом пользователе. Представьте, что это какое-то обновление статуса, возможно?
+        Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
       </p>
     </div>
     <div class="d-flex text-body-secondary pt-3">
       {{< placeholder width="32" height="32" background="#e83e8c" color="#e83e8c" class="flex-shrink-0 me-2 rounded" >}}
       <p class="pb-3 mb-0 small lh-sm border-bottom">
         <strong class="d-block text-gray-dark">@username</strong>
-        Еще немного репрезентативного контента-заполнителя, связанного с этим другим пользователем. Возможно, еще одно обновление статуса.
+        Some more representative placeholder content, related to this other user. Another status update, perhaps.
       </p>
     </div>
     <div class="d-flex text-body-secondary pt-3">
       {{< placeholder width="32" height="32" background="#6f42c1" color="#6f42c1" class="flex-shrink-0 me-2 rounded" >}}
       <p class="pb-3 mb-0 small lh-sm border-bottom">
         <strong class="d-block text-gray-dark">@username</strong>
-        Этот пользователь также получает репрезентативный контент-заполнитель. Возможно, они сделали что-то интересное, и вам очень хочется это отметить в последних обновлениях.
+        This user also gets some representative placeholder content. Maybe they did something interesting, and you really want to highlight this in the recent updates.
       </p>
     </div>
     <small class="d-block text-end mt-3">
-      <a href="#">Все обновления</a>
+      <a href="#">All updates</a>
     </small>
   </div>
 
   <div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h6 class="border-bottom pb-2 mb-0">Предложения</h6>
+    <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>
     <div class="d-flex text-body-secondary pt-3">
       {{< placeholder width="32" height="32" background="#007bff" color="#007bff" class="flex-shrink-0 me-2 rounded" >}}
       <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
         <div class="d-flex justify-content-between">
-          <strong class="text-gray-dark">ФИО</strong>
-          <a href="#">Подписаться</a>
+          <strong class="text-gray-dark">Full Name</strong>
+          <a href="#">Follow</a>
         </div>
         <span class="d-block">@username</span>
       </div>
@@ -118,8 +118,8 @@ aliases: "/docs/5.3/examples/offcanvas/"
       {{< placeholder width="32" height="32" background="#007bff" color="#007bff" class="flex-shrink-0 me-2 rounded" >}}
       <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
         <div class="d-flex justify-content-between">
-          <strong class="text-gray-dark">ФИО</strong>
-          <a href="#">Подписаться</a>
+          <strong class="text-gray-dark">Full Name</strong>
+          <a href="#">Follow</a>
         </div>
         <span class="d-block">@username</span>
       </div>
@@ -128,14 +128,14 @@ aliases: "/docs/5.3/examples/offcanvas/"
       {{< placeholder width="32" height="32" background="#007bff" color="#007bff" class="flex-shrink-0 me-2 rounded" >}}
       <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
         <div class="d-flex justify-content-between">
-          <strong class="text-gray-dark">ФИО</strong>
-          <a href="#">Подписаться</a>
+          <strong class="text-gray-dark">Full Name</strong>
+          <a href="#">Follow</a>
         </div>
         <span class="d-block">@username</span>
       </div>
     </div>
     <small class="d-block text-end mt-3">
-      <a href="#">Все предложения</a>
+      <a href="#">All suggestions</a>
     </small>
   </div>
 </main>

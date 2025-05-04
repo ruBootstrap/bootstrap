@@ -19,7 +19,7 @@
           <div>
             <h3 class="h5 mb-1">
               <a class="d-block link-offset-1" href="{{ urls.JoinPath $.Site.Params.github_org $example.url }}" target="_blank" rel="noopener" id="starter-{{ $i }}">
-                {{ $example.name }}
+                {{ $example.translate }}
               </a>
             </h3>
             <p class="text-body-secondary">{{ $example.description }}</p>
@@ -51,7 +51,7 @@
                  loading="lazy">
             {{- end }}
             <h3 class="h5 mb-1">
-              {{ $example.name }}
+              {{ $example.translate }}
             </h3>
           </a>
           <p class="text-body-secondary">{{ $example.description }}</p>
