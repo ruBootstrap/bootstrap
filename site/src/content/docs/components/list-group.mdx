@@ -1,0 +1,448 @@
+---
+title: Группы списков
+description: Группы списков — это гибкий и мощный компонент для отображения серии контента. Измените и расширьте их для поддержки практически любого контента внутри.
+toc: true
+---
+
+import { getData } from '@libs/data'
+
+## Простой пример
+
+Самая основная группа списков - это неупорядоченный список с элементами списка и соответствующими классами. Развивайте его, используя следующие параметры или собственный CSS, если необходимо.
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>`} />
+
+## Активные элементы
+
+Добавьте `.active` к `.list-group-item`, чтобы указать текущий активный выбор.
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item active" aria-current="true">An active item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>`} />
+
+## Ссылки и кнопки
+
+Используйте `<a>` или `<button>` для создания _действенных_ элементов групп списков с состояниями наведения, отключения и активности путем добавления `.list-group-item-action`. Мы разделяем эти псевдоклассы, чтобы гарантировать, что группы списков, состоящие из неинтерактивных элементов (таких как `<li>` или `<div>`), не предоставляют возможности щелчка или нажатия.
+
+Сделайте экземпляры `.list-group-item-action` _отключенными, добавив `.disabled` и `aria-disabled="true"`, чтобы информировать вспомогательные технологии о том, что элемент отключен. Вам может потребоваться дополнительный JavaScript для полного отключения ссылок и кнопок.
+
+Обязательно **не используйте здесь стандартные классы `.btn`**.
+
+<Example code={`<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      The current link item
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    <a href="#" class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+  </div>`} />
+
+С `<button>`s вы также можете использовать атрибут `disabled` вместо класса `.disabled`. К сожалению, `<a>`s не поддерживают атрибут disabled.
+
+<Example code={`<div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+      The current button
+    </button>
+    <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+    <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+    <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+    <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+  </div>`} />
+
+## Поток
+
+Добавьте `.list-group-flush`, чтобы удалить некоторые границы и закругленные углы для рендеринга элементов группы списков от края до края в родительском контейнере (например, карточки).
+
+<Example code={`<ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>`} />
+
+## Пронумерованный
+
+Добавьте класс модификатора `.list-group-numbered` (и, при необходимости, используйте элемент `<ol>`), чтобы выбрать элементы группы нумерованных списков. Числа генерируются с помощью CSS (в отличие от стиля браузера по умолчанию для `<ol>`) для лучшего размещения внутри элементов группы списков и для лучшей настройки.
+
+Числа генерируются с помощью `counter-reset` в `<ol>`, а затем стилируются и помещаются с помощью псевдоэлемента `::before` в `<li>` с помощью `counter-increment` и `content`.
+
+<Example code={`<ol class="list-group list-group-numbered">
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item">A list item</li>
+    <li class="list-group-item">A list item</li>
+  </ol>`} />
+
+Они также отлично работают с настраиваемым контентом.
+
+<Example code={`<ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Subheading</div>
+        Content for list item
+      </div>
+      <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Subheading</div>
+        Content for list item
+      </div>
+      <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Subheading</div>
+        Content for list item
+      </div>
+      <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+  </ol>`} />
+
+## По горизонтали
+
+Добавьте `.list-group-horizontal`, чтобы изменить расположение элементов группы списка с вертикального на горизонтальное по всем контрольным точкам. В качестве альтернативы выберите адаптивный вариант `.list-group-horizontal-{sm|md|lg|xl|xxl}`, чтобы сделать группу списка горизонтальной, начиная с `min-width` этой контрольной точки. В настоящее время **горизонтальные группы списков не могут быть объединены с группами списков с выравниванием.**
+
+**Совет:** Хотите элементы группы списков одинаковой ширины в горизонтальном положении? Добавьте `.flex-fill` к каждому элементу группы списка.
+
+<Example code={getData('breakpoints').map((breakpoint) => `<ul class="list-group list-group-horizontal${breakpoint.abbr}">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>`)} />
+
+## Варианты
+
+<Callout>
+**Внимание!** Начиная с версии 5.3.0, миксин `list-group-item-variant()` Sass устарел. Варианты элементов групп списков теперь имеют свои переменные CSS, переопределяемые в [цикле Sass](#sass-loops).
+</Callout>
+
+Используйте контекстные классы для стилизации элементов списка с фоном и цветом с отслеживанием состояния.
+
+<Example code={[
+    `<ul class="list-group">
+    <li class="list-group-item">A simple default list group item</li>
+    `,
+    ...getData('theme-colors').map((themeColor) => `  <li class="list-group-item list-group-item-${themeColor.name}">A simple ${themeColor.name} list group item</li>`),
+    `</ul>`
+  ]} />
+
+### Для ссылок и кнопок
+
+Контекстные классы также работают с `.list-group-item-action` для элементов `<a>` и `<button>`. Обратите внимание на добавление здесь стилей наведения, отсутствующих в предыдущем примере. Также поддерживается состояние `.active`; примените его, чтобы указать активный выбор в элементе группы контекстного списка.
+
+<Example code={[
+    `<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+    `,
+    ...getData('theme-colors').map((themeColor) => `  <a href="#" class="list-group-item list-group-item-action list-group-item-${themeColor.name}">A simple ${themeColor.name} list group item</a>`),
+    `</div>`
+  ]} />
+
+<Callout name="warning-color-assistive-technologies" />
+
+## Со значками
+
+Добавьте значки к любому элементу группы списков, чтобы отобразить количество непрочитанных сообщений, активность и многое другое с помощью некоторых [утилит]([[docsref:/utilities/flex]]).
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A list item
+      <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A second list item
+      <span class="badge text-bg-primary rounded-pill">2</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A third list item
+      <span class="badge text-bg-primary rounded-pill">1</span>
+    </li>
+  </ul>`} />
+
+## Пользовательский контент
+
+Добавьте практически любой HTML-код, даже для групп связанных списков, таких как приведенный ниже, с помощью [утилит flexbox]([[docsref:/utilities/flex]]).
+
+<Example code={`<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small>3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small>And some small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small class="text-body-secondary">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-body-secondary">And some muted small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small class="text-body-secondary">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-body-secondary">And some muted small print.</small>
+    </a>
+  </div>`} />
+
+## Флажки и радио
+
+Разместите флажки и радиокнопки Bootstrap внутри элементов групп списков и настройте их по мере необходимости. Вы можете использовать их без `<label>`, но не забудьте включить атрибут `aria-label` и значение для доступности.
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+      <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+      <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+      <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+    </li>
+  </ul>`} />
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+      <label class="form-check-label" for="firstRadio">First radio</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+      <label class="form-check-label" for="secondRadio">Second radio</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+      <label class="form-check-label" for="thirdRadio">Third radio</label>
+    </li>
+  </ul>`} />
+
+Вы можете использовать `.stretched-link` для `<label>`, чтобы сделать кликабельным весь элемент группы списка.
+
+<Example code={`<ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+      <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+      <label class="form-check-label stretched-link" for="secondCheckboxStretched">Second checkbox</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+      <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Third checkbox</label>
+    </li>
+  </ul>`} />
+
+## CSS
+
+### Переменные
+
+<AddedIn version="5.2.0" />
+
+В рамках развивающегося подхода Bootstrap к CSS-переменным группы списков теперь используют локальные CSS-переменные в `.list-group` для улучшенной настройки в реальном времени. Значения для CSS-переменных устанавливаются через Sass, поэтому настройка Sass также по-прежнему поддерживается.
+
+<ScssDocs name="list-group-css-vars" file="scss/_list-group.scss" />
+
+### Sass переменные
+
+<ScssDocs name="list-group-variables" file="scss/_variables.scss" />
+
+### Sass миксины
+
+<DeprecatedIn version="5.3.0" />
+
+<ScssDocs name="list-group-mixin" file="scss/mixins/_list-group.scss" />
+
+### Sass циклы
+
+Цикл, который генерирует классы модификаторов с переопределением переменных CSS.
+
+<ScssDocs name="list-group-modifiers" file="scss/_list-group.scss" />
+
+## Поведение JavaScript
+
+Используйте плагин вкладок JavaScript - включите его отдельно или через скомпилированный файл `bootstrap.js` - чтобы расширить нашу группу списков для создания вкладок локального контента.
+
+<div class="bd-example" role="tabpanel">
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Главной". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
+        </div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Профилю". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
+        </div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Сообщению". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
+        </div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+          <p>Некоторое содержимое-заполнитель в абзаце, относящемся к "Настройке". И еще немного контента, используемого здесь только для заполнения и заполнения этой панели вкладок. В производственной среде у вас, очевидно, будет больше реального контента. И не только текст. На самом деле это могло быть что угодно. Текст, изображения, формы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Главная</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Профиль</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Сообщения</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Настройки</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+    </div>
+  </div>
+</div>
+```
+
+### Использование атрибутов данных
+
+Вы можете активировать навигацию по группам списков без написания кода JavaScript, просто указав `data-bs-toggle="list"` или на элементе. Используйте эти атрибуты данных в `.list-group-item`.
+
+```html
+<div role="tabpanel">
+  <!-- Группа списка -->
+  <div class="list-group" id="myList" role="tablist">
+    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Главная</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Профиль</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Сообщения</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Настройки</a>
+  </div>
+
+<!-- Панели вкладок -->
+  <div div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel">...</div>
+    <div class="tab-pane" id="profile" role="tabpanel">...</div>
+    <div class="tab-pane" id="messages" role="tabpanel">...</div>
+    <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  </div>
+</div>
+```
+
+### Через JavaScript
+
+Включите элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):
+
+```js
+const triggerTabList = document.querySelectorAll('#myTab a')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+```
+
+Вы можете активировать отдельный элемент списка несколькими способами:
+
+```js
+const triggerEl = document.querySelector('#myTab a[href="#profile"]')
+bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+
+const triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
+bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+```
+
+### Эффект затухания
+
+Чтобы панель вкладок постепенно увеличивалась, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
+
+```html
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="home" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="messages" role="tabpanel">...</div>
+  <div class="tab-pane fade" id="settings" role="tabpanel">...</div>
+</div>
+```
+
+### Методы
+
+<Callout name="danger-async-methods" type="danger" />
+
+Активирует ваш контент как элемент вкладки.
+
+Вы можете создать экземпляр вкладки с помощью конструктора, например:
+
+```js
+const bsTab = new bootstrap.Tab('#myTab')
+```
+
+<BsTable>
+| Метод | Описание |
+| --- | --- |
+| `dispose` | Уничтожает вкладку элемента. |
+| `getInstance` | Статический метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM. Его можно использовать следующим образом: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Статический метод, возвращающий экземпляр вкладки, связанный с элементом DOM, или создающий новый, если он не был инициализирован. Его можно использовать следующим образом: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Выбирает указанную вкладку и показывает связанную с ней панель. Любая другая вкладка, которая была выбрана ранее, становится невыбранной, а связанная с ней панель скрывается. **Возвращает вызывающему объекту до того, как панель вкладок будет фактически показана** (т. е. до того, как произойдет событие `shown.bs.tab`). |
+</BsTable>
+
+### События
+
+При отображении новой вкладки события запускаются в следующем порядке:
+
+1. `hide.bs.tab` (на текущей активной вкладке)
+2. `show.bs.tab` (на вкладке для показа)
+3. `hidden.bs.tab` (на предыдущей активной вкладке такая же, как для события `hide.bs.tab`)
+4. `shown.bs.tab` (на только что активированной вкладке, такой же, как для события `show.bs.tab`)
+
+Если ни одна вкладка еще не была активной, то события `hide.bs.tab` и `hidden.bs.tab` не будут запущены.
+
+<BsTable>
+| Тип события | Описание |
+| --- | --- |
+| `hide.bs.tab` | Это событие срабатывает, когда должна быть показана новая вкладка (и, таким образом, предыдущая активная вкладка должна быть скрыта). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на текущую активную вкладку и новую вкладку, которая скоро станет активной, соответственно. |
+| `hidden.bs.tab` | Это событие срабатывает после показа новой вкладки (и, таким образом, предыдущая активная вкладка скрывается). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на предыдущую активную вкладку и новую активную вкладку, соответственно. |
+| `show.bs.tab` | Это событие срабатывает при показе вкладки, но до показа новой вкладки. Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
+| `shown.bs.tab` | Это событие срабатывает при показе вкладки после показа вкладки. Используйте `event.target` и `event.relatedTarget` для нацеливания на активную вкладку и предыдущую активную вкладку (если доступно) соответственно.
+</BsTable>
+
+```js
+const tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
+tabElms.forEach(tabElm => {
+  tabElm.addEventListener('shown.bs.tab', event => {
+    event.target // newly activated tab
+    event.relatedTarget // previous active tab
+  })
+})
+```

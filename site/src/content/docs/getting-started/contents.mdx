@@ -1,0 +1,111 @@
+---
+title: Содержимое
+description: Узнайте, что включено в Bootstrap, в том числе наши варианты предварительно скомпилированного и исходного кода.
+toc: true
+
+# TODO: possible to replace the tree by something like https://docs.astro.build/en/guides/content-collections/#what-are-content-collections?
+---
+
+## Скомпилированный Bootstrap
+
+После загрузки разархивируйте сжатую папку, и вы увидите что-то вроде этого:
+
+{/* ПРИМЕЧАНИЕ: эта информация намеренно дублируется в README. Скопируйте любые изменения, сделанные здесь, в README, но не забудьте добавить папку `dist`. */
+
+```text
+bootstrap/
+├── css/
+│   ├── bootstrap-grid.css
+│   ├── bootstrap-grid.css.map
+│   ├── bootstrap-grid.min.css
+│   ├── bootstrap-grid.min.css.map
+│   ├── bootstrap-grid.rtl.css
+│   ├── bootstrap-grid.rtl.css.map
+│   ├── bootstrap-grid.rtl.min.css
+│   ├── bootstrap-grid.rtl.min.css.map
+│   ├── bootstrap-reboot.css
+│   ├── bootstrap-reboot.css.map
+│   ├── bootstrap-reboot.min.css
+│   ├── bootstrap-reboot.min.css.map
+│   ├── bootstrap-reboot.rtl.css
+│   ├── bootstrap-reboot.rtl.css.map
+│   ├── bootstrap-reboot.rtl.min.css
+│   ├── bootstrap-reboot.rtl.min.css.map
+│   ├── bootstrap-utilities.css
+│   ├── bootstrap-utilities.css.map
+│   ├── bootstrap-utilities.min.css
+│   ├── bootstrap-utilities.min.css.map
+│   ├── bootstrap-utilities.rtl.css
+│   ├── bootstrap-utilities.rtl.css.map
+│   ├── bootstrap-utilities.rtl.min.css
+│   ├── bootstrap-utilities.rtl.min.css.map
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min.css.map
+│   ├── bootstrap.rtl.css
+│   ├── bootstrap.rtl.css.map
+│   ├── bootstrap.rtl.min.css
+│   └── bootstrap.rtl.min.css.map
+└── js/
+    ├── bootstrap.bundle.js
+    ├── bootstrap.bundle.js.map
+    ├── bootstrap.bundle.min.js
+    ├── bootstrap.bundle.min.js.map
+    ├── bootstrap.esm.js
+    ├── bootstrap.esm.js.map
+    ├── bootstrap.esm.min.js
+    ├── bootstrap.esm.min.js.map
+    ├── bootstrap.js
+    ├── bootstrap.js.map
+    ├── bootstrap.min.js
+    └── bootstrap.min.js.map
+```
+
+Это самая базовая форма Bootstrap: скомпилированные файлы для быстрого использования практически в любом веб-проекте. Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://web.dev/articles/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика определенных браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минимизированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/docs/v2/).
+
+### Файлы CSS
+
+Bootstrap включает несколько вариантов для включения некоторых или всего нашего скомпилированного CSS.
+
+<BsTable class="table">
+| CSS файлы | Макет | Контент | Компоненты | Утилиты |
+| --- | --- | --- | --- | --- |
+| `bootstrap.css`<br/> `bootstrap.min.css`<br/> `bootstrap.rtl.css`<br/> `bootstrap.rtl.min.css` | Included | Included | Included | Included |
+| `bootstrap-grid.css`<br/> `bootstrap-grid.rtl.css`<br/> `bootstrap-grid.min.css`<br/> `bootstrap-grid.rtl.min.css` | [Only grid system]([[docsref:/layout/grid]]) | — | — | [Only flex utilities]([[docsref:/utilities/flex]]) |
+| `bootstrap-utilities.css`<br/> `bootstrap-utilities.rtl.css`<br/> `bootstrap-utilities.min.css`<br/> `bootstrap-utilities.rtl.min.css` | — | — | — | Included |
+| `bootstrap-reboot.css`<br/> `bootstrap-reboot.rtl.css`<br/> `bootstrap-reboot.min.css`<br/> `bootstrap-reboot.rtl.min.css` | — | [Only Reboot]([[docsref:/content/reboot]]) | — | — |
+</BsTable>
+
+### Файлы JS
+
+Точно так же у нас есть варианты для включения части или всего нашего скомпилированного JavaScript.
+
+<BsTable class="table">
+| JS файлы | Popper |
+| --- | --- |
+| `bootstrap.bundle.js`<br/> `bootstrap.bundle.min.js`<br/> | Included |
+| `bootstrap.js`<br/> `bootstrap.min.js`<br/> | – |
+</BsTable>
+
+## Исходный код Bootstrap
+
+Загрузка исходного кода Bootstrap включает скомпилированные ресурсы CSS и JavaScript, а также исходный код Sass, JavaScript и документацию. В частности, он включает в себя следующее и многое другое:
+
+```text
+bootstrap/
+├── dist/
+│   ├── css/
+│   └── js/
+├── site/
+│   └──content/
+│      └── docs/
+│          └── [[config:docs_version]]/
+│              └── examples/
+├── js/
+└── scss/
+```
+
+`scss/` и `js/` — это исходный код для нашего CSS и JavaScript. Папка `dist/` включает в себя все, что указано в скомпилированном разделе загрузки выше. Папка `site/content/docs/` содержит исходный код нашей размещенной документации, включая наши живые примеры использования Bootstrap.
+
+Помимо этого, любой другой включенный файл обеспечивает поддержку пакетов, информацию о лицензии и разработку.

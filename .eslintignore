@@ -2,8 +2,8 @@
 **/dist/
 **/vendor/
 /_site/
-/_gh_pages/
-/_www/
+/site/public/
 /js/coverage/
 /site/static/sw.js
+/site/static/docs/**/assets/sw.js
 /site/layouts/partials/

@@ -1,0 +1,49 @@
+---
+title: Float
+description: Переключайте поплавки на любом элементе, через любую точку останова, используя наши адаптивные утилиты float.
+toc: true
+---
+
+import { getData } from '@libs/data'
+
+## Обзор
+
+Эти служебные классы перемещают элемент влево или вправо или отключают плавающее положение в зависимости от текущего размера области просмотра с помощью [свойства CSS `float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` включен, чтобы избежать проблем со специфичностью. Они используют те же контрольные точки области просмотра, что и наша сеточная система. Имейте в виду, что плавающие утилиты не влияют на гибкие элементы.
+
+<Example code={`<div class="float-start">Float start on all viewport sizes</div><br>
+<div class="float-end">Float end on all viewport sizes</div><br>
+<div class="float-none">Don’t float on all viewport sizes</div>`} />
+
+Используйте [clearfix helper]([[docsref:/helpers/clearfix]]) для родительского элемента, чтобы очистить плавающие элементы.
+
+## Отзывчивость
+
+Адаптивные варианты также существуют для каждого значения `float`.
+
+<Example code={`<div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
+<div class="float-md-end">Float end on viewports sized MD (medium) or wider</div><br>
+<div class="float-lg-end">Float end on viewports sized LG (large) or wider</div><br>
+<div class="float-xl-end">Float end on viewports sized XL (extra large) or wider</div><br>
+<div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br>`} />
+
+Вот все поддерживаемые классы:
+
+<ul>
+{getData('breakpoints').map((breakpoint) => {
+  return (
+    <Fragment>
+      <li><code>.float{breakpoint.abbr}-start</code></li>
+      <li><code>.float{breakpoint.abbr}-end</code></li>
+      <li><code>.float{breakpoint.abbr}-none</code></li>
+    </Fragment>
+  )
+})}
+</ul>
+
+## CSS
+
+### Sass API утилиты
+
+Утилиты Float объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-float" file="scss/_utilities.scss" />

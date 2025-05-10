@@ -1,0 +1,260 @@
+---
+title: Типография
+description: Документация и примеры типографики Bootstrap, включая глобальные настройки, заголовки, основной текст, списки и т.д.
+toc: true
+---
+
+## Глобальные настройки
+
+Bootstrap устанавливает базовые глобальные стили отображения, типографики и ссылок. Если требуется больше контроля, ознакомьтесь с [текстовыми служебными классами]([[docsref:/utilities/text]]).
+
+- Используйте [стек собственных шрифтов]([[docsref:/content/reboot#native-font-stack]]), который выбирает лучшее `font-family` для каждой ОС и устройства.
+- Для более инклюзивной и доступной шкалы шрифтов мы используем корневой размер браузера по умолчанию `font-size` (обычно 16 пикселей), чтобы посетители могли настраивать параметры браузера по умолчанию по мере необходимости.
+- Используйте атрибуты `$font-family-base`, `$font-size-base` и `$line-height-base` в качестве нашей типографской базы, применяемой к `<body>`.
+- Установите глобальный цвет ссылки с помощью `$link-color`.
+- Используйте `$body-bg`, чтобы задать `background-color` для `<body>` (`#fff` по умолчанию).
+
+Эти стили можно найти в `_reboot.scss`, а глобальные переменные определены в `_variables.scss`. Не забудьте установить `$font-size-base` в `rem`.
+
+## Заголовки
+
+Доступны все заголовки HTML, от `<h1>` до `<h6>`.
+
+<BsTable>
+| Заголовок | Пример |
+| --- | --- |
+| `<h1></h1>` | <span class="h1">h1. Заголовок Bootstrap</span> |
+| `<h2></h2>` | <span class="h2">h2. Заголовок Bootstrap</span> |
+| `<h3></h3>` | <span class="h3">h3. Заголовок Bootstrap</span> |
+| `<h4></h4>` | <span class="h4">h4. Заголовок Bootstrap</span> |
+| `<h5></h5>` | <span class="h5">h5. Заголовок Bootstrap</span> |
+| `<h6></h6>` | <span class="h6">h6. Заголовок Bootstrap</span> |
+</BsTable>
+
+```html
+<h1>h1. Заголовок Bootstrap</h1>
+<h2>h2. Заголовок Bootstrap</h2>
+<h3>h3. Заголовок Bootstrap</h3>
+<h4>h4. Заголовок Bootstrap</h4>
+<h5>h5. Заголовок Bootstrap</h5>
+<h6>h6. Заголовок Bootstrap</h6>
+```
+
+Также доступны классы от `.h1` до `.h6`, когда Вы хотите соответствовать стилю шрифта заголовка, но не можете использовать связанный элемент HTML.
+
+<Example code={`<p class="h1">h1. Заголовок Bootstrap</p>
+<p class="h2">h2. Заголовок Bootstrap</p>
+<p class="h3">h3. Заголовок Bootstrap</p>
+<p class="h4">h4. Заголовок Bootstrap</p>
+<p class="h5">h5. Заголовок Bootstrap</p>
+<p class="h6">h6. Заголовок Bootstrap</p>`} />
+
+### Настройка заголовков
+
+Используйте включенные служебные классы, чтобы воссоздать небольшой текст вторичного заголовка из Bootstrap 3.
+
+<Example code={`<h3>
+    Необычный заголовок
+    <small class="text-body-secondary">С выцветшим вторичным текстом</small>
+  </h3>`} />
+
+## Отображение заголовков
+
+Традиционные элементы заголовка лучше всего подходят для содержания Вашей страницы. Если Вам нужен заголовок, чтобы выделиться, подумайте об использовании **отображаемого заголовка** более крупного, немного более самоуверенного стиля заголовка.
+
+<div class="bd-example">
+  <div class="display-1 pb-3 mb-3 border-bottom">Отображение 1</div>
+  <div class="display-2 pb-3 mb-3 border-bottom">Отображение 2</div>
+  <div class="display-3 pb-3 mb-3 border-bottom">Отображение 3</div>
+  <div class="display-4 pb-3 mb-3 border-bottom">Отображение 4</div>
+  <div class="display-5 pb-3 mb-3 border-bottom">Отображение 5</div>
+  <div class="display-6">Отображение 6</div>
+</div>
+
+```html
+<h1 class="display-1">Отображение 1</h1>
+<h1 class="display-2">Отображение 2</h1>
+<h1 class="display-3">Отображение 3</h1>
+<h1 class="display-4">Отображение 4</h1>
+<h1 class="display-5">Отображение 5</h1>
+<h1 class="display-6">Отображение 6</h1>
+```
+
+Отображаемые заголовки настраиваются с помощью карты Sass `$display-font-sizes` и двух переменных: `$display-font-weight` и `$display-line-height`.
+
+Заголовки дисплея настраиваются с помощью двух переменных: `$display-font-family` и `$display-font-style`.
+
+<ScssDocs name="display-headings" file="scss/_variables.scss" />
+
+## Ведущий
+
+Выделите абзац, добавив `.lead`.
+
+<Example code={`<p class="lead">
+    Это лид-абзац. Он выделяется среди обычных абзацев.
+  </p>`} />
+
+## Строчные текстовые элементы
+
+Стили для общих строчных элементов HTML5.
+
+<Example code={`<p>Вы можете использовать тег mark, чтобы <mark>выделить</mark> текст.</p>
+<p><del>Эта строка текста должна рассматриваться как удаленный текст.</del></p>
+<p><s>Эта строка текста должна рассматриваться как более неточный.</s></p>
+<p><ins>Эта строка текста должна рассматриваться как дополнение к документу.</ins></p>
+<p><u>Эта строка текста будет отображаться как подчеркнутая.</u></p>
+<p><small>Эта строка текста должна рассматриваться как мелкий шрифт.</small></p>
+<p><strong>Эта строка отображается как жирный текст.</strong></p>
+<p><em>Эта строка отображается как курсивный текст.</em></p>`} />
+
+Помните, что эти теги следует использовать в семантических целях:
+
+- `<mark>` представляет текст, который отмечен или выделен для справки или обозначений.
+- `<small>` представляет собой комментарии и мелкий шрифт, например текст об авторских правах и юридический текст.
+- `<s>` представляет элемент, который больше не актуален или не точен.
+- `<u>` представляет собой диапазон строчного текста, который должен отображаться таким образом, чтобы указывать на то, что он имеет нетекстовую аннотацию.
+
+Если Вы хотите стилизовать свой текст, Вы должны вместо этого использовать следующие классы:
+
+- `.mark` будут применять те же стили, что и `<mark>`.
+- `.small` будут применять те же стили, что и `<small>`.
+- `.text-decoration-underline` будут применять те же стили, что и `<u>`.
+- `.text-decoration-line-through` будут применять те же стили, что и `<s>`.
+
+Хотя это не показано выше, Вы можете свободно использовать `<b>` и `<i>` в HTML5. `<b>` предназначен для выделения слов или фраз без придания дополнительной важности, в то время как `<i>` в основном используется для озвучивания, технических терминов и т.д.
+
+## Текстовые утилиты
+
+Измените выравнивание текста, его преобразование, стиль, толщину, высоту строки, оформление и цвет с помощью наших [текстовых утилит]([[docsref:/utilities/text]]) и [цветовых утилит]([[docsref:/utilities/colors]]).
+
+## Аббревиатуры
+
+Стилизованная реализация элемента HTML `<abbr>` для аббревиатур и сокращений, чтобы показать развернутую версию при наведении. Аббревиатуры имеют подчеркивание по умолчанию и получают курсор справки для предоставления дополнительного контекста при наведении и для пользователей вспомогательных технологий.
+
+Добавьте к аббревиатуре `.initialism`, чтобы уменьшить размер шрифта.
+
+<Example code={`<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>`} />
+
+## Цитаты
+
+Для цитирования блоков контента из другого источника в вашем документе. Оберните `<blockquote class="blockquote">` вокруг любого HTML в качестве цитаты.
+
+<Example code={`<blockquote class="blockquote">
+    <p>Известная цитата, содержащаяся в элементе цитаты.</p>
+  </blockquote>`} />
+
+### Название источника
+
+Спецификация HTML требует, чтобы атрибуция цитаты размещалась за пределами `<blockquote>`. При указании авторства оберните Ваш `<blockquote>` в `<figure>` и используйте `<figcaption>` или элемент уровня блока (например, `<p>`) с классом `.blockquote-footer`. Не забудьте также заключить название исходной работы в `<cite>`.
+
+<Example code={`<figure>
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>`} />
+
+### Выравнивание
+
+При необходимости используйте текстовые утилиты, чтобы изменить выравнивание цитаты.
+
+<Example code={`<figure class="text-center">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>`} />
+
+<Example code={`<figure class="text-end">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>`} />
+
+## Списки
+
+### Без стиля
+
+Удалите по умолчанию `list-style` и левое поле для элементов списка (только непосредственные дочерние элементы). **Это применимо только к непосредственным дочерним элементам списка**, то есть Вам нужно будет добавить класс также для любых вложенных списков.
+
+<Example code={`<ul class="list-unstyled">
+    <li>This is a list.</li>
+    <li>It appears completely unstyled.</li>
+    <li>Structurally, it’s still a list.</li>
+    <li>However, this style only applies to immediate child elements.</li>
+    <li>Nested lists:
+      <ul>
+        <li>are unaffected by this style</li>
+        <li>will still show a bullet</li>
+        <li>and have appropriate left margin</li>
+      </ul>
+    </li>
+    <li>This may still come in handy in some situations.</li>
+  </ul>`} />
+
+### В линию
+
+Удалите маркеры списка и примените небольшие `margin` с помощью комбинации двух классов, `.list-inline` и `.list-inline-item`.
+
+<Example code={`<ul class="list-inline">
+    <li class="list-inline-item">This is a list item.</li>
+    <li class="list-inline-item">And another one.</li>
+    <li class="list-inline-item">But they’re displayed inline.</li>
+  </ul>`} />
+
+### Выравнивание списка описаний
+
+Выровняйте термины и описания по горизонтали, используя предопределенные классы нашей системы сеток (или семантические миксины). Для более длинных терминов вы можете по желанию добавить класс `.text-truncate`, чтобы обрезать текст многоточием.
+
+<Example code={`<dl class="row">
+    <dt class="col-sm-3">Description lists</dt>
+    <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+    <dt class="col-sm-3">Term</dt>
+    <dd class="col-sm-9">
+      <p>Definition for the term.</p>
+      <p>And some more placeholder definition text.</p>
+    </dd>
+
+    <dt class="col-sm-3">Another term</dt>
+    <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+    <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+    <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+    <dt class="col-sm-3">Nesting</dt>
+    <dd class="col-sm-9">
+      <dl class="row">
+        <dt class="col-sm-4">Nested definition list</dt>
+        <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+      </dl>
+    </dd>
+  </dl>`} />
+
+## Размеры адаптивного шрифта
+
+В Bootstrap 5 мы включили адаптивные размеры шрифтов по умолчанию, что позволяет тексту масштабироваться более естественно в зависимости от размера устройства и области просмотра. Посмотрите [страницу RFS]([[docsref:/getting-started/rfs]]), чтобы узнать, как это работает.
+
+## CSS
+
+### Sass переменные
+
+В заголовках есть несколько переменных, определяющих размер и интервал.
+
+<ScssDocs name="headings-variables" file="scss/_variables.scss" />
+
+Различные элементы типографики, рассматриваемые здесь и в [Перезагрузке]([[docsref:/content/reboot]]), также имеют выделенные переменные.
+
+<ScssDocs name="type-variables" file="scss/_variables.scss" />
+
+### Sass миксины
+
+Специальных миксинов для типографики нет, но Bootstrap использует [Responsive Font Sizing (RFS)]([[docsref:/getting-started/rfs]]).

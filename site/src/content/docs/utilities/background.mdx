@@ -1,0 +1,137 @@
+---
+title: Фон
+description: Передайте смысл с помощью `background-color` и добавьте украшения с помощью градиентов.
+toc: true
+---
+
+import { getData } from '@libs/data'
+
+<Callout name="warning-color-assistive-technologies" />
+
+## Фоновый цвет
+
+Подобно контекстным классам цвета текста, установите фон элемента для любого контекстного класса. Фоновые утилиты **не устанавливают `color`**, поэтому в некоторых случаях вам понадобится использовать `.text-*` [color utilities]([[docsref:/utilities/colors]]).
+
+<Callout>
+Фоновые утилиты, такие как `.bg-*`, которые сгенерированы из нашей оригинальной карты Sass `$theme-colors`, пока не реагируют на цветовые режимы, однако любая утилита `.bg-*-subtle` будет реагировать. Это будет решено в v6.
+</Callout>
+
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<div class="p-3 mb-2 bg-${themeColor.name} ${themeColor.contrast_color ? `text-${themeColor.contrast_color}` : `text-white`}">.bg-${themeColor.name}</div>
+<div class="p-3 mb-2 bg-${themeColor.name}-subtle text-${themeColor.name}-emphasis">.bg-${themeColor.name}-subtle</div>`),
+  `<div class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</div>
+<div class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</div>
+<div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+<div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-body">.bg-transparent</div>`
+]} />
+
+## Фоновый градиент
+
+При добавлении класса `.bg-gradient`, линейный градиент добавляется как фоновое изображение к фону. Этот градиент начинается с полупрозрачного белого цвета, который постепенно исчезает к низу.
+
+Вам нужен градиент в вашем собственном CSS? Просто добавьте `background-image: var(--bs-gradient);`.
+
+{getData('theme-colors').map((themeColor) => {
+  return (
+    <div class={`p-3 mb-2 bg-${themeColor.name} bg-gradient${themeColor.contrast_color ? (' text-' + themeColor.contrast_color) : ' text-white'}`}>.bg-{themeColor.name}.bg-gradient</div>
+  )
+})}
+<div class="p-3 mb-2 bg-black bg-gradient text-white">.bg-black.bg-gradient</div>
+
+## Непрозрачность
+
+<AddedIn version="5.1.0" />
+
+Начиная с версии 5.1.0, утилиты `background-color` генерируются с помощью Sass с использованием переменных CSS. Это позволяет изменять цвет в реальном времени без компиляции и динамических изменений альфа-прозрачности.
+
+### Как это устроено
+
+Рассмотрим нашу стандартную утилиту `.bg-success`.
+
+```css
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+```
+
+Мы используем RGB-версию нашей переменной CSS `--bs-success` (со значением `25, 135, 84`) и присоединяем вторую переменную CSS, `--bs-bg-opacity`, для альфа-прозрачности (со значением по умолчанию `1` благодаря локальной переменной CSS). Это означает, что теперь, когда вы используете `.bg-success`, ваше вычисленное значение `color` равно `rgba(25, 135, 84, 1)`. Локальная переменная CSS внутри каждого класса `.bg-*` избегает проблем наследования, поэтому вложенные экземпляры утилит автоматически не имеют измененной альфа-прозрачности.
+
+### Пример
+
+Чтобы изменить эту непрозрачность, переопределите `--bs-bg-opacity` с помощью пользовательских стилей или встроенных стилей.
+
+<Example code={`<div class="bg-success p-2 text-white">This is default success background</div>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>`} />
+
+Или выберите любую из утилит `.bg-opacity`:
+
+<Example code={`<div class="bg-success p-2 text-white">This is default success background</div>
+<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>`} />
+
+## CSS
+
+В дополнение к следующим функциям Sass, рассмотрите возможность прочитать о наших включенных [пользовательских свойствах CSS]([[docsref:/customize/css-variables]]) (они же переменные CSS) для цветов и многого другого.
+
+### Sass переменные
+
+Большинство утилит `background-color` генерируются цветами нашей темы, переназначенными из переменных нашей общей цветовой палитры.
+
+<ScssDocs name="color-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="theme-color-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="variable-gradient" file="scss/_variables.scss" />
+
+Также доступны оттенки серого, но для создания каких-либо утилит используется только подмножество.
+
+<ScssDocs name="gray-color-variables" file="scss/_variables.scss" />
+
+Переменные для установки `background-color` в утилитах `.bg-*-subtle` в светлом и темном режимах:
+
+<ScssDocs name="theme-bg-subtle-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="theme-bg-subtle-dark-variables" file="scss/_variables-dark.scss" />
+
+### Sass карта
+
+Затем цвета темы помещаются в карту Sass, чтобы мы могли перебирать их, чтобы сгенерировать наши утилиты, модификаторы компонентов и многое другое.
+
+<ScssDocs name="theme-colors-map" file="scss/_variables.scss" />
+
+Цвета в градациях серого также доступны в виде карты Sass. **Эта карта не используется для создания каких-либо утилит.**
+
+<ScssDocs name="gray-colors-map" file="scss/_variables.scss" />
+
+Цвета RGB генерируются из отдельной карты Sass:
+
+<ScssDocs name="theme-colors-rgb" file="scss/_maps.scss" />
+
+Прозрачность фонового цвета строится на основе собственной карты, которая используется API утилит:
+
+<ScssDocs name="utilities-bg-colors" file="scss/_maps.scss" />
+
+Цвета фона цветового режима также доступны в виде карты Sass:
+
+<ScssDocs name="theme-bg-subtle-map" file="scss/_maps.scss" />
+
+<ScssDocs name="theme-bg-subtle-dark-map" file="scss/_maps.scss" />
+
+### Sass миксины
+
+**Для генерации наших фоновых утилит не используются миксины**, но у нас есть несколько дополнительных миксинов для других ситуаций, когда вы хотите создать собственные градиенты.
+
+<ScssDocs name="gradient-bg-mixin" file="scss/mixins/_gradients.scss" />
+
+<ScssDocs name="gradient-mixins" file="scss/mixins/_gradients.scss" />
+
+### Sass API утилиты
+
+Фоновые утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-bg-color" file="scss/_utilities.scss" />

@@ -1,0 +1,833 @@
+---
+title: Модальное окно
+description: Используйте плагин модального окна Bootstrap для JavaScript, чтобы добавить на свой сайт диалоговые окна для лайтбоксов, уведомлений пользователей или полностью настраиваемого контента.
+toc: true
+---
+
+## Как это устроено
+
+Прежде чем начать работу с модальным компонентом Bootstrap, обязательно прочтите следующее, так как наши пункты меню недавно изменились.
+
+- Модальные окна созданы с использованием HTML, CSS и JavaScript. Они располагаются поверх всего остального в документе и удаляют прокрутку из `<body>`, так что вместо этого прокручивается модальное содержимое.
+- Нажатие на модальный «фон» автоматически закроет модальное окно.
+- Bootstrap поддерживает только одно модальное окно за раз. Вложенные модальные окна не поддерживаются, поскольку мы считаем, что они неудобны для пользователей.
+- Модальные окна используют `position: fixed`, что иногда может быть немного специфичным в отношении его рендеринга. По возможности размещайте свой модальный HTML в позиции верхнего уровня, чтобы избежать потенциальных помех от других элементов. Вы, скорее всего, столкнетесь с проблемами при вложении `.modal` в другой фиксированный элемент.
+- Опять же, из-за `position: fixed` есть некоторые оговорки относительно использования модальных окон на мобильных устройствах. [См. документацию по поддержке браузеров]([[docsref:/getting-started/browsers-devices#modals-and-dropdowns-on-mobile]]) для получения подробной информации.
+- Из-за того, как HTML5 определяет свою семантику, [атрибут HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) не имеет никакого эффекта в модальных окнах Bootstrap. Чтобы добиться того же эффекта, используйте некоторый пользовательский JavaScript:
+
+```js
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+```
+
+<Callout name="info-prefersreducedmotion" />
+
+Продолжайте читать, чтобы увидеть демонстрации и инструкции по использованию.
+
+## Примеры
+
+### Модальные компоненты
+
+Ниже приведен пример _статического_ модального окна (это означает, что его `position` и `display` были переопределены). Включены модальный заголовок, модальное тело (требуется для `padding`) и модальный нижний колонтитул (необязательно). Мы просим вас по возможности включать модальные заголовки с действиями по отклонению или предоставить другое явное действие по отклонению.
+
+<div class="bd-example bg-body-tertiary">
+  <div class="modal position-static d-block" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Заголовок модального окна</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p>Здесь идет основной текст модального окна</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить изменения</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Заголовок модального окна</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p>Здесь идет основной текст модального окна</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+<Callout>
+В приведенном выше статическом примере мы используем `<h5>`, чтобы избежать проблем с иерархией заголовков на странице документации. Однако структурно модальный диалог представляет свой собственный отдельный документ/контекст, поэтому `.modal-title` в идеале должен быть `<h1>`. При необходимости вы можете использовать [утилиты размера шрифта]([[docsref:/utilities/text#font-size]]) для управления внешним видом заголовка. Все следующие живые примеры используют этот подход.
+</Callout>
+
+### Живая демонстрация
+
+Переключите рабочую модальную демонстрацию, нажав кнопку ниже. Он будет скользить вниз и исчезать из верхней части страницы.
+
+<div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ура, вы читаете этот текст в модальном окне!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLive">Запустите демо модального окна</button>
+</div>
+
+```html
+<!-- Кнопка-триггер модального окна -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Запустите демо модального окна
+</button>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Статический фон
+
+Когда фон установлен на статический, модальное окно не будет закрываться при нажатии за его пределами. Нажмите кнопку ниже, чтобы попробовать.
+
+<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p>Я не закроюсь, если ты нажмешь вне меня. Даже не пытайся нажать клавишу Escape.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Понял</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">Запустить статический фон модального окна</button>
+</div>
+
+```html
+<!-- Кнопка-триггер модального окна -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Запустить модальное окно со статическим фоном
+</button>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Понял</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Прокрутка длинного контента
+
+Когда модальные окна становятся слишком длинными для области просмотра или устройства пользователя, они прокручиваются независимо от самой страницы. Попробуйте демо ниже, чтобы понять, что мы имеем в виду.
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLongTitle">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body" style="min-height: 100vh">
+        <p>Это некоторый плейсхолдерный контент для демонстрации поведения прокрутки для модальных окон. Вместо того, чтобы повторять текст в модальном окне, мы используем встроенный стиль для установки минимальной высоты, тем самым увеличивая длину всего модального окна и демонстрируя прокрутку переполнения. Когда содержимое становится длиннее высоты области просмотра, прокрутка перемещает модальное окно по мере необходимости.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Запустите демо модального окна</button>
+</div>
+
+Вы также можете создать прокручиваемое модальное окно, которое позволяет прокручивать тело модального окна, добавив `.modal-dialog-scrollable` к `.modal-dialog`.
+
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Заголовок модального окна</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p>Это некоторый контент-заполнитель, чтобы показать поведение прокрутки для модальных окон. Мы используем повторяющиеся разрывы строк, чтобы продемонстрировать, как содержимое может превышать минимальную внутреннюю высоту, тем самым показывая внутреннюю прокрутку. Когда содержимое становится длиннее предопределенной максимальной высоты модального окна, оно будет обрезано и прокручиваться внутри модального окна.</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p>Это содержимое должно появиться внизу после прокрутки.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">Запустите демо модального окна</button>
+</div>
+
+```html
+<!-- Прокручиваемое модальное окно -->
+<div class="modal-dialog modal-dialog-scrollable">
+  ...
+</div>
+```
+
+### Центрирование по вертикали
+
+Добавьте `.modal-dialog-centered` к `.modal-dialog` для вертикального центрирования модального окна.
+
+<Example showMarkup={false} code={`<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a vertically centered modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is some placeholder content to show a vertically centered modal. We’ve added some extra copy here to show how vertically centering the modal works when combined with scrollable modals. We also use some repeated line breaks to quickly extend the height of the content, thereby triggering the scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <p>Just like that.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Vertically centered modal</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Vertically centered scrollable modal</button>`} />
+
+```html
+<!-- Вертикально центрированное модальное окно -->
+<div class="modal-dialog modal-dialog-centered">
+  ...
+</div>
+
+<!-- Вертикально центрированное прокручиваемое модальное окно -->
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  ...
+</div>
+```
+
+### Всплывающие подсказки и всплывающие окна
+
+[Tooltips]([[docsref:/components/tooltips]]) and [popovers]([[docsref:/components/popovers]]) can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+
+<Example showMarkup={false} code={`<div class="modal fade" id="exampleModalPopovers" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalPopoversLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2 class="fs-5">Popover in a modal</h2>
+          <p>This <button class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute." data-bs-container="#exampleModalPopovers">button</button> triggers a popover on click.</p>
+          <hr>
+          <h2 class="fs-5">Tooltips in a modal</h2>
+          <p><a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip" data-bs-container="#exampleModalPopovers">that link</a> have tooltips on hover.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopovers">Launch demo modal</button>`} />
+
+```html
+<div class="modal-body">
+  <h2 class="fs-5">Поповер в модальном окне</h2>
+  <p>Эта <button class="btn btn-secondary" data-bs-toggle="popover" title="Заголовок поповера" data-bs-content="Содержимое тела всплывающего окна задается в этом атрибуте.">кнопка</button> вызывает всплывающее окно при нажатии.</p>
+  <hr>
+  <h2 class="fs-5">Подсказки в модальном окне</h2>
+  <p><a href="#" data-bs-toggle="tooltip" title="Тултип">Эта ссылка</a> и <a href="#" data-bs-toggle="tooltip" title="Тултип">эта ссылка</a> имеет всплывающие подсказки при наведении.</p>
+</div>
+```
+
+### Использование сетки
+
+Используйте сеточную систему Bootstrap в модальном окне, вложив `.container-fluid` в `.modal-body`. Затем используйте обычные классы системы сетки, как и везде.
+
+<div class="modal fade" id="gridSystemModal" tabindex="-1" aria-labelledby="gridModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gridModalLabel">Сетки в модальных окнах</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid bd-example-row">
+          <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+            <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-9">
+              Level 1: .col-sm-9
+              <div class="row">
+                <div class="col-8 col-sm-6">
+                  Level 2: .col-8 .col-sm-6
+                </div>
+                <div class="col-4 col-sm-6">
+                  Level 2: .col-4 .col-sm-6
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bd-example">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gridSystemModal">Запустите демо модального окна</button>
+</div>
+
+```html
+<div class="modal-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+      <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        Level 1: .col-sm-9
+        <div class="row">
+          <div class="col-8 col-sm-6">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-4 col-sm-6">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Изменяющееся модальное содержимое
+
+У Вас есть несколько кнопок, которые запускают одно и то же модальное окно с немного разным содержимым? Используйте `event.relatedTarget` и [HTML `data-*` атрибуты](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes), чтобы изменять содержимое модального окна в зависимости от какая кнопка была нажата.
+
+Ниже представлена живая демонстрация, за которой следуют примеры HTML и JavaScript. Для получения дополнительной информации [прочтите документацию по модальным событиям](#события) для получения подробной информации о `relatedTarget`.
+
+<Example addStackblitzJs code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+<JsDocs name="varying-modal-content" file="site/src/assets/partials/snippets.js" />
+
+### Переключение между модальными окнами
+
+<Example code={`<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>`} />
+
+### Изменение анимации
+
+Переменная `$modal-fade-transform` определяет состояние преобразования `.modal-dialog` перед модальной плавной анимацией, переменная `$modal-show-transform` определяет преобразование `.modal-dialog` в конец модальной плавной анимации.
+
+Если Вам нужна, например, анимация с увеличением, Вы можете установить `$modal-fade-transform: scale(.8)`.
+
+### Удаление анимации
+
+Для модальных окон, которые просто появляются, а не исчезают при просмотре, удалите класс `.fade` из Вашей модальной разметки.
+
+```html
+<div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
+  ...
+</div>
+```
+
+### Динамические высоты
+
+Если высота модального окна изменяется, пока оно открыто, следует вызвать `myModal.handleUpdate()`, чтобы перенастроить положение модального окна в случае появления полосы прокрутки.
+
+### Доступность
+
+Обязательно добавьте `aria-labelledby="..."`, ссылаясь на модальный заголовок, в `.modal`. Кроме того, вы можете дать описание вашего модального диалога с помощью `aria-describedby` в `.modal`. Обратите внимание, что вам не нужно добавлять `role="dialog"`, так как мы уже добавляем его через JavaScript.
+
+### Встраивание видео с YouTube
+
+Встраивание видео YouTube в модальные окна требует дополнительного JavaScript не в Bootstrap для автоматической остановки воспроизведения и т.д. [См. этот полезный пост о переполнении стека](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) для получения дополнительной информации.
+
+## Дополнительные размеры
+
+Модальные окна имеют три необязательных размера, доступных через классы модификаторов, которые помещаются в `.modal-dialog`. Эти размеры действуют в определенных контрольных точках, чтобы избежать горизонтальных полос прокрутки на более узких окнах просмотра.
+
+<BsTable>
+| Размер | Класс | Модальная макс. ширина
+| --- | --- | --- |
+| Маленький | `.modal-sm` | `300px` |
+| По умолчанию | <span class="text-body-secondary">Нет</span> | `500px` |
+| Большой | `.modal-lg` | `800px` |
+| Очень большой | `.modal-xl` | `1140px` |
+</BsTable>
+
+Наше модальное окно по умолчанию без класса модификатора представляет собой модальное окно «среднего» размера.
+
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLg">Large modal</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalSm">Small modal</button>`} />
+
+```html
+<div class="modal-dialog modal-xl">...</div>
+<div class="modal-dialog modal-lg">...</div>
+<div class="modal-dialog modal-sm">...</div>
+```
+
+<div class="modal fade" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalXlLabel">Очень большое модальное окно</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalLg" tabindex="-1" aria-labelledby="exampleModalLgLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalLgLabel">Большое модальное окно</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalSm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalSmLabel">Маленькое модальное окно</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+## Полноэкранное модальное окно
+
+Другое переопределение - это возможность вывести модальное окно, охватывающее область просмотра пользователя, доступное через классы модификаторов, которые помещаются в `.modal-dialog`.
+
+<BsTable>
+| Класс | Доступность |
+| --- | --- |
+| `.modal-fullscreen` | Всегда |
+| `.modal-fullscreen-sm-down` | `576px` |
+| `.modal-fullscreen-md-down` | `768px` |
+| `.modal-fullscreen-lg-down` | `992px` |
+| `.modal-fullscreen-xl-down` | `1200px` |
+| `.modal-fullscreen-xxl-down` | `1400px` |
+</BsTable>
+
+<Example showMarkup={false} code={`<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Full screen</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenSm">Full screen below sm</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenMd">Full screen below md</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenLg">Full screen below lg</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXl">Full screen below xl</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreenXxl">Full screen below xxl</button>`} />
+
+```html
+<!-- Полноэкранное модальное окно -->
+<div class="modal-dialog modal-fullscreen-sm-down">
+  ...
+</div>
+```
+
+<div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Полноэкранное модальное окно</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalFullscreenSm" tabindex="-1" aria-labelledby="exampleModalFullscreenSmLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenSmLabel">Полноэкранный меньше sm</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalFullscreenMd" tabindex="-1" aria-labelledby="exampleModalFullscreenMdLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenMdLabel">Полноэкранный меньше md</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalFullscreenLg" tabindex="-1" aria-labelledby="exampleModalFullscreenLgLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-lg-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLgLabel">Полноэкранный меньше lg</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalFullscreenXl" tabindex="-1" aria-labelledby="exampleModalFullscreenXlLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenXlLabel">Полноэкранный меньше xl</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalFullscreenXxl" tabindex="-1" aria-labelledby="exampleModalFullscreenXxlLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xxl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenXxlLabel">Полноэкранный меньше xxl</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+## CSS
+
+### Переменные
+
+<AddedIn version="5.2.0" />
+
+В рамках развивающегося подхода Bootstrap к CSS-переменным модальные окна теперь используют локальные CSS-переменные в `.modal` и `.modal-backdrop` для улучшенной настройки в реальном времени. Значения для CSS-переменных устанавливаются через Sass, поэтому настройка Sass также по-прежнему поддерживается.
+
+<ScssDocs name="modal-css-vars" file="scss/_modal.scss" />
+
+<ScssDocs name="modal-backdrop-css-vars" file="scss/_modal.scss" />
+
+### Sass переменные
+
+<ScssDocs name="modal-variables" file="scss/_variables.scss" />
+
+### Sass циклы
+
+[Адаптивные полноэкранные модальные окна](#fullscreen-modal) генерируются с помощью карты `$breakpoints` и цикла в `scss/_modal.scss`.
+
+<ScssDocs name="modal-fullscreen-loop" file="scss/_modal.scss" />
+
+## Использование
+
+Модальный плагин переключает ваш скрытый контент по запросу с помощью атрибутов данных или JavaScript. Он также переопределяет поведение прокрутки по умолчанию и генерирует `.modal-backdrop`, чтобы предоставить область клика для отклонения отображаемых модальных окон при щелчке вне модального окна.
+
+### Через атрибуты данных
+
+#### Переключение
+
+Активируйте модальное окно без написания JavaScript. Установите `data-bs-toggle="modal"` на элемент контроллера, например кнопку, вместе с `data-bs-target="#foo"` или `href="#foo"` для нацеливания на конкретное модальное окно для переключения.
+
+```html
+<button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Запустить модальное окно</button>
+```
+
+#### Отклонение
+
+<JsDismiss name="modal" />
+
+<Callout type="warning">
+Хотя поддерживаются оба способа закрытия модального окна, имейте в виду, что закрытие извне модального окна не соответствует [шаблону диалога (модального) Руководство по практике написания статей ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/). Делайте это на свой страх и риск.
+</Callout>
+
+### Через JavaScript
+
+Создайте модальное окно с одной строкой JavaScript:
+
+```js
+const myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
+// or
+const myModalAlternative = new bootstrap.Modal('#myModal', options)
+```
+
+### Опции
+
+<JsDataAttributes />
+
+<BsTable>
+| Имя | Тип | По умолчанию | Описание |
+| --- | --- | --- | --- |
+| `backdrop` | boolean, `’static'` | `true` | Включает элемент modal-backdrop. В качестве альтернативы укажите `static` для backdrop, который не закрывает модальное окно при щелчке. |
+| `focus` | boolean | `true` | Устанавливает фокус на модальное окно при инициализации. |
+| `keyboard` | boolean | `true` | Закрывает модальное окно при нажатии клавиши Escape. |
+</BsTable>
+
+### Методы
+
+<Callout name="danger-async-methods" type="danger" />
+
+#### Варианты прохождения
+
+Активирует Ваш контент как модальное окно. Принимает необязательные параметры `object`.
+
+```js
+const myModal = new bootstrap.Modal('#myModal', {
+  keyboard: false
+})
+```
+
+<BsTable>
+| Метод | Описание |
+| --- | --- |
+| `dispose` | Уничтожает модальное окно элемента. (Удаляет сохраненные данные в элементе DOM) |
+| `getInstance` | Метод _Static_, позволяющий получить экземпляр модального окна, связанный с элементом DOM. |
+| `getOrCreateInstance` | Метод _Static_, позволяющий получить экземпляр модального окна, связанный с элементом DOM, или создать новый, если он не был инициализирован. |
+| `handleUpdate` | Вручную перенастраивает положение модального окна, если высота модального окна изменяется, пока оно открыто (т. е. в случае появления полосы прокрутки). |
+| `hide` | Вручную скрывает модальное окно. **Возвращает вызывающему объекту до того, как модальное окно фактически будет скрыто** (т. е. до того, как произойдет событие `hidden.bs.modal`). |
+| `show` | Вручную открывает модальное окно. **Возвращается вызывающему до того, как модальное окно будет фактически показано** (т. е. до того, как произойдет событие `shown.bs.modal`). Кроме того, вы можете передать элемент DOM в качестве аргумента, который может быть получен в модальных событиях (как свойство `relatedTarget`). (т. е. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`. |
+| `toggle` | Вручную переключает модальное окно. **Возвращается вызывающему до того, как модальное окно будет фактически показано или скрыто** (т. е. до того, как произойдет событие `shown.bs.modal` или `hidden.bs.modal`). |
+</BsTable>
+
+### События
+
+Модальный класс Bootstrap выставляет несколько событий для подключения к модальной функциональности. Все модальные события запускаются в самом модальном окне (т. е. в `<div class="modal">`).
+
+<BsTable>
+| Событие | Описание |
+| --- | --- |
+| `hide.bs.modal` | Это событие срабатывает немедленно после вызова метода экземпляра `hide`. Может быть предотвращено вызовом `event.preventDefault()`. См. [документацию по событиям JavaScript]([[docsref:/getting-started/javascript#events]]) для получения более подробной информации о предотвращении событий. |
+| `hidden.bs.modal` | Это событие срабатывает, когда модальное окно перестает быть скрытым от пользователя (будет ждать завершения переходов CSS). |
+| `hidePrevented.bs.modal` | Это событие срабатывает, когда модальное окно отображается, его фон `static` и выполняется щелчок за пределами модального окна. Событие также срабатывает при нажатии клавиши Escape и установке параметра `keyboard` в значение `false`. |
+| `show.bs.modal` | Это событие срабатывает немедленно при вызове метода экземпляра `show`. Если событие вызвано щелчком, выбранный элемент доступен как свойство `relatedTarget` события. |
+| `shown.bs.modal` | Это событие срабатывает, когда модальное окно становится видимым для пользователя (будет ждать завершения переходов CSS). Если событие вызвано щелчком, выбранный элемент доступен как свойство `relatedTarget` события. |
+</BsTable>
+
+```js
+const myModalEl = document.getElementById('myModal')
+myModalEl.addEventListener('hidden.bs.modal', event => {
+  // сделайте что-нибудь...
+})
+```

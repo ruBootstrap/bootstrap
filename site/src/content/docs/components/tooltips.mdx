@@ -1,0 +1,270 @@
+---
+title: Всплывающие подсказки
+description: Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.
+toc: true
+---
+
+## Обзор
+
+Что нужно знать при использовании плагина всплывающей подсказки:
+
+- Подсказки полагаются на стороннюю библиотеку [Popper](https://popper.js.org/docs/v2/) для позиционирования. Вы должны включить [popper.min.js]([[config:cdn.popper]]) перед `bootstrap.js` или использовать `bootstrap.bundle.min.js`, который содержит Popper.
+- Подсказки являются дополнительными из соображений производительности, поэтому **вы должны инициализировать их самостоятельно**.
+- Подсказки с заголовками нулевой длины никогда не отображаются.
+- Укажите `container: 'body'`, чтобы избежать проблем с отображением в более сложных компонентах (таких как наши группы ввода, группы кнопок и т. д.).
+- Запуск подсказок для скрытых элементов не будет работать.
+- Подсказки для элементов `.disabled` или `disabled` должны запускаться на элементе-оболочке.
+- При запуске из гиперссылок, охватывающих несколько строк, подсказки будут центрированы. Используйте `white-space: nowrap;` в `<a>`, чтобы избежать этого поведения.
+- Подсказки должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.
+- Подсказки могут быть вызваны благодаря элементу внутри теневого DOM.
+
+Все поняли? Отлично, давайте посмотрим, как они работают, на нескольких примерах.
+
+<Callout name="info-sanitizer" />
+
+<Callout name="info-prefersreducedmotion" />
+
+## Примеры
+
+### Включить всплывающие подсказки
+
+Как упоминалось выше, вы должны инициализировать всплывающие подсказки, прежде чем их можно будет использовать. Один из способов инициализировать все всплывающие подсказки на странице — выбрать их по их атрибуту `data-bs-toggle`, например:
+
+```js
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+```
+
+### Подсказки к ссылкам
+
+Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:
+
+<Example addStackblitzJs class="tooltip-demo" code={`<p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you’ve now seen how <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a> site or project.</p>`} />
+
+<Callout name="warning-data-bs-title-vs-title" type="warning" />
+
+### Пользовательские всплывающие подсказки
+
+<AddedIn version="5.2.0" />
+
+Вы можете настроить внешний вид всплывающих подсказок с помощью [CSS-переменных](#variables). Мы устанавливаем пользовательский класс с `data-bs-custom-class="custom-tooltip"`, чтобы ограничить наш пользовательский внешний вид и использовать его для переопределения локальной переменной CSS.
+
+<ScssDocs name="custom-tooltip" file="site/src/scss/_component-examples.scss" />
+
+<Example addStackblitzJs class="tooltip-demo" code={`<button type="button" class="btn btn-secondary"
+          data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-custom-class="custom-tooltip"
+          data-bs-title="This top tooltip is themed via CSS variables.">
+    Custom tooltip
+  </button>`} />
+
+### Направления
+
+Наведите курсор на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево. Направления зеркалируются при использовании Bootstrap в RTL.
+
+<Example showMarkup={false} class="tooltip-demo" code={`<div class="bd-example-tooltips">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">Tooltip on left</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+  </div>`} />
+
+```html
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Подсказка вверху">
+  Подсказка вверху
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Подсказка справа">
+  Подсказка справа
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Подсказка внизу">
+  Подсказка внизу
+</button>
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Подсказка слева">
+  Подсказка слева
+</button>
+```
+
+И с добавленным пользовательским HTML:
+
+```html
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Подсказка</em> <u>с</u> <b>HTML</b>">
+  Всплывающая подсказка с HTML
+</button>
+```
+
+С SVG:
+
+<div class="bd-example tooltip-demo">
+  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Подсказка по умолчанию" aria-label="Наведите курсор или сделайте фокус, чтобы увидеть подсказку по умолчанию">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
+      <rect width="100%" height="100%" fill="#563d7c"/>
+      <circle cx="50" cy="50" r="30" fill="#007bff"/>
+    </svg>
+  </a>
+</div>
+
+## CSS
+
+### Переменные
+
+<AddedIn version="5.2.0" />
+
+Как часть развивающегося подхода Bootstrap к переменным CSS, всплывающие подсказки теперь используют локальные переменные CSS в `.tooltip` для расширенной настройки в реальном времени. Значения переменных CSS задаются через Sass, поэтому настройка Sass по-прежнему поддерживается.
+
+<ScssDocs name="tooltip-css-vars" file="scss/_tooltip.scss" />
+
+### Sass переменные
+
+<ScssDocs name="tooltip-variables" file="scss/_variables.scss" />
+
+## Использование
+
+Плагин всплывающих подсказок генерирует контент и разметку по запросу и по умолчанию размещает всплывающие подсказки после их триггерного элемента. Запустите всплывающую подсказку через JavaScript:
+
+```js
+const exampleEl = document.getElementById('example')
+const tooltip = new bootstrap.Tooltip(exampleEl, options)
+```
+
+<Callout type="warning">
+Подсказки автоматически пытаются изменить положение, когда родительский контейнер имеет `overflow: auto` или `overflow: scroll`, но при этом сохраняют исходное размещение. Установите параметр [`boundary`](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (для модификатора переворота с использованием параметра `popperConfig`) для любого HTMLElement, чтобы переопределить значение по умолчанию `'clippingParents'`, например `document.body`:
+
+```js
+const tooltip = new bootstrap.Tooltip('#example', {
+  boundary: document.body // или document.querySelector('#boundary')
+})
+```
+</Callout>
+
+### Разметка
+
+Требуемая разметка для всплывающей подсказки - это только атрибут `data` и `title` HTML-элемента, для которого Вы хотите иметь всплывающую подсказку. Сгенерированная разметка всплывающей подсказки довольно проста, хотя для нее требуется позиция (по умолчанию плагином установлено значение `top`).
+
+<Callout type="warning">
+**Сохраняйте доступность подсказок для пользователей клавиатуры и вспомогательных технологий**, добавляя их только к элементам HTML, которые традиционно фокусируются с помощью клавиатуры и являются интерактивными (например, ссылки или элементы управления формами). Хотя другие элементы HTML можно сделать фокусируемыми, добавив `tabindex="0"`, это может создать раздражающие и запутанные табуляции на неинтерактивных элементах для пользователей клавиатуры, и большинство вспомогательных технологий в настоящее время не объявляют подсказки в этой ситуации. Кроме того, не полагайтесь исключительно на `hover` как на триггер для ваших подсказок, так как это сделает их невозможными для пользователей клавиатуры.
+</Callout>
+
+```html
+<!-- HTML для записи -->
+<a href="#" data-bs-toggle="tooltip" data-bs-title="Текст всплывающей подсказки!">Наведите на меня</a>
+
+<!-- Generated markup by the plugin -->
+<div class="tooltip bs-tooltip-auto" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner">
+    Текст всплывающей подсказки!
+  </div>
+</div>
+```
+
+### Отключенные элементы
+
+Элементы с атрибутом `disabled` не являются интерактивными, то есть пользователи не могут фокусироваться, наводить курсор или щелкать их, чтобы вызвать подсказку (или всплывающее окно). В качестве обходного пути вы захотите вызвать подсказку из оболочки `<div>` или `<span>`, в идеале сделать ее фокусируемой с помощью клавиатуры с помощью `tabindex="0"`.
+
+<Example class="tooltip-demo" addStackblitzJs code={`<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Disabled tooltip">
+    <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+  </span>`} />
+
+### Опции
+
+<JsDataAttributes />
+
+<Callout type="warning">
+Обратите внимание, что по соображениям безопасности параметры `sanitize`, `sanitizeFn` и `allowList` не могут быть предоставлены с использованием атрибутов данных.
+</Callout>
+
+
+<BsTable>
+| Имя | Тип | По умолчанию | Описание |
+| --- | --- | --- | --- |
+| `allowList` | объект | [Значение по умолчанию]([[docsref:/getting-started/javascript#sanitizer]]) | Объект, содержащий разрешенные атрибуты и теги. |
+| `animation` | boolean | `true` | Применить CSS-переход с затуханием к подсказке. |
+| `boundary` | string, element | `'clippingParents'` | Граница ограничения переполнения подсказки (применяется только к модификатору Popper preventOverflow). По умолчанию это `'clippingParents'`, и он может принимать ссылку HTMLElement (только через JavaScript). Для получения дополнительной информации см. [документацию по определению переполнения] Popper (https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
+| `container` | string, element, false | `false` | Добавляет подсказку к определенному элементу. Пример: `container: 'body'`. Этот параметр особенно полезен, поскольку позволяет расположить подсказку в потоке документа рядом с элементом-триггером, что предотвратит отход подсказки от элемента-триггера при изменении размера окна. |
+| `customClass` | string, function | `''` | Добавить классы к подсказке при ее отображении. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: `'class-1 class-2'`. Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов. |
+| `delay` | number, object | `0` | Задержка показа и скрытия подсказки (мс) — не применяется к ручному типу триггера. Если указано число, задержка применяется как к скрытию, так и к показу. Структура объекта: `delay: { "show": 500, "hide": 100 }`. |
+| `fallbackPlacements` | array | `['top', 'right', 'bottom', 'left']` | Определите резервные размещения, указав список размещений в массиве (в порядке предпочтения). Для получения дополнительной информации см. [документацию по поведению] Popper (https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements). |
+| `html` | boolean | `false` | Разрешить HTML во всплывающей подсказке. Если true, HTML-теги в `title` всплывающей подсказки будут отображаться во всплывающей подсказке. Если false, свойство `innerText` будет использоваться для вставки содержимого в DOM. Используйте text, если вы беспокоитесь об атаках XSS. |
+| `offset` | array, string, function | `[0, 6]` | Смещение подсказки относительно ее цели. Вы можете передать строку в атрибутах данных со значениями, разделенными запятыми, например: `data-bs-offset="10,20"`. Когда функция используется для определения смещения, она вызывается с объектом, содержащим размещение popper, ссылку и прямоугольники popper в качестве первого аргумента. Узел DOM-элемента триггера передается в качестве второго аргумента. Функция должна возвращать массив с двумя числами: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). Для получения дополнительной информации см. [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options) Popper. |
+| `placement` | string, function | `'top'` | Как расположить подсказку: авто, сверху, снизу, слева, справа. Если указано `auto`, подсказка будет динамически переориентирована. Когда функция используется для определения размещения, она вызывается с узлом DOM подсказки в качестве первого аргумента и узлом DOM элемента-триггера в качестве второго. Контекст `this` устанавливается на экземпляр подсказки. |
+| `popperConfig` | null, object, function | `null` | Чтобы изменить конфигурацию Popper по умолчанию Bootstrap, см. [Конфигурация Popper](https://popper.js.org/docs/v2/constructors/#options). Когда функция используется для создания конфигурации Popper, она вызывается с объектом, который содержит конфигурацию Popper по умолчанию Bootstrap. Это помогает вам использовать и объединять конфигурацию по умолчанию с вашей собственной. Функция должна возвращать объект конфигурации для Popper. |
+| `sanitize` | boolean | `true` | Включить или отключить очистку. Если активированы параметры `'template'`, `'content'` и `'title'`, они будут очищены. |
+| `sanitizeFn` | null, function | `null` | Здесь вы можете указать собственную функцию очистки. Это может быть полезно, если вы предпочитаете использовать специальную библиотеку для выполнения очистки. |
+| `selector` | string, false | `false` | Если указан селектор, объекты подсказок будут делегированы указанным целям. На практике это также используется для применения подсказок к динамически добавляемым элементам DOM (поддержка `jQuery.on`). См. [эту проблему]([[config:repo]]/issues/4215) и [информативный пример](https://codepen.io/Johann-S/pen/djJYPb). **Примечание**: атрибут `title` нельзя использовать в качестве селектора. |
+| `template` | string | `'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'` | Базовый HTML для использования при создании подсказки. `title` подсказки будет вставлен в `.tooltip-inner`. `.tooltip-arrow` станет стрелкой подсказки. Самый внешний элемент-оболочка должен иметь класс `.tooltip` и `role="tooltip"`. |
+| `title` | string, element, function | `''` | Заголовок подсказки. Если задана функция, она будет вызвана со ссылкой `this`, установленной на элемент, к которому прикреплен поповер. |
+| `trigger` | string | `'hover focus'` | Как срабатывает подсказка: щелчок, наведение, фокус, вручную. Вы можете передать несколько триггеров; разделяйте их пробелом. `'manual'` указывает, что подсказка будет вызвана программно с помощью методов `.tooltip('show')`, `.tooltip('hide')` и `.tooltip('toggle')`; это значение нельзя комбинировать с другими триггерами. `'hover'` сам по себе приведет к появлению подсказок, которые нельзя вызвать с клавиатуры, и его следует использовать только в том случае, если имеются альтернативные методы передачи той же информации для пользователей клавиатуры.
+</BsTable>
+
+<Callout>
+#### Атрибуты данных для отдельных подсказок
+
+Варианты для отдельных подсказок можно также указать с помощью атрибутов данных, как описано выше.
+</Callout>
+
+#### Использование функции с `popperConfig`
+
+```js
+const tooltip = new bootstrap.Tooltip(element, {
+  popperConfig(defaultBsPopperConfig) {
+    // const newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})
+```
+
+### Методы
+
+<Callout name="danger-async-methods" type="danger" />
+
+<BsTable>
+| Метод | Описание |
+| --- | --- |
+| `disable` | Отключает возможность отображения подсказки элемента. Подсказка будет отображаться только в том случае, если она будет повторно включена. |
+| `dispose` | Скрывает и уничтожает подсказку элемента (удаляет сохраненные данные в элементе DOM). Подсказки, использующие делегирование (созданную с помощью [опции `selector`](#options)), нельзя уничтожить по отдельности в элементах-триггерах-потомках. |
+| `enable` | Предоставляет подсказке элемента возможность отображения. **Подсказки включены по умолчанию.** |
+| `getInstance` | *Статический* метод, позволяющий получить экземпляр подсказки, связанный с элементом DOM. |
+| `getOrCreateInstance` | *Статический* метод, позволяющий получить экземпляр подсказки, связанный с элементом DOM, или создать новый, если он не был инициализирован. |
+| `hide` | Скрывает подсказку элемента. **Возвращает вызывающему до того, как подсказка фактически будет скрыта** (т. е. до того, как произойдет событие `hidden.bs.tooltip`). Это считается «ручным» запуском подсказки. |
+| `setContent` | Дает возможность изменить содержимое подсказки после ее инициализации. |
+| `show` | Показывает подсказку элемента. **Возвращает вызывающему до того, как подсказка фактически будет показана** (т. е. до того, как произойдет событие `shown.bs.tooltip`). Это считается «ручным» запуском подсказки. Подсказки с заголовками нулевой длины никогда не отображаются. |
+| `toggle` | Переключает подсказку элемента. **Возвращает вызывающему до того, как подсказка фактически будет показана или скрыта** (т. е. до того, как произойдет событие `shown.bs.tooltip` или `hidden.bs.tooltip`). Это считается «ручным» запуском подсказки. |
+| `toggleEnabled` | Переключает возможность отображения или скрытия подсказки элемента. |
+| `update` | Обновляет положение подсказки элемента. |
+</BsTable>
+
+```js
+const tooltip = bootstrap.Tooltip.getInstance('#example') // Возвращает экземпляр всплывающей подсказки Bootstrap
+
+// setContent example
+tooltip.setContent({ '.tooltip-inner': 'another title' })
+```
+
+<Callout>
+Метод `setContent` принимает аргумент `object`, где каждый ключ свойства является допустимым селектором `string` в шаблоне подсказки, а каждое связанное значение свойства может быть `string` | `element` | `function` | `null`
+</Callout>
+
+### События
+
+<BsTable>
+| Событие | Описание |
+| --- | --- |
+| `hide.bs.tooltip` | Это событие срабатывает немедленно после вызова метода экземпляра `hide`. |
+| `hidden.bs.tooltip` | Это событие срабатывает, когда подсказка перестает скрываться от пользователя (будет ждать завершения переходов CSS). |
+| `inserted.bs.tooltip` | Это событие срабатывает после события `show.bs.tooltip`, когда шаблон подсказки добавляется в DOM. |
+| `show.bs.tooltip` | Это событие срабатывает немедленно после вызова метода экземпляра `show`. |
+| `shown.bs.tooltip` | Это событие срабатывает, когда подсказка становится видимой для пользователя (будет ждать завершения переходов CSS). |
+</BsTable>
+
+```js
+const myTooltipEl = document.getElementById('myTooltip')
+const tooltip = bootstrap.Tooltip.getOrCreateInstance(myTooltipEl)
+
+myTooltipEl.addEventListener('hidden.bs.tooltip', () => {
+  // делайте что-нибудь...
+})
+
+tooltip.hide()
+```

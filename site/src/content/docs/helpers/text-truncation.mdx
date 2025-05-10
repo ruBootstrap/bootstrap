@@ -1,0 +1,19 @@
+---
+title: Укорачивание текста
+description: Обрезайте длинные строки текста с помощью многоточия.
+toc: false
+---
+
+Для более длинного содержимого Вы можете добавить класс `.text-truncate`, чтобы обрезать текст многоточием. **Требуется `display: inline-block` или `display: block`.**
+
+<Example code={`<!-- Block level -->
+  <div class="row">
+    <div class="col-2 text-truncate">
+      Этот текст довольно длинный и будет обрезан после отображения.
+    </div>
+  </div>
+
+  <!-- Inline level -->
+  <span class="d-inline-block text-truncate" style="max-width: 150px;">
+    Этот текст довольно длинный и будет обрезан после отображения.
+  </span>`} />

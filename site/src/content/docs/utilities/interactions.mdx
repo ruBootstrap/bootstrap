@@ -1,0 +1,36 @@
+---
+title: Взаимодействия
+description: Служебные классы, которые изменяют способ взаимодействия пользователей с содержимым веб-сайта.
+toc: false
+---
+
+## Выделение текста
+
+Измените способ выбора содержимого при взаимодействии с ним пользователя.
+
+<Example code={`<p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
+<p class="user-select-auto">This paragraph has default select behavior.</p>
+<p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>`} />
+
+## Указатель событий
+
+Bootstrap предоставляет классы `.pe-none` и `.pe-auto` для предотвращения или добавления взаимодействий элементов.
+
+<Example code={`<p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">This link</a> can not be clicked.</p>
+<p><a href="#" class="pe-auto">This link</a> can be clicked (this is default behavior).</p>
+<p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">This link</a> can not be clicked because the <code>pointer-events</code> property is inherited from its parent. However, <a href="#" class="pe-auto">this link</a> has a <code>pe-auto</code> class and can be clicked.</p>`} />
+
+Класс `.pe-none` (и свойство CSS `pointer-events`, которое он устанавливает) предотвращает только взаимодействие с указателем (мышь, стилус, прикосновение). Ссылки и элементы управления с `.pe-none` по умолчанию по-прежнему доступны для фокусировки и действий для пользователей клавиатуры. Чтобы гарантировать, что они полностью нейтрализованы даже для пользователей клавиатуры, Вам может потребоваться добавить дополнительные атрибуты, такие как `tabindex="-1"` (чтобы они не получали фокус клавиатуры) и `aria-disabled="true"` (чтобы передают тот факт, что они фактически отключены для вспомогательных технологий), и, возможно, используют JavaScript, чтобы полностью помешать им действовать.
+
+Если возможно, более простое решение:
+
+- Для элементов управления формой добавьте HTML-атрибут `disabled`.
+- Для ссылок удалите атрибут `href`, сделав его неинтерактивной привязкой или ссылкой-заполнителем.
+
+## CSS
+
+### Sass API утилиты
+
+Утилиты взаимодействия объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-interaction" file="scss/_utilities.scss" />

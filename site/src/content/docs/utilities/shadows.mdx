@@ -1,0 +1,26 @@
+---
+title: Тени
+description: Добавляйте или удаляйте тени к элементам с помощью утилит box-shadow.
+toc: true
+---
+
+## Примеры
+
+Хотя тени на компонентах по умолчанию отключены в Bootstrap и могут быть включены через `$enable-shadows`, Вы также можете быстро добавить или удалить тень с помощью наших служебных классов `box-shadow`. Включает поддержку `.shadow-none` и трех размеров по умолчанию (с соответствующими переменными для сопоставления).
+
+<Example class="overflow-hidden" code={`<div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>`} />
+
+## CSS
+
+### Sass переменные
+
+<ScssDocs name="box-shadow-variables" file="scss/_variables.scss" />
+
+### Sass API утилиты
+
+Утилиты Shadow объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-shadow" file="scss/_utilities.scss" />

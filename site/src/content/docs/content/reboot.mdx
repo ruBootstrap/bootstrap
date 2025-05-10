@@ -1,0 +1,443 @@
+---
+title: Перезагрузка
+description: Перезагрузка - это набор изменений CSS для конкретных элементов в одном файле, запускает Bootstrap, чтобы обеспечить элегантную, последовательную и простую основу для построения.
+aliases: "/docs/[[config:docs_version]]/content/"
+toc: true
+---
+
+## Подход
+
+Reboot (перезагрузка) основывается на Normalize, предоставляя многие элементы HTML с несколько самоуверенными стилями, используя только селекторы элементов. Дополнительная стилизация выполняется только с классами. Например, мы перезагружаем некоторые стили `<table>` для упрощения базовой линии, а позже предоставляем `.table`, `.table-bordered` и другие.
+
+Вот наши рекомендации и причины выбора того, что следует переопределить в Перезагрузке:
+
+- Обновите некоторые значения браузера по умолчанию, чтобы использовать `rem` вместо `em` для масштабируемого интервала между компонентами.
+- Избегайте `margin-top`. Вертикальные поля могут исчезнуть, что приведет к неожиданным результатам. Что еще более важно, одно направление `margin` это более простая ментальная модель.
+- Для упрощения масштабирования по размеру устройства в элементах блока следует использовать `rem` для `margin`.
+- Сведите к минимуму объявления свойств, связанных с `font`, по возможности используйте `inherit`.
+
+## Переменные CSS
+
+<AddedIn version="5.2.0"/>
+
+В версии 5.1.1 мы стандартизировали наши требуемые `@import` во всех наших пакетах CSS (включая `bootstrap.css`, `bootstrap-reboot.css` и `bootstrap-grid.css`), включив `_root.scss`. Это добавляет переменные CSS уровня `:root` во все пакеты, независимо от того, сколько из них используется в этом пакете. В конечном итоге Bootstrap 5 продолжит видеть больше [переменных CSS]([[docsref:/customize/css-variables]]), добавляемых со временем, чтобы обеспечить больше настроек в реальном времени без необходимости всегда перекомпилировать Sass. Наш подход заключается в том, чтобы взять наши исходные переменные Sass и преобразовать их в переменные CSS. Таким образом, даже если вы не используете переменные CSS, у вас все равно будет вся мощь Sass. **Это все еще находится в процессе разработки и займет время для полной реализации.**
+
+Например, рассмотрите эти переменные CSS `:root` для общих стилей `<body>`:
+
+<ScssDocs name="root-body-variables" file="scss/_root.scss" />
+
+На практике эти переменные затем применяются при перезагрузке следующим образом:
+
+<ScssDocs name="reboot-body-rules" file="scss/_reboot.scss" />
+
+Что позволяет вам делать настройки в реальном времени, как вам нравится:
+
+```html
+<body style="--bs-body-color: #333;">
+  <!-- ... -->
+</body>
+```
+
+## Параметры страницы по умолчанию
+
+Элементы `<html>` и `<body>` обновлены, чтобы обеспечить лучшие значения по умолчанию для всей страницы. Более конкретно:
+
+- `box-sizing` устанавливается глобально для каждого элемента, включая `*::before` и `*::after`, для `border-box`. Это гарантирует, что заявленная ширина элемента никогда не будет превышена из-за заполнения или границы.
+  - Базовый размер `font-size` не объявлен в `<html>`, но предполагается `16px` (по умолчанию в браузере). `font-size: 1rem` применяется к элементу `<body>` для быстрого масштабирования типов с помощью медиа-запросов, при этом соблюдая предпочтения пользователя и обеспечивая более доступный подход. Это значение по умолчанию для браузера можно изменить, изменив переменную `$font-size-root`.
+- `<body>` также устанавливает глобальные значения `font-family`, `font-weight`, `line-height` и `color`. Позднее это наследуется некоторыми элементами формы, чтобы предотвратить несоответствие шрифтов.
+- Для безопасности `<body>` имеет объявленный `background-color`, по умолчанию `#fff`.
+
+## Стек собственных шрифтов
+
+Bootstrap использует «стек собственных шрифтов» или «стек системных шрифтов» для оптимальной визуализации текста на каждом устройстве и ОС. Эти системные шрифты были разработаны специально с учетом современных устройств, с улучшенной визуализацией на экранах, поддержкой переменных шрифтов и многим другим. Подробнее о [стеках собственных шрифтов в этой статье *Smashing Magazine*](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+
+```scss
+$font-family-sans-serif:
+  // Кросс-платформенное общее семейство шрифтов (шрифт пользовательского интерфейса по умолчанию)
+  system-ui,
+  // Safari для macOS и iOS (San Francisco)
+  -apple-system,
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // older macOS and iOS
+  "Helvetica Neue",
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Basic web fallback
+  Arial,
+  // Sans serif fallback
+  sans-serif,
+  // Emoji шрифты
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+```
+
+Обратите внимание, что поскольку стек шрифтов включает шрифты эмодзи, многие общие символы/дингбаты Unicode будут отображаться как многоцветные пиктограммы. Их внешний вид будет отличаться в зависимости от стиля, используемого в родном шрифте эмодзи браузера/платформы, и на них не будут влиять никакие стили CSS `color`.
+
+`font-family` применяется к `<body>` и автоматически наследуется глобально через Bootstrap. Чтобы переключить глобально `font-family`, обновите `$font-family-base` и перекомпилируйте Bootstrap.
+
+## Заголовки
+
+У всех элементов заголовков — `<h1>`—`<h6>` удалено `margin-top`, а `margin-bottom: .5rem` установлено, а `line-height` ужесточено. Хотя заголовки наследуют свой `color` по умолчанию, вы также можете переопределить его с помощью дополнительной переменной CSS `--bs-heading-color`.
+
+<BsTable>
+| Заголовок | Пример |
+| --- | --- |
+| `<h1></h1>` | <span class="h1">h1. Заголовок Bootstrap</span> |
+| `<h2></h2>` | <span class="h2">h2. Заголовок Bootstrap</span> |
+| `<h3></h3>` | <span class="h3">h3. Заголовок Bootstrap</span> |
+| `<h4></h4>` | <span class="h4">h4. Заголовок Bootstrap</span> |
+| `<h5></h5>` | <span class="h5">h5. Заголовок Bootstrap</span> |
+| `<h6></h6>` | <span class="h6">h6. Заголовок Bootstrap</span> |
+</BsTable>
+
+## Параграфы
+
+У всех элементов `<p>` их `margin-top` удалено, а `margin-bottom: 1rem` установлено для упрощения интервала.
+
+<Example code={`<p>This is an example paragraph.</p>`} />
+
+## Ссылки
+
+Ссылки имеют `цвет` по умолчанию и подчеркивание. Хотя ссылки меняются при `:hover`, они не меняются в зависимости от того, `:visited` ли кто-то ссылку. Они также не получают никаких специальных стилей `:focus`.
+
+<Example code={`<a href="#">Это ссылка для примера</a>`} />
+
+Начиная с версии 5.3.x, `color` ссылки задается с помощью `rgba()` и новых переменных CSS `-rgb`, что позволяет легко настраивать непрозрачность цвета ссылки. Измените непрозрачность цвета ссылки с помощью переменной CSS `--bs-link-opacity`:
+
+<Example code={`<a href="#" style="--bs-link-opacity: .5">Это ссылка для примера</a>`} />
+
+
+Ссылки-заполнители — те, у которых нет `href`, — нацелены на более конкретный селектор, а их `color` и `text-decoration` сбрасываются до значений по умолчанию.
+
+<Example code={`<a>This is a placeholder link</a>`} />
+
+## Горизонтальные правила
+
+Элемент `<hr>` был упрощен. Подобно настройкам браузера по умолчанию, `<hr>` стилизуются через `border-top`, имеют значение по умолчанию `opacity: .25` и автоматически наследуют `border-color` через `color`, в том числе, когда `color` устанавливается через родителя. Их можно изменить с помощью утилит для текста, границ и непрозрачности.
+
+<Example code={`<hr>
+
+  <div class="text-success">
+    <hr>
+  </div>
+
+  <hr class="border border-danger border-2 opacity-50">
+  <hr class="border border-primary border-3 opacity-75">`} />
+
+## Списки
+
+У всех списков — `<ul>`, `<ol>` и `<dl>` — удалено `margin-top` и `margin-bottom: 1rem`. У вложенных списков нет `margin-bottom`. Мы также сбросили `padding-left` для элементов `<ul>` и `<ol>`.
+
+<div class="bd-example">
+* У всех списков удалено верхнее поле
+* И их нижнее поле нормализовано
+* У вложенных списков нет нижнего поля
+* Таким образом, они выглядят более ровно
+* Особенно, когда за ними следует больше элементов списка
+* Левый отступ также был сброшен
+
+1. Вот упорядоченный список
+2. С несколькими элементами списка
+3. Он имеет тот же общий вид
+4. Как и предыдущий неупорядоченный список
+</div>
+
+Для упрощения стиля, четкой иерархии и лучшего интервала в списках описаний обновлены поля `margin`. `<dd>` сбрасывает `margin-left` в `0` и добавляет `margin-bottom: .5rem`. `<dt>` выделены **жирным шрифтом**.
+
+<div class="bd-example">
+  <dl>
+    <dt>Списки описаний</dt>
+    <dd>Список описаний идеально подходит для определения терминов.</dd>
+    <dt>Срок</dt>
+    <dd>Определение термина.</dd>
+    <dd>Второе определение того же термина.</dd>
+    <dt>Другой термин</dt>
+    <dd>Определение этого другого термина.</dd>
+  </dl>
+</div>
+
+## Строчный код
+
+Оберните строчные фрагменты кода в `<code>`. Обязательно избегайте угловых скобок HTML.
+
+<Example code={`Например, <code>&lt;section&gt;</code> следует оформить как встроенный.`} />
+
+## Блоки кода
+
+Используйте `<pre>` для нескольких строк кода. Еще раз, не забудьте снять угловые скобки в коде для правильного рендеринга. Элемент `<pre>` сбрасывается, чтобы удалить его `margin-top` и использовать единицы `rem` для его `margin-bottom`.
+
+<Example code={`<pre><code>&lt;p&gt;Пример текста здесь...&lt;/p&gt;
+&lt;p&gt;И еще одна строка примера текста здесь...&lt;/p&gt;
+</code></pre>`} />
+
+## Переменные
+
+Для обозначения переменных используйте тег `<var>`.
+
+<Example code={`<var>y</var> = <var>m</var><var>x</var> + <var>b</var>`} />
+
+## Пользовательский ввод
+
+Используйте `<kbd>` для обозначения ввода, который обычно вводится с клавиатуры.
+
+<Example code={`Чтобы переключить каталоги, введите <kbd>cd</kbd>, а затем имя каталога.<br>
+Чтобы изменить настройки, нажмите <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>`} />
+
+## Пример вывода
+
+Для указания образца вывода из программы используйте тег `<samp>`.
+
+<Example code={`<samp>Этот текст следует рассматривать как пример выходных данных компьютерной программы.</samp>`} />
+
+## Таблицы
+
+Таблицы немного скорректированы для стилизации `<caption>`, сворачивания границ и обеспечения согласованного `text-align` по всему. Дополнительные изменения для границ, отступов и многого другого идут с [классом `.table`]([[docsref:/content/tables]]).
+
+<Example code={`<table>
+    <caption>
+      This is an example table, and this is its caption to describe the contents.
+    </caption>
+    <thead>
+      <tr>
+        <th>Table heading</th>
+        <th>Table heading</th>
+        <th>Table heading</th>
+        <th>Table heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## Формы
+
+Различные элементы формы были перезагружены для упрощения базовых стилей. Вот некоторые из наиболее заметных изменений:
+
+- У `<fieldset> нет границ, отступов или полей, поэтому их можно легко использовать в качестве оболочек для отдельных входов или групп входов.
+- `<legend>`, как и fieldsets, также были изменены для отображения в виде своего рода заголовков.
+- `<label>` установлены на `display: inline-block`, чтобы можно было применять `margin`.
+- `<input>`, `<select>`, `<textarea>` и `<button>` в основном обрабатываются Normalize, но Reboot удаляет их `margin` и также устанавливает `line-height: inherit`.
+- `<textarea>` изменены так, чтобы их можно было изменять только по вертикали, так как горизонтальное изменение размера часто «ломает» макет страницы.
+- Элементы кнопок `<button>` и `<input>` имеют `cursor: pointer`, когда `:not(:disabled)`.
+
+Эти и другие изменения показаны ниже.
+
+<Callout name="warning-input-support" type="warning" />
+
+<Example showMarkup={false} code={`<form>
+  <fieldset>
+    <legend>Пример легенды</legend>
+    <p>
+      <label for="input">Example input</label>
+      <input type="text" id="input" placeholder="Example input"/>
+    </p>
+    <p>
+      <label for="email">Example email</label>
+      <input type="email" id="email" placeholder="test@example.com"/>
+    </p>
+    <p>
+      <label for="tel">Example telephone</label>
+      <input type="tel" id="tel"/>
+    </p>
+    <p>
+      <label for="url">Example url</label>
+      <input type="url" id="url"/>
+    </p>
+    <p>
+      <label for="number">Example number</label>
+      <input type="number" id="number"/>
+    </p>
+    <p>
+      <label for="search">Example search</label>
+      <input type="search" id="search"/>
+    </p>
+    <p>
+      <label for="range">Example range</label>
+      <input type="range" id="range" min="0" max="10"/>
+    </p>
+    <p>
+      <label for="file">Example file input</label>
+      <input type="file" id="file"/>
+    </p>
+    <p>
+      <label for="select">Пример выбора из списка</label>
+      <select id="select">
+        <option value="">Выберите...</option>
+        <optgroup label="Группа опций 1">
+          <option value="">Опция 1</option>
+          <option value="">Опция 2</option>
+          <option value="">Опция 3</option>
+        </optgroup>
+        <optgroup label="Группа опций 2">
+          <option value="">Опция 4</option>
+          <option value="">Опция 5</option>
+          <option value="">Опция 6</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" value=""/>
+        Установите этот флажок
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked/>
+        Option one is this and that
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>
+        Option two is something else that’s also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled/>
+        Option three is disabled
+      </label>
+    </p>
+    <p>
+      <label for="textarea">Пример текстового поля</label>
+      <textarea id="textarea" rows="3"></textarea>
+    </p>
+    <p>
+      <label for="date">Example date</label>
+      <input type="date" id="date"/>
+    </p>
+    <p>
+      <label for="time">Example time</label>
+      <input type="time" id="time"/>
+    </p>
+    <p>
+      <label for="password">Example password</label>
+      <input type="password" id="password"/>
+    </p>
+    <p>
+      <label for="datetime-local">Example datetime-local</label>
+      <input type="datetime-local" id="datetime-local"/>
+    </p>
+    <p>
+      <label for="week">Example week</label>
+      <input type="week" id="week"/>
+    </p>
+    <p>
+      <label for="month">Example month</label>
+      <input type="month" id="month"/>
+    </p>
+    <p>
+      <label for="color">Example color</label>
+      <input type="color" id="color"/>
+    </p>
+    <p>
+      <label for="output">Пример вывода</label>
+      <output name="result" id="output">100</output>
+    </p>
+    <p>
+      <button type="submit">Button submit</button>
+      <input type="submit" value="Input submit button"/>
+      <input type="reset" value="Input reset button"/>
+      <input type="button" value="Input button"/>
+    </p>
+    <p>
+      <button type="submit" disabled>Button submit</button>
+      <input type="submit" value="Input submit button" disabled/>
+      <input type="reset" value="Input reset button" disabled/>
+      <input type="button" value="Input button" disabled/>
+    </p>
+  </fieldset>
+</form>`} />
+
+### Указатели на кнопках
+
+Перезагрузка включает улучшение для `role="button"`, чтобы изменить курсор по умолчанию на `pointer`. Добавьте этот атрибут к элементам, чтобы указать, что элементы интерактивны. Эта роль необязательна для элементов `<button>`, которые получают собственное изменение `cursor`.
+
+<Example code={`<span role="button" tabindex="0">Кнопка элемента, не являющегося кнопкой</span>`} />
+
+## Разные элементы
+
+### Адрес
+
+Элемент `<address>` обновлен, чтобы сбросить стиль шрифта браузера по умолчанию с `font-style` с `italic` на `normal`. `line-height` теперь унаследован, и был добавлен `margin-bottom: 1rem`. `<address>` служит для представления контактной информации ближайшего предка (или всего объема работы). Сохраните форматирование, заканчивая строки символом `<br>`.
+
+<Example showMarkup={false} code={`<address>
+    <strong>ACME Corporation</strong><br/>
+    1123 Fictional St,<br/>
+    San Francisco, CA 94103<br/>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+
+  <address>
+    <strong>Full Name</strong><br/>
+    <a href="mailto:first.last@example.com">first.last@example.com</a>
+  </address>`} />
+
+### Цитата
+
+По умолчанию `margin` для цитат составляет `1em 40px`, поэтому мы сбрасываем ее на `0 0 1rem` для большей согласованности с другими элементами.
+
+<Example showMarkup={false} code={`<figure>
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption>
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>`} />
+
+### Строчные элементы
+
+Элемент `<abbr>` получает базовый стиль, чтобы выделить его среди текста абзаца.
+
+<div class="bd-example">
+  Элемент аббревиатуры <abbr title="HyperText Markup Language">HTML</abbr>.
+</div>
+
+### Резюме
+
+По умолчанию `cursor` в сводке является `text`, поэтому мы сбрасываем его на `pointer`, чтобы указать, что с элементом можно взаимодействовать, щелкнув по нему.
+
+<div class="bd-example">
+  <details>
+    <summary>Некоторые детали</summary>
+    <p>Подробнее о деталях.</p>
+  </details>
+
+  <details open>
+    <summary>Еще больше деталей</summary>
+    <p>Вот еще более подробная информация о деталях.</p>
+  </details>
+</div>
+
+## HTML5 атрибут `[hidden]`
+
+HTML5 добавляет [новый глобальный атрибут с именем `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), который имеет стиль `display: none` по умолчанию. Заимствуя идею из [PureCSS](https://purecss.io/), мы улучшаем это значение по умолчанию, сделав `[hidden] { display: none !important; }`, чтобы предотвратить случайное переопределение его свойства `display`.
+
+```html
+<input type="text" hidden>
+```
+
+<Callout>
+Поскольку `[hidden]` несовместим с методами `$(...).hide()` и `$(...).show()` jQuery, мы специально не рекомендуем `[hidden]` по сравнению с другими методами управления `display` элементов.
+</Callout>
+
+Чтобы просто переключить видимость элемента, то есть его `display` не изменяется, и элемент по-прежнему может влиять на поток документа, используйте вместо этого [класс `.invisible`]([[docsref:/utilities/visibility]]).

@@ -87,6 +87,7 @@
     "roboto",
     "RTLCSS",
     "ruleset",
+    "sassrc",
     "screenreaders",
     "scrollbars",
     "scrollspy",
@@ -118,10 +119,7 @@
     "WCAG",
     "zindex"
   ],
-  "language": "en,ru",
-  "files": [
-    "**/*.md"
-  ],
+  "language": "en-US",
   "ignorePaths": [
     ".cspell.json",
     "dist/",

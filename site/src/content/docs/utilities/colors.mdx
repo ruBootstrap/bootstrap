@@ -1,0 +1,131 @@
+---
+title: Цвета
+description: Передайте смысл через `color` с помощью нескольких служебных классов цвета. Также включает поддержку стилизации ссылок с помощью состояний наведения.
+toc: true
+---
+
+import { getData } from '@libs/data'
+
+<Callout name="warning-color-assistive-technologies" />
+
+## Цвета
+
+Раскрашивайте текст с помощью утилит цвета. Если вы хотите раскрасить ссылки, вы можете использовать вспомогательные классы [`.link-*`]([[docsref:/helpers/colored-links]]), которые имеют состояния `:hover` и `:focus`.
+
+<Callout>
+Утилиты цвета, такие как `.text-*`, которые были сгенерированы из нашей оригинальной карты Sass `$theme-colors`, пока не реагируют на цветовые режимы, однако любая утилита `.text-*-emphasis` будет. Это будет решено в версии 6.
+</Callout>
+
+<Example code={[
+  ...getData('theme-colors').map((themeColor) => `<p class="text-${themeColor.name}${themeColor.contrast_color ? ` bg-${themeColor.contrast_color}` : ``}">.text-${themeColor.name}</p>
+<p class="text-${themeColor.name}-emphasis">.text-${themeColor.name}-emphasis</p>`),
+  `
+<p class="text-body">.text-body</p>
+<p class="text-body-emphasis">.text-body-emphasis</p>
+<p class="text-body-secondary">.text-body-secondary</p>
+<p class="text-body-tertiary">.text-body-tertiary</p>
+
+<p class="text-black bg-white">.text-black</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50 bg-white">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>`
+]} />
+
+<Callout type="warning">
+**Устаревание:** с добавлением утилит `.text-opacity-*` и переменных CSS для текстовых утилит `.text-black-50` и `.text-white-50` устарели с версии 5.1.0. Они будут удалены в версии 6.0.0.
+</Callout>
+
+<Callout type="warning">
+**Устаревание:** с добавлением расширенных цветов и переменных темы утилита `.text-muted` устарела с версии 5.3.0. Ее значение по умолчанию также было переназначено новой переменной CSS `--bs-secondary-color` для лучшей поддержки цветовых режимов. Она будет удалена в версии 6.0.0.
+</Callout>
+
+## Непрозрачность
+
+<AddedIn version="5.1.0" />
+
+Начиная с версии 5.1.0, утилиты цвета текста создаются с помощью Sass с использованием переменных CSS. Это позволяет изменять цвет в реальном времени без компиляции и динамических изменений альфа-прозрачности.
+
+### Как это устроено
+
+Рассмотрим нашу стандартную утилиту `.text-primary`.
+
+```css
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+```
+
+Мы используем RGB-версию нашей переменной CSS `--bs-primary` (со значением `13, 110, 253`) и присоединяем вторую переменную CSS, `--bs-text-opacity`, для альфа-прозрачности (со значением по умолчанию `1` благодаря локальной переменной CSS). Это означает, что теперь всякий раз, когда вы используете `.text-primary`, ваше вычисленное значение `color` равно `rgba(13, 110, 253, 1)`. Локальная переменная CSS внутри каждого класса `.text-*` избегает проблем наследования, поэтому вложенные экземпляры утилит автоматически не имеют измененной альфа-прозрачности.
+
+### Пример
+
+Чтобы изменить эту непрозрачность, переопределите `--bs-text-opacity` с помощью пользовательских стилей или встроенных стилей.
+
+<Example code={`<div class="text-primary">This is default primary text</div>
+<div class="text-primary" style="--bs-text-opacity: .5;">This is 50% opacity primary text</div>`} />
+
+Или выберите любую из утилит `.text-opacity`:
+
+<Example code={`<div class="text-primary">This is default primary text</div>
+<div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
+<div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+<div class="text-primary text-opacity-25">This is 25% opacity primary text</div>`} />
+
+## Специфика
+
+Иногда контекстные классы не могут быть применены из-за специфики другого селектора. В некоторых случаях достаточным решением будет обернуть содержимое вашего элемента в `<div>` или более семантический элемент с желаемым классом.
+
+## CSS
+
+В дополнение к следующим функциям Sass, рассмотрите возможность прочитать о наших включенных [CSS-пользовательских свойствах]([[docsref:/customize/css-variables]]) (они же переменные CSS) для цветов и многого другого.
+
+### Sass переменные
+
+Большинство утилит `color` генерируются цветами нашей темы, переназначенными из переменных нашей общей цветовой палитры.
+
+<ScssDocs name="color-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="theme-color-variables" file="scss/_variables.scss" />
+
+Также доступны оттенки серого, но для создания утилит используется только подмножество.
+
+<ScssDocs name="gray-color-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="theme-text-map" file="scss/_maps.scss" />
+
+Переменные для установки цветов в утилитах `.text-*-emphasis` в светлом и темном режимах:
+
+<ScssDocs name="theme-text-variables" file="scss/_variables.scss" />
+
+<ScssDocs name="theme-text-dark-variables" file="scss/_variables-dark.scss" />
+
+### Sass карта
+
+Затем цвета темы помещаются в карту Sass, чтобы мы могли перебирать их, чтобы сгенерировать наши утилиты, модификаторы компонентов и многое другое.
+
+<ScssDocs name="theme-colors-map" file="scss/_variables.scss" />
+
+Цвета в градациях серого также доступны в виде карты Sass. **Эта карта не используется для создания каких-либо утилит.**
+
+<ScssDocs name="gray-colors-map" file="scss/_variables.scss" />
+
+Цвета RGB генерируются из отдельной карты Sass:
+
+<ScssDocs name="theme-colors-rgb" file="scss/_maps.scss" />
+
+Непрозрачность цвета строится на основе собственной карты, которая используется API утилит:
+
+<ScssDocs name="utilities-text-colors" file="scss/_maps.scss" />
+
+Адаптивные цвета текста цветового режима также доступны в виде карты Sass:
+
+<ScssDocs name="theme-text-map" file="scss/_maps.scss" />
+
+<ScssDocs name="theme-text-dark-map" file="scss/_maps.scss" />
+
+### Sass API утилиты
+
+Утилиты цвета объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-color" file="scss/_utilities.scss" />

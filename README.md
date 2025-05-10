@@ -46,12 +46,12 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.5.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.6.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.5`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.5`
-- Установить с помощью [Bun](https://bun.sh/): `bun add bootstrap@v5.3.5`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.5`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.6`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.6`
+- Установить с помощью [Bun](https://bun.sh/): `bun add bootstrap@v5.3.6`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.6`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -76,7 +76,7 @@
 
 ## Что включено
 
-В загружаемом файле вы найдете следующие каталоги и файлы, логически сгруппированные общие ресурсы и предоставляющие как скомпилированные, так и минимизированные варианты.
+В загрузке вы найдете следующие каталоги и файлы, логически группирующие общие ресурсы и предоставляющие как скомпилированные, так и минифицированные варианты.
 
 <details>
   <summary>Скачать содержимое</summary>
@@ -132,7 +132,7 @@
   ```
 </details>
 
-Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минимизированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://web.dev/articles/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика некоторых браузеров. Объединенные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/docs/v2/).
+Мы предоставляем скомпилированные CSS и JS (`bootstrap.*`), а также скомпилированные и минифицированные CSS и JS (`bootstrap.min.*`). [Исходные карты](https://web.dev/articles/source-maps) (`bootstrap.*.map`) доступны для использования с инструментами разработчика определенных браузеров. Связанные файлы JS (`bootstrap.bundle.js` и минифицированные `bootstrap.bundle.min.js`) включают [Popper](https://popper.js.org/docs/v2/).
 
 
 ## Ошибки и запросы улучшений
@@ -142,18 +142,18 @@
 
 ## Документация
 
-Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.ru/) и размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документацию также можно запускать локально.
+Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, собрана с помощью [Astro](https://astro.build/) и публично размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документацию также можно запустить локально.
 
 Поиск документации осуществляется с помощью [Algolia's DocSearch](https://docsearch.algolia.com/).
 
 ### Запуск документации локально
 
-1. Выполните `npm install` для установки зависимостей Node.js, включая Hugo (конструктор сайтов).
-2. Выполните `npm run test` (или конкретный сценарий npm) для восстановления распределенных файлов CSS и JavaScript, а также ресурсов нашей документации.
-3. Из корневой директории `/bootstrap`, выполните в командной строке `npm run docs-serve`.
-4. Откройте `http://localhost:9001/` в вашем браузере, и вуаля.
+1. Запустите `npm install`, чтобы установить зависимости Node.js, включая Astro (конструктор сайтов).
+2. Запустите `npm run test` (или определенный скрипт npm), чтобы перестроить распределенные файлы CSS и JavaScript, а также наши ресурсы документации.
+3. Из корневого каталога `/bootstrap` запустите `npm run docs-serve` в командной строке.
+4. Откройте `http://localhost:9001/` в своем браузере, и вуаля.
 
-Узнайте больше об использовании Hugo, прочитав его [документацию](https://gohugo.io/documentation/).
+Узнайте больше об использовании Astro, прочитав его [документацию](https://docs.astro.build/en/getting-started/).
 
 ### Документация к предыдущим выпускам
 
@@ -173,7 +173,7 @@
 
 ## Сообщество
 
-Получайте новости о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
+Получайте обновления о разработке Bootstrap и общайтесь с разработчиками проекта и членами сообщества.
 
 - Присоединиться к чату [@getbootstrap_ru в Телеграм](https://t.me/getbootstrap_ru).
 - Следите за [@getbootstrap в Twitter](https://x.com/getbootstrap).

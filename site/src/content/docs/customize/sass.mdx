@@ -1,0 +1,363 @@
+---
+title: Sass
+description: Используйте наши исходные файлы Sass, чтобы воспользоваться переменными, картами, миксинами и функциями, которые помогут вам быстрее создавать и настраивать свой проект.
+toc: true
+---
+
+Используйте наши исходные файлы Sass, чтобы использовать переменные, карты, миксины и многое другое.
+
+<Callout type="warning">
+Предупреждения об устаревании Sass отображаются при компиляции исходных файлов Sass с последними версиями Dart Sass. Это не мешает компиляции или использованию Bootstrap. Мы [работаем над долгосрочным исправлением]([[config:repo]]/issues/40962), но в то же время эти уведомления об устаревании можно игнорировать.
+</Callout>
+
+## Файловая структура
+
+По возможности избегайте изменения основных файлов Bootstrap. Для Sass это означает создание собственной таблицы стилей, которая импортирует Bootstrap, чтобы вы могли изменять и расширять ее. Если вы используете менеджер пакетов, например npm, у вас будет такая структура файлов:
+
+```text
+your-project/
+├── scss/
+│   └── custom.scss
+└── node_modules/
+│   └── bootstrap/
+│       ├── js/
+│       └── scss/
+└── index.html
+```
+
+Если вы загрузили наши исходные файлы и не используете менеджер пакетов, вам нужно будет вручную создать что-то похожее на эту структуру, сохранив исходные файлы Bootstrap отдельно от ваших собственных.
+
+```text
+your-project/
+├── scss/
+│   └── custom.scss
+├── bootstrap/
+│   ├── js/
+│   └── scss/
+└── index.html
+```
+
+## Импорт
+
+В вашем `custom.scss` вы импортируете исходные файлы Bootstrap Sass. У вас есть два варианта: включить весь Bootstrap или выбрать нужные вам части. Мы рекомендуем последний вариант, хотя имейте в виду, что существуют некоторые требования и зависимости между нашими компонентами. Вам также нужно будет включить немного JavaScript для наших плагинов.
+
+```scss
+// Custom.scss
+// Вариант А: Включите весь Bootstrap
+
+// Include any default variable overrides here (though functions won’t be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+```
+
+```scss
+// Custom.scss
+// Вариант Б. Включите части Bootstrap
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Включите сюда любые переопределения переменных по умолчанию
+
+// 3. Включите остальные требуемые таблицы стилей Bootstrap (включая любые отдельные таблицы стилей цветового режима)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Включите сюда любые переопределения карт по умолчанию
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. При желании включите любые другие необязательные части таблиц стилей; приведенный ниже список не включает все доступные таблицы стилей.
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+// ...
+
+// 7. При желании добавьте API утилит в последнюю очередь, чтобы генерировать классы на основе карты Sass в `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Добавьте сюда дополнительный пользовательский код
+```
+
+С этой настройкой, Вы можете приступить к изменению любых переменных и карт Sass в Вашем `custom.scss`. Вы также можете начать добавлять части Bootstrap в разделе `// Optional` по мере необходимости. Мы предлагаем использовать полный стек импорта из нашего файла `bootstrap.scss` в качестве отправной точки.
+
+## Компиляция
+
+Чтобы использовать ваш пользовательский код Sass как CSS в браузере, вам нужен компилятор Sass. Sass поставляется как пакет CLI, но вы также можете скомпилировать его с другими инструментами сборки, такими как [Gulp](https://gulpjs.com/) или [Webpack](https://webpack.js.org/), или с приложениями GUI. Некоторые IDE также имеют встроенные компиляторы Sass или как загружаемые расширения.
+
+Нам нравится использовать CLI для компиляции нашего Sass, но вы можете использовать любой метод, который вы предпочитаете. Из командной строки выполните следующее:
+
+```sh
+# Install Sass globally
+npm install -g sass
+
+# Watch your custom Sass for changes and compile it to CSS
+sass --watch ./scss/custom.scss ./css/custom.css
+```
+
+Узнайте больше о вариантах на [sass-lang.com/install](https://sass-lang.com/install/) и [компиляции с помощью VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+
+<Callout>
+**Используете Bootstrap с другим инструментом сборки?** Рассмотрите возможность прочтения наших руководств по компиляции с помощью [Webpack]([[docsref:/getting-started/webpack]]), [Parcel]([[docsref:/getting-started/parcel]]) или [Vite]([[docsref:/getting-started/vite]]). У нас также есть готовые к производству демо в [нашем репозитории примеров на GitHub](https://github.com/twbs/examples).
+</Callout>
+
+## Включение
+
+После компиляции CSS вы можете включить его в свои файлы HTML. Внутри вашего `index.html` вы захотите включить ваш скомпилированный файл CSS. Обязательно обновите путь к вашему скомпилированному файлу CSS, если вы его изменили.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Bootstrap</title>
+    <link href="/css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
+</html>
+```
+
+## Значения переменных по умолчанию
+
+Каждая переменная Sass в Bootstrap включает флаг `!default`, позволяющий вам переопределить значение переменной по умолчанию в вашем собственном Sass без изменения исходного кода Bootstrap. Скопируйте и вставьте переменные по мере необходимости, измените их значения и удалите флаг `!default`. Если переменная уже была назначена, то она не будет повторно назначена значениями по умолчанию в Bootstrap.
+
+Полный список переменных Bootstrap вы найдете в `scss/_variables.scss`. Некоторые переменные установлены в `null`, эти переменные не выводят свойство, если они не переопределены в вашей конфигурации.
+
+Переопределения переменных должны происходить после импорта наших функций, но до остального импорта.
+
+Вот пример, который изменяет `background-color` и `color` для `<body>` при импорте и компиляции Bootstrap через npm:
+
+```scss
+// Обязательные
+@import "../node_modules/bootstrap/scss/functions";
+
+// Переопределения переменных по умолчанию
+$body-bg: #000;
+$body-color: #111;
+
+// Обязательные
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Дополнительные компоненты Bootstrap здесь
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+```
+
+При необходимости повторите для любой переменной в Bootstrap, включая глобальные параметры ниже.
+
+<Callout name="info-npm-starter" />
+
+## Карты и циклы
+
+Bootstrap включает в себя несколько карт Sass, пар ключ-значение, которые упрощают создание семейств связанных CSS. Мы используем карты Sass для наших цветов, контрольных точек сетки и многого другого. Как и переменные Sass, все карты Sass включают флаг `! Default` и могут быть переопределены и расширены.
+
+Некоторые из наших Sass-карт по умолчанию объединены в пустые. Это сделано для того, чтобы упростить расширение данной карты Sass, но это происходит за счет того, что _удаление_ элементов с карты становится немного сложнее.
+
+### Изменение карты
+
+Все переменные в карте `$theme-colors` определены как отдельные переменные. Чтобы изменить существующий цвет в нашей карте `$theme-colors`, добавьте следующее в свой пользовательский файл Sass:
+
+```scss
+$primary: #0074d9;
+$danger: #ff4136;
+```
+
+Позже эти переменные задаются в карте `$theme-colors` Bootstrap:
+
+```scss
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+```
+
+### Добавление на карту
+
+Добавьте новые цвета в `$theme-colors` или любую другую карту, создав новую карту Sass с Вашими пользовательскими значениями и объединяя ее с исходной картой. В этом случае мы создадим новую карту `$custom-colors` и объединим ее с `$theme-colors`.
+
+```scss
+// Создайте свою карту
+$custom-colors: (
+  "custom-color": #900
+);
+
+// Объедините карты
+$theme-colors: map-merge($theme-colors, $custom-colors);
+```
+
+### Удаление с карты
+
+Чтобы удалить цвета из `$theme-colors` или любой другой карты, используйте `map-remove`. Имейте в виду, что вы должны вставить `$theme-colors` между нашими требованиями сразу после его определения в `variables` и до его использования в `maps`:
+
+```scss
+// Обязательные
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Необязательные
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+```
+
+## Обязательные ключи
+
+Bootstrap предполагает наличие некоторых определенных ключей в картах Sass, поскольку мы использовали и расширяли их сами. При настройке включенных карт вы можете столкнуться с ошибками, когда используется определенный ключ карты Sass.
+
+Например, мы используем ключи `primary`, `success` и `danger` из `$theme-colors` для ссылок, кнопок и состояний форм. Замена значений этих ключей не должна вызывать проблем, но их удаление может вызвать проблемы компиляции Sass. В этих случаях вам нужно будет изменить код Sass, который использует эти значения.
+
+## Функции
+
+### Цвета
+
+Наряду с [картами Sass]([[docsref:/customize/color#color-sass-maps]]) у нас есть цвета темы, которые также можно использовать как отдельные переменные, например `$primary`.
+
+```scss
+.custom-element {
+  color: $gray-100;
+  background-color: $dark;
+}
+```
+
+Вы можете осветлить или затемнить цвета с помощью функций Bootstrap `tint-color()` и `shade-color()`. Эти функции будут смешивать цвета с черным или белым, в отличие от собственных функций Sass `lighten()` и `darken()`, которые будут изменять яркость на фиксированную величину, что часто не приводит к желаемому эффекту.
+
+`shift-color()` объединяет эти две функции, закрашивая цвет, если вес положительный, и тонируя цвет, если вес отрицательный.
+
+<ScssDocs name="color-functions" file="scss/_functions.scss" />
+
+На практике вам нужно вызвать функцию и передать параметры цвета и веса.
+
+```scss
+.custom-element {
+  color: tint-color($primary, 10%);
+}
+
+.custom-element-2 {
+  color: shade-color($danger, 30%);
+}
+
+.custom-element-3 {
+  color: shift-color($success, 40%);
+  background-color: shift-color($success, -60%);
+}
+```
+
+### Цветовой контраст
+
+Чтобы соответствовать [Руководству по обеспечению доступности веб-контента (WCAG)](https://www.w3.org/TR/WCAG/) требованиям к контрастности, авторы **должны** обеспечить минимальный [цветовой контраст текста 4.5:1 ](https://www.w3.org/TR/WCAG/#contrast-minimum) и минимальный [цветовой контраст не текста 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast), за очень немногими исключениями.
+
+Чтобы помочь с этим, мы включили функцию `color-contrast` в Bootstrap. Она использует [алгоритм контрастности WCAG](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) для расчета порогов контрастности на основе [относительной яркости](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) в цветовом пространстве `sRGB` для автоматического возврата светлого (`#fff`), темного (`#212529`) или черного (`#000`) контрастного цвета на основе указанного базового цвета. Эта функция особенно полезна для миксинов или циклов, где вы генерируете несколько классов.
+
+Например, чтобы сгенерировать образцы цвета из нашей карты `$theme-colors`:
+
+```scss
+@each $color, $value in $theme-colors {
+  .swatch-#{$color} {
+    color: color-contrast($value);
+  }
+}
+```
+
+Его также можно использовать для одноразового использования контраста:
+
+```scss
+.custom-element {
+  color: color-contrast(#000); // вернет `color: #fff`
+}
+```
+
+Вы также можете указать базовый цвет с помощью наших функций цветовой карты:
+
+```scss
+.custom-element {
+  color: color-contrast($dark); // вернет `color: #fff`
+}
+```
+
+### Escape SVG
+
+Мы используем функцию `escape-svg` для экранирования символов `<`, `>` и `#` для фоновых изображений SVG. При использовании функции `escape-svg` необходимо указывать URI данных.
+
+### Функции сложения и вычитания
+
+Мы используем функции `add` и `subtract` для обертывания функции CSS `calc`. Основная цель этих функций — избежать ошибок, когда «безразмерное» значение `0` передается в выражение `calc`. Выражения вроде `calc(10px - 0)` вернут ошибку во всех браузерах, несмотря на то, что они математически корректны.
+
+Пример, где расчет действителен:
+
+```scss
+$border-radius: .25rem;
+$border-width: 1px;
+
+.element {
+  // Вывод calc(.25rem - 1px) действителен
+  border-radius: calc($border-radius - $border-width);
+}
+
+.element {
+  // Выведет то же, что и выше calc(.25rem - 1px)
+  border-radius: subtract($border-radius, $border-width);
+}
+```
+
+Пример неверного расчета:
+
+```scss
+$border-radius: .25rem;
+$border-width: 0;
+
+.element {
+  // Вывод calc(.25rem - 0) недействителен
+  border-radius: calc($border-radius - $border-width);
+}
+
+.element {
+  // Вывод .25rem
+  border-radius: subtract($border-radius, $border-width);
+}
+```
+
+## Миксины
+
+В нашем каталоге `scss/mixins/` есть множество миксинов, которые являются основными частями Bootstrap, а также могут использоваться в вашем собственном проекте.
+
+### Цветовые схемы
+
+Сокращенный миксин для медиа-запроса `prefers-color-scheme` доступен с поддержкой цветовых схем `light` и `dark`. См. [документацию по цветовым режимам]([[docsref:/customize/color-modes]]) для получения информации о нашем миксине цветового режима.
+
+<ScssDocs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" />
+
+```scss
+.custom-element {
+  @include color-scheme(light) {
+    // Insert light mode styles here
+  }
+
+  @include color-scheme(dark) {
+    // Вставьте сюда стили темного режима
+  }
+}
+```

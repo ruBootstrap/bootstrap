@@ -1,0 +1,42 @@
+---
+title: Вертикальное выравнивание
+description: Легко изменяйте вертикальное выравнивание элементов inline, inline-block, inline-table и ячеек таблицы.
+---
+
+Измените выравнивание элементов с помощью утилит [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align). Обратите внимание, что vertical-align влияет только на элементы inline, inline-block, inline-table и table cell elements.
+
+При необходимости выберите `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` и `.align-text-top`.
+
+Для вертикального центрирования нестрочного содержимого (например, `<div>` и т. д.) используйте наши [утилиты flex box]([[docsref:/utilities/flex#align-items]]).
+
+Со строчными элементами:
+
+<Example code={`<span class="align-baseline">baseline</span>
+<span class="align-top">top</span>
+<span class="align-middle">middle</span>
+<span class="align-bottom">bottom</span>
+<span class="align-text-top">text-top</span>
+<span class="align-text-bottom">text-bottom</span>`} />
+
+С ячейками таблицы:
+
+<Example code={`<table style="height: 100px;">
+    <tbody>
+      <tr>
+        <td class="align-baseline">baseline</td>
+        <td class="align-top">top</td>
+        <td class="align-middle">middle</td>
+        <td class="align-bottom">bottom</td>
+        <td class="align-text-top">text-top</td>
+        <td class="align-text-bottom">text-bottom</td>
+      </tr>
+    </tbody>
+  </table>`} />
+
+## CSS
+
+### Sass API утилиты
+
+Утилиты вертикального выравнивания объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-vertical-align" file="scss/_utilities.scss" />

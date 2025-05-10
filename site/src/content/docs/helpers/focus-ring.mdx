@@ -1,0 +1,57 @@
+---
+title: Кольцо фокусировки
+description: Вспомогательные классы, которые позволяют добавлять и изменять пользовательские стили кольца фокусировки для элементов и компонентов.
+toc: true
+added:
+  version: "5.3"
+---
+
+import { getData } from '@libs/data'
+
+Помощник `.focus-ring` удаляет `outline` по умолчанию на `:focus`, заменяя его на `box-shadow`, который можно настраивать более широко. Новая тень состоит из серии переменных CSS, унаследованных от уровня `:root`, которые можно изменять для любого элемента или компонента.
+
+## Пример
+
+Нажмите непосредственно на ссылку ниже, чтобы увидеть кольцо фокусировки в действии, или в примере ниже, а затем нажмите <kbd>Tab</kbd>.
+
+<Example code={`<a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2">
+    Специальное кольцо фокусировки
+  </a>`} />
+
+## Кастомизация
+
+Измените стиль кольца фокусировки с помощью наших переменных CSS, переменных Sass, утилит или пользовательских стилей.
+
+### CSS переменные
+
+При необходимости измените переменные CSS `--bs-focus-ring-*`, чтобы изменить внешний вид по умолчанию.
+
+<Example code={`<a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-color: rgba(var(--bs-success-rgb), .25)">
+    Зеленое кольцо фокусировки
+  </a>`} />
+
+`.focus-ring` устанавливает стили через глобальные переменные CSS, которые можно переопределить для любого родительского элемента, как показано выше. Эти переменные генерируются из их аналогов переменных Sass.
+
+<ScssDocs name="root-focus-variables" file="scss/_root.scss" />
+
+По умолчанию нет `--bs-focus-ring-x`, `--bs-focus-ring-y` или `--bs-focus-ring-blur`, но мы предоставляем переменные CSS с запасными вариантами. к начальным значениям `0`. Измените их, чтобы изменить внешний вид по умолчанию.
+
+<Example code={`<a href="#" class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2" style="--bs-focus-ring-x: 10px; --bs-focus-ring-y: 10px; --bs-focus-ring-blur: 4px">
+    Размытое смещенное кольцо фокусировки
+  </a>`} />
+
+### Sass переменные
+
+Настройте переменные кольца фокусировки Sass, чтобы изменить все использование стилей кольца фокусировки в вашем проекте на базе Bootstrap.
+
+<ScssDocs name="focus-ring-variables" file="scss/_variables.scss" />
+
+### Sass API утилиты
+
+В дополнение к `.focus-ring` у нас есть несколько утилит `.focus-ring-*` для изменения значений по умолчанию для вспомогательных классов. Измените цвет с помощью любого из наших [цветов темы]([[docsref:/customize/color#theme-colors]]). Обратите внимание, что светлые и темные варианты могут быть видны не на всех фоновых цветах, учитывая текущую поддержку цветового режима.
+
+<Example code={getData('theme-colors').map((themeColor) => `<p><a href="#" class="d-inline-flex focus-ring focus-ring-${themeColor.name} py-1 px-2 text-decoration-none border rounded-2">${themeColor.title} focus</a></p>`)} />
+
+Утилиты фокусировочного кольца объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+
+<ScssDocs name="utils-focus-ring" file="scss/_utilities.scss" />

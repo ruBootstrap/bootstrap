@@ -1,0 +1,662 @@
+---
+title: Навигация и вкладки
+description: Документация и примеры использования включенных навигационных компонентов Bootstrap.
+aliases: "/docs/[[config:docs_version]]/components/navs/"
+toc: true
+---
+
+## Простая навигация
+
+Навигация, доступная в Bootstrap, имеет общую разметку и стили, от базового класса `.nav` до активного и отключенного состояний. Поменяйте местами классы модификаторов, чтобы переключаться между каждым стилем.
+
+Базовый компонент `.nav` построен на основе `flexbox` и обеспечивает прочную основу для создания всех типов компонентов навигации. Он включает в себя некоторые переопределения стиля (для работы со списками), некоторые отступы для ссылок для больших областей попадания и базовый отключенный стиль.
+
+<Callout>
+Базовый компонент `.nav` не включает состояние `.active`. В следующих примерах класс включен, в основном, для того, чтобы продемонстрировать, что этот конкретный класс не вызывает никакого специального стиля.
+
+Чтобы передать активное состояние вспомогательным технологиям, используйте атрибут `aria-current` — используя значение `page` для текущей страницы или `true` для текущего элемента в наборе.
+</Callout>
+
+<Example code={`<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+Классы используются повсюду, поэтому Ваша разметка может быть очень гибкой. Используйте `<ul>`, как указано выше, `<ol>`, если порядок Ваших элементов важен, или сверните свой собственный с элементом `<nav>`. Поскольку в файле `.nav` используется `display: flex`, навигационные ссылки ведут себя так же, как элементы навигации, но без дополнительной разметки.
+
+<Example code={`<nav class="nav">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </nav>`} />
+
+## Доступные стили
+
+Измените стиль компонента `.nav` с помощью модификаторов и утилит. Смешивайте и сочетайте по мере необходимости или создавайте свои собственные.
+
+### Горизонтальное выравнивание
+
+Измените горизонтальное выравнивание навигации с помощью [утилит флексбокс]([[docsref:/utilities/flex#justify-content]]). По умолчанию навигация выравнивается по левому краю, но вы можете легко изменить ее на центральную или правую.
+
+Выравнивание по центру с помощью `.justify-content-center`:
+
+<Example code={`<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+Выравнивание по правому краю с помощью `.justify-content-end`:
+
+<Example code={`<ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+### Вертикальное
+
+Сгруппируйте Вашу навигацию, изменив направление гибкого элемента с помощью утилиты `.flex-column`. Нужно наложить их на одни окна просмотра, но не на другие? Используйте адаптивные версии (например, `.flex-sm-column`).
+
+<Example code={`<ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+Как всегда, вертикальная навигация возможна и без `<ul>`.
+
+<Example code={`<nav class="nav flex-column">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </nav>`} />
+
+### Вкладки
+
+Берет базовую навигацию сверху и добавляет класс `.nav-tabs` для создания интерфейса с вкладками. Используйте их для создания областей с вкладками с помощью нашего [подключаемого модуля JavaScript](#поведение-javascript).
+
+<Example code={`<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+### Таблетки
+
+Возьмите тот же HTML, но используйте вместо него `.nav-pills`:
+
+<Example code={`<ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+### Подчеркивание
+
+Возьмите тот же HTML, но вместо этого используйте `.nav-underline`:
+
+<Example code={`<ul class="nav nav-underline">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+### Заполнение и выравнивание
+
+Заставьте содержимое `.nav` расширить всю доступную ширину с помощью одного из двух классов-модификаторов. Чтобы пропорционально заполнить все доступное пространство вашими `.nav-item`, используйте `.nav-fill`. Обратите внимание, что все горизонтальное пространство занято, но не все элементы навигации имеют одинаковую ширину.
+
+<Example code={`<ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Much longer nav link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+При использовании навигации на основе `<nav>` Вы можете смело опускать `.nav-item`, поскольку для стилизации элементов `<a>` требуется только `.nav-link`.
+
+<Example code={`<nav class="nav nav-pills nav-fill">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link" href="#">Much longer nav link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </nav>`} />
+
+Для элементов одинаковой ширины используйте `.nav-justified`. Все горизонтальное пространство будет занято навигационными ссылками, но в отличие от `.nav-fill` выше, каждый элемент навигации будет одинаковой ширины.
+
+<Example code={`<ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Much longer nav link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+Подобно примеру `.nav-fill` с использованием навигации на основе `<nav>`.
+
+<Example code={`<nav class="nav nav-pills nav-justified">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link" href="#">Much longer nav link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  </nav>`} />
+
+## Работа с утилитами flex
+
+Если вам нужны адаптивные вариации навигации, рассмотрите возможность использования серии [утилиты flexbox]([[docsref:/utilities/flex]]). Хотя эти утилиты более многословны, они предлагают большую настройку в адаптивных контрольных точках. В примере ниже наша навигация будет размещена на самой низкой контрольной точке, а затем адаптирована к горизонтальному макету, который заполнит доступную ширину, начиная с малой контрольной точки.
+
+<Example code={`<nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+    <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
+  </nav>`} />
+
+## Что касается доступности
+
+Если вы используете navs для предоставления панели навигации, обязательно добавьте `role="navigation"` в наиболее логичный родительский контейнер `<ul>` или оберните элемент `<nav>` вокруг всей навигации. Не добавляйте роль к самому `<ul>`, так как это помешает вспомогательным технологиям объявить его как реальный список.
+
+Обратите внимание, что панели навигации, даже если они визуально стилизованы как вкладки с классом `.nav-tabs`, **не** должны иметь значение `role="tablist"`, `role="tab"` или `role="tabpanel"` атрибуты. Они подходят только для интерфейсов с динамическими вкладками, как описано в [Шаблон вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). Смотрите [поведение JavaScript](#javascript-behavior) для динамических интерфейсов с вкладками в этом разделе в качестве примера. Атрибут `aria-current` не требуется в интерфейсах с динамическими вкладками, поскольку наш JavaScript обрабатывает выбранное состояние, добавляя `aria-selected="true"` на активной вкладке.
+
+## Использование выпадающих списков
+
+Добавьте раскрывающиеся меню с помощью небольшого дополнительного HTML-кода и [плагина JavaScript dropdowns]([[docsref:/components/dropdowns#usage]]).
+
+### Вкладки с выпадающими списками
+
+<Example code={`<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+### Таблетки с выпадающими списками
+
+<Example code={`<ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>`} />
+
+## CSS
+
+### Переменные
+
+<AddedIn version="5.2.0" />
+
+В рамках развивающегося подхода Bootstrap к переменным CSS, navs теперь используют локальные переменные CSS в `.nav`, `.nav-tabs` и `.nav-pills` для улучшенной настройки в реальном времени. Значения для переменных CSS устанавливаются через Sass, поэтому настройка Sass также по-прежнему поддерживается.
+
+В базовом классе `.nav`:
+
+<ScssDocs name="nav-css-vars" file="scss/_nav.scss" />
+
+В классе модификатора `.nav-tabs`:
+
+<ScssDocs name="nav-tabs-css-vars" file="scss/_nav.scss" />
+
+В классе модификатора `.nav-pills`:
+
+<ScssDocs name="nav-pills-css-vars" file="scss/_nav.scss" />
+
+<AddedIn version="5.3.0" />
+
+В классе модификатора `.nav-underline`:
+
+<ScssDocs name="nav-underline-css-vars" file="scss/_nav.scss" />
+
+### Sass переменные
+
+<ScssDocs name="nav-variables" file="scss/_variables.scss" />
+
+## Поведение JavaScript
+
+Используйте плагин JavaScript вкладок - включите его индивидуально или через скомпилированный файл `bootstrap.js` - чтобы расширить наши навигационные вкладки и таблетки для создания вкладок локального контента.
+
+<div class="bd-example">
+  <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Главная</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Профиль</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Контакт</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Отключен</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    </div>
+  </div>
+</div>
+
+```html
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Главная</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Профиль</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Контакт</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Отключен</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+</div>
+```
+
+Чтобы соответствовать вашим потребностям, это работает с разметкой на основе `<ul>`, как показано выше, или с любой произвольной разметкой «сделай сам». Обратите внимание, что если вы используете `<nav>`, вам не следует добавлять `role="tablist"` непосредственно к нему, так как это переопределит собственную роль элемента как навигационного ориентира. Вместо этого переключитесь на альтернативный элемент (в примере ниже, простой `<div>`) и оберните `<nav>` вокруг него.
+
+<div class="bd-example">
+  <nav>
+    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
+      <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Отключен</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    </div>
+  </div>
+</div>
+
+```html
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
+    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Отключен</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+</div>
+```
+
+Плагин вкладок также работает с таблетками.
+
+<div class="bd-example">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Отключен</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
+      <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    </div>
+  </div>
+</div>
+
+```html
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Отключен</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+</div>
+```
+
+И с вертикальными таблетками. В идеале для вертикальных вкладок вы также должны добавить `aria-orientation="vertical"` в контейнер списка вкладок.
+
+<div class="bd-example">
+  <div class="d-flex align-items-start">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</button>
+      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
+      <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Отключен</button>
+      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</button>
+      <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</button>
+    </div>
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+        <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      </div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+        <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      </div>
+      <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
+        <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+      </div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+        <p>This is some placeholder content the <strong>Messages tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+        <p>This is some placeholder content the <strong>Settings tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Отключен</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</button>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+  </div>
+</div>
+```
+
+### Доступность
+
+Динамические интерфейсы с вкладками, как описано в [Шаблон вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), требуют `role="tablist"`, `role="tab"`, `role="tabpanel"` и дополнительные `aria-` атрибуты, чтобы передать их структуру, функциональность и текущее состояние пользователям вспомогательных технологий (таких как программы чтения с экрана). Мы рекомендуем использовать элементы `<button>` для вкладок, так как это элементы управления, которые запускают динамическое изменение, а не ссылки, ведущие на новую страницу или место.
+
+В соответствии с шаблоном ARIA Authoring Practices фокус клавиатуры получает только текущая активная вкладка. При инициализации плагина JavaScript он установит `tabindex="-1"` для всех неактивных элементов управления вкладками. После того, как текущая активная вкладка получит фокус, клавиши курсора активируют предыдущую/следующую вкладку. Клавиши <kbd>Home</kbd> и <kbd>End</kbd> активируют первую и последнюю вкладки соответственно. Плагин изменит [перемещающийся `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) соответствующим образом. Однако обратите внимание, что плагин JavaScript не различает горизонтальные и вертикальные списки вкладок, когда дело касается взаимодействия клавиш курсора: независимо от ориентации списка вкладок, как курсор вверх *и* влево переходят на предыдущую вкладку, так и курсор вниз *и* вправо переходят на следующую вкладку.
+
+<Callout type="warning">
+В целом, чтобы облегчить навигацию с помощью клавиатуры, рекомендуется сделать сами панели вкладок фокусируемыми, если только первый элемент, содержащий значимый контент внутри панели вкладок, уже не фокусируется. Плагин JavaScript не пытается обрабатывать этот аспект — где это уместно, вам нужно будет явно сделать ваши панели вкладок фокусируемыми, добавив `tabindex="0"` в вашу разметку.
+</Callout>
+
+<Callout type="danger">
+Плагин JavaScript Tab **не** поддерживает интерфейсы с вкладками, содержащие раскрывающиеся меню, поскольку они вызывают проблемы как с удобством использования, так и с доступностью. С точки зрения удобства использования тот факт, что элемент-триггер отображаемой вкладки не виден сразу (так как он находится внутри закрытого раскрывающегося меню), может вызвать путаницу. С точки зрения доступности в настоящее время нет разумного способа сопоставить этот тип конструкции со стандартным шаблоном WAI ARIA, что означает, что его нельзя легко сделать понятным для пользователей вспомогательных технологий.
+</Callout>
+
+### Использование атрибутов данных
+
+Вы можете активировать навигацию по вкладкам или таблеткам без написания кода JavaScript, просто указав для элемента `data-bs-toggle="tab"` или `data-bs-toggle="pill"`. Используйте эти атрибуты данных в `.nav-tabs` или `.nav-pills`.
+
+```html
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Сообщения</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Настройки</button>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...</div>
+  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...</div>
+</div>
+```
+
+### Через JavaScript
+
+Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
+
+```js
+const triggerTabList = document.querySelectorAll('#myTab button')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+```
+
+Вы можете активировать отдельные вкладки несколькими способами:
+
+```js
+const triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
+bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+
+const triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
+bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+```
+
+### Эффект затухания
+
+Чтобы вкладки постепенно появлялись, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
+
+```html
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...</div>
+</div>
+```
+
+### Методы
+
+<Callout name="danger-async-methods" type="danger" />
+
+Активирует ваш контент как элемент вкладки.
+
+Вы можете создать экземпляр вкладки с помощью конструктора, например:
+
+```js
+const bsTab = new bootstrap.Tab('#myTab')
+```
+
+<BsTable>
+| Метод | Описание |
+| --- | --- |
+| `dispose` | Уничтожает вкладку элемента. |
+| `getInstance` | Статический метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM. Его можно использовать следующим образом: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Статический метод, возвращающий экземпляр вкладки, связанный с элементом DOM, или создающий новый, если он не был инициализирован. Его можно использовать следующим образом: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Выбирает указанную вкладку и показывает связанную с ней панель. Любая другая вкладка, которая была выбрана ранее, становится невыбранной, а связанная с ней панель скрывается. **Возвращает вызывающему объекту до того, как панель вкладок будет фактически показана** (т. е. до того, как произойдет событие `shown.bs.tab`). |
+</BsTable>
+
+### События
+
+При отображении новой вкладки события запускаются в следующем порядке:
+
+1. `hide.bs.tab` (на текущей активной вкладке)
+2. `show.bs.tab` (на вкладке для показа)
+3. `hidden.bs.tab` (на предыдущей активной вкладке такая же, как для события `hide.bs.tab`)
+4. `shown.bs.tab` (на только что активированной вкладке, такой же, как для события `show.bs.tab`)
+
+Если ни одна вкладка еще не была активной, то события `hide.bs.tab` и `hidden.bs.tab` не запускаются.
+
+<BsTable>
+| Тип события | Описание |
+| --- | --- |
+| `hide.bs.tab` | Это событие срабатывает, когда должна быть показана новая вкладка (и, таким образом, предыдущая активная вкладка должна быть скрыта). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на текущую активную вкладку и новую вкладку, которая скоро станет активной, соответственно. |
+| `hidden.bs.tab` | Это событие срабатывает после показа новой вкладки (и, таким образом, предыдущая активная вкладка скрывается). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на предыдущую активную вкладку и новую активную вкладку, соответственно. |
+| `show.bs.tab` | Это событие срабатывает при показе вкладки, но до показа новой вкладки. Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
+| `shown.bs.tab` | Это событие срабатывает при показе вкладки после показа вкладки. Используйте `event.target` и `event.relatedTarget` для нацеливания на активную вкладку и предыдущую активную вкладку (если доступно) соответственно.
+</BsTable>
+
+```js
+const tabEl = document.querySelector('button[data-bs-toggle="tab"]')
+tabEl.addEventListener('shown.bs.tab', event => {
+  event.target // newly activated tab
+  event.relatedTarget // previous active tab
+})
+```
