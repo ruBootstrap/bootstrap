@@ -9,7 +9,7 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 20
+  NODE: 22
 
 permissions:
   contents: read
@@ -47,4 +47,4 @@ jobs:
           paths: _site
           recurse: true
           verbosity: error
-          skip: "^(?!http://localhost)"
+          skip: "^http://localhost"
