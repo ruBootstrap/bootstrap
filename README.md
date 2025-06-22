@@ -46,12 +46,12 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.6.zip)
+- [Скачать последнюю версию](https://github.com/twbs/bootstrap/archive/v5.3.7.zip)
 - Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.6`
-- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.6`
-- Установить с помощью [Bun](https://bun.sh/): `bun add bootstrap@v5.3.6`
-- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.6`
+- Установить с помощью [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.7`
+- Установить с помощью [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.7`
+- Установить с помощью [Bun](https://bun.sh/): `bun add bootstrap@v5.3.7`
+- Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.7`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
@@ -149,9 +149,9 @@
 ### Запуск документации локально
 
 1. Запустите `npm install`, чтобы установить зависимости Node.js, включая Astro (конструктор сайтов).
-2. Запустите `npm run test` (или определенный скрипт npm), чтобы перестроить распределенные файлы CSS и JavaScript, а также наши ресурсы документации.
+2. Запустите `npm run test` (или специальный скрипт npm), чтобы перестроить распределенные файлы CSS и JavaScript, а также наши ресурсы документации.
 3. Из корневого каталога `/bootstrap` запустите `npm run docs-serve` в командной строке.
-4. Откройте `http://localhost:9001/` в своем браузере, и вуаля.
+4. Откройте <http://localhost:9001> в своем браузере, и вуаля.
 
 Узнайте больше об использовании Astro, прочитав его [документацию](https://docs.astro.build/en/getting-started/).
 
