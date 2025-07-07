@@ -18,44 +18,43 @@ import { getVersionedDocsPath } from '@libs/path'
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2">
-            Designed and built with all the love in the world by the <a href={getVersionedDocsPath('about/team')}
-              >Bootstrap team</a
-            > with the help of <a href={`${getConfig().repo}/graphs/contributors`}>our contributors</a>.
+            Разработано и создано с любовью командой <a href={getVersionedDocsPath('about/team')}>Bootstrap</a>
+            при поддержке <a href={`${getConfig().repo}/graphs/contributors`}>наших участников</a>.
           </li>
           <li class="mb-2">
-            Code licensed <a href={`${getConfig().repo}/blob/main/LICENSE`} target="_blank" rel="license noopener"
+            Код лицензирован по <a href={`${getConfig().repo}/blob/main/LICENSE`} target="_blank" rel="license noopener"
               >MIT</a
-            >, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"
+            >, документация — <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener"
               >CC BY 3.0</a
             >.
           </li>
-          <li class="mb-2">Currently v{getConfig().current_version}.</li>
+          <li class="mb-2">Текущая версия v{getConfig().current_version}.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-        <h5>Links</h5>
+        <h5>Ссылки</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="/">Home</a></li>
-          <li class="mb-2"><a href={getVersionedDocsPath('/')}>Docs</a></li>
-          <li class="mb-2"><a href={getVersionedDocsPath('examples')}>Examples</a></li>
-          <li class="mb-2"><a href={getConfig().icons}>Icons</a></li>
-          <li class="mb-2"><a href={getConfig().themes}>Themes</a></li>
-          <li class="mb-2"><a href={getConfig().blog}>Blog</a></li>
-          <li class="mb-2"><a href={getConfig().swag} target="_blank" rel="noopener">Swag Store</a></li>
+          <li class="mb-2"><a href="/">Главная</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('/')}>Документация</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('examples')}>Примеры</a></li>
+          <li class="mb-2"><a href={getConfig().icons}>Иконки</a></li>
+          <li class="mb-2"><a href={getConfig().themes}>Темы</a></li>
+          <li class="mb-2"><a href={getConfig().blog}>Блог</a></li>
+          <li class="mb-2"><a href={getConfig().swag} target="_blank" rel="noopener">Магазин сувениров</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Guides</h5>
+        <h5>Руководства</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href={getVersionedDocsPath('getting-started')}>Getting started</a></li>
-          <li class="mb-2"><a href={getVersionedDocsPath('examples/starter-template')}>Starter template</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('getting-started')}>Начало работы</a></li>
+          <li class="mb-2"><a href={getVersionedDocsPath('examples/starter-template')}>Шаблон старта</a></li>
           <li class="mb-2"><a href={getVersionedDocsPath('getting-started/webpack')}>Webpack</a></li>
           <li class="mb-2"><a href={getVersionedDocsPath('getting-started/parcel')}>Parcel</a></li>
           <li class="mb-2"><a href={getVersionedDocsPath('getting-started/vite')}>Vite</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Projects</h5>
+        <h5>Проекты</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
             <a href={`${getConfig().github_org}/bootstrap`} target="_blank" rel="noopener">Bootstrap 5</a>
@@ -63,24 +62,24 @@ import { getVersionedDocsPath } from '@libs/path'
           <li class="mb-2">
             <a href={`${getConfig().github_org}/bootstrap/tree/v4-dev`} target="_blank" rel="noopener">Bootstrap 4</a>
           </li>
-          <li class="mb-2"><a href={`${getConfig().github_org}/icons`} target="_blank" rel="noopener">Icons</a></li>
+          <li class="mb-2"><a href={`${getConfig().github_org}/icons`} target="_blank" rel="noopener">Иконки</a></li>
           <li class="mb-2"><a href={`${getConfig().github_org}/rfs`} target="_blank" rel="noopener">RFS</a></li>
           <li class="mb-2">
-            <a href={`${getConfig().github_org}/examples`} target="_blank" rel="noopener">Examples repo</a>
+            <a href={`${getConfig().github_org}/examples`} target="_blank" rel="noopener">Репозиторий примеров</a>
           </li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
-        <h5>Community</h5>
+        <h5>Сообщество</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href={`${getConfig().github_org}/bootstrap/issues`} target="_blank" rel="noopener">Issues</a>
+            <a href={`${getConfig().github_org}/bootstrap/issues`} target="_blank" rel="noopener">Проблемы</a>
           </li>
           <li class="mb-2">
-            <a href={`${getConfig().github_org}/bootstrap/discussions`} target="_blank" rel="noopener">Discussions</a>
+            <a href={`${getConfig().github_org}/bootstrap/discussions`} target="_blank" rel="noopener">Обсуждения</a>
           </li>
           <li class="mb-2">
-            <a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Corporate sponsors</a>
+            <a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Корпоративные спонсоры</a>
           </li>
           <li class="mb-2"><a href={getConfig().opencollective} target="_blank" rel="noopener">Open Collective</a></li>
           <li class="mb-2">

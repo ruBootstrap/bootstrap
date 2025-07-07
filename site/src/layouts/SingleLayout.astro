@@ -1,5 +1,4 @@
 ---
-import Ads from '@components/Ads.astro'
 import BaseLayout from '@layouts/BaseLayout.astro'
 
 interface Props {
@@ -21,7 +20,6 @@ const { description, title } = Astro.props
             <slot name="header-content" />
           </div>
           <div class="col-xl-4 d-lg-flex justify-content-xl-end">
-            <Ads />
           </div>
         </div>
       </div>

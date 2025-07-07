@@ -119,7 +119,7 @@
     "WCAG",
     "zindex"
   ],
-  "language": "en-US",
+  "language": "en-US,ru",
   "ignorePaths": [
     ".cspell.json",
     "dist/",

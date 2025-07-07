@@ -16,7 +16,7 @@ const { body_class, direction, extra_css, extra_js, html_class, include_js, titl
 const pageTitle = `${title} · ${getConfig().title} v${getConfig().docs_version}`
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
-const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', dir: 'rtl' } : { lang: 'en' }
+const htmlProps: HTMLAttributes<'html'> = direction === 'rtl' ? { lang: 'ar', dir: 'rtl' } : { lang: 'ru' }
 ---
 
 <!DOCTYPE html>

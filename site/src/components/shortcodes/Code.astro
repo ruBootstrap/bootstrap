@@ -57,8 +57,8 @@ if (filePath && fileMatch && codeToDisplay) {
 <script>
   import ClipboardJS from 'clipboard'
 
-  const btnTitle = 'Copy to clipboard'
-  const btnEdit = 'Edit on StackBlitz'
+  const btnTitle = 'Копировать в буфер обмена'
+  const btnEdit = 'Редактировать в StackBlitz'
 
   function snippetButtonTooltip(selector: string, title: string) {
     document.querySelectorAll(selector).forEach((btn) => {
@@ -90,7 +90,7 @@ if (filePath && fileMatch && codeToDisplay) {
       return
     }
 
-    tooltipBtn?.setContent({ '.tooltip-inner': 'Copied!' })
+    tooltipBtn?.setContent({ '.tooltip-inner': 'Скопировано!' })
 
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
@@ -115,7 +115,7 @@ if (filePath && fileMatch && codeToDisplay) {
 
   clipboard.on('error', (event) => {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-    const fallbackMsg = `Press ${modifierKey}C to copy`
+    const fallbackMsg = `Нажмите ${modifierKey}C для копирования`
     const tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
     tooltipBtn?.setContent({ '.tooltip-inner': fallbackMsg })

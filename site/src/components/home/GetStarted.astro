@@ -8,13 +8,13 @@ import Code from '@shortcodes/Code.astro'
   <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
     <svg class="bi fs-1" aria-hidden="true"><use xlink:href="#code"></use></svg>
   </div>
-  <h2 class="display-5 mb-3 fw-semibold lh-sm">Get started any way you&nbsp;want</h2>
+  <h2 class="display-5 mb-3 fw-semibold lh-sm">Начните любым способом, который вам&nbsp;подходит</h2>
   <p class="lead fw-normal">
-    Jump right into building with Bootstrap—use the CDN, install it via package manager, or download the source code.
+    Сразу приступайте к созданию с Bootstrap — используйте CDN, установите через менеджер пакетов или скачайте исходный код.
   </p>
   <p class="d-flex justify-content-md-center lead fw-normal">
     <a href={getVersionedDocsPath('getting-started/download/')} class="icon-link icon-link-hover fw-semibold ps-md-4">
-      Read installation docs
+      Читать документацию по установке
       <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
     </a>
   </p>
@@ -23,32 +23,26 @@ import Code from '@shortcodes/Code.astro'
 <section class="row g-3 g-md-5 mb-5 pb-5 justify-content-center">
   <div class="col-lg-6 py-lg-4 pe-lg-5">
     <svg class="bi mb-2 fs-2 text-body-secondary" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-    <h3 class="fw-semibold">Install via package manager</h3>
+    <h3 class="fw-semibold">Установка через менеджер пакетов</h3>
     <p class="pe-lg-5">
-      Install Bootstrap’s source Sass and JavaScript files via npm, RubyGems, Composer, or Meteor. Package-managed
-      installs don’t include documentation or our full build scripts. You can also <a
-        href="https://github.com/twbs/examples/">use any demo from our Examples repo</a
-      > to quickly jumpstart Bootstrap projects.
+      Установите исходные файлы Sass и JavaScript Bootstrap через npm, RubyGems, Composer или Meteor.
+      Установки через менеджер пакетов не включают документацию или наши полные скрипты сборки.
+      Вы также можете <a href="https://github.com/twbs/examples/">использовать любой пример из нашего репозитория Examples</a> для быстрого запуска проектов Bootstrap.
     </p>
     <Code code={`npm install bootstrap@${getConfig().current_version}`} lang="sh" />
     <Code code={`gem install bootstrap -v ${getConfig().current_ruby_version}`} lang="sh" />
     <p>
-      <a href={getVersionedDocsPath('getting-started/download')}>Read our installation docs</a> for more info and additional
-      package managers.
+      <a href={getVersionedDocsPath('getting-started/download')}>Читайте нашу документацию по установке</a> для получения дополнительной информации и других менеджеров пакетов.
     </p>
   </div>
   <div class="col-lg-6 py-lg-4 ps-lg-5 border-lg-start">
     <svg class="bi mb-2 fs-2 text-body-secondary" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
-    <h3 class="fw-semibold">Include via CDN</h3>
+    <h3 class="fw-semibold">Подключение через CDN</h3>
     <p class="pe-lg-5">
-      When you only need to include Bootstrap’s compiled CSS or JS, you can use <a
-        href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr</a
-      >. See it in action with our simple <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}
-        >quick start</a
-      >, or <a href={getVersionedDocsPath('examples')}>browse the examples</a> to jumpstart your next project. You can also
-      choose to include Popper and our JS <a href={getVersionedDocsPath('getting-started/introduction/#separate')}
-        >separately</a
-      >.
+      Когда вам нужно только подключить скомпилированный CSS или JS Bootstrap, вы можете использовать <a href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr</a>.
+      Посмотрите это в действии с нашим простым <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}>быстрым стартом</a>,
+      или <a href={getVersionedDocsPath('examples')}>просмотрите примеры</a> для запуска вашего следующего проекта.
+      Вы также можете выбрать подключение Popper и нашего JS <a href={getVersionedDocsPath('getting-started/introduction/#separate')}>отдельно</a>.
     </p>
     <Code
       code={`<link href="${getConfig().cdn.css}" rel="stylesheet" integrity="${
@@ -65,8 +59,8 @@ import Code from '@shortcodes/Code.astro'
   </div>
 
   <div class="col-md-8 mx-auto text-center">
-    <h4 class="fw-semibold">Read our getting started guides</h4>
-    <p>Get a jump on including Bootstrap's source files in a new project with our official guides.</p>
+    <h4 class="fw-semibold">Читайте наши руководства по началу работы</h4>
+    <p>Получите преимущество при подключении исходных файлов Bootstrap в новый проект с нашими официальными руководствами.</p>
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-4">
       <a
         class="d-flex flex-column align-items-center text-decoration-none animate-img"
