@@ -1,12 +1,12 @@
 <div class="bs-docs-section">
-  <h1 id="translations" class="page-header">Translations</h1>
+  <h1 id="translations" class="page-header">Переводы</h1>
 
-  <p class="lead">Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.</p>
+  <p class="lead">Сообщества перевели документацию Bootstrap на различные языки. Ни один из них не является официально поддерживаемым, и они могут не всегда быть актуальными.</p>
   <ul>
     {% for language in site.data.translations %}
       <li><a href="{{ language.url }}" hreflang="{{ language.code }}">{{ language.description }} ({{ language.name }})</a></li>
     {% endfor %}
   </ul>
-  <p><strong class="text-danger">We don't help organize or host translations, we just link to them.</strong></p>
-  <p>Finished a new or better translation? Open a pull request to add it to our list.</p>
+  <p><strong class="text-danger">Мы не помогаем организовывать или размещать переводы, мы просто ссылаемся на них.</strong></p>
+  <p>Завершил новый или более качественный перевод? Откройте запрос на изменение, чтобы добавить его в наш список.</p>
 </div>

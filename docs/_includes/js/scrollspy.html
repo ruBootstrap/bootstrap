@@ -1,26 +1,26 @@
 <div class="bs-docs-section">
   <h1 id="scrollspy" class="page-header">ScrollSpy <small>scrollspy.js</small></h1>
 
-  <h2 id="scrollspy-examples">Example in navbar</h2>
-  <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
+  <h2 id="scrollspy-examples">Пример в навигационном меню</h2>
+  <p>Плагин ScrollSpy предназначен для автоматического обновления целевых элементов навигации на основе прокрутки. Прокрутите область ниже навигационного меню и наблюдайте за изменением активной класс. Подменю выпадающего списка также будут подсвечены.</p>
   <div class="bs-example" data-example-id="embedded-scrollspy">
     <nav id="navbar-example2" class="navbar navbar-default navbar-static">
       <div class="container-fluid">
         <div class="navbar-header">
           <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Переключить навигацию</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project Name</a>
+          <a class="navbar-brand" href="#">Название проекта</a>
         </div>
         <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
           <ul class="nav navbar-nav">
             <li><a href="#fat">@fat</a></li>
             <li><a href="#mdo">@mdo</a></li>
             <li class="dropdown">
-              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Выпадающий список <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
                 <li><a href="#one">one</a></li>
                 <li><a href="#two">two</a></li>
@@ -49,26 +49,26 @@
   </div><!-- /example -->
 
 
-  <h2 id="scrollspy-usage">Usage</h2>
+  <h2 id="scrollspy-usage">Использование</h2>
 
   <div class="bs-callout bs-callout-warning" id="callout-scrollspy-needs-nav">
-    <h4>Requires Bootstrap nav</h4>
-    <p>Scrollspy currently requires the use of a <a href="../components/#nav">Bootstrap nav component</a> for proper highlighting of active links.</p>
+    <h4>Требуется Bootstrap навигация</h4>
+    <p>Scrollspy в настоящее время требует использования <a href="../components/#nav">компонента Bootstrap навигации</a> для правильного подсветки активных ссылок.</p>
   </div>
   <div class="bs-callout bs-callout-danger" id="callout-scrollspy-target-ids">
-    <h4>Resolvable ID targets required</h4>
-    <p>Navbar links must have resolvable id targets. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the DOM like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.</p>
+    <h4>Требуются разрешимые целевые элементы ID</h4>
+    <p>Ссылки навигационного меню должны иметь разрешимые целевые элементы ID. Например, <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> должен соответствовать чему-то в DOM, например, <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.</p>
   </div>
   <div class="bs-callout bs-callout-info" id="callout-scrollspy-invisible-targets">
-    <h4>Non-<code>:visible</code> target elements ignored</h4>
-    <p>Target elements that are not <a href="http://api.jquery.com/visible-selector/"><code>:visible</code> according to jQuery</a> will be ignored and their corresponding nav items will never be highlighted.</p>
+    <h4>Неподсвеченные целевые элементы игнорируются</h4>
+    <p>Целевые элементы, которые не являются <a href="http://api.jquery.com/visible-selector/"><code>:visible</code> по jQuery</a>, будут игнорироваться, и соответствующие элементы навигации никогда не будут подсвечены.</p>
   </div>
 
-  <h3>Requires relative positioning</h3>
-  <p>No matter the implementation method, scrollspy requires the use of <code>position: relative;</code> on the element you're spying on. In most cases this is the <code>&lt;body&gt;</code>. When scrollspying on elements other than the <code>&lt;body&gt;</code>, be sure to have a <code>height</code> set and <code>overflow-y: scroll;</code> applied.</p>
+  <h3>Требуется относительное позиционирование</h3>
+  <p>Независимо от метода реализации, scrollspy требует использования <code>position: relative;</code> на элементе, который вы наблюдаете. В большинстве случаев это <code>&lt;body&gt;</code>. Когда вы наблюдаете за элементами, отличными от <code>&lt;body&gt;</code>, убедитесь, что установлена <code>height</code> и применена <code>overflow-y: scroll;</code>.</p>
 
-  <h3>Via data attributes</h3>
-  <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
+  <h3>Через атрибуты данных</h3>
+  <p>Чтобы легко добавить поведение scrollspy к вашей навигационной панели, добавьте <code>data-spy="scroll"</code> к элементу, который вы хотите наблюдать (наиболее часто это будет <code>&lt;body&gt;</code>). Затем добавьте атрибут <code>data-target</code> со значением ID или класса родительского элемента любого компонента Bootstrap <code>.nav</code>.</p>
 {% highlight css %}
 body {
   position: relative;
@@ -86,16 +86,16 @@ body {
 </body>
 {% endhighlight %}
 
-  <h3>Via JavaScript</h3>
-  <p>After adding <code>position: relative;</code> in your CSS, call the scrollspy via JavaScript:</p>
+  <h3>Через JavaScript</h3>
+  <p>После добавления <code>position: relative;</code> в ваш CSS, вызовите scrollspy через JavaScript:</p>
 {% highlight js %}
 $('body').scrollspy({ target: '#navbar-example' })
 {% endhighlight %}
 
 
-  <h3 id="scrollspy-methods">Methods</h3>
+  <h3 id="scrollspy-methods">Методы</h3>
   <h4><code>.scrollspy('refresh')</code></h4>
-  <p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
+  <p>Когда вы используете scrollspy в сочетании с добавлением или удалением элементов из DOM, вам может потребоваться вызвать метод refresh следующим образом:</p>
 {% highlight js %}
 $('[data-spy="scroll"]').each(function () {
   var $spy = $(this).scrollspy('refresh')
@@ -103,42 +103,42 @@ $('[data-spy="scroll"]').each(function () {
 {% endhighlight %}
 
 
-  <h3 id="scrollspy-options">Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
+  <h3 id="scrollspy-options">Опции</h3>
+  <p>Опции могут быть переданы через атрибуты данных или JavaScript. Для атрибутов данных, добавьте имя опции к <code>data-</code>, например, <code>data-offset=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped js-options-table">
       <thead>
        <tr>
-         <th>Name</th>
-         <th>type</th>
-         <th>default</th>
-         <th>description</th>
+         <th>Имя</th>
+         <th>тип</th>
+         <th>по умолчанию</th>
+         <th>описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>offset</td>
-         <td>number</td>
+         <td>число</td>
          <td>10</td>
-         <td>Pixels to offset from top when calculating position of scroll.</td>
+         <td>Пиксели для смещения от верха при расчете положения прокрутки.</td>
        </tr>
       </tbody>
     </table>
   </div><!-- ./bs-table-responsive -->
 
-  <h3 id="scrollspy-events">Events</h3>
+  <h3 id="scrollspy-events">События</h3>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
        <tr>
-         <th>Event Type</th>
-         <th>Description</th>
+         <th>Тип события</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>activate.bs.scrollspy</td>
-         <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
+         <td>Это событие срабатывает всякий раз, когда новый элемент становится активным благодаря scrollspy.</td>
       </tr>
       </tbody>
     </table>

@@ -10,7 +10,7 @@ source:           docs
 destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
-url:              http://getbootstrap.com
+url:              http://getbootstrap.su
 encoding:         UTF-8
 
 gems:
@@ -20,6 +20,8 @@ gems:
 current_version:  3.3.7
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
+repo_ru:          https://github.com/ruBootstrap/bootstrap
+telegram_ru:      https://t.me/getbootstrap_ru
 
 download:
   source:         https://github.com/twbs/bootstrap/archive/v3.3.7.zip

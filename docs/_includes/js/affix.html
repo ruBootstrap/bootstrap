@@ -1,27 +1,27 @@
 <div class="bs-docs-section">
-  <h1 id="affix" class="page-header">Affix <small>affix.js</small></h1>
+  <h1 id="affix" class="page-header">Фиксация <small>affix.js</small></h1>
 
-  <h2 id="affix-examples">Example</h2>
-  <p>The affix plugin toggles <code>position: fixed;</code> on and off, emulating the effect found with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning"><code>position: sticky;</code></a>. The subnavigation on the right is a live demo of the affix plugin.</p>
+  <h2 id="affix-examples">Пример</h2>
+  <p>Плагин affix переключает <code>position: fixed;</code>, имитируя эффект <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning"><code>position: sticky;</code></a>. Правая боковая навигация — это живая демонстрация работы affix.</p>
 
   <hr class="bs-docs-separator">
 
-  <h2 id="affix-usage">Usage</h2>
-  <p>Use the affix plugin via data attributes or manually with your own JavaScript. <strong class="text-danger">In both situations, you must provide CSS for the positioning and width of your affixed content.</strong></p>
-  <p>Note: Do not use the affix plugin on an element contained in a relatively positioned element, such as a pulled or pushed column, due to a <a href="https://github.com/twbs/bootstrap/issues/12126">Safari rendering bug</a>.</p>
+  <h2 id="affix-usage">Использование</h2>
+  <p>Используйте плагин affix через data-атрибуты или вручную с помощью собственного JavaScript. <strong class="text-danger">В обоих случаях необходимо задать CSS для позиционирования и ширины фиксируемого содержимого.</strong></p>
+  <p>Примечание: не используйте affix для элементов внутри относительно позиционированных контейнеров, например, сдвинутых колонок, из-за <a href="https://github.com/twbs/bootstrap/issues/12126">ошибки рендеринга в Safari</a>.</p>
 
-  <h3>Positioning via CSS</h3>
-  <p>The affix plugin toggles between three classes, each representing a particular state: <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code>. You must provide the styles, with the exception of <code>position: fixed;</code> on <code>.affix</code>, for these classes yourself (independent of this plugin) to handle the actual positions.</p>
-  <p>Here's how the affix plugin works:</p>
+  <h3>Позиционирование через CSS</h3>
+  <p>Плагин affix переключает три класса, каждый из которых соответствует определённому состоянию: <code>.affix</code>, <code>.affix-top</code> и <code>.affix-bottom</code>. Стили для этих классов (кроме <code>position: fixed;</code> для <code>.affix</code>) вы должны задать самостоятельно для управления позициями.</p>
+  <p>Вот как работает affix:</p>
   <ol>
-    <li>To start, the plugin adds <code>.affix-top</code> to indicate the element is in its top-most position. At this point no CSS positioning is required.</li>
-    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by Bootstrap's CSS).</li>
-    <li>If a bottom offset is defined, scrolling past it should replace <code>.affix</code> with <code>.affix-bottom</code>. Since offsets are optional, setting one requires you to set the appropriate CSS. In this case, add <code>position: absolute;</code> when necessary. The plugin uses the data attribute or JavaScript option to determine where to position the element from there.</li>
+    <li>Сначала плагин добавляет <code>.affix-top</code>, чтобы обозначить верхнее положение элемента. CSS-позиционирование не требуется.</li>
+    <li>При прокрутке мимо элемента, который нужно зафиксировать, происходит фиксация: <code>.affix</code> заменяет <code>.affix-top</code> и устанавливает <code>position: fixed;</code> (это задаётся стилями Bootstrap).</li>
+    <li>Если задан нижний отступ, прокрутка мимо него заменяет <code>.affix</code> на <code>.affix-bottom</code>. Так как отступы необязательны, для их работы нужно прописать соответствующий CSS. В этом случае добавьте <code>position: absolute;</code> при необходимости. Плагин использует data-атрибут или опцию JavaScript для определения позиции элемента.</li>
   </ol>
-  <p>Follow the above steps to set your CSS for either of the usage options below.</p>
+  <p>Следуйте этим шагам для настройки CSS при любом из способов использования ниже.</p>
 
-  <h3>Via data attributes</h3>
-  <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Use offsets to define when to toggle the pinning of an element.</p>
+  <h3>Через data-атрибуты</h3>
+  <p>Чтобы легко добавить поведение affix к любому элементу, просто добавьте <code>data-spy="affix"</code> к нужному элементу. Используйте отступы для определения момента фиксации.</p>
 
 {% highlight html %}
 <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
@@ -29,8 +29,8 @@
 </div>
 {% endhighlight %}
 
-  <h3>Via JavaScript</h3>
-  <p>Call the affix plugin via JavaScript:</p>
+  <h3>Через JavaScript</h3>
+  <p>Вызовите плагин affix через JavaScript:</p>
 {% highlight js %}
 $('#myAffix').affix({
   offset: {
@@ -43,17 +43,17 @@ $('#myAffix').affix({
 {% endhighlight %}
 
 
-  <h3 id="affix-options">Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
+  <h3 id="affix-options">Опции</h3>
+  <p>Опции можно передавать через data-атрибуты или JavaScript. Для data-атрибутов добавьте имя опции к <code>data-</code>, например <code>data-offset-top="200"</code>.</p>
 
   <div class="table-responsive">
     <table class="table table-bordered table-striped js-options-table">
       <thead>
        <tr>
-         <th>Name</th>
-         <th>type</th>
-         <th>default</th>
-         <th>description</th>
+         <th>Имя</th>
+         <th>Тип</th>
+         <th>По умолчанию</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
@@ -61,23 +61,23 @@ $('#myAffix').affix({
          <td>offset</td>
          <td>number | function | object</td>
          <td>10</td>
-         <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and bottom directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
+         <td>Пиксели смещения от экрана при вычислении позиции прокрутки. Если указано одно число, смещение применяется и сверху, и снизу. Для разных отступов используйте объект <code>offset: { top: 10 }</code> или <code>offset: { top: 10, bottom: 5 }</code>. Для динамического расчёта используйте функцию.</td>
        </tr>
        <tr>
          <td>target</td>
          <td>selector | node | jQuery element</td>
-         <td>the <code>window</code> object</td>
-         <td>Specifies the target element of the affix.</td>
+         <td>объект <code>window</code></td>
+         <td>Указывает целевой элемент для фиксации.</td>
        </tr>
 
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3 id="affix-methods">Methods</h3>
+  <h3 id="affix-methods">Методы</h3>
 
   <h4><code>.affix(options)</code></h4>
-  <p>Activates your content as affixed content. Accepts an optional options <code>object</code>.</p>
+  <p>Активирует ваш элемент как фиксируемый. Принимает необязательный объект опций <code>object</code>.</p>
 {% highlight js %}
 $('#myAffix').affix({
   offset: 15
@@ -85,43 +85,43 @@ $('#myAffix').affix({
 {% endhighlight %}
 
   <h4><code>.affix('checkPosition')</code></h4>
-  <p>Recalculates the state of the affix based on the dimensions, position, and scroll position of the relevant elements. The <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code> classes are added to or removed from the affixed content according to the new state. This method needs to be called whenever the dimensions of the affixed content or the target element are changed, to ensure correct positioning of the affixed content.</p>
+  <p>Пересчитывает состояние affix на основе размеров, позиции и прокрутки соответствующих элементов. Классы <code>.affix</code>, <code>.affix-top</code> и <code>.affix-bottom</code> добавляются или удаляются в зависимости от нового состояния. Этот метод нужно вызывать при изменении размеров фиксируемого содержимого или целевого элемента для корректного позиционирования.</p>
   {% highlight js %}$('#myAffix').affix('checkPosition'){% endhighlight %}
 
-  <h3 id="affix-events">Events</h3>
-  <p>Bootstrap's affix plugin exposes a few events for hooking into affix functionality.</p>
+  <h3 id="affix-events">События</h3>
+  <p>Плагин affix в Bootstrap предоставляет несколько событий для подключения к функционалу фиксации.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
         <tr>
-          <th>Event Type</th>
-          <th>Description</th>
+          <th>Тип события</th>
+          <th>Описание</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>affix.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed.</td>
+          <td>Это событие срабатывает непосредственно перед тем, как элемент будет зафиксирован.</td>
         </tr>
         <tr>
           <td>affixed.bs.affix</td>
-          <td>This event is fired after the element has been affixed.</td>
+          <td>Это событие срабатывает после того, как элемент был зафиксирован.</td>
         </tr>
         <tr>
           <td>affix-top.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed-top.</td>
+          <td>Это событие срабатывает непосредственно перед тем, как элемент будет зафиксирован сверху.</td>
         </tr>
         <tr>
           <td>affixed-top.bs.affix</td>
-          <td>This event is fired after the element has been affixed-top.</td>
+          <td>Это событие срабатывает после того, как элемент был зафиксирован сверху.</td>
         </tr>
        <tr>
         <td>affix-bottom.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed-bottom.</td>
+          <td>Это событие срабатывает непосредственно перед тем, как элемент будет зафиксирован снизу.</td>
         </tr>
         <tr>
           <td>affixed-bottom.bs.affix</td>
-          <td>This event is fired after the element has been affixed-bottom.</td>
+          <td>Это событие срабатывает после того, как элемент был зафиксирован снизу.</td>
         </tr>
       </tbody>
     </table>

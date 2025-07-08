@@ -2,7 +2,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    Native browser tooltip for `title` shows on first keyboard focus (in addition to custom tooltip component)
+    Встроенная подсказка браузера для `title` появляется при первом фокусе с клавиатуры (в дополнение к пользовательскому компоненту tooltip)
   upstream_bug: >
     Edge#6793560
   origin: >
@@ -12,7 +12,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    Hovered element still remains in `:hover` state after scrolling away.
+    Наведённый элемент остаётся в состоянии `:hover` после прокрутки страницы.
   upstream_bug: >
     Edge#5381673
   origin: >
@@ -22,7 +22,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    When hovering over a `<select>` menu item, the cursor for the element underneath the menu is displayed.
+    При наведении на элемент меню `<select>` курсор для элемента под меню отображается.
   upstream_bug: >
     Edge#817822
   origin: >
@@ -32,7 +32,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    CSS `border-radius` sometimes causes lines of bleed-through of the `background-color` of the parent element.
+    CSS `border-radius` иногда вызывает появление линий просвечивания цвета фона родительского элемента.
   upstream_bug: >
     Edge#3342037
   origin: >
@@ -42,7 +42,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    `background` of `<tr>` is only applied to first child cell instead of all cells in the row
+    `background` у `<tr>` применяется только к первой ячейке строки, а не ко всем ячейкам.
   upstream_bug: >
     Edge#5865620
   origin: >
@@ -52,7 +52,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    `@-ms-viewport{width: device-width;}` has side-effect of making scrollbars auto-hide
+    `@-ms-viewport{width: device-width;}` приводит к автоматическому скрытию полос прокрутки
   upstream_bug: >
     Edge#7165383
   origin: >
@@ -62,7 +62,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    Background color from lower layer bleeds through transparent border in some cases
+    Цвет фона нижнего слоя просвечивает через прозрачную границу в некоторых случаях
   upstream_bug: >
     Edge#6274505
   origin: >
@@ -72,7 +72,7 @@
   browser: >
     Microsoft Edge
   summary: >
-    Hovering over descendant SVG element fires `mouseleave` event at ancestor
+    Наведение на вложенный SVG-элемент вызывает событие `mouseleave` у родителя
   upstream_bug: >
     Edge#7787318
   origin: >
@@ -82,7 +82,7 @@
   browser: >
     Firefox
   summary: >
-    `.table-bordered` with an empty `<tbody>` is missing borders.
+    `.table-bordered` с пустым `<tbody>` не отображает границы.
   upstream_bug: >
     Mozilla#1023761
   origin: >
@@ -92,7 +92,7 @@
   browser: >
     Firefox
   summary: >
-    If the disabled state of a form control is changed via JavaScript, the normal state doesn't return after refreshing the page.
+    Если состояние disabled у элемента формы изменено через JavaScript, после обновления страницы нормальное состояние не возвращается.
   upstream_bug: >
     Mozilla#654072
   origin: >
@@ -102,7 +102,7 @@
   browser: >
     Firefox
   summary: >
-    `focus` events should not be fired at the `document` object
+    `focus` события не должны вызываться на объекте `document`
   upstream_bug: >
     Mozilla#1228802
   origin: >
@@ -112,7 +112,7 @@
   browser: >
     Firefox
   summary: >
-    Wide floated table doesn't wrap onto new line
+    Широкая таблица не переносится на новую строку
   upstream_bug: >
     Mozilla#1277782
   origin: >
@@ -122,7 +122,7 @@
   browser: >
     Firefox
   summary: >
-    Mouse sometimes not within element for purposes of `mouseenter`/`mouseleave` when it's within SVG elements
+    Иногда курсор не находится в элементе для целей `mouseenter`/`mouseleave` когда он находится в SVG-элементах
   upstream_bug: >
     Mozilla#577785
   origin: >
@@ -132,7 +132,7 @@
   browser: >
     Firefox
   summary: >
-    `position: absolute` element that's wider than its column renders differently than other browsers
+    Элемент с `position: absolute` шире своего столбца отображается по-другому, чем в других браузерах
   upstream_bug: >
     Mozilla#1282363
   origin: >
@@ -142,7 +142,7 @@
   browser: >
     Firefox (Windows)
   summary: >
-    Right border of `<select>` menu is sometimes missing when screen is set to uncommon resolution
+    Правая граница `<select>` меню иногда отсутствует при нестандартном разрешении экрана
   upstream_bug: >
     Mozilla#545685
   origin: >
@@ -152,7 +152,7 @@
   browser: >
     Firefox (OS X & Linux)
   summary: >
-    Badge widget causes bottom border of Tabs widget to unexpectedly not overlap
+    Виджет Badge вызывает неожиданное отсутствие нижней границы виджета Tabs
   upstream_bug: >
     Mozilla#1259972
   origin: >
@@ -162,7 +162,7 @@
   browser: >
     Chrome (Android)
   summary: >
-    Tapping on an `<input>` in a scrollable overlay doesn't scroll the `<input>` into view
+    При нажатии на `<input>` в прокручиваемом перекрытии `<input>` не прокручивается в область видимости
   upstream_bug: >
     Chromium#595210
   origin: >
@@ -172,7 +172,7 @@
   browser: >
     Chrome (OS X)
   summary: >
-    Clicking above `<input type="number">` increment button flashes the decrement button.
+    При нажатии на кнопку увеличения `<input type="number">` мигает кнопка уменьшения.
   upstream_bug: >
     Chromium#419108
   origin: >
@@ -182,7 +182,7 @@
   browser: >
     Chrome
   summary: >
-    CSS infinite linear animation with alpha transparency leaks memory.
+    CSS бесконечная линейная анимация с альфа-прозрачностью утекает память.
   upstream_bug: >
     Chromium#429375
   origin: >
@@ -192,7 +192,7 @@
   browser: >
     Chrome
   summary: >
-    `:focus` `outline` style causes cursor to not be displayed when toggling a `readonly` `<input>` to read-write.
+    `:focus` стиль `outline` вызывает отсутствие курсора при переключении `readonly` `<input>` на чтение-запись.
   upstream_bug: >
     Chromium#465274
   origin: >
@@ -202,7 +202,7 @@
   browser: >
     Chrome
   summary: >
-    `table-cell` borders not overlapping despite `margin-right: -1px`
+    `table-cell` границы не перекрываются всё равно `margin-right: -1px`
   upstream_bug: >
     Chromium#534750
   origin: >
@@ -212,7 +212,7 @@
   browser: >
     Chrome
   summary: >
-    Clicking scrollbar in `<select multiple>` with overflowed options will select nearby `<option>`
+    При нажатии на полосу прокрутки в `<select multiple>` с переполненными опциями выбираются близлежащие `<option>`
   upstream_bug: >
     Chromium#597642
   origin: >
@@ -222,7 +222,7 @@
   browser: >
     Chrome
   summary: >
-    Don't make `:hover` sticky on touch-friendly webpages
+    Не делайте `:hover` липким на удобных для касания веб-страницах
   upstream_bug: >
     Chromium#370155
   origin: >
@@ -232,7 +232,7 @@
   browser: >
     Chrome (Windows & Linux)
   summary: >
-    Animation glitch when returning to inactive tab after animations occurred while tab was hidden.
+    Анимированный глюк при возвращении к неактивной вкладке после анимаций, которые произошли, когда вкладка была скрыта.
   upstream_bug: >
     Chromium#449180
   origin: >
@@ -244,7 +244,7 @@
   summary: >
     Safari
   summary: >
-    `rem` units in media queries should be calculated using `font-size: initial`, not the root element's `font-size`
+    `rem` единицы в медиа-запросах должны рассчитываться с использованием `font-size: initial`, а не `font-size` корневого элемента
   upstream_bug: >
     WebKit#156684
   origin: >
@@ -254,7 +254,7 @@
   browser: >
     Safari (OS X)
   summary: >
-    `px`, `em`, and `rem` should all behave the same in media queries when page zoom is applied
+    `px`, `em`, и `rem` должны вести себя одинаково в медиа-запросах, когда применяется масштабирование страницы
   upstream_bug: >
     WebKit#156687
   origin: >
@@ -264,7 +264,7 @@
   browser: >
     Safari (OS X)
   summary: >
-    Weird button behavior with some `<input type="number">` elements.
+    Странное поведение кнопки с некоторыми `<input type="number">` элементами.
   upstream_bug: >
     WebKit#137269, Safari#18834768
   origin: >
@@ -276,7 +276,7 @@
   browser: >
     Safari (OS X)
   summary: >
-    Small font size when printing webpage with fixed-width `.container`.
+    Маленький размер шрифта при печати веб-страницы с фиксированной шириной `.container`.
   upstream_bug: >
     WebKit#138192, Safari#19435018
   origin: >
@@ -286,7 +286,7 @@
   browser: >
     Safari (iPad)
   summary: >
-    `<select>` menu on iPad causes shifting of hit-testing areas
+    `<select>` меню на iPad вызывает сдвиг областей тестирования
   upstream_bug: >
     WebKit#150079, Safari#23082521
   origin: >
@@ -296,7 +296,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `transform: translate3d(0,0,0);` rendering bug.
+    `transform: translate3d(0,0,0);` рендеринг ошибка.
   upstream_bug: >
     WebKit#138162, Safari#18804973
   origin: >
@@ -306,7 +306,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Text input's cursor doesn't move while scrolling the page.
+    Курсор в поле ввода не перемещается при прокрутке страницы.
   upstream_bug: >
     WebKit#138201, Safari#18819624
   origin: >
@@ -316,7 +316,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Can't move cursor to start of text after entering long string of text into `<input type="text">`
+    Невозможно переместить курсор в начало текста после ввода длинной строки в `<input type="text">`
   upstream_bug: >
     WebKit#148061, Safari#22299624
   origin: >
@@ -326,7 +326,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `display: block` causes text of temporal `<input>`s to become vertically misaligned
+    `display: block` вызывает вертикальное смещение текста временных `<input>`s
   upstream_bug: >
     WebKit#139848, Safari#19434878
   origin: >
@@ -336,7 +336,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Tapping on `<body>` doesn't fire `click` events
+    При нажатии на `<body>` не вызываются события `click`
   upstream_bug: >
     WebKit#151933
   origin: >
@@ -346,7 +346,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `position:fixed` is incorrectly positioned when tab bar is visible on iPhone 6S+ Safari
+    `position:fixed` неправильно позиционирован, когда панель закладок видима на iPhone 6S+ Safari
   upstream_bug: >
     WebKit#153056
   origin: >
@@ -356,7 +356,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Tapping into an `<input>` within a `position:fixed` element scrolls to the top of the page
+    При нажатии на `<input>` в `position:fixed` элементе прокручивается к верху страницы
   upstream_bug: >
     WebKit#153224, Safari#24235301
   origin: >
@@ -366,7 +366,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    `<body>` with `overflow:hidden` CSS is scrollable on iOS
+    `<body>` с CSS `overflow:hidden` прокручивается на iOS
   upstream_bug: >
     WebKit#153852
   origin: >
@@ -376,7 +376,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Scroll gesture in text field in `position:fixed` element sometimes scrolls `<body>` instead of scrollable ancestor
+    Скролл жест в текстовом поле в `position:fixed` элементе иногда прокручивает `<body>` вместо прокручиваемого предка
   upstream_bug: >
     WebKit#153856
   origin: >
@@ -386,7 +386,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Tapping from one `<input>` to another in an overlay can cause shaking/jiggling effect
+    При нажатии с одного `<input>` на другой в перекрытии может возникнуть эффект тряски/встряхивания
   upstream_bug: >
     WebKit#158276
   origin: >
@@ -396,7 +396,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Modal with `-webkit-overflow-scrolling: touch` doesn't become scrollable after added text makes it taller
+    Модальное окно с `-webkit-overflow-scrolling: touch` не становится прокручиваемым после добавления текста, который делает его выше
   upstream_bug: >
     WebKit#158342
   origin: >
@@ -406,7 +406,7 @@
   browser: >
     Safari (iOS)
   summary: >
-    Don't make `:hover` sticky on touch-friendly webpages
+    Не делайте `:hover` липким на удобных для касания веб-страницах
   upstream_bug: >
     WebKit#158517
   origin: >
@@ -416,7 +416,7 @@
   browser: >
     Safari (iPad Pro)
   summary: >
-    Rendering of descendants of `position: fixed` element gets clipped on iPad Pro in Landscape orientation
+    Рендеринг потомков элемента с `position: fixed` обрезается на iPad Pro в альбомном режиме
   upstream_bug: >
     WebKit#152637, Safari#24030853
   origin: >

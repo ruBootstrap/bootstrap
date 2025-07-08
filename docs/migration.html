@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Migrating to v3.x
+title: Миграция на v3.x
 slug: migration
-lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on major changes, what's new, and what's been removed."
+lead: "Руководство по обновлению с Bootstrap v2.x до v3.x с акцентом на основные изменения, новшества и удалённые возможности."
 ---
 
 
 <!-- Migration
 ================================================== -->
 <div class="bs-docs-section">
-  <h1 class="page-header">Migrating from 2.x to 3.0</h1>
+  <h1 class="page-header">Переход с 2.x на 3.0</h1>
 
-  <p class="lead">Bootstrap 3 is not backwards compatible with v2.x. Use this section as a general guide to upgrading from v2.x to v3.0. For a broader overview, see <a href="http://blog.getbootstrap.com/2013/08/19/bootstrap-3-released/">what's new</a> in the v3.0 release announcement.</p>
+  <p class="lead">Bootstrap 3 не обратно совместим с v2.x. Используйте этот раздел как общее руководство по обновлению с v2.x до v3.0. Для более подробного обзора смотрите <a href="http://blog.getbootstrap.com/2013/08/19/bootstrap-3-released/">что нового</a> в анонсе релиза v3.0.</p>
 
-  <h2 id="classes">Major class changes</h2>
-  <p>This table shows the style changes between v2.x and v3.0.</p>
+  <h2 id="classes">Основные изменения классов</h2>
+  <p>В этой таблице показаны изменения стилей между v2.x и v3.0.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -98,7 +98,7 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
         </tr>
         <tr>
           <td><code>.visible-desktop</code></td>
-          <td>Split into <code>.visible-md .visible-lg</code></td>
+          <td>Разделено на <code>.visible-md .visible-lg</code></td>
         </tr>
         <tr>
           <td><code>.hidden-phone</code></td>
@@ -110,7 +110,7 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
         </tr>
         <tr>
           <td><code>.hidden-desktop</code></td>
-          <td>Split into <code>.hidden-md .hidden-lg</code></td>
+          <td>Разделено на <code>.hidden-md .hidden-lg</code></td>
         </tr>
         <tr>
           <td><code>.input-block-level</code></td>
@@ -200,27 +200,27 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
     </table>
   </div><!-- /.table-responsive -->
 
-  <h2 id="new">What's new</h2>
-  <p>We've added new elements and changed some existing ones. Here are the new or updated styles.</p>
+  <h2 id="new">Что нового</h2>
+  <p>Мы добавили новые элементы и изменили некоторые существующие. Вот новые или обновлённые стили.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Element</th>
-          <th>Description</th>
+          <th>Элемент</th>
+          <th>Описание</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Panels</td>
+          <td>Панели</td>
           <td><code>.panel .panel-default</code> <code>.panel-body</code> <code>.panel-title</code> <code>.panel-heading</code> <code>.panel-footer</code> <code>.panel-collapse</code></td>
         </tr>
         <tr>
-          <td>List groups</td>
+          <td>Группы списков</td>
           <td><code>.list-group</code> <code>.list-group-item</code> <code>.list-group-item-text</code> <code>.list-group-item-heading</code></td>
         </tr>
         <tr>
-          <td>Glyphicons</td>
+          <td>Глифы</td>
           <td><code>.glyphicon</code></td>
         </tr>
         <tr>
@@ -228,27 +228,27 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
           <td><code>.jumbotron</code></td>
         </tr>
         <tr>
-          <td>Extra small grid (&lt;768px)</td>
+          <td>Сетка extra small (&lt;768px)</td>
           <td><code>.col-xs-*</code></td>
         </tr>
         <tr>
-          <td>Small grid (&ge;768px)</td>
+          <td>Сетка small (&ge;768px)</td>
           <td><code>.col-sm-*</code></td>
         </tr>
         <tr>
-          <td>Medium grid (&ge;992px)</td>
+          <td>Сетка medium (&ge;992px)</td>
           <td><code>.col-md-*</code></td>
         </tr>
         <tr>
-          <td>Large grid (&ge;1200px)</td>
+          <td>Сетка large (&ge;1200px)</td>
           <td><code>.col-lg-*</code></td>
         </tr>
         <tr>
-          <td>Responsive utility classes (&ge;1200px)</td>
+          <td>Адаптивные классы (&ge;1200px)</td>
           <td><code>.visible-lg</code> <code>.hidden-lg</code></td>
         </tr>
         <tr>
-          <td>Offsets</td>
+          <td>Отступы</td>
           <td><code>.col-sm-offset-*</code> <code>.col-md-offset-*</code> <code>.col-lg-offset-*</code></td>
         </tr>
         <tr>
@@ -260,11 +260,11 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
           <td><code>.col-sm-pull-*</code> <code>.col-md-pull-*</code> <code>.col-lg-pull-*</code></td>
         </tr>
         <tr>
-          <td>Input height sizes</td>
+          <td>Высота input</td>
           <td><code>.input-sm</code> <code>.input-lg</code></td>
         </tr>
         <tr>
-          <td>Input groups</td>
+          <td>Группы ввода</td>
           <td><code>.input-group</code> <code>.input-group-addon</code> <code>.input-group-btn</code></td>
         </tr>
         <tr>
@@ -272,129 +272,129 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
           <td><code>.form-control</code> <code>.form-group</code></td>
         </tr>
         <tr>
-          <td>Button group sizes</td>
+          <td>Размеры групп кнопок</td>
           <td><code>.btn-group-xs</code> <code>.btn-group-sm</code> <code>.btn-group-lg</code></td>
         </tr>
         <tr>
-          <td>Navbar text</td>
+          <td>Текст в navbar</td>
           <td><code>.navbar-text</code></td>
         </tr>
         <tr>
-          <td>Navbar header</td>
+          <td>Заголовок navbar</td>
           <td><code>.navbar-header</code></td>
         </tr>
         <tr>
-          <td>Justified tabs / pills</td>
+          <td>Выровненные вкладки/таблетки</td>
           <td><code>.nav-justified</code></td>
         </tr>
         <tr>
-          <td>Responsive images</td>
+          <td>Адаптивные изображения</td>
           <td><code>.img-responsive</code></td>
         </tr>
         <tr>
-          <td>Contextual table rows</td>
+          <td>Контекстные строки таблицы</td>
           <td><code>.success</code> <code>.danger</code> <code>.warning</code> <code>.active</code> <code>.info</code></td>
         </tr>
         <tr>
-          <td>Contextual panels</td>
+          <td>Контекстные панели</td>
           <td><code>.panel-success</code> <code>.panel-danger</code> <code>.panel-warning</code> <code>.panel-info</code></td>
         </tr>
         <tr>
-          <td>Modal</td>
+          <td>Модальное окно</td>
           <td><code>.modal-dialog</code> <code>.modal-content</code></td>
         </tr>
         <tr>
-          <td>Thumbnail image</td>
+          <td>Миниатюра изображения</td>
           <td><code>.img-thumbnail</code></td>
         </tr>
         <tr>
-          <td>Well sizes</td>
+          <td>Размеры wells</td>
           <td><code>.well-sm</code> <code>.well-lg</code></td>
         </tr>
         <tr>
-          <td>Alert links</td>
+          <td>Ссылки в alert</td>
           <td><code>.alert-link</code></td>
         </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 
-  <h2 id="dropped">What's removed</h2>
-  <p>The following elements have been dropped or changed in v3.0.</p>
+  <h2 id="dropped">Что удалено</h2>
+  <p>Следующие элементы были удалены или изменены в v3.0.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Element</th>
-          <th>Removed from 2.x</th>
-          <th>3.0 Equivalent</th>
+          <th>Элемент</th>
+          <th>Удалено из 2.x</th>
+          <th>Аналог в 3.0</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Form actions</td>
           <td><code>.form-actions</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Search form</td>
           <td><code>.form-search</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Form group with info</td>
           <td><code>.control-group.info</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
-          <td>Fixed-width input sizes</td>
+          <td>Фиксированные размеры input</td>
           <td><code>.input-mini</code> <code>.input-small</code> <code>.input-medium</code> <code>.input-large</code> <code>.input-xlarge</code> <code>.input-xxlarge</code></td>
-          <td>Use <a href="../css/#forms-controls"><code>.form-control</code></a> and <a href="../css/#grid">the grid system</a> instead.</td>
+          <td>Используйте <a href="../css/#forms-controls"><code>.form-control</code></a> и <a href="../css/#grid">систему сетки</a> вместо этого.</td>
         </tr>
         <tr>
-          <td>Block level form input</td>
+          <td>Блочный input</td>
           <td><code>.input-block-level</code></td>
-          <td>No direct equivalent, but <a href="../css/#forms-controls">forms controls</a> are similar.</td>
+          <td>Нет прямого аналога, но <a href="../css/#forms-controls">form controls</a> похожи.</td>
         </tr>
         <tr>
           <td>Inverse buttons</td>
           <td><code>.btn-inverse</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Fluid row</td>
           <td><code>.row-fluid</code></td>
-          <td><code>.row</code> (no more fixed grid)</td>
+          <td><code>.row</code> (больше нет фиксированной сетки)</td>
         </tr>
         <tr>
-          <td>Controls wrapper</td>
+          <td>Обёртка для controls</td>
           <td><code>.controls</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Controls row</td>
           <td><code>.controls-row</code></td>
-          <td><code>.row</code> or <code>.form-group</code></td>
+          <td><code>.row</code> или <code>.form-group</code></td>
         </tr>
         <tr>
           <td>Navbar inner</td>
           <td><code>.navbar-inner</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Navbar vertical dividers</td>
           <td><code>.navbar .divider-vertical</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Dropdown submenu</td>
           <td><code>.dropdown-submenu</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Tab alignments</td>
           <td><code>.tabs-left</code> <code>.tabs-right</code> <code>.tabs-below</code></td>
-          <td class="text-muted">N/A</td>
+          <td class="text-muted">Нет</td>
         </tr>
         <tr>
           <td>Pill-based tabbable area</td>
@@ -409,37 +409,37 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
         <tr>
           <td>Nav lists</td>
           <td><code>.nav-list</code> <code>.nav-header</code></td>
-          <td>No direct equivalent, but <a href="../components/#list-group">list groups</a> and <a href="../javascript/#collapse"><code>.panel-group</code>s</a> are similar.</td>
+          <td>Нет прямого аналога, но <a href="../components/#list-group">группы списков</a> и <a href="../javascript/#collapse"><code>.panel-group</code></a> похожи.</td>
         </tr>
         <tr>
           <td>Inline help for form controls</td>
           <td><code>.help-inline</code></td>
-          <td>No exact equivalent, but <code>.help-block</code> is similar.</td>
+          <td>Точного аналога нет, но <code>.help-block</code> похож.</td>
         </tr>
         <tr>
-          <td>Non-bar-level progress colors</td>
+          <td>Цвета прогресса не на bar-уровне</td>
           <td><code>.progress-info</code> <code>.progress-success</code> <code>.progress-warning</code> <code>.progress-danger</code></td>
-          <td>Use <code>.progress-bar-*</code> on the <code>.progress-bar</code> instead.</td>
+          <td>Используйте <code>.progress-bar-*</code> на <code>.progress-bar</code> вместо этого.</td>
         </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 
-  <h2 id="notes">Additional notes</h2>
-  <p>Other changes in v3.0 are not immediately apparent. Base classes, key styles, and behaviors have been adjusted for flexibility and our <em>mobile first</em> approach. Here's a partial list:</p>
+  <h2 id="notes">Дополнительные замечания</h2>
+  <p>Другие изменения в v3.0 не так очевидны. Базовые классы, ключевые стили и поведения были изменены для гибкости и подхода <em>mobile first</em>. Вот частичный список:</p>
   <ul>
-    <li>By default, text-based form controls now receive only minimal styling.  For focus colors and rounded corners, apply the <code>.form-control</code> class on the element to style.</li>
-    <li>Text-based form controls with the <code>.form-control</code> class applied are now 100% wide by default. Wrap inputs inside <code>&lt;div class="col-*"&gt;&lt;/div&gt;</code> to control input widths.</li>
-    <li><code>.badge</code> no longer has contextual (-success,-primary,etc..) classes.</li>
-    <li><code>.btn</code> must also use <code>.btn-default</code> to get the "default" button.</li>
-    <li><code>.row</code> is now fluid.</li>
-    <li>Images are no longer responsive by default. Use <code>.img-responsive</code> for fluid <code>&lt;img&gt;</code> size.</li>
-    <li>The icons, now <code>.glyphicon</code>, are now font based. Icons also require a base and icon class (e.g. <code>.glyphicon .glyphicon-asterisk</code>).</li>
-    <li>Typeahead has been dropped, in favor of using <a href="http://twitter.github.io/typeahead.js/">Twitter Typeahead</a>.</li>
-    <li>Modal markup has changed significantly. The <code>.modal-header</code>, <code>.modal-body</code>, and <code>.modal-footer</code> sections are now wrapped in <code>.modal-content</code> and <code>.modal-dialog</code> for better mobile styling and behavior. Also, you should no longer apply <code>.hide</code> to <code>.modal</code> in your markup.</li>
-    <li>As of v3.1.0, the HTML loaded by the <code>remote</code> modal option is now injected into the <code>.modal-content</code> (from v3.0.0 to v3.0.3, into the <code>.modal</code>) instead of into the <code>.modal-body</code>. This allows you to also easily vary the header and footer of the modal, not just the modal body.</li>
-    <li>The checkbox and radio features of the button.js plugin now both use <code>data-toggle="buttons"</code> instead of <code>data-toggle="buttons-checkbox"</code> or <code>data-toggle="buttons-radio"</code> in their markup.</li>
-    <li>JavaScript events are namespaced. For example, to handle the modal "show" event, use <code>'show.bs.modal'</code>. For tabs "shown" use <code>'shown.bs.tab'</code>, etc.</li>
+    <li>По умолчанию текстовые элементы форм теперь имеют минимальное оформление. Для цветов фокуса и скруглённых углов применяйте класс <code>.form-control</code> к элементу.</li>
+    <li>Текстовые элементы форм с классом <code>.form-control</code> теперь по умолчанию занимают 100% ширины. Оборачивайте input в <code>&lt;div class="col-*"&gt;&lt;/div&gt;</code> для управления шириной.</li>
+    <li><code>.badge</code> больше не имеет контекстных классов (-success, -primary и т.д.).</li>
+    <li><code>.btn</code> теперь также должен использовать <code>.btn-default</code> для получения "обычной" кнопки.</li>
+    <li><code>.row</code> теперь всегда fluid.</li>
+    <li>Изображения больше не адаптивны по умолчанию. Используйте <code>.img-responsive</code> для fluid-<code>&lt;img&gt;</code>.</li>
+    <li>Иконки теперь <code>.glyphicon</code> и являются шрифтовыми. Для иконок требуется базовый икон-класс (например, <code>.glyphicon .glyphicon-asterisk</code>).</li>
+    <li>Typeahead удалён, используйте <a href="http://twitter.github.io/typeahead.js/">Twitter Typeahead</a>.</li>
+    <li>Разметка модальных окон значительно изменилась. <code>.modal-header</code>, <code>.modal-body</code> и <code>.modal-footer</code> теперь обёрнуты в <code>.modal-content</code> и <code>.modal-dialog</code> для лучшей мобильной стилизации и поведения. Также больше не нужно применять <code>.hide</code> к <code>.modal</code> в разметке.</li>
+    <li>С версии v3.1.0 HTML, загружаемый через опцию <code>remote</code> модального окна, теперь вставляется в <code>.modal-content</code> (с v3.0.0 по v3.0.3 — в <code>.modal</code>), а не только в <code>.modal-body</code>. Это позволяет легко менять заголовок и футер модального окна, а не только тело.</li>
+    <li>Чекбоксы и радио-кнопки в button.js теперь используют <code>data-toggle="buttons"</code> вместо <code>data-toggle="buttons-checkbox"</code> или <code>data-toggle="buttons-radio"</code> в разметке.</li>
+    <li>JavaScript-события теперь имеют namespace. Например, для обработки события "show" модального окна используйте <code>'show.bs.modal'</code>. Для вкладок "shown" — <code>'shown.bs.tab'</code> и т.д.</li>
   </ul>
-  <p>For more information on upgrading to v3.0, and code snippets from the community, see <a href="http://bootply.com/">Bootply</a>.</p>
+  <p>Для дополнительной информации по обновлению до v3.0 и примеров кода от сообщества смотрите <a href="http://bootply.com/">Bootply</a>.</p>
 </div>

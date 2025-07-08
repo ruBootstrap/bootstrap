@@ -1,3 +1,8 @@
+- name: Russian
+  code: ru
+  description: Bootstrap по-русски
+  url: https://getbootstrap.su
+
 - name: Chinese
   code: zh
   description: Bootstrap 中文文档
@@ -7,7 +12,7 @@
   code: zh-TW
   description: Bootstrap 3 中文手冊
   url: https://kkbruce.tw/bs3/
- 
+
 - name: Danish
   code: da
   description: Bootstrap på Dansk
@@ -37,11 +42,6 @@
   code: pt-BR
   description: Bootstrap em Português do Brasil
   url: http://bootstrapbrasil.github.io/
-
-- name: Russian
-  code: ru
-  description: Bootstrap по-русски
-  url: http://www.oneskyapp.com/ru/docs/bootstrap/
 
 - name: Spanish
   code: es

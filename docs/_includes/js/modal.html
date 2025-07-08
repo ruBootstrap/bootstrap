@@ -1,45 +1,45 @@
 <div class="bs-docs-section">
-  <h1 id="modals" class="page-header">Modals <small>modal.js</small></h1>
-  <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+  <h1 id="modals" class="page-header">Модальные окна <small>modal.js</small></h1>
+  <p>Модальные окна — это упрощенные, но гибкие диалоги с минимальной функциональностью и умными дефолтами.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-stacked-modals">
-    <h4>Multiple open modals not supported</h4>
-    <p>Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires custom code.</p>
+    <h4>Много открытых модальных окон не поддерживается</h4>
+    <p>Убедитесь, что не открываете модальное окно, пока другое все еще видно. Открытие нескольких модальных окон одновременно требует написания пользовательского кода.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-modal-markup-placement">
-    <h4>Modal markup placement</h4>
-    <p>Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality.</p>
+    <h4>Расположение разметки модального окна</h4>
+    <p>Всегда пытайтесь разместить HTML-код модального окна в верхнем уровне вашего документа, чтобы избежать влияния других компонентов на внешний вид и/или функциональность модального окна.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-modal-mobile-caveats">
-    <h4>Mobile device caveats</h4>
-    <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
+    <h4>Особые замечания для мобильных устройств</h4>
+    <p>Существуют особые замечания по использованию модальных окон на мобильных устройствах. <a href="../getting-started/#support-fixed-position-keyboards">См. наши документы по поддержке браузеров</a> для деталей.</p>
   </div>
 
-  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in Bootstrap modals.</strong> To achieve the same effect, use some custom JavaScript:</p>
+  <p><strong class="text-danger">Из-за того, как HTML5 определяет его семантику, атрибут <code>autofocus</code> HTML не оказывает никакого эффекта в модальных окнах Bootstrap.</strong> Для достижения того же эффекта используйте некоторый пользовательский JavaScript:</p>
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
 })
 {% endhighlight %}
 
-  <h2 id="modals-examples">Examples</h2>
+  <h2 id="modals-examples">Примеры</h2>
 
-  <h3>Static example</h3>
-  <p>A rendered modal with header, body, and set of actions in the footer.</p>
+  <h3>Статический пример</h3>
+  <p>Отображенное модальное окно с заголовком, телом и набором действий в нижней части.</p>
   <div class="bs-example bs-example-modal" data-example-id="static-modal">
     <div class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Modal title</h4>
+            <h4 class="modal-title">Заголовок модального окна</h4>
           </div>
           <div class="modal-body">
-            <p>One fine body&hellip;</p>
+            <p>Одна хорошая тело&hellip;</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -51,22 +51,22 @@ $('#myModal').on('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Заголовок модального окна</h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <p>Одна хорошая тело&hellip;</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 {% endhighlight %}
 
-  <h3>Live demo</h3>
-  <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+  <h3>Живой пример</h3>
+  <p>Переключайте модальное окно через JavaScript, нажав кнопку ниже. Оно будет плавно опускаться и появляться сверху страницы.</p>
   <!-- sample modal content -->
   <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -74,21 +74,21 @@ $('#myModal').on('shown.bs.modal', function () {
 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          <h4 class="modal-title" id="myModalLabel">Заголовок модального окна</h4>
         </div>
         <div class="modal-body">
-          <h4>Text in a modal</h4>
+          <h4>Текст в модальном окне</h4>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
-          <h4>Popover in a modal</h4>
-          <p>This <a href="#" role="button" class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+          <h4>Попап в модальном окне</h4>
+          <p>Этот <a href="#" role="button" class="btn btn-default popover-test" title="Заголовок" data-content="И вот некоторый удивительный контент. Это очень захватывающе, не так ли?">кнопка</a> должна активировать попап при нажатии.</p>
 
-          <h4>Tooltips in a modal</h4>
-          <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+          <h4>Подсказки в модальном окне</h4>
+          <p><a href="#" class="tooltip-test" title="Подсказка">Эта ссылка</a> и <a href="#" class="tooltip-test" title="Подсказка">эта ссылка</a> должны иметь подсказки при наведении.</p>
 
           <hr>
 
-          <h4>Overflowing text to show scroll behavior</h4>
+          <h4>Переполняющий текст для проверки поведения прокрутки</h4>
           <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -100,8 +100,8 @@ $('#myModal').on('shown.bs.modal', function () {
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить изменения</button>
         </div>
 
       </div><!-- /.modal-content -->
@@ -110,13 +110,13 @@ $('#myModal').on('shown.bs.modal', function () {
 
   <div class="bs-example bs-example-padded-bottom">
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
+      Запустить демо-модальное окно
     </button>
   </div><!-- /example -->
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
+  Запустить демо-модальное окно
 </button>
 
 <!-- Modal -->
@@ -125,14 +125,14 @@ $('#myModal').on('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Заголовок модального окна</h4>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div>
   </div>
@@ -140,25 +140,25 @@ $('#myModal').on('shown.bs.modal', function () {
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-modal-accessibility">
-    <h4>Make modals accessible</h4>
-    <p>Be sure to add <code>role="dialog"</code> and <code>aria-labelledby="..."</code>, referencing the modal title, to <code>.modal</code>, and <code>role="document"</code> to the <code>.modal-dialog</code>  itself.</p>
-    <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
+    <h4>Сделайте модальные окна доступными</h4>
+    <p>Убедитесь, что добавляете <code>role="dialog"</code> и <code>aria-labelledby="..."</code>, ссылаясь на заголовок модального окна, к <code>.modal</code>, и <code>role="document"</code> к <code>.modal-dialog</code>  самому.</p>
+    <p>Кроме того, вы можете дать описание вашего модального диалога с помощью <code>aria-describedby</code> на <code>.modal</code>.</p>
   </div>
 
   <div class="bs-callout bs-callout-info" id="callout-modal-youtube">
-    <h4>Embedding YouTube videos</h4>
-    <p>Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
+    <h4>Встраивание видео YouTube в модальные окна</h4>
+    <p>Встраивание видео YouTube в модальные окна требует дополнительного JavaScript, которого нет в Bootstrap, для автоматического остановки воспроизведения и т.д. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">См. этот полезный пост Stack Overflow</a> для получения дополнительной информации.</p>
   </div>
 
-  <h2 id="modals-sizes">Optional sizes</h2>
-  <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+  <h2 id="modals-sizes">Необязательные размеры</h2>
+  <p>Модальные окна имеют два необязательных размера, доступных через модификаторы классов, размещенные на <code>.modal-dialog</code>.</p>
   <div class="bs-example">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Большое модальное окно</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Маленькое модальное окно</button>
   </div>
 {% highlight html %}
 <!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Большое модальное окно</button>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
@@ -169,7 +169,7 @@ $('#myModal').on('shown.bs.modal', function () {
 </div>
 
 <!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Маленькое модальное окно</button>
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm" role="document">
@@ -187,7 +187,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+          <h4 class="modal-title" id="myLargeModalLabel">Большое модальное окно</h4>
         </div>
         <div class="modal-body">
           ...
@@ -201,7 +201,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+          <h4 class="modal-title" id="mySmallModalLabel">Маленькое модальное окно</h4>
         </div>
         <div class="modal-body">
           ...
@@ -210,23 +210,23 @@ $('#myModal').on('shown.bs.modal', function () {
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-  <h2 id="modals-remove-animation">Remove animation</h2>
-  <p>For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.</p>
+  <h2 id="modals-remove-animation">Удаление анимации</h2>
+  <p>Для модальных окон, которые просто появляются, а не плавно появляются, удалите класс <code>.fade</code> из вашей разметки модального окна.</p>
 {% highlight html %}
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="...">
   ...
 </div>
 {% endhighlight %}
 
-  <h2 id="modals-grid-system">Using the grid system</h2>
-  <p>To take advantage of the Bootstrap grid system within a modal, just nest <code>.row</code>s within the <code>.modal-body</code> and then use the normal grid system classes.</p>
+  <h2 id="modals-grid-system">Использование системы сетки</h2>
+  <p>Чтобы воспользоваться системой сетки Bootstrap внутри модального окна, просто вложите <code>.row</code>s внутрь <code>.modal-body</code> и затем используйте обычные классы системы сетки.</p>
 <!-- sample modal content -->
   <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="gridModalLabel">Modal title</h4>
+          <h4 class="modal-title" id="gridModalLabel">Заголовок модального окна</h4>
         </div>
         <div class="modal-body">
           <div class="row">
@@ -242,28 +242,28 @@ $('#myModal').on('shown.bs.modal', function () {
           </div>
           <div class="row">
             <div class="col-sm-9">
-              Level 1: .col-sm-9
+              Уровень 1: .col-sm-9
               <div class="row">
                 <div class="col-xs-8 col-sm-6">
-                  Level 2: .col-xs-8 .col-sm-6
+                  Уровень 2: .col-xs-8 .col-sm-6
                 </div>
                 <div class="col-xs-4 col-sm-6">
-                  Level 2: .col-xs-4 .col-sm-6
+                  Уровень 2: .col-xs-4 .col-sm-6
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить изменения</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 <div class="bs-example bs-example-padded-bottom">
   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gridSystemModal">
-    Launch demo modal
+    Запустить демо-модальное окно
   </button>
 </div><!-- /example -->
 {% highlight html %}
@@ -272,7 +272,7 @@ $('#myModal').on('shown.bs.modal', function () {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="gridSystemModalLabel">Заголовок модального окна</h4>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -288,21 +288,21 @@ $('#myModal').on('shown.bs.modal', function () {
         </div>
         <div class="row">
           <div class="col-sm-9">
-            Level 1: .col-sm-9
+            Уровень 1: .col-sm-9
             <div class="row">
               <div class="col-xs-8 col-sm-6">
-                Level 2: .col-xs-8 .col-sm-6
+                Уровень 2: .col-xs-8 .col-sm-6
               </div>
               <div class="col-xs-4 col-sm-6">
-                Level 2: .col-xs-4 .col-sm-6
+                Уровень 2: .col-xs-4 .col-sm-6
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -310,69 +310,69 @@ $('#myModal').on('shown.bs.modal', function () {
 
 {% endhighlight %}
 
-  <h2 id="modals-related-target">Varying modal content based on trigger button</h2>
-  <p>Have a bunch of buttons that all trigger the same modal, just with slightly different contents? Use <code>event.relatedTarget</code> and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes">HTML <code>data-*</code> attributes</a> (possibly <a href="http://api.jquery.com/data/">via jQuery</a>) to vary the contents of the modal depending on which button was clicked. See the Modal Events docs for details on <code>relatedTarget</code>,</p>
+  <h2 id="modals-related-target">Изменение содержимого модального окна в зависимости от кнопки-триггера</h2>
+  <p>У вас есть много кнопок, которые все запускают одно и то же модальное окно, но с немного разным содержимым? Используйте <code>event.relatedTarget</code> и <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes">HTML <code>data-*</code> атрибуты</a> (возможно, <a href="http://api.jquery.com/data/">через jQuery</a>) для изменения содержимого модального окна в зависимости от того, какая кнопка была нажата. См. документы по событиям модального окна для деталей по <code>relatedTarget</code>,</p>
   <div class="bs-example">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-    ...more buttons...
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Открыть модальное окно для @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Открыть модальное окно для @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Открыть модальное окно для @getbootstrap</button>
+    ...больше кнопок...
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+            <h4 class="modal-title" id="exampleModalLabel">Новое сообщение</h4>
           </div>
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="recipient-name" class="control-label">Recipient:</label>
+                <label for="recipient-name" class="control-label">Получатель:</label>
                 <input type="text" class="form-control" id="recipient-name">
               </div>
               <div class="form-group">
-                <label for="message-text" class="control-label">Message:</label>
+                <label for="message-text" class="control-label">Сообщение:</label>
                 <textarea class="form-control" id="message-text"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Отправить сообщение</button>
           </div>
         </div>
       </div>
     </div><!-- /.modal -->
   </div><!-- /.bs-example -->
 {% highlight html %}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-...more buttons...
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Открыть модальное окно для @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Открыть модальное окно для @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Открыть модальное окно для @getbootstrap</button>
+...больше кнопок...
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        <h4 class="modal-title" id="exampleModalLabel">Новое сообщение</h4>
       </div>
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
+            <label for="recipient-name" class="control-label">Получатель:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
+            <label for="message-text" class="control-label">Сообщение:</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Отправить сообщение</button>
       </div>
     </div>
   </div>
@@ -385,64 +385,64 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-title').text('Новое сообщение для ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
 {% endhighlight %}
 
-  <h2 id="modals-usage">Usage</h2>
-  <p>The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds <code>.modal-open</code> to the <code>&lt;body&gt;</code> to override default scrolling behavior and generates a <code>.modal-backdrop</code> to provide a click area for dismissing shown modals when clicking outside the modal.</p>
+  <h2 id="modals-usage">Использование</h2>
+  <p>Плагин модального окна переключает ваше скрытое содержимое по требованию, через атрибуты данных или JavaScript. Он также добавляет <code>.modal-open</code> к <code>&lt;body&gt;</code>, чтобы переопределить поведение прокрутки по умолчанию, и генерирует <code>.modal-backdrop</code>, чтобы предоставить область для закрытия показанных модальных окон при нажатии вне модального окна.</p>
 
-  <h3>Via data attributes</h3>
-  <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+  <h3>Через атрибуты данных</h3>
+  <p>Активируйте модальное окно без написания JavaScript. Установите <code>data-toggle="modal"</code> на элемент контроллера, например, кнопку, вместе с <code>data-target="#foo"</code> или <code>href="#foo"</code>, чтобы указать конкретное модальное окно для переключения.</p>
 {% highlight html %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+<button type="button" data-toggle="modal" data-target="#myModal">Запустить модальное окно</button>
 {% endhighlight %}
 
-  <h3>Via JavaScript</h3>
-  <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
+  <h3>Через JavaScript</h3>
+  <p>Вызовите модальное окно с идентификатором <code>myModal</code> с помощью одной строки JavaScript:</p>
   {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-  <h3 id="modals-options">Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+  <h3 id="modals-options">Опции</h3>
+  <p>Опции можно передавать через атрибуты данных или JavaScript. Для атрибутов данных, добавьте имя опции к <code>data-</code>, например, <code>data-backdrop=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped js-options-table">
       <thead>
        <tr>
-         <th>Name</th>
-         <th>type</th>
-         <th>default</th>
-         <th>description</th>
+         <th>Имя</th>
+         <th>тип</th>
+         <th>по умолчанию</th>
+         <th>описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>backdrop</td>
-         <td>boolean or the string <code>'static'</code></td>
+         <td>boolean или строка <code>'static'</code></td>
          <td>true</td>
-         <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+         <td>Включает элемент <code>modal-backdrop</code>. В качестве альтернативы, укажите <code>static</code> для затемнения, которое не закрывает модальное окно при нажатии.</td>
        </tr>
        <tr>
          <td>keyboard</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Closes the modal when escape key is pressed</td>
+         <td>Закрывает модальное окно при нажатии клавиши Escape</td>
        </tr>
        <tr>
          <td>show</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Shows the modal when initialized.</td>
+         <td>Показывает модальное окно при инициализации.</td>
        </tr>
        <tr>
          <td>remote</td>
          <td>path</td>
          <td>false</td>
          <td>
-          <p><strong class="text-danger">This option is deprecated since v3.3.0 and has been removed in v4.</strong> We recommend instead using client-side templating or a data binding framework, or calling <a href="http://api.jquery.com/load/">jQuery.load</a> yourself.</p>
-          <p>If a remote URL is provided, <strong>content will be loaded one time</strong> via jQuery's <code>load</code> method and injected into the <code>.modal-content</code> div. If you're using the data-api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
+          <p><strong class="text-danger">Эта опция устарела с версии v3.3.0 и была удалена в v4.</strong> Мы рекомендуем вместо этого использовать клиентскую шаблонизацию или фреймворк привязки данных, или вызовите <a href="http://api.jquery.com/load/">jQuery.load</a> самостоятельно.</p>
+          <p>Если предоставлен удаленный URL, <strong>содержимое загружается один раз</strong> через метод <code>load</code> jQuery и вводится в <code>.modal-content</code> div. Если вы используете API data-api, вы также можете альтернативно использовать атрибут <code>href</code>, чтобы указать удаленный источник. Пример этого показан ниже:</p>
 {% highlight html %}
-<a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
+<a data-toggle="modal" href="remote.html" data-target="#modal">Нажмите на меня</a>
 {% endhighlight %}
          </td>
        </tr>
@@ -450,10 +450,10 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3 id="modals-methods">Methods</h3>
+  <h3 id="modals-methods">Методы</h3>
 
   <h4><code>.modal(options)</code></h4>
-  <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+  <p>Активирует ваше содержимое как модальное окно. Принимает необязательный объект опций.</p>
 {% highlight js %}
 $('#myModal').modal({
   keyboard: false
@@ -461,53 +461,53 @@ $('#myModal').modal({
 {% endhighlight %}
 
   <h4><code>.modal('toggle')</code></h4>
-  <p>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</p>
+  <p>Вручную переключает модальное окно. <strong>Возвращает вызывающему коду до того, как модальное окно фактически показано или скрыто</strong> (то есть до события <code>shown.bs.modal</code> или <code>hidden.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
 
   <h4><code>.modal('show')</code></h4>
-  <p>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs).</p>
+  <p>Вручную открывает модальное окно. <strong>Возвращает вызывающему коду до того, как модальное окно фактически показано</strong> (то есть до события <code>shown.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('show'){% endhighlight %}
 
   <h4><code>.modal('hide')</code></h4>
-  <p>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</p>
+  <p>Вручную скрывает модальное окно. <strong>Возвращает вызывающему коду до того, как модальное окно фактически скрыто</strong> (то есть до события <code>hidden.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
   <h4><code>.modal('handleUpdate')</code></h4>
-  <p>Readjusts the modal's positioning to counter a scrollbar in case one should appear, which would make the modal jump to the left.</p>
-  <p>Only needed when the height of the modal changes while it is open.</p>
+  <p>Считывает позицию модального окна для корректировки прокрутки, которая может появиться, чтобы модальное окно не прыгало влево.</p>
+  <p>Требуется только в том случае, если высота модального окна изменяется, пока оно открыто.</p>
   {% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
 
-  <h3 id="modals-events">Events</h3>
-  <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
-  <p>All modal events are fired at the modal itself (i.e. at the <code>&lt;div class="modal"&gt;</code>).</p>
+  <h3 id="modals-events">События</h3>
+  <p>Класс модального окна Bootstrap предоставляет несколько событий для подключения к функциональности модального окна.</p>
+  <p>Все события модального окна срабатывают на самом <code>&lt;div class="modal"&gt;</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
        <tr>
-         <th>Event Type</th>
-         <th>Description</th>
+         <th>Тип события</th>
+         <th>Описание</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>show.bs.modal</td>
-         <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+         <td>Это событие срабатывает сразу после вызова метода <code>show</code> экземпляра. Если вызвано по клику, элемент, вызвавший событие, доступен как свойство <code>relatedTarget</code> события.</td>
        </tr>
        <tr>
          <td>shown.bs.modal</td>
-         <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+         <td>Это событие срабатывает, когда модальное окно стало видимым для пользователя (будет ждать завершения переходов CSS). Если вызвано по клику, элемент, вызвавший событие, доступен как свойство <code>relatedTarget</code> события.</td>
        </tr>
        <tr>
          <td>hide.bs.modal</td>
-         <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+         <td>Это событие срабатывает сразу после вызова метода <code>hide</code> экземпляра.</td>
        </tr>
        <tr>
          <td>hidden.bs.modal</td>
-         <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+         <td>Это событие срабатывает, когда модальное окно полностью скрыто от пользователя (будет ждать завершения переходов CSS).</td>
        </tr>
        <tr>
          <td>loaded.bs.modal</td>
-         <td>This event is fired when the modal has loaded content using the <code>remote</code> option.</td>
+         <td>Это событие срабатывает, когда модальное окно загружает содержимое с помощью опции <code>remote</code>.</td>
        </tr>
       </tbody>
     </table>

@@ -1,30 +1,30 @@
 <div class="bs-docs-section">
-  <h1 id="alerts" class="page-header">Alert messages <small>alert.js</small></h1>
+  <h1 id="alerts" class="page-header">Оповещения <small>alert.js</small></h1>
 
-  <h2 id="alerts-examples">Example alerts</h2>
-  <p>Add dismiss functionality to all alert messages with this plugin.</p>
-  <p>When using a <code>.close</code> button, it must be the first child of the <code>.alert-dismissible</code> and no text content may come before it in the markup.</p>
+  <h2 id="alerts-examples">Примеры оповещений</h2>
+  <p>Добавьте возможность закрытия для всех оповещений с помощью этого плагина.</p>
+  <p>Если используется кнопка <code>.close</code>, она должна быть первым дочерним элементом <code>.alert-dismissible</code>, и перед ней не должно быть текстового содержимого в разметке.</p>
   <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
     <div class="alert alert-warning alert-dismissible fade in" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+      <strong>Святое гуакамоле!</strong> Лучше проверьте себя, вы выглядите не очень.
     </div>
 
     <div class="alert alert-danger alert-dismissible fade in" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4>Oh snap! You got an error!</h4>
-      <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+      <h4>Ой! Произошла ошибка!</h4>
+      <p>Измените это и то и попробуйте снова. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
       <p>
-        <button type="button" class="btn btn-danger">Take this action</button>
-        <button type="button" class="btn btn-default">Or do this</button>
+        <button type="button" class="btn btn-danger">Выполнить действие</button>
+        <button type="button" class="btn btn-default">Или сделать это</button>
       </p>
     </div>
   </div><!-- /example -->
 
 
-  <h2 id="alerts-usage">Usage</h2>
+  <h2 id="alerts-usage">Использование</h2>
 
-  <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality. Closing an alert removes it from the DOM.</p>
+  <p>Просто добавьте <code>data-dismiss="alert"</code> к вашей кнопке закрытия, чтобы автоматически добавить функционал закрытия оповещения. При закрытии оповещение удаляется из DOM.</p>
 
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -32,35 +32,35 @@
 </button>
 {% endhighlight %}
 
-  <p>To have your alerts use animation when closing, make sure they have the <code>.fade</code> and <code>.in</code> classes already applied to them.</p>
+  <p>Чтобы оповещения анимировались при закрытии, убедитесь, что у них уже есть классы <code>.fade</code> и <code>.in</code>.</p>
 
-  <h3 id="alerts-methods">Methods</h3>
+  <h3 id="alerts-methods">Методы</h3>
 
   <h4><code>$().alert()</code></h4>
-  <p>Makes an alert listen for click events on descendant elements which have the <code>data-dismiss="alert"</code> attribute. (Not necessary when using the data-api's auto-initialization.)</p>
+  <p>Заставляет оповещение слушать события клика на дочерних элементах с атрибутом <code>data-dismiss="alert"</code>. (Не требуется при использовании автоматической инициализации через data-api.)</p>
 
   <h4><code>$().alert('close')</code></h4>
-  <p>Closes an alert by removing it from the DOM. If the <code>.fade</code> and <code>.in</code> classes are present on the element, the alert will fade out before it is removed.</p>
+  <p>Закрывает оповещение, удаляя его из DOM. Если у элемента есть классы <code>.fade</code> и <code>.in</code>, оповещение плавно исчезнет перед удалением.</p>
 
 
-  <h3 id="alerts-events">Events</h3>
-  <p>Bootstrap's alert plugin exposes a few events for hooking into alert functionality.</p>
+  <h3 id="alerts-events">События</h3>
+  <p>Плагин alert в Bootstrap предоставляет несколько событий для подключения к функционалу оповещений.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
         <tr>
-          <th>Event Type</th>
-          <th>Description</th>
+          <th>Тип события</th>
+          <th>Описание</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>close.bs.alert</td>
-          <td>This event fires immediately when the <code>close</code> instance method is called.</td>
+          <td>Это событие срабатывает сразу при вызове метода <code>close</code>.</td>
         </tr>
         <tr>
           <td>closed.bs.alert</td>
-          <td>This event is fired when the alert has been closed (will wait for CSS transitions to complete).</td>
+          <td>Это событие срабатывает, когда оповещение было закрыто (ожидает завершения CSS-переходов).</td>
         </tr>
       </tbody>
     </table>
