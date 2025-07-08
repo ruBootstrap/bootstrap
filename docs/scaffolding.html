@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Scaffolding · Bootstrap</title>
+    <title>Каркас · Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,17 +24,6 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="assets/ico/favicon.png">
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-146052-10']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -49,29 +38,29 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="/">Bootstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
-                <a href="./index.html">Home</a>
+                <a href="./index.html">Главная</a>
               </li>
               <li class="">
-                <a href="./getting-started.html">Get started</a>
+                <a href="./getting-started.html">Начало работы</a>
               </li>
               <li class="active">
-                <a href="./scaffolding.html">Scaffolding</a>
+                <a href="./scaffolding.html">Каркас</a>
               </li>
               <li class="">
-                <a href="./base-css.html">Base CSS</a>
+                <a href="./base-css.html">Базовый CSS</a>
               </li>
               <li class="">
-                <a href="./components.html">Components</a>
+                <a href="./components.html">Компоненты</a>
               </li>
               <li class="">
                 <a href="./javascript.html">JavaScript</a>
               </li>
               <li class="">
-                <a href="./customize.html">Customize</a>
+                <a href="./customize.html">Кастомизация</a>
               </li>
             </ul>
           </div>
@@ -83,8 +72,8 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h1>Scaffolding</h1>
-    <p class="lead">Bootstrap is built on responsive 12-column grids, layouts, and components.</p>
+    <h1>Каркас</h1>
+    <p class="lead">Bootstrap построен на адаптивной 12-колоночной сетке, макетах и компонентах.</p>
   </div>
 </header>
 
@@ -95,11 +84,11 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-          <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
-          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
-          <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
-          <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
+          <li><a href="#global"><i class="icon-chevron-right"></i> Глобальные стили</a></li>
+          <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Система сетки</a></li>
+          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Гибкая сетка</a></li>
+          <li><a href="#layouts"><i class="icon-chevron-right"></i> Макеты</a></li>
+          <li><a href="#responsive"><i class="icon-chevron-right"></i> Адаптивный дизайн</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -110,30 +99,30 @@
         ================================================== -->
         <section id="global">
           <div class="page-header">
-            <h1>Global settings</h1>
+            <h1>Глобальные настройки</h1>
           </div>
 
-          <h3>Requires HTML5 doctype</h3>
-          <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+          <h3>Требуется doctype HTML5</h3>
+          <p>Bootstrap использует определённые HTML-элементы и CSS-свойства, которые требуют использования doctype HTML5. Включайте его в начало всех ваших проектов.</p>
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ru"&gt;
   ...
 &lt;/html&gt;
 </pre>
 
-          <h3>Typography and links</h3>
-          <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+          <h3>Типографика и ссылки</h3>
+          <p>Bootstrap задаёт базовые глобальные стили отображения, типографики и ссылок. В частности:</p>
           <ul>
-            <li>Remove <code>margin</code> on the body</li>
-            <li>Set <code>background-color: white;</code> on the <code>body</code></li>
-            <li>Use the <code>@baseFontFamily</code>, <code>@baseFontSize</code>, and <code>@baseLineHeight</code> attributes as our typographic base</li>
-            <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li>
+            <li>Удаляет <code>margin</code> у body</li>
+            <li>Устанавливает <code>background-color: white;</code> для <code>body</code></li>
+            <li>Использует <code>@baseFontFamily</code>, <code>@baseFontSize</code> и <code>@baseLineHeight</code> как основу типографики</li>
+            <li>Устанавливает глобальный цвет ссылок через <code>@linkColor</code> и подчёркивает ссылки только при <code>:hover</code></li>
           </ul>
-          <p>These styles can be found within <strong>scaffolding.less</strong>.</p>
+          <p>Эти стили находятся в <strong>scaffolding.less</strong>.</p>
 
-          <h3>Reset via Normalize</h3>
-          <p>With Bootstrap 2, the old reset block has been dropped in favor of <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. While we use much of Normalize within our <strong>reset.less</strong>, we have removed some elements specifically for Bootstrap.</p>
+          <h3>Сброс через Normalize</h3>
+          <p>В Bootstrap 2 старый блок сброса заменён на <a href="https://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, проект <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> и <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>, который также используется в <a href="https://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Мы используем большую часть Normalize в <strong>reset.less</strong>, но некоторые элементы были удалены специально для Bootstrap.</p>
 
         </section>
 
@@ -144,11 +133,11 @@
         ================================================== -->
         <section id="gridSystem">
           <div class="page-header">
-            <h1>Default grid system</h1>
+            <h1>Стандартная система сетки</h1>
           </div>
 
-          <h2>Live grid example</h2>
-          <p>The default Bootstrap grid system utilizes <strong>12 columns</strong>, making for a 940px wide container without <a href="./scaffolding.html#responsive">responsive features</a> enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your viewport. Below 767px viewports, the columns become fluid and stack vertically.</p>
+          <h2>Живой пример сетки</h2>
+          <p>Стандартная сетка Bootstrap использует <strong>12 колонок</strong>, что даёт контейнер шириной 940px без включённых <a href="./scaffolding.html#responsive">адаптивных возможностей</a>. При добавлении адаптивного CSS сетка подстраивается под ширину 724px и 1170px в зависимости от ширины экрана. При ширине экрана менее 767px колонки становятся гибкими и располагаются вертикально.</p>
           <div class="bs-docs-grid">
             <div class="row show-grid">
               <div class="span1">1</div>
@@ -175,29 +164,29 @@
             </div>
           </div>
 
-          <h3>Basic grid HTML</h3>
-          <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.span*</code> columns. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
+          <h3>Базовый HTML сетки</h3>
+          <p>Для простого двухколоночного макета создайте <code>.row</code> и добавьте нужное количество колонок <code>.span*</code>. Поскольку это 12-колоночная сетка, сумма всех <code>.span*</code> в ряду должна быть равна 12 (или количеству колонок в родителе).</p>
 <pre class="prettyprint linenums">
 &lt;div class="row"&gt;
   &lt;div class="span4"&gt;...&lt;/div&gt;
   &lt;div class="span8"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-          <p>Given this example, we have <code>.span4</code> and <code>.span8</code>, making for 12 total columns and a complete row.</p>
+          <p>В этом примере используются <code>.span4</code> и <code>.span8</code>, что в сумме даёт 12 колонок и завершённый ряд.</p>
 
-          <h2>Offsetting columns</h2>
-          <p>Move columns to the right using <code>.offset*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.offset4</code> moves <code>.span4</code> over four columns.</p>
+          <h2>Смещение колонок</h2>
+          <p>Смещайте колонки вправо с помощью классов <code>.offset*</code>. Каждый класс увеличивает левый отступ колонки на одну колонку. Например, <code>.offset4</code> сдвигает <code>.span4</code> на четыре колонки вправо.</p>
           <div class="bs-docs-grid">
             <div class="row show-grid">
               <div class="span4">4</div>
-              <div class="span3 offset2">3 offset 2</div>
+              <div class="span3 offset2">3 смещено на 2</div>
             </div><!-- /row -->
             <div class="row show-grid">
-              <div class="span3 offset1">3 offset 1</div>
-              <div class="span3 offset2">3 offset 2</div>
+              <div class="span3 offset1">3 смещено на 1</div>
+              <div class="span3 offset2">3 смещено на 2</div>
             </div><!-- /row -->
             <div class="row show-grid">
-              <div class="span6 offset3">6 offset 3</div>
+              <div class="span6 offset3">6 смещено на 3</div>
             </div><!-- /row -->
           </div>
 <pre class="prettyprint linenums">
@@ -207,17 +196,17 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Nesting columns</h2>
-          <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to the number of columns of its parent.</p>
+          <h2>Вложенность колонок</h2>
+          <p>Чтобы вложить содержимое в стандартную сетку, добавьте новый <code>.row</code> и набор колонок <code>.span*</code> внутри существующей колонки <code>.span*</code>. Вложенные ряды должны содержать колонки, сумма которых равна количеству колонок родителя.</p>
           <div class="row show-grid">
             <div class="span9">
-              Level 1 column
+              Колонка 1 уровня
               <div class="row show-grid">
                 <div class="span6">
-                  Level 2
+                  2 уровень
                 </div>
                 <div class="span3">
-                  Level 2
+                  2 уровень
                 </div>
               </div>
             </div>
@@ -225,10 +214,10 @@
 <pre class="prettyprint linenums">
 &lt;div class="row"&gt;
   &lt;div class="span9"&gt;
-    Level 1 column
+    Колонка 1 уровня
     &lt;div class="row"&gt;
-      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
-      &lt;div class="span3"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;2 уровень&lt;/div&gt;
+      &lt;div class="span3"&gt;2 уровень&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -241,11 +230,11 @@
         ================================================== -->
         <section id="fluidGridSystem">
           <div class="page-header">
-            <h1>Fluid grid system</h1>
+            <h1>Гибкая система сетки</h1>
           </div>
 
-          <h2>Live fluid grid example</h2>
-          <p>The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.</p>
+          <h2>Живой пример гибкой сетки</h2>
+          <p>Гибкая система сетки использует проценты вместо пикселей для ширины колонок. Она обладает теми же адаптивными возможностями, что и фиксированная сетка, обеспечивая правильные пропорции для ключевых разрешений и устройств.</p>
           <div class="bs-docs-grid">
             <div class="row-fluid show-grid">
               <div class="span1">1</div>
@@ -279,8 +268,8 @@
             </div>
           </div>
 
-          <h3>Basic fluid grid HTML</h3>
-          <p>Make any row "fluid" by changing <code>.row</code> to <code>.row-fluid</code>. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
+          <h3>Базовый HTML гибкой сетки</h3>
+          <p>Сделайте любой ряд "гибким", заменив <code>.row</code> на <code>.row-fluid</code>. Классы колонок остаются теми же, что облегчает переключение между фиксированной и гибкой сеткой.</p>
 <pre class="prettyprint linenums">
 &lt;div class="row-fluid"&gt;
   &lt;div class="span4"&gt;...&lt;/div&gt;
@@ -288,19 +277,19 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Fluid offsetting</h2>
-          <p>Operates the same way as the fixed grid system offsetting: add <code>.offset*</code> to any column to offset by that many columns.</p>
+          <h2>Гибкое смещение</h2>
+          <p>Работает так же, как и смещение в фиксированной сетке: добавьте <code>.offset*</code> к любой колонке, чтобы сместить её на соответствующее количество колонок.</p>
           <div class="bs-docs-grid">
             <div class="row-fluid show-grid">
               <div class="span4">4</div>
-              <div class="span4 offset4">4 offset 4</div>
+              <div class="span4 offset4">4 смещено на 4</div>
             </div><!-- /row -->
             <div class="row-fluid show-grid">
-              <div class="span3 offset3">3 offset 3</div>
-              <div class="span3 offset3">3 offset 3</div>
+              <div class="span3 offset3">3 смещено на 3</div>
+              <div class="span3 offset3">3 смещено на 3</div>
             </div><!-- /row -->
             <div class="row-fluid show-grid">
-              <div class="span6 offset6">6 offset 6</div>
+              <div class="span6 offset6">6 смещено на 6</div>
             </div><!-- /row -->
           </div>
 <pre class="prettyprint linenums">
@@ -310,25 +299,25 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Fluid nesting</h2>
-          <p>Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.</p>
+          <h2>Гибкая вложенность</h2>
+          <p>Гибкая сетка использует вложенность иначе: на каждом уровне вложенности сумма колонок должна быть равна 12. Это связано с тем, что гибкая сетка использует проценты, а не пиксели для задания ширины.</p>
           <div class="row-fluid show-grid">
             <div class="span12">
-              Fluid 12
+              Гибкая 12
               <div class="row-fluid show-grid">
                 <div class="span6">
-                  Fluid 6
+                  Гибкая 6
                   <div class="row-fluid show-grid">
                     <div class="span6">
-                      Fluid 6
+                      Гибкая 6
                     </div>
                     <div class="span6">
-                      Fluid 6
+                      Гибкая 6
                     </div>
                   </div>
                 </div>
                 <div class="span6">
-                  Fluid 6
+                  Гибкая 6
                 </div>
               </div>
             </div>
@@ -336,16 +325,16 @@
 <pre class="prettyprint linenums">
 &lt;div class="row-fluid"&gt;
   &lt;div class="span12"&gt;
-    Fluid 12
+    Гибкая 12
     &lt;div class="row-fluid"&gt;
       &lt;div class="span6"&gt;
-        Fluid 6
+        Гибкая 6
         &lt;div class="row-fluid"&gt;
-          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
-          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+          &lt;div class="span6"&gt;Гибкая 6&lt;/div&gt;
+          &lt;div class="span6"&gt;Гибкая 6&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+      &lt;div class="span6"&gt;Гибкая 6&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -360,11 +349,11 @@
         ================================================== -->
         <section id="layouts">
           <div class="page-header">
-            <h1>Layouts</h1>
+            <h1>Макеты</h1>
           </div>
 
-          <h2>Fixed layout</h2>
-          <p>Provides a common fixed-width (and optionally responsive) layout with only <code>&lt;div class="container"&gt;</code> required.</p>
+          <h2>Фиксированный макет</h2>
+          <p>Обеспечивает общий фиксированный (и при необходимости адаптивный) макет, для которого требуется только <code>&lt;div class="container"&gt;</code>.</p>
           <div class="mini-layout">
             <div class="mini-layout-body"></div>
           </div>
@@ -376,8 +365,8 @@
 &lt;/body&gt;
 </pre>
 
-          <h2>Fluid layout</h2>
-          <p>Create a fluid, two-column page with <code>&lt;div class="container-fluid"&gt;</code>&mdash;great for applications and docs.</p>
+          <h2>Гибкий макет</h2>
+          <p>Создайте гибкую двухколоночную страницу с помощью <code>&lt;div class="container-fluid"&gt;</code> — отлично подходит для приложений и документации.</p>
           <div class="mini-layout fluid">
             <div class="mini-layout-sidebar"></div>
             <div class="mini-layout-body"></div>
@@ -386,10 +375,10 @@
 &lt;div class="container-fluid"&gt;
   &lt;div class="row-fluid"&gt;
     &lt;div class="span2"&gt;
-      &lt;!--Sidebar content--&gt;
+      &lt;!--Боковое меню--&gt;
     &lt;/div&gt;
     &lt;div class="span10"&gt;
-      &lt;!--Body content--&gt;
+      &lt;!--Основное содержимое--&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -403,153 +392,153 @@
         ================================================== -->
         <section id="responsive">
           <div class="page-header">
-            <h1>Responsive design</h1>
+            <h1>Адаптивный дизайн</h1>
           </div>
 
-          <h2>Enabling responsive features</h2>
-          <p>Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code>&lt;head&gt;</code> of your document. If you've compiled Bootstrap from the Customize page, you need only include the meta tag.</p>
+          <h2>Включение адаптивных возможностей</h2>
+          <p>Включите адаптивный CSS в вашем проекте, добавив соответствующий мета-тег и дополнительный стиль в <code>&lt;head&gt;</code> вашего документа. Если вы скомпилировали Bootstrap на странице Customize, достаточно добавить только мета-тег.</p>
 <pre class="prettyprint linenums">
 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 &lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
 </pre>
-          <p><span class="label label-info">Heads up!</span>  Bootstrap doesn't include responsive features by default at this time as not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it as needed.</p>
+          <p><span class="label label-info">Внимание!</span> По умолчанию Bootstrap не включает адаптивные возможности, так как не всем проектам это нужно. Вместо того чтобы заставлять разработчиков удалять эту функцию, мы предлагаем включать её по мере необходимости.</p>
 
-          <h2>About responsive Bootstrap</h2>
-          <img src="assets/img/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;">
-          <p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
+          <h2>О адаптивном Bootstrap</h2>
+          <img src="assets/img/responsive-illustrations.png" alt="Адаптивные устройства" style="float: right; margin: 0 0 20px 20px;">
+          <p>Медиа-запросы позволяют использовать пользовательский CSS в зависимости от различных условий — соотношения сторон, ширины, типа дисплея и т.д., но обычно фокусируются на <code>min-width</code> и <code>max-width</code>.</p>
           <ul>
-            <li>Modify the width of column in our grid</li>
-            <li>Stack elements instead of float wherever necessary</li>
-            <li>Resize headings and text to be more appropriate for devices</li>
+            <li>Изменяют ширину колонок в сетке</li>
+            <li>Располагают элементы вертикально вместо float там, где это необходимо</li>
+            <li>Изменяют размер заголовков и текста для разных устройств</li>
           </ul>
-          <p>Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.</p>
+          <p>Используйте медиа-запросы с умом и только как отправную точку для мобильной аудитории. Для крупных проектов рассмотрите отдельные кодовые базы, а не слои медиа-запросов.</p>
 
-          <h2>Supported devices</h2>
-          <p>Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+          <h2>Поддерживаемые устройства</h2>
+          <p>Bootstrap поддерживает ряд медиа-запросов в одном файле, чтобы сделать ваши проекты более подходящими для разных устройств и разрешений экрана. Вот что включено:</p>
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>Label</th>
-                <th>Layout width</th>
-                <th>Column width</th>
-                <th>Gutter width</th>
+                <th>Метка</th>
+                <th>Ширина макета</th>
+                <th>Ширина колонки</th>
+                <th>Ширина отступа</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Large display</td>
-                <td>1200px and up</td>
+                <td>Большой экран</td>
+                <td>1200px и выше</td>
                 <td>70px</td>
                 <td>30px</td>
               </tr>
               <tr>
-                <td>Default</td>
-                <td>980px and up</td>
+                <td>По умолчанию</td>
+                <td>980px и выше</td>
                 <td>60px</td>
                 <td>20px</td>
               </tr>
               <tr>
-                <td>Portrait tablets</td>
-                <td>768px and above</td>
+                <td>Портретные планшеты</td>
+                <td>768px и выше</td>
                 <td>42px</td>
                 <td>20px</td>
               </tr>
               <tr>
-                <td>Phones to tablets</td>
-                <td>767px and below</td>
-                <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+                <td>Телефоны и планшеты</td>
+                <td>767px и ниже</td>
+                <td class="muted" colspan="2">Гибкие колонки, без фиксированной ширины</td>
               </tr>
               <tr>
-                <td>Phones</td>
-                <td>480px and below</td>
-                <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
+                <td>Телефоны</td>
+                <td>480px и ниже</td>
+                <td class="muted" colspan="2">Гибкие колонки, без фиксированной ширины</td>
               </tr>
             </tbody>
           </table>
 <pre class="prettyprint linenums">
-/* Large desktop */
+/* Большой экран */
 @media (min-width: 1200px) { ... }
 
-/* Portrait tablet to landscape and desktop */
+/* Портретный планшет до десктопа */
 @media (min-width: 768px) and (max-width: 979px) { ... }
 
-/* Landscape phone to portrait tablet */
+/* Ландшафтный телефон до портретного планшета */
 @media (max-width: 767px) { ... }
 
-/* Landscape phones and down */
+/* Ландшафтные телефоны и ниже */
 @media (max-width: 480px) { ... }
 </pre>
 
 
-          <h2>Responsive utility classes</h2>
-          <p>For faster mobile-friendly development, use these utility classes for showing and hiding content by device. Below is a table of the available classes and their effect on a given media query layout (labeled by device). They can be found in <code>responsive.less</code>.</p>
+          <h2>Адаптивные утилиты</h2>
+          <p>Для быстрой мобильной разработки используйте эти утилитарные классы для отображения и скрытия контента в зависимости от устройства. Ниже приведена таблица доступных классов и их действия для каждого макета (по устройствам). Они находятся в <code>responsive.less</code>.</p>
           <table class="table table-bordered table-striped responsive-utilities">
             <thead>
               <tr>
-                <th>Class</th>
-                <th>Phones <small>767px and below</small></th>
-                <th>Tablets <small>979px to 768px</small></th>
-                <th>Desktops <small>Default</small></th>
+                <th>Класс</th>
+                <th>Телефоны <small>767px и ниже</small></th>
+                <th>Планшеты <small>979px до 768px</small></th>
+                <th>Десктопы <small>По умолчанию</small></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th><code>.visible-phone</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-hidden">Hidden</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-hidden">Скрыт</td>
               </tr>
               <tr>
                 <th><code>.visible-tablet</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-hidden">Скрыт</td>
               </tr>
               <tr>
                 <th><code>.visible-desktop</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-visible">Видимый</td>
               </tr>
               <tr>
                 <th><code>.hidden-phone</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-visible">Visible</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-visible">Видимый</td>
               </tr>
               <tr>
                 <th><code>.hidden-tablet</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-hidden">Скрыт</td>
+                <td class="is-visible">Видимый</td>
               </tr>
               <tr>
                 <th><code>.hidden-desktop</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-visible">Видимый</td>
+                <td class="is-hidden">Скрыт</td>
               </tr>
             </tbody>
           </table>
 
-          <h3>When to use</h3>
-          <p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.</p>
+          <h3>Когда использовать</h3>
+          <p>Используйте ограниченно и избегайте создания полностью разных версий одного и того же сайта. Вместо этого используйте их для дополнения отображения на каждом устройстве. Адаптивные утилиты не должны использоваться с таблицами и не поддерживаются для них.</p>
 
-          <h3>Responsive utilities test case</h3>
-          <p>Resize your browser or load on different devices to test the above classes.</p>
-          <h4>Visible on...</h4>
-          <p>Green checkmarks indicate that class is visible in your current viewport.</p>
+          <h3>Тестовый пример адаптивных утилит</h3>
+          <p>Изменяйте размер окна браузера или открывайте на разных устройствах, чтобы протестировать эти классы.</p>
+          <h4>Видим на...</h4>
+          <p>Зелёные галочки означают, что класс видим в вашем текущем окне.</p>
           <ul class="responsive-utilities-test">
-            <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
-            <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
-            <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+            <li>Телефон<span class="visible-phone">&#10004; Телефон</span></li>
+            <li>Планшет<span class="visible-tablet">&#10004; Планшет</span></li>
+            <li>Десктоп<span class="visible-desktop">&#10004; Десктоп</span></li>
           </ul>
-          <h4>Hidden on...</h4>
-          <p>Here, green checkmarks indicate that class is hidden in your current viewport.</p>
+          <h4>Скрыт на...</h4>
+          <p>Здесь зелёные галочки означают, что класс скрыт в вашем текущем окне.</p>
           <ul class="responsive-utilities-test hidden-on">
-            <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
-            <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
-            <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+            <li>Телефон<span class="hidden-phone">&#10004; Телефон</span></li>
+            <li>Планшет<span class="hidden-tablet">&#10004; Планшет</span></li>
+            <li>Десктоп<span class="hidden-desktop">&#10004; Десктоп</span></li>
           </ul>
 
         </section>
@@ -567,15 +556,15 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Дизайн и разработка с любовью от <a href="https://twitter.com/mdo" target="_blank">@mdo</a> и <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Код лицензирован по <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, документация — по <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="https://glyphicons.com">Glyphicons Free</a> лицензированы по <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+          <li><a href="https://blog.getbootstrap.com">Блог</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Проблемы</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twbs/bootstrap/releases">Changelog</a></li>
+          <li><a href="https://github.com/twbs/bootstrap/releases">История изменений</a></li>
         </ul>
       </div>
     </footer>
@@ -585,7 +574,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
@@ -605,23 +594,5 @@
     <script src="assets/js/google-code-prettify/prettify.js"></script>
 
     <script src="assets/js/application.js"></script>
-
-
-    <!-- Analytics
-    ================================================== -->
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-
   </body>
 </html>
