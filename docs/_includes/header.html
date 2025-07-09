@@ -1,46 +1,64 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap - элегантная, интуитивно понятная и мощная интерфейсная среда для мобильных устройств, которая упрощает и ускоряет веб-разработку.">
-<meta name="author" content="Марк Отто, Джейкоб Торнтон и участники Bootstrap">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+  name="description"
+  content="Bootstrap - элегантная, интуитивно понятная и мощная интерфейсная среда для мобильных устройств, которая упрощает и ускоряет веб-разработку."
+/>
+<meta
+  name="author"
+  content="Марк Отто, Джейкоб Торнтон и участники Bootstrap"
+/>
 
 <title>
-  {%- if page.title -%}
-    {{ page.title | smartify }} · {{ site.title | smartify }}
-  {%- else -%}
-    {{ site.title | smartify }} · {{ site.description | smartify }}
-  {%- endif -%}
+  {%- if page.title -%} {{ page.title | smartify }} · {{ site.title | smartify
+  }} {%- else -%} {{ site.title | smartify }} · {{ site.description | smartify
+  }} {%- endif -%}
 </title>
 
-<link rel="canonical" href="{{ site.url | append: site.baseurl | append: page.url }}">
+<link
+  rel="canonical"
+  href="{{ site.url | append: site.baseurl | append: page.url }}"
+/>
 
 <!-- Bootstrap core CSS -->
 {% if site.github %}
-  <link href="{{ site.baseurl }}/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/dist/css/bootstrap.min.css" rel="stylesheet" />
 {% else %}
-  <link href="{{ site.baseurl }}/dist/css/bootstrap.css" rel="stylesheet">
-{% endif %}
-
-{% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
-  <!-- Optional Bootstrap Theme -->
-  {% if site.github %}
-    <link href="data:text/css;charset=utf-8," data-href="{{ site.baseurl }}/dist/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
-  {% else %}
-    <link href="data:text/css;charset=utf-8," data-href="{{ site.baseurl }}/dist/css/bootstrap-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
-  {% endif %}
-{% endif %}
-
-{% if page.layout == "default" %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+<link href="{{ site.baseurl }}/dist/css/bootstrap.css" rel="stylesheet" />
+{% endif %} {% if page.slug == "css" or page.slug == "components" or page.slug
+== "js" %}
+<!-- Optional Bootstrap Theme -->
+{% if site.github %}
+<link
+  href="data:text/css;charset=utf-8,"
+  data-href="{{ site.baseurl }}/dist/css/bootstrap-theme.min.css"
+  rel="stylesheet"
+  id="bs-theme-stylesheet"
+/>
+{% else %}
+<link
+  href="data:text/css;charset=utf-8,"
+  data-href="{{ site.baseurl }}/dist/css/bootstrap-theme.css"
+  rel="stylesheet"
+  id="bs-theme-stylesheet"
+/>
+{% endif %} {% endif %} {% if page.layout == "default" %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css"
+/>
 {% endif %}
 
 <!-- Documentation extras -->
 {% if site.github %}
-<link href="{{ site.baseurl }}/assets/css/docs.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/docs.min.css" rel="stylesheet" />
 {% else %}
-<link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet" />
 {% endif %}
-<!--[if lt IE 9]><script src="{{ site.baseurl }}/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!--[if lt IE 9
+  ]><script src="{{ site.baseurl }}/assets/js/ie8-responsive-file-warning.js"></script
+><![endif]-->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -49,34 +67,20 @@
 <![endif]-->
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-<link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png" />
+<link rel="icon" href="{{ site.baseurl }}/favicon.ico" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKSSFVMSM7"></script>
+<!-- Google tag (gtag.js) -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-BKSSFVMSM7"
+></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-BKSSFVMSM7');
+  gtag("config", "G-BKSSFVMSM7");
 </script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-  (function (m, e, t, r, i, k, a) {
-    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-  })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-  ym(67825477, "init", {
-    clickmap: true,
-    trackLinks: true,
-    accurateTrackBounce: true
-  });
-</script>
-<noscript>
-  <div><img src="https://mc.yandex.ru/watch/67825477" style="position:absolute; left:-9999px;" alt="" /></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
