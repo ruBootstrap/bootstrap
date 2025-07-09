@@ -2,6 +2,5 @@
 **/dist/
 **/vendor/
 /_site/
-/_gh_pages/
-/_www/
+/site/public/
 /js/coverage/

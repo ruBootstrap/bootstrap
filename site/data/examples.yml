@@ -1,6 +1,6 @@
 - category: Стартовые наборы
   external: true
-  description: "Функциональные примеры использования Bootstrap в распространенных средах JS, таких как Webpack, Parcel, Vite и других, которые вы можете редактировать в StackBlitz."
+  description: "Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
   examples:
     - name: CDN starter
       translate: Стартер CDN
@@ -46,146 +46,108 @@
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-- category: Фрагменты
-  description: "Общие шаблоны для создания сайтов и приложений, основанных на существующих компонентах и утилитах с пользовательским CSS и т. д."
+- category: Snippets
+  description: "Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more."
   examples:
     - name: Headers
-      translate: Заголовки
-      description: "Отобразите свой брендинг, навигацию, поиск и многое другое с помощью этих компонентов заголовка."
+      description: "Display your branding, navigation, search, and more with these header components"
     - name: Heroes
-      translate: Герои
-      description: "Создайте сцену на своей домашней странице с помощью героев с четкими призывами к действию."
+      description: "Set the stage on your homepage with heroes that feature clear calls to action."
     - name: Features
-      translate: Функции
-      description: "Объясните особенности, преимущества или другие детали Вашего маркетингового контента."
+      description: "Explain the features, benefits, or other details in your marketing content."
     - name: Sidebars
-      translate: Боковые панели
-      description: "Общие шаблоны навигации идеально подходят для макетов вне холста или нескольких столбцов."
+      description: "Common navigation patterns ideal for offcanvas or multi-column layouts."
     - name: Footers
-      translate: Футеры
-      description: "Завершите каждую страницу потрясающим нижним колонтитулом, большим или маленьким."
+      description: "Finish every page strong with an awesome footer, big or small."
     - name: Dropdowns
-      translate: Выпадающие списки
-      description: "Расширьте свои раскрывающиеся списки с помощью фильтров, иконок, настраиваемых стилей и многого другого."
+      description: "Enhance your dropdowns with filters, icons, custom styles, and more."
     - name: List groups
-      translate: Список групп
-      description: "Расширяйте группы списков с помощью утилит и настраиваемых стилей для любого контента."
+      description: "Extend list groups with utilities and custom styles for any content."
     - name: Modals
-      translate: Модалки
-      description: "Преобразуйте модальные окна для любых целей, от обзоров функций до диалогов."
+      description: "Transform modals to serve any purpose, from feature tours to dialogs."
     - name: Badges
-      translate: Значки
-      description: "Заставьте значки работать с пользовательским внутренним HTML и новым внешним видом."
+      description: "Make badges work with custom inner HTML and new looks."
     - name: Breadcrumbs
-      translate: Хлебные крошки
-      description: "Интегрируйте пользовательские иконки и создавайте степперные компоненты."
+      description: "Integrate custom icons and create stepper components."
     - name: Buttons
-      translate: Кнопки
-      description: "Создавайте настраиваемые кнопки практически для любого варианта использования с помощью утилит."
+      description: "Create custom buttons for just about any use case with utilities."
     - name: Jumbotrons
-      translate: Джамботроны
-      description: "Создавайте модернизированные версии классического компонента Bootstrap."
+      description: "Create modernized versions of the classic Bootstrap component."
 
-- category: Пользовательские компоненты
-  description: "Совершенно новые компоненты и шаблоны, которые помогут людям быстро начать работу с Bootstrap и продемонстрируют передовой опыт добавления в платформу."
+- category: Custom Components
+  description: "Brand-new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
   examples:
     - name: Album
-      translate: Альбом
-      description: "Простой одностраничный шаблон для фотогалереи, портфолио и т.д."
+      description: "Simple one-page template for photo galleries, portfolios, and more."
     - name: Pricing
-      translate: Ценообразование
-      description: "Пример страницы с ценами, созданной с помощью карточек, с настраиваемым верхним и нижним колонтитулами."
+      description: "Example pricing page built with Cards and featuring a custom header and footer."
     - name: Checkout
-      translate: Оформление заказа
-      description: "Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки."
+      description: "Custom checkout form showing our form components and their validation features."
     - name: Product
-      translate: Продукт
-      description: "Экономичная маркетинговая страница, ориентированная на продукт, с обширной сеткой и изображениями."
+      description: "Lean product-focused marketing page with extensive grid and image work."
     - name: Cover
-      translate: Обложка
-      description: "Одностраничный шаблон для создания простых и красивых домашних страниц."
+      description: "A one-page template for building simple and beautiful home pages."
     - name: Carousel
-      translate: Карусель
-      description: "Настройте панель навигации и карусель, а затем добавьте новые компоненты."
+      description: "Customize the navbar and carousel, then add some new components."
     - name: Blog
-      translate: Блог
-      description: "Журнал как шаблон блога с заголовком, навигацией, избранным контентом."
+      description: "Magazine like blog template with header, navigation, featured content."
     - name: Dashboard
-      translate: Панель
-      description: "Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью."
+      description: "Basic admin dashboard shell with fixed sidebar and navbar."
     - name: Sign-in
-      translate: Форма входа
-      description: "Индивидуальный макет и дизайн формы для простой формы входа."
+      description: "Custom form layout and design for a simple sign in form."
     - name: Sticky footer
-      translate: Закрепленный футер
-      description: "Прикрепленный нижний колонтитул к нижней части области просмотра, когда содержимое страницы мало."
+      description: "Attach a footer to the bottom of the viewport when page content is short."
     - name: Sticky footer navbar
-      translate: Закрепленный футер и панель навигации
-      description: "Прикрепленный нижний колонтитул к нижней части области просмотра с помощью фиксированной верхней панели навигации."
+      description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
     - name: Jumbotron
       translate: Джамботрон
       description: "Используйте утилиты для воссоздания и улучшения jumbotron Bootstrap 4."
 
-- category: Фреймворк
-  description: "Примеры, которые сосредоточены на реализации использования встроенных компонентов, предоставляемых Bootstrap."
+- category: Framework
+  description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
   examples:
     - name: "Starter template"
-      translate: Стартовый шаблон
-      description: "Ничего, кроме простоты: скомпилированный CSS и JavaScript."
+      description: "Nothing but the basics: compiled CSS and JavaScript."
     - name: Grid
-      translate: Сетка
-      description: "Несколько примеров макетов сетки со всеми четырьмя уровнями, вложенностью и т.д."
+      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
     - name: Cheatsheet
-      translate: Шпаргалка
-      description: "Шпаргалка Bootstrap компонентов."
-    - name: Cheatsheet RTL
-      translate: Шпаргалка RTL
-      description: "Шпаргалка Bootstrap компонентов, RTL."
+      description: "Kitchen sink of Bootstrap components."
 
-- category: Панели навигации
-  description: "Взять компонент панели навигации по умолчанию и показать, как его можно перемещать, размещать и расширять."
+- category: Navbars
+  description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
   examples:
     - name: Navbars
-      translate: Панели навигации
-      description: "Демонстрация всех адаптивных и контейнерных опций для навигационной панели."
+      description: "Demonstration of all responsive and container options for the navbar."
     - name: Navbars offcanvas
-      translate: Панели навигации с offcanvas
-      description: "То же, что и в примере с панелями навигации, но с нашим компонентом offcanvas."
+      description: "Same as the Navbars example, but with our offcanvas component."
     - name: Navbar static
-      translate: Статичная панель навигации
-      description: "Пример статической верхней панели навигации с одним дополнительным контентом."
+      description: "Single navbar example of a static top navbar along with some additional content."
     - name: Navbar fixed
-      translate: Фиксированная панель навигации
-      description: "Пример единой панели навигации с фиксированной верхней панелью навигации и некоторым дополнительным контентом."
+      description: "Single navbar example with a fixed top navbar along with some additional content."
     - name: Navbar bottom
-      translate: Нижняя панель навигации
-      description: "Пример единой панели навигации с нижней панелью навигации и дополнительным контентом."
+      description: "Single navbar example with a bottom navbar along with some additional content."
     - name: Offcanvas navbar
       translate: Панель навигации вне холста
       description: "Превратите расширяемую панель навигации в скользящее меню вне холста (не использует наш компонент вне холста)."
 
 - category: RTL
-  description: "Посмотрите, как работает RTL-версия Bootstrap с этими модифицированными примерами пользовательских компонентов."
+  description: "See Bootstrap's RTL version in action with these modified examples from various categories."
   examples:
     - name: Album RTL
-      translate: Альбом RTL
-      description: "Простой одностраничный шаблон для фотогалерей, портфолио и т.д."
+      description: "Simple one-page template for photo galleries, portfolios, and more."
     - name: Checkout RTL
-      translate: Оформление заказа RTL
-      description: "Пользовательская форма оформления заказа, показывающая наши компоненты формы и их функции проверки."
+      description: "Custom checkout form showing our form components and their validation features."
     - name: Carousel RTL
-      translate: Карусель RTL
-      description: "Настройте панель навигации и карусель, а затем добавьте новые компоненты."
+      description: "Customize the navbar and carousel, then add some new components."
     - name: Blog RTL
-      translate: Блог RTL
-      description: "Журнал как шаблон блога с заголовком, навигацией, избранным контентом."
+      description: "Magazine like blog template with header, navigation, featured content."
     - name: Dashboard RTL
-      translate: Панель RTL
-      description: "Базовая оболочка панели администратора с фиксированной боковой панелью и навигационной панелью."
+      description: "Basic admin dashboard shell with fixed sidebar and navbar."
+    - name: Cheatsheet RTL
+      description: "Kitchen sink of Bootstrap components, RTL."
 
-- category: Интеграции
-  description: "Интеграции с внешними библиотеками."
+- category: Integrations
+  description: "Integrations with external libraries."
   examples:
     - name: "Masonry"
-      translate: Masonry
-      description: "Объедините возможности сетки Bootstrap и макета Masonry."
+      description: "Combine the powers of the Bootstrap grid and the Masonry layout."
