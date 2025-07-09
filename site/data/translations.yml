@@ -5,13 +5,23 @@
 
 - name: Russian
   code: ru
-  description: Bootstrap 5 на русском
-  url: https://getbootstrap.su/
+  description: Bootstrap 2 на русском
+  url: https://getbootstrap.su/docs/2.3/
+
+- name: Russian
+  code: ru
+  description: Bootstrap 3 на русском
+  url: https://getbootstrap.su/docs/3.4/
 
 - name: Russian
   code: ru
   description: Bootstrap 4 на русском
-  url: https://getbootstrap.su/docs/4.6/getting-started/introduction/
+  url: https://getbootstrap.su/docs/4.6/
+
+- name: Russian
+  code: ru
+  description: Bootstrap 5 на русском
+  url: https://getbootstrap.su/
 
 - name: العربية
   code: ar
