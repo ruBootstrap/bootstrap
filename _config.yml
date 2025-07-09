@@ -10,14 +10,17 @@ source:           docs
 destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
-url:              http://getbootstrap.su
+url:              https://getbootstrap.su
+baseurl:          /docs/3.3
 encoding:         UTF-8
+languageCode:     ru-ru
 
 gems:
   - jekyll-sitemap
 
 # Custom vars
 current_version:  3.3.7
+docs_version:     3.3
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
 repo_ru:          https://github.com/ruBootstrap/bootstrap
