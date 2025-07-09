@@ -1,28 +1,26 @@
+- group: v2.x
+  baseurl: "https://getbootstrap.su/docs"
+  description: "Все второстепенные выпуски и исправления от v2 перечислены ниже. Последнее обновление было v2.3.2."
+  versions:
+    - "2.3"
+
 - group: v3.x
   baseurl: "https://getbootstrap.su/docs"
   description: "Все второстепенные выпуски и исправления от v3 перечислены ниже. Последнее обновление было v3.4.1."
   versions:
+    - "3.3"
     - "3.4"
 
 - group: v4.x
   baseurl: "https://getbootstrap.su/docs"
-  description: "Наш предыдущий основной выпуск с его второстепенными выпусками. Последнее обновление v4.6.0."
+  description: "Наш предыдущий основной выпуск с его второстепенными выпусками. Последнее обновление v4.6.2."
   versions:
     - "4.5"
     - "4.6"
 
 - group: v5.x
   baseurl: "https://getbootstrap.su/docs"
-  description: "Текущий основной выпуск. Последнее обновление было v5.3.5."
-  versions:
-    - "5.0"
-    - "5.1"
-    - "5.2"
-    - "5.3"
-
-- group: v5.x [EN]
-  baseurl: "https://getbootstrap.com/docs"
-  description: "Текущий основной выпуск. Последнее обновление было v5.3.5."
+  description: "Текущий основной выпуск. Последнее обновление было v5.3.7."
   versions:
     - "5.0"
     - "5.1"

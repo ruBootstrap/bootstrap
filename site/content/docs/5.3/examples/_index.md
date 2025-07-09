@@ -1,6 +1,6 @@
 ---
 layout: single
 title: Примеры
-description: Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
+description: Быстро начните проект с любым из наших примеров — от использования отдельных частей фреймворка до создания собственных компонентов и макетов.
 aliases: "/examples/"
 ---

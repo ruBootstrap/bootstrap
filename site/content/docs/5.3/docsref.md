@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Docs reference
-description: Examples of Bootstrap's documentation-specific components and styles.
+title: Справочник документации
+description: Примеры компонентов и стилей, используемых специально для документации Bootstrap.
 aliases: "/docsref/"
 toc: true
 robots: noindex,follow
@@ -9,27 +9,27 @@ sitemap:
   disable: true
 ---
 
-## Buttons
+## Кнопки
 
-<button class="btn btn-bd-primary">Primary button</button>
-<button class="btn btn-bd-accent">Accent button</button>
-<button class="btn btn-bd-light">Light button</button>
+<button class="btn btn-bd-primary">Основная кнопка</button>
+<button class="btn btn-bd-accent">Акцентная кнопка</button>
+<button class="btn btn-bd-light">Светлая кнопка</button>
 
-## Callouts
+## Вызовы (Callouts)
 
 {{< callout >}}
-  Default callout
+  Обычный callout
 {{< /callout >}}
 
 {{< callout warning >}}
-  Warning callout
+  Предупреждающий callout
 {{< /callout >}}
 
 {{< callout danger >}}
-  Danger callout
+  Опасный callout
 {{< /callout >}}
 
-## Code example
+## Пример кода
 
 ```scss
 .test {
@@ -38,11 +38,11 @@ sitemap:
 ```
 
 <div class="bd-example">
-  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
+  Элемент <abbr title="HyperText Markup Language">HTML</abbr> — элемент аббревиатуры.
 </div>
 
 {{< example >}}
-<div class="test">This is a test.</div>
+<div class="test">Это тест.</div>
 {{< /example >}}
 
 {{< scss-docs name="variable-gradient" file="scss/_variables.scss" >}}
