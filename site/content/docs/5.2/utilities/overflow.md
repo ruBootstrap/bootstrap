@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-## Overflow
+## Переполнение
 
 Настройте свойство `overflow` на лету с четырьмя значениями и классами по умолчанию. Эти классы по умолчанию не реагируют.
 
@@ -64,7 +64,7 @@ toc: true
 
 ### `overflow-y`
 
-Adjust the `overflow-y` property to affect the overflow of content vertically.
+Настройте свойство `overflow-y`, чтобы повлиять на переполнение содержимого по вертикали.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-y-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">

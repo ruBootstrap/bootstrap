@@ -17,20 +17,20 @@ thumbnail: guides/bootstrap-webpack@2x.png
 
 Мы создаем проект Webpack с Bootstrap с нуля, поэтому есть некоторые предварительные условия и предварительные шаги, прежде чем мы действительно сможем начать. Это руководство требует, чтобы у вас был установлен Node.js и вы немного знакомы с терминалом.
 
-1. **Создайте папку проекта и установите npm.** Мы создадим папку `my-project` и инициализируем npm с аргументом `-y`, чтобы он не задавал нам все интерактивные вопросы.
+1. **Создайте папку проекта и инициализируйте npm.** Мы создадим папку `my-project` и инициализируем npm с аргументом `-y`, чтобы он не задавал нам все интерактивные вопросы.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Установите Webpack.** Затем нам нужно установить наши зависимости для разработки Webpack: `webpack` для ядра Webpack, `webpack-cli`, чтобы мы могли запускать команды Webpack из терминала, и `webpack-dev-server`, чтобы мы могли запускать локальный сервер разработки. . Мы используем `--save-dev`, чтобы указать, что эти зависимости предназначены только для использования в разработке, а не для производства.
+2. **Установите Webpack.** Затем нам нужно установить наши зависимости для разработки Webpack: `webpack` для ядра Webpack, `webpack-cli`, чтобы мы могли запускать команды Webpack из терминала, и `webpack-dev-server`, чтобы мы могли запускать локальный сервер разработки. Мы используем `--save-dev`, чтобы указать, что эти зависимости предназначены только для использования в разработке, а не для производства.
 
    ```sh
    npm i --save-dev webpack webpack-cli webpack-dev-server
    ```
 
-3. **Установите Bootstrap.** Теперь мы можем установить Bootstrap. Мы также установим Popper, так как наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки зависят от его позиционирования. Если вы не планируете использовать эти компоненты, вы можете опустить здесь Popper.
+3. **Установите Bootstrap.** Теперь мы можем установить Bootstrap. Мы также установим Popper, так как наши выпадающие списки, всплывающие окна и всплывающие подсказки зависят от его позиционирования. Если вы не планируете использовать эти компоненты, вы можете опустить здесь Popper.
 
    ```sh
    npm i --save bootstrap @popperjs/core
@@ -71,7 +71,7 @@ my-project/
 
 На данный момент все в порядке, но Webpack не будет работать, потому что мы еще не заполнили наш `webpack.config.js`.
 
-## Кофигурация Webpack
+## Конфигурация Webpack
 
 С установленными зависимостями и готовой папкой проекта для начала написания кода мы теперь можем настроить Webpack и запустить наш проект локально.
 
@@ -98,16 +98,16 @@ my-project/
 
    ```html
    <!doctype html>
-   <html lang="en">
+   <html lang="ru">
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Bootstrap w/ Webpack</title>
+       <title>Bootstrap с Webpack</title>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Bootstrap and Webpack!</h1>
-         <button class="btn btn-primary">Primary button</button>
+         <h1>Привет, Bootstrap и Webpack!</h1>
+         <button class="btn btn-primary">Основная кнопка</button>
        </div>
        <script src="./main.js"></script>
      </body>
@@ -195,20 +195,20 @@ my-project/
 2. **Теперь давайте импортируем Bootstrap CSS.** Добавьте следующее в `src/scss/styles.scss`, чтобы импортировать весь исходный код Bootstrap Sass.
 
    ```scss
-   // Import all of Bootstrap's CSS
+   // Импортируем весь CSS Bootstrap
    @import "~bootstrap/scss/bootstrap";
    ```
 
    *Вы также можете импортировать наши таблицы стилей по отдельности, если хотите. [Прочитайте нашу документацию по импорту Sass]({{< docsref "/customize/sass#importing" >}}) для подробностей.*
 
-3. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать все JS из Bootstrap. Поппер будет автоматически импортирован через Bootstrap.
+3. **Далее мы загружаем CSS и импортируем JavaScript из Bootstrap.** Добавьте следующее в `src/js/main.js`, чтобы загрузить CSS и импортировать весь JS из Bootstrap. Popper будет автоматически импортирован через Bootstrap.
 
    <!-- eslint-skip -->
    ```js
-   // Импортируйте наш пользовательский CSS
+   // Импортируем наш пользовательский CSS
    import '../scss/styles.scss'
 
-   // Импортируйте весь JS Bootstrap
+   // Импортируем весь JS Bootstrap
    import * as bootstrap from 'bootstrap'
    ```
 
@@ -228,25 +228,25 @@ my-project/
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
 
-   Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Webpack](https://github.com/twbs/examples/tree/main/webpack), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать сборку, импортируя только части CSS Bootstrap. и JS, которые вам нужны.
+   Теперь вы можете начать добавлять любые компоненты Bootstrap, которые хотите использовать. Обязательно [ознакомьтесь с полным примером проекта Webpack](https://github.com/twbs/examples/tree/main/webpack), чтобы узнать, как включить дополнительный пользовательский Sass и оптимизировать сборку, импортируя только части CSS Bootstrap и JS, которые вам нужны.
 
-## Production optimizations
+## Оптимизация для продакшена
 
-Depending on your setup, you may want to implement some additional security and speed optimizations useful for running the project in production. Note that these optimizations are not applied on [the Webpack example project](https://github.com/twbs/examples/tree/main/webpack) and are up to you to implement.
+В зависимости от вашей настройки, вы можете захотеть реализовать некоторые дополнительные оптимизации безопасности и скорости, полезные для запуска проекта в продакшене. Обратите внимание, что эти оптимизации не применяются в [примере проекта Webpack](https://github.com/twbs/examples/tree/main/webpack) и зависят от вас для реализации.
 
-### Extracting CSS
+### Извлечение CSS
 
-The `style-loader` we configured above conveniently emits CSS into the bundle so that manually loading a CSS file in `dist/index.html` isn't necessary. This approach may not work with a strict Content Security Policy, however, and it may become a bottleneck in your application due to the large bundle size.
+`style-loader`, который мы настроили выше, удобно выводит CSS в бандл, так что ручная загрузка CSS-файла в `dist/index.html` не требуется. Однако этот подход может не работать со строгой политикой безопасности контента (CSP) и может стать узким местом в вашем приложении из-за большого размера бандла.
 
-To separate the CSS so that we can load it directly from `dist/index.html`, use the `mini-css-extract-loader` Webpack plugin.
+Чтобы отделить CSS, чтобы мы могли загружать его напрямую из `dist/index.html`, используйте плагин Webpack `mini-css-extract-loader`.
 
-First, install the plugin:
+Сначала установите плагин:
 
 ```sh
 npm install --save-dev mini-css-extract-plugin
 ```
 
-Then instantiate and use the plugin in the Webpack configuration:
+Затем создайте экземпляр и используйте плагин в конфигурации Webpack:
 
 ```diff
 --- a/webpack/webpack.config.js
@@ -274,7 +274,7 @@ Then instantiate and use the plugin in the Webpack configuration:
            {
 ```
 
-After running `npm run build` again, there will be a new file `dist/main.css`, which will contain all of the CSS imported by `src/js/main.js`. If you view `dist/index.html` in your browser now, the style will be missing, as it is now in `dist/main.css`. You can include the generated CSS in `dist/index.html` like this:
+После запуска `npm run build` снова появится новый файл `dist/main.css`, который будет содержать весь CSS, импортированный `src/js/main.js`. Если вы откроете `dist/index.html` в браузере сейчас, стили будут отсутствовать, так как они теперь находятся в `dist/main.css`. Вы можете включить сгенерированный CSS в `dist/index.html` следующим образом:
 
 ```diff
 --- a/webpack/dist/index.html
@@ -289,11 +289,11 @@ After running `npm run build` again, there will be a new file `dist/main.css`, w
    <body>
 ```
 
-### Extracting SVG files
+### Извлечение SVG файлов
 
-Bootstrap's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
+CSS Bootstrap включает несколько ссылок на SVG файлы через встроенные `data:` URI. Если вы определяете политику безопасности контента для вашего проекта, которая блокирует `data:` URI для изображений, то эти SVG файлы не будут загружаться. Вы можете обойти эту проблему, извлекая встроенные SVG файлы с помощью функции модулей ресурсов Webpack.
 
-Configure Webpack to extract inline SVG files like this:
+Настройте Webpack для извлечения встроенных SVG файлов следующим образом:
 
 ```diff
 --- a/webpack/webpack.config.js
@@ -315,7 +315,7 @@ Configure Webpack to extract inline SVG files like this:
          use: [
 ```
 
-After running `npm run build` again, you'll find the SVG files extracted into `dist/icons` and properly referenced from CSS.
+После запуска `npm run build` снова вы найдете SVG файлы, извлеченные в `dist/icons` и правильно ссылающиеся из CSS.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

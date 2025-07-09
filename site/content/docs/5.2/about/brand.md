@@ -8,7 +8,7 @@ toc: true
 
 Нужны ресурсы бренда Bootstrap? Отлично! У нас есть только несколько рекомендаций, которым мы следуем, и, в свою очередь, мы просим вас следовать им.
 
-## Лого
+## Логотип
 
 При ссылке на Bootstrap используйте наш логотип. Ни в коем случае не изменяйте наши логотипы. Не используйте брендинг Bootstrap для своих собственных проектов с открытым или закрытым исходным кодом. **Не используйте имя или логотип Twitter** вместе с Bootstrap.
 
@@ -34,14 +34,14 @@ Bootstrap всегда следует называть просто **Bootstrap*
 <div class="bd-brand-logos d-sm-flex text-center border rounded-3 overflow-hidden w-100 mb-3">
   <div class="bd-brand-item w-100 p-3">
     <div class="h3">Bootstrap</div>
-    <strong class="text-success">Правильный</strong>
+    <strong class="text-success">Правильно</strong>
   </div>
   <div class="bd-brand-item w-100 p-3">
     <div class="h3 text-muted">BootStrap</div>
-    <strong class="text-danger">Неправильный</strong>
+    <strong class="text-danger">Неправильно</strong>
   </div>
   <div class="bd-brand-item w-100 p-3">
     <div class="h3 text-muted">Twitter Bootstrap</div>
-    <strong class="text-danger">Неправильный</strong>
+    <strong class="text-danger">Неправильно</strong>
   </div>
 </div>

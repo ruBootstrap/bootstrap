@@ -6,30 +6,30 @@ group: customize
 toc: true
 ---
 
-## Colors
+## Цвета
 
 {{< added-in "5.3.0" >}}
 
-Bootstrap's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
+Цветовая палитра Bootstrap продолжает расширяться и становится более гибкой в версии 5.3.0. Мы добавили новые переменные для вторичных (`secondary`) и третичных (`tertiary`) цветов текста и фона, а также `{color}-bg-subtle`, `{color}-border-subtle` и `{color}-text` для наших тематических цветов. Эти новые цвета доступны через переменные Sass и CSS (но не через наши карты цветов или утилитарные классы) с целью облегчить настройку для различных цветовых режимов, таких как светлый и темный. Эти новые переменные глобально задаются на `:root` и адаптированы для нового темного режима, в то время как наши исходные тематические цвета остаются без изменений.
 
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
+Цвета, заканчивающиеся на `-rgb`, предоставляют значения `red, green, blue` для использования в цветовых режимах `rgb()` и `rgba()`. Например, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
 {{< callout warning>}}
-**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
+**Внимание!** Возможна путаница с нашими новыми вторичными и третичными цветами, а также с существующим вторичным тематическим цветом, а также с нашими светлыми и темными тематическими цветами. Ожидайте, что это будет доработано в v6.
 {{< /callout >}}
 
 <table class="table table-swatches">
   <thead>
     <tr>
-      <th style="width: 340px;">Description</th>
-      <th style="width: 200px;" class="ps-0">Swatch</th>
-      <th>Variables</th>
+      <th style="width: 340px;">Описание</th>
+      <th style="width: 200px;" class="ps-0">Образец</th>
+      <th>Переменные</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Body —** Default foreground (color) and background, including components.{{< /markdown >}}
+        {{< markdown >}}**Основной —** Цвет текста и фона по умолчанию, включая компоненты.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
@@ -48,7 +48,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Secondary —** Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.{{< /markdown >}}
+        {{< markdown >}}**Вторичный —** Используйте опцию `color` для более светлого текста. Используйте опцию `bg` для разделителей и для обозначения неактивных состояний компонентов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
@@ -67,7 +67,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="2">
-        {{< markdown >}}**Tertiary —** Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.{{< /markdown >}}
+        {{< markdown >}}**Третичный —** Используйте опцию `color` для еще более светлого текста. Используйте опцию `bg` для фонов состояний наведения, акцентов и областей.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
@@ -86,7 +86,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        {{< markdown >}}**Emphasis —** For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
+        {{< markdown >}}**Акцент —** Для текста с более высоким контрастом. Не применяется к фонам.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
@@ -97,7 +97,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        {{< markdown >}}**Border —** For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.{{< /markdown >}}
+        {{< markdown >}}**Граница —** Для границ компонентов, разделителей и линий. Используйте `--bs-border-color-translucent` для смешивания с фоном с помощью значения `rgba()`.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
@@ -108,7 +108,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
+        {{< markdown >}}**Основной —** Главный цвет темы, используется для гиперссылок, стилей фокуса, активных состояний компонентов и форм.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-primary">Primary</div>
@@ -119,7 +119,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-primary-bg-subtle); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-primary-bg-subtle); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary-bg-subtle`{{< /markdown >}}
@@ -127,7 +127,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary-border-subtle`{{< /markdown >}}
@@ -135,7 +135,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-primary-text`{{< /markdown >}}
@@ -143,7 +143,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
+        {{< markdown >}}**Успех —** Цвет темы, используемый для положительных или успешных действий и информации.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-success">Success</div>
@@ -154,7 +154,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-success-bg-subtle); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-success-bg-subtle); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
@@ -162,7 +162,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
@@ -170,7 +170,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-success-text`{{< /markdown >}}
@@ -178,7 +178,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Danger —** Theme color used for errors and dangerous actions.{{< /markdown >}}
+        {{< markdown >}}**Опасность —** Цвет темы, используемый для ошибок и опасных действий.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-danger">Danger</div>
@@ -189,7 +189,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-danger-bg-subtle); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-danger-bg-subtle); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger-bg-subtle`{{< /markdown >}}
@@ -197,7 +197,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger-border-subtle`{{< /markdown >}}
@@ -205,7 +205,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-danger-text`{{< /markdown >}}
@@ -213,7 +213,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Warning —** Theme color used for non-destructive warning messages.{{< /markdown >}}
+        {{< markdown >}}**Предупреждение —** Цвет темы, используемый для неразрушающих предупреждающих сообщений.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-warning">Warning</div>
@@ -224,7 +224,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-warning-bg-subtle); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-warning-bg-subtle); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning-bg-subtle`{{< /markdown >}}
@@ -232,7 +232,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning-border-subtle`{{< /markdown >}}
@@ -240,7 +240,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-warning-text`{{< /markdown >}}
@@ -248,7 +248,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Info —** Theme color used for neutral and informative content.{{< /markdown >}}
+        {{< markdown >}}**Информация —** Цвет темы, используемый для нейтрального и информативного контента.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-info">Info</div>
@@ -259,7 +259,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-info-bg-subtle); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-info-bg-subtle); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info-bg-subtle`{{< /markdown >}}
@@ -267,7 +267,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info-border-subtle`{{< /markdown >}}
@@ -275,7 +275,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-info-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-info-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-info-text`{{< /markdown >}}
@@ -283,7 +283,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Light —** Additional theme option for less contrasting colors.{{< /markdown >}}
+        {{< markdown >}}**Светлый —** Дополнительная опция темы для менее контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-light border">Light</div>
@@ -294,7 +294,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-light-bg-subtle); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-light-bg-subtle); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light-bg-subtle`{{< /markdown >}}
@@ -302,7 +302,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light-border-subtle`{{< /markdown >}}
@@ -310,7 +310,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-light-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-light-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-light-text`{{< /markdown >}}
@@ -318,7 +318,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Dark —** Additional theme option for higher contrasting colors.{{< /markdown >}}
+        {{< markdown >}}**Темный —** Дополнительная опция темы для более контрастных цветов.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 text-bg-dark border">Dark</div>
@@ -329,7 +329,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-dark-bg-subtle); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle</div>
+        <div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-dark-bg-subtle); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Фон (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark-bg-subtle`{{< /markdown >}}
@@ -337,7 +337,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Border subtle</div>
+        <div class="px-3 py-2 rounded-2" style="background-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Граница (subtle)</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark-border-subtle`{{< /markdown >}}
@@ -345,7 +345,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td>
-        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-dark-text); color: var(--bs-body-bg);">Text</div>
+        <div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-dark-text); color: var(--bs-body-bg);">Текст</div>
       </td>
       <td>
         {{< markdown >}}`--bs-dark-text`{{< /markdown >}}
@@ -354,19 +354,19 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </tbody>
 </table>
 
-### Using the new colors
+### Использование новых цветов
 
-These new colors are accessible via CSS variables and utility classes—like `--bs-primary-bg-subtle` and `.bg-primary-subtle`—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color's associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.
+Эти новые цвета доступны через CSS-переменные и утилитарные классы — такие как `--bs-primary-bg-subtle` и `.bg-primary-subtle` — что позволяет вам создавать собственные CSS-правила с переменными или быстро применять стили с помощью классов. Утилиты построены на основе связанных CSS-переменных цвета, и поскольку мы настраиваем эти переменные для темного режима, они также адаптируются к цветовым режимам по умолчанию.
 
 {{< example >}}
 <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-  Example element with utilities
+  Пример элемента с утилитами
 </div>
 {{< /example >}}
 
-### Theme colors
+### Тематические цвета
 
-Мы используем подмножество всех цветов, чтобы создать меньшую цветовую палитру для создания цветовых схем, также доступных в виде переменных Sass и карты Sass в файле `scss/_variables.scss`.
+Мы используем подмножество всех цветов для создания меньшей цветовой палитры для построения цветовых схем, также доступных как переменные Sass и карта Sass в файле `scss/_variables.scss`.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -378,7 +378,7 @@ These new colors are accessible via CSS variables and utility classes—like `--
   {{< /theme-colors.inline >}}
 </div>
 
-Все эти цвета доступны в виде карты Sass, `$theme-colors`.
+Все эти цвета доступны как карта Sass `$theme-colors`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
@@ -431,21 +431,21 @@ These new colors are accessible via CSS variables and utility classes—like `--
 
 ### Примечания к Sass
 
-Sass не может программно генерировать переменные, поэтому мы вручную создали переменные для каждого оттенка и оттенка сами. Мы указываем значение средней точки (например, `$blue-500`) и используем пользовательские цветовые функции для придания оттенка (осветления) или затенения (затемнения) наших цветов с помощью цветовой функции Sass `mix()`.
+Sass не может программно генерировать переменные, поэтому мы вручную создали переменные для каждого оттенка и тона. Мы указываем значение средней точки (например, `$blue-500`) и используем пользовательские цветовые функции для осветления (tint) или затемнения (shade) наших цветов с помощью функции Sass `mix()`.
 
-Использование `mix()` - это не то же самое, что `lighten()` и `darken()` - первый смешивает указанный цвет с белым или черным, а последний только регулирует значение яркости каждого цвета. В результате получается гораздо более полный набор цветов, как [показано в этой демонстрации CodePen](https://codepen.io/emdeoh/pen/zYOQOPB).
+Использование `mix()` — это не то же самое, что `lighten()` и `darken()` — первая смешивает указанный цвет с белым или черным, а последние только регулируют значение яркости каждого цвета. В результате получается гораздо более полный набор цветов, как [показано в этой демонстрации CodePen](https://codepen.io/emdeoh/pen/zYOQOPB).
 
 Наши функции `tint-color()` и `shade-color()` используют `mix()` вместе с нашей переменной `$theme-color-interval`, которая определяет ступенчатое процентное значение для каждого смешанного цвета, который мы производим. См. полный исходный код в файлах `scss/_functions.scss` и `scss/_variables.scss`.
 
-## Карты sass цвета
+## Карты цветов Sass
 
-Исходные файлы Sass Bootstrap включают три карты, которые помогут Вам быстро и легко просмотреть список цветов и их шестнадцатеричные значения.
+Исходные файлы Sass Bootstrap включают три карты, которые помогут вам быстро и легко просмотреть список цветов и их шестнадцатеричные значения.
 
-- `$colors` список всех наших доступных базовых цветов (`500`)
-- `$theme-colors` список всех цветов темы с семантическими именами (показано ниже)
-- `$grays` список всех оттенков и теней серого
+- `$colors` — список всех наших доступных базовых цветов (`500`)
+- `$theme-colors` — список всех цветов темы с семантическими именами (показано ниже)
+- `$grays` — список всех оттенков и тонов серого
 
-В `scss/_variables.scss` Вы найдете цветовые переменные Bootstrap и карту Sass. Вот пример Sass-карты `$colors`:
+В `scss/_variables.scss` вы найдете цветовые переменные Bootstrap и карту Sass. Вот пример карты Sass `$colors`:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
@@ -453,7 +453,7 @@ Sass не может программно генерировать переме�
 
 ### Пример
 
-Вот как Вы можете использовать их в своем Sass:
+Вот как вы можете использовать их в своем Sass:
 
 ```scss
 .alpha { color: $purple; }
@@ -463,19 +463,19 @@ Sass не может программно генерировать переме�
 }
 ```
 
-Утилиты [Цвета]({{< docsref "/utilities/colors" >}}) и [фона]({{< docsref "/utilities/background" >}}) также доступны для установки `color` и `background-color` с использованием значений цвета `500`.
+Утилиты [цвета]({{< docsref "/utilities/colors" >}}) и [фона]({{< docsref "/utilities/background" >}}) также доступны для установки `color` и `background-color` с использованием значений цвета `500`.
 
 ## Генерация утилит
 
 {{< added-in "5.1.0" >}}
 
-Bootstrap не включает утилиты `color` и `background-color` для каждой цветовой переменной, но вы можете создать их самостоятельно с помощью нашего [служебного API]({{< docsref "/utilities/api" >}}) и нашего расширенного Карты Sass добавлены в v5.1.0.
+Bootstrap не включает утилиты `color` и `background-color` для каждой цветовой переменной, но вы можете создать их самостоятельно с помощью нашего [Utility API]({{< docsref "/utilities/api" >}}) и нашей расширенной карты Sass, добавленной в v5.1.0.
 
 1. Для начала убедитесь, что вы импортировали наши функции, переменные, миксины и утилиты.
 2. Используйте нашу функцию `map-merge-multiple()`, чтобы быстро объединить несколько карт Sass в новую карту.
-3. Объедините эту новую комбинированную карту, чтобы дополнить любую утилиту именем класса `{color}-{level}`.
+3. Объедините эту новую комбинированную карту, чтобы дополнить любую утилиту с именем класса `{color}-{level}`.
 
-Вот пример, который генерирует утилиты цвета текста (например, `.text-purple-500`) используя вышеуказанные шаги.
+Вот пример, который генерирует утилиты цвета текста (например, `.text-purple-500`), используя вышеуказанные шаги.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -506,4 +506,4 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-Это создаст новые утилиты `.text-{color}-{level}` для каждого цвета и уровня. То же самое можно сделать и с любыми другими коммунальными предприятиями и объектами недвижимости.
+Это создаст новые утилиты `.text-{color}-{level}` для каждого цвета и уровня. То же самое можно сделать и с любыми другими утилитами и свойствами.

@@ -3,50 +3,50 @@
     <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-warning-rgb);">
       <svg class="bi fs-1"><use xlink:href="#plugin"></use></svg>
     </div>
-    <h2 class="display-5 mb-3 fw-semibold lh-sm">Powerful JavaScript plugins without&nbsp;jQuery</h2>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Мощные JavaScript плагины без jQuery</h2>
     <p class="lead fw-normal">
-      Add toggleable hidden elements, modals and offcanvas menus, popovers and tooltips, and so much more—all without jQuery. Bootstrap's JavaScript is HTML-first, meaning most plugins are added with <code>data</code> attributes in your HTML. Need more control? Include individual plugins programmatically.
+      Добавляйте переключаемые скрытые элементы, модальные окна и offcanvas меню, всплывающие подсказки и многое другое — все без jQuery. JavaScript Bootstrap ориентирован на HTML, что означает, что большинство плагинов добавляются с помощью атрибутов <code>data</code> в вашем HTML. Нужно больше контроля? Подключайте отдельные плагины программно.
     </p>
     <p class="d-flex justify-content-start lead fw-normal mb-md-0">
       <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/" class="icon-link fw-semibold">
-        Learn more about Bootstrap JavaScript
+        Узнать больше о JavaScript Bootstrap
         <svg class="bi"><use xlink:href="#arrow-right-short"></use></svg>
       </a>
     </p>
   </div>
   <div class="row gx-md-5">
     <div class="col-lg-6 mb-3">
-      <h3 class="fw-semibold">Data attribute API</h3>
-      <p>Why write more JavaScript when you can write HTML? Nearly all of Bootstrap's JavaScript plugins feature a first-class data API, allowing you to use JavaScript just by adding <code>data</code> attributes.</p>
+      <h3 class="fw-semibold">API атрибутов данных</h3>
+      <p>Зачем писать больше JavaScript, когда можно писать HTML? Почти все JavaScript плагины Bootstrap имеют первоклассный API данных, позволяющий использовать JavaScript просто добавляя атрибуты <code>data</code>.</p>
       <div class="p-4 mb-3 border rounded-3">
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Выпадающий список
           </button>
           <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-            <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-            <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+            <li><button class="dropdown-item" type="button">Элемент списка</button></li>
+            <li><button class="dropdown-item" type="button">Элемент списка</button></li>
+            <li><button class="dropdown-item" type="button">Элемент списка</button></li>
           </ul>
         </div>
       </div>
 
       {{ highlight (printf `<div class="dropdown">
 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  Dropdown
+  Выпадающий список
 </button>
 <ul class="dropdown-menu">
-  <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-  <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-  <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+  <li><button class="dropdown-item" type="button">Элемент списка</button></li>
+  <li><button class="dropdown-item" type="button">Элемент списка</button></li>
+  <li><button class="dropdown-item" type="button">Элемент списка</button></li>
 </ul>
 </div>
 `) "html" "" }}
-      <p>Learn more about <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#using-bootstrap-as-a-module">our JavaScript as modules</a> and <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#programmatic-api">using the programmatic API</a>.</p>
+      <p>Узнайте больше о <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#using-bootstrap-as-a-module">нашем JavaScript как модулях</a> и <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#programmatic-api">использовании программного API</a>.</p>
     </div>
     <div class="col-lg-6 mb-3">
-      <h3 class="fw-semibold">Comprehensive set of plugins</h3>
-      <p>Bootstrap features a dozen plugins that you can drop into any project. Drop them in all at once, or choose just the ones you need.</p>
+      <h3 class="fw-semibold">Комплексный набор плагинов</h3>
+      <p>Bootstrap включает дюжину плагинов, которые вы можете добавить в любой проект. Подключите их все сразу или выберите только те, которые вам нужны.</p>
       <hr class="my-4">
       <div class="row g-3">
         {{- range $plugin := .Site.Data.plugins -}}
