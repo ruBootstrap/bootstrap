@@ -88,7 +88,7 @@ my-project/
    </html>
    ```
 
-   Мы добавили сюда немного стилей Bootstrap с помощью `div class="container"` и `<button>`, чтобы мы видели, когда CSS Bootstrap загружается Webpack.
+   Здесь мы добавили немного стилей Bootstrap с помощью `div class="container"` и `<button>`, чтобы увидеть, что CSS Bootstrap был загружен через Parcel.
 
    Parcel автоматически обнаружит, что мы используем Sass, и установит [плагин Sass Parcel](https://parceljs.org/languages/sass/) для его поддержки. Однако, если хотите, вы также можете вручную запустить `npm i --save-dev @parcel/transformer-sass`.
 
