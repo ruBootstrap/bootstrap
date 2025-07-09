@@ -1,6 +1,6 @@
 languageCode:           "ru-ru"
 title:                  "Bootstrap"
-baseURL:                "https://v4.getbootstrap.su"
+baseURL:                "https://getbootstrap.su"
 enableInlineShortcodes: true
 
 markup:

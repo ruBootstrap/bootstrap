@@ -9,7 +9,7 @@
 <p align="center">
   Элегантная, интуитивно понятная и мощная интерфейсная среда для более быстрой и простой веб-разработки.
   <br>
-  <a href="https://getbootstrap.com/docs/4.5/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://v4.getbootstrap.su/docs/4.5/"><strong>Изучите перевод документации Bootstrap »</strong></a>
+  <a href="https://getbootstrap.com/docs/4.5/"><strong>Изучите документацию Bootstrap »</strong></a> | <a href="https://getbootstrap.su/docs/4.5/"><strong>Изучите перевод документации Bootstrap »</strong></a>
   <br>
   <br>
   <a href="https://github.com/twbs/bootstrap/issues/new?template=bug_report.md">Сообщить об ошибке</a>
@@ -48,7 +48,7 @@
 - Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.5.3`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
+Прочтите [Начальную страницу](https://getbootstrap.su/docs/4.5/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
 
 
 ## Статус
@@ -111,7 +111,7 @@ bootstrap/
 
 ## Документация
 
-Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://v4.getbootstrap.su/>. Документы также можно запускать локально.
+Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документы также можно запускать локально.
 
 Поиск по документации осуществляется с помощью [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
 
@@ -126,7 +126,7 @@ bootstrap/
 
 ### Документация к предыдущим выпускам
 
-Вы можете найти все наши предыдущие выпуски документы на <https://v4.getbootstrap.su/docs/versions/>.
+Вы можете найти все наши предыдущие выпуски документы на <https://getbootstrap.su/docs/versions/>.
 
 [Предыдущие выпуски](https://github.com/twbs/bootstrap/releases) и их документация также доступны для загрузки.
 

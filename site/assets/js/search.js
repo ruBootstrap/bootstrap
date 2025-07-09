@@ -36,7 +36,7 @@
     transformData: function (hits) {
       return hits.map(function (hit) {
         var currentUrl = getOrigin()
-        var liveUrl = 'https://v4.getbootstrap.su/'
+        var liveUrl = 'https://getbootstrap.su/'
 
         hit.url = currentUrl.lastIndexOf(liveUrl, 0) === 0 ?
           // On production, return the result as is

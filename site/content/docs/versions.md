@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Версии
-description: Приложение размещенной документации для последних выпусков Bootstrap, от v4 до v5.
+description: Приложение размещенной документации для последних выпусков Bootstrap, от v2 до v5.
 ---
 
 {{< list-versions.inline >}}
@@ -17,7 +17,7 @@ description: Приложение размещенной документаци�
         <a class="list-group-item list-group-item-action py-2 text-primary{{ if (eq $version.v $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}" href="{{ $release.baseurl }}/{{ $version.v }}/">
           {{ $version.v }}
           {{ if (eq $version.v $.Site.Params.docs_version) -}}
-          <span class="badge badge-primary">Последняя</span>
+          <span class="badge badge-primary">Текущая</span>
           {{- end }}
         </a>
       {{ if (eq (add $i 1) $len) }}</div>{{ end }}
