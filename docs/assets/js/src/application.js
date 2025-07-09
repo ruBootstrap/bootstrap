@@ -63,7 +63,7 @@
 
       var activateTheme = function () {
         $stylesheetLink.attr('href', $stylesheetLink.attr('data-href'))
-        $themeBtn.text('Disable theme preview')
+        $themeBtn.text('Отключить предпросмотр темы')
         localStorage.setItem('previewTheme', true)
       }
 
