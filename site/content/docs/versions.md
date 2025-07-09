@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Версии
-description: Приложение размещенной документации для последних выпусков Bootstrap, от v4 до v5.
+description: Приложение размещенной документации для последних выпусков Bootstrap, от v2 до v5.
 ---
 
 {{< list-versions.inline >}}

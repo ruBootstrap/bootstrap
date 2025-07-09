@@ -1,5 +1,5 @@
 docs="_site"
-site="v4.getbootstrap.su"
+site="getbootstrap.su"
 url="https://github.com/ruBootstrap/rubootstrap.git"
 branch="master"
 

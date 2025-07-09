@@ -38,8 +38,12 @@
     {{ "<!-- Custom styles for this template -->" | safeHTML }}
     <link href="{{ . }}" rel="stylesheet">
     {{- end }}
+
+    {{ partial "gtm-head" . }}
   </head>
   <body{{ with .Page.Params.body_class }} class="{{ . }}"{{ end }}>
+    {{ partial "gtm-body" . }}
+
     {{ .Content }}
 
     {{ if ne .Page.Params.include_js false -}}

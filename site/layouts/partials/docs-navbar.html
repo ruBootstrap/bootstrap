@@ -18,12 +18,6 @@
         <a class="nav-link" href="{{ .Site.Params.icons_ru }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Иконки</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ .Site.Params.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Темы</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ .Site.Params.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Экспо</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="{{ .Site.Params.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Блог</a>
       </li>
     </ul>
@@ -35,9 +29,12 @@
         <span class="sr-only">Bootstrap&nbsp;</span> v{{ .Site.Params.docs_version }} <span class="sr-only">(переключиться на другие версии)</span>
       </button>
       <div class="dropdown-menu dropdown-menu-md-right">
-        <a class="dropdown-item active" href="/docs/{{ .Site.Params.docs_version }}/">Последняя ({{ .Site.Params.docs_version }}.x)</a>
+        <a class="dropdown-item active" href="/docs/{{ .Site.Params.docs_version }}/">{{ .Site.Params.docs_version }}.x <span class="badge badge-primary">Последняя</span></a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="https://getbootstrap.su/docs/5.2/">5.2.x</a>
+        <a class="dropdown-item" href="/docs/5.2/">5.2.x <span class="badge badge-success">Новая</span></a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/docs/3.4/">v3.4.2 <span class="badge badge-secondary">Устарела</span></a>
+        <a class="dropdown-item" href="/docs/2.3/">v2.3.2 <span class="badge badge-secondary">Устарела</span></a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="/docs/versions/">Все версии</a>
       </div>

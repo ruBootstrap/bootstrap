@@ -46,7 +46,7 @@
 - Установить с помощью [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.6.2`
 - Установить с помощью [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочтите [Начальную страницу](https://v4.getbootstrap.su/docs/4.6/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
+Прочтите [Начальную страницу](https://getbootstrap.su/docs/4.6/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
 
 ## Статус
 
@@ -106,7 +106,7 @@ bootstrap/
 
 ## Документация
 
-Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://v4.getbootstrap.su/>. Документы также можно запускать локально.
+Документация Bootstrap, включенная в этот репозиторий в корневом каталоге, создана с помощью [Hugo](https://gohugo.io/) и размещена на страницах GitHub по адресу <https://getbootstrap.su/>. Документы также можно запускать локально.
 
 Поиск по документации осуществляется с помощью [Algolia's DocSearch](https://community.algolia.com/docsearch/). Работаете над поиском? Обязательно установите `debug: true` в файле `site/assets/js/search.js`.
 
@@ -121,7 +121,7 @@ bootstrap/
 
 ### Документация к предыдущим выпускам
 
-Вы можете найти все наши предыдущие выпуски документы на <https://v4.getbootstrap.su/docs/versions/>.
+Вы можете найти все наши предыдущие выпуски документы на <https://getbootstrap.su/docs/versions/>.
 
 [Предыдущие выпуски](https://github.com/twbs/bootstrap/releases) и их документация также доступны для загрузки.
 

@@ -7,5 +7,9 @@
     <link rel="canonical" href="{{ .Page.Params.redirect | absURL }}">
     <meta name="robots" content="noindex">
     <meta http-equiv="refresh" content="0; url={{ .Page.Params.redirect | absURL }}">
+    {{ partial "gtm-head" . }}
   </head>
+  <body>
+    {{ partial "gtm-body" . }}
+  </body>
 </html>
