@@ -23,6 +23,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.d{{ .abbr }}-flex`
 - `.d{{ .abbr }}-inline-flex`
 {{- end -}}
@@ -68,6 +69,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.flex{{ .abbr }}-row`
 - `.flex{{ .abbr }}-row-reverse`
 - `.flex{{ .abbr }}-column`
@@ -127,6 +129,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.justify-content{{ .abbr }}-start`
 - `.justify-content{{ .abbr }}-end`
 - `.justify-content{{ .abbr }}-center`
@@ -182,6 +185,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.align-items{{ .abbr }}-start`
 - `.align-items{{ .abbr }}-end`
 - `.align-items{{ .abbr }}-center`
@@ -236,6 +240,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.align-self{{ .abbr }}-start`
 - `.align-self{{ .abbr }}-end`
 - `.align-self{{ .abbr }}-center`
@@ -262,6 +267,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.flex{{ .abbr }}-fill`
 {{- end -}}
 {{< /flex.inline >}}
@@ -293,6 +299,7 @@ toc: true
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.flex{{ .abbr }}-{grow|shrink}-0`
 - `.flex{{ .abbr }}-{grow|shrink}-1`
 {{- end -}}
@@ -413,12 +420,12 @@ Flexbox может делать довольно удивительные вещ
 </div>
 ```
 
-
 Адаптивные варианты также существуют для `flex-wrap`.
 
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.flex{{ .abbr }}-nowrap`
 - `.flex{{ .abbr }}-wrap`
 - `.flex{{ .abbr }}-wrap-reverse`
@@ -444,6 +451,7 @@ Flexbox может делать довольно удивительные вещ
 {{< flex.inline >}}
 {{- range $bp := $.Site.Data.breakpoints -}}
 {{- range (seq 0 5) }}
+
 - `.order{{ $bp.abbr }}-{{ . }}`
 {{- end -}}
 {{- end -}}
@@ -456,6 +464,7 @@ Flexbox может делать довольно удивительные вещ
 {{< flex.inline >}}
 {{- range $bp := $.Site.Data.breakpoints -}}
 {{- range (slice "first" "last") }}
+
 - `.order{{ $bp.abbr }}-{{ . }}`
 {{- end -}}
 {{- end -}}
@@ -464,7 +473,7 @@ Flexbox может делать довольно удивительные вещ
 
 ## Выравнивание контента
 
-Используйте утилиты `align-content` на контейнерах flexbox для выравнивания элементов Флекс *вместе* по поперечной оси. Выберите `start` (по умолчанию для браузера), `end`, `center`, `between`, `around` или `stretch`. Чтобы продемонстрировать эти утилиты, мы ввели в действие `flex-wrap: wrap` и увеличили количество элементов Флекс.
+Используйте утилиты `align-content` на контейнерах flexbox для выравнивания элементов Флекс _вместе_ по поперечной оси. Выберите `start` (по умолчанию для браузера), `end`, `center`, `between`, `around` или `stretch`. Чтобы продемонстрировать эти утилиты, мы ввели в действие `flex-wrap: wrap` и увеличили количество элементов Флекс.
 
 **Внимание!** Это свойство не влияет на отдельные строки элементов Флекс.
 
@@ -619,6 +628,7 @@ Flexbox может делать довольно удивительные вещ
 {{< markdown >}}
 {{< flex.inline >}}
 {{- range $.Site.Data.breakpoints }}
+
 - `.align-content{{ .abbr }}-start`
 - `.align-content{{ .abbr }}-end`
 - `.align-content{{ .abbr }}-center`
@@ -630,7 +640,7 @@ Flexbox может делать довольно удивительные вещ
 
 ## Медиа объект
 
-Хотите скопировать [компонент мультимедийного объекта](https://v4.getbootstrap.su/docs/4.6/components/media-object/) из Bootstrap 4? В мгновение ока воссоздайте его с помощью нескольких гибких утилит, которые обеспечивают еще большую гибкость и настройку, чем раньше.
+Хотите скопировать [компонент мультимедийного объекта](https://getbootstrap.su/docs/4.6/components/media-object/) из Bootstrap 4? В мгновение ока воссоздайте его с помощью нескольких гибких утилит, которые обеспечивают еще большую гибкость и настройку, чем раньше.
 
 {{< example >}}
 <div class="d-flex">
