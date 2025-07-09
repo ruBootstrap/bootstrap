@@ -1,89 +1,143 @@
 <div class="bs-docs-section">
-  <h1 id="alerts" class="page-header">Alerts</h1>
+  <h1 id="alerts" class="page-header">Оповещения</h1>
 
-  <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+  <p class="lead">
+    Предоставьте контекстные сообщения обратной связи для типичных действий
+    пользователей с помощью нескольких доступных и гибких сообщений оповещений.
+  </p>
 
-  <h2 id="alerts-examples">Examples</h2>
-  <p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
+  <h2 id="alerts-examples">Примеры</h2>
+  <p>
+    Оберните любой текст и опциональную кнопку закрытия в <code>.alert</code> и
+    один из четырех контекстных классов (например, <code>.alert-success</code>)
+    для базовых сообщений оповещений.
+  </p>
 
   <div class="bs-callout bs-callout-info" id="callout-alerts-no-default">
-    <h4>No default class</h4>
-    <p>Alerts don't have default classes, only base and modifier classes. A default gray alert doesn't make too much sense, so you're required to specify a type via contextual class. Choose from success, info, warning, or danger.</p>
+    <h4>Нет класса по умолчанию</h4>
+    <p>
+      Оповещения не имеют классов по умолчанию, только базовые и модификаторы
+      классов. Серое оповещение по умолчанию не имеет особого смысла, поэтому
+      вам необходимо указать тип через контекстный класс. Выберите из успех,
+      информация, предупреждение или опасность.
+    </p>
   </div>
 
   <div class="bs-example" data-example-id="simple-alerts">
     <div class="alert alert-success" role="alert">
-      <strong>Well done!</strong> You successfully read this important alert message.
+      <strong>Отлично!</strong> Вы успешно прочитали это важное сообщение
+      оповещения.
     </div>
     <div class="alert alert-info" role="alert">
-      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      <strong>Внимание!</strong> Это оповещение требует вашего внимания, но оно
+      не очень важно.
     </div>
     <div class="alert alert-warning" role="alert">
-      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      <strong>Предупреждение!</strong> Лучше проверьте себя, вы выглядите не
+      очень хорошо.
     </div>
     <div class="alert alert-danger" role="alert">
-      <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      <strong>Ой!</strong> Измените несколько вещей и попробуйте отправить
+      снова.
     </div>
   </div>
-{% highlight html %}
-<div class="alert alert-success" role="alert">...</div>
-<div class="alert alert-info" role="alert">...</div>
-<div class="alert alert-warning" role="alert">...</div>
-<div class="alert alert-danger" role="alert">...</div>
-{% endhighlight %}
+  {% highlight html %}
+  <div class="alert alert-success" role="alert">...</div>
+  <div class="alert alert-info" role="alert">...</div>
+  <div class="alert alert-warning" role="alert">...</div>
+  <div class="alert alert-danger" role="alert">...</div>
+  {% endhighlight %}
 
-  <h2 id="alerts-dismissible">Dismissible alerts</h2>
-  <p>Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
+  <h2 id="alerts-dismissible">Закрываемые оповещения</h2>
+  <p>
+    Постройте на любом оповещении, добавив опциональный
+    <code>.alert-dismissible</code> и кнопку закрытия.
+  </p>
   <div class="bs-callout bs-callout-info" id="callout-alerts-dismiss-plugin">
-    <h4>Requires JavaScript alert plugin</h4>
-    <p>For fully functioning, dismissible alerts, you must use the <a href="../javascript/#alerts">alerts JavaScript plugin</a>.</p>
+    <h4>Требует JavaScript плагин оповещений</h4>
+    <p>
+      Для полностью функционирующих закрываемых оповещений вы должны
+      использовать
+      <a href="../javascript/#alerts">JavaScript плагин оповещений</a>.
+    </p>
   </div>
   <div class="bs-example" data-example-id="dismissible-alert-css">
     <div class="alert alert-warning alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Закрыть"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong>Предупреждение!</strong> Лучше проверьте себя, вы выглядите не
+      очень хорошо.
     </div>
   </div>
-{% highlight html %}
-<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-{% endhighlight %}
+  {% highlight html %}
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Закрыть"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Предупреждение!</strong> Лучше проверьте себя, вы выглядите не очень
+    хорошо.
+  </div>
+  {% endhighlight %}
 
-  <div class="bs-callout bs-callout-warning" id="callout-alerts-dismiss-use-button">
-    <h4>Ensure proper behavior across all devices</h4>
-    <p>Be sure to use the <code>&lt;button&gt;</code> element with the <code>data-dismiss="alert"</code> data attribute.</p>
+  <div
+    class="bs-callout bs-callout-warning"
+    id="callout-alerts-dismiss-use-button"
+  >
+    <h4>Обеспечьте правильное поведение на всех устройствах</h4>
+    <p>
+      Обязательно используйте элемент <code>&lt;button&gt;</code> с атрибутом
+      данных <code>data-dismiss="alert"</code>.
+    </p>
   </div>
 
-  <h2 id="alerts-links">Links in alerts</h2>
-  <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+  <h2 id="alerts-links">Ссылки в оповещениях</h2>
+  <p>
+    Используйте утилитарный класс <code>.alert-link</code> для быстрого
+    предоставления соответствующих цветных ссылок в любом оповещении.
+  </p>
   <div class="bs-example" data-example-id="alerts-with-links">
     <div class="alert alert-success" role="alert">
-      <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+      <strong>Отлично!</strong> Вы успешно прочитали
+      <a href="#" class="alert-link">это важное сообщение оповещения</a>.
     </div>
     <div class="alert alert-info" role="alert">
-      <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+      <strong>Внимание!</strong> Это
+      <a href="#" class="alert-link">оповещение требует вашего внимания</a>, но
+      оно не очень важно.
     </div>
     <div class="alert alert-warning" role="alert">
-      <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
+      <strong>Предупреждение!</strong> Лучше проверьте себя, вы
+      <a href="#" class="alert-link">выглядите не очень хорошо</a>.
     </div>
     <div class="alert alert-danger" role="alert">
-      <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      <strong>Ой!</strong>
+      <a href="#" class="alert-link">Измените несколько вещей</a> и попробуйте
+      отправить снова.
     </div>
   </div>
-{% highlight html %}
-<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-info" role="alert">
-  <a href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-warning" role="alert">
-  <a href="#" class="alert-link">...</a>
-</div>
-<div class="alert alert-danger" role="alert">
-  <a href="#" class="alert-link">...</a>
-</div>
-{% endhighlight %}
+  {% highlight html %}
+  <div class="alert alert-success" role="alert">
+    <a href="#" class="alert-link">...</a>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <a href="#" class="alert-link">...</a>
+  </div>
+  <div class="alert alert-warning" role="alert">
+    <a href="#" class="alert-link">...</a>
+  </div>
+  <div class="alert alert-danger" role="alert">
+    <a href="#" class="alert-link">...</a>
+  </div>
+  {% endhighlight %}
 </div>

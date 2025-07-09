@@ -1,207 +1,256 @@
 <div class="bs-docs-section">
-  <h1 id="helper-classes" class="page-header">Helper classes</h1>
+  <h1 id="helper-classes" class="page-header">Вспомогательные классы</h1>
 
-  <h3 id="helper-classes-colors">Contextual colors</h3>
-  <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
+  <h3 id="helper-classes-colors">Контекстные цвета</h3>
+  <p>
+    Передавайте смысл через цвет с помощью нескольких утилитарных классов
+    выделения. Они также могут применяться к ссылкам и будут темнеть при
+    наведении, как и наши стандартные стили ссылок.
+  </p>
   <div class="bs-example" data-example-id="contextual-colors-helpers">
-    <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-    <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-    <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-    <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <p class="text-muted">
+      Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+    </p>
+    <p class="text-primary">
+      Nullam id dolor id nibh ultricies vehicula ut id elit.
+    </p>
+    <p class="text-success">
+      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+    </p>
+    <p class="text-info">
+      Maecenas sed diam eget risus varius blandit sit amet non magna.
+    </p>
     <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-    <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p class="text-danger">
+      Donec ullamcorper nulla non metus auctor fringilla.
+    </p>
   </div>
-{% highlight html %}
-<p class="text-muted">...</p>
-<p class="text-primary">...</p>
-<p class="text-success">...</p>
-<p class="text-info">...</p>
-<p class="text-warning">...</p>
-<p class="text-danger">...</p>
-{% endhighlight %}
-  <div class="bs-callout bs-callout-info" id="callout-helper-context-color-specificity">
-    <h4>Dealing with specificity</h4>
-    <p>Sometimes emphasis classes cannot be applied due to the specificity of another selector. In most cases, a sufficient workaround is to wrap your text in a <code>&lt;span&gt;</code> with the class.</p>
+  {% highlight html %}
+  <p class="text-muted">...</p>
+  <p class="text-primary">...</p>
+  <p class="text-success">...</p>
+  <p class="text-info">...</p>
+  <p class="text-warning">...</p>
+  <p class="text-danger">...</p>
+  {% endhighlight %}
+  <div
+    class="bs-callout bs-callout-info"
+    id="callout-helper-context-color-specificity"
+  >
+    <h4>Работа со специфичностью</h4>
+    <p>
+      Иногда классы выделения не могут быть применены из-за специфичности
+      другого селектора. В большинстве случаев достаточным обходным путем
+      является обертывание вашего текста в <code>&lt;span&gt;</code> с классом.
+    </p>
   </div>
-  <div class="bs-callout bs-callout-warning" id="callout-helper-context-color-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the contextual colors are only used to reinforce meaning that is already present in the text/markup), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+  <div
+    class="bs-callout bs-callout-warning"
+    id="callout-helper-context-color-accessibility"
+  >
+    <h4>Передача смысла вспомогательным технологиям</h4>
+    <p>
+      Использование цвета для добавления смысла обеспечивает только визуальную
+      индикацию, которая не будет передана пользователям вспомогательных
+      технологий – таких как программы чтения с экрана. Убедитесь, что
+      информация, обозначенная цветом, либо очевидна из самого содержимого
+      (контекстные цвета используются только для усиления смысла, который уже
+      присутствует в тексте/разметке), либо включена через альтернативные
+      средства, такие как дополнительный текст, скрытый с помощью класса
+      <code>.sr-only</code>.
+    </p>
   </div>
 
-  <h3 id="helper-classes-backgrounds">Contextual backgrounds</h3>
-  <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
-  <div class="bs-example bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
-    <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-    <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-    <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  <h3 id="helper-classes-backgrounds">Контекстные фоны</h3>
+  <p>
+    Аналогично контекстным классам цвета текста, легко установите фон элемента
+    на любой контекстный класс. Компоненты якоря будут темнеть при наведении,
+    как и классы текста.
+  </p>
+  <div
+    class="bs-example bs-example-bg-classes"
+    data-example-id="contextual-backgrounds-helpers"
+  >
+    <p class="bg-primary">
+      Nullam id dolor id nibh ultricies vehicula ut id elit.
+    </p>
+    <p class="bg-success">
+      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+    </p>
+    <p class="bg-info">
+      Maecenas sed diam eget risus varius blandit sit amet non magna.
+    </p>
     <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
     <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
   </div>
-{% highlight html %}
-<p class="bg-primary">...</p>
-<p class="bg-success">...</p>
-<p class="bg-info">...</p>
-<p class="bg-warning">...</p>
-<p class="bg-danger">...</p>
-{% endhighlight %}
+  {% highlight html %}
+  <p class="bg-primary">...</p>
+  <p class="bg-success">...</p>
+  <p class="bg-info">...</p>
+  <p class="bg-warning">...</p>
+  <p class="bg-danger">...</p>
+  {% endhighlight %}
   <div class="bs-callout bs-callout-info" id="callout-helper-bg-specificity">
-    <h4>Dealing with specificity</h4>
-    <p>Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p>
+    <h4>Работа со специфичностью</h4>
+    <p>
+      Иногда контекстные классы фона не могут быть применены из-за специфичности
+      другого селектора. В некоторых случаях достаточным обходным путем является
+      обертывание содержимого вашего элемента в <code>&lt;div&gt;</code> с
+      классом.
+    </p>
   </div>
-  <div class="bs-callout bs-callout-warning" id="callout-helper-bg-accessibility">
-    <h4>Conveying meaning to assistive technologies</h4>
-    <p>As with <a href="#helper-classes-colors">contextual colors</a>, ensure that any meaning conveyed through color is also conveyed in a format that is not purely presentational.</p>
+  <div
+    class="bs-callout bs-callout-warning"
+    id="callout-helper-bg-accessibility"
+  >
+    <h4>Передача смысла вспомогательным технологиям</h4>
+    <p>
+      Как и с <a href="#helper-classes-colors">контекстными цветами</a>,
+      убедитесь, что любой смысл, передаваемый через цвет, также передается в
+      формате, который не является чисто презентационным.
+    </p>
   </div>
 
-  <h3 id="helper-classes-close">Close icon</h3>
-  <p>Use the generic close icon for dismissing content like modals and alerts.</p>
+  <h3 id="helper-classes-close">Иконка закрытия</h3>
+  <p>
+    Используйте универсальную иконку закрытия для отклонения контента, такого
+    как модальные окна и оповещения.
+  </p>
   <div class="bs-example" data-example-id="close-icon">
-    <p><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+    <p>
+      <button type="button" class="close" aria-label="Закрыть">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </p>
   </div>
-{% highlight html %}
-<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-{% endhighlight %}
+  {% highlight html %}
+  <button type="button" class="close" aria-label="Закрыть">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  {% endhighlight %}
 
-
-  <h3 id="helper-classes-carets">Carets</h3>
-  <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href="../components/#btn-dropdowns-dropup">dropup menus</a>.</p>
+  <h3 id="helper-classes-carets">Каретки</h3>
+  <p>
+    Используйте каретки для обозначения функциональности выпадающего списка и
+    направления. Обратите внимание, что стандартная каретка будет автоматически
+    переворачиваться в
+    <a href="../components/#btn-dropdowns-dropup">выпадающих меню вверх</a>.
+  </p>
   <div class="bs-example" data-example-id="caret">
     <span class="caret"></span>
   </div>
-{% highlight html %}
-<span class="caret"></span>
-{% endhighlight %}
+  {% highlight html %}
+  <span class="caret"></span>
+  {% endhighlight %}
 
-
-  <h3 id="helper-classes-floats">Quick floats</h3>
-  <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
-{% highlight html %}
-<div class="pull-left">...</div>
-<div class="pull-right">...</div>
-{% endhighlight %}
-{% highlight scss %}
-// Classes
-.pull-left {
-  float: left !important;
-}
-.pull-right {
-  float: right !important;
-}
-
-// Usage as mixins
-.element {
-  .pull-left();
-}
-.another-element {
-  .pull-right();
-}
-{% endhighlight %}
+  <h3 id="helper-classes-floats">Быстрые плавающие элементы</h3>
+  <p>
+    Сделайте элемент плавающим влево или вправо с помощью класса.
+    <code>!important</code> включен для избежания проблем со специфичностью.
+    Классы также могут использоваться как миксины.
+  </p>
+  {% highlight html %}
+  <div class="pull-left">...</div>
+  <div class="pull-right">...</div>
+  {% endhighlight %} {% highlight scss %} // Классы .pull-left { float: left
+  !important; } .pull-right { float: right !important; } // Использование как
+  миксины .element { .pull-left(); } .another-element { .pull-right(); } {%
+  endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-helper-pull-navbar">
-    <h4>Not for use in navbars</h4>
-    <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
+    <h4>Не для использования в навигационных панелях</h4>
+    <p>
+      Для выравнивания компонентов в навигационных панелях с помощью утилитарных
+      классов используйте <code>.navbar-left</code> или
+      <code>.navbar-right</code> вместо этого.
+      <a href="../components/#navbar-component-alignment"
+        >Смотрите документацию навигационной панели</a
+      >
+      для подробностей.
+    </p>
   </div>
 
-
-  <h3 id="helper-classes-center">Center content blocks</h3>
-  <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
-{% highlight html %}
-<div class="center-block">...</div>
-{% endhighlight %}
-{% highlight scss %}
-// Class
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-// Usage as a mixin
-.element {
-  .center-block();
-}
-{% endhighlight %}
-
+  <h3 id="helper-classes-center">Центрирование блоков контента</h3>
+  <p>
+    Установите элемент на <code>display: block</code> и центрируйте через
+    <code>margin</code>. Доступно как миксин и класс.
+  </p>
+  {% highlight html %}
+  <div class="center-block">...</div>
+  {% endhighlight %} {% highlight scss %} // Класс .center-block { display:
+  block; margin-left: auto; margin-right: auto; } // Использование как миксин
+  .element { .center-block(); } {% endhighlight %}
 
   <h3 id="helper-classes-clearfix">Clearfix</h3>
-  <p>Easily clear <code>float</code>s by adding <code>.clearfix</code> <strong>to the parent element</strong>. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
-{% highlight html %}
-<!-- Usage as a class -->
-<div class="clearfix">...</div>
-{% endhighlight %}
-{% highlight scss %}
-// Mixin itself
-.clearfix() {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
+  <p>
+    Легко очистите <code>float</code>ы, добавив <code>.clearfix</code>
+    <strong>к родительскому элементу</strong>. Использует
+    <a href="http://nicolasgallagher.com/micro-clearfix-hack/">микро clearfix</a
+    >, популяризированный Nicolas Gallagher. Также может использоваться как
+    миксин.
+  </p>
+  {% highlight html %}
+  <!-- Использование как класс -->
+  <div class="clearfix">...</div>
+  {% endhighlight %} {% highlight scss %} // Сам миксин .clearfix() { &:before,
+  &:after { content: " "; display: table; } &:after { clear: both; } } //
+  Использование как миксин .element { .clearfix(); } {% endhighlight %}
 
-// Usage as a mixin
-.element {
-  .clearfix();
-}
-{% endhighlight %}
+  <h3 id="helper-classes-show-hide">Показ и скрытие контента</h3>
+  <p>
+    Принудительно покажите или скройте элемент (<strong
+      >включая для программ чтения с экрана</strong
+    >) с помощью классов <code>.show</code> и <code>.hidden</code>. Эти классы
+    используют <code>!important</code> для избежания конфликтов специфичности,
+    как и <a href="#helper-classes-floats">быстрые плавающие элементы</a>. Они
+    доступны только для переключения на уровне блоков. Они также могут
+    использоваться как миксины.
+  </p>
+  <p>
+    <code>.hide</code> доступен, но он не всегда влияет на программы чтения с
+    экрана и <strong>устарел</strong> с версии v3.0.1. Используйте
+    <code>.hidden</code> или <code>.sr-only</code> вместо этого.
+  </p>
+  <p>
+    Кроме того, <code>.invisible</code> может использоваться для переключения
+    только видимости элемента, что означает, что его <code>display</code> не
+    изменяется и элемент все еще может влиять на поток документа.
+  </p>
+  {% highlight html %}
+  <div class="show">...</div>
+  <div class="hidden">...</div>
+  {% endhighlight %} {% highlight scss %} // Классы .show { display: block
+  !important; } .hidden { display: none !important; } .invisible { visibility:
+  hidden; } // Использование как миксины .element { .show(); } .another-element
+  { .hidden(); } {% endhighlight %}
 
+  <h3 id="helper-classes-screen-readers">
+    Контент для программ чтения с экрана и навигации с клавиатуры
+  </h3>
+  <p>
+    Скрывайте элемент от всех устройств
+    <strong>кроме программ чтения с экрана</strong> с помощью
+    <code>.sr-only</code>. Объедините <code>.sr-only</code> с
+    <code>.sr-only-focusable</code>, чтобы снова показать элемент, когда он в
+    фокусе (например, пользователем только с клавиатурой). Необходимо для
+    следования
+    <a href="../getting-started/#accessibility">лучшим практикам доступности</a
+    >. Также может использоваться как миксины.
+  </p>
+  {% highlight html %}
+  <a class="sr-only sr-only-focusable" href="#content"
+    >Перейти к основному содержимому</a
+  >
+  {% endhighlight %} {% highlight scss %} // Использование как миксин
+  .skip-navigation { .sr-only(); .sr-only-focusable(); } {% endhighlight %}
 
-  <h3 id="helper-classes-show-hide">Showing and hiding content</h3>
-  <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
-  <p><code>.hide</code> is available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
-  <p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document.</p>
-{% highlight html %}
-<div class="show">...</div>
-<div class="hidden">...</div>
-{% endhighlight %}
-{% highlight scss %}
-// Classes
-.show {
-  display: block !important;
-}
-.hidden {
-  display: none !important;
-}
-.invisible {
-  visibility: hidden;
-}
-
-// Usage as mixins
-.element {
-  .show();
-}
-.another-element {
-  .hidden();
-}
-{% endhighlight %}
-
-
-  <h3 id="helper-classes-screen-readers">Screen reader and keyboard navigation content</h3>
-  <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Combine <code>.sr-only</code> with <code>.sr-only-focusable</code> to show the element again when it's focused (e.g. by a keyboard-only user). Necessary for following <a href="../getting-started/#accessibility">accessibility best practices</a>. Can also be used as mixins.</p>
-{% highlight html %}
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-{% endhighlight %}
-{% highlight scss %}
-// Usage as a mixin
-.skip-navigation {
-  .sr-only();
-  .sr-only-focusable();
-}
-{% endhighlight %}
-
-
-  <h3 id="helper-classes-image-replacement">Image replacement</h3>
-  <p>Utilize the <code>.text-hide</code> class or mixin to help replace an element's text content with a background image.</p>
-{% highlight html %}
-<h1 class="text-hide">Custom heading</h1>
-{% endhighlight %}
-{% highlight scss %}
-// Usage as a mixin
-.heading {
-  .text-hide();
-}
-{% endhighlight %}
+  <h3 id="helper-classes-image-replacement">Замена изображений</h3>
+  <p>
+    Используйте класс <code>.text-hide</code> или миксин для помощи в замене
+    текстового содержимого элемента фоновым изображением.
+  </p>
+  {% highlight html %}
+  <h1 class="text-hide">Пользовательский заголовок</h1>
+  {% endhighlight %} {% highlight scss %} // Использование как миксин .heading {
+  .text-hide(); } {% endhighlight %}
 </div>

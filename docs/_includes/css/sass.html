@@ -1,52 +1,72 @@
 <div class="bs-docs-section">
-  <h1 id="sass" class="page-header">Using Sass</h1>
-  <p class="lead">While Bootstrap is built on Less, it also has an <a href="{{ site.sass_repo }}">official Sass port</a>. We maintain it in a separate GitHub repository and handle updates with a conversion script.</p>
+  <h1 id="sass" class="page-header">Использование Sass</h1>
+  <p class="lead">
+    Хотя Bootstrap построен на Less, у него также есть
+    <a href="{{ site.sass_repo }}">официальный Sass порт</a>. Мы поддерживаем
+    его в отдельном GitHub репозитории и обрабатываем обновления с помощью
+    скрипта конвертации.
+  </p>
 
-  <h2 id="sass-contents">What's included</h2>
-  <p>Since the Sass port has a separate repo and serves a slightly different audience, the contents of the project differ greatly from the main Bootstrap project. This ensures the Sass port is as compatible with as many Sass-based systems as possible.</p>
+  <h2 id="sass-contents">Что включено</h2>
+  <p>
+    Поскольку Sass порт имеет отдельный репозиторий и обслуживает немного другую
+    аудиторию, содержимое проекта значительно отличается от основного проекта
+    Bootstrap. Это обеспечивает максимальную совместимость Sass порта с как
+    можно большим количеством систем на основе Sass.
+  </p>
 
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th>Path</th>
-          <th>Description</th>
+          <th>Путь</th>
+          <th>Описание</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row"><code>lib/</code></th>
-          <td>Ruby gem code (Sass configuration, Rails and Compass integrations)</td>
+          <td>Код Ruby gem (конфигурация Sass, интеграции Rails и Compass)</td>
         </tr>
         <tr>
           <th scope="row"><code>tasks/</code></th>
-          <td>Converter scripts (turning upstream Less to Sass)</td>
+          <td>Скрипты конвертера (превращение upstream Less в Sass)</td>
         </tr>
         <tr>
           <th scope="row"><code>test/</code></th>
-          <td>Compilation tests</td>
+          <td>Тесты компиляции</td>
         </tr>
         <tr>
           <th scope="row"><code>templates/</code></th>
-          <td>Compass package manifest</td>
+          <td>Манифест пакета Compass</td>
         </tr>
         <tr>
           <th scope="row"><code>vendor/assets/</code></th>
-          <td>Sass, JavaScript, and font files</td>
+          <td>Файлы Sass, JavaScript и шрифтов</td>
         </tr>
         <tr>
           <th scope="row"><code>Rakefile</code></th>
-          <td>Internal tasks, such as rake and convert</td>
+          <td>Внутренние задачи, такие как rake и convert</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <p>Visit the <a href="{{ site.sass_repo }}">Sass port's GitHub repository</a> to see these files in action.</p>
-
-
-  <h2 id="sass-installation">Installation</h2>
-  <p>For information on how to install and use Bootstrap for Sass, consult the <a href="{{ site.sass_repo }}">GitHub repository readme</a>. It's the most up to date source and includes information for use with Rails, Compass, and standard Sass projects.</p>
   <p>
-    <a class="btn btn-lg btn-outline" href="{{ site.sass_repo }}">Bootstrap for Sass</a>
+    Посетите <a href="{{ site.sass_repo }}">GitHub репозиторий Sass порта</a>,
+    чтобы увидеть эти файлы в действии.
+  </p>
+
+  <h2 id="sass-installation">Установка</h2>
+  <p>
+    Для получения информации о том, как установить и использовать Bootstrap для
+    Sass, обратитесь к
+    <a href="{{ site.sass_repo }}">readme GitHub репозитория</a>. Это самый
+    актуальный источник и включает информацию для использования с Rails, Compass
+    и стандартными проектами Sass.
+  </p>
+  <p>
+    <a class="btn btn-lg btn-outline" href="{{ site.sass_repo }}"
+      >Bootstrap для Sass</a
+    >
   </p>
 </div>
