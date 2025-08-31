@@ -1,42 +1,34 @@
 ---
-title: Формы
-description: Примеры и рекомендации по использованию стилей управления формами, параметров макета и настраиваемых компонентов для создания самых разных форм.
+title: Forms
+description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
 toc: true
 aliases: "/docs/[[config:docs_version]]/forms/"
 sections:
-  - title: Управление формой
-    description: Стилизуйте текстовые поля ввода (input) и текстовые поля (textarea) с поддержкой нескольких состояний.
-    slug: form-control
-  - title: Элемент выбора
-    description: Улучшите элементы выбора (select) браузера по умолчанию с помощью настраиваемого начального внешнего вида.
-    slug: select
-  - title: Переключатели и флажки
-    description: Используйте наши настраиваемые переключатели (radio buttons) и флажки (checkboxes) в формах для выбора параметров ввода.
-    slug: checks-radios
-  - title: Диапазон
-    description: Замените входные данные диапазона браузера по умолчанию нашей собственной версией.
-    slug: range
-  - title: Группа полей ввода
-    description: Прикрепляйте метки и кнопки к своим входам для увеличения семантической ценности.
-    slug: input-group
-  - title: Плавающие метки
-    description: Создавайте красиво простые метки формы, которые плавают над полями ввода.
-    slug: floating-labels
-  - title: Макет
-    description: Создавайте встроенные, горизонтальные или сложные макеты на основе сетки с Вашими формами.
-    slug: layout
-  - title: Валидация
-    description: Проверяйте свои формы с помощью настраиваемых или встроенных методов и стилей проверки.
-    slug: validation
+  - title: Form control
+    description: Style textual inputs and textareas with support for multiple states.
+  - title: Select
+    description: Improve browser default select elements with a custom initial appearance.
+  - title: Checks & radios
+    description: Use our custom radio buttons and checkboxes in forms for selecting input options.
+  - title: Range
+    description: Replace browser default range inputs with our custom version.
+  - title: Input group
+    description: Attach labels and buttons to your inputs for increased semantic value.
+  - title: Floating labels
+    description: Create beautifully simple form labels that float over your input fields.
+  - title: Layout
+    description: Create inline, horizontal, or complex grid-based layouts with your forms.
+  - title: Validation
+    description: Validate your forms with custom or native validation behaviors and styles.
 ---
 
-## Обзор
+## Overview
 
-Элементы управления формами Bootstrap расширяют [наши стили форм Rebooted]([[docsref:/content/reboot#forms]]) с помощью классов. Используйте эти классы, чтобы выбрать их настроенные отображения для более согласованного отображения в браузерах и на устройствах.
+Bootstrap’s form controls expand on [our Rebooted form styles]([[docsref:/content/reboot#forms]]) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
 
-Обязательно используйте соответствующий атрибут `type` для всех полей ввода (например, `email` для адреса электронной почты или `number` для числовой информации) чтобы воспользоваться преимуществами новых элементов управления вводом, таких как проверка электронной почты, выбор номера и т.д.
+Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
 
-Вот быстрый пример для демонстрации стилей форм Bootstrap. Продолжайте читать документацию по требуемым классам, макету формы и т. д.
+Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.
 
 <Example code={`<form>
     <div class="mb-3">
@@ -55,17 +47,17 @@ sections:
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>`} />
 
-## Отключенные формы
+## Disabled forms
 
-Добавьте логический атрибут `disabled` для ввода, чтобы предотвратить взаимодействие с пользователем и сделать его более светлым.
+Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
 
 ```html
-<input class="form-control" id="disabledInput" type="text" placeholder="Здесь отключен ввод..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 ```
 
-Добавьте атрибут `disabled` к `<fieldset>`, чтобы отключить все элементы управления внутри. Браузеры обрабатывают все элементы управления собственными формами (элементы `<input>`, `<select>` и `<button>`) внутри `<fieldset disabled>` как отключенные, предотвращая взаимодействие с ними как с клавиатуры, так и с помощью мыши.
+Add the `disabled` attribute to a `<fieldset>` to disable all the controls within. Browsers treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them.
 
-Однако, если Ваша форма также включает пользовательские элементы, похожие на кнопки, такие как `<a class="btn btn-*">...</a>`, им будет присвоен стиль только `pointer-events: none`, что означает, что они по-прежнему могут фокусироваться и управляться с помощью клавиатуры. В этом случае Вы должны вручную изменить эти элементы управления, добавив `tabindex="-1"`, чтобы они не получали фокус, и `aria-disabled="disabled"`, чтобы сигнализировать о своем состоянии вспомогательным технологиям.
+However, if your form also includes custom button-like elements such as `<a class="btn btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
 
 <Example code={`<form>
     <fieldset disabled>
@@ -92,27 +84,27 @@ sections:
     </fieldset>
   </form>`} />
 
-## Доступность
+## Accessibility
 
-Убедитесь, что у всех элементов управления формы есть подходящие доступные имена, чтобы их назначение можно было донести до пользователей вспомогательных технологий. Самый простой способ добиться этого - использовать элемент `<label>` или в случае кнопок - включить достаточно описательный текст как часть содержимого `<button>...</button>`.
+Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
 
-В ситуациях, когда невозможно включить видимый `<label>` или соответствующий текстовый контент, существуют альтернативные способы предоставления доступного имени, например:
+For situations where it’s not possible to include a visible `<label>` or appropriate text content, there are alternative ways of still providing an accessible name, such as:
 
-- Элементы `<label>` скрыты с помощью класса `.visually-hidden`
-- Указание на существующий элемент, который может действовать как метка, используя `aria-labelledby`
-- Предоставление атрибута `title`
-- Явная установка доступного имени для элемента с помощью `aria-label`
+- `<label>` elements hidden using the `.visually-hidden` class
+- Pointing to an existing element that can act as a label using `aria-labelledby`
+- Providing a `title` attribute
+- Explicitly setting the accessible name on an element using `aria-label`
 
-Если ни один из них не присутствует, вспомогательные технологии могут прибегнуть к использованию атрибута `placeholder` в качестве запасного варианта для доступного имени в элементах `<input>` и `<textarea>`. Примеры в этом разделе представляют несколько предлагаемых подходов для конкретных случаев.
+If none of these are present, assistive technologies may resort to using the `placeholder` attribute as a fallback for the accessible name on `<input>` and `<textarea>` elements. The examples in this section provide a few suggested, case-specific approaches.
 
-Несмотря на то, что использование визуально скрытого содержимого (содержимое `.visually-hidden`, `aria-label` и даже `placeholder` , которое исчезает после того, как в поле формы появляется содержимое) принесет пользу пользователям вспомогательных технологий, отсутствие видимого текста метки все же может быть проблематично для некоторых пользователей. Как правило, лучше всего подходят видимые метки в той или иной форме как с точки зрения доступности, так и удобства использования.
+While using visually hidden content (`.visually-hidden`, `aria-label`, and even `placeholder` content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.
 
 ## CSS
 
-Многие переменные формы устанавливаются на общем уровне для повторного использования и расширения отдельными компонентами формы. Чаще всего вы увидите их как переменные `$input-btn-*` и `$input-*`.
+Many form variables are set at a general level to be re-used and extended by individual form components. You’ll see these most often as `$input-btn-*` and `$input-*` variables.
 
-### Sass переменные
+### Sass variables
 
-Переменные `$input-btn-*` являются общими глобальными переменными между нашими [кнопками]([[docsref:/components/buttons]]) и нашими компонентами формы. Вы обнаружите, что они часто переназначаются в качестве значений другим переменным, специфичным для компонента.
+`$input-btn-*` variables are shared global variables between our [buttons]([[docsref:/components/buttons]]) and our form components. You’ll find these frequently reassigned as values to other component-specific variables.
 
 <ScssDocs name="input-btn-variables" file="scss/_variables.scss" />

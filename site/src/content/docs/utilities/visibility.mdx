@@ -1,15 +1,15 @@
 ---
-title: Видимость
-description: Управляйте видимостью элементов, не изменяя их отображение, с помощью утилит видимости.
+title: Visibility
+description: Control the visibility of elements, without modifying their display, with visibility utilities.
 ---
 
-Установите `visibility` элементов с помощью наших утилит видимости. Эти служебные классы вообще не изменяют значение `display` и не влияют на макет – `.invisible` элементы по-прежнему занимают место на странице.
+Set the `visibility` of elements with our visibility utilities. These utility classes do not modify the `display` value at all and do not affect layout – `.invisible` elements still take up space in the page.
 
 <Callout type="warning">
-Элементы с классом `.invisible` будут скрыты *как визуально*, так и для пользователей вспомогательных технологий/программ чтения с экрана.
+Elements with the `.invisible` class will be hidden *both* visually and for assistive technology/screen reader users.
 </Callout>
 
-При необходимости используйте `.visible` или `.invisible`.
+Apply `.visible` or `.invisible` as needed.
 
 ```html
 <div class="visible">...</div>
@@ -17,7 +17,7 @@ description: Управляйте видимостью элементов, не 
 ```
 
 ```scss
-// Класс
+// Class
 .visible {
   visibility: visible !important;
 }
@@ -28,8 +28,8 @@ description: Управляйте видимостью элементов, не 
 
 ## CSS
 
-### Sass API утилиты
+### Sass utilities API
 
-Утилиты видимости объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+Visibility utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-visibility" file="scss/_utilities.scss" />

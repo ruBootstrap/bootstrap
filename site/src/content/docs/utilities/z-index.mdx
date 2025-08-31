@@ -1,17 +1,17 @@
 ---
-title: Z-индекс
-description: Используйте наши низкоуровневые утилиты `z-index` для быстрого изменения уровня стека элемента или компонента.
+title: Z-index
+description: Use our low-level `z-index` utilities to quickly change the stack level of an element or component.
 toc: true
 added:
   version: "5.3"
 ---
 
-## Пример
+## Example
 
-Используйте утилиты `z-index` для размещения элементов друг над другом. Требуется значение `position`, отличное от `static`, которое можно задать с помощью пользовательских стилей или с помощью наших [утилит положения]([[docsref:/utilities/position/]]).
+Use `z-index` utilities to stack elements on top of one another. Requires a `position` value other than `static`, which can be set with custom styles or using our [position utilities]([[docsref:/utilities/position/]]).
 
 <Callout>
-Мы называем эти утилиты `z-index` «низкого уровня» из-за их значений по умолчанию от `-1` до `3`, которые мы используем для компоновки перекрывающихся компонентов. Значения `z-index` высокого уровня используются для наложенных компонентов, таких как модальные окна и подсказки.
+We call these “low-level” `z-index` utilities because of their default values of `-1` through `3`, which we use for the layout of overlapping components. High-level `z-index` values are used for overlay components like modals and tooltips.
 </Callout>
 
 <Example class="bd-example-zindex-levels position-relative" code={`<div class="z-3 position-absolute p-5 rounded-3"><span>z-3</span></div>
@@ -20,28 +20,28 @@ added:
 <div class="z-0 position-absolute p-5 rounded-3"><span>z-0</span></div>
 <div class="z-n1 position-absolute p-5 rounded-3"><span>z-n1</span></div>`} />
 
-## Наложения
+## Overlays
 
-Компоненты наложения Bootstrap — раскрывающийся список, модальный, offcanvas, всплывающее окно, тост и подсказка — все имеют собственные значения `z-index`, чтобы обеспечить удобство использования с конкурирующими «слоями» интерфейса.
+Bootstrap overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own `z-index` values to ensure a usable experience with competing “layers” of an interface.
 
-Прочитайте о них на [странице макета `z-index`]([[docsref:/layout/z-index]]).
+Read about them in the [`z-index` layout page]([[docsref:/layout/z-index]]).
 
-## Компонентный подход
+## Component approach
 
-В некоторых компонентах мы используем низкоуровневые значения `z-index` для управления повторяющимися элементами, которые перекрывают друг друга (например, кнопки в группе кнопок или элементы в группе списка).
+On some components, we use our low-level `z-index` values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).
 
-Узнайте о нашем [подходе `z-index`]([[docsref:/extend/approach#z-index-scales]]).
+Learn about our [`z-index` approach]([[docsref:/extend/approach#z-index-scales]]).
 
 ## CSS
 
-### Sass карты
+### Sass maps
 
-Настройте эту карту Sass, чтобы изменить доступные значения и сгенерированные утилиты.
+Customize this Sass map to change the available values and generated utilities.
 
 <ScssDocs name="zindex-levels-map" file="scss/_variables.scss" />
 
-### Sass API утилиты
+### Sass utilities API
 
-Утилиты позиционирования объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-zindex" file="scss/_utilities.scss" />

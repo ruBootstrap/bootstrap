@@ -1,49 +1,53 @@
 ---
-title: Интервал
-description: Bootstrap включает в себя широкий спектр сокращенных адаптивных служебных классов полей, отступов и зазоров для изменения внешнего вида элемента.
+title: Spacing
+description: Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.
 toc: true
 ---
 
-## Поля и отступы
+## Margin and padding
 
-Присваивайте удобные для восприятия значения `margin` или `padding` элементу или подмножеству его сторон с помощью сокращенных классов. Включает поддержку отдельных свойств, всех свойств, а также свойств по вертикали и горизонтали. Классы строятся из карты Sass по умолчанию в диапазоне от `.25rem` до `3rem`.
+Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
 
 <Callout>
-**Используете модуль макета CSS Grid?** Рассмотрите возможность использования [утилиты разрыва](#разрыв) вместо этого.
+**Using the CSS Grid layout module?** Consider using [the gap utility](#gap) instead.
 </Callout>
 
-### Примечание
+### Notation
 
-Утилиты интервалов, которые применяются ко всем контрольным точкам, от `xs` до `xxl`, не имеют в них аббревиатуры контрольные точки. Это связано с тем, что эти классы применяются начиная с `min-width: 0` и выше и поэтому не связаны медиа-запросом. Остальные контрольные точки, однако, содержат аббревиатуру контрольные точки.
+Spacing utilities that apply to all breakpoints, from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-Классы именуются в формате `{property}{sides}-{size}` для `xs` и `{property}{sides}-{breakpoint}-{size}` для `sm`, `md`, `lg`, `xl` и `xxl`.
+The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, `xl`, and `xxl`.
 
-Где *свойство* - одно из:
+Where *property* is one of:
 
-- `m` - для классов, которые устанавливают `margin`
-- `p` - для классов, которые устанавливают `padding`
+- `m` - for classes that set `margin`
+- `p` - for classes that set `padding`
 
-Где *стороны* - одна из:
+Where *sides* is one of:
 
-- `t` - для классов, которые устанавливают `margin-top` или `padding-top`
-- `b` - для классов, которые устанавливают `margin-bottom` или `padding-bottom`
-- `s` - (старт) для классов, которые устанавливают `margin-left` или `padding-left` в LTR, `margin-right` или `padding-right` в RTL
-- `e` - (конец) для классов, которые устанавливают `margin-right` или `padding-right` в LTR, `margin-left` или `padding-left` в RTL
-- `x` - для классов, которые устанавливают оба `*-left` и `*-right`
-- `y` - для классов, которые устанавливают оба `*-top` и `*-bottom`
-- `blank` - для классов, которые устанавливают `margin` или `padding` со всех 4 сторон элемента
+- `t` - for classes that set `margin-top` or `padding-top`
+- `b` - for classes that set `margin-bottom` or `padding-bottom`
+- `s` - (start) for classes that set `margin-left` or `padding-left` in LTR, `margin-right` or `padding-right` in RTL
+- `e` - (end) for classes that set `margin-right` or `padding-right` in LTR, `margin-left` or `padding-left` in RTL
+- `x` - for classes that set both `*-left` and `*-right`
+- `y` - for classes that set both `*-top` and `*-bottom`
+- blank - for classes that set a `margin` or `padding` on all 4 sides of the element
 
-Где *размер* - один из:
+Where *size* is one of:
 
-- `0` - или классы, устраняющие `margin` или `padding` установив его на `0`
-- `1` - (по умолчанию) для классов, которые устанавливают the `margin` или `padding` равным `$spacer * .25`
-- `2` - (по умолчанию) для классов, которые устанавливают the `margin` или `padding` равным `$spacer * .5`
-- `3` - (по умолчанию) для классов, которые устанавливают the `margin` или `padding` равным `$spacer`
-- `4` - (по умолчанию) для классов, которые устанавливают the `margin` или `padding` равным `$spacer * 1.5`
-- `5` - (по умолчанию) для классов, которые устанавливают the `margin` или `padding` равным `$spacer * 3`
-- `auto` - для классов, которые устанавливают `margin` равным авто
+- `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
+- `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
+- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
+- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
+- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
+- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
+- `auto` - for classes that set the `margin` to auto
 
-### Примеры
+(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
+
+### Examples
+
+Here are some representative examples of these classes:
 
 ```scss
 .mt-0 {
@@ -64,25 +68,25 @@ toc: true
 }
 ```
 
-### Горизонтальное центрирование
+### Horizontal centering
 
-Кроме того, Bootstrap также включает класс `.mx-auto` для горизонтального центрирования содержимого уровня блока фиксированной ширины, то есть содержимого, имеющего набор `display: block` и `width`, путем установки горизонтальных полей на `auto`.
+Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <Example showMarkup={false} code={`<div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
-    Центрированный элемент
+    Centered element
   </div>`} />
 
 ```html
 <div class="mx-auto p-2" style="width: 200px;">
-  Центрированный элемент
+  Centered element
 </div>
 ```
 
-## Отрицательное поле
+## Negative margin
 
-В CSS свойства `margin` могут использовать отрицательные значения (`padding` не может). Эти отрицательные поля **отключены по умолчанию**, но могут быть включены в Sass, установив `$enable-negative-margins: true`.
+In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-Синтаксис почти такой же, как у утилит положительных маржинальных значений по умолчанию, но с добавлением `n` перед запрошенным размером. Вот пример класса, противоположного `.mt-1`:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here’s an example class that’s the opposite of `.mt-1`:
 
 ```scss
 .mt-n1 {
@@ -90,51 +94,51 @@ toc: true
 }
 ```
 
-## Разрыв
+## Gap
 
-При использовании `display: grid` или `display: flex`, вы можете использовать утилиты `gap` для родительского элемента. Это может сэкономить на необходимости добавлять утилиты margin к отдельным дочерним элементам сетки или гибкого контейнера. Утилиты Gap по умолчанию реагируют и генерируются с помощью нашего API утилит на основе карты Sass `$spacers`.
+When using `display: grid` or `display: flex`, you can make use of `gap` utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the `$spacers` Sass map.
 
 <Example class="bd-example-cssgrid" code={`<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-3">
-    <div class="p-2">Элемент сетки 1</div>
-    <div class="p-2">Элемент сетки 2</div>
-    <div class="p-2">Элемент сетки 3</div>
-    <div class="p-2">Элемент сетки 4</div>
+    <div class="p-2">Grid item 1</div>
+    <div class="p-2">Grid item 2</div>
+    <div class="p-2">Grid item 3</div>
+    <div class="p-2">Grid item 4</div>
   </div>`} />
 
-Поддержка включает адаптивные параметры для всех контрольных точек сетки Bootstrap, а также шесть размеров из карты `$spacers` (`0`–`5`). Класс утилиты `.gap-auto` отсутствует, поскольку он фактически такой же, как `.gap-0`.
+Support includes responsive options for all of Bootstrap’s grid breakpoints, as well as six sizes from the `$spacers` map (`0`–`5`). There is no `.gap-auto` utility class as it’s effectively the same as `.gap-0`.
 
 ### row-gap
 
-`row-gap` устанавливает расстояние по вертикали между дочерними элементами в указанном контейнере.
+`row-gap` sets the vertical space between children items in the specified container.
 
 <Example class="bd-example-cssgrid" code={`<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 row-gap-3">
-    <div class="p-2">Элемент сетки 1</div>
-    <div class="p-2">Элемент сетки 2</div>
-    <div class="p-2">Элемент сетки 3</div>
-    <div class="p-2">Элемент сетки 4</div>
+    <div class="p-2">Grid item 1</div>
+    <div class="p-2">Grid item 2</div>
+    <div class="p-2">Grid item 3</div>
+    <div class="p-2">Grid item 4</div>
   </div>`} />
 
 ### column-gap
 
-`column-gap` устанавливает горизонтальное расстояние между дочерними элементами в указанном контейнере.
+`column-gap` sets the horizontal space between children items in the specified container.
 
 <Example class="bd-example-cssgrid" code={`<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 column-gap-3">
-    <div class="p-2">Элемент сетки 1</div>
-    <div class="p-2">Элемент сетки 2</div>
-    <div class="p-2">Элемент сетки 3</div>
-    <div class="p-2">Элемент сетки 4</div>
+    <div class="p-2">Grid item 1</div>
+    <div class="p-2">Grid item 2</div>
+    <div class="p-2">Grid item 3</div>
+    <div class="p-2">Grid item 4</div>
   </div>`} />
 
 ## CSS
 
-### Sass карты
+### Sass maps
 
-Утилиты Spacing объявляются через карту Sass, а затем генерируются с помощью нашего API утилит.
+Spacing utilities are declared via Sass map and then generated with our utilities API.
 
 <ScssDocs name="spacer-variables-maps" file="scss/_variables.scss" />
 
-### Sass API утилиты
+### Sass utilities API
 
-Утилиты интервалов объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-spacing" file="scss/_utilities.scss" />

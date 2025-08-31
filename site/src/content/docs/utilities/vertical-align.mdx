@@ -1,15 +1,15 @@
 ---
-title: Вертикальное выравнивание
-description: Легко изменяйте вертикальное выравнивание элементов inline, inline-block, inline-table и ячеек таблицы.
+title: Vertical alignment
+description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
 ---
 
-Измените выравнивание элементов с помощью утилит [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align). Обратите внимание, что vertical-align влияет только на элементы inline, inline-block, inline-table и table cell elements.
+Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
 
-При необходимости выберите `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` и `.align-text-top`.
+Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
 
-Для вертикального центрирования нестрочного содержимого (например, `<div>` и т. д.) используйте наши [утилиты flex box]([[docsref:/utilities/flex#align-items]]).
+To vertically center non-inline content (like `<div>`s and more), use our [flex box utilities]([[docsref:/utilities/flex#align-items]]).
 
-Со строчными элементами:
+With inline elements:
 
 <Example code={`<span class="align-baseline">baseline</span>
 <span class="align-top">top</span>
@@ -18,7 +18,7 @@ description: Легко изменяйте вертикальное выравн
 <span class="align-text-top">text-top</span>
 <span class="align-text-bottom">text-bottom</span>`} />
 
-С ячейками таблицы:
+With table cells:
 
 <Example code={`<table style="height: 100px;">
     <tbody>
@@ -35,8 +35,8 @@ description: Легко изменяйте вертикальное выравн
 
 ## CSS
 
-### Sass API утилиты
+### Sass utilities API
 
-Утилиты вертикального выравнивания объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+Vertical align utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-vertical-align" file="scss/_utilities.scss" />

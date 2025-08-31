@@ -1,46 +1,46 @@
 ---
-title: CSS переменные
-description: Используйте пользовательские свойства CSS Bootstrap для быстрого и перспективного проектирования и разработки.
+title: CSS variables
+description: Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.
 toc: true
 ---
 
-Bootstrap включает в себя множество [пользовательских свойств CSS (переменных)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) в своем скомпилированном CSS для настройки в реальном времени без необходимости перекомпиляции Sass. Они обеспечивают легкий доступ к часто используемым значениям, таким как цвета нашей темы, контрольные точки и основные стеки шрифтов при работе в инспекторе браузера, изолированной программной среде кода или общем прототипировании.
+Bootstrap includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser’s inspector, a code sandbox, or general prototyping.
 
-**Все наши настраиваемые свойства имеют префикс `bs-`**, чтобы избежать конфликтов со сторонним CSS.
+**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
 
-## Корневые переменные
+## Root variables
 
-Вот переменные, которые мы включаем (обратите внимание, что `:root` обязателен), к которым можно получить доступ в любом месте, где загружен CSS Bootstrap. Они находятся в нашем файле `_root.scss` и включены в наши скомпилированные файлы dist.
+Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap’s CSS is loaded. They’re located in our `_root.scss` file and included in our compiled dist files.
 
-### По умолчанию
+### Default
 
-Эти переменные CSS доступны везде, независимо от цветового режима.
+These CSS variables are available everywhere, regardless of color mode.
 
 <Code lang="css" filePath="dist/css/bootstrap.css" fileMatch=":(root,\n\[data-bs-theme=light\] {[^}]*})" />
 
-### Темный режим
+### Dark mode
 
-Эти переменные привязаны к нашему встроенному темному режиму.
+These variables are scoped to our built-in dark mode.
 
 <Code lang="css" filePath="dist/css/bootstrap.css" fileMatch="(\[data-bs-theme=dark\] {[^}]*})" />
 
-## Переменные компонента
+## Component variables
 
-Bootstrap 5 все чаще использует пользовательские свойства в качестве локальных переменных для различных компонентов. Таким образом мы сокращаем наш скомпилированный CSS, гарантируем, что стили не будут наследоваться в таких местах, как вложенные таблицы, и допускаем некоторую базовую переделку и расширение компонентов Bootstrap после компиляции Sass.
+Bootstrap 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren’t inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
 
-Ознакомьтесь с нашей документацией по таблицам, чтобы [узнать больше о том, как мы используем переменные CSS]([[docsref:/content/tables#how-do-the-variants-and-accented-tables-work]]). Наши [навигационные панели также используют переменные CSS]([[docsref:/components/navbar#css]]) с версии 5.2.0. Мы также используем переменные CSS в наших сетках — в первую очередь для разделителей [новой опциональной сетки CSS]([[docsref:/layout/css-grid]]) — и в будущем мы будем использовать больше компонентов.
+Have a look at our table documentation for some [insight into how we’re using CSS variables]([[docsref:/content/tables#how-do-the-variants-and-accented-tables-work]]). Our [navbars also use CSS variables]([[docsref:/components/navbar#css]]) as of v5.2.0. We’re also using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]([[docsref:/layout/css-grid]])—with more component usage coming in the future.
 
-По возможности мы будем назначать переменные CSS на уровне базового компонента (например, `.navbar` для панели навигации и ее подкомпонентов). Это уменьшает количество предположений о том, где и как настраивать, и позволяет нашей команде легко вносить изменения в будущих обновлениях.
+Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
 
-## Префикс
+## Prefix
 
-Большинство переменных CSS используют префикс, чтобы избежать коллизий с вашей собственной кодовой базой. Этот префикс является дополнением к `--`, который требуется для каждой переменной CSS.
+Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that’s required on every CSS variable.
 
-Настройте префикс с помощью переменной Sass `$prefix`. По умолчанию он установлен на `bs-` (обратите внимание на завершающий дефис).
+Customize the prefix via the `$prefix` Sass variable. By default, it’s set to `bs-` (note the trailing dash).
 
-## Примеры
+## Examples
 
-Переменные CSS предлагают такую ​​же гибкость, как переменные Sass, но без необходимости компиляции перед отправкой в ​​браузер. Например, здесь мы сбрасываем шрифт и стили ссылок нашей страницы с помощью переменных CSS.
+CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
 
 ```css
 body {
@@ -51,20 +51,20 @@ a {
 }
 ```
 
-## Переменные фокуса
+## Focus variables
 
 <AddedIn version="5.3.0"/>
 
-Bootstrap предоставляет настраиваемые стили `:focus`, используя комбинацию переменных Sass и CSS, которые можно дополнительно добавлять к определенным компонентам и элементам. Мы пока не переопределяем глобально все стили `:focus`.
+Bootstrap provides custom `:focus` styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all `:focus` styles.
 
-В нашем Sass мы устанавливаем значения по умолчанию, которые можно настроить перед компиляцией.
+In our Sass, we set default values that can be customized before compiling.
 
 <ScssDocs name="focus-ring-variables" file="scss/_variables.scss" />
 
-Затем эти переменные переназначаются на переменные CSS уровня `:root`, которые можно настраивать в режиме реального времени, в том числе с параметрами смещения `x` и `y` (которые по умолчанию имеют резервное значение `0`).
+Those variables are then reassigned to `:root` level CSS variables that can be customized in real-time, including with options for `x` and `y` offsets (which default to their fallback value of `0`).
 
 <ScssDocs name="root-focus-variables" file="scss/_root.scss" />
 
-## Контрольные точки сетки
+## Grid breakpoints
 
-Хотя мы включаем контрольные точки нашей сетки как переменные CSS (кроме `xs`), имейте в виду, что **переменные CSS не работают в медиа-запросах**. Это предусмотрено спецификацией CSS для переменных, но может измениться в ближайшие годы с поддержкой переменных `env()`. Ознакомьтесь с [этим ответом на Stack Overflow](https://stackoverflow.com/a/47212942) для некоторых полезных ссылок. Между тем, вы можете использовать эти переменные в других ситуациях CSS, а также в своем JavaScript.
+While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.

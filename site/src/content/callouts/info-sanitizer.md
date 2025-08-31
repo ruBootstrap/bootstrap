@@ -1,1 +1,1 @@
-По умолчанию этот компонент использует встроенный санитайзер контента, который удаляет любые элементы HTML, которые явно не разрешены. Подробнее см. в разделе [sanitizer] в нашей документации JavaScript (/docs/[[config:docs_version]]/getting-started/javascript/#sanitizer).
+By default, this component uses the built-in content sanitizer, which strips out any HTML elements that are not explicitly allowed. See the [sanitizer section in our JavaScript documentation](/docs/[[config:docs_version]]/getting-started/javascript/#sanitizer) for more details.

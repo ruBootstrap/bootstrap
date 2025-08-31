@@ -1,43 +1,43 @@
 ---
-title: Отслеживание прокрутки
-description: Автоматически обновляйте элементы навигации Bootstrap или группы списков в зависимости от положения прокрутки, чтобы указать, какая ссылка в данный момент активна в области просмотра.
+title: Scrollspy
+description: Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 toc: true
 ---
 
-## Как это устроено
+## How it works
 
-Scrollspy переключает класс `.active` на элементах привязки (`<a>`), когда элемент с `id`, на который ссылается `href` привязки, прокручивается в область просмотра. Scrollspy лучше всего использовать в сочетании с Bootstrap [компонентом навигации]([[docsref:/components/navs-tabs]]) или [группой списков]([[docsref:/components/list-group]]), но он также будет работать с любыми элементами привязки на текущей странице. Вот как это работает.
+Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor’s `href` is scrolled into view. Scrollspy is best used in conjunction with a Bootstrap [nav component]([[docsref:/components/navs-tabs]]) or [list group]([[docsref:/components/list-group]]), but it will also work with any anchor elements in the current page. Here’s how it works.
 
-- Для запуска scrollspy требуется две вещи: навигация, группа списков или простой набор ссылок, а также прокручиваемый контейнер. Прокручиваемый контейнер может быть `<body>` или пользовательским элементом с установленными `height` и `overflow-y: scroll`.
+- To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
 
-- В прокручиваемом контейнере добавьте `data-bs-spy="scroll"` и `data-bs-target="#navId"`, где `navId` — это уникальный `id` соответствующей навигации. Если внутри элемента нет фокусируемого элемента, не забудьте также включить `tabindex="0"`, чтобы обеспечить доступ с клавиатуры.
+- On the scrollable container, add `data-bs-spy="scroll"` and `data-bs-target="#navId"` where `navId` is the unique `id` of the associated navigation. If there is no focusable element inside the element, be sure to also include a `tabindex="0"` to ensure keyboard access.
 
-- При прокрутке «подсмотренного» контейнера класс `.active` добавляется и удаляется из ссылок-якорей в связанной навигации. Ссылки должны иметь разрешимые цели `id`, в противном случае они игнорируются. Например, `<a href="#home">home</a>` должен соответствовать чему-то в DOM, например `<div id="home"></div>`
+- As you scroll the “spied” container, an `.active` class is added and removed from anchor links within the associated navigation. Links must have resolvable `id` targets, otherwise they’re ignored. For example, a `<a href="#home">home</a>` must correspond to something in the DOM like `<div id="home"></div>`
 
-- Целевые элементы, которые не видны, будут игнорироваться. Смотрите раздел [Невидимые элементы](#non-visible-elements) ниже.
+- Target elements that are not visible will be ignored. See the [Non-visible elements](#non-visible-elements) section below.
 
-## Примеры
+## Examples
 
-### Панель навигации
+### Navbar
 
-Прокрутите область под панелью навигации и посмотрите, как меняется активный класс. Откройте раскрывающееся меню и посмотрите, как будут выделены элементы раскрывающегося списка.
+Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well.
 
 <Example showMarkup={false} code={`<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 rounded-2">
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading1">Первый</a>
+        <a class="nav-link" href="#scrollspyHeading1">First</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading2">Второй</a>
+        <a class="nav-link" href="#scrollspyHeading2">Second</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#scrollspyHeading3">Третий</a></li>
-          <li><a class="dropdown-item" href="#scrollspyHeading4">Четвертый</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#scrollspyHeading5">Пятый</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
         </ul>
       </li>
     </ul>
@@ -57,42 +57,42 @@ Scrollspy переключает класс `.active` на элементах п
 
 ```html
 <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-  <a class="navbar-brand" href="#">Панель навигации</a>
+  <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading1">Первый</a>
+      <a class="nav-link" href="#scrollspyHeading1">First</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading2">Второй</a>
+      <a class="nav-link" href="#scrollspyHeading2">Second</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#scrollspyHeading3">Третий</a></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading4">Четвертый</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading5">Пятый</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
       </ul>
     </li>
   </ul>
 </nav>
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-  <h4 id="scrollspyHeading1">Первый заголовок</h4>
+  <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p>
-  <h4 id="scrollspyHeading2">Второй заголовок</h4>
+  <h4 id="scrollspyHeading2">Second heading</h4>
   <p>...</p>
-  <h4 id="scrollspyHeading3">Третий заголовок</h4>
+  <h4 id="scrollspyHeading3">Third heading</h4>
   <p>...</p>
-  <h4 id="scrollspyHeading4">Четвертый заголовок</h4>
+  <h4 id="scrollspyHeading4">Fourth heading</h4>
   <p>...</p>
-  <h4 id="scrollspyHeading5">Пятый заголовок</h4>
+  <h4 id="scrollspyHeading5">Fifth heading</h4>
   <p>...</p>
 </div>
 ```
 
-### Вложенная навигация
+### Nested nav
 
-Отслеживание прокрутки также работает с вложенными `.nav`. Если вложенный `.nav` имеет значение `.active`, его родители также будут `.active`. Прокрутите область рядом с панелью навигации и посмотрите, как меняется активный класс.
+Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its parents will also be `.active`. Scroll the area next to the navbar and watch the active class change.
 
 <Example showMarkup={false} code={`
 <div class="row">
@@ -101,14 +101,14 @@ Scrollspy переключает класс `.active` на элементах п
       <nav class="nav nav-pills flex-column">
         <a class="nav-link" href="#item-1">Item 1</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
         </nav>
-        <a class="nav-link" href="#item-2">Элемент 2</a>
-        <a class="nav-link" href="#item-3">Элемент 3</a>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link" href="#item-3">Item 3</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
         </nav>
       </nav>
     </nav>
@@ -160,16 +160,16 @@ Scrollspy переключает класс `.active` на элементах п
   <div class="col-4">
     <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
       <nav class="nav nav-pills flex-column">
-        <a class="nav-link" href="#item-1">Элемент 1</a>
+        <a class="nav-link" href="#item-1">Item 1</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-1-1">Элемент 1-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-1-2">Элемент 1-2</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
         </nav>
-        <a class="nav-link" href="#item-2">Элемент 2</a>
-        <a class="nav-link" href="#item-3">Элемент 3</a>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link" href="#item-3">Item 3</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-3-1">Элемент 3-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-3-2">Элемент 3-2</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
         </nav>
       </nav>
     </nav>
@@ -178,31 +178,31 @@ Scrollspy переключает класс `.active` на элементах п
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
       <div id="item-1">
-        <h4>Элемент 1</h4>
+        <h4>Item 1</h4>
         <p>...</p>
       </div>
       <div id="item-1-1">
-        <h5>Элемент 1-1</h5>
+        <h5>Item 1-1</h5>
         <p>...</p>
       </div>
       <div id="item-1-2">
-        <h5>Элемент 1-2</h5>
+        <h5>Item 1-2</h5>
         <p>...</p>
       </div>
       <div id="item-2">
-        <h4>Элемент 2</h4>
+        <h4>Item 2</h4>
         <p>...</p>
       </div>
       <div id="item-3">
-        <h4>Элемент 3</h4>
+        <h4>Item 3</h4>
         <p>...</p>
       </div>
       <div id="item-3-1">
-        <h5>Элемент 3-1</h5>
+        <h5>Item 3-1</h5>
         <p>...</p>
       </div>
       <div id="item-3-2">
-        <h5>Элемент 3-2</h5>
+        <h5>Item 3-2</h5>
         <p>...</p>
       </div>
     </div>
@@ -210,18 +210,18 @@ Scrollspy переключает класс `.active` на элементах п
 </div>
 ```
 
-### Группа списка
+### List group
 
-Отслеживание прокрутки также работает с `.list-group`. Прокрутите область рядом с группой списка и посмотрите, как меняется активный класс.
+Scrollspy also works with `.list-group`s. Scroll the area next to the list group and watch the active class change.
 
 <Example showMarkup={false} code={`
 <div class="row">
   <div class="col-4">
     <div id="list-example" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#list-item-1">Элемент 1</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-2">Элемент 2</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Элемент 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
     </div>
   </div>
   <div class="col-8">
@@ -243,40 +243,40 @@ Scrollspy переключает класс `.active` на элементах п
 <div class="row">
   <div class="col-4">
     <div id="list-example" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#list-item-1">Элемент 1</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-2">Элемент 2</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Элемент 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Элемент 4</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
     </div>
   </div>
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-      <h4 id="list-item-1">Элемент 1</h4>
+      <h4 id="list-item-1">Item 1</h4>
       <p>...</p>
-      <h4 id="list-item-2">Элемент 2</h4>
+      <h4 id="list-item-2">Item 2</h4>
       <p>...</p>
-      <h4 id="list-item-3">Элемент 3</h4>
+      <h4 id="list-item-3">Item 3</h4>
       <p>...</p>
-      <h4 id="list-item-4">Элемент 4</h4>
+      <h4 id="list-item-4">Item 4</h4>
       <p>...</p>
     </div>
   </div>
 </div>
 ```
 
-### Простые якоря
+### Simple anchors
 
-Scrollspy не ограничивается компонентами навигации и группами списков, поэтому он будет работать с любыми якорными элементами `<a>` в текущем документе. Прокрутите область и посмотрите, как изменится класс `.active`.
+Scrollspy is not limited to nav components and list groups, so it will work on any `<a>` anchor elements in the current document. Scroll the area and watch the `.active` class change.
 
 <Example showMarkup={false} code={`
 <div class="row">
   <div class="col-4">
     <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
-      <a class="p-1 rounded" href="#simple-list-item-1">Элемент 1</a>
-      <a class="p-1 rounded" href="#simple-list-item-2">Элемент 2</a>
-      <a class="p-1 rounded" href="#simple-list-item-3">Элемент 3</a>
-      <a class="p-1 rounded" href="#simple-list-item-4">Элемент 4</a>
-      <a class="p-1 rounded" href="#simple-list-item-5">Элемент 5</a>
+      <a class="p-1 rounded" href="#simple-list-item-1">Item 1</a>
+      <a class="p-1 rounded" href="#simple-list-item-2">Item 2</a>
+      <a class="p-1 rounded" href="#simple-list-item-3">Item 3</a>
+      <a class="p-1 rounded" href="#simple-list-item-4">Item 4</a>
+      <a class="p-1 rounded" href="#simple-list-item-5">Item 5</a>
     </div>
   </div>
   <div class="col-8">
@@ -300,33 +300,33 @@ Scrollspy не ограничивается компонентами навиг�
 <div class="row">
   <div class="col-4">
     <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
-      <a class="p-1 rounded" href="#simple-list-item-1">Элемент 1</a>
-      <a class="p-1 rounded" href="#simple-list-item-2">Элемент 2</a>
-      <a class="p-1 rounded" href="#simple-list-item-3">Элемент 3</a>
-      <a class="p-1 rounded" href="#simple-list-item-4">Элемент 4</a>
-      <a class="p-1 rounded" href="#simple-list-item-5">Элемент 5</a>
+      <a class="p-1 rounded" href="#simple-list-item-1">Item 1</a>
+      <a class="p-1 rounded" href="#simple-list-item-2">Item 2</a>
+      <a class="p-1 rounded" href="#simple-list-item-3">Item 3</a>
+      <a class="p-1 rounded" href="#simple-list-item-4">Item 4</a>
+      <a class="p-1 rounded" href="#simple-list-item-5">Item 5</a>
     </div>
   </div>
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-      <h4 id="simple-list-item-1">Элемент 1</h4>
+      <h4 id="simple-list-item-1">Item 1</h4>
       <p>...</p>
-      <h4 id="simple-list-item-2">Элемент 2</h4>
+      <h4 id="simple-list-item-2">Item 2</h4>
       <p>...</p>
-      <h4 id="simple-list-item-3">Элемент 3</h4>
+      <h4 id="simple-list-item-3">Item 3</h4>
       <p>...</p>
-      <h4 id="simple-list-item-4">Элемент 4</h4>
+      <h4 id="simple-list-item-4">Item 4</h4>
       <p>...</p>
-      <h4 id="simple-list-item-5">Элемент 5</h4>
+      <h4 id="simple-list-item-5">Item 5</h4>
       <p>...</p>
     </div>
   </div>
 </div>
 ```
 
-## Невидимые элементы
+## Non-visible elements
 
-Невидимые целевые элементы будут проигнорированы, а соответствующие им навигационные элементы не получат класс `.active`. Экземпляры Scrollspy, инициализированные в невидимой оболочке, будут игнорировать все целевые элементы. Используйте метод `refresh` для проверки наблюдаемых элементов, как только оболочка станет видимой.
+Target elements that aren’t visible will be ignored and their corresponding nav items won’t receive an `.active` class. Scrollspy instances initialized in a non-visible wrapper will ignore all target elements. Use the `refresh` method to check for observable elements once the wrapper becomes visible.
 
 ```js
 document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
@@ -338,11 +338,11 @@ document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
 })
 ```
 
-## Использование
+## Usage
 
-### Через атрибуты данных
+### Via data attributes
 
-Чтобы легко добавить поведение прокрутки в навигацию верхней панели, добавьте `data-bs-spy="scroll"` к элементу, за которым вы хотите следить (чаще всего это будет `<body>`). Затем добавьте атрибут `data-bs-target` с `id` или именем класса родительского элемента любого компонента Bootstrap `.nav`.
+To easily add scrollspy behavior to your topbar navigation, add `data-bs-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-bs-target` attribute with the `id` or class name of the parent element of any Bootstrap `.nav` component.
 
 ```html
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -356,7 +356,7 @@ document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
 </body>
 ```
 
-### Через JavaScript
+### Via JavaScript
 
 ```js
 const scrollSpy = new bootstrap.ScrollSpy(document.body, {
@@ -364,36 +364,36 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 })
 ```
 
-### Опции
+### Options
 
 <JsDataAttributes />
 
 <BsTable>
-| Имя | Тип | По умолчанию | Описание |
+| Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `rootMargin` | string | `0px 0px -25%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) допустимые единицы при расчете позиции прокрутки. |
-| `smoothScroll` | boolean | `false` | Включает плавную прокрутку, когда пользователь нажимает на ссылку, которая ссылается на наблюдаемые объекты ScrollSpy. |
-| `target` | string, элемент DOM | `null` | Указывает элемент для применения плагина Scrollspy. |
-| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) допустимые входные данные при расчете положения прокрутки. |
+| `rootMargin` | string | `0px 0px -25%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) valid units, when calculating scroll position. |
+| `smoothScroll` | boolean | `false` | Enables smooth scrolling when a user clicks on a link that refers to ScrollSpy observables. |
+| `target` | string, DOM element | `null` | Specifies element to apply Scrollspy plugin. |
+| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) valid input, when calculating scroll position. |
 
 </BsTable>
 
 <Callout type="warning">
-**Устаревшие параметры**
+**Deprecated Options**
 
-До версии 5.1.3 мы использовали параметры `offset` и `method`, которые теперь устарели и заменены на `rootMargin`.
-Для сохранения обратной совместимости мы продолжим анализировать заданный `offset` в `rootMargin`, но эта функция будет удалена в **v6**.
+Up until v5.1.3 we were using `offset` & `method` options, which are now deprecated and replaced by `rootMargin`.
+To keep backwards compatibility, we will continue to parse a given `offset` to `rootMargin`, but this feature will be removed in **v6**.
 </Callout>
 
-### Методы
+### Methods
 
 <BsTable>
-| Метод | Описание |
+| Method | Description |
 | --- | --- |
-| `dispose` | Уничтожает scrollspy элемента. (Удаляет сохраненные данные в элементе DOM) |
-| `getInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM. |
-| `getOrCreateInstance` | *Статический* метод для получения экземпляра scrollspy, связанного с элементом DOM, или для создания нового, если он не был инициализирован. |
-| `refresh` | При добавлении или удалении элементов в DOM вам необходимо вызвать метод refresh. |
+| `dispose` | Destroys an element’s scrollspy. (Removes stored data on the DOM element) |
+| `getInstance` | *Static* method to get the scrollspy instance associated with a DOM element. |
+| `getOrCreateInstance` | *Static* method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn’t initialized. |
+| `refresh` | When adding or removing elements in the DOM, you’ll need to call the refresh method. |
 </BsTable>
 
 Here’s an example using the refresh method:
@@ -405,17 +405,17 @@ dataSpyList.forEach(dataSpyEl => {
 })
 ```
 
-### События
+### Events
 
 <BsTable>
-| Событие | Описание |
+| Event | Description |
 | --- | --- |
-| `activate.bs.scrollspy` | Это событие срабатывает на элементе прокрутки всякий раз, когда якорь активируется scrollspy. |
+| `activate.bs.scrollspy` | This event fires on the scroll element whenever an anchor is activated by the scrollspy. |
 </BsTable>
 
 ```js
 const firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
-  // сделайте что-нибудь...
+  // do something...
 })
 ```

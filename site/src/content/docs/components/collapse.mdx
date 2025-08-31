@@ -1,24 +1,24 @@
 ---
-title: Сворачиваемое содержимое
-description: Измените видимость контента в вашем проекте с помощью нескольких классов и наших плагинов JavaScript.
+title: Collapse
+description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
 toc: true
 ---
 
-## Как это устроено
+## How it works
 
-Плагин JavaScript сворачивания используется для отображения и скрытия содержимого. Кнопки или якоря используются как триггеры, которые сопоставляются с определенными элементами, которые Вы переключаете. Сворачивание элемента приведет к анимации `height` от текущего значения до `0`. Учитывая, как CSS обрабатывает анимацию, Вы не можете использовать `padding` для элемента `.collapse`. Вместо этого используйте класс как независимый элемент оболочки.
+The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
 
 <Callout name="info-prefersreducedmotion" />
 
-## Пример
+## Example
 
-Нажмите кнопки ниже, чтобы показать или скрыть другой элемент с помощью изменений класса:
+Click the buttons below to show and hide another element via class changes:
 
-- `.collapse` скрывает содержимое
-- `.collapsing` применяется во время переходов
-- `.collapse.show` показывает содержимое
+- `.collapse` hides content
+- `.collapsing` is applied during transitions
+- `.collapse.show` shows content
 
-Как правило, мы рекомендуем использовать `<button>` с атрибутом `data-bs-target`. Хотя это не рекомендуется с семантической точки зрения, Вы также можете использовать `<a>` с атрибутом `href` (и `role="button"`). В обоих случаях требуется `data-bs-toggle="collapse"`.
+Generally, we recommend using a `<button>` with the `data-bs-target` attribute. While not recommended from a semantic point of view, you can also use an `<a>` link with the `href` attribute (and a `role="button"`). In both cases, the `data-bs-toggle="collapse"` is required.
 
 <Example code={`<p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -34,12 +34,12 @@ toc: true
     </div>
   </div>`} />
 
-## По горизонтали
+## Horizontal
 
-Плагин сворачивания поддерживает горизонтальное сворачивание. Добавьте класс модификатора `.collapse-horizontal` для перехода `width` вместо `height` и установите `width` для непосредственного дочернего элемента. Не стесняйтесь писать свой собственный Sass, использовать встроенные стили или использовать наши [утилиты ширины]([[docsref:/utilities/sizing]]).
+The collapse plugin supports horizontal collapsing. Add the `.collapse-horizontal` modifier class to transition the `width` instead of `height` and set a `width` on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our [width utilities]([[docsref:/utilities/sizing]]).
 
 <Callout>
-Обратите внимание, что хотя в примере ниже задан параметр `min-height`, чтобы избежать избыточных перерисовок в наших документах, это явно не требуется. **Требуется только `width` дочернего элемента.**
+Please note that while the example below has a `min-height` set to avoid excessive repaints in our docs, this is not explicitly required. **Only the `width` on the child element is required.**
 </Callout>
 
 <Example code={`<p>
@@ -55,10 +55,10 @@ toc: true
     </div>
   </div>`} />
 
-## Несколько переключателей и целей
+## Multiple toggles and targets
 
-Элемент `<button>` или `<a>` может отображать и скрывать несколько элементов, ссылаясь на них с помощью селектора в атрибуте `data-bs-target` или `href`.
-И наоборот, несколько элементов `<button>` или `<a>` могут отображать и скрывать один и тот же элемент, если каждый из них ссылается на него с помощью своего атрибута `data-bs-target` или `href`.
+A `<button>` or `<a>` element can show and hide multiple elements by referencing them with a selector in its `data-bs-target` or `href` attribute.
+Conversely, multiple `<button>` or `<a>` elements can show and hide the same element if they each reference it with their `data-bs-target` or `href` attribute.
 
 <Example code={`<p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
@@ -82,69 +82,69 @@ toc: true
     </div>
   </div>`} />
 
-## Доступность
+## Accessibility
 
-Обязательно добавьте `aria-expanded` к элементу управления. Этот атрибут явно передает текущее состояние сворачиваемого элемента, привязанного к элементу управления, программам чтения с экрана и аналогичным вспомогательным технологиям. Если сворачиваемый элемент закрыт по умолчанию, атрибут элемента управления должен иметь значение `aria-expanded="false"`. Если вы установили сворачиваемый элемент открытым по умолчанию с помощью класса `show`, вместо этого установите `aria-expanded="true"` для элемента управления. Плагин автоматически переключит этот атрибут на элементе управления в зависимости от того, был ли сворачиваемый элемент открыт или закрыт (через JavaScript или потому, что пользователь активировал другой элемент управления, также привязанный к тому же сворачиваемому элементу). Если элемент HTML элемента управления не является кнопкой (например, `<a>` или `<div>`), к элементу следует добавить атрибут `role="button"`.
+Be sure to add `aria-expanded` to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of `aria-expanded="false"`. If you’ve set the collapsible element to be open by default using the `show` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute on the control based on whether or not the collapsible element has been opened or closed (via JavaScript, or because the user triggered another control element also tied to the same collapsible element). If the control element’s HTML element is not a button (e.g., an `<a>` or `<div>`), the attribute `role="button"` should be added to the element.
 
-Если Ваш элемент управления нацелен на один сворачиваемый элемент - т.е. атрибут `data-bs-target` указывает на селектор `id` Вы должны добавить атрибут `aria-controls` к элементу управления, содержащий `id` элемента управления. разборный элемент. Современные средства чтения с экрана и аналогичные вспомогательные технологии используют этот атрибут, чтобы предоставить пользователям дополнительные ярлыки для перехода непосредственно к самому сворачиваемому элементу.
+If your control element is targeting a single collapsible element – i.e. the `data-bs-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
-Обратите внимание, что текущая реализация Bootstrap не охватывает различные *необязательные* взаимодействия с клавиатурой, описанные в [шаблоне аккордеона ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) — вам нужно будет включить их самостоятельно с помощью пользовательского JavaScript.
+Note that Bootstrap’s current implementation does not cover the various *optional* keyboard interactions described in the [ARIA Authoring Practices Guide accordion pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) - you will need to include these yourself with custom JavaScript.
 
 ## CSS
 
-### Sass переменные
+### Sass variables
 
 <ScssDocs name="collapse-transition" file="scss/_variables.scss" />
 
-### Классы
+### Classes
 
-Классы перехода сворачивания можно найти в `scss/_transitions.scss`, поскольку они используются в нескольких компонентах (сворачивание и аккордеон).
+Collapse transition classes can be found in `scss/_transitions.scss` as these are shared across multiple components (collapse and accordion).
 
 <ScssDocs name="collapse-classes" file="scss/_transitions.scss" />
 
-## Использование
+## Usage
 
-Плагин collapse использует несколько классов для работы:
+The collapse plugin utilizes a few classes to handle the heavy lifting:
 
-- `.collapse` скрывает содержимое
-- `.collapse.show` показывает содержимое
-- `.collapsing` добавляется, когда переход начинается, и удаляется, когда он заканчивается
+- `.collapse` hides the content
+- `.collapse.show` shows the content
+- `.collapsing` is added when the transition starts, and removed when it finishes
 
-Эти классы можно найти в `_transitions.scss`.
+These classes can be found in `_transitions.scss`.
 
-### Через атрибуты данных
+### Via data attributes
 
-Просто добавьте `data-bs-toggle="collapse"` и `data-bs-target` к элементу, чтобы автоматически назначить управление одним или несколькими сворачиваемыми элементами. Атрибут `data-bs-target` принимает селектор CSS для применения сворачивания. Обязательно добавьте класс `collapse` к сворачиваемому элементу. Если вы хотите, чтобы он был открыт по умолчанию, добавьте дополнительный класс `show`.
+Just add `data-bs-toggle="collapse"` and a `data-bs-target` to the element to automatically assign control of one or more collapsible elements. The `data-bs-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you’d like it to default open, add the additional class `show`.
 
-Чтобы добавить управление группами в виде аккордеона в сворачиваемую область, добавьте атрибут данных `data-bs-parent="#selector"`. Для получения дополнительной информации см. [страницу аккордеона]([[docsref:/components/accordion]]).
+To add accordion-like group management to a collapsible area, add the data attribute `data-bs-parent="#selector"`. Refer to the [accordion page]([[docsref:/components/accordion]]) for more information.
 
-### Через JavaScript
+### Via JavaScript
 
-Включить вручную с помощью:
+Enable manually with:
 
 ```js
 const collapseElementList = document.querySelectorAll('.collapse')
 const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
 ```
 
-### Опции
+### Options
 
 <JsDataAttributes />
 
 <BsTable>
-| Название | Тип | По умолчанию | Описание |
+| Name | Type | Default | Description |
 | --- | --- | --- | --- |
-`parent` | селектор, элемент DOM | `null` | Если указан parent, то все сворачиваемые элементы под указанным parent будут закрыты при отображении этого сворачиваемого элемента. (аналогично традиционному поведению аккордеона — это зависит от класса `card`). Атрибут должен быть установлен в целевой сворачиваемой области. |
-`toggle` | boolean | `true` | Переключает сворачиваемый элемент при вызове. |
+`parent` | selector, DOM element | `null` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
+`toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
 </BsTable>
 
-### Методы
+### Methods
 
 <Callout name="danger-async-methods" type="danger" />
 
-Активирует Ваш контент как сворачиваемый элемент. Принимает необязательные параметры `object`.
+Activates your content as a collapsible element. Accepts an optional options `object`.
 
-Вы можете создать экземпляр сворачивания с помощью конструктора, например:
+You can create a collapse instance with the constructor, for example:
 
 ```js
 const bsCollapse = new bootstrap.Collapse('#myCollapse', {
@@ -153,32 +153,32 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 ```
 
 <BsTable>
-| Метод | Описание |
+| Method | Description |
 | --- | --- |
-| `dispose` | Уничтожает сворачивание элемента. (Удаляет сохраненные данные в элементе DOM) |
-| `getInstance` | Статический метод, позволяющий получить экземпляр сворачивания, связанный с элементом DOM, можно использовать так: `bootstrap.Collapse.getInstance(element)`. |
-| `getOrCreateInstance` | Статический метод, возвращающий экземпляр сворачивания, связанный с элементом DOM, или создающий новый, если он не был инициализирован. Можно использовать так: `bootstrap.Collapse.getOrCreateInstance(element)`. |
-| `hide` | Скрывает сворачиваемый элемент. **Возвращает вызывающему до того, как сворачиваемый элемент будет фактически скрыт** (например, до того, как произойдет событие `hidden.bs.collapse`). |
-| `show` | Показывает сворачиваемый элемент. **Возвращает вызывающему объекту до того, как сворачиваемый элемент был фактически показан** (например, до того, как произошло событие `shown.bs.collapse`). |
-| `toggle` | Переключает сворачиваемый элемент в состояние показа или скрытия. **Возвращает вызывающему объекту до того, как сворачиваемый элемент был фактически показан или скрыт** (т. е. до того, как произошло событие `shown.bs.collapse` или `hidden.bs.collapse`). |
+| `dispose` | Destroys an element’s collapse. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `bootstrap.Collapse.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: `bootstrap.Collapse.getOrCreateInstance(element)`. |
+| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.bs.collapse` event occurs). |
+| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.bs.collapse` event occurs). |
+| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). |
 </BsTable>
 
-### События
+### Events
 
-Класс сворачивания Bootstrap предоставляет несколько событий для подключения к функциональности свертывания.
+Bootstrap’s collapse class exposes a few events for hooking into collapse functionality.
 
 <BsTable>
-| Тип события | Описание |
+| Event type | Description |
 | --- | --- |
-| `hide.bs.collapse` | Это событие срабатывает немедленно после вызова метода `hide`. |
-| `hidden.bs.collapse` | Это событие срабатывает, когда элемент сворачивания скрыт от пользователя (будет ждать завершения переходов CSS). |
-| `show.bs.collapse` | Это событие срабатывает немедленно после вызова метода экземпляра `show`. |
-| `shown.bs.collapse` | Это событие срабатывает, когда элемент сворачивания сделан видимым для пользователя (будет ждать завершения переходов CSS). |
+| `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
+| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
+| `show.bs.collapse` | This event fires immediately when the `show` instance method is called. |
+| `shown.bs.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
 </BsTable>
 
 ```js
 const myCollapsible = document.getElementById('myCollapsible')
 myCollapsible.addEventListener('hidden.bs.collapse', event => {
-  // сделайте что-нибудь...
+  // do something...
 })
 ```

@@ -1,6 +1,6 @@
 ---
-title: Заполнители
-description: Используйте заполнители загрузки для ваших компонентов или страниц, чтобы указать, что что-то все еще загружается.
+title: Placeholders
+description: Use loading placeholders (skeleton loaders) for your components or pages to indicate something may still be loading.
 toc: true
 added:
   version: "5.1"
@@ -8,13 +8,13 @@ added:
 
 import { getData } from '@libs/data'
 
-## Введение
+## About
 
-Заполнители можно использовать для улучшения опыта вашего приложения. Они созданы только с помощью HTML и CSS, то есть вам не нужен JavaScript для их создания. Однако вам понадобится некоторый пользовательский JavaScript для переключения их видимости. Их внешний вид, цвет и размер можно легко настроить с помощью наших служебных классов.
+Placeholders can be used to enhance the experience of your application. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
 
-## Пример
+## Example
 
-В примере ниже мы берем типичный компонент карты и воссоздаем его с применением заполнителей для создания «карты загрузки». Размер и пропорции у них одинаковы.
+In the example below, we take a typical card component and recreate it with placeholders applied to create a “loading card”. Size and proportions are the same between the two.
 
 <Example showMarkup={false} class="bd-example-placeholder-cards d-flex justify-content-around" code={`<div class="card">
     <Placeholder width="100%" height="180" class="card-img-top" text={false} background="#20c997" />
@@ -71,11 +71,11 @@ import { getData } from '@libs/data'
 </div>
 ```
 
-## Как это устроено
+## How it works
 
-Создайте заполнители с классом `.placeholder` и классом столбца сетки (например, `.col-6`), чтобы установить `width`. Они могут заменять текст внутри элемента или добавляться как класс-модификатор к существующему компоненту.
+Create placeholders with the `.placeholder` class and a grid column class (e.g., `.col-6`) to set the `width`. They can replace the text inside an element or be added as a modifier class to an existing component.
 
-Мы применяем дополнительный стиль к `.btn` через `::before`, чтобы обеспечить соблюдение высоты `height`. Вы можете расширить этот шаблон для других ситуаций по мере необходимости или добавить в элемент `&nbsp;`, чтобы отразить высоту, когда фактический текст отображается на его месте.
+We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
 
 <Example code={`<p aria-hidden="true">
     <span class="placeholder col-6"></span>
@@ -84,20 +84,20 @@ import { getData } from '@libs/data'
   <a class="btn btn-primary disabled placeholder col-4" aria-disabled="true"></a>`} />
 
 <Callout>
-Использование `aria-hidden="true"` указывает только на то, что элемент должен быть скрыт для экранных ридеров. Поведение *загрузки* заполнителя зависит от того, как авторы фактически будут использовать стили заполнителя, как они планируют обновлять вещи и т. д. Может потребоваться некоторый код JavaScript для *обмена* состояния заполнителя и информирования пользователей AT об обновлении.
+The use of `aria-hidden="true"` only indicates that the element should be hidden to screen readers. The *loading* behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to *swap* the state of the placeholder and inform AT users of the update.
 </Callout>
 
-### Ширина
+### Width
 
-Вы можете изменить `width` с помощью классов столбцов сетки, утилит ширины или встроенных стилей.
+You can change the `width` through grid column classes, width utilities, or inline styles.
 
 <Example code={`<span class="placeholder col-6"></span>
 <span class="placeholder w-75"></span>
 <span class="placeholder" style="width: 25%;"></span>`} />
 
-### Цвет
+### Color
 
-По умолчанию заполнитель `placeholder` использует `currentColor`. Это можно изменить с помощью настраиваемого цвета или служебного класса.
+By default, the `placeholder` uses `currentColor`. This can be overridden with a custom color or utility class.
 
 <Example code={[
   `<span class="placeholder col-12"></span>
@@ -105,18 +105,18 @@ import { getData } from '@libs/data'
   ...getData('theme-colors').map((themeColor) => `<span class="placeholder col-12 bg-${themeColor.name}"></span>`)
 ]} />
 
-### Размеры
+### Sizing
 
-Размер `.placeholder` основывается на типографском стиле родительского элемента. Настройте их с помощью модификаторов размера: `.placeholder-lg`, `.placeholder-sm` или `.placeholder-xs`.
+The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
 
 <Example code={`<span class="placeholder col-12 placeholder-lg"></span>
 <span class="placeholder col-12"></span>
 <span class="placeholder col-12 placeholder-sm"></span>
 <span class="placeholder col-12 placeholder-xs"></span>`} />
 
-### Анимация
+### Animation
 
-Анимируйте заполнители с `.placeholder-glow` или `.placeholder-wave`, чтобы лучше передать представление о том, что что-то *активно* загружается.
+Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being *actively* loaded.
 
 <Example code={`<p class="placeholder-glow">
     <span class="placeholder col-12"></span>
@@ -128,6 +128,6 @@ import { getData } from '@libs/data'
 
 ## CSS
 
-### Sass переменные
+### Sass variables
 
 <ScssDocs name="placeholders" file="scss/_variables.scss" />

@@ -1,64 +1,63 @@
 ---
-title: Контрольные точки
-description: Контрольные точки — это настраиваемые значения ширины, которые определяют, как ваш адаптивный макет ведет себя на разных устройствах или в разных размерах области просмотра в Bootstrap.
+title: Breakpoints
+description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.
 aliases: "/docs/[[config:docs_version]]/layout/"
 toc: true
 ---
 
-## Основные концепции
+## Core concepts
 
-- **Контрольные точки - это строительные блоки адаптивного дизайна.** Используйте их, чтобы контролировать, когда Ваш макет может быть адаптирован для определенного окна просмотра или размера устройства.
+- **Breakpoints are the building blocks of responsive design.** Use them to control when your layout can be adapted at a particular viewport or device size.
 
-- **Используйте медиа-запросы для построения Вашего CSS по контрольной точке.** Медиа-запросы - это функция CSS, которая позволяет Вам условно применять стили на основе набора параметров браузера и операционной системы. Чаще всего мы используем `min-width` в наших медиа-запросах.
+- **Use media queries to architect your CSS by breakpoint.** Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use `min-width` in our media queries.
 
-- **Сначала мобильный, адаптивный дизайн — вот цель.** CSS Bootstrap нацелен на применение минимального количества стилей, чтобы макет работал на минимальной контрольной точке, а затем накладывает стили, чтобы настроить этот дизайн для более крупных устройств. Это оптимизирует ваш CSS, сокращает время рендеринга и обеспечивает отличный опыт для ваших посетителей.
+- **Mobile first, responsive design is the goal.** Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
 
-## Доступные контрольные точки
+## Available breakpoints
 
-Bootstrap включает шесть контрольных точек по умолчанию, иногда называемых _уровнями сетки_, для адаптивного построения. Эти контрольные точки можно настроить, если вы используете наши исходные файлы Sass.
+Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you’re using our source Sass files.
 
 <BsTable>
-| Контрольная точка | Инфикс класса | Габаритные размеры |
+| Breakpoint | Class infix | Dimensions |
 | --- | --- | --- |
-| Очень маленький | <em>Нет</em> |&lt;576px |
-| Маленький | `sm` | &ge;576px |
-| Средний | `md` | &ge;768px |
-| Большой | `lg` | &ge;992px |
-| Очень большой | `xl` | &ge;1200px |
-| Очень очень большой | `xxl` | &ge;1400px |
+| Extra small | <em>None</em> |&lt;576px |
+| Small | `sm` | &ge;576px |
+| Medium | `md` | &ge;768px |
+| Large | `lg` | &ge;992px |
+| Extra large | `xl` | &ge;1200px |
+| Extra extra large | `xxl` | &ge;1400px |
 </BsTable>
 
-Каждая контрольная точка была выбрана для удобного размещения контейнеров, ширина которых кратна 12. Контрольные точки также представляют собой подмножество общих размеров устройств и размеров области просмотра - они специально не нацелены на каждый вариант использования или устройство. Напротив, эти линейки обеспечивают прочную и стабильную основу практически для любого устройства.
 
-Каждая контрольная точка была выбрана для удобного размещения контейнеров, ширина которых кратна 12. Контрольные точки также представляют подмножество общих размеров устройств и размеров области просмотра — они не нацелены специально на каждый вариант использования или устройство. Вместо этого диапазоны обеспечивают прочную и последовательную основу для построения практически любого устройства.
+Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don’t specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
 
-Эти контрольные точки настраиваются через Sass — вы найдете их в карте Sass в нашей таблице стилей `_variables.scss`.
+These breakpoints are customizable via Sass—you’ll find them in a Sass map in our `_variables.scss` stylesheet.
 
 <ScssDocs name="grid-breakpoints" file="scss/_variables.scss" />
 
-Дополнительную информацию и примеры того, как изменять наши карты и переменные Sass, см. в [разделе CSS документации Grid]([[docsref:/layout/grid#css]]).
+For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]([[docsref:/layout/grid#css]]).
 
-## Медиа-запросы
+## Media queries
 
-Поскольку Bootstrap изначально разрабатывался как мобильный, мы используем несколько [медиа-запросов](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) для создания разумных контрольных точек для наших макетов и интерфейсов. Эти контрольные точки в основном основаны на минимальной ширине области просмотра и позволяют нам масштабировать элементы по мере изменения области просмотра.
+Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
-### Минимальная ширина
+### Min-width
 
-Bootstrap в основном использует следующие диапазоны медиа-запросов - или контрольные точки - в наших исходных файлах Sass для нашей разметки, системы сеток и компонентов.
+Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 ```scss
-// Исходные миксины
+// Source mixins
 
-// Для контрольной точки xs не требуется медиа-запрос, поскольку по сути это `@media (min-width: 0) { ... }`
+// No media query necessary for xs breakpoint as it’s effectively `@media (min-width: 0) { ... }`
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
 @include media-breakpoint-up(xxl) { ... }
 
-// Применение
+// Usage
 
-// Пример: Скрыть начало с `min-width: 0`, а затем показать в контрольной точке `sm`
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
 .custom-class {
   display: none;
 }
@@ -69,41 +68,41 @@ Bootstrap в основном использует следующие диапа
 }
 ```
 
-Эти миксины Sass переводятся в наш скомпилированный CSS с использованием значений, объявленных в наших переменных Sass. Например:
+These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
-// Устройства X-Small (портретные телефоны, менее 576 пикселей)
-// Нет медиа-запроса для `xs`, так как это значение по умолчанию в Bootstrap
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
-// Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше)
+// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
 
-// Устройства Medium (планшеты, 768 пикселей и выше)
+// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... }
 
-// Устройства Large (настольные компьютеры, 992 пикселей и выше)
+// Large devices (desktops, 992px and up)
 @media (min-width: 992px) { ... }
 
-// Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше)
+// X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
-// Устройства XX-Large (большие настольные компьютеры, 1400 пикселей и выше)
+// XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { ... }
 ```
 
-### Максимальная ширина
+### Max-width
 
-Иногда мы используем медиа-запросы, идущие в другом направлении (заданный размер экрана _или меньше_):
+We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss
-// Для контрольной точки xs не требуется медиа-запрос, поскольку по сути это `@media (max-width: 0) { ... }`
+// No media query necessary for xs breakpoint as it’s effectively `@media (max-width: 0) { ... }`
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
 @include media-breakpoint-down(lg) { ... }
 @include media-breakpoint-down(xl) { ... }
 @include media-breakpoint-down(xxl) { ... }
 
-// Пример: стиль от средней контрольной точки и ниже
+// Example: Style from medium breakpoint and down
 @include media-breakpoint-down(md) {
   .custom-class {
     display: block;
@@ -111,33 +110,33 @@ Bootstrap в основном использует следующие диапа
 }
 ```
 
-Эти миксины берут объявленные контрольной точки, вычитают из них `.02px` и используют их как наши значения `max-width`. Например:
+These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
 
 ```scss
-// `xs` возвращает только набор правил, но не медиа-запрос
+// `xs` returns only a ruleset and no media query
 // ... { ... }
 
-// `sm` применяется к устройствам x-small (портретные телефоны, менее 576 пикселей)
+// `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }
 
-// `md` применяется к небольшим устройствам medium (телефоны с горизонтальной ориентацией, менее 768 пикселей)
+// `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
-// `lg` применяется к устройствам среднего размера large (планшеты, менее 992 пикселей)
+// `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { ... }
 
-// `xl` применяется к большим устройствам (настольные компьютеры, менее 1200 пикселей)
+// `xl` applies to large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) { ... }
 
-// `xxl` применяется к устройствам x-large (большие рабочие столы, менее 1400 пикселей)
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) { ... }
 ```
 
 <Callout name="info-mediaqueries-breakpoints" type="warning" />
 
-### Одиночная контрольная точка
+### Single breakpoint
 
-Существуют также медиа-запросы и миксины для нацеливания на один сегмент размеров экрана с использованием минимальной и максимальной ширины контрольной точки.
+There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
 
 ```scss
 @include media-breakpoint-only(xs) { ... }
@@ -148,24 +147,24 @@ Bootstrap в основном использует следующие диапа
 @include media-breakpoint-only(xxl) { ... }
 ```
 
-Например, `@include media-breakpoint-only(md) { ... }` приведет к:
+For example the `@include media-breakpoint-only(md) { ... }` will result in :
 
 ```scss
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 ```
 
-### Между контрольными точками
+### Between breakpoints
 
-Точно так же медиа-запросы могут охватывать несколько значений ширины контрольной точки:
+Similarly, media queries may span multiple breakpoint widths:
 
 ```scss
 @include media-breakpoint-between(md, xl) { ... }
 ```
 
-Что приводит к:
+Which results in:
 
 ```scss
-// Пример
-// Применятся стили, начиная со средних и заканчивая очень большими.
+// Example
+// Apply styles starting from medium devices and up to extra large devices
 @media (min-width: 768px) and (max-width: 1199.98px) { ... }
 ```

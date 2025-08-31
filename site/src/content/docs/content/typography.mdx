@@ -1,152 +1,152 @@
 ---
-title: Типография
-description: Документация и примеры типографики Bootstrap, включая глобальные настройки, заголовки, основной текст, списки и т.д.
+title: Typography
+description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
 toc: true
 ---
 
-## Глобальные настройки
+## Global settings
 
-Bootstrap устанавливает базовые глобальные стили отображения, типографики и ссылок. Если требуется больше контроля, ознакомьтесь с [текстовыми служебными классами]([[docsref:/utilities/text]]).
+Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]([[docsref:/utilities/text]]).
 
-- Используйте [стек собственных шрифтов]([[docsref:/content/reboot#native-font-stack]]), который выбирает лучшее `font-family` для каждой ОС и устройства.
-- Для более инклюзивной и доступной шкалы шрифтов мы используем корневой размер браузера по умолчанию `font-size` (обычно 16 пикселей), чтобы посетители могли настраивать параметры браузера по умолчанию по мере необходимости.
-- Используйте атрибуты `$font-family-base`, `$font-size-base` и `$line-height-base` в качестве нашей типографской базы, применяемой к `<body>`.
-- Установите глобальный цвет ссылки с помощью `$link-color`.
-- Используйте `$body-bg`, чтобы задать `background-color` для `<body>` (`#fff` по умолчанию).
+- Use a [native font stack]([[docsref:/content/reboot#native-font-stack]]) that selects the best `font-family` for each OS and device.
+- For a more inclusive and accessible type scale, we use the browser’s default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
+- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Set the global link color via `$link-color`.
+- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
-Эти стили можно найти в `_reboot.scss`, а глобальные переменные определены в `_variables.scss`. Не забудьте установить `$font-size-base` в `rem`.
+These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
-## Заголовки
+## Headings
 
-Доступны все заголовки HTML, от `<h1>` до `<h6>`.
+All HTML headings, `<h1>` through `<h6>`, are available.
 
 <BsTable>
-| Заголовок | Пример |
+| Heading | Example |
 | --- | --- |
-| `<h1></h1>` | <span class="h1">h1. Заголовок Bootstrap</span> |
-| `<h2></h2>` | <span class="h2">h2. Заголовок Bootstrap</span> |
-| `<h3></h3>` | <span class="h3">h3. Заголовок Bootstrap</span> |
-| `<h4></h4>` | <span class="h4">h4. Заголовок Bootstrap</span> |
-| `<h5></h5>` | <span class="h5">h5. Заголовок Bootstrap</span> |
-| `<h6></h6>` | <span class="h6">h6. Заголовок Bootstrap</span> |
+| `<h1></h1>` | <span class="h1">h1. Bootstrap heading</span> |
+| `<h2></h2>` | <span class="h2">h2. Bootstrap heading</span> |
+| `<h3></h3>` | <span class="h3">h3. Bootstrap heading</span> |
+| `<h4></h4>` | <span class="h4">h4. Bootstrap heading</span> |
+| `<h5></h5>` | <span class="h5">h5. Bootstrap heading</span> |
+| `<h6></h6>` | <span class="h6">h6. Bootstrap heading</span> |
 </BsTable>
 
 ```html
-<h1>h1. Заголовок Bootstrap</h1>
-<h2>h2. Заголовок Bootstrap</h2>
-<h3>h3. Заголовок Bootstrap</h3>
-<h4>h4. Заголовок Bootstrap</h4>
-<h5>h5. Заголовок Bootstrap</h5>
-<h6>h6. Заголовок Bootstrap</h6>
+<h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
 ```
 
-Также доступны классы от `.h1` до `.h6`, когда Вы хотите соответствовать стилю шрифта заголовка, но не можете использовать связанный элемент HTML.
+`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
-<Example code={`<p class="h1">h1. Заголовок Bootstrap</p>
-<p class="h2">h2. Заголовок Bootstrap</p>
-<p class="h3">h3. Заголовок Bootstrap</p>
-<p class="h4">h4. Заголовок Bootstrap</p>
-<p class="h5">h5. Заголовок Bootstrap</p>
-<p class="h6">h6. Заголовок Bootstrap</p>`} />
+<Example code={`<p class="h1">h1. Bootstrap heading</p>
+<p class="h2">h2. Bootstrap heading</p>
+<p class="h3">h3. Bootstrap heading</p>
+<p class="h4">h4. Bootstrap heading</p>
+<p class="h5">h5. Bootstrap heading</p>
+<p class="h6">h6. Bootstrap heading</p>`} />
 
-### Настройка заголовков
+### Customizing headings
 
-Используйте включенные служебные классы, чтобы воссоздать небольшой текст вторичного заголовка из Bootstrap 3.
+Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
 
 <Example code={`<h3>
-    Необычный заголовок
-    <small class="text-body-secondary">С выцветшим вторичным текстом</small>
+    Fancy display heading
+    <small class="text-body-secondary">With faded secondary text</small>
   </h3>`} />
 
-## Отображение заголовков
+## Display headings
 
-Традиционные элементы заголовка лучше всего подходят для содержания Вашей страницы. Если Вам нужен заголовок, чтобы выделиться, подумайте об использовании **отображаемого заголовка** более крупного, немного более самоуверенного стиля заголовка.
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
 <Example showMarkup={false} code={`
-<div class="display-1 pb-3 mb-3 border-bottom">Отображение 1</div>
-<div class="display-2 pb-3 mb-3 border-bottom">Отображение 2</div>
-<div class="display-3 pb-3 mb-3 border-bottom">Отображение 3</div>
-<div class="display-4 pb-3 mb-3 border-bottom">Отображение 4</div>
-<div class="display-5 pb-3 mb-3 border-bottom">Отображение 5</div>
-<div class="display-6">Отображение 6</div>
+<div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
+<div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
+<div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
+<div class="display-4 pb-3 mb-3 border-bottom">Display 4</div>
+<div class="display-5 pb-3 mb-3 border-bottom">Display 5</div>
+<div class="display-6">Display 6</div>
 `} />
 
 ```html
-<h1 class="display-1">Отображение 1</h1>
-<h1 class="display-2">Отображение 2</h1>
-<h1 class="display-3">Отображение 3</h1>
-<h1 class="display-4">Отображение 4</h1>
-<h1 class="display-5">Отображение 5</h1>
-<h1 class="display-6">Отображение 6</h1>
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+<h1 class="display-5">Display 5</h1>
+<h1 class="display-6">Display 6</h1>
 ```
 
-Отображаемые заголовки настраиваются с помощью карты Sass `$display-font-sizes` и двух переменных: `$display-font-weight` и `$display-line-height`.
+Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
 
-Заголовки дисплея настраиваются с помощью двух переменных: `$display-font-family` и `$display-font-style`.
+Display headings are customizable via two variables, `$display-font-family` and `$display-font-style`.
 
 <ScssDocs name="display-headings" file="scss/_variables.scss" />
 
-## Ведущий
+## Lead
 
-Выделите абзац, добавив `.lead`.
+Make a paragraph stand out by adding `.lead`.
 
 <Example code={`<p class="lead">
-    Это лид-абзац. Он выделяется среди обычных абзацев.
+    This is a lead paragraph. It stands out from regular paragraphs.
   </p>`} />
 
-## Строчные текстовые элементы
+## Inline text elements
 
-Стили для общих строчных элементов HTML5.
+Styling for common inline HTML5 elements.
 
-<Example code={`<p>Вы можете использовать тег mark, чтобы <mark>выделить</mark> текст.</p>
-<p><del>Эта строка текста должна рассматриваться как удаленный текст.</del></p>
-<p><s>Эта строка текста должна рассматриваться как более неточный.</s></p>
-<p><ins>Эта строка текста должна рассматриваться как дополнение к документу.</ins></p>
-<p><u>Эта строка текста будет отображаться как подчеркнутая.</u></p>
-<p><small>Эта строка текста должна рассматриваться как мелкий шрифт.</small></p>
-<p><strong>Эта строка отображается как жирный текст.</strong></p>
-<p><em>Эта строка отображается как курсивный текст.</em></p>`} />
+<Example code={`<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined.</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>`} />
 
-Помните, что эти теги следует использовать в семантических целях:
+Beware that those tags should be used for semantic purpose:
 
-- `<mark>` представляет текст, который отмечен или выделен для справки или обозначений.
-- `<small>` представляет собой комментарии и мелкий шрифт, например текст об авторских правах и юридический текст.
-- `<s>` представляет элемент, который больше не актуален или не точен.
-- `<u>` представляет собой диапазон строчного текста, который должен отображаться таким образом, чтобы указывать на то, что он имеет нетекстовую аннотацию.
+- `<mark>` represents text which is marked or highlighted for reference or notation purposes.
+- `<small>` represents side-comments and small print, like copyright and legal text.
+- `<s>` represents element that are no longer relevant or no longer accurate.
+- `<u>` represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
 
-Если Вы хотите стилизовать свой текст, Вы должны вместо этого использовать следующие классы:
+If you want to style your text, you should use the following classes instead:
 
-- `.mark` будут применять те же стили, что и `<mark>`.
-- `.small` будут применять те же стили, что и `<small>`.
-- `.text-decoration-underline` будут применять те же стили, что и `<u>`.
-- `.text-decoration-line-through` будут применять те же стили, что и `<s>`.
+- `.mark` will apply the same styles as `<mark>`.
+- `.small` will apply the same styles as `<small>`.
+- `.text-decoration-underline` will apply the same styles as `<u>`.
+- `.text-decoration-line-through` will apply the same styles as `<s>`.
 
-Хотя это не показано выше, Вы можете свободно использовать `<b>` и `<i>` в HTML5. `<b>` предназначен для выделения слов или фраз без придания дополнительной важности, в то время как `<i>` в основном используется для озвучивания, технических терминов и т.д.
+While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance, while `<i>` is mostly for voice, technical terms, etc.
 
-## Текстовые утилиты
+## Text utilities
 
-Измените выравнивание текста, его преобразование, стиль, толщину, высоту строки, оформление и цвет с помощью наших [текстовых утилит]([[docsref:/utilities/text]]) и [цветовых утилит]([[docsref:/utilities/colors]]).
+Change text alignment, transform, style, weight, line-height, decoration and color with our [text utilities]([[docsref:/utilities/text]]) and [color utilities]([[docsref:/utilities/colors]]).
 
-## Аббревиатуры
+## Abbreviations
 
-Стилизованная реализация элемента HTML `<abbr>` для аббревиатур и сокращений, чтобы показать развернутую версию при наведении. Аббревиатуры имеют подчеркивание по умолчанию и получают курсор справки для предоставления дополнительного контекста при наведении и для пользователей вспомогательных технологий.
+Stylized implementation of HTML’s `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-Добавьте к аббревиатуре `.initialism`, чтобы уменьшить размер шрифта.
+Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 <Example code={`<p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>`} />
 
-## Цитаты
+## Blockquotes
 
-Для цитирования блоков контента из другого источника в вашем документе. Оберните `<blockquote class="blockquote">` вокруг любого HTML в качестве цитаты.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
 
 <Example code={`<blockquote class="blockquote">
-    <p>Известная цитата, содержащаяся в элементе цитаты.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>`} />
 
-### Название источника
+### Naming a source
 
-Спецификация HTML требует, чтобы атрибуция цитаты размещалась за пределами `<blockquote>`. При указании авторства оберните Ваш `<blockquote>` в `<figure>` и используйте `<figcaption>` или элемент уровня блока (например, `<p>`) с классом `.blockquote-footer`. Не забудьте также заключить название исходной работы в `<cite>`.
+The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
 
 <Example code={`<figure>
     <blockquote class="blockquote">
@@ -157,9 +157,9 @@ Bootstrap устанавливает базовые глобальные сти�
     </figcaption>
   </figure>`} />
 
-### Выравнивание
+### Alignment
 
-При необходимости используйте текстовые утилиты, чтобы изменить выравнивание цитаты.
+Use text utilities as needed to change the alignment of your blockquote.
 
 <Example code={`<figure class="text-center">
     <blockquote class="blockquote">
@@ -179,11 +179,11 @@ Bootstrap устанавливает базовые глобальные сти�
     </figcaption>
   </figure>`} />
 
-## Списки
+## Lists
 
-### Без стиля
+### Unstyled
 
-Удалите по умолчанию `list-style` и левое поле для элементов списка (только непосредственные дочерние элементы). **Это применимо только к непосредственным дочерним элементам списка**, то есть Вам нужно будет добавить класс также для любых вложенных списков.
+Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
 <Example code={`<ul class="list-unstyled">
     <li>This is a list.</li>
@@ -200,9 +200,9 @@ Bootstrap устанавливает базовые глобальные сти�
     <li>This may still come in handy in some situations.</li>
   </ul>`} />
 
-### В линию
+### Inline
 
-Удалите маркеры списка и примените небольшие `margin` с помощью комбинации двух классов, `.list-inline` и `.list-inline-item`.
+Remove a list’s bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
 <Example code={`<ul class="list-inline">
     <li class="list-inline-item">This is a list item.</li>
@@ -210,9 +210,9 @@ Bootstrap устанавливает базовые глобальные сти�
     <li class="list-inline-item">But they’re displayed inline.</li>
   </ul>`} />
 
-### Выравнивание списка описаний
+### Description list alignment
 
-Выровняйте термины и описания по горизонтали, используя предопределенные классы нашей системы сеток (или семантические миксины). Для более длинных терминов вы можете по желанию добавить класс `.text-truncate`, чтобы обрезать текст многоточием.
+Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
 <Example code={`<dl class="row">
     <dt class="col-sm-3">Description lists</dt>
@@ -239,22 +239,22 @@ Bootstrap устанавливает базовые глобальные сти�
     </dd>
   </dl>`} />
 
-## Размеры адаптивного шрифта
+## Responsive font sizes
 
-В Bootstrap 5 мы включили адаптивные размеры шрифтов по умолчанию, что позволяет тексту масштабироваться более естественно в зависимости от размера устройства и области просмотра. Посмотрите [страницу RFS]([[docsref:/getting-started/rfs]]), чтобы узнать, как это работает.
+In Bootstrap 5, we’ve enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]([[docsref:/getting-started/rfs]]) to find out how this works.
 
 ## CSS
 
-### Sass переменные
+### Sass variables
 
-В заголовках есть несколько переменных, определяющих размер и интервал.
+Headings have some dedicated variables for sizing and spacing.
 
 <ScssDocs name="headings-variables" file="scss/_variables.scss" />
 
-Различные элементы типографики, рассматриваемые здесь и в [Перезагрузке]([[docsref:/content/reboot]]), также имеют выделенные переменные.
+Miscellaneous typography elements covered here and in [Reboot]([[docsref:/content/reboot]]) also have dedicated variables.
 
 <ScssDocs name="type-variables" file="scss/_variables.scss" />
 
-### Sass миксины
+### Sass mixins
 
-Специальных миксинов для типографики нет, но Bootstrap использует [Responsive Font Sizing (RFS)]([[docsref:/getting-started/rfs]]).
+There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]([[docsref:/getting-started/rfs]]).

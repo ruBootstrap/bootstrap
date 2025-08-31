@@ -1,20 +1,20 @@
 ---
-title: Навигация и вкладки
-description: Документация и примеры использования включенных навигационных компонентов Bootstrap.
+title: Navs and tabs
+description: Documentation and examples for how to use Bootstrap’s included navigation components.
 aliases: "/docs/[[config:docs_version]]/components/navs/"
 toc: true
 ---
 
-## Простая навигация
+## Base nav
 
-Навигация, доступная в Bootstrap, имеет общую разметку и стили, от базового класса `.nav` до активного и отключенного состояний. Поменяйте местами классы модификаторов, чтобы переключаться между каждым стилем.
+Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
-Базовый компонент `.nav` построен на основе `flexbox` и обеспечивает прочную основу для создания всех типов компонентов навигации. Он включает в себя некоторые переопределения стиля (для работы со списками), некоторые отступы для ссылок для больших областей попадания и базовый отключенный стиль.
+The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
 <Callout>
-Базовый компонент `.nav` не включает состояние `.active`. В следующих примерах класс включен, в основном, для того, чтобы продемонстрировать, что этот конкретный класс не вызывает никакого специального стиля.
+The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
 
-Чтобы передать активное состояние вспомогательным технологиям, используйте атрибут `aria-current` — используя значение `page` для текущей страницы или `true` для текущего элемента в наборе.
+To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
 </Callout>
 
 <Example code={`<ul class="nav">
@@ -32,7 +32,7 @@ toc: true
     </li>
   </ul>`} />
 
-Классы используются повсюду, поэтому Ваша разметка может быть очень гибкой. Используйте `<ul>`, как указано выше, `<ol>`, если порядок Ваших элементов важен, или сверните свой собственный с элементом `<nav>`. Поскольку в файле `.nav` используется `display: flex`, навигационные ссылки ведут себя так же, как элементы навигации, но без дополнительной разметки.
+Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, `<ol>` if the order of your items is important, or roll your own with a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
 <Example code={`<nav class="nav">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -41,15 +41,15 @@ toc: true
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>`} />
 
-## Доступные стили
+## Available styles
 
-Измените стиль компонента `.nav` с помощью модификаторов и утилит. Смешивайте и сочетайте по мере необходимости или создавайте свои собственные.
+Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own.
 
-### Горизонтальное выравнивание
+### Horizontal alignment
 
-Измените горизонтальное выравнивание навигации с помощью [утилит флексбокс]([[docsref:/utilities/flex#justify-content]]). По умолчанию навигация выравнивается по левому краю, но вы можете легко изменить ее на центральную или правую.
+Change the horizontal alignment of your nav with [flexbox utilities]([[docsref:/utilities/flex#justify-content]]). By default, navs are left-aligned, but you can easily change them to center or right-aligned.
 
-Выравнивание по центру с помощью `.justify-content-center`:
+Centered with `.justify-content-center`:
 
 <Example code={`<ul class="nav justify-content-center">
     <li class="nav-item">
@@ -66,7 +66,7 @@ toc: true
     </li>
   </ul>`} />
 
-Выравнивание по правому краю с помощью `.justify-content-end`:
+Right-aligned with `.justify-content-end`:
 
 <Example code={`<ul class="nav justify-content-end">
     <li class="nav-item">
@@ -83,9 +83,9 @@ toc: true
     </li>
   </ul>`} />
 
-### Вертикальное
+### Vertical
 
-Сгруппируйте Вашу навигацию, изменив направление гибкого элемента с помощью утилиты `.flex-column`. Нужно наложить их на одни окна просмотра, но не на другие? Используйте адаптивные версии (например, `.flex-sm-column`).
+Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
 
 <Example code={`<ul class="nav flex-column">
     <li class="nav-item">
@@ -102,7 +102,7 @@ toc: true
     </li>
   </ul>`} />
 
-Как всегда, вертикальная навигация возможна и без `<ul>`.
+As always, vertical navigation is possible without `<ul>`s, too.
 
 <Example code={`<nav class="nav flex-column">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -111,9 +111,9 @@ toc: true
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>`} />
 
-### Вкладки
+### Tabs
 
-Берет базовую навигацию сверху и добавляет класс `.nav-tabs` для создания интерфейса с вкладками. Используйте их для создания областей с вкладками с помощью нашего [подключаемого модуля JavaScript](#поведение-javascript).
+Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
 
 <Example code={`<ul class="nav nav-tabs">
     <li class="nav-item">
@@ -130,9 +130,9 @@ toc: true
     </li>
   </ul>`} />
 
-### Таблетки
+### Pills
 
-Возьмите тот же HTML, но используйте вместо него `.nav-pills`:
+Take that same HTML, but use `.nav-pills` instead:
 
 <Example code={`<ul class="nav nav-pills">
     <li class="nav-item">
@@ -149,9 +149,9 @@ toc: true
     </li>
   </ul>`} />
 
-### Подчеркивание
+### Underline
 
-Возьмите тот же HTML, но вместо этого используйте `.nav-underline`:
+Take that same HTML, but use `.nav-underline` instead:
 
 <Example code={`<ul class="nav nav-underline">
     <li class="nav-item">
@@ -168,9 +168,9 @@ toc: true
     </li>
   </ul>`} />
 
-### Заполнение и выравнивание
+### Fill and justify
 
-Заставьте содержимое `.nav` расширить всю доступную ширину с помощью одного из двух классов-модификаторов. Чтобы пропорционально заполнить все доступное пространство вашими `.nav-item`, используйте `.nav-fill`. Обратите внимание, что все горизонтальное пространство занято, но не все элементы навигации имеют одинаковую ширину.
+Force your `.nav`’s contents to extend the full available width with one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 <Example code={`<ul class="nav nav-pills nav-fill">
     <li class="nav-item">
@@ -187,7 +187,7 @@ toc: true
     </li>
   </ul>`} />
 
-При использовании навигации на основе `<nav>` Вы можете смело опускать `.nav-item`, поскольку для стилизации элементов `<a>` требуется только `.nav-link`.
+When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `.nav-link` is required for styling `<a>` elements.
 
 <Example code={`<nav class="nav nav-pills nav-fill">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -196,7 +196,7 @@ toc: true
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>`} />
 
-Для элементов одинаковой ширины используйте `.nav-justified`. Все горизонтальное пространство будет занято навигационными ссылками, но в отличие от `.nav-fill` выше, каждый элемент навигации будет одинаковой ширины.
+For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
 
 <Example code={`<ul class="nav nav-pills nav-justified">
     <li class="nav-item">
@@ -213,7 +213,7 @@ toc: true
     </li>
   </ul>`} />
 
-Подобно примеру `.nav-fill` с использованием навигации на основе `<nav>`.
+Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 
 <Example code={`<nav class="nav nav-pills nav-justified">
     <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -222,9 +222,9 @@ toc: true
     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>`} />
 
-## Работа с утилитами flex
+## Working with flex utilities
 
-Если вам нужны адаптивные вариации навигации, рассмотрите возможность использования серии [утилиты flexbox]([[docsref:/utilities/flex]]). Хотя эти утилиты более многословны, они предлагают большую настройку в адаптивных контрольных точках. В примере ниже наша навигация будет размещена на самой низкой контрольной точке, а затем адаптирована к горизонтальному макету, который заполнит доступную ширину, начиная с малой контрольной точки.
+If you need responsive nav variations, consider using a series of [flexbox utilities]([[docsref:/utilities/flex]]). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 <Example code={`<nav class="nav nav-pills flex-column flex-sm-row">
     <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
@@ -233,17 +233,17 @@ toc: true
     <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>`} />
 
-## Что касается доступности
+## Regarding accessibility
 
-Если вы используете navs для предоставления панели навигации, обязательно добавьте `role="navigation"` в наиболее логичный родительский контейнер `<ul>` или оберните элемент `<nav>` вокруг всей навигации. Не добавляйте роль к самому `<ul>`, так как это помешает вспомогательным технологиям объявить его как реальный список.
+If you’re using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
 
-Обратите внимание, что панели навигации, даже если они визуально стилизованы как вкладки с классом `.nav-tabs`, **не** должны иметь значение `role="tablist"`, `role="tab"` или `role="tabpanel"` атрибуты. Они подходят только для интерфейсов с динамическими вкладками, как описано в [Шаблон вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). Смотрите [поведение JavaScript](#javascript-behavior) для динамических интерфейсов с вкладками в этом разделе в качестве примера. Атрибут `aria-current` не требуется в интерфейсах с динамическими вкладками, поскольку наш JavaScript обрабатывает выбранное состояние, добавляя `aria-selected="true"` на активной вкладке.
+Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. The `aria-current` attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding `aria-selected="true"` on the active tab.
 
-## Использование выпадающих списков
+## Using dropdowns
 
-Добавьте раскрывающиеся меню с помощью небольшого дополнительного HTML-кода и [плагина JavaScript dropdowns]([[docsref:/components/dropdowns#usage]]).
+Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]([[docsref:/components/dropdowns#usage]]).
 
-### Вкладки с выпадающими списками
+### Tabs with dropdowns
 
 <Example code={`<ul class="nav nav-tabs">
     <li class="nav-item">
@@ -267,7 +267,7 @@ toc: true
     </li>
   </ul>`} />
 
-### Таблетки с выпадающими списками
+### Pills with dropdowns
 
 <Example code={`<ul class="nav nav-pills">
     <li class="nav-item">
@@ -293,37 +293,37 @@ toc: true
 
 ## CSS
 
-### Переменные
+### Variables
 
 <AddedIn version="5.2.0" />
 
-В рамках развивающегося подхода Bootstrap к переменным CSS, navs теперь используют локальные переменные CSS в `.nav`, `.nav-tabs` и `.nav-pills` для улучшенной настройки в реальном времени. Значения для переменных CSS устанавливаются через Sass, поэтому настройка Sass также по-прежнему поддерживается.
+As part of Bootstrap’s evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
-В базовом классе `.nav`:
+On the `.nav` base class:
 
 <ScssDocs name="nav-css-vars" file="scss/_nav.scss" />
 
-В классе модификатора `.nav-tabs`:
+On the `.nav-tabs` modifier class:
 
 <ScssDocs name="nav-tabs-css-vars" file="scss/_nav.scss" />
 
-В классе модификатора `.nav-pills`:
+On the `.nav-pills` modifier class:
 
 <ScssDocs name="nav-pills-css-vars" file="scss/_nav.scss" />
 
 <AddedIn version="5.3.0" />
 
-В классе модификатора `.nav-underline`:
+On the `.nav-underline` modifier class:
 
 <ScssDocs name="nav-underline-css-vars" file="scss/_nav.scss" />
 
-### Sass переменные
+### Sass variables
 
 <ScssDocs name="nav-variables" file="scss/_variables.scss" />
 
-## Поведение JavaScript
+## JavaScript behavior
 
-Используйте плагин JavaScript вкладок - включите его индивидуально или через скомпилированный файл `bootstrap.js` - чтобы расширить наши навигационные вкладки и таблетки для создания вкладок локального контента.
+Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content.
 
 <Example showMarkup={false} code={`
 <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -359,16 +359,16 @@ toc: true
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Главная</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Контакт</button>
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Отключен</button>
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -379,7 +379,7 @@ toc: true
 </div>
 ```
 
-Чтобы соответствовать вашим потребностям, это работает с разметкой на основе `<ul>`, как показано выше, или с любой произвольной разметкой «сделай сам». Обратите внимание, что если вы используете `<nav>`, вам не следует добавлять `role="tablist"` непосредственно к нему, так как это переопределит собственную роль элемента как навигационного ориентира. Вместо этого переключитесь на альтернативный элемент (в примере ниже, простой `<div>`) и оберните `<nav>` вокруг него.
+To help fit your needs, this works with `<ul>`-based markup, as shown above, or with any arbitrary “roll your own” markup. Note that if you’re using `<nav>`, you shouldn’t add `role="tablist"` directly to it, as this would override the element’s native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
 
 <Example showMarkup={false} code={`
 <nav>
@@ -409,10 +409,10 @@ toc: true
 ```html
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Главная</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Профиль</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Контакт</button>
-    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Отключен</button>
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
@@ -423,7 +423,7 @@ toc: true
 </div>
 ```
 
-Плагин вкладок также работает с таблетками.
+The tabs plugin also works with pills.
 
 <Example showMarkup={false} code={`
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -459,16 +459,16 @@ toc: true
 ```html
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Главная</button>
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</button>
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Отключен</button>
+    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -479,7 +479,7 @@ toc: true
 </div>
 ```
 
-И с вертикальными таблетками. В идеале для вертикальных вкладок вы также должны добавить `aria-orientation="vertical"` в контейнер списка вкладок.
+And with vertical pills. Ideally, for vertical tabs, you should also add `aria-orientation="vertical"` to the tab list container.
 
 <Example showMarkup={false} code={`
 <div class="d-flex align-items-start">
@@ -513,11 +513,11 @@ toc: true
 ```html
 <div class="d-flex align-items-start">
   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Главная</button>
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Профиль</button>
-    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Отключен</button>
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Сообщения</button>
-    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Настройки</button>
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
   </div>
   <div class="tab-content" id="v-pills-tabContent">
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
@@ -529,38 +529,38 @@ toc: true
 </div>
 ```
 
-### Доступность
+### Accessibility
 
-Динамические интерфейсы с вкладками, как описано в [Шаблон вкладок ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), требуют `role="tablist"`, `role="tab"`, `role="tabpanel"` и дополнительные `aria-` атрибуты, чтобы передать их структуру, функциональность и текущее состояние пользователям вспомогательных технологий (таких как программы чтения с экрана). Мы рекомендуем использовать элементы `<button>` для вкладок, так как это элементы управления, которые запускают динамическое изменение, а не ссылки, ведущие на новую страницу или место.
+Dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
 
-В соответствии с шаблоном ARIA Authoring Practices фокус клавиатуры получает только текущая активная вкладка. При инициализации плагина JavaScript он установит `tabindex="-1"` для всех неактивных элементов управления вкладками. После того, как текущая активная вкладка получит фокус, клавиши курсора активируют предыдущую/следующую вкладку. Клавиши <kbd>Home</kbd> и <kbd>End</kbd> активируют первую и последнюю вкладки соответственно. Плагин изменит [перемещающийся `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) соответствующим образом. Однако обратите внимание, что плагин JavaScript не различает горизонтальные и вертикальные списки вкладок, когда дело касается взаимодействия клавиш курсора: независимо от ориентации списка вкладок, как курсор вверх *и* влево переходят на предыдущую вкладку, так и курсор вниз *и* вправо переходят на следующую вкладку.
+In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab. The <kbd>Home</kbd> and <kbd>End</kbd> keys activate the first and last tabs, respectively. The plugin will change the [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list’s orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
 
 <Callout type="warning">
-В целом, чтобы облегчить навигацию с помощью клавиатуры, рекомендуется сделать сами панели вкладок фокусируемыми, если только первый элемент, содержащий значимый контент внутри панели вкладок, уже не фокусируется. Плагин JavaScript не пытается обрабатывать этот аспект — где это уместно, вам нужно будет явно сделать ваши панели вкладок фокусируемыми, добавив `tabindex="0"` в вашу разметку.
+In general, to facilitate keyboard navigation, it’s recommended to make the tab panels themselves focusable as well, unless the first element containing meaningful content inside the tab panel is already focusable. The JavaScript plugin does not try to handle this aspect—where appropriate, you’ll need to explicitly make your tab panels focusable by adding `tabindex="0"` in your markup.
 </Callout>
 
 <Callout type="danger">
-Плагин JavaScript Tab **не** поддерживает интерфейсы с вкладками, содержащие раскрывающиеся меню, поскольку они вызывают проблемы как с удобством использования, так и с доступностью. С точки зрения удобства использования тот факт, что элемент-триггер отображаемой вкладки не виден сразу (так как он находится внутри закрытого раскрывающегося меню), может вызвать путаницу. С точки зрения доступности в настоящее время нет разумного способа сопоставить этот тип конструкции со стандартным шаблоном WAI ARIA, что означает, что его нельзя легко сделать понятным для пользователей вспомогательных технологий.
+The tab JavaScript plugin **does not** support tabbed interfaces that contain dropdown menus, as these cause both usability and accessibility issues. From a usability perspective, the fact that the currently displayed tab’s trigger element is not immediately visible (as it’s inside the closed dropdown menu) can cause confusion. From an accessibility point of view, there is currently no sensible way to map this sort of construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to users of assistive technologies.
 </Callout>
 
-### Использование атрибутов данных
+### Using data attributes
 
-Вы можете активировать навигацию по вкладкам или таблеткам без написания кода JavaScript, просто указав для элемента `data-bs-toggle="tab"` или `data-bs-toggle="pill"`. Используйте эти атрибуты данных в `.nav-tabs` или `.nav-pills`.
+You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-bs-toggle="tab"` or `data-bs-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`.
 
 ```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Главная</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Профиль</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Сообщения</button>
+    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Настройки</button>
+    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
   </li>
 </ul>
 
@@ -573,9 +573,9 @@ toc: true
 </div>
 ```
 
-### Через JavaScript
+### Via JavaScript
 
-Включите вкладки с вкладками через JavaScript (каждую вкладку нужно активировать отдельно):
+Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
 
 ```js
 const triggerTabList = document.querySelectorAll('#myTab button')
@@ -589,7 +589,7 @@ triggerTabList.forEach(triggerEl => {
 })
 ```
 
-Вы можете активировать отдельные вкладки несколькими способами:
+You can activate individual tabs in several ways:
 
 ```js
 const triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
@@ -599,9 +599,9 @@ const triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
-### Эффект затухания
+### Fade effect
 
-Чтобы вкладки постепенно появлялись, добавьте `.fade` к каждому` .tab-pane`. На первой панели вкладок также должен быть `.show`, чтобы исходное содержимое было видимым.
+To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
 
 ```html
 <div class="tab-content">
@@ -612,45 +612,45 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 </div>
 ```
 
-### Методы
+### Methods
 
 <Callout name="danger-async-methods" type="danger" />
 
-Активирует ваш контент как элемент вкладки.
+Activates your content as a tab element.
 
-Вы можете создать экземпляр вкладки с помощью конструктора, например:
+You can create a tab instance with the constructor, for example:
 
 ```js
 const bsTab = new bootstrap.Tab('#myTab')
 ```
 
 <BsTable>
-| Метод | Описание |
+| Method | Description |
 | --- | --- |
-| `dispose` | Уничтожает вкладку элемента. |
-| `getInstance` | Статический метод, позволяющий получить экземпляр вкладки, связанный с элементом DOM. Его можно использовать следующим образом: `bootstrap.Tab.getInstance(element)`. |
-| `getOrCreateInstance` | Статический метод, возвращающий экземпляр вкладки, связанный с элементом DOM, или создающий новый, если он не был инициализирован. Его можно использовать следующим образом: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | Выбирает указанную вкладку и показывает связанную с ней панель. Любая другая вкладка, которая была выбрана ранее, становится невыбранной, а связанная с ней панель скрывается. **Возвращает вызывающему объекту до того, как панель вкладок будет фактически показана** (т. е. до того, как произойдет событие `shown.bs.tab`). |
+| `dispose` | Destroys an element’s tab. |
+| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
 </BsTable>
 
-### События
+### Events
 
-При отображении новой вкладки события запускаются в следующем порядке:
+When showing a new tab, the events fire in the following order:
 
-1. `hide.bs.tab` (на текущей активной вкладке)
-2. `show.bs.tab` (на вкладке для показа)
-3. `hidden.bs.tab` (на предыдущей активной вкладке такая же, как для события `hide.bs.tab`)
-4. `shown.bs.tab` (на только что активированной вкладке, такой же, как для события `show.bs.tab`)
+1. `hide.bs.tab` (on the current active tab)
+2. `show.bs.tab` (on the to-be-shown tab)
+3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
+4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
 
-Если ни одна вкладка еще не была активной, то события `hide.bs.tab` и `hidden.bs.tab` не запускаются.
+If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
 
 <BsTable>
-| Тип события | Описание |
+| Event type | Description |
 | --- | --- |
-| `hide.bs.tab` | Это событие срабатывает, когда должна быть показана новая вкладка (и, таким образом, предыдущая активная вкладка должна быть скрыта). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на текущую активную вкладку и новую вкладку, которая скоро станет активной, соответственно. |
-| `hidden.bs.tab` | Это событие срабатывает после показа новой вкладки (и, таким образом, предыдущая активная вкладка скрывается). Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на предыдущую активную вкладку и новую активную вкладку, соответственно. |
-| `show.bs.tab` | Это событие срабатывает при показе вкладки, но до показа новой вкладки. Используйте `event.target` и `event.relatedTarget`, чтобы нацелиться на активную вкладку и предыдущую активную вкладку (если она доступна) соответственно. |
-| `shown.bs.tab` | Это событие срабатывает при показе вкладки после показа вкладки. Используйте `event.target` и `event.relatedTarget` для нацеливания на активную вкладку и предыдущую активную вкладку (если доступно) соответственно.
+| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
+| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
+| `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
+| `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
 </BsTable>
 
 ```js

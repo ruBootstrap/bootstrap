@@ -1,22 +1,22 @@
 ---
-title: Контейнеры
-description: Контейнеры — это фундаментальный строительный блок Bootstrap, который содержит, дополняет и выравнивает ваш контент в пределах определенного устройства или области просмотра.
+title: Containers
+description: Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
 toc: true
 ---
 
-## Как они работают
+## How they work
 
-Контейнеры являются самым основным элементом макета в Bootstrap и **необходимы при использовании нашей сеточной системы по умолчанию**. Контейнеры используются для содержания, заполнения и (иногда) центрирования содержимого внутри них. Хотя контейнеры *могут* быть вложенными, для большинства макетов вложенный контейнер не требуется.
+Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
 
-Bootstrap поставляется с тремя разными контейнерами:
+Bootstrap comes with three different containers:
 
-- `.container`, который устанавливает `max-width` для каждой контрольной точки
-- `.container-{breakpoint}`, который равен `width: 100%` до указанной контрольной точки
-- `.container-fluid`, который равен `width: 100%` во всех контрольных точках
+- `.container`, which sets a `max-width` at each responsive breakpoint
+- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- `.container-fluid`, which is `width: 100%` at all breakpoints
 
-Таблица ниже иллюстрирует, как `max-width` каждого контейнера сравнивается с исходными `.container` и `.container-fluid` в каждой контрольной точке.
+The table below illustrates how each container’s `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
 
-Посмотрите на них в действии и сравните их в нашем [примере сетки]([[docsref:/examples/grid/#containers]]).
+See them in action and compare them in our [Grid example]([[docsref:/examples/grid/#containers]]).
 
 <BsTable>
 |  | Extra small<div class="fw-normal">&lt;576px</div> | Small<div class="fw-normal">&ge;576px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;992px</div> | X-Large<div class="fw-normal">&ge;1200px</div> | XX-Large<div class="fw-normal">&ge;1400px</div> |
@@ -30,31 +30,31 @@ Bootstrap поставляется с тремя разными контейне
 | `.container-fluid` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> |
 </BsTable>
 
-## Контейнер по умолчанию
+## Default container
 
-Наш класс `.container` по умолчанию является адаптивным контейнером фиксированной ширины, что означает, что его максимальная ширина изменяется в каждой контрольной точке.
+Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
 
 ```html
 <div class="container">
-  <!-- Контент здесь -->
+  <!-- Content here -->
 </div>
 ```
 
-## Адаптивные контейнеры
+## Responsive containers
 
-Адаптивные контейнеры позволяют Вам указать класс шириной 100% до достижения указанной контрольной точки, после чего мы применяем `max-width` для каждой из более высоких контрольных точек. Например, `.container-sm` имеет 100% ширину для начала до тех пор, пока не будет достигнута контрольная точка `sm`,  где он будет масштабироваться с помощью `md`, `lg`, `xl` и `xxl`.
+Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
 
 ```html
-<div class="container-sm">100% шириной до контрольной точки small</div>
-<div class="container-md">100% шириной до контрольной точки medium</div>
-<div class="container-lg">100% шириной до контрольной точки large</div>
-<div class="container-xl">100% шириной до контрольной точки extra large</div>
-<div class="container-xxl">100% шириной до контрольной точки extra extra large</div>
+<div class="container-sm">100% wide until small breakpoint</div>
+<div class="container-md">100% wide until medium breakpoint</div>
+<div class="container-lg">100% wide until large breakpoint</div>
+<div class="container-xl">100% wide until extra large breakpoint</div>
+<div class="container-xxl">100% wide until extra extra large breakpoint</div>
 ```
 
-## Подвижные контейнеры
+## Fluid containers
 
-Используйте `.container-fluid` для контейнера полной ширины, охватывающего всю ширину области просмотра.
+Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
 
 ```html
 <div class="container-fluid">
@@ -64,20 +64,20 @@ Bootstrap поставляется с тремя разными контейне
 
 ## CSS
 
-### Sass переменные
+### Sass variables
 
-Как показано выше, Bootstrap генерирует серию предопределенных контейнерных классов, чтобы помочь Вам создать желаемые макеты. Вы можете настроить эти предопределенные классы контейнеров, изменив карту Sass (находится в `_variables.scss`), которая их поддерживает:
+As shown above, Bootstrap generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
 
 <ScssDocs name="container-max-widths" file="scss/_variables.scss" />
 
-Дополнительную информацию и примеры того, как изменять наши карты и переменные Sass, см. в [разделе Sass документации Grid]([[docsref:/layout/grid#css]]).
+For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]([[docsref:/layout/grid#css]]).
 
-### Sass миксины
+### Sass mixins
 
-Помимо настройки Sass, вы также можете создавать свои собственные контейнеры с помощью нашего миксина Sass.
+In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
 
 ```scss
-// Исходный миксин
+// Source mixin
 @mixin make-container($padding-x: $container-padding-x) {
   width: 100%;
   padding-right: $padding-x;
@@ -86,7 +86,7 @@ Bootstrap поставляется с тремя разными контейне
   margin-left: auto;
 }
 
-// Применение
+// Usage
 .custom-container {
   @include make-container();
 }

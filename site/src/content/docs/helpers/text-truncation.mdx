@@ -1,19 +1,19 @@
 ---
-title: Укорачивание текста
-description: Обрезайте длинные строки текста с помощью многоточия.
+title: Text truncation
+description: Truncate long strings of text with an ellipsis.
 toc: false
 ---
 
-Для более длинного содержимого Вы можете добавить класс `.text-truncate`, чтобы обрезать текст многоточием. **Требуется `display: inline-block` или `display: block`.**
+For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
 
 <Example code={`<!-- Block level -->
   <div class="row">
     <div class="col-2 text-truncate">
-      Этот текст довольно длинный и будет обрезан после отображения.
+      This text is quite long, and will be truncated once displayed.
     </div>
   </div>
 
   <!-- Inline level -->
   <span class="d-inline-block text-truncate" style="max-width: 150px;">
-    Этот текст довольно длинный и будет обрезан после отображения.
+    This text is quite long, and will be truncated once displayed.
   </span>`} />

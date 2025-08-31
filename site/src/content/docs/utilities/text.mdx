@@ -1,12 +1,12 @@
 ---
-title: Текст
-description: Документация и примеры использования распространенных текстовых утилит для управления выравниванием, переносом, весом и т. д.
+title: Text
+description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 toc: true
 ---
 
-## Выравнивание текста
+## Text alignment
 
-Легко выравнивайте текст по компонентам с помощью классов выравнивания текста. Для выравнивания влево, вправо и по центру доступны адаптивные классы, которые используют те же контрольные точки по ширине области просмотра, что и система сетки.
+Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 <Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
 <p class="text-center">Center aligned text on all viewport sizes.</p>
@@ -19,46 +19,46 @@ toc: true
 <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>`} />
 
 <Callout>
-Обратите внимание, что мы не предоставляем служебные классы для выровненного текста. Хотя эстетически выровненный текст может выглядеть более привлекательно, он делает интервалы между словами более случайными и, следовательно, более трудными для чтения.
+Note that we don’t provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
 </Callout>
 
-## Перенос текста и переполнение
+## Text wrapping and overflow
 
-Оберните текст классом `.text-wrap`.
+Wrap text with a `.text-wrap` class.
 
 <Example code={`<div class="badge text-bg-primary text-wrap" style="width: 6rem;">
     This text should wrap.
   </div>`} />
 
-Запретить перенос текста с помощью класса `.text-nowrap`.
+Prevent text from wrapping with a `.text-nowrap` class.
 
 <Example code={`<div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
     This text should overflow the parent.
   </div>`} />
 
-## Перенос слова
+## Word break
 
-Не допускайте, чтобы длинные строки текста нарушали макет ваших компонентов, используя `.text-break` для установки `word-wrap: break-word` и `word-break: break-word`. Мы используем `word-wrap` вместо более распространенного `overflow-wrap` для более широкой поддержки браузеров и добавляем устаревший `word-break: break-word`, чтобы избежать проблем с flex-контейнерами.
+Prevent long strings of text from breaking your components’ layout by using `.text-break` to set `word-wrap: break-word` and `word-break: break-word`. We use `word-wrap` instead of the more common `overflow-wrap` for wider browser support, and add the deprecated `word-break: break-word` to avoid issues with flex containers.
 
 <Example code={`<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>`} />
 
 <Callout type="warning">
-Обратите внимание, что [разрыв слов невозможен в арабском языке](https://rtlstyling.com/posts/rtl-styling#3.-line-break), который является наиболее используемым языком RTL. Поэтому `.text-break` удаляется из нашего скомпилированного RTL CSS.
+Note that [breaking words isn’t possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
 </Callout>
 
-## Преобразование текста
+## Text transform
 
-Преобразуйте текст в компонентах с помощью наших классов заглавных букв текста: `text-lowercase`, `text-uppercase` или `text-capitalize`.
+Transform text in components with our text capitalization classes: `text-lowercase`, `text-uppercase` or `text-capitalize`.
 
 <Example code={`<p class="text-lowercase">Lowercased text.</p>
 <p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">CapiTaliZed text.</p>`} />
 
-Обратите внимание, как `.text-capitalize` изменяет только первую букву каждого слова, не затрагивая регистр любых других букв.
+Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
 
-## Размер шрифта
+## Font size
 
-Быстрое изменение `font-size` текста. В то время как наши классы заголовков (например, `.h1`–`.h6`) применяют `font-size`, `font-weight` и `line-height`, эти утилиты _только_ применяют `font-size`. Размер для этих утилит соответствует элементам заголовков HTML, поэтому по мере увеличения числа их размер уменьшается.
+Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`–`.h6`) apply `font-size`, `font-weight`, and `line-height`, these utilities _only_ apply `font-size`. Sizing for these utilities matches HTML’s heading elements, so as the number increases, their size decreases.
 
 <Example code={`<p class="fs-1">.fs-1 text</p>
 <p class="fs-2">.fs-2 text</p>
@@ -67,71 +67,71 @@ toc: true
 <p class="fs-5">.fs-5 text</p>
 <p class="fs-6">.fs-6 text</p>`} />
 
-Настройте свой доступный `font-size`, изменив карту Sass `$font-sizes`.
+Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
-## Толщина шрифта и курсив
+## Font weight and italics
 
-С помощью этих утилит можно быстро изменить `font-weight` или `font-style`. Утилиты `font-style` сокращенно обозначаются как `.fst-*`, а утилиты `font-weight` сокращаются как `.fw-*`.
+Quickly change the `font-weight` or `font-style` of text with these utilities. `font-style` utilities are abbreviated as `.fst-*` and `font-weight` utilities are abbreviated as `.fw-*`.
 
-<Example code={`<p class="fw-bold">Жирный текст.</p>
-<p class="fw-bolder">Более жирный текст (относительно родительского элемента).</p>
-<p class="fw-semibold">Полужирный текст.</p>
-<p class="fw-medium">Средний текст.</p>
-<p class="fw-normal">Обычный текст.</p>
-<p class="fw-light">Тонкий текст.</p>
-<p class="fw-lighter">Более легкий текст (относительно родительского элемента).</p>
-<p class="fst-italic">Курсивный текст.</p>
-<p class="fst-normal">Текст с обычным стилем шрифта</p>`} />
+<Example code={`<p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-semibold">Semibold weight text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>`} />
 
-## Высота линии
+## Line height
 
-Измените высоту строки с помощью утилит `.lh-*`.
+Change the line height with `.lh-*` utilities.
 
-<Example code={`<p class="lh-1">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настраивать по мере необходимости с помощью нашего API утилит.</p>
-<p class="lh-sm">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настраивать по мере необходимости с помощью нашего API утилит.</p>
-<p class="lh-base">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настраивать по мере необходимости с помощью нашего API утилит.</p>
-<p class="lh-lg">Это длинный абзац, написанный для того, чтобы показать, как наши утилиты влияют на высоту строки элемента. Классы применяются к самому элементу или иногда к родительскому элементу. Эти классы можно настраивать по мере необходимости с помощью нашего API утилиты.</p>`} />
+<Example code={`<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>`} />
 
-## Моноширинный
+## Monospace
 
-Измените выделение на наш стек моноширинных шрифтов с помощью `.font-monospace`.
+Change a selection to our monospace font stack with `.font-monospace`.
 
-<Example code={`<p class="font-monospace">Это в моноширинном пространстве</p>`} />
+<Example code={`<p class="font-monospace">This is in monospace</p>`} />
 
-## Сброс цвета
+## Reset color
 
-Сбросьте цвет текста или ссылки с помощью `.text-reset`, чтобы он унаследовал цвет от своего родителя.
+Reset a text or link’s color with `.text-reset`, so that it inherits the color from its parent.
 
 <Example code={`<p class="text-body-secondary">
-    Вторичный текст со <a href="#" class="text-reset">ссылкой сброса</a>.
+    Secondary body text with a <a href="#" class="text-reset">reset link</a>.
   </p>`} />
 
-## Оформление текста
+## Text decoration
 
-Украшайте текст в компонентах классами оформления текста.
+Decorate text in components with text decoration classes.
 
-<Example code={`<p class="text-decoration-underline">У этого текста есть линия под ним.</p>
-<p class="text-decoration-line-through">У этого текста есть линия, проходящая через него.</p>
-<a href="#" class="text-decoration-none">У этой ссылки удалено текстовое оформление</a>`} />
+<Example code={`<p class="text-decoration-underline">This text has a line underneath it.</p>
+<p class="text-decoration-line-through">This text has a line going through it.</p>
+<a href="#" class="text-decoration-none">This link has its text decoration removed</a>`} />
 
 ## CSS
 
-### Sass переменные
+### Sass variables
 
-Переменные Sass, связанные с типом и шрифтом по умолчанию:
+Default type and font related Sass variables:
 
 <ScssDocs name="font-variables" file="scss/_variables.scss" />
 
-### Sass карта
+### Sass maps
 
-Утилиты с размером шрифта генерируются из этой карты в сочетании с нашим API утилит.
+Font-size utilities are generated from this map, in combination with our utilities API.
 
 <ScssDocs name="font-sizes" file="scss/_variables.scss" />
 
 <ScssDocs name="theme-text-map" file="scss/_maps.scss" />
 
-### Sass API утилиты
+### Sass utilities API
 
-Шрифтовые и текстовые утилиты объявлены в нашем API утилит в `scss/_utilities.scss`. [Узнайте, как использовать API утилит.]([[docsref:/utilities/api#using-the-api]])
+Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-text" file="scss/_utilities.scss" />
