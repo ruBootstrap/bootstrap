@@ -13,7 +13,7 @@
 
 - group: v5.x
   baseurl: 'https://getbootstrap.su/docs'
-  description: 'Текущий основной выпуск. Последнее обновление было v5.3.7.'
+  description: 'Текущий основной выпуск. Последнее обновление было v5.3.8.'
   versions:
     - '5.0'
     - '5.1'

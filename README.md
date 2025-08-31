@@ -16,8 +16,6 @@
   ·
   <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Запрос функционала</a>
   ·
-  <a href="https://themes.getbootstrap.com/">Темы</a>
-  ·
   <a href="https://blog.getbootstrap.su/">Блог</a>
 </p>
 
@@ -43,15 +41,16 @@
 
 Доступно несколько вариантов быстрого запуска:
 
-- [Скачать последний релиз](https://github.com/twbs/bootstrap/archive/v5.3.7.zip)
-- Клонировать репозиторий: `git clone https://github.com/twbs/bootstrap.git`
-- Установить через [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.7`
-- Установить через [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.7`
-- Установить через [Bun](https://bun.sh/): `bun add bootstrap@v5.3.7`
-- Установить через [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.7`
-- Установить через [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.3.8.zip)
+- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.8`
+- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.8`
+- Install with [Bun](https://bun.sh/): `bun add bootstrap@v5.3.8`
+- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.8`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
-Прочитайте [Страницу начала работы](https://getbootstrap.su/docs/5.2/getting-started/introduction/) для получения информации о содержании фреймворка, шаблонах, примерах и многом другом.
+Read the [Getting started page](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
 
 ## Статус
 
@@ -66,6 +65,7 @@
 [![CSS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
 [![JS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
 [![JS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
+![Open Source Security Foundation Scorecard](https://img.shields.io/ossf-scorecard/github.com/twbs/bootstrap)
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap?logo=opencollective&logoColor=fff)](#backers)
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap?logo=opencollective&logoColor=fff)](#sponsors)
 
