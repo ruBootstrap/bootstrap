@@ -1,5 +1,5 @@
 # www.robotstxt.org
 # Allow crawling of all content
 User-agent: *
-Disallow:
-Sitemap: https://getbootstrap.su/sitemap.xml
+Disallow: 
+Sitemap: https://getbootstrap.su/sitemap-index.xml
